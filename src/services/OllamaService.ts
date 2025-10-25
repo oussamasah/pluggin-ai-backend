@@ -54,13 +54,23 @@ export class OllamaService {
       
       messages.push({ role: 'user', content: prompt });
 
-      const response = await axios.post(`${this.baseUrl}/api/chat`, {
+    /*  const response = await axios.post(`${this.baseUrl}/api/chat`, {
         model: config.OLLAMA_MODEL,
         messages: messages,
         stream: false,
         options: {
           temperature: 0.1,
           top_p: 0.9,
+        }
+      });*/
+
+      const response = await axios.post(`https://openrouter.ai/api/v1/chat/completions`, {
+        model: config.OLLAMA_MODEL,
+        messages: messages,
+      },{
+        headers:{
+          Authorization: 'Bearer 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',
+          'Content-Type': 'application/json'
         }
       });
 
