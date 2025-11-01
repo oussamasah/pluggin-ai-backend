@@ -78,7 +78,7 @@ export class ExploriumService {
       if (icpModel.config.buyingTriggers && icpModel.config.buyingTriggers.length > 0) {
         requestBody.event_types = icpModel.config.buyingTriggers;
       }
-console.log(requestBody)
+//console.log(requestBody)
 
       const response = await fetch(`${this.baseUrl}/businesses/events`, {
         method: 'POST',

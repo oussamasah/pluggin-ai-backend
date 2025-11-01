@@ -63,7 +63,7 @@ export class OllamaService {
           top_p: 0.9,
         }
       });*/
-
+      const LLM_TIMEOUT = 300000;
       const response = await axios.post(`https://openrouter.ai/api/v1/chat/completions`, {
         model: config.OLLAMA_MODEL,
         messages: messages,
@@ -71,10 +71,11 @@ export class OllamaService {
         headers:{
           Authorization: 'Bearer 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',
           'Content-Type': 'application/json'
-        }
+        },
+        timeout: LLM_TIMEOUT
       });
-
-      return response.data.message.content;
+      ////console.log(response.data.choices)
+      return response.data.choices?.[0]?.message?.content;
     } catch (error) {
       console.error('Ollama API error:', error);
       throw new Error('Failed to generate response from Ollama');
@@ -84,536 +85,193 @@ export class OllamaService {
   async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
     const systemPrompt = `You are a B2B marketing and target audience analysis expert. 
     Evaluate companies against ICP criteria and provide a JSON response with score (0-100) and reason.`;
-
-    const prompt = `# ICP Fit Scoring System
-You are an expert B2B sales intelligence analyst specializing in Ideal Customer Profile (ICP) scoring. Your task is to evaluate companies against specific ICP criteria and generate accurate, data-driven fit scores from 0-100 based solely on firmographic and technographic factors, weighted according to the user's specified priorities.
-
-## Your Mission
-Analyze the provided company data against the ICP configuration and calculate a precise fit score from 0-100, along with detailed reasoning and contributing factors. Use the exact weights specified in scoringWeights.firmographic and scoringWeights.technographic from the ICP configuration.
-
-## Scoring Weight Configuration
-
-The user defines the relative importance of each category through scoringWeights:
-- scoringWeights.firmographic: User-defined weight for company profile data (0-100)
-- scoringWeights.technographic: User-defined weight for technology stack data (0-100)
-
-*Required:* firmographic + technographic = 100
-
-*Weight Application:*
-
-Firmographic Maximum Points = scoringWeights.firmographic
-Technographic Maximum Points = scoringWeights.technographic
-Total Maximum Score = 100 points
-
-
-*Examples:*
-- Firmographic priority: {firmographic: 70, technographic: 30}
-- Technographic priority: {firmographic: 30, technographic: 70}
-- Balanced approach: {firmographic: 50, technographic: 50}
-
----
-
-## 1. FIRMOGRAPHIC ANALYSIS
-
-*Total Available Points:* scoringWeights.firmographic
-
-*Point Distribution:*
-Each of the 5 firmographic dimensions receives an equal share of the total firmographic points.
-
-Points per dimension = scoringWeights.firmographic ÷ 5
-
-
-*Examples:*
-- If firmographic = 60, each dimension = 60 ÷ 5 = *12 points*
-- If firmographic = 70, each dimension = 70 ÷ 5 = *14 points*
-- If firmographic = 50, each dimension = 50 ÷ 5 = *10 points*
-- If firmographic = 30, each dimension = 30 ÷ 5 = *6 points*
-
-### Dimension 1: Industry Match
-*Max Points:* scoringWeights.firmographic ÷ 5
-
-*Scoring Rules:*
-- ✓ Perfect match with industries: *100% of dimension points*
-- ≈ Adjacent/related industry: *50% of dimension points*
-- ✗ No match or unclear: *0 points*
-- 🚫 In excludedIndustries: *DISQUALIFICATION (final score = 0)*
-- ⚠ Missing data: *0 points* + Flag: "Industry data not available"
-
-*What to check:*
-- Does company's primary industry match any industry in the industries array?
-- Is the company in any excludedIndustries?
-
-### Dimension 2: Geography
-*Max Points:* scoringWeights.firmographic ÷ 5
-
-*Scoring Rules:*
-- ✓ Company HQ in target geographies: *100% of dimension points*
-- ≈ Company has significant operations in target geographies: *70% of dimension points*
-- ✗ Not in target geography: *0 points*
-- 🚫 In excludedGeographies: *-25% penalty on final score*
-- ⚠ Missing data: *0 points* + Flag: "Geography data not available"
-
-*What to check:*
-- Is company headquarters or primary location in geographies array?
-- Is company in any excludedGeographies?
-
-### Dimension 3: Company Size (Employee Count)
-*Max Points:* scoringWeights.firmographic ÷ 5
-
-*Scoring Rules:*
-- ✓ Within target employeeRange: *100% of dimension points*
-- ≈ Within ±25% of range boundaries: *70% of dimension points*
-- ≈ Within ±50% of range boundaries: *40% of dimension points*
-- ✗ Outside range: *0 points*
-- 🚫 In excludedSizeRange: *-20% penalty on final score*
-- ⚠ Missing data: *0 points* + Flag: "Employee count not available"
-
-*What to check:*
-- Parse employeeRange (e.g., "100-500", "500+", "1000-5000")
-- Compare company's employee count to this range
-- Check against excludedSizeRange
-
-### Dimension 4: Annual Revenue
-*Max Points:* scoringWeights.firmographic ÷ 5
-
-*Scoring Rules:*
-- ✓ Within target acvRange: *100% of dimension points*
-- ≈ Within ±30% of range boundaries: *70% of dimension points*
-- ≈ Within ±50% of range boundaries: *40% of dimension points*
-- ✗ Outside range: *0 points*
-- ⚠ Missing data: *0 points* + Flag: "Revenue data not available"
-
-*What to check:*
-- Parse acvRange (e.g., "$1M-$10M", "$50M+", "$10M-$100M")
-- Compare company's annual revenue to this range
-- Consider ARR, revenue, or financial data provided
-
-### Dimension 5: Funding/Financial Stability
-*Max Points:* scoringWeights.firmographic ÷ 5
-
-*Scoring Rules:*
-- ✓ Public company or well-funded (Series C+): *100% of dimension points*
-- ≈ Series B funding: *70% of dimension points*
-- ≈ Early stage (Seed/Series A): *40% of dimension points*
-- ≈ Unknown funding but established company indicators: *50% of dimension points*
-- ⚠ Missing data: *0 points* + Flag: "Funding data not available"
-
-*What to check:*
-- Company funding stage, total funding raised
-- Public/private status
-- Financial stability indicators
-
-*Firmographic Total Calculation:*
-
-Firmographic Score = Industry + Geography + Size + Revenue + Funding
-Maximum Possible = scoringWeights.firmographic
-
-
----
-
-## 2. TECHNOGRAPHIC ANALYSIS
-
-*Total Available Points:* scoringWeights.technographic
-
-*Point Distribution:*
-
-Must-Have Technologies = scoringWeights.technographic × 0.60 (60%)
-Tech Stack Quality      = scoringWeights.technographic × 0.20 (20%)
-Integration Readiness   = scoringWeights.technographic × 0.20 (20%)
-
-
-*Examples:*
-- If technographic = 40: Must-Have=24pts, Quality=8pts, Integration=8pts
-- If technographic = 70: Must-Have=42pts, Quality=14pts, Integration=14pts
-- If technographic = 30: Must-Have=18pts, Quality=6pts, Integration=6pts
-
-### Component 1: Must-Have Technologies
-*Max Points:* scoringWeights.technographic × 0.60
-
-*Scoring Rules:*
-- ✓ All technologies in mustHaveTech present: *100% of allocated points*
-- ≈ Partial match: *(matched count ÷ required count) × allocated points*
-- ✗ No matches or empty tech stack: *0 points*
-- ⚠ Missing data: *0 points* + Flag: "Technology stack data not available"
-
-*Calculation Example:*
-
-If mustHaveTech = ["Salesforce", "HubSpot", "Slack", "AWS", "Stripe"]
-Company has: ["Salesforce", "AWS", "Stripe"]
-Match rate: 3/5 = 60%
-If max points = 24, earned = 24 × 0.60 = 14.4 points
-
-
-*What to check:*
-- Does company use each technology listed in mustHaveTech?
-- Check tech stack, integrations, technology mentions
-
-### Component 2: Excluded Technologies (Penalty)
-*Penalty Application:* Applied to final score, not technographic subscore
-
-*Penalty Rules:*
-- 🚫 Each tech from excludedTechnologies found: *-15% of final score*
-- 🚫 Excluded tech is core/primary platform: *-25% of final score*
-- 🚫 Multiple excluded techs: Penalties stack
-
-*What to check:*
-- Is company using any technologies from excludedTechnologies?
-- How central is the excluded technology to their operations?
-
-### Component 3: Tech Stack Quality & Modernity
-*Max Points:* scoringWeights.technographic × 0.20
-
-*Scoring Rules:*
-- ✓ Modern, cloud-native, enterprise-grade stack: *100% of allocated points*
-- ≈ Mix of modern and legacy technologies: *60% of allocated points*
-- ≈ Predominantly legacy or outdated technologies: *30% of allocated points*
-- ✗ Unknown or insufficient tech data: *0 points* + Flag: "Insufficient tech stack information"
-
-*Assessment Criteria:*
-- Cloud-native vs on-premise
-- Modern SaaS vs legacy enterprise software
-- API-first architecture
-- Current versions vs deprecated technologies
-
-### Component 4: Technology Integration Readiness
-*Max Points:* scoringWeights.technographic × 0.20
-
-*Scoring Rules:*
-- ✓ Compatible ecosystem, clear integration paths: *100% of allocated points*
-- ≈ Some compatibility, moderate integration effort: *60% of allocated points*
-- ≈ Limited compatibility, challenges expected: *20% of allocated points*
-- ✗ Competing/incompatible core technologies: *0 points*
-- ⚠ Missing data: *0 points* + Flag: "Cannot assess integration readiness"
-
-*Assessment Criteria:*
-- API availability and maturity
-- Integration platform presence (Zapier, MuleSoft, etc.)
-- Open ecosystem vs closed/proprietary
-- Technical compatibility with common integration patterns
-
-*Technographic Total Calculation:*
-
-Technographic Score = Must-Have Tech + Tech Quality + Integration Readiness
-Maximum Possible = scoringWeights.technographic
-Note: Excluded tech penalties applied separately to final score
-
-
----
-
-## FINAL SCORE CALCULATION
-
-### Step 1: Calculate Base Score
-
-Base Score = Firmographic Score + Technographic Score
-(This should equal 0-100 before penalties)
-
-
-### Step 2: Calculate Total Penalties
-
-Total Penalty Percentage = 
-  + (Excluded Geography Penalty if applicable: 0.25)
-  + (Excluded Size Penalty if applicable: 0.20)
-  + (Excluded Tech Penalties: 0.15 per tech, or 0.25 if core)
-
-
-### Step 3: Apply Penalties
-
-Penalty Amount = Base Score × Total Penalty Percentage
-Final Score = Base Score - Penalty Amount
-
-
-### Step 4: Bound Score
-
-Final Score = Max(0, Min(100, Final Score))
-Final Score = Round(Final Score)
-
-
-### Complete Example:
-
-Configuration: firmographic=60, technographic=40
-
-FIRMOGRAPHIC (max 60):
-- Industry: SaaS match = 12/12
-- Geography: USA match = 12/12
-- Size: 450 employees (in range) = 12/12
-- Revenue: Missing = 0/12
-- Funding: Series B = 8.4/12 (70%)
-Firmographic Total: 44.4/60
-
-TECHNOGRAPHIC (max 40):
-- Must-have tech: 4/5 matched = 19.2/24 (24 × 0.80)
-- Tech quality: Modern stack = 8/8
-- Integration: Compatible = 8/8
-Technographic Total: 35.2/40
-
-Base Score: 44.4 + 35.2 = 79.6
-
-PENALTIES:
-- No excluded geo/size/tech
-Penalty: 0
-
-Final Score: 79.6 → 80/100
-
-
----
-
-## CONFIDENCE SCORING
-
-*Data Completeness Assessment*
-
-*8 Critical Data Points:*
-1. Industry
-2. Geography
-3. Company Size
-4. Annual Revenue
-5. Funding Status
-6. Technology Stack
-7. Tech Stack Quality
-8. Integration Readiness
-
-*Confidence Calculation:*
-
-Available Data Points = Count of data points with actual information
-Confidence Score = (Available Data Points ÷ 8) × 100
-
-
-*Confidence Ranges:*
-- *88-100%*: 7-8/8 data points available (complete, reliable)
-- *63-87%*: 5-6/8 data points available (minor gaps)
-- *38-62%*: 3-4/8 data points available (moderate gaps)
-- *13-37%*: 1-2/8 data points available (significant gaps)
-- *0-12%*: 0/8 data points available (unreliable, insufficient)
-
-*Confidence Impact:*
-- High confidence (>75%): Score is reliable for decision-making
-- Medium confidence (50-75%): Score is directional, verify missing data
-- Low confidence (<50%): Score is speculative, prioritize data enrichment
-
----
-
-## DISQUALIFICATION RULES
-
-*Automatic Score = 0* (overrides all other scoring):
-
-1. *Excluded Industry*: Company's primary industry is in excludedIndustries
-2. *Excluded Geography Only*: Company operates exclusively in excludedGeographies
-3. *Excluded Size Range*: Company size falls in excludedSizeRange with no growth trajectory
-4. *Core Excluded Technology*: Company's primary/core platform is in excludedTechnologies
-
-*When Disqualified:*
-- Set score: 0
-- Still provide full breakdown showing what was analyzed
-- Clearly state disqualification reason in reason field
-- List disqualifying factor in redFlags array
-
----
-
-## OUTPUT FORMAT
-
-Return a *valid JSON object* with this exact structure:
-json
-{
-  "score": <number 0-100>,
-  "reason": "<2-3 sentences explaining the score. Must mention: (1) the weights used, (2) key strengths/gaps, (3) impact of missing data if any. Example: 'With firmographic weighted at 60% and technographic at 40%, Company X achieves 80/100. Strong industry and geography match offset by missing revenue data (12 points lost) and partial tech stack alignment.'>",
-  "confidence": <number 0-100>,
-  "factors": [
-    "<Factor with calculation: 'Industry match (SaaS): 12/12 points'>",
-    "<Factor with calculation: 'Geography (USA): 12/12 points'>",
-    "<Factor with calculation: 'Company size (450 employees, in range): 12/12 points'>",
-    "<Factor with calculation: 'Revenue data missing: 0/12 points'>",
-    "<Factor with calculation: 'Funding (Series B): 8.4/12 points (70%)'>",
-    "<Factor with calculation: 'Must-have technologies (4/5 matched): 19.2/24 points'>",
-    "<Factor with calculation: 'Tech stack quality (modern): 8/8 points'>",
-    "<Factor with calculation: 'Integration readiness (compatible): 8/8 points'>",
-    "... (at least 8 factors covering all dimensions)"
-  ],
-  "breakdown": {
-    "weights": {
-      "firmographic": <scoringWeights.firmographic>,
-      "technographic": <scoringWeights.technographic>
-    },
-    "firmographic": {
-      "score": <actual points earned, max = firmographic weight>,
-      "maxScore": <scoringWeights.firmographic>,
-      "pointsPerDimension": <firmographic ÷ 5>,
-      "dimensions": {
-        "industry": {
-          "earned": <points>,
-          "max": <points per dimension>,
-          "percentage": <percentage earned>,
-          "details": "<specific finding, e.g., 'SaaS - perfect match'>"
-        },
-        "geography": {
-          "earned": <points>,
-          "max": <points per dimension>,
-          "percentage": <percentage earned>,
-          "details": "<specific finding, e.g., 'USA headquarters - target match'>"
-        },
-        "size": {
-          "earned": <points>,
-          "max": <points per dimension>,
-          "percentage": <percentage earned>,
-          "details": "<specific finding, e.g., '450 employees - within 250-1000 range'>"
-        },
-        "revenue": {
-          "earned": <points>,
-          "max": <points per dimension>,
-          "percentage": <percentage earned>,
-          "details": "<specific finding or 'Data not available'>"
-        },
-        "funding": {
-          "earned": <points>,
-          "max": <points per dimension>,
-          "percentage": <percentage earned>,
-          "details": "<specific finding, e.g., 'Series B, $25M raised'>"
-        }
-      }
-    },
-    "technographic": {
-      "score": <actual points earned, max = technographic weight>,
-      "maxScore": <scoringWeights.technographic>,
-      "components": {
-        "mustHaveTech": {
-          "earned": <points>,
-          "max": <technographic × 0.6>,
-          "percentage": <percentage earned>,
-          "matched": <number of matched technologies>,
-          "required": <total required technologies>,
-          "matchedTech": ["<tech1>", "<tech2>"],
-          "missingTech": ["<tech3>", "<tech4>"],
-          "details": "<summary>"
-        },
-        "techQuality": {
-          "earned": <points>,
-          "max": <technographic × 0.2>,
-          "percentage": <percentage earned>,
-          "details": "<quality assessment, e.g., 'Modern cloud-native stack'>"
-        },
-        "integration": {
-          "earned": <points>,
-          "max": <technographic × 0.2>,
-          "percentage": <percentage earned>,
-          "details": "<integration assessment, e.g., 'API-first, compatible ecosystem'>"
-        }
-      }
-    },
-    "penalties": {
-      "totalPercentage": <sum of all penalty percentages, e.g., 0.15>,
-      "totalPoints": <points deducted from base score>,
-      "details": [
-        "<penalty description with percentage, e.g., 'Excluded geography: -25%'>",
-        "<another penalty if applicable>"
-      ]
-    },
-    "calculation": {
-      "baseScore": <firmographic + technographic before penalties>,
-      "penaltyAmount": <baseScore × totalPercentage>,
-      "finalScore": <baseScore - penaltyAmount, bounded 0-100>
-    },
-    "missingDataPoints": [
-      "<data point name: Revenue>",
-      "<data point name: Tech stack details>"
-    ]
-  },
-  "redFlags": [
-    "<critical issue, e.g., 'Company size outside target range'>",
-    "<another critical issue if applicable>"
-  ],
-  "dataGaps": [
-    "<specific gap with impact, e.g., 'Revenue data unavailable: 12 points lost from firmographic score'>",
-    "<another gap if applicable>"
-  ]
-}
-
-
----
-
-## ANALYSIS GUIDELINES
-
-### 1. Weight Respect
-- *ALWAYS* use exact weights from scoringWeights.firmographic and scoringWeights.technographic
-- *NEVER* override or "rebalance" user preferences
-- Show weight-aware calculations in all factors
-
-### 2. Missing Data Transparency
-- Assign *0 points* for any missing data dimension
-- *Always explain* in reasoning what data was missing and impact on score
-- Include missing dimensions in dataGaps array with point values lost
-- Lower confidence score proportionally
-
-### 3. Mathematical Precision
-- Show calculations: "4/5 matched = 19.2/24 points" not just "19.2 points"
-- Display both earned and maximum points for every dimension
-- Round final score only, keep intermediate calculations precise
-
-### 4. Contextual Assessment
-- Consider company stage and growth trajectory
-- Evaluate tech stack in context of company size/industry
-- Be realistic about data availability for different company types
-
-### 5. Actionable Insights
-- Factors should guide sales strategy and prioritization
-- Red flags should be specific and verifiable
-- Data gaps should indicate enrichment priorities
-
----
-
-## REASONING TEMPLATE
-
-Use this structure for the reason field:
-
-"[Company Name] achieves [X]/100 based on [firmographic]% firmographic and [technographic]% technographic weighting. [Key strength 1] and [key strength 2] contributed [Y] points, while [gap/weakness] resulted in [Z] points lost. [Penalty explanation if >0]. [Data completeness statement if confidence <80%]."
-
-
-*Examples:*
-
-*High Score, Complete Data:*
-
-"Acme Corp achieves 87/100 based on 60% firmographic and 40% technographic weighting. Perfect matches in industry (SaaS), geography (USA), and size (500 employees) contributed 36/36 points, with strong tech stack alignment (32/40 points) including 4/5 required technologies. Minor gap in funding stage (early Series B) and one missing tech slightly reduced the score."
-
-
-*Medium Score, Missing Data:*
-
-"TechStart Inc scores 62/100 based on 70% firmographic and 30% technographic weighting. Strong industry and geography alignment (28/28 points) offset by missing revenue data (14 points lost) and partial tech stack coverage (18/30 points with 3/5 technologies). Confidence reduced to 63% due to significant data gaps in revenue and funding."
-
-
-*Low Score with Penalty:*
-
-"GlobalTech Ltd achieves 34/100 based on 50% firmographic and 50% technographic weighting. Misalignment in company size (outside target range, 0/10 points) and limited tech stack match (15/50 points with only 2/7 technologies) significantly impacted scoring. Additional 20% penalty applied for excluded size range."
-
-
----
-
-## NOW ANALYZE
-
-*ICP Configuration:*
-json
-${JSON.stringify(icpConfig, null, 2)}
-
-
-*Company Data:*
-json
-${JSON.stringify(company, null, 2)}
-
-
-*Instructions:*
-1. Extract scoringWeights.firmographic and scoringWeights.technographic from ICP configuration
-2. Verify weights sum to 100 (if not, note the discrepancy in your response)
-3. Calculate points per firmographic dimension: firmographic ÷ 5
-4. Calculate technographic component allocations: technographic × [0.6, 0.2, 0.2]
-5. Evaluate each dimension/component against company data
-6. Assign 0 points for missing data and document in dataGaps
-7. Calculate base score, apply penalties, bound to 0-100
-8. Determine confidence based on 8 data points availability
-9. Return complete JSON response with all calculations shown
-
-Provide your detailed ICP fit analysis as JSON following the exact format above.
+    const prompt = `You are an expert B2B sales intelligence analyst specializing in Ideal Customer Profile (ICP) scoring. Your task is to evaluate companies against specific ICP criteria and generate accurate, data-driven fit scores from 0-100 based solely on the weighted criteria specified in the ICP configuration.
+
+    ## Your Mission
+    
+    Analyze the provided company data against the ICP configuration and calculate a precise fit score from 0-100, along with detailed reasoning and contributing factors. Use ONLY the weights specified in scoringWeights.firmographic and scoringWeights.technographic from the ICP configuration.
+    
+    *ICP Configuration:*
+    json
+    ${JSON.stringify(icpConfig, null, 2)}
+    
+    *Company Data:*
+    json
+    ${JSON.stringify(company, null, 2)}
+    
+    ## Scoring Weight Application
+    
+    CRITICAL: Use ONLY the active criteria based on scoringWeights:
+    
+    - If scoringWeights.firmographic > 0: Include firmographic analysis
+    - If scoringWeights.technographic > 0: Include technographic analysis  
+    - If scoringWeights.technographic = 0: COMPLETELY IGNORE technographic criteria
+    - Final Score = (Firmographic Score + Technographic Score) scaled to 0-100
+    
+    *Current Active Weights:*
+    - Firmographic: ${icpConfig.scoringWeights.firmographic}% of total score
+    - Technographic: ${icpConfig.scoringWeights.technographic}% of total score
+    
+    ---
+    
+    ## 1. FIRMOGRAPHIC ANALYSIS ${icpConfig.scoringWeights.firmographic > 0 ? '(ACTIVE)' : '(INACTIVE)'}
+    
+    ${icpConfig.scoringWeights.firmographic > 0 ? `
+    *Total Available Points:* ${icpConfig.scoringWeights.firmographic}
+    
+    *Point Distribution:*
+    Each of the 5 firmographic dimensions receives an equal share of the total firmographic points.
+    Points per dimension = ${icpConfig.scoringWeights.firmographic} ÷ 5 = ${icpConfig.scoringWeights.firmographic / 5}
+    
+    ### Dimension 1: Industry Match
+    
+    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+    
+    *Semantic Matching Rules:*
+    - ✓ **Exact Match** (identical terms): *100% of dimension points*
+    - ✓ **Close Semantic Match** (same meaning): *90% of dimension points*
+      - "Marketing Services" ↔ "Marketing"
+      - "Software Development" ↔ "Software Engineering" 
+    - ✓ **Category Match** (same industry category): *80% of dimension points*
+      - "SaaS" ↔ "Software"
+      - "Advertising Services" ↔ "Digital Advertising"
+    - ≈ **Related Industry**: *60% of dimension points*
+    - ≈ **Peripheral Match**: *40% of dimension points*
+    - ✗ **No Semantic Relationship**: *0 points*
+    - 🚫 **Semantic Exclusion**: *DISQUALIFICATION*
+    - ⚠ **Missing data**: *0 points*
+    
+    ### Dimension 2: Geography
+    
+    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+    
+    *Semantic Matching Rules:*
+    - ✓ **Exact Location Match**: *100% of dimension points*
+    - ✓ **Region Semantic Match**: *90% of dimension points*
+    - ✓ **Country Semantic Match**: *100% of dimension points*
+    - ≈ **Economic Zone Match**: *70% of dimension points*
+    - ≈ **Market Similarity**: *50% of dimension points*
+    - ✗ **Different Market Type**: *0 points*
+    - 🚫 **Semantic Geography Exclusion**: *25% penalty on final score*
+    
+    ### Dimension 3: Company Size (Employee Count)
+    
+    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+    
+    *Semantic Range Matching:*
+    - ✓ **Exact Range Match**: *100% of dimension points*
+    - ✓ **Close Semantic Range** (within 10%): *90% of dimension points*
+    - ≈ **Adjacent Size Category**: *75% of dimension points*
+    - ≈ **Similar Business Stage**: *60% of dimension points*
+    - ≈ **Growth Trajectory Match**: *50% of dimension points*
+    - ✗ **Different Scale Category**: *0 points*
+    
+    ### Dimension 4: Annual Revenue
+    
+    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+    
+    *Semantic Revenue Matching:*
+    - ✓ **Exact Range Match**: *100% of dimension points*
+    - ✓ **Close Financial Scale**: *85% of dimension points*
+    - ≈ **Similar Business Model Capacity**: *70% of dimension points*
+    - ≈ **Funding-Stage Proxy**: *50% of dimension points*
+    - ✗ **Different Financial League**: *0 points*
+    
+    ### Dimension 5: Funding/Financial Stability
+    
+    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+    
+    *Semantic Financial Health Matching:*
+    - ✓ **Exact Stage Match**: *100% of dimension points*
+    - ✓ **Similar Financial Maturity**: *90% of dimension points*
+    - ≈ **Comparable Risk Profile**: *70% of dimension points*
+    - ≈ **Inferred Stability**: *50% of dimension points*
+    - ✗ **Different Risk Category**: *20% of dimension points*
+    
+    *Firmographic Score Calculation:*
+    Firmographic Score = Sum of all 5 dimension scores
+    Maximum Possible Firmographic = ${icpConfig.scoringWeights.firmographic}
+    ` : '**FIRMOGRAPHIC ANALYSIS SKIPPED** - Weight is 0'}
+    
+    ---
+    
+    ## 2. TECHNOGRAPHIC ANALYSIS ${icpConfig.scoringWeights.technographic > 0 ? '(ACTIVE)' : '(INACTIVE)'}
+    
+    ${icpConfig.scoringWeights.technographic > 0 ? `
+    *Total Available Points:* ${icpConfig.scoringWeights.technographic}
+    
+    *Point Distribution:*
+    Must-Have Technologies = ${icpConfig.scoringWeights.technographic} × 0.60 = ${icpConfig.scoringWeights.technographic * 0.60}
+    Tech Stack Quality = ${icpConfig.scoringWeights.technographic} × 0.20 = ${icpConfig.scoringWeights.technographic * 0.20}
+    Integration Readiness = ${icpConfig.scoringWeights.technographic} × 0.20 = ${icpConfig.scoringWeights.technographic * 0.20}
+    
+    ### Component 1: Must-Have Technologies
+    
+    *Semantic Technology Matching:*
+    - ✓ **Exact Technology Match**: *100% of match points*
+    - ✓ **Platform Semantic Match**: *90% of match points*
+    - ✓ **Category Semantic Match**: *80% of match points*
+    - ≈ **Functional Equivalent**: *70% of match points*
+    - ≈ **Partial Capability**: *50% of match points*
+    - ✗ **No Technological Overlap**: *0 points*
+    
+    *Technographic Score Calculation:*
+    Technographic Score = Sum of all 3 component scores
+    Maximum Possible Technographic = ${icpConfig.scoringWeights.technographic}
+    ` : '**TECHNOGRAPHIC ANALYSIS SKIPPED** - Weight is 0'}
+    
+    ---
+    
+    ## FINAL SCORE CALCULATION
+    
+    *Active Components:*
+    - Firmographic: ${icpConfig.scoringWeights.firmographic} points maximum
+    - Technographic: ${icpConfig.scoringWeights.technographic} points maximum
+    
+    *Final Score Formula:*
+    Final Score = Firmographic Score + Technographic Score
+    
+    *Maximum Possible Score:*
+    ${icpConfig.scoringWeights.firmographic + icpConfig.scoringWeights.technographic} points = 100 points
+    
+    ## DISQUALIFICATION RULES
+    
+    Apply these checks FIRST before any scoring:
+     - 🚫 Critical missing data (no industry, location, size): *Maximum Score = 30*
+    
+    ## CONFIDENCE SCORING
+    
+    Calculate confidence based on data completeness:
+    - 95%: Complete data across all active dimensions
+    - 85%: Minor data gaps in active dimensions
+    - 70%: Significant data gaps in active dimensions  
+    - 50%: Major data incompleteness in active dimensions
+    - <50%: Insufficient data for reliable scoring
+    
+    Always return your final output in the following exact JSON-style structure — with no additional text, comments, or formatting:
+    
+    {
+        "score": "",
+        "reason": "",
+        "factors": "",
+        "confidence": ""
+    }
+    
+    Guidelines:
+    - Do not include any extra text before or after this structure
+    - "score" → The main numeric score (0-100)
+    - "reason" → A short explanation of why that score was given
+    - "factors" → Key elements that influenced the result
+    - "confidence" → Percentage representing confidence in the output
     `;
 
     try {
       const response = await this.generate(prompt, systemPrompt);
+      //console.log("----------------------------------------------------")
+      //console.log(response)
       const parsed = this.parseJSONResponse(response);
-      
+
+      //console.log(parsed)
       return {
         score: Math.min(100, Math.max(0, parsed.score || 0)),
         reason: parsed.reason || 'No reason provided',
@@ -672,6 +330,7 @@ Provide your detailed ICP fit analysis as JSON following the exact format above.
 
     try {
       const response = await this.generate(prompt, systemPrompt);
+
       const parsed = this.parseJSONResponse(response);
       
       return {
@@ -924,21 +583,21 @@ Analyze potential issues and provide recommendations:
     const systemPrompt = `You are a strategic B2B market intelligence analyst. Create insightful search summaries that highlight ICP matching and buying intent.`;
 
     // Calculate metrics based on your company structure
-    const highQualityCount = companies.filter(c => (c.scoring_metrics?.fit_score?.overall || 0) >= 85).length;
+    const highQualityCount = companies.filter(c => (c.scoring_metrics?.fit_score?.score || 0) >= 85).length;
     const mediumQualityCount = companies.filter(c => {
-      const score = c.scoring_metrics?.fit_score?.overall || 0;
+      const score = c.scoring_metrics?.fit_score?.score || 0;
       return score >= 65 && score < 85;
     }).length;
-    const lowQualityCount = companies.filter(c => (c.scoring_metrics?.fit_score?.overall || 0) < 65).length;
+    const lowQualityCount = companies.filter(c => (c.scoring_metrics?.fit_score?.score || 0) < 65).length;
     
     const averageFitScore = companies.length > 0 
-      ? Math.round(companies.reduce((sum, c) => sum + (c.scoring_metrics?.fit_score?.overall || 0), 0) / companies.length)
+      ? Math.round(companies.reduce((sum, c) => sum + (c.scoring_metrics?.fit_score?.score || 0), 0) / companies.length)
       : 0;
 
     // Intent analysis
-    const highIntentCount = companies.filter(c => (c.scoring_metrics?.intent_score?.overall || 0) >= 70).length;
+    const highIntentCount = companies.filter(c => (c.scoring_metrics?.intent_score?.score || 0) >= 70).length;
     const averageIntentScore = companies.length > 0
-      ? Math.round(companies.reduce((sum, c) => sum + (c.scoring_metrics?.intent_score?.overall || 0), 0) / companies.length)
+      ? Math.round(companies.reduce((sum, c) => sum + (c.scoring_metrics?.intent_score?.score || 0), 0) / companies.length)
       : 0;
 
     // Industry analysis from your company data
@@ -948,8 +607,8 @@ Analyze potential issues and provide recommendations:
         acc[industry] = { count: 0, totalFitScore: 0, totalIntentScore: 0 };
       }
       acc[industry].count++;
-      acc[industry].totalFitScore += company.scoring_metrics?.fit_score?.overall || 0;
-      acc[industry].totalIntentScore += company.scoring_metrics?.intent_score?.overall || 0;
+      acc[industry].totalFitScore += company.scoring_metrics?.fit_score?.score || 0;
+      acc[industry].totalIntentScore += company.scoring_metrics?.intent_score?.score || 0;
       return acc;
     }, {} as Record<string, any>);
 
@@ -967,8 +626,8 @@ Analyze potential issues and provide recommendations:
     // Company segmentation based on your data
     const segments = companies.reduce((acc, company) => {
       const size = company.firmographic_data?.employee_count?.exact || 0;
-      const fitScore = company.scoring_metrics?.fit_score?.overall || 0;
-      const intentScore = company.scoring_metrics?.intent_score?.overall || 0;
+      const fitScore = company.scoring_metrics?.fit_score?.score || 0;
+      const intentScore = company.scoring_metrics?.intent_score?.score || 0;
       
       // Size segmentation
       if (size > 1000) acc.enterprise = (acc.enterprise || 0) + 1;
@@ -1014,8 +673,8 @@ Analyze potential issues and provide recommendations:
     // Get strategic examples
     const strategicExamples = companies
       .sort((a, b) => {
-        const aScore = (a.scoring_metrics?.fit_score?.overall || 0) * 0.7 + (a.scoring_metrics?.intent_score?.overall || 0) * 0.3;
-        const bScore = (b.scoring_metrics?.fit_score?.overall || 0) * 0.7 + (b.scoring_metrics?.intent_score?.overall || 0) * 0.3;
+        const aScore = (a.scoring_metrics?.fit_score?.score || 0) * 0.7 + (a.scoring_metrics?.intent_score?.score || 0) * 0.3;
+        const bScore = (b.scoring_metrics?.fit_score?.score || 0) * 0.7 + (b.scoring_metrics?.intent_score?.score || 0) * 0.3;
         return bScore - aScore;
       })
       .slice(0, 3)
@@ -1024,8 +683,8 @@ Analyze potential issues and provide recommendations:
         industry: company.business_classification?.industry?.primary?.type,
         employees: company.firmographic_data?.employee_count?.exact || company.firmographic_data?.employee_count?.range,
         location: company.contact_info?.address?.country,
-        fitScore: company.scoring_metrics?.fit_score?.overall,
-        intentScore: company.scoring_metrics?.intent_score?.overall,
+        fitScore: company.scoring_metrics?.fit_score?.score,
+        intentScore: company.scoring_metrics?.intent_score?.score,
         technologies: (company.technographic_data?.technology_stack || []).slice(0, 3).map((tech: any) => tech.name),
         hiringSignals: company.intent_signals?.hiring_signals?.job_postings?.length || 0
       }));
@@ -1039,7 +698,7 @@ Analyze potential issues and provide recommendations:
       (companies.filter(c => 
         c.basic_info?.name &&
         c.business_classification?.industry?.primary?.type &&
-        c.scoring_metrics?.fit_score?.overall !== undefined
+        c.scoring_metrics?.fit_score?.score !== undefined
       ).length / companies.length) * 100
     ) : 0;
 
@@ -1400,8 +1059,8 @@ Return ONLY the JSON object in the exact format above, no additional text or exp
 
   try {
     const response = await this.generate(prompt, systemPrompt);
-    //console.log("Extracting company data from CoreSignal response:");
-    //console.log(response);
+    ////console.log("Extracting company data from CoreSignal response:");
+    ////console.log(response);
     
     const extractedCompany = this.parseJSONResponse(response);
     

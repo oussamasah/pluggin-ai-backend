@@ -52,10 +52,12 @@ export class ExaService {
     this.apiKey = config.EXA_API_KEY;
   }
 
-  async searchCompanies(query: any, count: number): Promise<{exaCompanies:ExaCompany[],websetId:any}> {
+  async searchCompanies(query: any, count: number): Promise<{
+    map(arg0: any): unknown;exaCompanies:ExaCompany[],websetId:any
+}> {
     try {
-      console.log("-------1-----")
-      console.log("search exa")
+      //console.log("-------1-----")
+      //console.log("search exa")
       const response = await fetch(`${this.baseUrl}/websets/v0/websets`, {
         method: 'POST',
         headers: {
@@ -73,7 +75,7 @@ export class ExaService {
         })
       });
 
-      console.log("-------response success-----")
+      //console.log("-------response success-----")
 
       if (!response.ok) {
         throw new Error(`Exa API error: ${response.statusText}`);
@@ -84,7 +86,7 @@ export class ExaService {
 
       // Poll for completion
       const companies = await this.waitForWebsetCompletion(websetId);
-      console.log(companies)
+  //    //console.log(companies)
       return {exaCompanies:companies,websetId:websetId};
     } catch (error) {
       console.error('Exa search error:', error);
@@ -97,7 +99,7 @@ export class ExaService {
    */
   async createEnrichment(enrichmentRequest: EnrichmentRequest): Promise<EnrichmentResult> {
     try {
-      console.log(`Creating enrichment for webset: ${enrichmentRequest.websetId}`);
+      //console.log(`Creating enrichment for webset: ${enrichmentRequest.websetId}`);
       
       const response = await fetch(`${this.baseUrl}/websets/v0/websets/${enrichmentRequest.websetId}/enrichments`, {
         method: 'POST',
@@ -119,7 +121,7 @@ export class ExaService {
       }
 
       const enrichmentResult: EnrichmentResult = await response.json();
-      console.log(`Enrichment created with ID: ${enrichmentResult.id}`);
+      //console.log(`Enrichment created with ID: ${enrichmentResult.id}`);
       
       return enrichmentResult;
     } catch (error) {
@@ -133,7 +135,7 @@ export class ExaService {
    */
   async getEnrichment(websetId: string, enrichmentId: string): Promise<EnrichmentResult> {
     try {
-      console.log(`Getting enrichment: ${enrichmentId} from webset: ${websetId}`);
+      //console.log(`Getting enrichment: ${enrichmentId} from webset: ${websetId}`);
       
       const response = await fetch(`${this.baseUrl}/websets/v0/websets/${websetId}/enrichments/${enrichmentId}`, {
         method: 'GET',
@@ -165,20 +167,20 @@ export class ExaService {
     
     while (true) {
       try {
-        console.log(`Checking enrichment status for: ${enrichmentId}`);
+        //console.log(`Checking enrichment status for: ${enrichmentId}`);
         
         const enrichment = await this.getEnrichment(websetId, enrichmentId);
 
         // Check the status field
         if (enrichment.status === 'completed') {
-          console.log(`Enrichment ${enrichmentId} completed successfully`);
+          //console.log(`Enrichment ${enrichmentId} completed successfully`);
           return enrichment;
         } else if (enrichment.status === 'canceled') {
           throw new Error(`Enrichment was canceled: ${enrichmentId}`);
         } 
 
         // If still pending, wait and poll again
-        console.log(`Enrichment status is ${enrichment.status}. Polling again in ${pollInterval / 1000}s...`);
+        //console.log(`Enrichment status is ${enrichment.status}. Polling again in ${pollInterval / 1000}s...`);
         await new Promise(resolve => setTimeout(resolve, pollInterval));
 
       } catch (error) {
@@ -194,7 +196,7 @@ export class ExaService {
         }
         
         // For other errors, continue polling
-        console.log(`Retrying in ${pollInterval / 1000}s...`);
+        //console.log(`Retrying in ${pollInterval / 1000}s...`);
         await new Promise(resolve => setTimeout(resolve, pollInterval));
       }
     }
@@ -213,7 +215,7 @@ export class ExaService {
    */
   async getEnrichmentsByItem(websetId: string, itemId: string): Promise<EnrichmentResult[]> {
     try {
-      console.log(`Getting all enrichments for item: ${itemId} in webset: ${websetId}`);
+      //console.log(`Getting all enrichments for item: ${itemId} in webset: ${websetId}`);
       
       // Note: This endpoint might vary based on Exa API - adjust if needed
       const response = await fetch(`${this.baseUrl}/websets/v0/websets/${websetId}/items/${itemId}/enrichments`, {
@@ -274,7 +276,7 @@ export class ExaService {
           throw new Error(`Webset workflow terminated with status: ${websetData.status}`);
         }
 
-        console.log(`Webset status is ${websetData.status}. Polling again in ${pollInterval / 1000}s...`);
+        //console.log(`Webset status is ${websetData.status}. Polling again in ${pollInterval / 1000}s...`);
         await new Promise(resolve => setTimeout(resolve, pollInterval));
 
       } catch (error) {

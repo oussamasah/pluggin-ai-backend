@@ -25,7 +25,7 @@ export class LLMQueryFilterExtractor {
    * Main extraction method - uses LLM to extract all possible filters from natural language
    */
   async extractFilters(query: string): Promise<ExtractedFilters> {
-    console.log('🤖 Using LLM to extract filters from query:', query);
+  //  console.log('🤖 Using LLM to extract filters from query:', query);
 
     const systemPrompt = `You are an expert at analyzing B2B company search queries and extracting structured filters.
 
@@ -110,7 +110,7 @@ Return ONLY valid JSON matching the schema above. Be thorough - extract every re
       const response = await this.ollamaService.generate(prompt, systemPrompt);
       const parsed = this.parseJSONResponse(response);
       
-      console.log('✅ Extracted filters:', JSON.stringify(parsed, null, 2));
+    //  console.log('✅ Extracted filters:', JSON.stringify(parsed, null, 2));
       
       // Validate and normalize the response
       const validated = this.validateAndNormalizeFilters(parsed);

@@ -277,6 +277,103 @@ export class CoreSignalService {
       );
     }
   }
+  /**
+ * Enrich multiple companies by their website URLs
+ */
+async enrichCompaniesByUrls(urls: string[]): Promise<any[]> {
+  try {
+    console.log(`📥 Enriching ${urls.length} companies by website URLs...`);
+
+    const enrichedCompanies: any[] = [];
+    const batchSize = 5; // Process in batches to avoid rate limits
+    
+    for (let i = 0; i < urls.length; i += batchSize) {
+      const batch = urls.slice(i, i + batchSize);
+      
+      // Enrich each company in parallel (within batch)
+      const batchPromises = batch.map(async (url) => {
+        try {
+          // Clean and validate URL
+          const cleanUrl = this.cleanUrl(url);
+          if (!cleanUrl) {
+            console.warn(`⚠️ Invalid URL: ${url}`);
+            return null;
+          }
+
+          const encodedUrl = encodeURIComponent(cleanUrl);
+          const apiUrl = `/company_multi_source/enrich?website=${encodedUrl}`;
+          
+          console.log(`🔍 Enriching: ${cleanUrl}`);
+          const response = await this.client.get(apiUrl);
+          
+          // Add the original URL to the response for reference
+          if (response.data) {
+            response.data.requested_url = cleanUrl;
+          }
+          
+          return response.data;
+        } catch (error: any) {
+          console.warn(`⚠️ Failed to enrich URL ${url}:`, error.response?.status, error.response?.data?.message || error.message);
+          
+          // Return error information but don't break the entire batch
+          return {
+            requested_url: url,
+            error: true,
+            status: error.response?.status,
+            message: error.response?.data?.message || error.message
+          };
+        }
+      });
+
+      const batchResults = await Promise.all(batchPromises);
+      enrichedCompanies.push(...batchResults.filter(result => result !== null));
+
+      // Small delay between batches to respect rate limits
+      if (i + batchSize < urls.length) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+    }
+
+    console.log(`✅ Successfully enriched ${enrichedCompanies.filter(c => !c.error).length}/${urls.length} companies`);
+
+    return enrichedCompanies;
+  } catch (error: any) {
+    console.error('❌ Enrich API Error:', error.response?.data);
+    throw new Error(
+      `Failed to enrich companies by URLs: ${error.response?.data?.Error || error.message}`
+    );
+  }
+}
+
+/**
+ * Clean and normalize URL for API request
+ */
+private cleanUrl(url: string): string {
+  if (!url) return '';
+  
+  let cleanUrl = url.trim();
+  
+  // Remove protocol and www for consistency
+  cleanUrl = cleanUrl.replace(/^(https?:\/\/)?(www\.)?/, '');
+  
+  // Remove trailing slashes
+  cleanUrl = cleanUrl.replace(/\/+$/, '');
+  
+  // Basic validation - should contain at least a dot and some characters
+  if (!cleanUrl.includes('.') || cleanUrl.length < 3) {
+    return '';
+  }
+  
+  return cleanUrl;
+}
+
+/**
+ * Enrich a single company by website URL (convenience method)
+ */
+async enrichCompanyByUrl(url: string): Promise<any> {
+  const results = await this.enrichCompaniesByUrls([url]);
+  return results[0] || null;
+}
 /**
    * Collect full company data by IDs (enrichment)
    */

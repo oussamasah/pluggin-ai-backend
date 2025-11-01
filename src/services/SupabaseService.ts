@@ -76,12 +76,7 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
   }
 
   async updateSessionQuery(sessionId: string, query: string[]): Promise<SearchSession> {
-    console.log('🔧 SupabaseService.updateSessionQuery - Input:', {
-      sessionId,
-      query,
-      queryLength: query.length,
-      queryType: typeof query
-    });
+   
   
     const { data, error } = await this.supabase
       .from('sessions')
@@ -98,17 +93,11 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
       throw error;
     }
   
-    console.log('🔧 SupabaseService.updateSessionQuery - Raw DB response:', {
-      rawQuery: data.query,
-      rawQueryType: typeof data.query
-    });
+ 
   
     const mappedSession = this.mapSessionFromDB(data);
     
-    console.log('🔧 SupabaseService.updateSessionQuery - After mapping:', {
-      mappedQuery: mappedSession.query,
-      mappedQueryType: typeof mappedSession.query
-    });
+
   
     return mappedSession;
   }
@@ -229,7 +218,7 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
         },
       ])
       .select();
-  console.log("enrichement saved sussessfuly",result)
+  //console.log("enrichement saved sussessfuly",result)
     if (result.error) {
       console.error("Error inserting enrichment:", result.error);
       throw result.error;

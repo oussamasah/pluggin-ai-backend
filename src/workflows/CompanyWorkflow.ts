@@ -266,7 +266,7 @@ private async sendSearchComplete(companies: Company[], resultsCount: number, sea
 // In your workflow execution
 let querymerge = new QueryMergerService();
 const mergedQuery = await querymerge.mergeICPWithUserQuery(query, icpModel);
-
+console.log("merged user query with icp config",mergedQuery)
 await this.updateSubstep('1.1', {
   status: 'completed',
   completedAt: new Date()
@@ -285,7 +285,8 @@ const coreSignal = new CoreSignalService();
 //const extractedFilters = await extractor.extractFilters(`compaines in ${icpModel.config.geographies} has size of ${icpModel.config.employeeRange} and in the industries of ${icpModel.config.industries}`);
 
 
-const extractedFilters = await extractor.extractFilters(mergedQuery.structuredQuery);
+//const extractedFilters = await extractor.extractFilters(mergedQuery.structuredQuery);
+
  //console.log('📊 Extracted Filters:', extractedFilters);
  await this.updateSubstep('1.2', {
   status: 'completed',
@@ -297,7 +298,9 @@ await this.updateSubstep('1.3', {
 });
 
 // Convert to CoreSignal format
-const coreSignalFilters = extractor.convertToCoreSignalFormat(extractedFilters);
+//const coreSignalFilters = extractor.convertToCoreSignalFormat(extractedFilters);
+//console.log("coreSignalFilters from extractedFilters",extractedFilters)
+
 //console.log('🔧 CoreSignal Filters:', coreSignalFilters);
 await this.updateSubstep('1.3', {
   status: 'completed',
@@ -308,17 +311,25 @@ await this.updateSubstep('2.1', {
   startedAt: new Date()
 });
 // Search companies
-const result = await coreSignal.searchCompanies(coreSignalFilters, {
+
+const exacompanies = await  exaService.searchCompanies(mergedQuery.structuredQuery,1)
+console.log("exacompanies=====================================")
+/*const result = await coreSignal.searchCompanies(coreSignalFilters, {
   itemsPerPage: 2
-});
+});*/
+console.log( exacompanies.exaCompanies,null,2)
+console.log( exacompanies.exaCompanies[0],null,2)
+
+
+
 await this.updateSubstep('2.1', {
   status: 'completed',
-  message:`Search done ${result.data.length} founded`,
+  message:`Search done ${ exacompanies.exaCompanies?.length} founded`,
   startedAt: new Date()
 });
 await this.updateSubstep('2.2', {
   status: 'in-progress',
-  message:`Search done ${result.data.length} founded`,
+  message:`Search done ${ exacompanies.exaCompanies?.length} founded`,
   startedAt: new Date()
 });
 await this.updateSubstep('2.2', {
@@ -329,8 +340,11 @@ await this.updateSubstep('2.3', {
   status: 'in-progress',
   startedAt: new Date()
 });
-let companiesList = await coreSignal.collectCompanies(result.data)
+      const listurls:string[] = exacompanies.exaCompanies.map((c:any)=>c.properties.url)
+//let companiesList = await coreSignal.collectCompanies(result.data)
+let companiesList = await coreSignal.enrichCompaniesByUrls(listurls)
 //await this.saveCompanies(this.sessionId,companiesList)
+
 
 await this.updateSubstep('2.3', {
   status: 'completed',
@@ -368,7 +382,7 @@ await this.updateSubstep('3.3', {
   startedAt: new Date()
 }); 
 for (const c of companies) {
-  const fitscore = await ollamaService.scoreCompanyFit(c, icpModel);
+  const fitscore = await ollamaService.scoreCompanyFit(c, icpModel.config);
 
   // Ensure the key exists
   c.scoring_metrics = c.scoring_metrics ?? {};
@@ -430,8 +444,8 @@ await this.updateSubstep('4.2', {
         status: 'completed',
         startedAt: new Date()
       }); 
-      //console.log(`🎉 Workflow completed successfully! Processed ${companies.length} companies`);
-
+console.log(JSON.stringify(delete companies["enrichement"]))
+console.log(JSON.stringify(icpModel.config))
 
       return companies;
 

@@ -84,10 +84,10 @@ interface ICPModel {
         );
         
         const userHasLocation = icpGeographies.some((geo: string) => 
-          userQueryLower.includes(geo.toLowerCase()) || 
-          this.hasLocationKeywords(userQueryLower)
+          userQueryLower.includes(geo.toLowerCase())
         );
-        
+        console.log("icpGeographies",icpGeographies)
+        console.log("userHasLocation",userHasLocation)
         const userHasSize = this.extractEmployeeRange(userQuery) !== null;
         const userHasFunding = this.extractFundingInfo(userQuery).hasFunding;
         const userHasTech = this.extractTechnologies(userQuery).length > 0;
@@ -142,7 +142,7 @@ interface ICPModel {
         );
         
         // Build CoreSignal API filters
-        const coreSignalFilters = this.buildCoreSignalFilters(extractedCriteria);
+        const coreSignalFilters = this.extractCompanyFilters(extractedCriteria);
         
         // Build search steps for frontend progress tracking
         const searchSteps = this.buildSearchSteps(coreSignalFilters, extractedCriteria);
@@ -230,103 +230,7 @@ interface ICPModel {
  * Convert CoreSignalFilters to proper Elasticsearch DSL query format
  * Add this method to your CompanyWorkflow class
  */
-private extractCompanyFilters(filters: any): any {
-  const filterConditions: any[] = [];
 
-  // Industry filter
-  if (filters.industry?.in_list?.length > 0) {
-    filterConditions.push({
-      "terms": {
-        "industry": filters.industry.in_list
-      }
-    });
-  }
-
-  // Country filter
-  if (filters.country?.in_list?.length > 0) {
-    filterConditions.push({
-      "terms": {
-        "country": filters.country.in_list
-      }
-    });
-  }
-
-  // Employee count range
-  if (filters.employees_count_gte !== undefined || filters.employees_count_lte !== undefined) {
-    const range: any = {};
-    if (filters.employees_count_gte !== undefined) {
-      range.gte = filters.employees_count_gte;
-    }
-    if (filters.employees_count_lte !== undefined) {
-      range.lte = filters.employees_count_lte;
-    }
-    
-    filterConditions.push({
-      "range": {
-        "employee_count": range
-      }
-    });
-  }
-
-  // Funding filters
-  if (filters.funding_last_round_type?.length > 0) {
-    filterConditions.push({
-      "terms": {
-        "funding_last_round_type": filters.funding_last_round_type
-      }
-    });
-  }
-
-  // Funding date range
-  if (filters.funding_last_round_date_gte || filters.funding_last_round_date_lte) {
-    const dateRange: any = {};
-    if (filters.funding_last_round_date_gte) {
-      dateRange.gte = filters.funding_last_round_date_gte;
-    }
-    if (filters.funding_last_round_date_lte) {
-      dateRange.lte = filters.funding_last_round_date_lte;
-    }
-    
-    filterConditions.push({
-      "range": {
-        "funding_last_round_date": dateRange
-      }
-    });
-  }
-
-  // Technologies filter (if supported by CoreSignal)
-  if (filters.technologies?.length > 0) {
-    filterConditions.push({
-      "terms": {
-        "technologies": filters.technologies
-      }
-    });
-  }
-
-  // Active jobs filter
-  if (filters.has_active_jobs) {
-    filterConditions.push({
-      "term": {
-        "has_active_jobs": true
-      }
-    });
-  }
-
-  // Construct the Elasticsearch DSL query
-  const query: any = {
-    "bool": {}
-  };
-
-  // If we have filters, use them
-  if (filterConditions.length > 0) {
-    query.bool.filter = filterConditions;
-  } else {
-    // No filters, return all companies
-    return { "match_all": {} };
-  }
-
-  return query;
-}
 /**
  * Convert CoreSignalFilters to proper Elasticsearch DSL query format
  * Add this method to your CompanyWorkflow class

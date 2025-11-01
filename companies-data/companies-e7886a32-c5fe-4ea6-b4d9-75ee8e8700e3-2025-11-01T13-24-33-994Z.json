@@ -1,0 +1,14 @@
+[
+  {
+    "name": "",
+    "domain": "",
+    "industry": [],
+    "funding_stage": "Bootstrapped",
+    "enrichement": {
+      "requested_url": "https://distinctdigitalmedia.com",
+      "error": true,
+      "status": 404,
+      "message": "Request failed with status code 404"
+    }
+  }
+]
