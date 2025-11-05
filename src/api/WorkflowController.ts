@@ -53,12 +53,12 @@ export async function WorkflowController(
     const userId = request.headers['x-user-id'] as string || 'demo-user';
 
     try {
-      console.log("🚀 Starting search via REST API", { sessionId, query, icpModelId });
-      console.log("📊 WebSocketManager state before search:", wsManager.debugInstance());
+      //console.log("🚀 Starting search via REST API", { sessionId, query, icpModelId });
+      //console.log("📊 WebSocketManager state before search:", wsManager.debugInstance());
       
       const icpModel = await getICPModel(icpModelId, userId);
       
-      console.log("📢 Starting workflow execution in background...");
+      //console.log("📢 Starting workflow execution in background...");
       
       // Start workflow asynchronously
       setTimeout(async () => {
@@ -66,7 +66,7 @@ export async function WorkflowController(
           const workflow = new CompanyWorkflow(sessionId, userId);
           const companies = await workflow.execute(query, icpModel);
           
-          console.log(`✅ Workflow completed for session ${sessionId}, found ${companies.length} companies`);
+          //console.log(`✅ Workflow completed for session ${sessionId}, found ${companies.length} companies`);
           
         } catch (error) {
           console.error('❌ Workflow execution error:', error);

@@ -53,28 +53,31 @@ export class SupabaseService {
 // src/services/SupabaseService.ts
 
 async getUserSessions(userId: string): Promise<SearchSession[]> {
-    const { data, error } = await this.supabase
-      .from('sessions')
-      .select(`
+  const { data, error } = await this.supabase
+    .from('sessions')
+    .select(`
+      *,
+      companies (
         *,
-        companies (*),
-        session_substeps (*)
-      `)
-      .eq('user_id', userId)
-      .order('created_at', { ascending: false });
-  
-    if (error) {
-      console.error('Error fetching user sessions:', error);
-      throw error;
-    }
-  
-    if (!data || data.length === 0) {
-      return [];
-    }
-  
-    return data.map(this.mapSessionFromDB.bind(this));
+        employees (*)
+      ),
+      session_substeps (*)
+    `)
+    .eq('user_id', userId)
+    .order('created_at', { ascending: false });
+
+  if (error) {
+    console.error('Error fetching user sessions:', error);
+    throw error;
   }
 
+  if (!data || data.length === 0) {
+    return [];
+  }
+console.log("-----------------------------",  data[0])
+console.log(data[0])
+  return data.map(this.mapSessionFromDB.bind(this));
+}
   async updateSessionQuery(sessionId: string, query: string[]): Promise<SearchSession> {
    
   
@@ -124,7 +127,8 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
       .eq('id', sessionId);
 
     return !error;
-  }async saveCompanyWithSessionAndICP(
+  }
+  async saveCompanyWithSessionAndICP(
     sessionId: string,
     icpModelId: string,
     companyData: any
@@ -142,6 +146,7 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
   
       const companyToSave = {
         ...cleanCompanyData,
+        company_id:companyData.company_id,
         session_id: sessionId,
         icp_model_id: icpModelId,
         city: location?.city || null,
@@ -164,7 +169,7 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
         intent_signals: companyData.intent_signals || [],
         relationships: companyData.relationships || {},
       };
-  
+  console.log("saving company =====>",companyToSave)
       const { data, error } = await this.supabase
         .from("companies")
         .insert([companyToSave])
@@ -421,6 +426,103 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
       completedAt: data.completed_at ? new Date(data.completed_at) : undefined
     };
   }
+
+
+  
+async  insertEmployees(employeesData: any[], targetCompanyId: any) {
+  console.log("--------------------------------------")
+  console.log(employeesData)
+  const employeesToInsert = employeesData.map(employee => ({
+      id: employee.id,
+      company_id: targetCompanyId, // Your target company foreign key
+      parent_id: employee.parent_id,
+      created_at: employee.created_at,
+      updated_at: employee.updated_at,
+      is_deleted: employee.is_deleted === 1,
+      
+      // Profile info
+      public_profile_id: employee.public_profile_id,
+      linkedin_url: employee.linkedin_url,
+      linkedin_shorthand_names: employee.linkedin_shorthand_names,
+      full_name: employee.full_name,
+      first_name: employee.first_name,
+      last_name: employee.last_name,
+      headline: employee.headline,
+      summary: employee.summary,
+      picture_url: employee.picture_url,
+      
+      // Location
+      location_country: employee.location_country,
+      location_city: employee.location_city,
+      location_full: employee.location_full,
+      
+      // Social metrics
+      connections_count: employee.connections_count,
+      followers_count: employee.followers_count,
+      
+      // Professional info
+      is_working: employee.is_working === 1,
+      active_experience_title: employee.active_experience_title,
+      active_experience_company_id: employee.active_experience_company_id,
+      active_experience_department: employee.active_experience_department,
+      is_decision_maker: employee.is_decision_maker === 1,
+      total_experience_duration_months: employee.total_experience_duration_months,
+      
+      // Contact
+      primary_professional_email: employee.primary_professional_email,
+      professional_emails: employee.professional_emails_collection,
+      
+      // Skills and interests
+      interests: employee.interests,
+      inferred_skills: employee.inferred_skills,
+      historical_skills: employee.historical_skills,
+      
+      // Experience breakdown
+      experience_department_breakdown: employee.total_experience_duration_months_breakdown_department,
+      experience_management_breakdown: employee.total_experience_duration_months_breakdown_management_level,
+      
+      // Education
+      education_degrees: employee.education_degrees,
+      education_history: employee.education,
+      
+      // Languages
+      languages: employee.languages,
+      
+      // GitHub
+      github_url: employee.github_url,
+      github_username: employee.github_username,
+      
+      // Full experience history
+      experience_history: employee.experience,
+      
+      // Recommendations
+      recommendations_count: employee.recommendations_count,
+      recommendations: employee.recommendations,
+      
+      // Activities
+      activities: employee.activity,
+      
+      // Awards
+      awards: employee.awards,
+      
+      // Certifications
+      certifications: employee.certifications
+  }));
+
+  const { data, error } = await  this.supabase
+      .from('employees')
+      .insert(employeesToInsert)
+      .select();
+
+  if (error) {
+      console.error('Error inserting employees:', error);
+      return null;
+  }
+
+  console.log(`Successfully inserted ${data.length} employees`);
+  return data;
+}
+
 }
 
 export const supabaseService = new SupabaseService();

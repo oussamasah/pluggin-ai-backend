@@ -112,7 +112,7 @@ interface ICPModel {
         
         // 3. Add ICP geography if not covered
         if (!userHasLocation && icpGeographies.length > 0) {
-          parts.push(`in ${icpGeographies[0]}`);
+          parts.push(`in ${icpGeographies.join(" or ")}`);
         }
         
         // 4. Add ICP employee range if not covered

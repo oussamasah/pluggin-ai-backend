@@ -184,4 +184,31 @@ export interface Company {
     sessionId: string;
     timestamp: Date;
   }
-  
+  // Add this interface outside the class or in a common types file
+export interface EmployeeSearchQuery {
+  companyId: number;       // Use the Coresignal company ID
+  jobTitle: string;        // The job title to search for
+  page?: number;           // For single-page requests (optional)
+}
+
+// Interface for a single employee record (simplified for our use)
+export interface EmployeeRecord {
+  id: number;
+  full_name: string;
+  headline: string;
+  location_full: string;
+  // Add other fields you need from the employee response
+  experience: {
+      title: string;
+      company_name: string;
+      is_current: number;
+      // ...
+  }[];
+}
+
+// Update SearchResponse to be more specific for Employee data
+export interface EmployeeSearchResponse {
+  results: number[];
+  total_results: number;
+  // The CoreSignal API also includes total_pages, page, and pagination data
+}

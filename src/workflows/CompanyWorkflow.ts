@@ -14,6 +14,7 @@ import { LLMQueryFilterExtractor } from '../services/LLMQueryFilterExtractor .js
 import { mapCoresignalToCompany } from '../services/CoreSignalToCompany.js';
 import { CoreSignalService } from '../services/CoresignalService.js';
 import { supabaseService } from '../services/SupabaseService.js';
+import { generateExaQuery } from '../services/HighConfidenceIntentDetector.js';
 export class CompanyWorkflow {
   private sessionId: string;
   private userId: string;
@@ -265,7 +266,8 @@ private async sendSearchComplete(companies: Company[], resultsCount: number, sea
     
 // In your workflow execution
 let querymerge = new QueryMergerService();
-const mergedQuery = await querymerge.mergeICPWithUserQuery(query, icpModel);
+//const mergedQuery = await querymerge.mergeICPWithUserQuery(query, icpModel);
+const mergedQuery = await generateExaQuery(icpModel.config ,query);
 console.log("merged user query with icp config",mergedQuery)
 await this.updateSubstep('1.1', {
   status: 'completed',
@@ -312,7 +314,9 @@ await this.updateSubstep('2.1', {
 });
 // Search companies
 
-const exacompanies = await  exaService.searchCompanies(mergedQuery.structuredQuery,1)
+const exacompanies = await  exaService.searchCompanies(mergedQuery.optimizedQuery,1)
+//await this.saveCompanies(this.sessionId,exacompanies)
+
 console.log("exacompanies=====================================")
 /*const result = await coreSignal.searchCompanies(coreSignalFilters, {
   itemsPerPage: 2
@@ -358,7 +362,7 @@ companies = await Promise.all(
   companiesList.map(c => this.transformToCompany(c))
 )
 console.log("--------------------------------------")
-await this.saveCompanies(this.sessionId,companies)
+
 
 await this.updateSubstep('3.1', {
   status: 'completed',
@@ -387,7 +391,30 @@ for (const c of companies) {
   // Ensure the key exists
   c.scoring_metrics = c.scoring_metrics ?? {};
   c.scoring_metrics.fit_score = fitscore;
+  if(c.scoring_metrics.fit_score.score){
+    console.log(c)
+    console.log(icpModel.config)
+  
+    const employees = await coreSignal.searchEmployeesByCompanyId(
+      c.enrichement.id,
+      icpModel.config.targetPersonas
+    );
+    let employees_enrichments = null
+  console.log("--------------------------------------")
+  console.log("employees.results-",employees.results)
+
+    if(employees.results.length > 0 ){
+     
+      employees_enrichments =  await coreSignal.collectEmployees(employees.results);
+      c.employees=employees_enrichments     
+    }
+await this.saveCompanies(this.sessionId, employees)
+await this.saveCompanies(this.sessionId, employees_enrichments)
+
+  }
 }
+
+
 
 await this.updateSubstep('3.3', {
   status: 'completed',
@@ -398,6 +425,8 @@ await this.updateSubstep('4.1', {
   startedAt: new Date()
 }); 
 
+
+
 for (const c of companies) {
   const intentscore = await ollamaService.scoreCompanyIntent(c, icpModel);
 
@@ -407,7 +436,12 @@ for (const c of companies) {
 }
 
 companies.forEach(async(com:any)=>{
+  com.company_id=uuidv4();
+  let emp = com.employees;
+  delete com["employees"]
  await supabaseService.saveCompanyWithSessionAndICP(this.sessionId,icpModel.id,com)
+ await supabaseService.insertEmployees(emp,com.company_id);
+
  })
 
 await this.updateSubstep('4.1', {
@@ -444,9 +478,8 @@ await this.updateSubstep('4.2', {
         status: 'completed',
         startedAt: new Date()
       }); 
-console.log(JSON.stringify(delete companies["enrichement"]))
-console.log(JSON.stringify(icpModel.config))
 
+//await this.saveCompanies(this.sessionId,icpModel.config)
       return companies;
 
     } catch (error : any) {
@@ -481,7 +514,16 @@ console.log(JSON.stringify(icpModel.config))
       throw error;
     }
   }
-
+  private getDomainFromUrl(url: string): string {
+    try {
+      const urlObj = new URL(url.startsWith('http') ? url : `https://${url}`);
+      // Remove www. prefix if present
+      return urlObj.hostname.replace(/^www\./, '');
+    } catch (error) {
+      // Fallback: simple cleanup
+      return url.replace(/^(https?:\/\/)?(www\.)?/, '').split('/')[0];
+    }
+  }
   transformToCompany(rawData: any): Promise<Company> {
     // Extract domain from website or set null
     const extractDomain = (url?: string): string => {

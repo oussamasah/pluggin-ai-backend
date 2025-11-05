@@ -34,6 +34,7 @@ loadEnv();
 const envSchema = z.object({
   // API Keys (required)
   EXA_API_KEY: z.string().min(1, "EXA_API_KEY is required"),
+  CORESIGNAL_API: z.string().min(1, "EXA_API_KEY is required"),
   EXPLORIUM_API_KEY: z.string().min(1, "EXPLORIUM_API_KEY is required"),
   SUPABASE_URL: z.string().url("SUPABASE_URL must be a valid URL"),
   SUPABASE_KEY: z.string().min(1, "SUPABASE_KEY is required"),
@@ -85,6 +86,7 @@ class ConfigManager {
       // Load environment variables
       const envVars = {
         EXA_API_KEY: process.env.EXA_API_KEY,
+        CORESIGNAL_API: process.env.CORESIGNAL_API,
         EXPLORIUM_API_KEY: process.env.EXPLORIUM_API_KEY,
         SUPABASE_URL: process.env.SUPABASE_URL,
         SUPABASE_KEY: process.env.SUPABASE_KEY,

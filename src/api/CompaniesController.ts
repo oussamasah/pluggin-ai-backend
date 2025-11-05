@@ -177,7 +177,10 @@ export async function CompaniesController(fastify: FastifyInstance) {
       // Build the query
       let query = supabaseService['supabase']
         .from('companies')
-        .select('*', { count: 'exact' })
+        .select(`
+          *,
+          employees (*)
+        `, { count: 'exact' })
         .in('session_id', sessionIds);
 
       // Apply search filter

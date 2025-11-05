@@ -1,0 +1,1530 @@
+[
+  {
+    "id": 276172704,
+    "parent_id": 276172704,
+    "created_at": "2024-12-25T06:02:57.633999Z",
+    "updated_at": "2025-10-23T04:28:59.477701Z",
+    "checked_at": "2025-10-23T04:28:59.477701Z",
+    "changed_at": "2025-10-23T04:28:59.477701Z",
+    "experience_change_last_identified_at": null,
+    "is_deleted": 0,
+    "is_parent": 1,
+    "public_profile_id": 133944495,
+    "linkedin_url": "https://www.linkedin.com/in/imadgharazeddine",
+    "linkedin_shorthand_names": [
+      "imadgharazeddine"
+    ],
+    "historical_ids": [
+      276172704
+    ],
+    "full_name": "Imad G.",
+    "first_name": "Imad",
+    "first_name_initial": "I",
+    "middle_name": null,
+    "middle_name_initial": null,
+    "last_name": "G.",
+    "last_name_initial": "G",
+    "headline": "CEO at Mamo | 💵 All-in-one payments solution for UAE businesses",
+    "summary": "Building and scaling Mamo: the UAE's only full-stack digital payments and spend management platform for businesses of all sizes.",
+    "picture_url": "https://static.licdn.com/aero-v1/sc/h/9c8pery4andzj6ohjkjp54ma2",
+    "location_country": "United Arab Emirates",
+    "location_country_iso2": "AE",
+    "location_country_iso3": "ARE",
+    "location_full": "Dubai, United Arab Emirates",
+    "location_regions": [
+      "Asia",
+      "Western Asia",
+      "EMEA"
+    ],
+    "location_city": "Dubai",
+    "location_state": "United Arab Emirates",
+    "interests": [],
+    "inferred_skills": [
+      "expense management",
+      "data integration",
+      "crm integration",
+      "data mining",
+      "software engineering",
+      "digital",
+      "payments",
+      "management",
+      "operations",
+      "integration",
+      "gmp",
+      "crm",
+      "creative",
+      "software",
+      "mobile",
+      "indexing",
+      "pipelines",
+      "analysis",
+      "engineering"
+    ],
+    "historical_skills": [],
+    "connections_count": 500,
+    "followers_count": 60,
+    "services": null,
+    "primary_professional_email": "imad@mamopay.com",
+    "primary_professional_email_status": "verified",
+    "professional_emails_collection": [
+      {
+        "professional_email": "imad@mamopay.com",
+        "professional_email_status": "verified",
+        "order_of_priority": 1
+      }
+    ],
+    "is_working": 1,
+    "active_experience_company_id": 5173108,
+    "active_experience_title": "Co-founder CEO",
+    "active_experience_description": "Mamo transforms businesses by helping them consolidate payment collection, corporate cards, and expense management into one beautiful, intuitive platform. Over 1,000 companies have used Mamo to improve revenue collection, control spend, reduce costs and automate financial operations.",
+    "active_experience_department": "C-Suite",
+    "active_experience_management_level": "Founder",
+    "is_decision_maker": 1,
+    "total_experience_duration_months": 201,
+    "total_experience_duration_months_breakdown_department": [
+      {
+        "department": "C-Suite",
+        "total_experience_duration_months": 67
+      },
+      {
+        "department": "Other",
+        "total_experience_duration_months": 78
+      },
+      {
+        "department": "Engineering and Technical",
+        "total_experience_duration_months": 34
+      },
+      {
+        "department": "Sales",
+        "total_experience_duration_months": 22
+      }
+    ],
+    "total_experience_duration_months_breakdown_management_level": [
+      {
+        "management_level": "Intern",
+        "total_experience_duration_months": 10
+      },
+      {
+        "management_level": "Senior",
+        "total_experience_duration_months": 34
+      },
+      {
+        "management_level": "Other",
+        "total_experience_duration_months": 78
+      },
+      {
+        "management_level": "Specialist",
+        "total_experience_duration_months": 12
+      },
+      {
+        "management_level": "Founder",
+        "total_experience_duration_months": 67
+      }
+    ],
+    "experience": [
+      {
+        "active_experience": 1,
+        "position_title": "Co-founder CEO",
+        "department": "C-Suite",
+        "management_level": "Founder",
+        "location": "Dubai, United Arab Emirates",
+        "description": "Mamo transforms businesses by helping them consolidate payment collection, corporate cards, and expense management into one beautiful, intuitive platform. Over 1,000 companies have used Mamo to improve revenue collection, control spend, reduce costs and automate financial operations.",
+        "date_from": "April 2020",
+        "date_from_year": 2020,
+        "date_from_month": 4,
+        "date_to": null,
+        "date_to_year": null,
+        "date_to_month": null,
+        "duration_months": 66,
+        "company_id": 5173108,
+        "company_name": "Mamo",
+        "company_type": "Privately Held",
+        "company_founded_year": 2019,
+        "company_followers_count": 19250,
+        "company_website": "https://www.mamopay.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/mamopay"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/mamopay",
+          "https://www.twitter.com/@mamopay"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/mamopay",
+        "company_size_range": "51-200 employees",
+        "company_employees_count": 135,
+        "company_industry": "Financial Services",
+        "company_categories_and_keywords": [
+          "financial technology",
+          "computers electronics and technology > programming and developer software (in united arab emirates)",
+          "payments",
+          "payment links",
+          "business payment links",
+          "invoice",
+          "spend management",
+          "corporate cards",
+          "credit cards",
+          "expense management",
+          "payment gateway",
+          "invoicing",
+          "recurring payments",
+          "apis",
+          "qr codes",
+          "multi-currency",
+          "payouts",
+          "digital payments",
+          "online payments",
+          "mamo visa® card",
+          "financial-services",
+          "technology",
+          "application-software",
+          "fintech",
+          "money-transfer",
+          "financial services",
+          "mobile payments",
+          "peer to peer"
+        ],
+        "company_annual_revenue_source_5": 6700000,
+        "company_annual_revenue_currency_source_5": "USD",
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 35,
+        "company_last_funding_round_date": "2024-07-25",
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "Dubai, Dubai, AE",
+        "company_hq_country": "United Arab Emirates",
+        "company_hq_regions": [
+          "Asia",
+          "Western Asia",
+          "EMEA"
+        ],
+        "company_hq_country_iso2": "AE",
+        "company_hq_country_iso3": "ARE",
+        "company_hq_city": null,
+        "company_hq_state": null,
+        "company_hq_street": null,
+        "company_hq_zipcode": null,
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [],
+        "company_is_b2b": 1,
+        "order_in_profile": 1
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Senior Software Engineer",
+        "department": "Engineering and Technical",
+        "management_level": "Senior",
+        "location": "Mountain View, CA",
+        "description": "Mobile Search indexing pipelines Logs analysis, data mining, and visualization",
+        "date_from": "2010",
+        "date_from_year": 2010,
+        "date_from_month": null,
+        "date_to": "2011",
+        "date_to_year": 2011,
+        "date_to_month": null,
+        "duration_months": 12,
+        "company_id": 3252082,
+        "company_name": "Google",
+        "company_type": "Public Company",
+        "company_founded_year": null,
+        "company_followers_count": 38731926,
+        "company_website": "https://www.google.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/lifeatgoogle"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/lifeatgoogle"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/google",
+        "company_size_range": "10,001+ employees",
+        "company_employees_count": 316360,
+        "company_industry": "Software Development",
+        "company_categories_and_keywords": [
+          "technology/software",
+          "url shortener",
+          "goo.io",
+          "computers electronics and technology > search engines (in united states)",
+          "search",
+          "ads",
+          "mobile",
+          "android",
+          "online video",
+          "apps",
+          "machine learning",
+          "virtual reality",
+          "cloud",
+          "hardware",
+          "artificial intelligence",
+          "youtube",
+          "software",
+          "technology",
+          "engineering",
+          "customer service"
+        ],
+        "company_annual_revenue_source_5": null,
+        "company_annual_revenue_currency_source_5": null,
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.099149200527556,
+        "company_last_funding_round_date": null,
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "1600 Amphitheatre Parkway; Mountain View, CA 94043, US",
+        "company_hq_country": "United States",
+        "company_hq_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "company_hq_country_iso2": "US",
+        "company_hq_country_iso3": "USA",
+        "company_hq_city": "Mountain View",
+        "company_hq_state": "California",
+        "company_hq_street": "1600 Amphitheatre Parkway",
+        "company_hq_zipcode": "94043",
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "GOOGL"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 2
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Data Integration Manager, GMP",
+        "department": null,
+        "management_level": null,
+        "location": null,
+        "description": "CRM Integration, Partner Ecosystem Management",
+        "date_from": "June 2017",
+        "date_from_year": 2017,
+        "date_from_month": 6,
+        "date_to": "March 2020",
+        "date_to_year": 2020,
+        "date_to_month": 3,
+        "duration_months": 33,
+        "company_id": 3252082,
+        "company_name": "Google",
+        "company_type": "Public Company",
+        "company_founded_year": null,
+        "company_followers_count": 38731926,
+        "company_website": "https://www.google.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/lifeatgoogle"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/lifeatgoogle"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/google",
+        "company_size_range": "10,001+ employees",
+        "company_employees_count": 316360,
+        "company_industry": "Software Development",
+        "company_categories_and_keywords": [
+          "technology/software",
+          "url shortener",
+          "goo.io",
+          "computers electronics and technology > search engines (in united states)",
+          "search",
+          "ads",
+          "mobile",
+          "android",
+          "online video",
+          "apps",
+          "machine learning",
+          "virtual reality",
+          "cloud",
+          "hardware",
+          "artificial intelligence",
+          "youtube",
+          "software",
+          "technology",
+          "engineering",
+          "customer service"
+        ],
+        "company_annual_revenue_source_5": null,
+        "company_annual_revenue_currency_source_5": null,
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.099149200527556,
+        "company_last_funding_round_date": null,
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "1600 Amphitheatre Parkway; Mountain View, CA 94043, US",
+        "company_hq_country": "United States",
+        "company_hq_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "company_hq_country_iso2": "US",
+        "company_hq_country_iso3": "USA",
+        "company_hq_city": "Mountain View",
+        "company_hq_state": "California",
+        "company_hq_street": "1600 Amphitheatre Parkway",
+        "company_hq_zipcode": "94043",
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "GOOGL"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 3
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Software Engineering Intern",
+        "department": "Engineering and Technical",
+        "management_level": "Intern",
+        "location": "Mountain View, California",
+        "description": "My journey with Google started with an internship on the Mobile Search team in California, where I worked on Google's search indexing pipelines.",
+        "date_from": "January 2008",
+        "date_from_year": 2008,
+        "date_from_month": 1,
+        "date_to": "November 2008",
+        "date_to_year": 2008,
+        "date_to_month": 11,
+        "duration_months": 10,
+        "company_id": 3252082,
+        "company_name": "Google",
+        "company_type": "Public Company",
+        "company_founded_year": null,
+        "company_followers_count": 38731926,
+        "company_website": "https://www.google.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/lifeatgoogle"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/lifeatgoogle"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/google",
+        "company_size_range": "10,001+ employees",
+        "company_employees_count": 316360,
+        "company_industry": "Software Development",
+        "company_categories_and_keywords": [
+          "technology/software",
+          "url shortener",
+          "goo.io",
+          "computers electronics and technology > search engines (in united states)",
+          "search",
+          "ads",
+          "mobile",
+          "android",
+          "online video",
+          "apps",
+          "machine learning",
+          "virtual reality",
+          "cloud",
+          "hardware",
+          "artificial intelligence",
+          "youtube",
+          "software",
+          "technology",
+          "engineering",
+          "customer service"
+        ],
+        "company_annual_revenue_source_5": null,
+        "company_annual_revenue_currency_source_5": null,
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.099149200527556,
+        "company_last_funding_round_date": null,
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "1600 Amphitheatre Parkway; Mountain View, CA 94043, US",
+        "company_hq_country": "United States",
+        "company_hq_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "company_hq_country_iso2": "US",
+        "company_hq_country_iso3": "USA",
+        "company_hq_city": "Mountain View",
+        "company_hq_state": "California",
+        "company_hq_street": "1600 Amphitheatre Parkway",
+        "company_hq_zipcode": "94043",
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "GOOGL"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 4
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Senior Creative Specialist, GMP",
+        "department": null,
+        "management_level": null,
+        "location": null,
+        "description": null,
+        "date_from": "September 2013",
+        "date_from_year": 2013,
+        "date_from_month": 9,
+        "date_to": "June 2017",
+        "date_to_year": 2017,
+        "date_to_month": 6,
+        "duration_months": 45,
+        "company_id": 3252082,
+        "company_name": "Google",
+        "company_type": "Public Company",
+        "company_founded_year": null,
+        "company_followers_count": 38731926,
+        "company_website": "https://www.google.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/lifeatgoogle"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/lifeatgoogle"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/google",
+        "company_size_range": "10,001+ employees",
+        "company_employees_count": 316360,
+        "company_industry": "Software Development",
+        "company_categories_and_keywords": [
+          "technology/software",
+          "url shortener",
+          "goo.io",
+          "computers electronics and technology > search engines (in united states)",
+          "search",
+          "ads",
+          "mobile",
+          "android",
+          "online video",
+          "apps",
+          "machine learning",
+          "virtual reality",
+          "cloud",
+          "hardware",
+          "artificial intelligence",
+          "youtube",
+          "software",
+          "technology",
+          "engineering",
+          "customer service"
+        ],
+        "company_annual_revenue_source_5": null,
+        "company_annual_revenue_currency_source_5": null,
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.099149200527556,
+        "company_last_funding_round_date": null,
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "1600 Amphitheatre Parkway; Mountain View, CA 94043, US",
+        "company_hq_country": "United States",
+        "company_hq_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "company_hq_country_iso2": "US",
+        "company_hq_country_iso3": "USA",
+        "company_hq_city": "Mountain View",
+        "company_hq_state": "California",
+        "company_hq_street": "1600 Amphitheatre Parkway",
+        "company_hq_zipcode": "94043",
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "GOOGL"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 5
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Senior Account Strategist",
+        "department": "Sales",
+        "management_level": "Senior",
+        "location": null,
+        "description": null,
+        "date_from": "November 2011",
+        "date_from_year": 2011,
+        "date_from_month": 11,
+        "date_to": "September 2013",
+        "date_to_year": 2013,
+        "date_to_month": 9,
+        "duration_months": 22,
+        "company_id": 3252082,
+        "company_name": "Google",
+        "company_type": "Public Company",
+        "company_founded_year": null,
+        "company_followers_count": 38731926,
+        "company_website": "https://www.google.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/lifeatgoogle"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/lifeatgoogle"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/google",
+        "company_size_range": "10,001+ employees",
+        "company_employees_count": 316360,
+        "company_industry": "Software Development",
+        "company_categories_and_keywords": [
+          "technology/software",
+          "url shortener",
+          "goo.io",
+          "computers electronics and technology > search engines (in united states)",
+          "search",
+          "ads",
+          "mobile",
+          "android",
+          "online video",
+          "apps",
+          "machine learning",
+          "virtual reality",
+          "cloud",
+          "hardware",
+          "artificial intelligence",
+          "youtube",
+          "software",
+          "technology",
+          "engineering",
+          "customer service"
+        ],
+        "company_annual_revenue_source_5": null,
+        "company_annual_revenue_currency_source_5": null,
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.099149200527556,
+        "company_last_funding_round_date": null,
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "1600 Amphitheatre Parkway; Mountain View, CA 94043, US",
+        "company_hq_country": "United States",
+        "company_hq_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "company_hq_country_iso2": "US",
+        "company_hq_country_iso3": "USA",
+        "company_hq_city": "Mountain View",
+        "company_hq_state": "California",
+        "company_hq_street": "1600 Amphitheatre Parkway",
+        "company_hq_zipcode": "94043",
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "GOOGL"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 6
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Software Engineer",
+        "department": "Engineering and Technical",
+        "management_level": "Specialist",
+        "location": null,
+        "description": null,
+        "date_from": "2009",
+        "date_from_year": 2009,
+        "date_from_month": null,
+        "date_to": "2010",
+        "date_to_year": 2010,
+        "date_to_month": null,
+        "duration_months": 12,
+        "company_id": 3252082,
+        "company_name": "Google",
+        "company_type": "Public Company",
+        "company_founded_year": null,
+        "company_followers_count": 38731926,
+        "company_website": "https://www.google.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/lifeatgoogle"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/lifeatgoogle"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/google",
+        "company_size_range": "10,001+ employees",
+        "company_employees_count": 316360,
+        "company_industry": "Software Development",
+        "company_categories_and_keywords": [
+          "technology/software",
+          "url shortener",
+          "goo.io",
+          "computers electronics and technology > search engines (in united states)",
+          "search",
+          "ads",
+          "mobile",
+          "android",
+          "online video",
+          "apps",
+          "machine learning",
+          "virtual reality",
+          "cloud",
+          "hardware",
+          "artificial intelligence",
+          "youtube",
+          "software",
+          "technology",
+          "engineering",
+          "customer service"
+        ],
+        "company_annual_revenue_source_5": null,
+        "company_annual_revenue_currency_source_5": null,
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.099149200527556,
+        "company_last_funding_round_date": null,
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "1600 Amphitheatre Parkway; Mountain View, CA 94043, US",
+        "company_hq_country": "United States",
+        "company_hq_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "company_hq_country_iso2": "US",
+        "company_hq_country_iso3": "USA",
+        "company_hq_city": "Mountain View",
+        "company_hq_state": "California",
+        "company_hq_street": "1600 Amphitheatre Parkway",
+        "company_hq_zipcode": "94043",
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "GOOGL"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 7
+      }
+    ],
+    "projected_base_salary_p25": null,
+    "projected_base_salary_median": null,
+    "projected_base_salary_p75": null,
+    "projected_base_salary_period": null,
+    "projected_base_salary_currency": null,
+    "projected_base_salary_updated_at": null,
+    "projected_additional_salary": [],
+    "projected_additional_salary_period": null,
+    "projected_additional_salary_currency": null,
+    "projected_additional_salary_updated_at": null,
+    "projected_total_salary_p25": null,
+    "projected_total_salary_median": null,
+    "projected_total_salary_p75": null,
+    "projected_total_salary_period": null,
+    "projected_total_salary_currency": null,
+    "projected_total_salary_updated_at": null,
+    "last_graduation_date": 2008,
+    "education_degrees": [
+      "Bachelor of Engineering",
+      "IB"
+    ],
+    "education": [
+      {
+        "degree": "IB",
+        "description": null,
+        "institution_url": "https://www.linkedin.com/school/british-international-school-of-jeddah",
+        "institution_name": "British International School of Jeddah",
+        "institution_full_address": "Prince Sultan Street; Jeddah, SA",
+        "institution_country_iso2": "SA",
+        "institution_country_iso3": "SAU",
+        "institution_regions": [
+          "Asia",
+          "Western Asia",
+          "EMEA"
+        ],
+        "institution_city": null,
+        "institution_state": null,
+        "institution_street": null,
+        "institution_zipcode": null,
+        "date_from_year": 2001,
+        "date_to_year": 2003,
+        "activities_and_societies": null,
+        "order_in_profile": 1
+      },
+      {
+        "degree": "Bachelor of Engineering",
+        "description": null,
+        "institution_url": "https://www.linkedin.com/school/mcgill-university",
+        "institution_name": "McGill University",
+        "institution_full_address": "845 Sherbrooke Street West; Montreal, Qc H3A 2T5, CA",
+        "institution_country_iso2": "CA",
+        "institution_country_iso3": "CAN",
+        "institution_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "institution_city": null,
+        "institution_state": null,
+        "institution_street": null,
+        "institution_zipcode": null,
+        "date_from_year": 2003,
+        "date_to_year": 2008,
+        "activities_and_societies": null,
+        "order_in_profile": 2
+      }
+    ],
+    "recommendations_count": null,
+    "recommendations": [],
+    "activity": [
+      {
+        "activity_url": "https://www.linkedin.com/posts/jawad-shreim_absolutely-clueless-aws-isnt-too-big-they-activity-7386350933577981952-gOW2",
+        "title": "Absolutely clueless. AWS isn't too big, they are reliable so companies use them but companies are too lazy. If your system doesn't handle region…",
+        "action": "Liked by",
+        "order_in_profile": 1
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/smashi-business_uae-supreme-court-bans-compound-interest-activity-7385644248722767872-MOJ9",
+        "title": "UAE Supreme Court Bans Compound Interest on Bank Loans\n\nThe UAE’s highest court has ruled that banks cannot charge compound interest on loans — and…",
+        "action": "Liked by",
+        "order_in_profile": 2
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/sultan-al-zarooni-ica-b6bb899a_uae-president-issues-federal-decree-law-on-activity-7383393106253225985-HpEY",
+        "title": "👀 Ever seen a regulator fine a bank 10× the value of its violation?\nThe UAE just made it possible. 🇦🇪\n\nThe country has rolled out Federal…",
+        "action": "Liked by",
+        "order_in_profile": 3
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/imadgharazeddine_corporate-cards-activity-7384576171906207745-1rqE",
+        "title": "A few weeks ago, and although Mamo already offers up to 2% cashback on international corporate spends, our customers asked that we also offer…",
+        "action": "Shared by",
+        "order_in_profile": 4
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/imadgharazeddine_expandnorthstar-activity-7383084968035577856-HT89",
+        "title": "🎤 I’m thrilled to be speaking at Expand North Star 2025, the world’s largest startup and investor connector!\n\nFrom 12–15 October at Dubai Harbour…",
+        "action": "Shared by",
+        "order_in_profile": 5
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/4dx-ventures_venturecapital-africantech-globalinnovation-activity-7379429695207010304-jouh",
+        "title": "💡What does it take to unlock Africa's next wave of tech innovation? \n\nLast week at the GABI Summit in New York, our Managing Partner Daniel Marlo…",
+        "action": "Liked by",
+        "order_in_profile": 6
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/hamdanbinmohammed_today-i-launched-dubai-founders-hq-a-joint-activity-7380993356753108992-Y79x",
+        "title": "Today, I launched Dubai Founders HQ, a joint initiative of the Dubai Department of Economy and Tourism (DET) and the Dubai Chamber of Digital…",
+        "action": "Liked by",
+        "order_in_profile": 7
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/checkout_wheretheworldchecksout-activity-7379893010702172160-ASk0",
+        "title": "We’re accelerating investment after reaching a US milestone. Georgia – the Peach State – has accepted our Merchant Acquirer Limited Purpose Bank…",
+        "action": "Liked by",
+        "order_in_profile": 8
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/pfranceschi_i-sent-the-following-email-to-the-brex-team-activity-7379580230845423616-BOKy",
+        "title": "I sent the following email to the Brex team this week sharing an important milestone for the company. \n\nThe turnaround is over, Brex is back to…",
+        "action": "Liked by",
+        "order_in_profile": 9
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/seb-johnson_checkout-fintech-activity-7377255515451727872-vZLi",
+        "title": "BREAKING: Checkout.com valued at $12bn in new employee share buyback AND reports 30% revenue growth!\n\nToday Checkout.com has announced some HUGE…",
+        "action": "Liked by",
+        "order_in_profile": 10
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/imadgharazeddine_explore-careers-at-mamo-join-our-team-in-activity-7374057153046659072-RWc2",
+        "title": "🚀 Mamo is hiring an Engineering Manager (remote)\n\nPlease apply online if you are interested. Kindly avoid DMs as we will only consider applicants…",
+        "action": "Shared by",
+        "order_in_profile": 11
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/lizziebruce_financial-copywriters-app-designers-in-general-activity-7368613573012533249-Mm73",
+        "title": "Financial copywriters, app designers in general, and UX writers take note!",
+        "action": "Liked by",
+        "order_in_profile": 12
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/linasbeliunas_the-co-founder-of-youtube-just-said-google-activity-7372971202337923072-9xL4",
+        "title": "The co-founder of YouTube just said Google will become the most valuable company in the world 😳\n\nWhy? One phrase: “the full stack.”\n\nHere’s what…",
+        "action": "Liked by",
+        "order_in_profile": 13
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/wes-ezzeddine_aisafety-safeai-activity-7364212102376402944-pm0q",
+        "title": "✌️\n\nWhen work disappears, what remains ‘human’?\n\nAs AI replaces labor and becomes more effective at mundane tasks, we’re not just losing jobs, we’re…",
+        "action": "Liked by",
+        "order_in_profile": 14
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/imadgharazeddine_mamo-is-hiring-a-sale-development-intern-activity-7368911161834110976-vADA",
+        "title": "Mamo is hiring a Sale Development Intern (Remote)!\n\nYou’ll be using various lead generation tools (Yes, AI too) to find customers who have challenges…",
+        "action": "Posted by",
+        "order_in_profile": 15
+      }
+    ],
+    "awards": [],
+    "courses": [],
+    "certifications": [],
+    "languages": [],
+    "patents_count": null,
+    "patents_topics": [],
+    "patents": [],
+    "publications_count": null,
+    "publications_topics": [],
+    "publications": [],
+    "projects_count": null,
+    "projects_topics": [],
+    "projects": [],
+    "organizations": [],
+    "github_url": null,
+    "github_username": null,
+    "github_mapping_confidence": null,
+    "github_contributions_count": null,
+    "github_repos_summary": [],
+    "profile_root_field_changes_summary": [
+      {
+        "field_name": "country",
+        "change_type": "updated",
+        "last_changed_at": "2025-02-27 05:19:48.223948"
+      },
+      {
+        "field_name": "summary",
+        "change_type": "updated",
+        "last_changed_at": "2025-05-20 13:28:36.123223"
+      },
+      {
+        "field_name": "location",
+        "change_type": "updated",
+        "last_changed_at": "2025-02-27 05:19:48.223948"
+      },
+      {
+        "field_name": "follower_count",
+        "change_type": "updated",
+        "last_changed_at": "2025-10-23 04:28:59.477701"
+      },
+      {
+        "field_name": "summary",
+        "change_type": "new",
+        "last_changed_at": "2025-02-27 05:19:48.223948"
+      },
+      {
+        "field_name": "headline",
+        "change_type": "updated",
+        "last_changed_at": "2025-08-21 19:07:27.866296"
+      },
+      {
+        "field_name": "deleted",
+        "change_type": "updated",
+        "last_changed_at": "2025-06-17 06:14:15.304020"
+      },
+      {
+        "field_name": "headline",
+        "change_type": "new",
+        "last_changed_at": "2025-07-30 09:56:03.671944"
+      }
+    ],
+    "profile_collection_field_changes_summary": [
+      {
+        "field_name": "activity",
+        "last_changed_at": "2025-10-23 04:28:59.477701"
+      },
+      {
+        "field_name": "experience",
+        "last_changed_at": "2025-10-08 13:01:08.975393"
+      },
+      {
+        "field_name": "education",
+        "last_changed_at": "2025-10-08 13:01:08.975393"
+      }
+    ],
+    "experience_recently_started": [],
+    "experience_recently_closed": []
+  },
+  {
+    "id": 426153044,
+    "parent_id": 426153044,
+    "created_at": "2019-09-21T09:06:52.000Z",
+    "updated_at": "2025-07-23T12:39:06.096524Z",
+    "checked_at": "2025-10-09T17:16:53.108497Z",
+    "changed_at": "2025-07-23T12:39:06.096524Z",
+    "experience_change_last_identified_at": "2024-11-24T01:18:28.805259Z",
+    "is_deleted": 0,
+    "is_parent": 1,
+    "public_profile_id": 592050126,
+    "linkedin_url": "https://www.linkedin.com/in/lyne-sfeir-726339146",
+    "linkedin_shorthand_names": [
+      "lyne-sfeir-726339146"
+    ],
+    "historical_ids": [
+      426153044
+    ],
+    "full_name": "Lyne Sfeir",
+    "first_name": "Lyne",
+    "first_name_initial": "L",
+    "middle_name": null,
+    "middle_name_initial": null,
+    "last_name": "Sfeir",
+    "last_name_initial": "S",
+    "headline": "Growth Marketing Manager at Mamo",
+    "summary": null,
+    "picture_url": "https://static.licdn.com/aero-v1/sc/h/9c8pery4andzj6ohjkjp54ma2",
+    "location_country": "United Arab Emirates",
+    "location_country_iso2": "AE",
+    "location_country_iso3": "ARE",
+    "location_full": "Dubai, United Arab Emirates",
+    "location_regions": [
+      "Asia",
+      "Western Asia",
+      "EMEA"
+    ],
+    "location_city": null,
+    "location_state": null,
+    "interests": [],
+    "inferred_skills": [
+      "marketing",
+      "strategy",
+      "budgets",
+      "budget",
+      "research",
+      "seo",
+      "acquisitions",
+      "campaigns",
+      "analysis",
+      "engagement",
+      "rates",
+      "marketing strategy"
+    ],
+    "historical_skills": [],
+    "connections_count": 500,
+    "followers_count": 1979,
+    "services": null,
+    "primary_professional_email": "lyne@mamopay.com",
+    "primary_professional_email_status": "matched_pattern",
+    "professional_emails_collection": [
+      {
+        "professional_email": "lyne@mamopay.com",
+        "professional_email_status": "matched_pattern",
+        "order_of_priority": 1
+      },
+      {
+        "professional_email": "lyne.sfeir@mamopay.com",
+        "professional_email_status": "matched_pattern",
+        "order_of_priority": 2
+      }
+    ],
+    "is_working": 1,
+    "active_experience_company_id": 5173108,
+    "active_experience_title": "Growth Marketing Manager",
+    "active_experience_description": null,
+    "active_experience_department": "Marketing",
+    "active_experience_management_level": "Manager",
+    "is_decision_maker": 0,
+    "total_experience_duration_months": 55,
+    "total_experience_duration_months_breakdown_department": [
+      {
+        "department": "Marketing",
+        "total_experience_duration_months": 55
+      }
+    ],
+    "total_experience_duration_months_breakdown_management_level": [
+      {
+        "management_level": "Specialist",
+        "total_experience_duration_months": 17
+      },
+      {
+        "management_level": "Manager",
+        "total_experience_duration_months": 9
+      },
+      {
+        "management_level": "Senior",
+        "total_experience_duration_months": 29
+      }
+    ],
+    "experience": [
+      {
+        "active_experience": 1,
+        "position_title": "Growth Marketing Manager",
+        "department": "Marketing",
+        "management_level": "Manager",
+        "location": "Dubai, United Arab Emirates",
+        "description": null,
+        "date_from": "November 2024",
+        "date_from_year": 2024,
+        "date_from_month": 11,
+        "date_to": null,
+        "date_to_year": null,
+        "date_to_month": null,
+        "duration_months": 8,
+        "company_id": 5173108,
+        "company_name": "Mamo",
+        "company_type": "Privately Held",
+        "company_founded_year": 2019,
+        "company_followers_count": 19250,
+        "company_website": "https://www.mamopay.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/mamopay"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/mamopay",
+          "https://www.twitter.com/@mamopay"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/mamopay",
+        "company_size_range": "51-200 employees",
+        "company_employees_count": 135,
+        "company_industry": "Financial Services",
+        "company_categories_and_keywords": [
+          "financial technology",
+          "computers electronics and technology > programming and developer software (in united arab emirates)",
+          "payments",
+          "payment links",
+          "business payment links",
+          "invoice",
+          "spend management",
+          "corporate cards",
+          "credit cards",
+          "expense management",
+          "payment gateway",
+          "invoicing",
+          "recurring payments",
+          "apis",
+          "qr codes",
+          "multi-currency",
+          "payouts",
+          "digital payments",
+          "online payments",
+          "mamo visa® card",
+          "financial-services",
+          "technology",
+          "application-software",
+          "fintech",
+          "money-transfer",
+          "financial services",
+          "mobile payments",
+          "peer to peer"
+        ],
+        "company_annual_revenue_source_5": 6700000,
+        "company_annual_revenue_currency_source_5": "USD",
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 35,
+        "company_last_funding_round_date": "2024-07-25",
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "Dubai, Dubai, AE",
+        "company_hq_country": "United Arab Emirates",
+        "company_hq_regions": [
+          "Asia",
+          "Western Asia",
+          "EMEA"
+        ],
+        "company_hq_country_iso2": "AE",
+        "company_hq_country_iso3": "ARE",
+        "company_hq_city": null,
+        "company_hq_state": null,
+        "company_hq_street": null,
+        "company_hq_zipcode": null,
+        "company_last_updated_at": "2025-09-06",
+        "company_stock_ticker": [],
+        "company_is_b2b": 1,
+        "order_in_profile": 1
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Growth Marketing Strategy Lead",
+        "department": "Marketing",
+        "management_level": "Senior",
+        "location": null,
+        "description": "• Managed budgets and optimize spending to acquire, retain and convert users. • Developed a predictive LTV model to guide budget strategies, aimed at improving ROI. • Analyze user data and conduct research to identify growth opportunities • Led ASO and SEO strategies to enhance organic acquisitions.",
+        "date_from": "June 2022",
+        "date_from_year": 2022,
+        "date_from_month": 6,
+        "date_to": "November 2024",
+        "date_to_year": 2024,
+        "date_to_month": 11,
+        "duration_months": 29,
+        "company_id": 8985549,
+        "company_name": "Anghami",
+        "company_type": "Public Company",
+        "company_founded_year": 2012,
+        "company_followers_count": 38877,
+        "company_website": "https://www.anghami.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/anghami"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/anghami"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/anghami",
+        "company_size_range": "201-500 employees",
+        "company_employees_count": 214,
+        "company_industry": "Technology, Information and Internet",
+        "company_categories_and_keywords": [
+          "music",
+          "arts & entertainment > music (in egypt)",
+          "music streaming",
+          "mobile",
+          "entertainment",
+          "technology",
+          "video on demand",
+          "music import",
+          "music upload",
+          "music downloads",
+          "media-entertainment",
+          "apps",
+          "video streaming"
+        ],
+        "company_annual_revenue_source_5": 78093405,
+        "company_annual_revenue_currency_source_5": "USD",
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.9405940594059405,
+        "company_last_funding_round_date": "2024-12-16",
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "Al Khatem Tower, Al Maryah Island; Abu Dhabi , AE",
+        "company_hq_country": "United Arab Emirates",
+        "company_hq_regions": [
+          "Asia",
+          "Western Asia",
+          "EMEA"
+        ],
+        "company_hq_country_iso2": "AE",
+        "company_hq_country_iso3": "ARE",
+        "company_hq_city": null,
+        "company_hq_state": null,
+        "company_hq_street": null,
+        "company_hq_zipcode": null,
+        "company_last_updated_at": "2025-09-07",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "ANGH"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 2
+      },
+      {
+        "active_experience": 0,
+        "position_title": "Performance Marketing Specialist",
+        "department": "Marketing",
+        "management_level": "Specialist",
+        "location": null,
+        "description": "• Developed strategies across all user journey points: acquisition, retention and conversion. • Worked closely with the product team to optimize the in-app user journey. • Managed performance marketing campaigns across various channels, improving ROI and scaling user growth. • Conducted extensive churn analysis and developed targeted re-engagement campaigns to reduce high drop-off rates.",
+        "date_from": "January 2021",
+        "date_from_year": 2021,
+        "date_from_month": 1,
+        "date_to": "June 2022",
+        "date_to_year": 2022,
+        "date_to_month": 6,
+        "duration_months": 17,
+        "company_id": 8985549,
+        "company_name": "Anghami",
+        "company_type": "Public Company",
+        "company_founded_year": 2012,
+        "company_followers_count": 38877,
+        "company_website": "https://www.anghami.com",
+        "company_facebook_url": [
+          "https://www.facebook.com/anghami"
+        ],
+        "company_twitter_url": [
+          "https://www.twitter.com/anghami"
+        ],
+        "company_linkedin_url": "https://www.linkedin.com/company/anghami",
+        "company_size_range": "201-500 employees",
+        "company_employees_count": 214,
+        "company_industry": "Technology, Information and Internet",
+        "company_categories_and_keywords": [
+          "music",
+          "arts & entertainment > music (in egypt)",
+          "music streaming",
+          "mobile",
+          "entertainment",
+          "technology",
+          "video on demand",
+          "music import",
+          "music upload",
+          "music downloads",
+          "media-entertainment",
+          "apps",
+          "video streaming"
+        ],
+        "company_annual_revenue_source_5": 78093405,
+        "company_annual_revenue_currency_source_5": "USD",
+        "company_annual_revenue_source_1": null,
+        "company_annual_revenue_currency_source_1": null,
+        "company_employees_count_change_yearly_percentage": 5.9405940594059405,
+        "company_last_funding_round_date": "2024-12-16",
+        "company_last_funding_round_amount_raised": null,
+        "company_hq_full_address": "Al Khatem Tower, Al Maryah Island; Abu Dhabi , AE",
+        "company_hq_country": "United Arab Emirates",
+        "company_hq_regions": [
+          "Asia",
+          "Western Asia",
+          "EMEA"
+        ],
+        "company_hq_country_iso2": "AE",
+        "company_hq_country_iso3": "ARE",
+        "company_hq_city": null,
+        "company_hq_state": null,
+        "company_hq_street": null,
+        "company_hq_zipcode": null,
+        "company_last_updated_at": "2025-09-07",
+        "company_stock_ticker": [
+          {
+            "exchange": "NASDAQ",
+            "ticker": "ANGH"
+          }
+        ],
+        "company_is_b2b": 0,
+        "order_in_profile": 3
+      }
+    ],
+    "projected_base_salary_p25": null,
+    "projected_base_salary_median": null,
+    "projected_base_salary_p75": null,
+    "projected_base_salary_period": null,
+    "projected_base_salary_currency": null,
+    "projected_base_salary_updated_at": null,
+    "projected_additional_salary": [],
+    "projected_additional_salary_period": null,
+    "projected_additional_salary_currency": null,
+    "projected_additional_salary_updated_at": null,
+    "projected_total_salary_p25": null,
+    "projected_total_salary_median": null,
+    "projected_total_salary_p75": null,
+    "projected_total_salary_period": null,
+    "projected_total_salary_currency": null,
+    "projected_total_salary_updated_at": null,
+    "last_graduation_date": 2023,
+    "education_degrees": [
+      "Master, Digital Marketing & Big Data",
+      "Program, CS50 - Introduction to Computer Science"
+    ],
+    "education": [
+      {
+        "degree": "Program, CS50 - Introduction to Computer Science",
+        "description": null,
+        "institution_url": "https://www.linkedin.com/school/harvard-university",
+        "institution_name": "Harvard University",
+        "institution_full_address": "30 Dunster St; Cambridge, Massachusetts 02138, US",
+        "institution_country_iso2": "US",
+        "institution_country_iso3": "USA",
+        "institution_regions": [
+          "Americas",
+          "Northern America",
+          "AMER"
+        ],
+        "institution_city": "Cambridge",
+        "institution_state": "Massachusetts",
+        "institution_street": "30 Dunster St",
+        "institution_zipcode": "02138",
+        "date_from_year": 2023,
+        "date_to_year": 2023,
+        "activities_and_societies": null,
+        "order_in_profile": 1
+      },
+      {
+        "degree": null,
+        "description": null,
+        "institution_url": "https://www.linkedin.com/school/lebanese-american-university",
+        "institution_name": "Lebanese American University",
+        "institution_full_address": "P.O. Box 13-5053, Chouran; Beirut, 11022801, LB",
+        "institution_country_iso2": "LB",
+        "institution_country_iso3": "LBN",
+        "institution_regions": [
+          "Asia",
+          "Western Asia",
+          "EMEA"
+        ],
+        "institution_city": null,
+        "institution_state": null,
+        "institution_street": null,
+        "institution_zipcode": null,
+        "date_from_year": 2015,
+        "date_to_year": 2019,
+        "activities_and_societies": null,
+        "order_in_profile": 2
+      },
+      {
+        "degree": "Master, Digital Marketing & Big Data",
+        "description": null,
+        "institution_url": "https://www.linkedin.com/school/escp-business-school",
+        "institution_name": "ESCP Business School",
+        "institution_full_address": ".; .; Berlin, London, Madrid, Paris, Turin, Warsaw, FR",
+        "institution_country_iso2": "ES",
+        "institution_country_iso3": "ESP",
+        "institution_regions": [
+          "Europe",
+          "Southern Europe",
+          "EMEA",
+          "EU"
+        ],
+        "institution_city": null,
+        "institution_state": null,
+        "institution_street": null,
+        "institution_zipcode": null,
+        "date_from_year": 2019,
+        "date_to_year": 2020,
+        "activities_and_societies": null,
+        "order_in_profile": 3
+      }
+    ],
+    "recommendations_count": null,
+    "recommendations": [],
+    "activity": [
+      {
+        "activity_url": "https://www.linkedin.com/posts/imadgharazeddine_a-few-days-ago-a-good-friend-and-client-activity-7348450240439447552-86nt",
+        "title": "A few days ago, a good friend and client of ours referred another CEO to Mamo to take advantage of capabilities we have that other payment gateways…",
+        "action": "Liked by",
+        "order_in_profile": 1
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/markchahwan_back-in-beirut-for-the-month-of-july-an-activity-7348359294838321152-YVIp",
+        "title": "Back in Beirut for the month of July,  an almost cancelled trip for many.\n\nNothing like enjoying mom’s food at home with the family visiting from all…",
+        "action": "Liked by",
+        "order_in_profile": 2
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/bridge-middle-east_uae-menastartups-fintech-activity-7338147070819635200-mkE3",
+        "title": "Mamo  Surpasses AED 1.2 Billion in Transactions and Launches SME-Focused Credit Card\n\nMamo hits AED 1.2B in total transactions and announces a credit…",
+        "action": "Liked by",
+        "order_in_profile": 3
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/markchahwan_i-was-afraid-of-having-kids-i-worried-about-activity-7333038746562379776-gNfd",
+        "title": "I was afraid of having kids.\nI worried about the responsibility, time, and needing life figured out first. It was a “project for later.”\nLike many…",
+        "action": "Liked by",
+        "order_in_profile": 4
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/loréal_no-1-in-beauty-worldwide-activity-7316377688762376192-wo3W",
+        "title": "Explore our 2024 Annual Report 👇\n#AnnualReport #weareloreal #CreateTheBeautyThatMovesTheWorld",
+        "action": "Liked by",
+        "order_in_profile": 5
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/mamo_the-friendliest-corporate-card-that-gives-activity-7318245346642423809-7bGm",
+        "title": "The friendliest corporate card that gives you 8% cashback on all non-AED corporate spends.",
+        "action": "Liked by",
+        "order_in_profile": 6
+      },
+      {
+        "activity_url": "https://www.linkedin.com/posts/markchahwan_thanks2you-activity-7315387065871851521-SJTS",
+        "title": "We don't do performance reviews at Sarwa. And good riddance.\n\nOver a year ago, we scrapped formal reviews, no more rigid peer feedback, forced…",
+        "action": "Liked by",
+        "order_in_profile": 7
+      }
+    ],
+    "awards": [],
+    "courses": [],
+    "certifications": [
+      {
+        "title": "SQL Coding",
+        "issuer": "Codecademy",
+        "issuer_url": "https://www.linkedin.com/school/codecademy",
+        "credential_id": null,
+        "certificate_url": null,
+        "date_from": "Nov 2021",
+        "date_from_year": 2021,
+        "date_from_month": 11,
+        "date_to": null,
+        "date_to_year": null,
+        "date_to_month": null,
+        "order_in_profile": 1
+      },
+      {
+        "title": "CS50 - Introduction to Computer Science",
+        "issuer": "Harvard University",
+        "issuer_url": "https://www.linkedin.com/school/harvard-university",
+        "credential_id": null,
+        "certificate_url": null,
+        "date_from": "Mar 2024",
+        "date_from_year": 2024,
+        "date_from_month": 3,
+        "date_to": "Aug 2024",
+        "date_to_year": 2024,
+        "date_to_month": 8,
+        "order_in_profile": 2
+      }
+    ],
+    "languages": [
+      {
+        "language": "English",
+        "proficiency": "Native or bilingual proficiency",
+        "order_in_profile": 1
+      },
+      {
+        "language": "French",
+        "proficiency": "Full professional proficiency",
+        "order_in_profile": 2
+      },
+      {
+        "language": "Arabic",
+        "proficiency": "Native or bilingual proficiency",
+        "order_in_profile": 3
+      },
+      {
+        "language": "Spanish",
+        "proficiency": "Elementary proficiency",
+        "order_in_profile": 4
+      }
+    ],
+    "patents_count": null,
+    "patents_topics": [],
+    "patents": [],
+    "publications_count": null,
+    "publications_topics": [],
+    "publications": [],
+    "projects_count": 1,
+    "projects_topics": [
+      "Research in Microbiology Field"
+    ],
+    "projects": [
+      {
+        "name": "Research in Microbiology Field",
+        "description": "Research in microbiology field: Characterization of Candida Albicans ddr48 null strain.",
+        "project_url": null,
+        "date_from": "Jan 2018",
+        "date_from_year": 2018,
+        "date_from_month": 1,
+        "date_to": "May 2018",
+        "date_to_year": 2018,
+        "date_to_month": 5,
+        "order_in_profile": 1
+      }
+    ],
+    "organizations": [],
+    "github_url": null,
+    "github_username": null,
+    "github_mapping_confidence": null,
+    "github_contributions_count": null,
+    "github_repos_summary": [],
+    "profile_root_field_changes_summary": [
+      {
+        "field_name": "follower_count",
+        "change_type": "updated",
+        "last_changed_at": "2025-07-23 12:39:06.096524"
+      },
+      {
+        "field_name": "experience_count",
+        "change_type": "updated",
+        "last_changed_at": "2025-05-19 03:34:37.648482"
+      }
+    ],
+    "profile_collection_field_changes_summary": [
+      {
+        "field_name": "activity",
+        "last_changed_at": "2025-07-23 12:39:06.096524"
+      },
+      {
+        "field_name": "education",
+        "last_changed_at": "2025-05-19 03:34:37.648482"
+      },
+      {
+        "field_name": "experience",
+        "last_changed_at": "2025-05-19 03:34:37.648482"
+      }
+    ],
+    "experience_recently_started": [],
+    "experience_recently_closed": []
+  }
+]

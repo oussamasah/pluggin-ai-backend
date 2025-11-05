@@ -1,4 +1,9 @@
 import axios, { AxiosInstance } from 'axios';
+import { EmployeeSearchResponse } from '../core/types';
+import fs from 'fs/promises';
+import path from 'path';
+import { config } from '../core/config.js';
+
 
 interface CoreSignalFilters {
   industry?: { in_list: string[] };
@@ -42,6 +47,7 @@ export class CoreSignalService {
   constructor() {
     this.apiKey = "wL6IDueToFJxpKUaNmrPtzCJGtbRR3cr";
     this.apiKey = "SrU9106Rsg1a5pPbfWUQ3NzWuvWcBfFm";
+    this.apiKey = config.CORESIGNAL_API;
     
     this.client = axios.create({
       baseURL: 'https://api.coresignal.com/cdapi/v2',
@@ -341,6 +347,374 @@ async enrichCompaniesByUrls(urls: string[]): Promise<any[]> {
     console.error('❌ Enrich API Error:', error.response?.data);
     throw new Error(
       `Failed to enrich companies by URLs: ${error.response?.data?.Error || error.message}`
+    );
+  }
+}
+
+ async saveCompanies( companies: any): Promise<void> {
+    try {
+      //console.log(`💾 Saving ${companies.length} companies...`);
+      
+      // Save companies array as JSON file
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+      const filename = `emploeyes query -${timestamp}.json`;
+      const filePath = path.join(process.cwd(), 'companies-data', filename);
+      
+      // Ensure directory exists
+      await fs.mkdir(path.dirname(filePath), { recursive: true });
+      
+      // Simply stringify the entire companies array
+      await fs.writeFile(filePath, JSON.stringify(companies, null, 2));
+ 
+      //console.log(`✅ Successfully saved ${companies.length} companies to Supabase`);
+      
+    } catch (error) {
+      console.error('❌ Error saving companies:', error);
+      throw error;
+    }
+  }
+
+/**
+ * Executes a search for employees at a company matching job titles.
+ * Uses the employee_multi_source endpoint with proper field names.
+ * @param companyWebsite Company website (e.g., "aiqintelligence.ai" - without www).
+ * @param jobTitles Array of job titles to search for.
+ * @param afterId Optional pagination token from previous response.
+ * @returns The paginated search response with results and pagination info.
+ */
+public async searchEmployees(
+  companyWebsite: string,
+  jobTitles: string[],
+  afterId?: string
+): Promise<EmployeeSearchResponse> {
+  // Build the URL with pagination parameter if provided (only if it's a valid string)
+  let url = `/employee_multi_source/search/es_dsl`;
+  if (afterId && afterId.trim() !== '') {
+    url += `?after=${encodeURIComponent(afterId)}`;
+  }
+
+  // Build the Elasticsearch DSL Query using non-nested top-level fields
+  // This is simpler and more reliable than nested queries
+  const esQuery = {
+    query: {
+      bool: {
+        must: [
+          // Search for active employees (currently working)
+          {
+            term: {
+              is_working: 1
+            }
+          },
+          // Match the company website
+          {
+            match_phrase: {
+              active_experience_company_website: companyWebsite
+            }
+          },
+          // Match any of the job titles using OR logic
+          {
+            bool: {
+              should: jobTitles.map(title => ({
+                match_phrase: {
+                  active_experience_title: title
+                }
+              })),
+              minimum_should_match: 1
+            }
+          }
+        ]
+      }
+    }
+  };
+await this.saveCompanies(esQuery)
+  try {
+    console.log(`🔍 Searching employees at: ${companyWebsite}`);
+    console.log(`🎯 Job titles: ${jobTitles.join(', ')}`);
+    console.log(`📄 Request URL: ${url}`);
+    
+    const response = await this.client.post(url, esQuery);
+    
+    // Extract pagination info from response headers
+    const totalResults = parseInt(response.headers['x-total-results'] || '0', 10);
+    const totalPages = parseInt(response.headers['x-total-pages'] || '0', 10);
+    const nextPageAfter = response.headers['x-next-page-after'];
+    
+    console.log(`✅ Found ${totalResults} results (${totalPages} pages)`);
+    
+    return {
+      results: response.data || [],
+      total_results: totalResults,
+      total_pages: totalPages,
+      next_page_after: nextPageAfter
+    } as EmployeeSearchResponse;
+  } catch (error: any) {
+    console.error('❌ CoreSignal Employee API Error:');
+    console.error('Status:', error.response?.status);
+    console.error('Response:', JSON.stringify(error.response?.data, null, 2));
+    console.error('Request Query:', JSON.stringify(esQuery, null, 2));
+    
+    throw new Error(
+      `CoreSignal Employee API failed: ${error.response?.data?.Error || error.message}`
+    );
+  }
+}
+
+/**
+ * Alternative method using nested experience query (more complex but more flexible).
+ * Use this if you need to search historical positions, not just current ones.
+ * @param companyWebsite Company website.
+ * @param jobTitles Array of job titles to search for.
+ * @param activeOnly If true, only search current positions (default: true).
+ * @param afterId Optional pagination token.
+ * @returns The search response.
+ */
+public async searchEmployeesNested(
+  companyWebsite: string,
+  jobTitles: string[],
+  activeOnly: boolean = true,
+  afterId?: string
+): Promise<EmployeeSearchResponse> {
+  let url = `/employee_multi_source/search/es_dsl`;
+  if (afterId && afterId.trim() !== '') {
+    url += `?after=${encodeURIComponent(afterId)}`;
+  }
+
+  // Build must conditions for nested query
+  const nestedMust: any[] = [
+    {
+      match_phrase: {
+        "experience.company_website": companyWebsite
+      }
+    }
+  ];
+
+  // Add active experience filter if needed
+  if (activeOnly) {
+    nestedMust.push({
+      term: {
+        "experience.active_experience": 1
+      }
+    });
+  }
+
+  // Add job title search with OR logic
+  nestedMust.push({
+    bool: {
+      should: jobTitles.map(title => ({
+        match_phrase: {
+          "experience.position_title": title
+        }
+      })),
+      minimum_should_match: 1
+    }
+  });
+
+  const esQuery = {
+    query: {
+      bool: {
+        must: [
+          {
+            nested: {
+              path: "experience",
+              query: {
+                bool: {
+                  must: nestedMust
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  };
+
+  try {
+    const response = await this.client.post(url, esQuery);
+    
+    const totalResults = parseInt(response.headers['x-total-results'] || '0', 10);
+    const totalPages = parseInt(response.headers['x-total-pages'] || '0', 10);
+    const nextPageAfter = response.headers['x-next-page-after'];
+    
+    return {
+      results: response.data || [],
+      total_results: totalResults,
+      total_pages: totalPages,
+      next_page_after: nextPageAfter
+    } as EmployeeSearchResponse;
+  } catch (error: any) {
+    console.error('❌ CoreSignal Employee API Error:');
+    console.error('Status:', error.response?.status);
+    console.error('Response:', JSON.stringify(error.response?.data, null, 2));
+    
+    throw new Error(
+      `CoreSignal Employee API failed: ${error.response?.data?.Error || error.message}`
+    );
+  }
+}
+
+/**
+ * Search for employees by company ID instead of website.
+ * @param companyId The Coresignal company ID.
+ * @param jobTitles Array of job titles to search for.
+ * @param afterId Optional pagination token.
+ * @returns The search response.
+ */
+public async searchEmployeesByCompanyId(
+  companyId: number,
+  jobTitles: string[],
+  afterId?: string
+): Promise<EmployeeSearchResponse> {
+  let url = `/employee_multi_source/search/es_dsl`;
+  if (afterId && afterId.trim() !== '') {
+    url += `?after=${encodeURIComponent(afterId)}`;
+  }
+
+  const esQuery = {
+    query: {
+      bool: {
+        must: [
+          {
+            term: {
+              is_working: 1
+            }
+          },
+          {
+            term: {
+              active_experience_company_id: companyId
+            }
+          },
+          {
+            bool: {
+              should: jobTitles.map(title => ({
+                match_phrase: {
+                  active_experience_title: title
+                }
+              })),
+              minimum_should_match: 1
+            }
+          }
+        ]
+      }
+    }
+  };
+await this.saveCompanies(esQuery)
+  try {
+    const response = await this.client.post(url, esQuery);
+    
+    const totalResults = parseInt(response.headers['x-total-results'] || '0', 10);
+    const totalPages = parseInt(response.headers['x-total-pages'] || '0', 10);
+    const nextPageAfter = response.headers['x-next-page-after'];
+    
+    return {
+      results: response.data || [],
+      total_results: totalResults,
+      total_pages: totalPages,
+      next_page_after: nextPageAfter
+    } as EmployeeSearchResponse;
+  } catch (error: any) {
+    console.error('❌ CoreSignal Employee API Error:');
+    console.error('Status:', error.response?.status);
+    console.error('Response:', JSON.stringify(error.response?.data, null, 2));
+    
+    throw new Error(
+      `CoreSignal Employee API failed: ${error.response?.data?.Error || error.message}`
+    );
+  }
+}
+
+/**
+ * Fetches all employees matching the criteria by automatically handling pagination.
+ * @param companyWebsite Company website (e.g., "aiqintelligence.ai").
+ * @param jobTitles Array of job titles to search for.
+ * @param maxPages Optional limit on number of pages to fetch (default: unlimited).
+ * @returns Array of all employee results.
+ */
+public async searchAllEmployees(
+  companyWebsite: string,
+  jobTitles: string[],
+  maxPages?: number
+): Promise<any[]> {
+  const allResults: any[] = [];
+  let afterId: string | undefined = undefined;
+  let pageCount = 0;
+
+  do {
+    const response = await this.searchEmployees(
+      companyWebsite,
+      jobTitles,
+      afterId
+    );
+    allResults.push(...response.results);
+    
+    afterId = response.next_page_after;
+    pageCount++;
+    
+    console.log(`📄 Fetched page ${pageCount}, total results so far: ${allResults.length}`);
+    
+    // Break if we've reached max pages or no more results
+    if (maxPages && pageCount >= maxPages) {
+      console.log(`⚠️ Reached maximum page limit: ${maxPages}`);
+      break;
+    }
+    
+    // Small delay to avoid rate limiting
+    if (afterId) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+  } while (afterId);
+
+  console.log(`✅ Completed: Fetched ${allResults.length} total employees across ${pageCount} pages`);
+  return allResults;
+}
+/**
+ * Collects full details for multiple employees.
+ * @param employeeIds Array of employee IDs to collect.
+ * @param delayMs Delay between requests in milliseconds (default: 200ms to avoid rate limits).
+ * @returns Array of full employee profile data.
+ */
+public async collectEmployees(
+  employeeIds: number[],
+  delayMs: number = 200
+): Promise<any[]> {
+  const employees: any[] = [];
+  
+  console.log(`📥 Collecting details for ${employeeIds.length} employees...`);
+  
+  for (let i = 0; i < employeeIds.length; i++) {
+    try {
+      const employee = await this.collectEmployee(employeeIds[i]);
+      employees.push(employee);
+      console.log(`✅ Collected ${i + 1}/${employeeIds.length}`);
+      
+      // Add delay between requests to avoid rate limiting
+      if (i < employeeIds.length - 1) {
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+      }
+    } catch (error) {
+      console.error(`⚠️ Skipping employee ${employeeIds[i]} due to error`);
+      // Continue with next employee
+    }
+  }
+  
+  console.log(`✅ Completed: Collected ${employees.length}/${employeeIds.length} employees`);
+  return employees;
+}
+/**
+ * Collects full employee details by ID.
+ * @param employeeId The employee ID to collect.
+ * @returns Full employee profile data.
+ */
+public async collectEmployee(employeeId: number): Promise<any> {
+  const url = `/employee_multi_source/collect/${employeeId}`;
+  
+  try {
+    console.log(`📥 Collecting employee details for ID: ${employeeId}`);
+    const response = await this.client.get(url);
+    return response.data;
+  } catch (error: any) {
+    console.error(`❌ Failed to collect employee ${employeeId}:`, error.response?.data);
+    throw new Error(
+      `CoreSignal Collect API failed: ${error.response?.data?.Error || error.message}`
     );
   }
 }
