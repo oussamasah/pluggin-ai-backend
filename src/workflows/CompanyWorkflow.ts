@@ -434,16 +434,14 @@ for (const c of companies) {
 
   c.scoring_metrics.intent_score = intentscore;
 }
-
-companies.forEach(async(com:any)=>{
-  com.company_id=uuidv4();
-  let emp = com.employees;
-  delete com["employees"]
- await supabaseService.saveCompanyWithSessionAndICP(this.sessionId,icpModel.id,com)
- await supabaseService.insertEmployees(emp,com.company_id);
-
- })
-
+await Promise.all(companies.map(async (com: any) => {
+  com.company_id = uuidv4();
+  let emp = [...com.employees]; 
+  delete com["employees"];
+  
+  await supabaseService.saveCompanyWithSessionAndICP(this.sessionId, icpModel.id, com);
+  await supabaseService.insertEmployees(emp, com.company_id);
+}));
 await this.updateSubstep('4.1', {
   status: 'completed',
   startedAt: new Date()

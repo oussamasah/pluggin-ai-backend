@@ -432,6 +432,7 @@ console.log(data[0])
 async  insertEmployees(employeesData: any[], targetCompanyId: any) {
   console.log("--------------------------------------")
   console.log(employeesData)
+  if( !employeesData) return;
   const employeesToInsert = employeesData.map(employee => ({
       id: employee.id,
       company_id: targetCompanyId, // Your target company foreign key
