@@ -1,4 +1,5 @@
 // src/controllers/ICPConfigController.ts
+/*
 import { FastifyInstance, FastifyRequest } from 'fastify';
 import { ollamaService } from '../services/OllamaService.js';
 import { sessionService } from '../services/SessionService.js';
@@ -7,7 +8,6 @@ import { sessionService } from '../services/SessionService.js';
 import { BufferMemory } from 'langchain/memory';
 import { ConversationChain } from 'langchain/chains';
 import { ChatOllama } from '@langchain/community/chat_models/ollama';
-import { ChatPromptTemplate, MessagesPlaceholder } from '@langchain/core/prompts';
 
 interface ICPConfigChatBody {
   message: string;
@@ -306,7 +306,7 @@ function parseAIResponse(aiResponse: string): {
 
   const cleanResponse = aiResponse
     .replace(/```json\n.*?\n```/s, '')
-    .replace(/Follow-up questions:.*/s, '')
+    .replace(/Follow-up questions:.s, '')
     .replace(/CONVERSATION_COMPLETE/g, '')
     .trim();
 
@@ -322,4 +322,4 @@ function parseJSONResponse(response: string): any {
     console.error('Failed to parse JSON response:', response);
     return {};
   }
-}
+}*/
