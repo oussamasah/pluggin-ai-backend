@@ -1,6 +1,7 @@
 // src/controllers/ICPConfigController.ts
-/*
+
 import { FastifyInstance, FastifyRequest } from 'fastify';
+/*
 import { ollamaService } from '../services/OllamaService.js';
 import { sessionService } from '../services/SessionService.js';
 
@@ -36,8 +37,9 @@ const icpModel = new ChatOllama({
   model: 'gemma3:4b',
   temperature: 0.7
 });
-
+*/
 export async function ICPConfigController(fastify: FastifyInstance) {
+}/*
   // --------------------------
   // 🧠 Start ICP configuration chat
   // --------------------------
