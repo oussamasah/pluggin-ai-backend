@@ -340,7 +340,6 @@ console.log(data[0])
 
     if (error) throw error;
   }
-
   async getSessionSubsteps(sessionId: string): Promise<SubStep[]> {
     const { data, error } = await this.supabase
       .from('session_substeps')
@@ -352,6 +351,26 @@ console.log(data[0])
     return data.map(this.mapSubstepFromDB);
   }
 
+// Add this method to your SupabaseService class
+async getSearchStatus(sessionId: string): Promise<SearchStatus | null> {
+  try {
+    const { data, error } = await this.supabase
+      .from('sessions')
+      .select('search_status')
+      .eq('id', sessionId)
+      .single();
+
+    if (error) {
+      console.error('Error getting search status:', error);
+      return null;
+    }
+
+    return data.search_status as SearchStatus;
+  } catch (error) {
+    console.error('Error in getSearchStatus:', error);
+    return null;
+  }
+}
   // Utility Methods
   private mapSessionFromDB(data: any): SearchSession {
     return {

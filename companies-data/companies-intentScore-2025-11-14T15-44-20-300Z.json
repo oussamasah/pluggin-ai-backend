@@ -1,0 +1,24 @@
+{
+  "company_name": "N/A",
+  "industry": "N/A",
+  "evaluated_signals": [
+    {
+      "signal": "new_funding_round",
+      "score": 0,
+      "reason": "No validated data found."
+    },
+    {
+      "signal": "hiring_in_engineering_department",
+      "score": 0,
+      "reason": "No validated data found."
+    },
+    {
+      "signal": "new_product",
+      "score": 0,
+      "reason": "No validated data found."
+    }
+  ],
+  "final_intent_score": 0,
+  "intent_level": "Low Intent",
+  "overall_reasoning": "No valid signals were found to indicate purchasing readiness, resulting in a low intent score."
+}

@@ -41,6 +41,10 @@ export class SessionService {
     return await supabaseService.saveCompanies(sessionId, companies);
   }
 
+  async getSearchStatus(sessionId: string): Promise<any> {
+    return await supabaseService.getSearchStatus(sessionId);
+  }
+
   async deleteSession(sessionId: string): Promise<boolean> {
     return await supabaseService.deleteSession(sessionId);
   }

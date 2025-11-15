@@ -1,0 +1,86 @@
+{
+  "company": "Stripe",
+  "website": "https://stripe.com",
+  "analysis_date": "2025-11-14",
+  "requested_signals": [
+    "new_funding_round",
+    "hiring_in_engineering_department",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No semantic matches found for new_funding_round",
+      "confidence": 0
+    },
+    {
+      "signal": "hiring_in_engineering_department",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No semantic matches found for hiring_in_engineering_department",
+      "confidence": 0
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOR1hWeG5Dcjk0TjF0S0V0Q0RBeEszOXhEOWIwMFZ0YzhMS21tS19pcy1SM19sUU5LaDNyMHRiZDRaY0E1NEV1cUVCYVVfUWt4TnpHNjlFVzlmb1JUN1FrMlVsRGFDM0x3czdEOG92QVQ0WkkzRGlhZnhSeHBNaV9jZUFtM0lzRmNtcktoVVRoOG1xb2JWaXpKNnhqVUFvVDdlbGx4N2tSU2paNzFQaThR?oc=5",
+          "content": "PwC and Stripe Launch Collaboration to Accelerate the Next Era of Agentic Commerce"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONVFoeUswT3JoZ2FhQ1VSa3FiQ3VZaTFmZVhHR3pOcXBPemI5TGkxQXl2Z0RoUmliNGZjeWdMS2ItZ0xLVF9UUUxLOXk1LUFDSFJWNVFrbV92M1lSOG00QjlUZ0tXekZrMlRMWE8zV0hYb1hsWV9YTl85MzQtT2RPQWlieDdCdE9ORzk5Yk5QQi1HaElUZnFOTWdneEZJd1EyY2tfbG5NSjN0ZEF1dFBzN0lOeVlfY0dIbE1Vbg?oc=5",
+          "content": "Stablecoin News: Sui Launches Native USDsui Through Stripe's Bridge"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 2 evidence pieces | Cross-referenced with 0 sources",
+      "confidence": null
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 0,
+    "signals_without_evidence": 2,
+    "confidence_score": 0,
+    "data_sources_used": [
+      "Google News"
+    ]
+  },
+  "metadata": {
+    "processing_time": 49188,
+    "total_sources_checked": 77,
+    "successful_scrapes": 1,
+    "failed_scrapes": 0
+  },
+  "debug": {
+    "processingNotes": [
+      "🚀 Starting ULTIMATE detection for Stripe",
+      "📚 Building knowledge base from 30+ data sources...",
+      "✅ Knowledge base built with 77 documents",
+      "🔍 Performing semantic search with RAG...",
+      "📊 Semantic search completed: 2 relevant documents",
+      "🎯 Generating RAG-enhanced evidence...",
+      "✅ Performing cross-validation..."
+    ],
+    "knowledge_base_stats": {
+      "total_documents": 77,
+      "by_type": {
+        "news": 72,
+        "job": 1,
+        "financial": 0,
+        "company": 0,
+        "legal": 0,
+        "technical": 4
+      }
+    },
+    "semantic_search_metrics": {
+      "total_results": 2,
+      "avg_similarity": 0.81715943734311,
+      "unique_sources": 1
+    }
+  }
+}

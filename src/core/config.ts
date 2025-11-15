@@ -33,6 +33,11 @@ loadEnv();
 // Environment variable schema
 const envSchema = z.object({
   // API Keys (required)
+  PERPLEXITY_API_KEY: z.string().min(1, "PERPLEXITY_API_KEY is required"),
+  OPENAI_API_KEY: z.string().min(1, "OPENAI_API_KEY is required"),
+  OPENAI_MODEL: z.string().min(1, "OPENAI_MODEL is required"),
+  OPENROUTER_API_KEY: z.string().min(1, "OPENROUTER_API_KEY is required"),
+  GEMINI_API_KEY: z.string().min(1, "GEMINI_API_KEY is required"),
   EXA_API_KEY: z.string().min(1, "EXA_API_KEY is required"),
   CORESIGNAL_API: z.string().min(1, "EXA_API_KEY is required"),
   EXPLORIUM_API_KEY: z.string().min(1, "EXPLORIUM_API_KEY is required"),
@@ -85,6 +90,11 @@ class ConfigManager {
 
       // Load environment variables
       const envVars = {
+        PERPLEXITY_API_KEY: process.env.PERPLEXITY_API_KEY,
+        OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+        OPENAI_MODEL: process.env.OPENAI_MODEL,
+        GEMINI_API_KEY: process.env.GEMINI_API_KEY,
         EXA_API_KEY: process.env.EXA_API_KEY,
         CORESIGNAL_API: process.env.CORESIGNAL_API,
         EXPLORIUM_API_KEY: process.env.EXPLORIUM_API_KEY,

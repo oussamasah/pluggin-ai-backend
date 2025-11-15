@@ -1,0 +1,199 @@
+{
+  "company": "Qashio",
+  "website": "https://www.qashio.com",
+  "analysis_date": "2025-11-15",
+  "requested_signals": [
+    "new_funding_round",
+    "employee_joined_company",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSE4ySVA5MTRfdXFTNi1Vc2pfRlhQZlJGV1VNclp1TUU1Rk9JZU91bi11TlBfRGdsNW95T2taX1JRS1NPQURwbUgwN2JKeDFSbTAwMnRhNFFGRnFSVVlhS05fNHpfZDlScEhfYjRPcGtpdTlMQU52cmpaNlo2WEJHZEJ4c1ZweUs4WHBzTlAydnd4WlNmZjJ3bWUtQWl1LVlfc3dxNzhORkRCN2NxY0xvd3VERlE?oc=5",
+          "date": "Fri, 30 May 2025 07:00:00 GMT",
+          "summary": "ICYMI fintech funding round-up: Qashio, Palla, Stitch, and more - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNSE4ySVA5MTRfdXFTNi1Vc2pfRlhQZlJGV1VNclp1TUU1Rk9JZU91bi11TlBfRGdsNW95T2taX1JRS1NPQURwbUgwN2JKeDFSbTAwMnRhNFFGRnFSVVlhS05fNHpfZDlScEhfYjRPcG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlejdqd0F4NUMyRGd3bjBuZXhhY2w5ZTRfQmh5dFlaR3VyV2QxMDN4UUFnMg?oc=5",
+          "date": "Sat, 25 Oct 2025 07:00:00 GMT",
+          "summary": "MENA Digest: Property Finder, Qashio ink M&As; Nine startups get funding - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlej...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPQlk2aWk1cC1aY1J0VnRVOHdkNDNIdm5Bc2xCSjNZWnljTm5feXlRZ3o0anZycVZiTkpJV3JSVFdIU0NsVjJhLXU2aHBuTVpUUVZqVnNpZVBqZlh1dzlYX0tTWmdfa3dwYUg3enRDMDFvcE5Ia2hWQnJXRUZ5NDFkLVdHMnctWHkxRWRSdUlCZlpqWHZwWXdmcEthdw?oc=5",
+          "date": "Fri, 30 May 2025 07:00:00 GMT",
+          "summary": "INFOGRAPHIC: Startup Funding in Africa and the Middle East — Week 22, 2025 - Techloy - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPQlk2aWk1cC1aY1J0VnRVOHdkNDNIdm5Bc2xCSjNZWnljTm5feXlRZ3o0anZycVZiTkpJV3JSVFdIU0NsVjJhLXU2aHBuTVpUUVZqVnNpZVBqZlh1dzlYX0tTWmdfa3dwYUg3enRDMD...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlejdqd0F4NUMyRGd3bjBuZXhhY2w5ZTRfQmh5dFlaR3VyV2QxMDN4UUFnMg?oc=5",
+          "date": "Sat, 25 Oct 2025 07:00:00 GMT",
+          "summary": "MENA Digest: Property Finder, Qashio ink M&As; Nine startups get funding - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlej...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSE4ySVA5MTRfdXFTNi1Vc2pfRlhQZlJGV1VNclp1TUU1Rk9JZU91bi11TlBfRGdsNW95T2taX1JRS1NPQURwbUgwN2JKeDFSbTAwMnRhNFFGRnFSVVlhS05fNHpfZDlScEhfYjRPcGtpdTlMQU52cmpaNlo2WEJHZEJ4c1ZweUs4WHBzTlAydnd4WlNmZjJ3bWUtQWl1LVlfc3dxNzhORkRCN2NxY0xvd3VERlE?oc=5",
+          "date": "Fri, 30 May 2025 07:00:00 GMT",
+          "summary": "ICYMI fintech funding round-up: Qashio, Palla, Stitch, and more - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNSE4ySVA5MTRfdXFTNi1Vc2pfRlhQZlJGV1VNclp1TUU1Rk9JZU91bi11TlBfRGdsNW95T2taX1JRS1NPQURwbUgwN2JKeDFSbTAwMnRhNFFGRnFSVVlhS05fNHpfZDlScEhfYjRPcG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlejdqd0F4NUMyRGd3bjBuZXhhY2w5ZTRfQmh5dFlaR3VyV2QxMDN4UUFnMg?oc=5",
+          "date": "Sat, 25 Oct 2025 07:00:00 GMT",
+          "summary": "MENA Digest: Property Finder, Qashio ink M&As; Nine startups get funding - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlej...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE83cHFNSXdOc05wdHlHNzlkR1M4cnZIQ3ZHcWx6cU1WcnV0Q0tYTEZwZkhrMVFycmFGbnA5Zlg2WUtkWjFHaGRHamM4WTNyMEpPdjA0MFhTZ9IBXEFVX3lxTE5HVFE0Z3gxcC0zclRXYlY1QmhHTnhqWkpRWTRic0ZLYXhmSnNERXNxSnhkOFNQQVp0dGtVb0pPeHFtQVNRM2k1X0J0OElSX3VmTWlDTlNzOUlWUDNj?oc=5",
+          "date": "Wed, 13 Nov 2024 08:00:00 GMT",
+          "summary": "Dubai fintech Pemo raises $7 million pre-Series A for its spend management platform - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE83cHFNSXdOc05wdHlHNzlkR1M4cnZIQ3ZHcWx6cU1WcnV0Q0tYTEZwZkhrMVFycmFGbnA5Zlg2WUtkWjFHaGRHamM4WTNyMEpPdjA0MFhTZ9IBXEFVX3lxTE5HVFE0Z3gxcC0zclRXYl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSE4ySVA5MTRfdXFTNi1Vc2pfRlhQZlJGV1VNclp1TUU1Rk9JZU91bi11TlBfRGdsNW95T2taX1JRS1NPQURwbUgwN2JKeDFSbTAwMnRhNFFGRnFSVVlhS05fNHpfZDlScEhfYjRPcGtpdTlMQU52cmpaNlo2WEJHZEJ4c1ZweUs4WHBzTlAydnd4WlNmZjJ3bWUtQWl1LVlfc3dxNzhORkRCN2NxY0xvd3VERlE?oc=5",
+          "date": "Fri, 30 May 2025 07:00:00 GMT",
+          "summary": "ICYMI fintech funding round-up: Qashio, Palla, Stitch, and more - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNSE4ySVA5MTRfdXFTNi1Vc2pfRlhQZlJGV1VNclp1TUU1Rk9JZU91bi11TlBfRGdsNW95T2taX1JRS1NPQURwbUgwN2JKeDFSbTAwMnRhNFFGRnFSVVlhS05fNHpfZDlScEhfYjRPcG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlejdqd0F4NUMyRGd3bjBuZXhhY2w5ZTRfQmh5dFlaR3VyV2QxMDN4UUFnMg?oc=5",
+          "date": "Sat, 25 Oct 2025 07:00:00 GMT",
+          "summary": "MENA Digest: Property Finder, Qashio ink M&As; Nine startups get funding - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOcFhzNkE0WlRwTmk3eUdSWUVJdklmdGZMaERCclpyLTlOak5GaVc1dHdGR0V6NUdYQXhSWlFLa2lHMHFPYzlpOWxoa3l4TDlyVm1qdko0Y1RkM1A3eTZEWDV4T01ibmtXVkdNYXVlej...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPQlk2aWk1cC1aY1J0VnRVOHdkNDNIdm5Bc2xCSjNZWnljTm5feXlRZ3o0anZycVZiTkpJV3JSVFdIU0NsVjJhLXU2aHBuTVpUUVZqVnNpZVBqZlh1dzlYX0tTWmdfa3dwYUg3enRDMDFvcE5Ia2hWQnJXRUZ5NDFkLVdHMnctWHkxRWRSdUlCZlpqWHZwWXdmcEthdw?oc=5",
+          "date": "Fri, 30 May 2025 07:00:00 GMT",
+          "summary": "INFOGRAPHIC: Startup Funding in Africa and the Middle East — Week 22, 2025 - Techloy - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPQlk2aWk1cC1aY1J0VnRVOHdkNDNIdm5Bc2xCSjNZWnljTm5feXlRZ3o0anZycVZiTkpJV3JSVFdIU0NsVjJhLXU2aHBuTVpUUVZqVnNpZVBqZlh1dzlYX0tTWmdfa3dwYUg3enRDMD...",
+          "confidence": 0.6,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 10 relevant evidence pieces"
+    },
+    {
+      "signal": "employee_joined_company",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQU5NT1NWYmt5RTQ2TkhVbV9xTVhFREZIRFlySTJnMFpsVFVxNTFZb2ZCOUtPbVhuNjhsdWRvRnBETnF4SkhucDlxZkhQSkt6NmJWYlZEdnBjei00ZEpZaGcwTmJqcWxKRHZjbHNZb09SRXFUNkxQUmZROU5fVHBKTHhTTDAwaXQ0YXJsWWFtYUd4M1lzQk85QkhMdjE?oc=5",
+          "date": "Thu, 23 Mar 2023 07:00:00 GMT",
+          "summary": "B2B spend fintech Qashio launches in Saudi with Alinma Bank - FinTech Magazine - <a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPQU5NT1NWYmt5RTQ2TkhVbV9xTVhFREZIRFlySTJnMFpsVFVxNTFZb2ZCOUtPbVhuNjhsdWRvRnBETnF4SkhucDlxZkhQSkt6NmJWYlZEdnBjei00ZEpZaGcwTmJqcWxKRHZjbHNZb0...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNemhsOV92djlLc0RUZHRVN3d0R1dyQXU0VlpSbVFNNWN5Z1F0V1RzRTdISjBhWUxTUVlMaWlEQXNaaFNqa0h5aF9Nd0F1WmVrYl9raUZFdmcwTEZpMEhVdW9EVklpejBkTFl3ZkRVeUdDNmJMWkNPX2E5NmhBQXBkdW5QcVlvWWN3QU1LNGFnYXZ3Zw?oc=5",
+          "date": "Tue, 10 Dec 2024 08:00:00 GMT",
+          "summary": "Iliad Partners Announces Launch of $50M MENA VC Fund - ADGM - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNemhsOV92djlLc0RUZHRVN3d0R1dyQXU0VlpSbVFNNWN5Z1F0V1RzRTdISjBhWUxTUVlMaWlEQXNaaFNqa0h5aF9Nd0F1WmVrYl9raUZFdmcwTEZpMEhVdW9EVklpejBkTFl3ZkRVeU...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1QdGZ4aFhzS0N3clMxandvLUh6aHF6ZHBOazNpcUhRbXFGZEY2SF9JUy1zeWd2OGZXVzNtTXJDaHhTenZmVHRQZU0ydTk2S2hJcW95bUhhMFE1YnNadEJKWEF4eHlDR0FySWhGT05mbDV1eUx0dFpsOGlpNFFmd2s?oc=5",
+          "date": "Wed, 12 Feb 2025 08:00:00 GMT",
+          "summary": "Hub71 16th cohort announced: Here’s who made the list - Gulf Business - <a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1QdGZ4aFhzS0N3clMxandvLUh6aHF6ZHBOazNpcUhRbXFGZEY2SF9JUy1zeWd2OGZXVzNtTXJDaHhTenZmVHRQZU0ydTk2S2hJcW95bUhhMFE1YnNadEJKWEF4eHlDR0FySWhGT05mbD...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNemhsOV92djlLc0RUZHRVN3d0R1dyQXU0VlpSbVFNNWN5Z1F0V1RzRTdISjBhWUxTUVlMaWlEQXNaaFNqa0h5aF9Nd0F1WmVrYl9raUZFdmcwTEZpMEhVdW9EVklpejBkTFl3ZkRVeUdDNmJMWkNPX2E5NmhBQXBkdW5QcVlvWWN3QU1LNGFnYXZ3Zw?oc=5",
+          "date": "Tue, 10 Dec 2024 08:00:00 GMT",
+          "summary": "Iliad Partners Announces Launch of $50M MENA VC Fund - ADGM - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNemhsOV92djlLc0RUZHRVN3d0R1dyQXU0VlpSbVFNNWN5Z1F0V1RzRTdISjBhWUxTUVlMaWlEQXNaaFNqa0h5aF9Nd0F1WmVrYl9raUZFdmcwTEZpMEhVdW9EVklpejBkTFl3ZkRVeU...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1QdGZ4aFhzS0N3clMxandvLUh6aHF6ZHBOazNpcUhRbXFGZEY2SF9JUy1zeWd2OGZXVzNtTXJDaHhTenZmVHRQZU0ydTk2S2hJcW95bUhhMFE1YnNadEJKWEF4eHlDR0FySWhGT05mbDV1eUx0dFpsOGlpNFFmd2s?oc=5",
+          "date": "Wed, 12 Feb 2025 08:00:00 GMT",
+          "summary": "Hub71 16th cohort announced: Here’s who made the list - Gulf Business - <a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1QdGZ4aFhzS0N3clMxandvLUh6aHF6ZHBOazNpcUhRbXFGZEY2SF9JUy1zeWd2OGZXVzNtTXJDaHhTenZmVHRQZU0ydTk2S2hJcW95bUhhMFE1YnNadEJKWEF4eHlDR0FySWhGT05mbD...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNemhsOV92djlLc0RUZHRVN3d0R1dyQXU0VlpSbVFNNWN5Z1F0V1RzRTdISjBhWUxTUVlMaWlEQXNaaFNqa0h5aF9Nd0F1WmVrYl9raUZFdmcwTEZpMEhVdW9EVklpejBkTFl3ZkRVeUdDNmJMWkNPX2E5NmhBQXBkdW5QcVlvWWN3QU1LNGFnYXZ3Zw?oc=5",
+          "date": "Tue, 10 Dec 2024 08:00:00 GMT",
+          "summary": "Iliad Partners Announces Launch of $50M MENA VC Fund - ADGM - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNemhsOV92djlLc0RUZHRVN3d0R1dyQXU0VlpSbVFNNWN5Z1F0V1RzRTdISjBhWUxTUVlMaWlEQXNaaFNqa0h5aF9Nd0F1WmVrYl9raUZFdmcwTEZpMEhVdW9EVklpejBkTFl3ZkRVeU...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQU5NT1NWYmt5RTQ2TkhVbV9xTVhFREZIRFlySTJnMFpsVFVxNTFZb2ZCOUtPbVhuNjhsdWRvRnBETnF4SkhucDlxZkhQSkt6NmJWYlZEdnBjei00ZEpZaGcwTmJqcWxKRHZjbHNZb09SRXFUNkxQUmZROU5fVHBKTHhTTDAwaXQ0YXJsWWFtYUd4M1lzQk85QkhMdjE?oc=5",
+          "date": "Thu, 23 Mar 2023 07:00:00 GMT",
+          "summary": "B2B spend fintech Qashio launches in Saudi with Alinma Bank - FinTech Magazine - <a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPQU5NT1NWYmt5RTQ2TkhVbV9xTVhFREZIRFlySTJnMFpsVFVxNTFZb2ZCOUtPbVhuNjhsdWRvRnBETnF4SkhucDlxZkhQSkt6NmJWYlZEdnBjei00ZEpZaGcwTmJqcWxKRHZjbHNZb0...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZWF0RGV4ZkMtTlNMN21QeTlOZ05wRmpOVWJYM21ESnhCV1VZQU1GRGVxdVE0czc3Ui1MczhROFB4Qm1RbzlxRGJCdXBBbDU5TVltVXZlaG1ZX1hRSlhXbHBabnJmUEZJQ2FhaEp5cTZ1RE92RkNibXQzdWlVaFNCeVl2YzNWa2VRLUE5Zk5B?oc=5",
+          "date": "Tue, 10 Dec 2024 08:00:00 GMT",
+          "summary": "Iliad Partners launches $50 million MENA-focused VC Fund - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPZWF0RGV4ZkMtTlNMN21QeTlOZ05wRmpOVWJYM21ESnhCV1VZQU1GRGVxdVE0czc3Ui1MczhROFB4Qm1RbzlxRGJCdXBBbDU5TVltVXZlaG1ZX1hRSlhXbHBabnJmUEZJQ2FhaEp5cT...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPczEzY2FPd2JRY21WaWtCZ1Z2anpxUWtIb3FnN21IMmZES21OdzRXZDUwdG92bzRnRjZ0WkhSbmxZOGZ0TEFwM25jOTcxa0NBTUh3MEY2enJjMFBsUGhjWkJFeWU4Unk2MkRBZk14Z2FFX2RoaGZNRlNRemtpNzg1WFdHdFg4anVieTBIQlNabmN0enUtY3VPc2N3T1NTYXpFR2lQdkJn?oc=5",
+          "date": "Fri, 11 Apr 2025 03:24:39 GMT",
+          "summary": "Qashio taps Alinma Bank to launch operations in Saudi Arabia - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPczEzY2FPd2JRY21WaWtCZ1Z2anpxUWtIb3FnN21IMmZES21OdzRXZDUwdG92bzRnRjZ0WkhSbmxZOGZ0TEFwM25jOTcxa0NBTUh3MEY2enJjMFBsUGhjWkJFeWU4Unk2MkRBZk14Z2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 9 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 2,
+    "signals_without_evidence": 1,
+    "confidence_score": 0.6388888888888888,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "company_name": "Unknown",
+  "industry": "SaaS",
+  "evaluated_signals": [
+    {
+      "signal": "new_funding_round",
+      "score": 0,
+      "reason": "No validated data found."
+    },
+    {
+      "signal": "hiring_in_engineering_department",
+      "score": 0,
+      "reason": "No validated data found."
+    },
+    {
+      "signal": "new_product",
+      "score": 55,
+      "reason": "Evidence found with two sources discussing a new product announcement, but the recency cannot be confirmed."
+    }
+  ],
+  "final_intent_score": 18.33,
+  "intent_level": "Low Intent",
+  "overall_reasoning": "The lack of validated data for most of the signals indicates low buying readiness, with the only valid signal relating to a new product which does not sufficiently elevate intent."
+}

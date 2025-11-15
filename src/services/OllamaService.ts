@@ -2,7 +2,8 @@
 import axios from 'axios';
 import { config } from '../core/config.js';
 import { Company } from '../core/types.js';
-
+import { GoogleGenAI, Content, GenerateContentConfig } from "@google/genai";
+import OpenAI from 'openai';
 export interface OllamaResponse {
   model: string;
   created_at: string;
@@ -36,7 +37,10 @@ export interface ScoringResult {
   confidence?: number;
   factors?: string[];
 }
-
+const ai = new GoogleGenAI({ apiKey: config.GEMINI_API_KEY }); 
+const openai = new OpenAI({ apiKey: config.OPENAI_API_KEY });
+const RETRYABLE_STATUS_CODES = [429, 500, 503];
+const MAX_RETRIES = 5;
 export class OllamaService {
   private baseUrl: string;
 
@@ -44,7 +48,7 @@ export class OllamaService {
     this.baseUrl = config.OLLAMA_BASE_URL;
   }
 
-  async generate(prompt: string, systemPrompt?: string): Promise<string> {
+  async generateOpenRouter(prompt: string, systemPrompt?: string): Promise<string> {
     try {
       const messages:any[] = [];
       
@@ -54,26 +58,20 @@ export class OllamaService {
       
       messages.push({ role: 'user', content: prompt });
 
-    /*  const response = await axios.post(`${this.baseUrl}/api/chat`, {
-        model: config.OLLAMA_MODEL,
-        messages: messages,
-        stream: false,
-        options: {
-          temperature: 0.1,
-          top_p: 0.9,
-        }
-      });*/
+
       const LLM_TIMEOUT = 300000;
       const response = await axios.post(`https://openrouter.ai/api/v1/chat/completions`, {
         model: config.OLLAMA_MODEL,
         messages: messages,
       },{
         headers:{
-          Authorization: 'Bearer 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',
+          Authorization: 'Bearer '+config.OPENROUTER_API_KEY,
           'Content-Type': 'application/json'
         },
         timeout: LLM_TIMEOUT
       });
+
+      console.log(response)
       ////console.log(response.data.choices)
       return response.data.choices?.[0]?.message?.content;
     } catch (error) {
@@ -81,6 +79,57 @@ export class OllamaService {
       throw new Error('Failed to generate response from Ollama');
     }
   }
+
+  async generate(prompt: string, systemPrompt?: string): Promise<string> {
+    for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+        try {
+            // 1. Construct the messages array in the standard OpenAI format
+            const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [];
+
+            if (systemPrompt) {
+                messages.push({ role: 'system', content: systemPrompt });
+            }
+            
+            messages.push({ role: 'user', content: prompt });
+
+            // 2. Call the OpenAI SDK
+            const completion = await openai.chat.completions.create({
+                model: config.OPENAI_MODEL || 'gpt-3.5-turbo', // Use your config model or a default
+                messages: messages,
+                // The SDK handles headers and timeouts internally
+            });
+
+            // 3. Success! Return the response text.
+            const responseText = completion.choices[0]?.message?.content;
+            if (!responseText) {
+                throw new Error("OpenAI returned an empty response.");
+            }
+            console.log(completion); 
+            return responseText; 
+
+        } catch (error: any) {
+            const status = error.status; 
+            
+            // Check if the error is retryable (Rate limit 429, Server errors 500/503)
+            if (RETRYABLE_STATUS_CODES.includes(status as number)) {
+                if (attempt < MAX_RETRIES - 1) {
+                    // Exponential backoff with jitter
+                    const delay = Math.pow(2, attempt) * 1000 + (Math.random() * 500);
+                    console.warn(`OpenAI API temporarily unavailable (${status}). Retrying in ${delay / 1000}s... (Attempt ${attempt + 1} of ${MAX_RETRIES})`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    continue; // Go to the next attempt
+                }
+            }
+            
+            // For critical errors or final failed retry, log and re-throw
+            console.error('OpenAI API final error:', error);
+            throw new Error(`Failed to generate response from OpenAI API. Details: ${error.message}`);
+        }
+    }
+    
+    throw new Error('Maximum retries reached for OpenAI API request.');
+}
+    
 
   async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
     const systemPrompt = `You are a B2B marketing and target audience analysis expert. 
@@ -268,7 +317,7 @@ export class OllamaService {
     try {
       const response = await this.generate(prompt, systemPrompt);
       //console.log("----------------------------------------------------")
-      //console.log(response)
+      console.log(response)
       const parsed = this.parseJSONResponse(response);
 
       //console.log(parsed)

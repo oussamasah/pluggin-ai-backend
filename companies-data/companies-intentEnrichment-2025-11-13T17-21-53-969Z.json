@@ -1,0 +1,36 @@
+{
+  "company": "ZIWO",
+  "website": "https://www.ziwo.io",
+  "analysis_date": "2025-11-13",
+  "requested_signals": [
+    "new_funding_round",
+    "employee_joined_company",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [],
+      "found": false,
+      "reasoning": "Search failed or no evidence found for new_funding_round"
+    },
+    {
+      "signal": "employee_joined_company",
+      "evidence": [],
+      "found": false,
+      "reasoning": "Search failed or no evidence found for employee_joined_company"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [],
+      "found": false,
+      "reasoning": "Search failed or no evidence found for new_product"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 0,
+    "signals_without_evidence": 3,
+    "confidence_score": 0
+  }
+}

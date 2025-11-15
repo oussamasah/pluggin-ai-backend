@@ -1,0 +1,42 @@
+{
+  "score": 51,
+  "reason": "The analysis revealed a mix of signals with some strengths but significant limitations, particularly in terms of evidence quality and recency. The most impactful signal was the funding round, which indicated capital availability, but the associated evidence was from low-confidence sources released several months ago. The employee joining signal provided minimal evidence and low confidence, while no new product evidence was found, which downgrades intent significantly. Overall, despite the funding signal, the lack of recent and robust data prevents a higher intent score.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 77,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 77,
+      "confidence": 0.6
+    },
+    {
+      "signal": "employee_joined_company",
+      "score": 50,
+      "impact": "medium",
+      "evidence_quality": "poor",
+      "original_score": 50,
+      "confidence": 0.3
+    },
+    {
+      "signal": "new_product",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    }
+  ],
+  "confidence": "low",
+  "strategic_insights": [
+    "Alaan has secured significant funding which suggests capacity for growth.",
+    "Employee data indicates potential expansion but needs verification.",
+    "Absence of product launches raises concerns about immediate growth strategies."
+  ],
+  "timing_recommendation": "monitor",
+  "risk_factors": [
+    "Low confidence in reported signals may indicate data reliability issues.",
+    "Lack of recent evidence, particularly in product development, suggests stagnant innovation.",
+    "Potential over-reliance on funding without clear strategic direction could limit future opportunities."
+  ]
+}

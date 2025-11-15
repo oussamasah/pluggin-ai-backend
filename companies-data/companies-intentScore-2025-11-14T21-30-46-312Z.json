@@ -1,0 +1,24 @@
+{
+  "company_name": "Pemo",
+  "industry": "Fintech",
+  "evaluated_signals": [
+    {
+      "signal": "new_funding_round",
+      "score": 83,
+      "reason": "There are multiple pieces of recent evidence (within 90 days) indicating significant funding rounds for Pemo, with high confidence ratings (0.6 to 0.9) from multiple sources."
+    },
+    {
+      "signal": "employee_joined_company",
+      "score": 0,
+      "reason": "No validated data found."
+    },
+    {
+      "signal": "new_product",
+      "score": 70,
+      "reason": "There are multiple recent sources confirming the launch of Pemo's new all-in-one spend management platform, with confidence ratings around 0.7."
+    }
+  ],
+  "final_intent_score": 51,
+  "intent_level": "Moderate Intent",
+  "overall_reasoning": "The combination of recent funding activities and the launch of a new product suggests that Pemo is actively preparing to grow and potentially make purchases, indicating a moderate readiness to buy."
+}

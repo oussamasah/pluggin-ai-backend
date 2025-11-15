@@ -161,7 +161,7 @@ export interface Company {
     excludedGeographies: string[];
     excludedTechnologies: string[];
     excludedSizeRange: string;
-    buyingTriggers: string[];
+    buyingTriggers: any[];
     targetPersonas: string[];
     scoringWeights: {
       firmographic: number;

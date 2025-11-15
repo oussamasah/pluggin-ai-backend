@@ -1,0 +1,115 @@
+{
+  "company": "Grubtech",
+  "website": "https://www.grubtech.com",
+  "analysis_date": "2025-11-13",
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Grubtech Blog",
+          "url": "https://blog.grubtech.com/post/grubtech-raises-dollar13-million-in-series-a-funding-round-to-accelerate-its-international-growth-strategy",
+          "date": "2024-06-15",
+          "summary": "Grubtech announced successful Series A funding round of $13 Million to accelerate international growth strategy. The plug & play, all-in-one operating system for restaurants and cloud kitchens used funds to expand across multiple countries.",
+          "confidence": 0.95
+        },
+        {
+          "source": "FT-Magazine",
+          "url": "https://www.ft-magazine.com/startups/futuretech-startups-in-dubai/",
+          "date": "2024-09-20",
+          "summary": "GrubTech confirmed as having raised $13 million in Series A funding with customers in 15 countries. Company positioned as setting global standard for tech-driven food service with 25% delivery time reduction and 35% margin increase for clients.",
+          "confidence": 0.92
+        },
+        {
+          "source": "Grubtech Blog",
+          "url": "https://blog.grubtech.com/post/grubtech-secures-3-4-million-to-expand-its-cutting-edge-technology-for-cloud-kitchens",
+          "date": "2023-11-10",
+          "summary": "Grubtech secured $3.4 million in pre-Series A funding to expand cutting-edge technology for cloud kitchens and delivery-centric restaurants. This preceded the larger Series A round.",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "signal": "new_partnership",
+      "evidence": [
+        {
+          "source": "Grubtech Website",
+          "url": "https://www.grubtech.com/gdispatch",
+          "date": "2025-01-15",
+          "summary": "Grubtech maintains active integrations with major delivery platforms including Uber Eats, Deliveroo, and connects with 1000+ integration partners. gDispatch module enables delivery partners connection in single unified interface.",
+          "confidence": 0.88
+        },
+        {
+          "source": "Grubtech Website",
+          "url": "https://www.grubtech.com/persona/dark-kitchens",
+          "date": "2025-02-01",
+          "summary": "Grubtech offers integration with all major delivery aggregators including Uber Eats, Talabat, and other platforms. Connected ecosystem includes 300+ global partners supporting restaurant success.",
+          "confidence": 0.87
+        }
+      ]
+    }
+  ],
+  "debug": {
+    "rawResponse": "<think>\nThe user is asking me to create a business intelligence report about Grubtech, but there's a conflict between the instructions. The \"personalization\" section says I should \"Return ONLY valid JSON (no markdown, no code blocks, no explanations)\" and follow specific business intelligence format requirements. However, the main \"goal\" and \"report_format\" sections are asking me to create a comprehensive 10,000+ word academic research report in Markdown format.\n\nLooking at the instructions more",
+    "citations": [
+      "https://blog.grubtech.com/post/grubtech-raises-dollar13-million-in-series-a-funding-round-to-accelerate-its-international-growth-strategy",
+      "https://www.grubtech.com/terms-and-conditions",
+      "https://www.ziprecruiter.com/c/GrubTech/Job/Sales-Executive-(KSA)/-in-Camden,NY?jid=d3780f86ac39242c",
+      "https://www.ft-magazine.com/startups/futuretech-startups-in-dubai/",
+      "https://www.grubtech.com/gdispatch",
+      "https://www.grubtech.com/gdata",
+      "https://blog.grubtech.com/post/grubtech-raises-dollar13-million-in-series-a-funding-round-to-accelerate-its-international-growth-strategy",
+      "https://www.grubtech.com/persona/smbs",
+      "https://www.grubtech.com/terms-and-conditions",
+      "https://www.ft-magazine.com/startups/futuretech-startups-in-dubai/",
+      "https://www.grubtech.com/persona/dark-kitchens",
+      "https://blog.grubtech.com/post/grubtech-secures-3-4-million-to-expand-its-cutting-edge-technology-for-cloud-kitchens",
+      "https://www.grubtech.com/terms-and-conditions",
+      "https://www.grubtech.com/persona/dark-kitchens",
+      "https://www.hub71.com/latest-news/press-release/hub71-and-unicorn-factory-lisboa-partner-to-accelerate-cross-border-startup-expansion-between-the-uae-and-europe",
+      "https://www.grubtech.com/gdata",
+      "https://blog.grubtech.com/post/6-winning-tactics-to-improve-your-ranking-on-food-delivery-apps",
+      "https://www.dailynewsegypt.com/2025/11/09/government-to-channel-major-share-of-qatar-deal-proceeds-toward-debt-reduction-finance-minister/",
+      "https://www.ziprecruiter.com/c/GrubTech/Job/Sales-Executive-(KSA)/-in-Camden,NY?jid=d3780f86ac39242c",
+      "https://blog.grubtech.com/post/grubtech-raises-dollar13-million-in-series-a-funding-round-to-accelerate-its-international-growth-strategy",
+      "https://www.dailynewsegypt.com/2025/11/09/government-to-channel-major-share-of-qatar-deal-proceeds-toward-debt-reduction-finance-minister/",
+      "https://dailyremote.com/remote-job/senior-engineering-account-manager-remote-3863772",
+      "https://www.scribd.com/document/894469893/SGIE-2024-25-Report",
+      "https://supy.io/blog/restaurant-inventory-settings-cost-control/",
+      "https://www.scribd.com/document/894469893/SGIE-2024-25-Report",
+      "https://www.grubtech.com/knowledge-center",
+      "https://blog.grubtech.com/post/restaurant-playbook-2025-top-13-restaurant-f-b-events",
+      "https://www.gtlaw.com/en/professionals/p/patel-krishen",
+      "https://www.grubtech.com/knowledge-center",
+      "https://www.dailynewsegypt.com/2025/11/09/government-to-channel-major-share-of-qatar-deal-proceeds-toward-debt-reduction-finance-minister/",
+      "https://blog.grubtech.com/post/how-to-capture-great-pictures-of-food-for-your-menu-and-why-it-is-important",
+      "https://www.thenationalnews.com/business/markets/2025/10/27/saudi-arabia-to-let-foreign-investors-keep-trading-even-after-leaving-the-gulf/",
+      "https://blog.grubtech.com/post/grubtech-raises-dollar13-million-in-series-a-funding-round-to-accelerate-its-international-growth-strategy",
+      "https://www.nucamp.co/blog/coding-bootcamp-plano-tx-inside-planos-thriving-tech-hub-startups-and-success-stories",
+      "https://blog.grubtech.com/post/grubtech-secures-3-4-million-to-expand-its-cutting-edge-technology-for-cloud-kitchens",
+      "https://www.shutterstock.com/search/unix-system",
+      "https://egyptinnovate.com/ar/datasets/news",
+      "https://www.grubtech.com/persona/dark-kitchens",
+      "https://www.grubtech.com/connect-with-us",
+      "https://www.scribd.com/document/894469893/SGIE-2024-25-Report",
+      "https://www.grubtech.com/gdispatch",
+      "https://www.grubtech.com/sa/home",
+      "https://www.grubtech.com/persona/smbs",
+      "https://builtin.com/job/sales-executive-spain/7241252",
+      "https://www.ft-magazine.com/startups/futuretech-startups-in-dubai/",
+      "https://www.grubtech.com/persona/global-chains",
+      "https://www.grubtech.com/terms-and-conditions",
+      "https://globalriskcommunity.com/notes/middle-east-africa-cloud-kitchen-market-trends-and-growth",
+      "https://blog.grubtech.com/post/grubtech-secures-3-4-million-to-expand-its-cutting-edge-technology-for-cloud-kitchens",
+      "https://blog.grubtech.com/post/grubtech-raises-dollar13-million-in-series-a-funding-round-to-accelerate-its-international-growth-strategy",
+      "https://engineering.grab.com/categories/engineering/",
+      "https://www.grubtech.com/terms-and-conditions",
+      "https://www.grab.careers/en/vietnam-tech-talk-microservices/"
+    ],
+    "processingNotes": [
+      "Received 6106 characters from Perplexity",
+      "Extracted JSON structure",
+      "Found 2 signals with evidence"
+    ]
+  }
+}

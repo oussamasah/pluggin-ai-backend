@@ -1,0 +1,263 @@
+{
+  "company": "Qureos",
+  "website": "https://www.qureos.com",
+  "analysis_date": "2025-11-14",
+  "requested_signals": [
+    "new_funding_round",
+    "employee_joined_company",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNTNtZVlrUi1pR051OE9lcWVSUmFUM1NUSld5RmlxZHp0Zw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "UAE-based Qureos raises $3 million pre-seed funding - TechCrunch - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl9vVzB0ZDRaVW1KcENNdw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "Qureos Raises $3M in Pre-Seed Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOWVXSDFzU29kQ3p1OXRTVXU4MlRleE8xWi14bzJDeHVoaEVhc2FTVkdDdGtONmxoTFhFdnVJ?oc=5",
+          "date": "Wed, 06 Apr 2022 17:46:18 GMT",
+          "summary": "Qureos secures $3m funding round to accelerate 100 million careers - Startups Magazine - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdkdhS2xETkl1N3RoSHlmT0hJMTloZnIzVGRWbzN2X3FHZTNQaThOUzFjbXRWSjhPbDB5WV8yZmcwa2ttdU9oSExjMUhkZUtoOEd0RDZyTVNYZGQtS2gyZVBWNUU2Q1BzMmxnWXk4YXQ3NkxadnFwbFpoWnFwU1VCQzRaMzlHNjFyOEduU3NucFo0UQ?oc=5",
+          "date": "Mon, 05 Aug 2024 07:00:00 GMT",
+          "summary": "Oraseya Capital invests in seven startups through SANDBOX accelerator - Wamda - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQdkdhS2xETkl1N3RoSHlmT0hJMTloZnIzVGRWbzN2X3FHZTNQaThOUzFjbXRWSjhPbDB5WV8yZmcwa2ttdU9oSExjMUhkZUtoOEd0RDZyTVNYZGQtS2gyZVBWNUU2Q1BzMmxnWXk4YX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNTNtZVlrUi1pR051OE9lcWVSUmFUM1NUSld5RmlxZHp0Zw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "UAE-based Qureos raises $3 million pre-seed funding - TechCrunch - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl9vVzB0ZDRaVW1KcENNdw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "Qureos Raises $3M in Pre-Seed Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOWVXSDFzU29kQ3p1OXRTVXU4MlRleE8xWi14bzJDeHVoaEVhc2FTVkdDdGtONmxoTFhFdnVJ?oc=5",
+          "date": "Wed, 06 Apr 2022 17:46:18 GMT",
+          "summary": "Qureos secures $3m funding round to accelerate 100 million careers - Startups Magazine - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdkdhS2xETkl1N3RoSHlmT0hJMTloZnIzVGRWbzN2X3FHZTNQaThOUzFjbXRWSjhPbDB5WV8yZmcwa2ttdU9oSExjMUhkZUtoOEd0RDZyTVNYZGQtS2gyZVBWNUU2Q1BzMmxnWXk4YXQ3NkxadnFwbFpoWnFwU1VCQzRaMzlHNjFyOEduU3NucFo0UQ?oc=5",
+          "date": "Mon, 05 Aug 2024 07:00:00 GMT",
+          "summary": "Oraseya Capital invests in seven startups through SANDBOX accelerator - Wamda - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQdkdhS2xETkl1N3RoSHlmT0hJMTloZnIzVGRWbzN2X3FHZTNQaThOUzFjbXRWSjhPbDB5WV8yZmcwa2ttdU9oSExjMUhkZUtoOEd0RDZyTVNYZGQtS2gyZVBWNUU2Q1BzMmxnWXk4YX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNTNtZVlrUi1pR051OE9lcWVSUmFUM1NUSld5RmlxZHp0Zw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "UAE-based Qureos raises $3 million pre-seed funding - TechCrunch - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZno1N21uTjVIbmxScDJlSlphX0JRRkNoVG5UWUd6MHdpblhOZjVXby1lUWNVZURIS1VpTUdrTlJsTGQ2c0pPWmtuMlN2OWR2N19zM2FwaW9ybUNsZTVoYWQ4d3B4cFNSZ1FkYnZkdU5rbU10eFBHS0J2cVB3eVEzVDZqU0VoVVNGTmVvRmlWTTE?oc=5",
+          "date": "Sun, 04 Aug 2024 07:00:00 GMT",
+          "summary": "Oraseya Capital invests in seven technology startups through SANDBOX - وكالة وام - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNZno1N21uTjVIbmxScDJlSlphX0JRRkNoVG5UWUd6MHdpblhOZjVXby1lUWNVZURIS1VpTUdrTlJsTGQ2c0pPWmtuMlN2OWR2N19zM2FwaW9ybUNsZTVoYWQ4d3B4cFNSZ1FkYnZkdU...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVHJHaUN1MGZVU25zaTlNejBIclNLMTdwMmJ2eDNfdmt4dXpXZE5nQXVKZFVZV3pBdTNxV1c5ZWVibUR3SW1pSTNiTl9DTktYT2NlZFB5cWQ5V1dmaWJVQWFUQmpfWlFXM0FraXVYRzZGN0dFXzJKTGNOWFd4RVhvaVJtaUtsM0swd2w4dkRadHdoZi1LU1M4dXl4RzZuMjZkZEF0OFduZVp0cGR5Sm1qX1A1MWw4dw?oc=5",
+          "date": "Thu, 14 Aug 2025 07:00:00 GMT",
+          "summary": "Quotes of the Week: CBRE, Partners Capital, Aimbridge - Hotel Investment Today - <a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQVHJHaUN1MGZVU25zaTlNejBIclNLMTdwMmJ2eDNfdmt4dXpXZE5nQXVKZFVZV3pBdTNxV1c5ZWVibUR3SW1pSTNiTl9DTktYT2NlZFB5cWQ5V1dmaWJVQWFUQmpfWlFXM0FraXVYRz...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSS00QUUwZ2h1Q1VSWE40WVRRRXNveDloc0hMWnhRUjIwZE50b2tnSmRuNVJoeWx2YkZkbEx1NUhyZDM3WXJpMWNPN3hlXy04bGxwNWlxYnRqM0ZjbHVpT2RzU1dZN3pJSnMzUk5JUTJIN29xNmVOWnZ1U3BtX3ZzNTFxbm1VQ0d3dWhmTFJDX2hlR0ZmaVI4Y0lZUFhNSHU3LUI0M1JvQTRnS19TUnRsWkFncmo2SGRRajIzZ2pkMVlqazJCN3c?oc=5",
+          "date": "Thu, 12 Jun 2025 07:00:00 GMT",
+          "summary": "Quotes of the Week: Blue Flag Capital, Reade Hotel Capital, Hyatt - Hotel Investment Today - <a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNSS00QUUwZ2h1Q1VSWE40WVRRRXNveDloc0hMWnhRUjIwZE50b2tnSmRuNVJoeWx2YkZkbEx1NUhyZDM3WXJpMWNPN3hlXy04bGxwNWlxYnRqM0ZjbHVpT2RzU1dZN3pJSnMzUk5JUT...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNTNtZVlrUi1pR051OE9lcWVSUmFUM1NUSld5RmlxZHp0Zw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "UAE-based Qureos raises $3 million pre-seed funding - TechCrunch - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl9vVzB0ZDRaVW1KcENNdw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "Qureos Raises $3M in Pre-Seed Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOWVXSDFzU29kQ3p1OXRTVXU4MlRleE8xWi14bzJDeHVoaEVhc2FTVkdDdGtONmxoTFhFdnVJ?oc=5",
+          "date": "Wed, 06 Apr 2022 17:46:18 GMT",
+          "summary": "Qureos secures $3m funding round to accelerate 100 million careers - Startups Magazine - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWFRfek40azdZQmJvU002S0E1Tl9tZGtfb0RrQVg5NXZ2aGx2bFVhanRrRDcwSHpfYXBZNW9yNGtJa25Va0VETnl4djFkU0pGbXRwVENCU29UWDJNSkhja25CUkp2WE1uTjNTbkh6ZDNIT3AtWXF1N1h4WFI5SWFYMGUxc0JWZ3VsX2draE9leEJ2SmZkZGpFS1RPV1k3LWpqTFY3UDVZRDVDZHhQdUFiX1p5dUNiUVdRRGxmOA?oc=5",
+          "date": "Thu, 06 Nov 2025 19:55:41 GMT",
+          "summary": "Quotes of the Week: Highgate, Gaw Capital, Marriott, Choice - Hotel Investment Today - <a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNWFRfek40azdZQmJvU002S0E1Tl9tZGtfb0RrQVg5NXZ2aGx2bFVhanRrRDcwSHpfYXBZNW9yNGtJa25Va0VETnl4djFkU0pGbXRwVENCU29UWDJNSkhja25CUkp2WE1uTjNTbkh6ZD...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNc3g5cEZmaXUtZ05ZNmtxczRlYzBoYUZUbG5RME1GV2VhRE5nVTlSX2pza19OZFl1VzhfNkVURDd2NmFGYjNmVkdTOWVzV29PS0FIbjI1NzFIdzFvUk56ajNfdWR5Z0hjSl9QNzBYdVRlTzNoQl8tNDJjcVJZLS1EbXFjTC1GblJlZmVHREFlaGxKVUdWSHpj?oc=5",
+          "date": "Tue, 10 Mar 2020 07:00:00 GMT",
+          "summary": "13 inspiring quotes by venture capitalist Vinod Khosla for entrepreneurs - YourStory.com - <a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNc3g5cEZmaXUtZ05ZNmtxczRlYzBoYUZUbG5RME1GV2VhRE5nVTlSX2pza19OZFl1VzhfNkVURDd2NmFGYjNmVkdTOWVzV29PS0FIbjI1NzFIdzFvUk56ajNfdWR5Z0hjSl9QNzBYdV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdkdhS2xETkl1N3RoSHlmT0hJMTloZnIzVGRWbzN2X3FHZTNQaThOUzFjbXRWSjhPbDB5WV8yZmcwa2ttdU9oSExjMUhkZUtoOEd0RDZyTVNYZGQtS2gyZVBWNUU2Q1BzMmxnWXk4YXQ3NkxadnFwbFpoWnFwU1VCQzRaMzlHNjFyOEduU3NucFo0UQ?oc=5",
+          "date": "Mon, 05 Aug 2024 07:00:00 GMT",
+          "summary": "Oraseya Capital invests in seven startups through SANDBOX accelerator - Wamda - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQdkdhS2xETkl1N3RoSHlmT0hJMTloZnIzVGRWbzN2X3FHZTNQaThOUzFjbXRWSjhPbDB5WV8yZmcwa2ttdU9oSExjMUhkZUtoOEd0RDZyTVNYZGQtS2gyZVBWNUU2Q1BzMmxnWXk4YX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZno1N21uTjVIbmxScDJlSlphX0JRRkNoVG5UWUd6MHdpblhOZjVXby1lUWNVZURIS1VpTUdrTlJsTGQ2c0pPWmtuMlN2OWR2N19zM2FwaW9ybUNsZTVoYWQ4d3B4cFNSZ1FkYnZkdU5rbU10eFBHS0J2cVB3eVEzVDZqU0VoVVNGTmVvRmlWTTE?oc=5",
+          "date": "Sun, 04 Aug 2024 07:00:00 GMT",
+          "summary": "Oraseya Capital invests in seven technology startups through SANDBOX - وكالة وام - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNZno1N21uTjVIbmxScDJlSlphX0JRRkNoVG5UWUd6MHdpblhOZjVXby1lUWNVZURIS1VpTUdrTlJsTGQ2c0pPWmtuMlN2OWR2N19zM2FwaW9ybUNsZTVoYWQ4d3B4cFNSZ1FkYnZkdU...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNc3NOWk1TYXY2TzlrMXRMa2J3UTYzWU8zSWtGc0FNVnE1czAzN3JYLTJwLVhONlFxUzRZbnZQMXVhaWpadFdNNXlqWlhkS256TWxFNzBiTzJibjU3VVQyQzdpY2NhQUkxY2RyWmhJdXNkNVBURzhiRDNZdHpnM0FoNWY2RC0?oc=5",
+          "date": "Wed, 29 Jan 2020 08:00:00 GMT",
+          "summary": "Kobe Bryant, Basketball Icon and Venture Capitalist: 15 Quotes from Mamba on Success, Failure, and Work Ethic - Esquiremag.ph - <a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNc3NOWk1TYXY2TzlrMXRMa2J3UTYzWU8zSWtGc0FNVnE1czAzN3JYLTJwLVhONlFxUzRZbnZQMXVhaWpadFdNNXlqWlhkS256TWxFNzBiTzJibjU3VVQyQzdpY2NhQUkxY2RyWmhJdX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNTNtZVlrUi1pR051OE9lcWVSUmFUM1NUSld5RmlxZHp0Zw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "UAE-based Qureos raises $3 million pre-seed funding - TechCrunch - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNdm94QlRsRnVCUTl6R1EzMHItQTRTalJ5eExCak5CeVVvREhEOWFjMElGdnNmTU8ydUV5dGNLZGZ0WVhjTVlyS19kOWdhMHdCTlVnMjc1dWlzNXpON0xMWXAxUzl3SkRMNXU3dENNNT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl9vVzB0ZDRaVW1KcENNdw?oc=5",
+          "date": "Wed, 06 Apr 2022 07:00:00 GMT",
+          "summary": "Qureos Raises $3M in Pre-Seed Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9iaWo3eVFkQUdLOWkzNV9lSXZtZm1UazlHQkZCTXAtVkVKMkdTdm5uckdVU3l2WHNDOTkxU1MtcklKb01CeUVoZkw4RXVELUtVLWg2d3dFbTdfN2ItRjZweE50SDVJdEMzdHd4WVhiZl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOWVXSDFzU29kQ3p1OXRTVXU4MlRleE8xWi14bzJDeHVoaEVhc2FTVkdDdGtONmxoTFhFdnVJ?oc=5",
+          "date": "Wed, 06 Apr 2022 17:46:18 GMT",
+          "summary": "Qureos secures $3m funding round to accelerate 100 million careers - Startups Magazine - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxObmtsS1NpWE1jMTdubzhUQ1F3Vm9GYUZnaVhjdGNqTHNBaERPd1pSZDZiNDRIaE14UnpfN0dXdmx3M3otQUFHZW9WYU80M1lkME9FWVJmYjZDaVp6aGJHX3hxM1A0QnBVQW1fb3JwOW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 23 relevant evidence pieces"
+    },
+    {
+      "signal": "employee_joined_company",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVnQ5b1hYcGdHNHpCVDd6VjdydEpfaGdSMV8wSzNCdW1pNDd3aDBzYXBXTnU2ajBJSjhqRnNRSDdwbkE?oc=5",
+          "date": "Fri, 08 Apr 2022 07:00:00 GMT",
+          "summary": "Dubai-based Qureos raises $3mn, announces launch of operations in Pakistan - Business Recorder - <a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVnQ5b1hYcGdHNHpCVDd6VjdydEpfaGdSMV8wSzNCdW1pNDd3aDBzYXBXTnU2ajBJSjhqRnNRSDdwbkE?oc=5",
+          "date": "Fri, 08 Apr 2022 07:00:00 GMT",
+          "summary": "Dubai-based Qureos raises $3mn, announces launch of operations in Pakistan - Business Recorder - <a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVnQ5b1hYcGdHNHpCVDd6VjdydEpfaGdSMV8wSzNCdW1pNDd3aDBzYXBXTnU2ajBJSjhqRnNRSDdwbkE?oc=5",
+          "date": "Fri, 08 Apr 2022 07:00:00 GMT",
+          "summary": "Dubai-based Qureos raises $3mn, announces launch of operations in Pakistan - Business Recorder - <a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVnQ5b1hYcGdHNHpCVDd6VjdydEpfaGdSMV8wSzNCdW1pNDd3aDBzYXBXTnU2ajBJSjhqRnNRSDdwbkE?oc=5",
+          "date": "Fri, 08 Apr 2022 07:00:00 GMT",
+          "summary": "Dubai-based Qureos raises $3mn, announces launch of operations in Pakistan - Business Recorder - <a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBmY2ltYlhIeGRoNDYtYW9JMWlFWlZkY1NBTExUYXdVaU1MMGtPQlZkb2pua3poYW05bTB2RS1xelhHc0FiZjNWSjFlYzZzMC1F0gFWQVVfeXFMTXNtTFBCZ2ltdE1yeGloRXJvNHJmVn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 4 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 2,
+    "signals_without_evidence": 1,
+    "confidence_score": 0.5847826086956521,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "company": "ZIWO",
+  "website": "https://www.ziwo.io",
+  "analysis_date": "2025-11-15",
+  "requested_signals": [
+    "new_funding_round",
+    "employee_joined_company",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBxcjdycE4wX1pGYmhuOU9rTWhxWTVhdl9ibmY2QUV3ZHRfcUpGY051Q2U0YmlZb3RzSGQ5Y3E3LTNaLTQyVGFtNzYxUnVwUHJnOG9wd20yTlJmSjJOaEI5eHhETFE1dDEyVGw1ZzlkdFRXYTMzNDg4dDZCX2k4QQ?oc=5",
+          "date": "Tue, 07 Dec 2021 08:00:00 GMT",
+          "summary": "ZIWO Raises Seven-figure in pre-Series B - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTFBxcjdycE4wX1pGYmhuOU9rTWhxWTVhdl9ibmY2QUV3ZHRfcUpGY051Q2U0YmlZb3RzSGQ5Y3E3LTNaLTQyVGFtNzYxUnVwUHJnOG9wd20yTlJmSjJOaEI5eHhETFE1dDEyVGw1ZzlkdF...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTTh5QQ?oc=5",
+          "date": "Mon, 06 Dec 2021 08:00:00 GMT",
+          "summary": "UAE’s ZIWO raises pre-Series B round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBxcjdycE4wX1pGYmhuOU9rTWhxWTVhdl9ibmY2QUV3ZHRfcUpGY051Q2U0YmlZb3RzSGQ5Y3E3LTNaLTQyVGFtNzYxUnVwUHJnOG9wd20yTlJmSjJOaEI5eHhETFE1dDEyVGw1ZzlkdFRXYTMzNDg4dDZCX2k4QQ?oc=5",
+          "date": "Tue, 07 Dec 2021 08:00:00 GMT",
+          "summary": "ZIWO Raises Seven-figure in pre-Series B - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTFBxcjdycE4wX1pGYmhuOU9rTWhxWTVhdl9ibmY2QUV3ZHRfcUpGY051Q2U0YmlZb3RzSGQ5Y3E3LTNaLTQyVGFtNzYxUnVwUHJnOG9wd20yTlJmSjJOaEI5eHhETFE1dDEyVGw1ZzlkdF...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTTh5QQ?oc=5",
+          "date": "Mon, 06 Dec 2021 08:00:00 GMT",
+          "summary": "UAE’s ZIWO raises pre-Series B round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBxcjdycE4wX1pGYmhuOU9rTWhxWTVhdl9ibmY2QUV3ZHRfcUpGY051Q2U0YmlZb3RzSGQ5Y3E3LTNaLTQyVGFtNzYxUnVwUHJnOG9wd20yTlJmSjJOaEI5eHhETFE1dDEyVGw1ZzlkdFRXYTMzNDg4dDZCX2k4QQ?oc=5",
+          "date": "Tue, 07 Dec 2021 08:00:00 GMT",
+          "summary": "ZIWO Raises Seven-figure in pre-Series B - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTFBxcjdycE4wX1pGYmhuOU9rTWhxWTVhdl9ibmY2QUV3ZHRfcUpGY051Q2U0YmlZb3RzSGQ5Y3E3LTNaLTQyVGFtNzYxUnVwUHJnOG9wd20yTlJmSjJOaEI5eHhETFE1dDEyVGw1ZzlkdF...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTTh5QQ?oc=5",
+          "date": "Mon, 06 Dec 2021 08:00:00 GMT",
+          "summary": "UAE’s ZIWO raises pre-Series B round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTTh5QQ?oc=5",
+          "date": "Mon, 06 Dec 2021 08:00:00 GMT",
+          "summary": "UAE’s ZIWO raises pre-Series B round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE9makJsWnFlRHB5SkU3WFR4NjlaNXd0MUc1UFM1VnVOcTJoaE5HYzRYZF93eFdXcHp6Sldqb1JscjI0OUpZYU1CZkJINzZuVjlVRkp2MERyRXp2b1dvQmhNVmR6NzdfQmxabUdMZGlfTT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 7 relevant evidence pieces"
+    },
+    {
+      "signal": "employee_joined_company",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 1,
+    "signals_without_evidence": 2,
+    "confidence_score": 0.6,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}
