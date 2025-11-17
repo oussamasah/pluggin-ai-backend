@@ -281,7 +281,7 @@ export class CompanyWorkflow {
       console.log(userCompanies)
       const uniqueIDs = this.getAllUniqueCompanyIDs(userCompanies);
       console.log("excludedCompanies",uniqueIDs)
-     const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery, 1,uniqueIDs);
+     const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery,3,uniqueIDs);
      this.saveCompanies("exa-search",exaCompanies)
      /* const exaCompanies = {
         "exaCompanies": [
