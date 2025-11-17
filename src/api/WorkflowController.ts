@@ -121,7 +121,7 @@ async function getICPModel(modelId: string , userId: string): Promise<any> {
       industries: ['SaaS', 'Technology'],
       geographies: ['North America', 'Europe'],
       employeeRange: '51-200 employees',
-      acvRange: '$1k–$10k',
+      annualRevenue: '$1k–$10k',
       buyingTriggers: ['funding', 'key hires', 'tech change']
     }
   };

@@ -167,14 +167,14 @@ Points per dimension = scoringWeights.firmographic ÷ 5
 *Max Points:* scoringWeights.firmographic ÷ 5
 
 *Scoring Rules:*
-- ✓ Within target acvRange: *100% of dimension points*
+- ✓ Within target annualRevenue: *100% of dimension points*
 - ≈ Within ±30% of range boundaries: *70% of dimension points*
 - ≈ Within ±50% of range boundaries: *40% of dimension points*
 - ✗ Outside range: *0 points*
 - ⚠ Missing data: *0 points* + Flag: "Revenue data not available"
 
 *What to check:*
-- Parse acvRange (e.g., "$1M-$10M", "$50M+", "$10M-$100M")
+- Parse annualRevenue (e.g., "$1M-$10M", "$50M+", "$10M-$100M")
 - Compare company's annual revenue to this range
 - Consider ARR, revenue, or financial data provided
 
@@ -623,7 +623,7 @@ Provide your detailed ICP fit analysis as JSON following the exact format above.
     - Target Industries: ${icpModel.industries?.join(', ') || 'Any'}
     - Target Geographies: ${icpModel.geographies?.join(', ') || 'Any'}
     - Employee Range: ${icpModel.employeeRange || 'Any'}
-    - ACV Range: ${icpModel.acvRange || 'Any'}
+    - Annual Revenue: ${icpModel.annualRevenue || 'Any'}
     - Must-Have Tech: ${icpModel.mustHaveTech?.join(', ') || 'None'}
     - Buying Motion: ${icpModel.mustHaveMotion || 'Any'}
     - Buying Triggers: ${icpModel.buyingTriggers?.join(', ') || 'None'}

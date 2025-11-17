@@ -8,7 +8,6 @@ interface ICPConfig {
   industries: string[];
   geographies: string[];
   employeeRange: string;
-  acvRange?: string;
   excludedIndustries?: string[];
 }
 
@@ -569,7 +568,7 @@ class HighConfidenceIntentDetector {
   }
 }
 
-// ==================== HYBRID QUERY OPTIMIZER ====================
+// ==================== HYBRID QUERY OPTIMIZER - WITHOUT ANNUAL REVENUE ====================
 
 class HybridQueryOptimizer {
   private intentDetector: HighConfidenceIntentDetector;
@@ -618,17 +617,6 @@ class HybridQueryOptimizer {
     };
   }
 
-  private isComplexQuery(query: string): boolean {
-    const complexityIndicators = [
-      /\b(and|or|with|without|excluding)\b/gi,
-      /\b\d+\s+(and|or)\s+\d+\b/gi,
-      /[.,;!?]{2,}/g,
-      /\b(complex|multiple|various|different)\b/gi
-    ];
-
-    return complexityIndicators.some(pattern => pattern.test(query));
-  }
-
   private async generateHybridQuery(
     icpConfig: ICPConfig,
     userQuery: string,
@@ -640,9 +628,9 @@ Your task is to transform natural language queries into highly effective Exa.ai 
 
 CRITICAL RULES:
 1. ALWAYS return valid JSON - no other text
-2. Use ONLY these ICP fields: industries, geographies, employeeRange, acvRange (minimum only)
-3. For acvRange, use only the minimum value (e.g., ">$50k" not "$50k-$200k")
-4. IGNORE: technographics, mustHaveTech, targetPersonas, scoringWeights
+2. Use ONLY these ICP fields: industries, geographies, employeeRange
+3. DO NOT include annual revenue or revenue-related terms
+4. IGNORE: technographics, mustHaveTech, targetPersonas, scoringWeights, revenue
 5. Focus on company signals: funding, hiring, expansion, partnerships, acquisitions
 6. Keep queries under 200 characters
 
@@ -650,25 +638,31 @@ ICP FIELDS TO USE:
 - Industries: ${icpConfig.industries.join(', ')}
 - Geographies: ${icpConfig.geographies.join(', ')}
 - Employee Range: ${icpConfig.employeeRange}
-- ACV Range: ${icpConfig.acvRange ? `Minimum ${this.extractMinACV(icpConfig.acvRange)}` : 'Not specified'}
 
-Exa.ai QUERY SYNTAX:
-- Use quotes for exact phrases
-- Use AND/OR for boolean logic
-- Use - to exclude terms
-- Focus on recent company signals and events`;
+REQUIRED QUERY FORMAT:
+industries:"value" AND geographies:"value" AND employeeRange:"value" AND [additional terms]
+
+Return ONLY JSON in this exact format:
+{
+  "optimizedQuery": "string (max 200 chars)",
+  "explanation": "string (brief reasoning)",
+  "queryType": "precise" | "broad" | "exploratory",
+  "suggestedFilters": ["array", "of", "additional", "filters"]
+}`;
 
     const prompt = `
 USER QUERY: "${userQuery}"
 
 DETECTED INTENT: ${intentResult.intent} (${intentResult.confidence} confidence)
 
-TASK: Create an optimized Exa.ai query using ONLY:
-- ICP industries, geographies, employee range, and ACV minimum
-- User query intent and signals
-- Recent company events and announcements
+ICP CONFIG - USE ONLY THESE FIELDS:
+- Industries: ${icpConfig.industries.join(', ')}
+- Geographies: ${icpConfig.geographies.join(', ')} 
+- Employee Range: ${icpConfig.employeeRange}
 
-DO NOT USE: Technology stack, target personas, or complex revenue ranges
+TASK: Create an optimized Exa.ai query using ONLY the ICP fields above in field:"value" format.
+
+IMPORTANT: DO NOT include annual revenue or any revenue-related terms.
 
 Return ONLY JSON in this exact format:
 {
@@ -698,24 +692,6 @@ Return ONLY JSON in this exact format:
     }
   }
 
-  private extractMinACV(acvRange: string): string {
-    const match = acvRange.match(/(\$?\d+[kKmM]?b?)/);
-    return match ? match[1] : acvRange;
-  }
-
-  private parseOllamaResponse(response: string): any {
-    try {
-      const jsonMatch = response.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        return JSON.parse(jsonMatch[0]);
-      }
-      return JSON.parse(response);
-    } catch (error) {
-      console.error('Failed to parse Ollama response:', response);
-      return {};
-    }
-  }
-
   private generateRuleBasedQuery(
     icpConfig: ICPConfig,
     userQuery: string,
@@ -725,32 +701,31 @@ Return ONLY JSON in this exact format:
     const queryComponents: string[] = [];
     const explanationParts: string[] = [];
     const suggestedFilters: string[] = [];
-    let queryType: 'precise' | 'broad' | 'exploratory' = 'precise';
 
-    const icpContext = this.buildICPContext(icpConfig);
-    if (icpContext) {
-      queryComponents.push(icpContext);
-      explanationParts.push(`ICP: ${icpConfig.industries.join(', ')} in ${icpConfig.geographies.join(', ')}`);
+    // Include only industries, geographies, and employee range
+    if (icpConfig.industries.length > 0) {
+      queryComponents.push(`industries:"${icpConfig.industries.join('" OR "')}"`);
+      explanationParts.push(`Industries: ${icpConfig.industries.join(', ')}`);
     }
 
+    if (icpConfig.geographies.length > 0) {
+      queryComponents.push(`geographies:"${icpConfig.geographies.join('" OR "')}"`);
+      explanationParts.push(`Geographies: ${icpConfig.geographies.join(', ')}`);
+    }
+
+    if (icpConfig.employeeRange) {
+      queryComponents.push(`employeeRange:"${icpConfig.employeeRange}"`);
+      explanationParts.push(`Employees: ${icpConfig.employeeRange}`);
+    }
+
+    // Add user query intent
     const intentQuery = this.buildIntentQuery(intentResult, userQuery);
-    queryComponents.push(intentQuery);
-    explanationParts.push(`Intent: ${intentResult.intent}`);
-
-    if (intentResult.entities.timeframe) {
-      queryComponents.push(intentResult.entities.timeframe);
-      explanationParts.push(`Time: ${intentResult.entities.timeframe}`);
+    if (intentQuery && intentQuery !== userQuery) {
+      queryComponents.push(intentQuery);
     }
 
-    if (intentResult.confidence === 'low' || userQuery.split(' ').length > 8) {
-      queryType = 'exploratory';
-    } else if (intentResult.confidence === 'very-high' && queryComponents.length <= 3) {
-      queryType = 'precise';
-    } else {
-      queryType = 'broad';
-    }
-
-    const optimizedQuery = this.finalizeQuery(queryComponents, queryType);
+    const optimizedQuery = queryComponents.join(' AND ');
+    const queryType = this.determineQueryType(intentResult, queryComponents.length);
 
     return {
       optimizedQuery,
@@ -763,31 +738,14 @@ Return ONLY JSON in this exact format:
     };
   }
 
-  private buildICPContext(icpConfig: ICPConfig): string {
-    const components: string[] = [];
-
-    if (icpConfig.industries.length > 0) {
-      if (icpConfig.industries.length === 1) {
-        components.push(icpConfig.industries[0]);
-      } else {
-        components.push(`(${icpConfig.industries.join(' OR ')})`);
-      }
+  private determineQueryType(intentResult: IntentResult, componentCount: number): 'precise' | 'broad' | 'exploratory' {
+    if (intentResult.confidence === 'low' || componentCount > 5) {
+      return 'exploratory';
+    } else if (intentResult.confidence === 'very-high' && componentCount <= 3) {
+      return 'precise';
+    } else {
+      return 'broad';
     }
-
-    if (icpConfig.geographies.length > 0) {
-      components.push(`in ${icpConfig.geographies.join(' OR ')}`);
-    }
-
-    if (icpConfig.employeeRange) {
-      components.push(icpConfig.employeeRange);
-    }
-
-    if (icpConfig.acvRange) {
-      const minACV = this.extractMinACV(icpConfig.acvRange);
-      components.push(`revenue >${minACV}`);
-    }
-
-    return components.join(' ');
   }
 
   private buildIntentQuery(intentResult: IntentResult, originalQuery: string): string {
@@ -806,36 +764,49 @@ Return ONLY JSON in this exact format:
     return intentMap[intentResult.intent] || originalQuery;
   }
 
-  private finalizeQuery(components: string[], queryType: 'precise' | 'broad' | 'exploratory'): string {
-    let query = components.join(' ').trim().replace(/\s+/g, ' ');
+  private generateFallbackQuery(icpConfig: ICPConfig, userQuery: string, intentResult: IntentResult): string {
+    const components: string[] = [];
 
-    switch (queryType) {
-      case 'precise':
-        query = query.replace(/"([^"]+)"/g, '"$1"');
-        break;
-      case 'broad':
-        query = query.replace(/\b(and|&)\b/gi, 'OR');
-        break;
-      case 'exploratory':
-        query = query.substring(0, 150);
-        break;
+    // Include only the three main fields
+    if (icpConfig.industries.length > 0) {
+      components.push(`industries:"${icpConfig.industries.join('" OR "')}"`);
     }
 
-    if (query.length > 200) {
-      query = query.substring(0, 197) + '...';
+    if (icpConfig.geographies.length > 0) {
+      components.push(`geographies:"${icpConfig.geographies.join('" OR "')}"`);
     }
 
-    return query;
+    if (icpConfig.employeeRange) {
+      components.push(`employeeRange:"${icpConfig.employeeRange}"`);
+    }
+
+    // Add user query
+    components.push(userQuery);
+
+    return components.join(' AND ').substring(0, 200);
   }
 
-  private generateFallbackQuery(icpConfig: ICPConfig, userQuery: string, intentResult: IntentResult): string {
-    const baseComponents = [
-      this.buildICPContext(icpConfig),
-      userQuery,
-      '2024 OR 2023'
-    ].filter(Boolean);
+  private parseOllamaResponse(response: string): any {
+    try {
+      const jsonMatch = response.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        return JSON.parse(jsonMatch[0]);
+      }
+      return JSON.parse(response);
+    } catch (error) {
+      console.error('Failed to parse Ollama response:', response);
+      return {};
+    }
+  }
 
-    return baseComponents.join(' ').substring(0, 200);
+  private isComplexQuery(query: string): boolean {
+    const complexityIndicators = [
+      /\b(and|or|with|without|excluding)\b/gi,
+      /\b\d+\s+(and|or)\s+\d+\b/gi,
+      /[.,;!?]{2,}/g,
+      /\b(complex|multiple|various|different)\b/gi
+    ];
+    return complexityIndicators.some(pattern => pattern.test(query));
   }
 }
 
@@ -1292,8 +1263,7 @@ export async function demonstrateEnhancedSystem() {
   const icpConfig: ICPConfig = {
     industries: ["SaaS", "Fintech", "AI"],
     geographies: ["San Francisco", "New York", "London"],
-    employeeRange: "51-200 employees",
-    acvRange: "$50k-$200k"
+    employeeRange: "51-200 employees"
   };
 
   // Test query optimization

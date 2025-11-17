@@ -1,0 +1,40 @@
+{
+  "score": 58,
+  "reason": "The intent score reflects moderate signals predominantly from a recent funding round, indicating growth expectations. The evidence quality from recent sources is low, which affects the overall confidence in the intent to purchase. There is a significant absence of other strong signals, particularly regarding new products or consistent hiring practices.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 77,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 77,
+      "confidence": 0.6
+    },
+    {
+      "signal": "employee_joined_company",
+      "score": 50,
+      "impact": "medium",
+      "evidence_quality": "fair",
+      "original_score": 50,
+      "confidence": 0.3
+    },
+    {
+      "signal": "new_product",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "The recent funding indicates investor confidence in Alaan's potential to expand its product offerings and market presence.",
+    "Lack of new product announcements suggests conservative growth or a phase of product development post-funding."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Dependence on a single funding round for immediate growth may expose Alaan to operational risks if no further financial backing is secured.",
+    "Low confidence in employee joining signals may indicate difficulties in attracting top talent."
+  ]
+}

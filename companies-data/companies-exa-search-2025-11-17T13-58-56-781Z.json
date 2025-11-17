@@ -1,0 +1,147 @@
+{
+  "exaCompanies": [
+    {
+      "id": "witem_01ka91rbfhy6kf5m7yy6kf5m7y",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01ka91qvs50g8y0k59xm9x6sbp",
+      "websetId": "webset_01ka91qtvvpmebaa47gdqx0a0p",
+      "properties": {
+        "type": "company",
+        "url": "https://obeikandigital.com.sa",
+        "description": "Private IT services and consulting firm in Saudi Arabia with 105 employees and 8.8% YoY growth; specializes in digital transformation, IoT connectivity, manufacturing execution systems, and SaaS platforms like O3OZONE and MADAR, which are cloud-based and listed on Microsoft Marketplace.",
+        "content": "## About usFind Out How We Started\n\nThe embrace of smart technology has radically enhanced productivity and agility across Obeikan’s business units. Since beginning our digitalization drive, we’ve improved our productivity and quality control and reduced costs. And most importantly, we’ve escalated our competitiveness and ability to innovate.\n\nBefore, we were order-takers. Today we’re productivity-makers, helping other manufacturers achieve similar game-changing results.\n\nObeikan’s Digital Solutions include case-tailored Digital Solution products and industrial apps for logistics, utility reliability, spare part management, organizational optimization and audit management, with more being developed.\n\n## Journey to Digitalization\n\n## Obeikan Digital Products\n\nA digital logistics platform designed to streamline shipment management, real-time tracking, and delivery reporting for improved efficiency and cost control.\n\n[read more](https://obeikandigital.com.sa/service/madar-digital-fleet-provider-and-transportation-management-platform/)\n\nAn industrial marketplace connecting manufacturers and suppliers for seamless procurement of equipment and spare parts.\n\n[read more](https://obeikandigital.com.sa/service/shamel/)\n\nAn intelligent maintenance system offering predictive analytics and real-time monitoring to ensure operational efficiency.\n\n[read more](https://obeikandigital.com.sa/service/isaned/)\n\nA comprehensive enterprise management solution integrating HR, finance, and AI-driven insights to enhance business operations.\n\n[read more](https://obeikandigital.com.sa/service/nawras-corporate/)\n\nA powerful educational platform tailored to support school management, enhance teaching outcomes, and optimize student engagement through innovative digital tools.\n\n[read more](https://obeikandigital.com.sa/service/nawras-education/)\n\n## OBEIKAN DIGITAL IN NUMBERS\n\n## Our Partners\n\n## Obeikan DigitalFEATURED NEWS\n\n#### SHAMEL Connect: A Gateway to Innovation Hosted at Obeikan Knowledge Academy\n\n#### Obeikan Digital Solutions and Teradix Forge Strategic Partnership to Transform Procurement and Drive Growth\n\n#### Obeikan Digital Solutions Partners with Significa Ventures to Drive Innovation and Growth\n\n## Stay In TouchSIGN UP FOR OUR NEWS",
+        "company": {
+          "name": "Obeikan Digital Solutions",
+          "location": "undefined, Saudi Arabia",
+          "employees": 105,
+          "industry": "IT Services and IT Consulting",
+          "about": "Your trusted partner in Digital Transformation.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQHolpWeFmHGXg/company-logo_200_200/company-logo_200_200/0/1641211186290/obeikan_digital_solutions_logo?e=2147483647&v=beta&t=hxwJADAcLeQou69ApvJ72kn0QyCg96rNIgoyQ8vitHM"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has between 51 and 200 employees",
+          "reasoning": "The company has 105 employees, which falls within the required range of between 51 and 200",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Obeikan Digital Solutions",
+              "snippet": "Obeikan Digital Solutions is a IT Services and IT Consulting company (private) with 105 employees (+8.8% YoY growth), headquartered in Saudi Arabia.  Your trusted partner in Digital Transformation.",
+              "url": "https://obeikandigital.com.sa"
+            }
+          ]
+        },
+        {
+          "criterion": "Company is headquartered in the Kingdom of Saudi Arabia (KSA)",
+          "reasoning": "The company is based in Saudi Arabia",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Obeikan Digital Solutions",
+              "snippet": "Obeikan Digital Solutions is a IT Services and IT Consulting company (private) with 105 employees (+8.8% YoY growth), headquartered in Saudi Arabia.  Your trusted partner in Digital Transformation.",
+              "url": "https://obeikandigital.com.sa"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the SaaS (Software as a Service) industry",
+          "reasoning": "Obeikan Digital Solutions offers cloud‑based, subscription‑based software products.  The O3OZONE platform is listed on the Microsoft Marketplace as a SaaS product (see the Microsoft Marketplace listing for O3OZONE) and the O3OZONE website states it is a \"cloud‑based\" smart‑manufacturing platform.  MADAR is also listed as a SaaS product on Microsoft Marketplace.  These products are delivered over the internet and accessed via a web browser, meeting the definition of Software as a Service.  Therefore the company operates in the SaaS industry.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Obeikan Digital Solutions: Home",
+              "snippet": "Obeikan's Digital Solutions include case-tailored Digital Solution products and industrial apps for logistics, utility reliability, spare part management.",
+              "url": "https://obeikandigital.com.sa"
+            },
+            {
+              "title": "O3OZONE - Microsoft Marketplace",
+              "snippet": "O3OZONE transforms operations by providing real-time visibility, AI-driven insights, and proactive automation; helping manufacturers focus on improvements. Key ...",
+              "url": "https://marketplace.microsoft.com/en-us/product/saas/obeikandigitalsolutions1629019213484.o3_solutions?tab=overview"
+            },
+            {
+              "title": "Obeikan Paper Industries",
+              "snippet": "What is Obeikan known for?\nPaper Industries. OPI is the largest paper board mill in the Middle East and North Africa, exporting to more than 20 countries.",
+              "url": "https://www.obeikan.com.sa/obeikan-paper-industries"
+            },
+            {
+              "title": "Obeikan Digital Solutions",
+              "snippet": "Obeikan's Digital Solutions include case-tailored Digital Solution products and industrial apps for logistics, utility reliability, spare part management, ...",
+              "url": "https://www.obeikan.com.sa/ods"
+            },
+            {
+              "title": "Obeikan Digital",
+              "snippet": "Obeikan Digital helps manufacturing companies achieve operational excellence with performance improvement consulting and productivity-enhancing apps.",
+              "url": "https://www.obeikan.com.sa/obeikan-digital"
+            },
+            {
+              "title": "Top Obeikan Digital Solutions Alternatives, Competitors - CB Insights",
+              "snippet": "Who are Obeikan's main competitors?\nTOP 5 OBEIKAN DIGITAL SOLUTIONS COMPETITORS\nBrexm.\nMaraSoft.\nMitsubishi Electric Saudi.\nSahab.\nTamkeen Technologies.",
+              "url": "https://www.cbinsights.com/company/obeikan-digital-solutions/alternatives-competitors"
+            },
+            {
+              "title": "Autonomous Enterprises - Obeikan Investment Group - I by IMD",
+              "snippet": "OIG no longer sees itself as a product provider but as a solutions provider. It offers companies digital tools to simulate their operations ...",
+              "url": "https://www.imd.org/ibyimd/innovation/self-drive-cars-and-unmanned-aircraft-are-a-reality-so-why-not-autonomous-enterprises"
+            },
+            {
+              "title": "MADAR - Microsoft Marketplace",
+              "snippet": "MADAR · by OBEIKAN DIGITAL SOLUTIONS · Complete Shipment Management as easy as 1,2,3 · Other apps from OBEIKAN DIGITAL SOLUTIONS.",
+              "url": "https://marketplace.microsoft.com/en-us/product/saas/obeikandigitalsolutions1629019213484.madar?tab=Overview"
+            },
+            {
+              "title": "Obeikan Technical Fabrics",
+              "snippet": "What products does Obeikan manufacture?\nObeikan Technical Fabrics is a leading manufacturer of specialty coated fabrics for architectural and signage use. Based in Riyadh, Saudi Arabia, OTF is a reputable technical textile manufacturers produce and export PVC/PVDF coated polyester and PTFE coated fiber glass fabrics.",
+              "url": "https://obeikanindustrial.com.sa/obeikan-technical-fabrics"
+            },
+            {
+              "title": "Self-drive cars and unmanned aircraft are a reality, so why not ...",
+              "snippet": "Innovation and the pursuit of excellence are driving the success of Saudi family enterprise Obeikan Investment Group (OIG).",
+              "url": "https://www.obeikan.com.sa/self-drive-cars-and-unmanned-aircraft-are-a-reality-so-why-not-autonomous-enterprises"
+            },
+            {
+              "title": "O3OZONE - Obeikan Investment Group",
+              "snippet": "Next Generation Manufacturing Begins with O3OZONE. From real-time insights and data analysis, to effortless implementation of lean manufacturing principles.",
+              "url": "https://www.obeikan.com.sa/o3ozone"
+            },
+            {
+              "title": "About us - O3OZONE",
+              "snippet": "As a pivotal part of Obeikan Digital Solutions, O3OZONE leverages advanced digital technologies to provide a comprehensive suite of cloud-based ...",
+              "url": "https://www.o3ozone.ai/about-us"
+            },
+            {
+              "title": "Obeikan Deploys Vectara to Power Multiple Vertical-Specific ...",
+              "snippet": "Vectara, the Trusted Generative AI Product Platform, and Obeikan Group collaborate to power multiple workloads across diverse domains.",
+              "url": "https://www.obeikan.com.sa/obeikan-deploys-vectara-to-power-multiple-vertical-specific-software-platforms"
+            },
+            {
+              "title": "AI-powered smart manufacturing at Obeikan with O3ai - YouTube",
+              "snippet": "Obeikan Digital Solutions is transforming manufacturing with O3ai, an AI-driven platform powered by Azure OpenAI and IoT.",
+              "url": "https://www.youtube.com/watch?v=jjwIo6SZeZU"
+            },
+            {
+              "title": "O3OZONE | LinkedIn",
+              "snippet": "O3OZONE is a next-generation Smart Factory platform built for manufacturers ready to move beyond legacy MES systems. Engineered with deep manufacturing ...",
+              "url": "https://www.linkedin.com/company/o3ozone"
+            },
+            {
+              "title": "Terms and Conditions - O3OZONE",
+              "snippet": "Read the Terms and Conditions for using o3ozone.ai, the smart manufacturing platform by Obeikan Digital Solutions.",
+              "url": "https://www.o3ozone.ai/legal/terms"
+            },
+            {
+              "title": "Obeikan Digital Solutions “ODS” partners with “Ada”, the global ...",
+              "snippet": "The new partnership will empower users to make more informed healthcare decisions while helping the existing healthcare landscape to provide more effective ...",
+              "url": "https://www.obeikan.com.sa/obeikan-digital-solutions-ods-partners-with-the-ada-the-global-healthcare-company-in-a-first-of-a-kind-step-to-improve-health-in-the-middle-east"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-17T13:58:31.665Z",
+      "updatedAt": "2025-11-17T13:58:31.665Z"
+    }
+  ],
+  "websetId": "webset_01ka91qtvvpmebaa47gdqx0a0p"
+}

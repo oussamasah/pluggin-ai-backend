@@ -3,6 +3,7 @@ export interface Company {
   company_id?: string;
 
   // 🏢 Basic Identity
+  exa_id: string;
   name: string;
   domain: string;
   website?: string;
@@ -72,6 +73,7 @@ export interface Company {
     };
   };
   enrichement?:any
+  exa_enrichement?:any
 }
 
   
@@ -153,7 +155,7 @@ export interface Company {
     industries: string[];
     geographies: string[];
     employeeRange: string;
-    acvRange: string;
+    annualRevenue: string;
     mustHaveTech: string[];
     mustHaveCompliance: string[];
     mustHaveMotion: string;

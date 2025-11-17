@@ -4,7 +4,7 @@ import { ExaCompany, exaService } from '../services/ExaService.js';
 import { exploriumService } from '../services/ExploriumService.js';
 import { ollamaService } from '../services/OllamaService.js';
 import { wsManager } from '../websocket/WebSocketManager.js';
-import { SearchStatus, SubStep, Company, ICPModel } from '../core/types.js';
+import { SearchStatus, SubStep, Company, ICPModel, SearchSession } from '../core/types.js';
 import { sessionService } from '../services/SessionService.js';
 import fs from 'fs/promises';
 import path from 'path';
@@ -277,8 +277,11 @@ export class CompanyWorkflow {
         status: 'in-progress',
         startedAt: new Date()
       });
-      
-      const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery, 3);
+      const userCompanies = await supabaseService.getCompaniesByUserId(this.userId);
+      console.log(userCompanies)
+      const uniqueIDs = this.getAllUniqueCompanyIDs(userCompanies);
+      console.log("excludedCompanies",uniqueIDs)
+     const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery, 1,uniqueIDs);
      this.saveCompanies("exa-search",exaCompanies)
      /* const exaCompanies = {
         "exaCompanies": [
@@ -9560,7 +9563,7 @@ export class CompanyWorkflow {
       });
       
       companies = await Promise.all(
-        companiesList.map(c => this.transformToCompany(c))
+        companiesList.map(c => this.transformToCompany(c,exaCompanies))
       );
       await this.sleep(4000); 
       
@@ -9577,6 +9580,7 @@ export class CompanyWorkflow {
       });
       
       for (const c of companies) {
+  console.log(c.exa_enrichement)
         const fitscore = await ollamaService.scoreCompanyFit(c, icpModel.config);
         c.scoring_metrics = c.scoring_metrics ?? {};
         c.scoring_metrics.fit_score = fitscore;
@@ -9811,8 +9815,51 @@ export class CompanyWorkflow {
 
   // Keep all your existing helper methods (transformToCompany, saveCompanies, etc.)
   // They don't need changes as they're utility functions
+  getAllUniqueCompanyIDs(cmps: Company[]): string[] {
+    // Remove duplicates using Set
+    return [...new Set(cmps.map(c=>c.exa_id))];
+  }
+  normalizeDomain(url: string): string {
+    if (!url) return '';
+    
+    try {
+      // Handle both full URLs and plain domains
+      const urlString = url.startsWith('http') ? url : `https://${url}`;
+      const urlObj = new URL(urlString);
+      
+      return urlObj.hostname
+        .toLowerCase()
+        .replace(/^www\./, '')  // Remove www prefix
+        .trim();
+    } catch (error) {
+      // Fallback for invalid URLs
+      return url
+        .toLowerCase()
+        .replace(/^https?:\/\//, '')  // Remove protocol
+        .replace(/^www\./, '')        // Remove www
+        .replace(/\/.*$/, '')         // Remove path
+        .trim();
+    }
+  }
   
-  transformToCompany(rawData: any): Promise<Company> {
+  transformToCompany(rawData: any,exa:any): Promise<Company> {
+    let exa_enrichement = exa.exaCompanies.filter((exa: any) => {
+      const exaDomain = this.normalizeDomain(exa.properties?.url || '');
+      const rawDomain =  this.normalizeDomain(rawData.website || '');
+      console.log("rawDomain",rawDomain)
+      console.log("exaDomain",exaDomain)
+      const matches = exaDomain == rawDomain;
+      
+      // Debug logging (remove in production)
+      if (matches) {
+        console.log(`✓ Match found: ${exaDomain} === ${rawDomain}`);
+      }
+      
+      return matches;
+    });
+    
+    // Log if no matches found
+  
     // Your existing implementation
     const extractDomain = (url?: string): string => {
       if (!url) return '';
@@ -9858,6 +9905,7 @@ export class CompanyWorkflow {
     };
 
     const company: Company = {
+     exa_id:exa.websetId,
       name: rawData.company_name || '',
       domain: extractDomain(rawData.website),
       website: rawData.website || undefined,
@@ -9908,6 +9956,7 @@ export class CompanyWorkflow {
 
       scoring_metrics: undefined,
       enrichement: rawData,
+      exa_enrichement: exa_enrichement
     };
 
     // Clean up undefined nested objects

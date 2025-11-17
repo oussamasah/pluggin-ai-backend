@@ -51,13 +51,30 @@ export class ExaService {
   constructor() {
     this.apiKey = config.EXA_API_KEY;
   }
-
-  async searchCompanies(query: any, count: number): Promise<{
-    map(arg0: any): unknown;exaCompanies:ExaCompany[],websetId:any
-}> {
+  async searchCompanies(query: any, count: number, excludeDomains: string[]): Promise<{
+    map(arg0: any): unknown;
+    exaCompanies: ExaCompany[];
+    websetId: any;
+  }> {
     try {
-      //console.log("-------1-----")
-      //console.log("search exa")
+      const searchBody: any = {
+        search: {
+          query: query,
+          count: count,
+          entity: { type: 'company' }
+        }
+      };
+  
+      // Add exclude_domains at the search level if provided
+   
+      if (excludeDomains && excludeDomains.length > 0) {
+        searchBody.search.exclude = excludeDomains.map((id: string) => ({
+            "source": "webset",
+            "id": id
+        }));
+    }
+    console.log('--- Search Body Contents ---');
+    console.log(JSON.stringify(searchBody, null, 2));
       const response = await fetch(`${this.baseUrl}/websets/v0/websets`, {
         method: 'POST',
         headers: {
@@ -65,29 +82,20 @@ export class ExaService {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify({
-          search: {
-            query:query,
-            count:count,
-            entity: { type: 'company' },
-           
-          }
-        })
+        body: JSON.stringify(searchBody)
       });
-
-      //console.log("-------response success-----")
-
+  
       if (!response.ok) {
-        throw new Error(`Exa API error: ${response.statusText}`);
+        const errorText = await response.text();
+        throw new Error(`Exa API error: ${response.statusText} - ${errorText}`);
       }
-
+  
       const data = await response.json();
       const websetId = data.id;
-
+  
       // Poll for completion
       const companies = await this.waitForWebsetCompletion(websetId);
-  //    //console.log(companies)
-      return {exaCompanies:companies,websetId:websetId};
+      return { exaCompanies: companies, websetId: websetId };
     } catch (error) {
       console.error('Exa search error:', error);
       throw error;

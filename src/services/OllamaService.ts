@@ -130,208 +130,208 @@ export class OllamaService {
     throw new Error('Maximum retries reached for OpenAI API request.');
 }
     
+async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
+  const systemPrompt = `You are a B2B marketing and target audience analysis expert. 
+  Evaluate companies against ICP criteria and provide a JSON response with score (0-100) and reason.`;
 
-  async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
-    const systemPrompt = `You are a B2B marketing and target audience analysis expert. 
-    Evaluate companies against ICP criteria and provide a JSON response with score (0-100) and reason.`;
-    const prompt = `You are an expert B2B sales intelligence analyst specializing in Ideal Customer Profile (ICP) scoring. Your task is to evaluate companies against specific ICP criteria and generate accurate, data-driven fit scores from 0-100 based solely on the weighted criteria specified in the ICP configuration.
+  const prompt = `You are an expert B2B sales intelligence analyst specializing in Ideal Customer Profile (ICP) scoring. Your task is to evaluate companies against specific ICP criteria and generate accurate, data-driven fit scores from 0-100 based solely on the weighted criteria specified in the ICP configuration.
 
-    ## Your Mission
-    
-    Analyze the provided company data against the ICP configuration and calculate a precise fit score from 0-100, along with detailed reasoning and contributing factors. Use ONLY the weights specified in scoringWeights.firmographic and scoringWeights.technographic from the ICP configuration.
-    
-    *ICP Configuration:*
-    json
-    ${JSON.stringify(icpConfig, null, 2)}
-    
-    *Company Data:*
-    json
-    ${JSON.stringify(company, null, 2)}
-    
-    ## Scoring Weight Application
-    
-    CRITICAL: Use ONLY the active criteria based on scoringWeights:
-    
-    - If scoringWeights.firmographic > 0: Include firmographic analysis
-    - If scoringWeights.technographic > 0: Include technographic analysis  
-    - If scoringWeights.technographic = 0: COMPLETELY IGNORE technographic criteria
-    - Final Score = (Firmographic Score + Technographic Score) scaled to 0-100
-    
-    *Current Active Weights:*
-    - Firmographic: ${icpConfig.scoringWeights.firmographic}% of total score
-    - Technographic: ${icpConfig.scoringWeights.technographic}% of total score
-    
-    ---
-    
-    ## 1. FIRMOGRAPHIC ANALYSIS ${icpConfig.scoringWeights.firmographic > 0 ? '(ACTIVE)' : '(INACTIVE)'}
-    
-    ${icpConfig.scoringWeights.firmographic > 0 ? `
-    *Total Available Points:* ${icpConfig.scoringWeights.firmographic}
-    
-    *Point Distribution:*
-    Each of the 5 firmographic dimensions receives an equal share of the total firmographic points.
-    Points per dimension = ${icpConfig.scoringWeights.firmographic} ÷ 5 = ${icpConfig.scoringWeights.firmographic / 5}
-    
-    ### Dimension 1: Industry Match
-    
-    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
-    
-    *Semantic Matching Rules:*
-    - ✓ **Exact Match** (identical terms): *100% of dimension points*
-    - ✓ **Close Semantic Match** (same meaning): *90% of dimension points*
-      - "Marketing Services" ↔ "Marketing"
-      - "Software Development" ↔ "Software Engineering" 
-    - ✓ **Category Match** (same industry category): *80% of dimension points*
-      - "SaaS" ↔ "Software"
-      - "Advertising Services" ↔ "Digital Advertising"
-    - ≈ **Related Industry**: *60% of dimension points*
-    - ≈ **Peripheral Match**: *40% of dimension points*
-    - ✗ **No Semantic Relationship**: *0 points*
-    - 🚫 **Semantic Exclusion**: *DISQUALIFICATION*
-    - ⚠ **Missing data**: *0 points*
-    
-    ### Dimension 2: Geography
-    
-    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
-    
-    *Semantic Matching Rules:*
-    - ✓ **Exact Location Match**: *100% of dimension points*
-    - ✓ **Region Semantic Match**: *90% of dimension points*
-    - ✓ **Country Semantic Match**: *100% of dimension points*
-    - ≈ **Economic Zone Match**: *70% of dimension points*
-    - ≈ **Market Similarity**: *50% of dimension points*
-    - ✗ **Different Market Type**: *0 points*
-    - 🚫 **Semantic Geography Exclusion**: *25% penalty on final score*
-    
-    ### Dimension 3: Company Size (Employee Count)
-    
-    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
-    
-    *Semantic Range Matching:*
-    - ✓ **Exact Range Match**: *100% of dimension points*
-    - ✓ **Close Semantic Range** (within 10%): *90% of dimension points*
-    - ≈ **Adjacent Size Category**: *75% of dimension points*
-    - ≈ **Similar Business Stage**: *60% of dimension points*
-    - ≈ **Growth Trajectory Match**: *50% of dimension points*
-    - ✗ **Different Scale Category**: *0 points*
-    
-    ### Dimension 4: Annual Revenue
-    
-    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
-    
-    *Semantic Revenue Matching:*
-    - ✓ **Exact Range Match**: *100% of dimension points*
-    - ✓ **Close Financial Scale**: *85% of dimension points*
-    - ≈ **Similar Business Model Capacity**: *70% of dimension points*
-    - ≈ **Funding-Stage Proxy**: *50% of dimension points*
-    - ✗ **Different Financial League**: *0 points*
-    
-    ### Dimension 5: Funding/Financial Stability
-    
-    *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
-    
-    *Semantic Financial Health Matching:*
-    - ✓ **Exact Stage Match**: *100% of dimension points*
-    - ✓ **Similar Financial Maturity**: *90% of dimension points*
-    - ≈ **Comparable Risk Profile**: *70% of dimension points*
-    - ≈ **Inferred Stability**: *50% of dimension points*
-    - ✗ **Different Risk Category**: *20% of dimension points*
-    
-    *Firmographic Score Calculation:*
-    Firmographic Score = Sum of all 5 dimension scores
-    Maximum Possible Firmographic = ${icpConfig.scoringWeights.firmographic}
-    ` : '**FIRMOGRAPHIC ANALYSIS SKIPPED** - Weight is 0'}
-    
-    ---
-    
-    ## 2. TECHNOGRAPHIC ANALYSIS ${icpConfig.scoringWeights.technographic > 0 ? '(ACTIVE)' : '(INACTIVE)'}
-    
-    ${icpConfig.scoringWeights.technographic > 0 ? `
-    *Total Available Points:* ${icpConfig.scoringWeights.technographic}
-    
-    *Point Distribution:*
-    Must-Have Technologies = ${icpConfig.scoringWeights.technographic} × 0.60 = ${icpConfig.scoringWeights.technographic * 0.60}
-    Tech Stack Quality = ${icpConfig.scoringWeights.technographic} × 0.20 = ${icpConfig.scoringWeights.technographic * 0.20}
-    Integration Readiness = ${icpConfig.scoringWeights.technographic} × 0.20 = ${icpConfig.scoringWeights.technographic * 0.20}
-    
-    ### Component 1: Must-Have Technologies
-    
-    *Semantic Technology Matching:*
-    - ✓ **Exact Technology Match**: *100% of match points*
-    - ✓ **Platform Semantic Match**: *90% of match points*
-    - ✓ **Category Semantic Match**: *80% of match points*
-    - ≈ **Functional Equivalent**: *70% of match points*
-    - ≈ **Partial Capability**: *50% of match points*
-    - ✗ **No Technological Overlap**: *0 points*
-    
-    *Technographic Score Calculation:*
-    Technographic Score = Sum of all 3 component scores
-    Maximum Possible Technographic = ${icpConfig.scoringWeights.technographic}
-    ` : '**TECHNOGRAPHIC ANALYSIS SKIPPED** - Weight is 0'}
-    
-    ---
-    
-    ## FINAL SCORE CALCULATION
-    
-    *Active Components:*
-    - Firmographic: ${icpConfig.scoringWeights.firmographic} points maximum
-    - Technographic: ${icpConfig.scoringWeights.technographic} points maximum
-    
-    *Final Score Formula:*
-    Final Score = Firmographic Score + Technographic Score
-    
-    *Maximum Possible Score:*
-    ${icpConfig.scoringWeights.firmographic + icpConfig.scoringWeights.technographic} points = 100 points
-    
-    ## DISQUALIFICATION RULES
-    
-    Apply these checks FIRST before any scoring:
-     - 🚫 Critical missing data (no industry, location, size): *Maximum Score = 30*
-    
-    ## CONFIDENCE SCORING
-    
-    Calculate confidence based on data completeness:
-    - 95%: Complete data across all active dimensions
-    - 85%: Minor data gaps in active dimensions
-    - 70%: Significant data gaps in active dimensions  
-    - 50%: Major data incompleteness in active dimensions
-    - <50%: Insufficient data for reliable scoring
-    
-    Always return your final output in the following exact JSON-style structure — with no additional text, comments, or formatting:
-    
-    {
-        "score": "",
-        "reason": "",
-        "factors": "",
-        "confidence": ""
-    }
-    
-    Guidelines:
-    - Do not include any extra text before or after this structure
-    - "score" → The main numeric score (0-100)
-    - "reason" → A short explanation of why that score was given
-    - "factors" → Key elements that influenced the result
-    - "confidence" → Percentage representing confidence in the output
-    `;
+  ## Your Mission
+  
+  Analyze the provided company data against the ICP configuration and calculate a precise fit score from 0-100, along with detailed reasoning and contributing factors. Use ONLY the weights specified in scoringWeights.firmographic and scoringWeights.technographic from the ICP configuration.
 
-    try {
-      const response = await this.generate(prompt, systemPrompt);
-      //console.log("----------------------------------------------------")
-      console.log(response)
-      const parsed = this.parseJSONResponse(response);
+  *ICP Configuration:*
+  json
+  ${JSON.stringify(icpConfig, null, 2)}
 
-      //console.log(parsed)
-      return {
-        score: Math.min(100, Math.max(0, parsed.score || 0)),
-        reason: parsed.reason || 'No reason provided',
-        confidence: parsed.confidence || 0.8,
-        factors: parsed.factors || []
-      };
-    } catch (error) {
-      console.error('Scoring error:', error);
-      return { score: 0, reason: 'Scoring failed', confidence: 0, factors: [] };
-    }
+  *Company Data:*
+  json
+  ${JSON.stringify(company, null, 2)}
+
+  *Industry and Employees range Data :*
+  ${JSON.stringify(company.exa_enrichement[0].properties.description, null, 2)}
+  ${JSON.stringify(company.exa_enrichement[0].evaluations.map((e: { criterion: any; })=>e.criterion), null, 2)}
+
+  ## IMPORTANT INDUSTRY INFERENCE INSTRUCTION
+  The field "business_classification.industry.primary.type" may be missing or inaccurate.
+  When evaluating "Industry Match":
+  - Infer the TRUE industry from contextual text found in company.exa_enrichment.
+  - Use semantic understanding of that text to classify the company's industry.
+  - Compare this inferred industry against icpConfig.industries using your semantic matching rules.
+  - If structured industry data exists, still prefer the Exa context if it provides clearer insight.
+
+  ## Scoring Weight Application
+  
+  CRITICAL: Use ONLY the active criteria based on scoringWeights:
+  
+  - If scoringWeights.firmographic > 0: Include firmographic analysis
+  - If scoringWeights.technographic > 0: Include technographic analysis  
+  - If scoringWeights.technographic = 0: COMPLETELY IGNORE technographic criteria
+  - Final Score = (Firmographic Score + Technographic Score) scaled to 0-100
+  
+  *Current Active Weights:*
+  - Firmographic: ${icpConfig.scoringWeights.firmographic}% of total score
+  - Technographic: ${icpConfig.scoringWeights.technographic}% of total score
+  
+  ---
+  
+  ## 1. FIRMOGRAPHIC ANALYSIS ${icpConfig.scoringWeights.firmographic > 0 ? '(ACTIVE)' : '(INACTIVE)'}
+  
+  ${icpConfig.scoringWeights.firmographic > 0 ? `
+  *Total Available Points:* ${icpConfig.scoringWeights.firmographic}
+  
+  *Point Distribution:*
+  Each of the 5 firmographic dimensions receives an equal share of the total firmographic points.
+  Points per dimension = ${icpConfig.scoringWeights.firmographic} ÷ 5 = ${icpConfig.scoringWeights.firmographic / 5}
+  
+  ### Dimension 1: Industry Match
+  
+  *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+  
+  *Semantic Matching Rules:*
+  - ✓ **Exact Match** (identical terms): *100% of dimension points*
+  - ✓ **Close Semantic Match** (same meaning): *90% of dimension points*
+  - ✓ **Category Match** (same industry category): *80% of dimension points*
+  - ≈ **Related Industry**: *60% of dimension points*
+  - ≈ **Peripheral Match**: *40% of dimension points*
+  - ✗ **No Semantic Relationship**: *0 points*
+  - 🚫 **Semantic Exclusion**: *DISQUALIFICATION*
+  - ⚠ **Missing data**: *0 points*
+  
+  ### Dimension 2: Geography
+  
+  *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+  
+  *Semantic Matching Rules:*
+  - ✓ **Exact Location Match**: *100% of dimension points*
+  - ✓ **Region Semantic Match**: *90% of dimension points*
+  - ✓ **Country Semantic Match**: *100% of dimension points*
+  - ≈ **Economic Zone Match**: *70% of dimension points*
+  - ≈ **Market Similarity**: *50% of dimension points*
+  - ✗ **Different Market Type**: *0 points*
+  - 🚫 **Semantic Geography Exclusion**: *25% penalty on final score*
+  
+  ### Dimension 3: Company Size (Employee Count)
+  
+  *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+  
+  *Semantic Range Matching:*
+  - ✓ **Exact Range Match**: *100% of dimension points*
+  - ✓ **Close Semantic Range** (within 10%): *90% of dimension points*
+  - ≈ **Adjacent Size Category**: *75% of dimension points*
+  - ≈ **Similar Business Stage**: *60% of dimension points*
+  - ≈ **Growth Trajectory Match**: *50% of dimension points*
+  - ✗ **Different Scale Category**: *0 points*
+  
+  ### Dimension 4: Annual Revenue
+  
+  *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+  
+  *Semantic Revenue Matching:*
+  - ✓ **Exact Range Match**: *100% of dimension points*
+  - ✓ **Close Financial Scale**: *85% of dimension points*
+  - ≈ **Similar Business Model Capacity**: *70% of dimension points*
+  - ≈ **Funding-Stage Proxy**: *50% of dimension points*
+  - ✗ **Different Financial League**: *0 points*
+  
+  ### Dimension 5: Funding/Financial Stability
+  
+  *Max Points:* ${icpConfig.scoringWeights.firmographic / 5}
+  
+  *Semantic Financial Health Matching:*
+  - ✓ **Exact Stage Match**: *100% of dimension points*
+  - ✓ **Similar Financial Maturity**: *90% of dimension points*
+  - ≈ **Comparable Risk Profile**: *70% of dimension points*
+  - ≈ **Inferred Stability**: *50% of dimension points*
+  - ✗ **Different Risk Category**: *20% of dimension points*
+  
+  *Firmographic Score Calculation:*
+  Firmographic Score = Sum of all 5 dimension scores
+  Maximum Possible Firmographic = ${icpConfig.scoringWeights.firmographic}
+  ` : '**FIRMOGRAPHIC ANALYSIS SKIPPED** - Weight is 0'}
+  
+  ---
+  
+  ## 2. TECHNOGRAPHIC ANALYSIS ${icpConfig.scoringWeights.technographic > 0 ? '(ACTIVE)' : '(INACTIVE)'}
+  
+  ${icpConfig.scoringWeights.technographic > 0 ? `
+  *Total Available Points:* ${icpConfig.scoringWeights.technographic}
+  
+  *Point Distribution:*
+  Must-Have Technologies = ${icpConfig.scoringWeights.technographic * 0.60}
+  Tech Stack Quality = ${icpConfig.scoringWeights.technographic * 0.20}
+  Integration Readiness = ${icpConfig.scoringWeights.technographic * 0.20}
+  
+  ### Component 1: Must-Have Technologies
+  
+  *Semantic Technology Matching:*
+  - ✓ **Exact Technology Match**: *100% of match points*
+  - ✓ **Platform Semantic Match**: *90% of match points*
+  - ✓ **Category Semantic Match**: *80% of match points*
+  - ≈ **Functional Equivalent**: *70% of match points*
+  - ≈ **Partial Capability**: *50% of match points*
+  - ✗ **No Technological Overlap**: *0 points*
+  
+  *Technographic Score Calculation:*
+  Technographic Score = Sum of all 3 component scores
+  Maximum Possible Technographic = ${icpConfig.scoringWeights.technographic}
+  ` : '**TECHNOGRAPHIC ANALYSIS SKIPPED** - Weight is 0'}
+  
+  ---
+  
+  ## FINAL SCORE CALCULATION
+  
+  *Active Components:*
+  - Firmographic: ${icpConfig.scoringWeights.firmographic} points maximum
+  - Technographic: ${icpConfig.scoringWeights.technographic} points maximum
+  
+  *Final Score Formula:*
+  Final Score = Firmographic Score + Technographic Score
+  
+  *Maximum Possible Score:*
+  ${icpConfig.scoringWeights.firmographic + icpConfig.scoringWeights.technographic} points = 100 points
+  
+  ## DISQUALIFICATION RULES
+  
+  Apply these checks FIRST before any scoring:
+   - 🚫 Critical missing data (no industry, location, size): *Maximum Score = 30*
+  
+  ## CONFIDENCE SCORING
+  
+  Calculate confidence based on data completeness:
+  - 95%: Complete data across all active dimensions
+  - 85%: Minor data gaps in active dimensions
+  - 70%: Significant data gaps in active dimensions  
+  - 50%: Major data incompleteness in active dimensions
+  - <50%: Insufficient data for reliable scoring
+  
+  Always return your final output in the following exact JSON-style structure — with no additional text, comments, or formatting:
+  
+  {
+      "score": "",
+      "reason": "",
+      "factors": "",
+      "confidence": ""
   }
+  `;
+
+  try {
+    const response = await this.generate(prompt, systemPrompt);
+    console.log(response);
+    const parsed = this.parseJSONResponse(response);
+
+    return {
+      score: Math.min(100, Math.max(0, parsed.score || 0)),
+      reason: parsed.reason || 'No reason provided',
+      confidence: parsed.confidence || 0.8,
+      factors: parsed.factors || []
+    };
+  } catch (error) {
+    console.error('Scoring error:', error);
+    return { score: 0, reason: 'Scoring failed', confidence: 0, factors: [] };
+  }
+}
+
   async scoreCompanyIntent(company: any, icpModel: any): Promise<ScoringResult> {
     const systemPrompt = `You are an intent analysis expert specializing in identifying buying signals from company data. Analyze how well the company matches the ICP model and identify buying intent.`;
 
@@ -340,7 +340,7 @@ export class OllamaService {
     - Target Industries: ${icpModel.industries?.join(', ') || 'Any'}
     - Target Geographies: ${icpModel.geographies?.join(', ') || 'Any'}
     - Employee Range: ${icpModel.employeeRange || 'Any'}
-    - ACV Range: ${icpModel.acvRange || 'Any'}
+    - Annual revenu: ${icpModel.annualRevenue || 'Any'}
     - Must-Have Tech: ${icpModel.mustHaveTech?.join(', ') || 'None'}
     - Buying Motion: ${icpModel.mustHaveMotion || 'Any'}
     - Buying Triggers: ${icpModel.buyingTriggers?.join(', ') || 'None'}

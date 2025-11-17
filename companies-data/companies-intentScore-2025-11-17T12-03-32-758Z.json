@@ -1,0 +1,40 @@
+{
+  "score": 76,
+  "reason": "The analysis reveals strong intent from Qashio primarily through the new funding round signal, which has the highest possible score of 100. The recent funding activity indicates substantial financial backing and potential growth. However, the lack of recent sources for new product launches and a single older signal regarding employee addition lowers the overall score due to diminished evidence recency. The high confidence in the funding round contrasts with the moderate confidence in other signals. Overall, while Qashio exhibits strong intent, the dependencies on recent signals and evidence quality suggest a slightly lower score than before.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.5999999999999999
+    },
+    {
+      "signal": "employee_joined_company",
+      "score": 50,
+      "impact": "medium",
+      "evidence_quality": "fair",
+      "original_score": 50,
+      "confidence": 0.3
+    },
+    {
+      "signal": "new_product",
+      "score": 85,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 85,
+      "confidence": 0.6833333333333335
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "The influx of funding suggests Qashio is strategically positioned for expansion into new markets or product offerings.",
+    "The recent product launch indicates a strong commitment to developing their service portfolio, particularly in the B2B fintech space."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Relatively low evidence quality for employee addition may suggest challenges in recruitment or market presence.",
+    "The timing of product launch signals is not current, indicating a potential diminishing urgency in business activities."
+  ]
+}

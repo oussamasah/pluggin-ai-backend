@@ -78,7 +78,7 @@ export async function ICPConfigController(fastify: FastifyInstance) {
     "employeeRange": "range like '51-200 employees'",
     "geographies": ["array of regions"],
     "mustHaveTech": ["array of technologies"],
-    "acvRange": "annual contract value range"
+    "annualRevenue": "annual contract value range"
   }},
   "reasoning": "brief explanation",
   "confidence": 0.7,
@@ -189,7 +189,7 @@ Provide JSON:
           employeeRange: '51-200 employees',
           geographies: ['North America'],
           mustHaveTech: [],
-          acvRange: '$1k–$10k',
+          annualRevenue: '$1k–$10k',
         },
         reasoning: parsed.reasoning || 'Quick recommendation based on business context',
         confidence: parsed.confidence || 0.7,

@@ -568,7 +568,9 @@ public async searchEmployeesByCompanyId(
   if (afterId && afterId.trim() !== '') {
     url += `?after=${encodeURIComponent(afterId)}`;
   }
-
+if(jobTitles.length==0){
+  jobTitles.push("CEO")
+}
   const esQuery = {
     query: {
       bool: {
@@ -601,8 +603,8 @@ await this.saveCompanies(esQuery)
   try {
     const response = await this.client.post(url, esQuery);
     
-    const totalResults = parseInt(response.headers['x-total-results'] || '0', 10);
-    const totalPages = parseInt(response.headers['x-total-pages'] || '0', 10);
+    const totalResults = parseInt(response.headers['x-total-results'] || '0', 3);
+    const totalPages = parseInt(response.headers['x-total-pages'] || '0', 1);
     const nextPageAfter = response.headers['x-next-page-after'];
     
     return {

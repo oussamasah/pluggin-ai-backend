@@ -157,7 +157,7 @@ ICP CONFIG STRUCTURE:
 - industries: Target industries (array)
 - geographies: Target regions/countries (array) 
 - employeeRange: Company size (1-10, 11-50, 51-200, 201-500, 501-1000, 1001-5000, 5000+ employees)
-- acvRange: Annual contract value ($1k–$10k, $10k–$50k, $50k–$100k, $100k–$500k, $500k–$1M, $1M+)
+- annualRevenue: Annual contract value ($1k–$10k, $10k–$50k, $50k–$100k, $100k–$500k, $500k–$1M, $1M+)
 - mustHaveTech: Required technologies (array)
 - mustHaveCompliance: Compliance requirements (array)
 - mustHaveMotion: Sales motion (None, PLG, Enterprise, Mid-Market, SMB)
@@ -177,7 +177,7 @@ Provide natural conversation and when you have enough information, output a JSON
     "industries": ["SaaS", "Technology"],
     "geographies": ["North America"],
     "employeeRange": "51-200 employees",
-    "acvRange": "$1k–$10k",
+    "annualRevenue": "$1k–$10k",
     "mustHaveTech": ["CRM", "Marketing Automation"],
     "mustHaveMotion": "PLG",
     "excludedIndustries": ["Non-profit"],
@@ -229,7 +229,7 @@ Provide a JSON response with basic ICP configuration including industries, compa
           employeeRange: '51-200 employees',
           geographies: ['North America'],
           mustHaveTech: [],
-          acvRange: '$1k–$10k'
+          annualRevenue: '$1k–$10k'
         },
         reasoning: 'Quick recommendation based on business context',
         confidence: 0.7,
@@ -243,7 +243,7 @@ Provide a JSON response with basic ICP configuration including industries, compa
           employeeRange: '51-200 employees', 
           geographies: ['North America'],
           mustHaveTech: [],
-          acvRange: '$1k–$10k'
+          annualRevenue: '$1k–$10k'
         },
         reasoning: 'Fallback configuration',
         confidence: 0.5,

@@ -78,6 +78,7 @@ console.log("-----------------------------",  data[0])
 console.log(data[0])
   return data.map(this.mapSessionFromDB.bind(this));
 }
+
   async updateSessionQuery(sessionId: string, query: string[]): Promise<SearchSession> {
    
   
@@ -133,20 +134,29 @@ console.log(data[0])
     icpModelId: string,
     companyData: any
   ): Promise<{ success: boolean; error?: string; data?: any }> {
+    console.log("companyData to save ", companyData);
     try {
       const {
-        enrichement,
+        
         business_model,
         location,
         contact,
         social_profiles,
         revenue_estimated,
+        employees, // Extract employees here if it exists
         ...cleanCompanyData
       } = companyData;
   
+      
+      let exa_enrichement = cleanCompanyData.exa_enrichement
+      let enrichement = cleanCompanyData.enrichement
+      delete cleanCompanyData["exa_enricheement"]
+      delete cleanCompanyData["exa_enrichement"]
+      delete cleanCompanyData["enrichement"]
       const companyToSave = {
         ...cleanCompanyData,
-        company_id:companyData.company_id,
+        company_id: companyData.company_id,
+        exa_id: companyData.exa_id,
         session_id: sessionId,
         icp_model_id: icpModelId,
         city: location?.city || null,
@@ -159,48 +169,111 @@ console.log(data[0])
         facebook_url: social_profiles?.facebook || null,
         instagram_url: social_profiles?.instagram || null,
         crunchbase_url: social_profiles?.crunchbase || null,
-        annual_revenue:
-          revenue_estimated?.source_5_annual_revenue?.annual_revenue || null,
-        annual_revenue_currency:
-          revenue_estimated?.source_5_annual_revenue?.annual_revenue_currency ||
-          null,
+        annual_revenue: revenue_estimated?.source_5_annual_revenue?.annual_revenue || null,
+        annual_revenue_currency: revenue_estimated?.source_5_annual_revenue?.annual_revenue_currency || null,
         industry: companyData.industry || [],
         technologies: companyData.technologies || [],
         intent_signals: companyData.intent_signals || [],
         relationships: companyData.relationships || {},
       };
-  console.log("saving company =====>",companyToSave)
-      const { data, error } = await this.supabase
+  
+      console.log("saving company =====>", companyToSave);
+  
+      // 1. First save the company
+      const { data: companyResult, error: companyError } = await this.supabase
         .from("companies")
         .insert([companyToSave])
         .select();
   
-      if (error) {
-        console.error("Error saving company to Supabase:", error);
-        return { success: false, error: error.message };
+      if (companyError) {
+        console.error("Error saving company to Supabase:", companyError);
+        return { success: false, error: companyError.message };
       }
   
-      // ✅ Fix: data is an array; get the first element
-      const companyId = data?.[0]?.company_id;
+      // 2. Verify company was inserted successfully
+      const savedCompany = companyResult?.[0];
+      const companyId = savedCompany?.company_id;
   
       if (!companyId) {
-        console.error("Company ID missing after insert:", data);
+        console.error("Company ID missing after insert:", companyResult);
         return { success: false, error: "Missing company ID after insert" };
       }
   
-      // Save enrichment linked to the inserted company
-      await this.saveEnrichment(
-        companyId,
-        sessionId,
-        icpModelId,
-        companyData.enrichement,
-        "Coresignal"
-      );
+      console.log("✅ Company saved successfully with ID:", companyId);
   
-      return { success: true, data: data[0] };
+      // 3. Now save enrichments (these depend on company_id)
+      if (enrichement) {
+        await this.saveEnrichment(
+          companyId,
+          sessionId,
+          icpModelId,
+          enrichement,
+          "Coresignal"
+        );
+      }
+  
+      if (exa_enrichement) {
+        await this.saveEnrichment(
+          companyId,
+          sessionId,
+          icpModelId,
+          exa_enrichement,
+          "Exa"
+        );
+      }
+  
+      // 4. Save employees data (this depends on company_id)
+      if (employees && Array.isArray(employees)) {
+        await this.saveEmployees(companyId, employees);
+      }
+  
+      return { success: true, data: savedCompany };
     } catch (error) {
       console.error("Exception saving company to Supabase:", error);
       return { success: false, error: "Failed to save company data" };
+    }
+  }
+  async getCompaniesByUserId(userId: string): Promise<any> {
+    const { data, error } = await this.supabase
+      .from('companies')
+      .select(`
+        *,
+        sessions!inner (
+          user_id
+        )
+      `)
+      .eq('sessions.user_id', userId);
+  
+    if (error) {
+      console.error('Error fetching companies by user ID:', error);
+      throw error;
+    }
+  
+    return data;
+  }
+  // Add this method to save employees
+  async saveEmployees(companyId: string, employees: any[]) {
+    try {
+      const employeesToSave = employees.map(employee => ({
+        ...employee,
+        company_id: companyId, // Ensure company_id is set
+      }));
+  
+      const { data, error } = await this.supabase
+        .from("employees")
+        .insert(employeesToSave)
+        .select();
+  
+      if (error) {
+        console.error("Error inserting employees:", error);
+        throw error;
+      }
+  
+      console.log(`✅ Saved ${employeesToSave.length} employees for company ${companyId}`);
+      return data;
+    } catch (error) {
+      console.error("Exception saving employees:", error);
+      throw error;
     }
   }
   
@@ -208,28 +281,34 @@ console.log(data[0])
     company_id: string,
     session_id: string,
     icp_model_id: string,
-    data: JSON,
+    data: any, // Changed from JSON to any for flexibility
     source: string
   ) {
-    const result = await this.supabase
-      .from("enrichments")
-      .insert([
-        {
-          company_id,
-          session_id,
-          icp_model_id,
-          data,
-          source,
-        },
-      ])
-      .select();
-  //console.log("enrichement saved sussessfuly",result)
-    if (result.error) {
-      console.error("Error inserting enrichment:", result.error);
-      throw result.error;
-    }
+    try {
+      const result = await this.supabase
+        .from("enrichments")
+        .insert([
+          {
+            company_id,
+            session_id,
+            icp_model_id,
+            data,
+            source,
+          },
+        ])
+        .select();
   
-    return result.data;
+      if (result.error) {
+        console.error("Error inserting enrichment:", result.error);
+        throw result.error;
+      }
+  
+      console.log(`✅ Enrichment saved for company ${company_id} from ${source}`);
+      return result.data;
+    } catch (error) {
+      console.error("Exception saving enrichment:", error);
+      throw error;
+    }
   }
   
   async getSessionCompanies(sessionId: string): Promise<Company[]> {
@@ -237,7 +316,7 @@ console.log(data[0])
       .from('companies')
       .select('*')
       .eq('session_id', sessionId)
-      .order('icp_score', { ascending: false });
+      .order('created_at', { ascending: false });
 
     if (error) throw error;
     return data.map(this.mapCompanyFromDB);

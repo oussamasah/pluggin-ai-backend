@@ -1,0 +1,35 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "is_working": 1
+          }
+        },
+        {
+          "term": {
+            "active_experience_company_id": 88346082
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "match_phrase": {
+                  "active_experience_title": "CEO"
+                }
+              },
+              {
+                "match_phrase": {
+                  "active_experience_title": "marketing manager"
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        }
+      ]
+    }
+  }
+}

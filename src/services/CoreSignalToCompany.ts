@@ -82,8 +82,40 @@ export function mapCoresignalToCompany(coresignalData: any): Company {
       target_market: mapSizeRangeToTargetMarket(data.size_range)
     };
   }
-  
   function mapCoresignalFirmographicData(data: any): Company['firmographic_data'] {
+    // Helper function to extract revenue from all sources
+    const extractRevenueData = (revenueAnnual: any) => {
+      if (!revenueAnnual) return { estimated: undefined, currency: undefined };
+      
+      // Check all possible revenue sources
+      const sources = [
+        revenueAnnual.source_1_annual_revenue,
+        revenueAnnual.source_2_annual_revenue,
+        revenueAnnual.source_3_annual_revenue,
+        revenueAnnual.source_4_annual_revenue,
+        revenueAnnual.source_5_annual_revenue,
+        revenueAnnual.source_6_annual_revenue,
+        revenueAnnual.source_7_annual_revenue,
+        revenueAnnual.source_8_annual_revenue,
+        revenueAnnual.source_9_annual_revenue,
+        revenueAnnual.source_10_annual_revenue
+      ].filter(source => source && source.annual_revenue);
+  
+      if (sources.length === 0) {
+        return { estimated: undefined, currency: undefined };
+      }
+  
+      // Use the first available source, or implement priority logic
+      const primarySource = sources[0];
+      
+      return {
+        estimated: primarySource.annual_revenue,
+        currency: primarySource.annual_revenue_currency || 'USD'
+      };
+    };
+  
+    const revenueData = extractRevenueData(data.revenue_annual);
+  
     return {
       employee_count: {
         range: data.size_range || undefined,
@@ -92,8 +124,8 @@ export function mapCoresignalToCompany(coresignalData: any): Company {
       },
       revenue: {
         range: data.revenue_annual_range || undefined,
-        estimated: data.revenue_annual || undefined,
-        currency: 'USD' // Coresignal typically uses USD
+        estimated: revenueData.estimated,
+        currency: revenueData.currency
       },
       funding_status: data.funding_rounds?.length > 0 ? {
         stage: mapFundingRoundToStage(data.last_funding_round_name),

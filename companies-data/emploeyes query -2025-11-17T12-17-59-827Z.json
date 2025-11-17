@@ -1,0 +1,24 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "is_working": 1
+          }
+        },
+        {
+          "term": {
+            "active_experience_company_id": 25826650
+          }
+        },
+        {
+          "bool": {
+            "should": [],
+            "minimum_should_match": 1
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "exaCompanies": [
+    {
+      "id": "witem_01ka8vhfrw5thxwvc55thxwvc5",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01ka8vh9ytm6wfmqrt0p80eg5h",
+      "websetId": "webset_01ka8vh9jm789hh6acapgezzgb",
+      "properties": {
+        "type": "company",
+        "url": "https://alaan.com",
+        "description": "Alaan الآن is a SaaS-based financial services company headquartered in the United Arab Emirates, with 110 employees and $11.5M in funding. It offers AI-powered expense management, corporate cards, and spend management platforms, serving industries such as real estate, healthcare, and logistics, with a focus on real-time financial visibility and automation.",
+        "content": "[Book a Demo](https://www.alaan.com/demo)\n\nEnglish\n\n## Control all business expenses with one **SuperCard™**\n\n### Smart Corporate Cards with smarter controls\n\n**SuperCard™** that goes beyond payments - set custom limits, track expenses, add balance in seconds, and more\n\n[See how](https://www.alaan.com/products/corporate-cards)\n\n### Expense Managementto track every dirham\n\nKnow where, how, and when employees spend company's money.\n\n[See how](https://www.alaan.com/products/spend-management)\n\n### Accounting Automationfor all expense entries\n\nAlaan integrates with all major accounting tools & ERPs to auto-export expense data to accounting books.\n\n[See how](https://www.alaan.com/products/accounting-automation)\n\n### Alaan Intelligenceto do the heavy-lifting\n\nGot expense reports to create or receipts to review? Leave them to AI!\n\n[See how](https://www.alaan.com/products/alaan-intelligence)\n\n## Don't take our word,take theirs\n\n[**Al Barari uses Alaan to cut down reimbursements and save 200 hours every month** \\\n\\\nAl Barari partnered with Alaan to roll out a centralised spend management platform that could streamline workflows while maintaining separation across entities.\\\n\\\nRead full story](https://www.alaan.com/customer-stories/al-barari) [**Hellochef saved 50+ hours per month** \\\n\\\nWe chose Alaan for corporate cards and have stayed here for expense management. Real-time visibility and streamlined accounting – count us in! \\\n\\\nRead full story](https://www.alaan.com/customer-stories/hello-chef) [**Washmen put its spend management on auto-pilot and saved 80+ hours per week** \\\n\\\nSince switching to Alaan, Washmen has gained more transparency on its spending. The team members can pay easily without worrying about out-of-policy expenses. \\\n\\\nRead full story](https://www.alaan.com/customer-stories/washmen)\n\n[See all Customer Stories](https://www.alaan.com/customer-stories)\n\n## No. 1 in Expense Management across the Middle East\n\n4.7 Rating\n\n93%\n\nEase of Admin\n\n97%\n\nEase of Use\n\n95%\n\nLikely to Recommend\n\n[Read all Reviews](https://www.g2.com/products/alaan/reviews)\n\n## News & Media\n\n## If your company has expenses, Alaan is the solution for you.\n\nMore control   \\|   More savings   \\|   More automation\n\nThank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.\n\nBy clicking **\"Accept\"**, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. View our [Privacy Policy](https://www.alaan.com/privacy-policy) for more information.\n\n[Reject](https://www.alaan.com/www.alaan.com) [Accept](https://www.alaan.com/www.alaan.com)\n\n[Preferences](https://www.alaan.com/www.alaan.com)\n\n**Manage Consent Preferences by Category**\n\n[Accept All](https://www.alaan.com/www.alaan.com)\n\nEssentials\n\n**Always active**\n\nNecessary for the site to function. Always On.\n\nMarketing\n\nUsed for targeted advertising.\n\nPersonalization\n\nRemembers your preferences and provides enhanced features.\n\nAnalytics\n\nMeasures usage and improves your experience.\n\n[Reject All](https://www.alaan.com/www.alaan.com)\n\nThank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.\n\nPreferences\n\n##### Get started with Alaan\n\nJoin the 2000+ companies across the Middle East already using Alaan to stay on top of company spending.\n\nRedirecting...\n\nOops! Something went wrong while submitting the form.\n\nTrusted by",
+        "company": {
+          "name": "Alaan الآن",
+          "location": "undefined, United Arab Emirates",
+          "employees": 110,
+          "industry": "Financial Services",
+          "about": "Alaan is an AI-powered expense management platform for businesses in the Middle East.\n\nOur mission is to simplify finance for businesses so they can save time and money.\n\nAlaan has everything businesses need to manage and control their expenses – smart corporate cards, AI-powered automation and insights, streamlined accounting, and centralised dashboards – all in one place.\n\nOver 1500+ businesses in the UAE and KSA, from startups to enterprises – G42, Lulu Exchange, Rivoli, Tabby, Foodics – use Alaan to control their spending and save costs. From 2022 to now, our customers have saved over 1.5Mn hours by using Alaan.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQEQwpJZDnft2A/company-logo_200_200/company-logo_200_200/0/1680694646530/alaanpay_logo?e=2147483647&v=beta&t=iH7LtpA0J8r7rsayEvyHZSFXV1FLAbvyxq9Ac7TOKAw"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has between 51 and 200 employees",
+          "reasoning": "The internal company profile lists 110 employees for Alaan الآن, which falls within the 51‑200 employee range specified by the criterion.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Alaan الآن",
+              "snippet": "Alaan الآن is a Financial Services company (private) with 110 employees (+97.6% YoY growth), $500.0K annual revenue, founded in 2021, headquartered in United Arab Emirates. Has $11.5M in total funding, last round was a Series A - Alaan in 2025-08-05. Alaan is an all-in-one corporate card and spend management platform in the UAE. They provide real-time visibility and control over all spending, inclu...",
+              "url": "https://alaan.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company has received external funding (any amount, any year)",
+          "reasoning": "The internal company profile for Alaan الآن lists $11.5 million in total funding and notes a Series A round on 2025‑08‑05, indicating that the company has received external funding. This satisfies the criterion of having received external funding in any amount or year.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Alaan الآن",
+              "snippet": "Alaan الآن is a Financial Services company (private) with 110 employees (+97.6% YoY growth), $500.0K annual revenue, founded in 2021, headquartered in United Arab Emirates. Has $11.5M in total funding, last round was a Series A - Alaan in 2025-08-05. Alaan is an all-in-one corporate card and spend management platform in the UAE. They provide real-time visibility and control over all spending, inclu...",
+              "url": "https://alaan.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company is headquartered in the UAE or Qatar",
+          "reasoning": "The internal company profile for Alaan الآن (AlaanPay Technology Ltd.) lists its headquarters as the United Arab Emirates. This directly meets the criterion of being headquartered in the UAE or Qatar.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Alaan الآن",
+              "snippet": "Alaan الآن is a Financial Services company (private) with 110 employees (+97.6% YoY growth), $500.0K annual revenue, founded in 2021, headquartered in United Arab Emirates. Has $11.5M in total funding, last round was a Series A - Alaan in 2025-08-05. Alaan is an all-in-one corporate card and spend management platform in the UAE. They provide real-time visibility and control over all spending, inclu...",
+              "url": "https://alaan.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the SaaS industry",
+          "reasoning": "The internal company profile describes Alaan as an \"all‑in‑one corporate card and spend management platform\" and an \"AI‑powered expense management platform for businesses,\" which indicates that the company delivers software as a cloud‑based service (SaaS). The categories list includes \"expense management, corporate cards, spend management, ai, accounting automation,\" all of which are typical SaaS offerings. Therefore the company operates in the SaaS industry.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Alaan الآن",
+              "snippet": "Alaan الآن is a Financial Services company (private) with 110 employees (+97.6% YoY growth), $500.0K annual revenue, founded in 2021, headquartered in United Arab Emirates. Has $11.5M in total funding, last round was a Series A - Alaan in 2025-08-05. Alaan is an all-in-one corporate card and spend management platform in the UAE. They provide real-time visibility and control over all spending, inclu...",
+              "url": "https://alaan.com"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-17T12:09:55.228Z",
+      "updatedAt": "2025-11-17T12:09:55.228Z"
+    }
+  ],
+  "websetId": "webset_01ka8vh9jm789hh6acapgezzgb"
+}

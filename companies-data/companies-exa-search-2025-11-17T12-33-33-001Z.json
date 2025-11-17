@@ -1,0 +1,141 @@
+{
+  "exaCompanies": [
+    {
+      "id": "witem_01ka8wwawvr6ka453rr6ka453r",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01ka8wvyebgapxsx7kkjrf6hg7",
+      "websetId": "webset_01ka8wvy2am7svs598vga7z1gs",
+      "properties": {
+        "type": "company",
+        "url": "https://reachware.com",
+        "description": "SaaS company specializing in integration platform solutions; 56 employees, founded 2021, headquartered in Saudi Arabia; raised $3M in seed funding in September 2024; annual revenue between $1.7M and $5M; top IPaaS in the Middle East connecting systems and data for global enterprises.",
+        "content": "[![Government of Canada](https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-en.svg)](https://www.canada.ca/en.html)\n\n# Rates for Part XIII tax\n\nNon-residents have to pay a 25% tax on amounts that are taxable under Part XIII. However, this rate can be reduced to a lower rate or an exemption can be given under the provisions of the Income Tax Act or a bilateral tax treaty between Canada and another country.\n\nAs the Canadian payer or withholding agent, you are responsible for withholding and remitting Part XIII tax at the correct rate.\n\nIf you pay or credit or are considered to have paid or credited a taxable amount to persons in countries that have tax treaties with Canada, you should verify the rate given in the Income Tax Act first. Then verify if a reduced rate or an exemption applies under the treaty.\n\nThe negotiation of new tax treaties and renegotiation of existing tax treaties is an ongoing process. For this reason, you should verify tax treaty rates and exemptions on a regular basis.\n\nYou can use the online Part XIII Tax Calculator to determine your Part XIII tax liability. The CRA developed this convenient and interactive tool to help you determine your tax liability in an accurate and timely manner. For more information, go to [Non-Resident Tax Calculator](https://www.canada.ca/en/revenue-agency/services/e-services/non-resident-tax-calculator-disclaimer.html).\n\nYou can also get the current tax rates and effective dates by contacting the [CRA](https://www.canada.ca/en/revenue-agency/corporate/contact-information.html) at the numbers listed at the end of this guide or by going to [Tax treaties](https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/tax-treaties.html?utm_campaign=not-applicable&utm_medium=vanity-url&utm_source=canada-ca_cra-tax-treaties).\n\nThe 25% Part XIII tax will apply to any taxable amounts you paid or credited to persons in non-treaty countries.\n\nThe 25% Part XIII tax also applies to payees in countries with which Canada has a tax treaty that is not yet in effect.\n\nA Part XIII tax rate of 23% applies to the **gross amounts** paid, credited, or included as a benefit for acting services rendered in Canada by a non-resident actor, including payments of residuals and contingent compensation. This rate applies only to the acting services of the actor in a film or video production. For more information, go to [Non-resident actors](https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/film-media-tax-credits/non-resident-actors.html).\n\nFor more information about tax treaties, go to [Information Circular IC76-12R8, Applicable rate of Part XIII tax on amounts paid or credited to persons in countries with which Canada has a tax convention](https://www.canada.ca/en/revenue-agency/services/forms-publications/publications/ic76-12.html). The information in that circular also applies if you are considered, under Part I or Part XIII of the Income Tax Act, to have paid or credited to residents of these treaty countries amounts that are taxable under Part XIII.\n\n## Page details\n\nDate modified:2025-02-26\n\n![Symbol of the Government of Canada](https://www.canada.ca/etc/designs/canada/wet-boew/assets/wmms-blk.svg)",
+        "company": {
+          "name": "reachware",
+          "location": "undefined, Saudi Arabia",
+          "employees": 56,
+          "industry": "Software Development",
+          "about": "Reachware is a leading integration platform in the region that allows systems and data to connect and flow seamlessly. With reachware, organizations can create smarter echo system and automate their business processes to be more efficient and agile.\n\nReachware helps your business with:\n- Creating Echo System by integrating all business applications with each other.\n- Adding more values to your customer by automating the business processes.\n- Scaling-up the business by eliminating all the system impediments and manual work.\n- Transforming the systems to be connected and on the cloud managed by reachware API Gateway.\n- Providing deep insights and visibility of the business performance and its data flow within the organization.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQF6q0BCbKiVqA/company-logo_200_200/company-logo_200_200/0/1669183595439?e=2147483647&v=beta&t=MPdT1ESpoP-2yEq1J14q1Jmr1hUpeKmAq9noZH3LT84"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has between 51 and 200 employees",
+          "reasoning": "The internal company profile for Reachware lists 56 employees, which falls within the 51‑200 employee range specified by the criterion. The employee count is explicitly stated in the profile, and no conflicting information indicates a different size. Therefore, Reachware meets the employee‑size requirement.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "reachware",
+              "snippet": "reachware is a Software Development company (private) with 56 employees (+45.5% YoY growth), founded in 2021, headquartered in Saudi Arabia. Has $3.0M in total funding, last round was a Seed Round - Reachware in 2024-09-05. Reachware is the top IPaaS in the Middle East, connecting systems for a unified ecosystem. Trusted by global enterprises. Reachware is a leading integ...",
+              "url": "https://reachware.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company has raised at least one funding round in 2024 or 2025",
+          "reasoning": "The internal company profile lists a Seed Round on 2024-09-05 (and news items dated September 2024) indicating that Reachware raised funding in 2024. This satisfies the criterion of having raised at least one funding round in 2024 or 2025.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "reachware",
+              "snippet": "reachware is a Software Development company (private) with 56 employees (+45.5% YoY growth), founded in 2021, headquartered in Saudi Arabia. Has $3.0M in total funding, last round was a Seed Round - Reachware in 2024-09-05. Reachware is the top IPaaS in the Middle East, connecting systems for a unified ecosystem. Trusted by global enterprises. Reachware is a leading integ...",
+              "url": "https://reachware.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company is headquartered in Saudi Arabia (KSA)",
+          "reasoning": "The internal company profile for Reachware explicitly states that the company is headquartered in Saudi Arabia. The profile lists \"headquartered in Saudi Arabia\" under the company details, confirming the criterion is met.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "reachware",
+              "snippet": "reachware is a Software Development company (private) with 56 employees (+45.5% YoY growth), founded in 2021, headquartered in Saudi Arabia. Has $3.0M in total funding, last round was a Seed Round - Reachware in 2024-09-05. Reachware is the top IPaaS in the Middle East, connecting systems for a unified ecosystem. Trusted by global enterprises. Reachware is a leading integ...",
+              "url": "https://reachware.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the SaaS (Software as a Service) industry",
+          "reasoning": "The internal profile lists Reachware’s industry as Software Development and describes it as a top IPaaS (Integration Platform as a Service) and a leading integration platform that connects systems and data. IPaaS is a SaaS offering, meaning the company delivers software over the cloud on a subscription basis. These details confirm that Reachware operates in the SaaS industry.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "reachware",
+              "snippet": "reachware is a Software Development company (private) with 56 employees (+45.5% YoY growth), founded in 2021, headquartered in Saudi Arabia. Has $3.0M in total funding, last round was a Seed Round - Reachware in 2024-09-05. Reachware is the top IPaaS in the Middle East, connecting systems for a unified ecosystem. Trusted by global enterprises. Reachware is a leading integ...",
+              "url": "https://reachware.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company's annual revenue is between $1M and $10M",
+          "reasoning": "Reachware’s publicly reported figures indicate an annual recurring revenue of about $1.70 million (SAR 5 million) as stated in a 2024 Mubasher interview, and ZoomInfo lists revenue under $5 million. Both figures fall within the $1 million–$10 million range required by the criterion.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Abusitta showcases Saudi Reachware's achievements, funding round",
+              "snippet": "Reachware in Numbers Abusitta unveiled that the company achieved more than SAR 5 million, equivalent to $1.70 million annual recurring revenue (ARR) of annual subscriptions. highlights: [$1.70 million]",
+              "url": "https://english.mubasher.info/news/4339288/Abusitta-showcases-Saudi-Reachware-s-achievements-funding-round-Interview"
+            },
+            {
+              "title": "Reachware - Overview, News & Similar companies | ZoomInfo.com",
+              "snippet": "What is Reachware's Revenue? Reachware's revenue is <$5 Million What is Reachware's SIC code?",
+              "url": "https://www.zoominfo.com/c/reachwarecom/346303937"
+            },
+            {
+              "title": "Systemware - Overview, News & Similar companies | ZoomInfo.com",
+              "snippet": "What is the revenue of systemware?\nSystemware's revenue is $23.1 Million What is Systemware's SIC code?",
+              "url": "https://www.zoominfo.com/c/systemware-inc/37388517"
+            },
+            {
+              "title": "Reachware 2025 Company Profile: Valuation, Funding & Investors",
+              "snippet": "Information on valuation, funding, cap tables, investors, and executives for Reachware. Use the PitchBook Platform to explore the full profile.",
+              "url": "https://pitchbook.com/profiles/company/540971-92"
+            },
+            {
+              "title": "[PDF] Reachware NewsletterV1",
+              "snippet": null,
+              "url": "https://reachware.com/storage/2025-01-30/tIrl3B4dcSwsMSxvBh34w0K8ZyVGw3zNOFJjkybF.pdf"
+            },
+            {
+              "title": "LabWare - Overview, News & Similar companies | ZoomInfo.com",
+              "snippet": "What is the revenue of LabWare?\nLabWare's revenue is $200 Million What is LabWare's SIC code? LabWare's SIC: 87,873 What is LabWare's NAICS code? LabWare's NAICS: 54,541 How many employees does LabWare have? LabWare has 501-1,000 employees What industry does LabWare belong to?",
+              "url": "https://www.zoominfo.com/c/labware-inc/21955033"
+            },
+            {
+              "title": "Reachware - Products, Competitors, Financials, Employees ...",
+              "snippet": "Reachware, a well-known startup with headquarters in Riyadh, Saudi Arabia, and a focus on automation and system integration, has raised $3 million in seed money ...",
+              "url": "https://www.cbinsights.com/company/reachware"
+            },
+            {
+              "title": "Reachware closes $3mn round led by Sadu Capital",
+              "snippet": "Abusitta added that his company so far achieved annual subscriptions worth $1.7 million with 250 million data transfer operations from one ...",
+              "url": "https://en.sharikatmubasher.com/media-hub/news/21436540/reachware-closes-3mn-round-led-by-sadu-capital"
+            },
+            {
+              "title": "Luware Information - RocketReach",
+              "snippet": "What is the revenue of Luware?\nWhat is the annual revenue of Luware? The Luware annual revenue was $16.7 million in 2025.",
+              "url": "https://rocketreach.co/luware-profile_b5c89f48f42e3547"
+            },
+            {
+              "title": "Reachware secures $3 million Seed led by Sadu Capital - Wamda",
+              "snippet": "Saudi Arabia-based SaaS provider Reachware has raised $3 million in Seed funding, led by Sadu Capital, with participation from 500 Sanabil ...",
+              "url": "https://www.wamda.com/2024/09/reachware-secures-3-million-seed-led-sadu-capital"
+            },
+            {
+              "title": "reachware",
+              "snippet": "reachware is a Software Development company (private) with 56 employees (+45.5% YoY growth), founded in 2021, headquartered in Saudi Arabia. Has $3.0M in total funding, last round was a Seed Round - Reachware in 2024-09-05. Reachware is the top IPaaS in the Middle East, connecting systems for a unified ecosystem. Trusted by global enterprises. Reachware is a leading integ...",
+              "url": "https://reachware.com"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-17T12:33:19.259Z",
+      "updatedAt": "2025-11-17T12:33:19.259Z"
+    }
+  ],
+  "websetId": "webset_01ka8wvy2am7svs598vga7z1gs"
+}
