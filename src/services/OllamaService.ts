@@ -134,6 +134,11 @@ async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
   const systemPrompt = `You are a B2B marketing and target audience analysis expert. 
   Evaluate companies against ICP criteria and provide a JSON response with score (0-100) and reason.`;
 
+  // Safely extract exa_enrichment data with null checking
+  const exaEnrichment = company.exa_enrichement && company.exa_enrichement[0];
+  const description = exaEnrichment?.properties?.description || 'No description available';
+  const evaluations = exaEnrichment?.evaluations?.map((e: { criterion: any; }) => e.criterion) || [];
+
   const prompt = `You are an expert B2B sales intelligence analyst specializing in Ideal Customer Profile (ICP) scoring. Your task is to evaluate companies against specific ICP criteria and generate accurate, data-driven fit scores from 0-100 based solely on the weighted criteria specified in the ICP configuration.
 
   ## Your Mission
@@ -149,16 +154,16 @@ async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
   ${JSON.stringify(company, null, 2)}
 
   *Industry and Employees range Data :*
-  ${JSON.stringify(company.exa_enrichement[0].properties.description, null, 2)}
-  ${JSON.stringify(company.exa_enrichement[0].evaluations.map((e: { criterion: any; })=>e.criterion), null, 2)}
+  ${JSON.stringify(description, null, 2)}
+  ${JSON.stringify(evaluations, null, 2)}
 
   ## IMPORTANT INDUSTRY INFERENCE INSTRUCTION
   The field "business_classification.industry.primary.type" may be missing or inaccurate.
   When evaluating "Industry Match":
-  - Infer the TRUE industry from contextual text found in company.exa_enrichment.
+  - Infer the TRUE industry from contextual text found in company description and evaluations.
   - Use semantic understanding of that text to classify the company's industry.
   - Compare this inferred industry against icpConfig.industries using your semantic matching rules.
-  - If structured industry data exists, still prefer the Exa context if it provides clearer insight.
+  - If structured industry data exists, still prefer the context if it provides clearer insight.
 
   ## Scoring Weight Application
   
@@ -196,7 +201,7 @@ async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
   - ≈ **Peripheral Match**: *40% of dimension points*
   - ✗ **No Semantic Relationship**: *0 points*
   - 🚫 **Semantic Exclusion**: *DISQUALIFICATION*
-  - ⚠ **Missing data**: *0 points*
+  - ⚠ **Missing data**: *Use description and evaluations to infer industry*
   
   ### Dimension 2: Geography
   
@@ -290,6 +295,12 @@ async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
   
   *Maximum Possible Score:*
   ${icpConfig.scoringWeights.firmographic + icpConfig.scoringWeights.technographic} points = 100 points
+  
+  ## DATA AVAILABILITY CHECK
+  
+  *Current Data Status:*
+  - Company Description: ${description !== 'No description available' ? '✅ Available' : '❌ Missing'}
+  - Industry Evaluations: ${evaluations.length > 0 ? '✅ Available' : '❌ Missing'}
   
   ## DISQUALIFICATION RULES
   
@@ -707,7 +718,7 @@ Analyze potential issues and provide recommendations:
     // Technology analysis from your company data
     const technologyAnalysis = companies.reduce((acc, company) => {
       const techs = company.technographic_data?.technology_stack || [];
-      techs.forEach(tech => {
+      techs.forEach((tech: { name: string | number; }) => {
         acc[tech.name] = (acc[tech.name] || 0) + 1;
       });
       return acc;
@@ -1169,6 +1180,10 @@ private validateAndCleanCompany(company: any): Company {
   return company as Company;
 }
 
+
+// Usage example:
+// const prompt = generateGTMAnalysisPrompt(coresignalApiResponse, icpModelConfig);
+// Then send this prompt to your LLM
 }
 
 export const ollamaService = new OllamaService();

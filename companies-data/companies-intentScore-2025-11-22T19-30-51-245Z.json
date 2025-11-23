@@ -1,0 +1,32 @@
+{
+  "score": 100,
+  "reason": "Gulf Solution Group demonstrates very high intent levels based on two critical signals: a new funding round and new product developments. Both signals are validated with a high volume of robust evidence, showcasing strong business momentum and readiness for growth.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.5312500000000001
+    },
+    {
+      "signal": "new_product",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.697435897435897
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "The significant funding will provide Gulf Solution Group with the necessary capital for expansion and innovations in fintech services.",
+    "Launching new products positions Gulf Solution Group to capture market share and meet emerging customer demands effectively."
+  ],
+  "timing_recommendation": "immediate",
+  "risk_factors": [
+    "Potential over-reliance on external funding could pose a financial risk if future rounds are not secured.",
+    "Market volatility in fintech may impact the successful launch and adoption of new products."
+  ]
+}

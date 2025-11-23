@@ -1,0 +1,360 @@
+{
+  "company": "Jisr | جسر",
+  "website": "https://www.jisr.net",
+  "analysis_date": "2025-11-22",
+  "requested_signals": [
+    "new_funding_round",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNX0JPZi10eUI0cFY5UFJvSWwweTZSejB4ZGFzQ1ZieU9JNXM5R1AzTl9pZnJ6Njl2Skt2M1JYR0tHM0FfZV82d1dTdDR3RExLTVVnRmZaTDVMdFBXbGlTT3lrdXMzdEw1RVZYX3NfY2x1MTFuazlmR1lidDE5RFVwUFU2cUM0TkVVMm5WVzgyRFhvNDlmMl9ReXVWQllxbXVQRjh6Q0dGV2htbjB5Sm01N1RRYmdnRExEWGU2eXozcHd1QU51NjVIeXl3?oc=5",
+          "date": "Sat, 23 Aug 2025 15:10:25 GMT",
+          "summary": "Jisr raises $30 mn funding in Series A round led by Merak Capital - People Matters - HR News - <a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNX0JPZi10eUI0cFY5UFJvSWwweTZSejB4ZGFzQ1ZieU9JNXM5R1AzTl9pZnJ6Njl2Skt2M1JYR0tHM0FfZV82d1dTdDR3RExLTVVnRmZaTDVMdFBXbGlTT3lrdXMzdEw1RVZYX3NfY2...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2J4a24wRnpJUDZpQUZFdndnOHJRZ2NVakxqMG9pNHRCcGNUUlBsajh6RUpybnVaSXdsN3kxTUdZek5pR2c3Tl94SXdrYkg?oc=5",
+          "date": "Thu, 12 Oct 2023 07:00:00 GMT",
+          "summary": "KSA-Based HR Tech Platform Jisr Raises US$30 Million In The Middle East's Largest Series A Round For A SaaS Firm - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TEFZb0lhbUtsMjlDSGNUNThvSFBRUzRWZw?oc=5",
+          "date": "Wed, 04 Oct 2023 07:00:00 GMT",
+          "summary": "Saudi Jisr closes $30 million Series A by Merak Capital - Wamda - <a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYnMtZTRxQUVGdnZlTTdnck95QlhPZmZXOUtuMTZVU3J0WFMxejEzTEV4M2RoempRVHFVeS15RHhpWjl4cDJ0eEZUWnRfZHdLNVdJN19lQVFQUWZRamJ0UTJUZXpjR0cwM09LMkI4TGFVZEk2WmJraDVJRzl3S1NMSWJVNEt0cF92X1c0LWt2V24ycDcxRDVGRkRodzVuTVJoUnBZRWtiUHBrOC1mNWZMUHh4bDNUUjl6MVZJaQ?oc=5",
+          "date": "Wed, 04 Dec 2019 08:00:00 GMT",
+          "summary": "Emirates Arrest a Syrian Mohannad al-Masri on Charges of Funding Terrorism - The Syrian Observer - <a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPYnMtZTRxQUVGdnZlTTdnck95QlhPZmZXOUtuMTZVU3J0WFMxejEzTEV4M2RoempRVHFVeS15RHhpWjl4cDJ0eEZUWnRfZHdLNVdJN19lQVFQUWZRamJ0UTJUZXpjR0cwM09LMkI4TG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9aVUI2Wkh5ck04WHpOYTVpbmMyMFlJOS1nWDQxQUlVc01pU1l1ZGx2alkwQzN3TTZBS3BuRTJtMFdiSm4tUG5yMDJwN1YwTkFOZUJmeG9NdEQ2X25WNjNHZnBoM1JqYXZSVXB0N3NZcFNRRUdBbDNEb1ItUUk?oc=5",
+          "date": "Mon, 18 Oct 2021 07:00:00 GMT",
+          "summary": "BY Venture Partners closes $50 million BY Fund II - Wamda - <a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE9aVUI2Wkh5ck04WHpOYTVpbmMyMFlJOS1nWDQxQUlVc01pU1l1ZGx2alkwQzN3TTZBS3BuRTJtMFdiSm4tUG5yMDJwN1YwTkFOZUJmeG9NdEQ2X25WNjNHZnBoM1JqYXZSVXB0N3NZcF...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdFhjSTc5WHVSNllDOUVhMGdkWm1NdmhKUzhtaFNtQnY2YVBXb0JzNmRUZzl1bFpHLXo2UWh1OW54ZHlvOXJHOVFYOXJfaXg5UDFwWXhTVnUyWEtsZGRfdmZ5M0I4U0xOb2syZWJva3VsTHN2WC1zM2d6aUwyeTVNY2IzUGNIUTVMSWQ1b3lSMlJMaXAtQlVGZUNvM1V5NTBZSTZr?oc=5",
+          "date": "Wed, 25 Sep 2024 07:00:00 GMT",
+          "summary": "Saudi Shift Raises $82.8 Million in Seed Funding Led by Merak Capital - إنت عربي - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPdFhjSTc5WHVSNllDOUVhMGdkWm1NdmhKUzhtaFNtQnY2YVBXb0JzNmRUZzl1bFpHLXo2UWh1OW54ZHlvOXJHOVFYOXJfaXg5UDFwWXhTVnUyWEtsZGRfdmZ5M0I4U0xOb2syZWJva3...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBoN2FROThVQnZfeFQ0VTlfb0tCV0Q4eGlDNTdidThFdmlCQTFLemQ1RjZuQmFqQzlweWRLcTlRaS1XVG01WGNXeV9wRGE0MXdyYTRnbURGSHd3NmVyMUFZUkJHM01WX2JBQlNz?oc=5",
+          "date": "Wed, 10 Jan 2018 08:00:00 GMT",
+          "summary": "Lebanon hails China's funding for building conservatory - Xinhua | English.news.cn - 新华网 - <a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFBoN2FROThVQnZfeFQ0VTlfb0tCV0Q4eGlDNTdidThFdmlCQTFLemQ1RjZuQmFqQzlweWRLcTlRaS1XVG01WGNXeV9wRGE0MXdyYTRnbURGSHd3NmVyMUFZUkJHM01WX2JBQlNz?oc=5\"...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTkgxVmQtUDBuM1d3cmNodHdzSTcyeTdQQUJHWEc2OEl1YWpiT1J4RzM1QU1Xd1g5MnVfMnpvaTllWnFCSEVaSVFiZU9rU245QUhINm5ZVGlCdDhRaHprbDJqc0tRNnU4RVRIc0xlVVlkZS1DRHF6TlhGT2pzdWx3dA?oc=5",
+          "date": "Mon, 06 Nov 2023 08:00:00 GMT",
+          "summary": "Mena startups raised $156 million in October 2023 - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPTkgxVmQtUDBuM1d3cmNodHdzSTcyeTdQQUJHWEc2OEl1YWpiT1J4RzM1QU1Xd1g5MnVfMnpvaTllWnFCSEVaSVFiZU9rU245QUhINm5ZVGlCdDhRaHprbDJqc0tRNnU4RVRIc0xlVV...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOR0I0OVhLMmg0bVFMNWlVR0doQ1dVcURXSVdjYWpRZDhicG5GN1prcG13cGhHeEhEUGlDczB3b1hONWpFaGtNVFJXNWZnYVhEWEJSbmFDdURheXNLV2RmTHZGbTlKbnJZR0N5YTdELW9MakNvdzhITnZDdXJ0Tm5vSlNFM0NCTi0zZzE3OA?oc=5",
+          "date": "Wed, 23 Aug 2023 07:00:00 GMT",
+          "summary": "MOH, Al Jisr Foundation sign funding agreement - Times of Oman - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOR0I0OVhLMmg0bVFMNWlVR0doQ1dVcURXSVdjYWpRZDhicG5GN1prcG13cGhHeEhEUGlDczB3b1hONWpFaGtNVFJXNWZnYVhEWEJSbmFDdURheXNLV2RmTHZGbTlKbnJZR0N5YTdELW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNX0JPZi10eUI0cFY5UFJvSWwweTZSejB4ZGFzQ1ZieU9JNXM5R1AzTl9pZnJ6Njl2Skt2M1JYR0tHM0FfZV82d1dTdDR3RExLTVVnRmZaTDVMdFBXbGlTT3lrdXMzdEw1RVZYX3NfY2x1MTFuazlmR1lidDE5RFVwUFU2cUM0TkVVMm5WVzgyRFhvNDlmMl9ReXVWQllxbXVQRjh6Q0dGV2htbjB5Sm01N1RRYmdnRExEWGU2eXozcHd1QU51NjVIeXl3?oc=5",
+          "date": "Sat, 23 Aug 2025 15:10:25 GMT",
+          "summary": "Jisr raises $30 mn funding in Series A round led by Merak Capital - People Matters - HR News - <a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNX0JPZi10eUI0cFY5UFJvSWwweTZSejB4ZGFzQ1ZieU9JNXM5R1AzTl9pZnJ6Njl2Skt2M1JYR0tHM0FfZV82d1dTdDR3RExLTVVnRmZaTDVMdFBXbGlTT3lrdXMzdEw1RVZYX3NfY2...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2J4a24wRnpJUDZpQUZFdndnOHJRZ2NVakxqMG9pNHRCcGNUUlBsajh6RUpybnVaSXdsN3kxTUdZek5pR2c3Tl94SXdrYkg?oc=5",
+          "date": "Thu, 12 Oct 2023 07:00:00 GMT",
+          "summary": "KSA-Based HR Tech Platform Jisr Raises US$30 Million In The Middle East's Largest Series A Round For A SaaS Firm - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TEFZb0lhbUtsMjlDSGNUNThvSFBRUzRWZw?oc=5",
+          "date": "Wed, 04 Oct 2023 07:00:00 GMT",
+          "summary": "Saudi Jisr closes $30 million Series A by Merak Capital - Wamda - <a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdFhjSTc5WHVSNllDOUVhMGdkWm1NdmhKUzhtaFNtQnY2YVBXb0JzNmRUZzl1bFpHLXo2UWh1OW54ZHlvOXJHOVFYOXJfaXg5UDFwWXhTVnUyWEtsZGRfdmZ5M0I4U0xOb2syZWJva3VsTHN2WC1zM2d6aUwyeTVNY2IzUGNIUTVMSWQ1b3lSMlJMaXAtQlVGZUNvM1V5NTBZSTZr?oc=5",
+          "date": "Wed, 25 Sep 2024 07:00:00 GMT",
+          "summary": "Saudi Shift Raises $82.8 Million in Seed Funding Led by Merak Capital - إنت عربي - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPdFhjSTc5WHVSNllDOUVhMGdkWm1NdmhKUzhtaFNtQnY2YVBXb0JzNmRUZzl1bFpHLXo2UWh1OW54ZHlvOXJHOVFYOXJfaXg5UDFwWXhTVnUyWEtsZGRfdmZ5M0I4U0xOb2syZWJva3...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTkgxVmQtUDBuM1d3cmNodHdzSTcyeTdQQUJHWEc2OEl1YWpiT1J4RzM1QU1Xd1g5MnVfMnpvaTllWnFCSEVaSVFiZU9rU245QUhINm5ZVGlCdDhRaHprbDJqc0tRNnU4RVRIc0xlVVlkZS1DRHF6TlhGT2pzdWx3dA?oc=5",
+          "date": "Mon, 06 Nov 2023 08:00:00 GMT",
+          "summary": "Mena startups raised $156 million in October 2023 - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPTkgxVmQtUDBuM1d3cmNodHdzSTcyeTdQQUJHWEc2OEl1YWpiT1J4RzM1QU1Xd1g5MnVfMnpvaTllWnFCSEVaSVFiZU9rU245QUhINm5ZVGlCdDhRaHprbDJqc0tRNnU4RVRIc0xlVV...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNX0JPZi10eUI0cFY5UFJvSWwweTZSejB4ZGFzQ1ZieU9JNXM5R1AzTl9pZnJ6Njl2Skt2M1JYR0tHM0FfZV82d1dTdDR3RExLTVVnRmZaTDVMdFBXbGlTT3lrdXMzdEw1RVZYX3NfY2x1MTFuazlmR1lidDE5RFVwUFU2cUM0TkVVMm5WVzgyRFhvNDlmMl9ReXVWQllxbXVQRjh6Q0dGV2htbjB5Sm01N1RRYmdnRExEWGU2eXozcHd1QU51NjVIeXl3?oc=5",
+          "date": "Sat, 23 Aug 2025 15:10:25 GMT",
+          "summary": "Jisr raises $30 mn funding in Series A round led by Merak Capital - People Matters - HR News - <a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNX0JPZi10eUI0cFY5UFJvSWwweTZSejB4ZGFzQ1ZieU9JNXM5R1AzTl9pZnJ6Njl2Skt2M1JYR0tHM0FfZV82d1dTdDR3RExLTVVnRmZaTDVMdFBXbGlTT3lrdXMzdEw1RVZYX3NfY2...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TEFZb0lhbUtsMjlDSGNUNThvSFBRUzRWZw?oc=5",
+          "date": "Wed, 04 Oct 2023 07:00:00 GMT",
+          "summary": "Saudi Jisr closes $30 million Series A by Merak Capital - Wamda - <a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2J4a24wRnpJUDZpQUZFdndnOHJRZ2NVakxqMG9pNHRCcGNUUlBsajh6RUpybnVaSXdsN3kxTUdZek5pR2c3Tl94SXdrYkg?oc=5",
+          "date": "Thu, 12 Oct 2023 07:00:00 GMT",
+          "summary": "KSA-Based HR Tech Platform Jisr Raises US$30 Million In The Middle East's Largest Series A Round For A SaaS Firm - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTkgxVmQtUDBuM1d3cmNodHdzSTcyeTdQQUJHWEc2OEl1YWpiT1J4RzM1QU1Xd1g5MnVfMnpvaTllWnFCSEVaSVFiZU9rU245QUhINm5ZVGlCdDhRaHprbDJqc0tRNnU4RVRIc0xlVVlkZS1DRHF6TlhGT2pzdWx3dA?oc=5",
+          "date": "Mon, 06 Nov 2023 08:00:00 GMT",
+          "summary": "Mena startups raised $156 million in October 2023 - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPTkgxVmQtUDBuM1d3cmNodHdzSTcyeTdQQUJHWEc2OEl1YWpiT1J4RzM1QU1Xd1g5MnVfMnpvaTllWnFCSEVaSVFiZU9rU245QUhINm5ZVGlCdDhRaHprbDJqc0tRNnU4RVRIc0xlVV...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TEFZb0lhbUtsMjlDSGNUNThvSFBRUzRWZw?oc=5",
+          "date": "Wed, 04 Oct 2023 07:00:00 GMT",
+          "summary": "Saudi Jisr closes $30 million Series A by Merak Capital - Wamda - <a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNd1Mtc210NE5Na19JLWhDeUN5REtqc011QTZDeWd5cXJkU3hSTDhQakRZNHZLRlJnb2RhWXA0QzlLc1hTcGVaLXNzOVAwRmktU2FhVUNBdUtnUkw1Qi1rQUEyS244bzlsOHZXbGM1TE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2J4a24wRnpJUDZpQUZFdndnOHJRZ2NVakxqMG9pNHRCcGNUUlBsajh6RUpybnVaSXdsN3kxTUdZek5pR2c3Tl94SXdrYkg?oc=5",
+          "date": "Thu, 12 Oct 2023 07:00:00 GMT",
+          "summary": "KSA-Based HR Tech Platform Jisr Raises US$30 Million In The Middle East's Largest Series A Round For A SaaS Firm - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdFhjSTc5WHVSNllDOUVhMGdkWm1NdmhKUzhtaFNtQnY2YVBXb0JzNmRUZzl1bFpHLXo2UWh1OW54ZHlvOXJHOVFYOXJfaXg5UDFwWXhTVnUyWEtsZGRfdmZ5M0I4U0xOb2syZWJva3VsTHN2WC1zM2d6aUwyeTVNY2IzUGNIUTVMSWQ1b3lSMlJMaXAtQlVGZUNvM1V5NTBZSTZr?oc=5",
+          "date": "Wed, 25 Sep 2024 07:00:00 GMT",
+          "summary": "Saudi Shift Raises $82.8 Million in Seed Funding Led by Merak Capital - إنت عربي - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPdFhjSTc5WHVSNllDOUVhMGdkWm1NdmhKUzhtaFNtQnY2YVBXb0JzNmRUZzl1bFpHLXo2UWh1OW54ZHlvOXJHOVFYOXJfaXg5UDFwWXhTVnUyWEtsZGRfdmZ5M0I4U0xOb2syZWJva3...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9aVUI2Wkh5ck04WHpOYTVpbmMyMFlJOS1nWDQxQUlVc01pU1l1ZGx2alkwQzN3TTZBS3BuRTJtMFdiSm4tUG5yMDJwN1YwTkFOZUJmeG9NdEQ2X25WNjNHZnBoM1JqYXZSVXB0N3NZcFNRRUdBbDNEb1ItUUk?oc=5",
+          "date": "Mon, 18 Oct 2021 07:00:00 GMT",
+          "summary": "BY Venture Partners closes $50 million BY Fund II - Wamda - <a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE9aVUI2Wkh5ck04WHpOYTVpbmMyMFlJOS1nWDQxQUlVc01pU1l1ZGx2alkwQzN3TTZBS3BuRTJtMFdiSm4tUG5yMDJwN1YwTkFOZUJmeG9NdEQ2X25WNjNHZnBoM1JqYXZSVXB0N3NZcF...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSExvdjNqcERjenNDdDZwMGpCVDgzRXphYzlfeUczTExMR3l6MHlEU3hDZXg5VEU0U3NCRDZ3MEVXUFNHeDNaVmF2RzZYM181ZW5TQ0oyb3BacjNPUGpJS2RKelU1dUpiUjhmc00ycnFyRTluaUVqZGJEQ0RaRHVveEtsNFU1ZVlCUGM4NjZHTWIya3NNcG1DYjFGb24?oc=5",
+          "date": "Tue, 17 Oct 2023 07:00:00 GMT",
+          "summary": "Mubadala Capital closes its 2nd fund in Brazil with over $710m of commitments - waya.media - <a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOSExvdjNqcERjenNDdDZwMGpCVDgzRXphYzlfeUczTExMR3l6MHlEU3hDZXg5VEU0U3NCRDZ3MEVXUFNHeDNaVmF2RzZYM181ZW5TQ0oyb3BacjNPUGpJS2RKelU1dUpiUjhmc00ycn...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2J4a24wRnpJUDZpQUZFdndnOHJRZ2NVakxqMG9pNHRCcGNUUlBsajh6RUpybnVaSXdsN3kxTUdZek5pR2c3Tl94SXdrYkg?oc=5",
+          "date": "Thu, 12 Oct 2023 07:00:00 GMT",
+          "summary": "KSA-Based HR Tech Platform Jisr Raises US$30 Million In The Middle East's Largest Series A Round For A SaaS Firm - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQZVFYeFlSY0pzbmhRelNhSkhJNGxhdUFDYkJ2eE9aUWpKRllQcVJkMTNiSFBXcG1RQURWcDh6cl9odXgwSGNPaXdoOG84QWN2NWdnVXIwdk1CRHRTbFFQOFNzMzRSbnBhRW9ueU1RU2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 24 relevant evidence pieces"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWWE4cHlsY2x4dEpfUTNndDVJVjJla29JWnhhdjNKN3BoWmVQQVZWSFRoTWtIdE1ETWhJSG8wSTJ1bGFrckF3MTZ5VjhQUHc3SDllQVBpSU90b0QyaU0tODJSX1hIR2JjaUQ0NktFRGc4NTFwdlhnY1RydnhodDZCYkNoLVdpVF9GVDE5WmZ3U1lkai1UUGJUbTVqWEZyV09VYTZEd0lSV3ZDTDhTV21UcGxrcjFVb1dqTFJBZ19vdVh2VkZRSmVOVA?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Jisr announces the launch of Jisr Spend and its new brand identity - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWWE4cHlsY2x4dEpfUTNndDVJVjJla29JWnhhdjNKN3BoWmVQQVZWSFRoTWtIdE1ETWhJSG8wSTJ1bGFrckF3MTZ5VjhQUHc3SDllQVBpSU90b0QyaU0tODJSX1hIR2JjaUQ0NktFRG...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE10Z2JWWkFyMDloNGtvWDgwRGVyVGtwNGVydXJ0Yk9BMHB0cFJVME5zUVVYb1hScmxEU0ZyUkRoekdmc1Y3UF9BUElfSHVzdnBIUGNOX09QdVlEaDFoSUHSAWNBVV95cUxPZjhsUGo2WDV1VEJYemlkcXVVaXRjbmFRU21xbkdsWXpuYnJKbkp5SlJPdk8wcXBKLXlnT3duMDF3NHEtc1JhX2xZRE4zdjQ5T3d3WVNta2xSVlpXdUNsYVpPaHM?oc=5",
+          "date": "Thu, 20 Nov 2025 10:48:41 GMT",
+          "summary": "The People's Bank of China and the Central Bank of the UAE launch payment connectivity and the JISR multilateral digital currency bridge project - Bitget - <a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE10Z2JWWkFyMDloNGtvWDgwRGVyVGtwNGVydXJ0Yk9BMHB0cFJVME5zUVVYb1hScmxEU0ZyUkRoekdmc1Y3UF9BUElfSHVzdnBIUGNOX09QdVlEaDFoSUHSAWNBVV95cUxPZjhsUGo2WD...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQa0g5Tm1BTVM2MXhLOFY0LUhoZjhwbXdFTzZGUDdRaVRxSG5MSXlFWEFiRDJMVGtCVGFiZWlVM09ZV0FuTW9nUnhFZUpwQWxZcGZPdWU1MzJaZFdXLTZxM2V1Z05OLW1lb0hCcm04QUJtVHp2Zmlaclg0Qk8zcG11dUhIRnhJMzdjeC1jWVhfT3lnRkozblVLZ1l3ZkhnbFlEY3ZCaFljcHNnQ29X?oc=5",
+          "date": "Sun, 20 May 2018 07:00:00 GMT",
+          "summary": "Green building design competition announced for Omani architects - Times of Oman - <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQa0g5Tm1BTVM2MXhLOFY0LUhoZjhwbXdFTzZGUDdRaVRxSG5MSXlFWEFiRDJMVGtCVGFiZWlVM09ZV0FuTW9nUnhFZUpwQWxZcGZPdWU1MzJaZFdXLTZxM2V1Z05OLW1lb0hCcm04QU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRlFNWVZaWWt1RGw0ZUVDT0MwQld5UnVRbjdLc1lyVkpWNFRrU1JLcHRFMGprakowSDBVM2hQOEVyaHg0WnZHMm9aQ3luZ3dqMUpTTENaaV9BOVFUek1hT01La2Y3d0ZXVDZ2RWxPQWdYLWd2TU8xU2dFeDczNHhnb1hBT0xMNWdaWm1uT1hLNmVsUkkwMWswV2p1MFNwY1FBZGxHZS1pV05ibEdsUGI3Z3JrcTdkb2NFMllIejhn?oc=5",
+          "date": "Sun, 30 Mar 2025 07:00:00 GMT",
+          "summary": "Lebanese Army Arrests Operatives Responsible For Rockets Launched At Israel - i24NEWS - <a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQRlFNWVZaWWt1RGw0ZUVDT0MwQld5UnVRbjdLc1lyVkpWNFRrU1JLcHRFMGprakowSDBVM2hQOEVyaHg0WnZHMm9aQ3luZ3dqMUpTTENaaV9BOVFUek1hT01La2Y3d0ZXVDZ2RWxPQW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE10Z2JWWkFyMDloNGtvWDgwRGVyVGtwNGVydXJ0Yk9BMHB0cFJVME5zUVVYb1hScmxEU0ZyUkRoekdmc1Y3UF9BUElfSHVzdnBIUGNOX09QdVlEaDFoSUHSAWNBVV95cUxPZjhsUGo2WDV1VEJYemlkcXVVaXRjbmFRU21xbkdsWXpuYnJKbkp5SlJPdk8wcXBKLXlnT3duMDF3NHEtc1JhX2xZRE4zdjQ5T3d3WVNta2xSVlpXdUNsYVpPaHM?oc=5",
+          "date": "Thu, 20 Nov 2025 10:48:41 GMT",
+          "summary": "The People's Bank of China and the Central Bank of the UAE launch payment connectivity and the JISR multilateral digital currency bridge project - Bitget - <a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE10Z2JWWkFyMDloNGtvWDgwRGVyVGtwNGVydXJ0Yk9BMHB0cFJVME5zUVVYb1hScmxEU0ZyUkRoekdmc1Y3UF9BUElfSHVzdnBIUGNOX09QdVlEaDFoSUHSAWNBVV95cUxPZjhsUGo2WD...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWWE4cHlsY2x4dEpfUTNndDVJVjJla29JWnhhdjNKN3BoWmVQQVZWSFRoTWtIdE1ETWhJSG8wSTJ1bGFrckF3MTZ5VjhQUHc3SDllQVBpSU90b0QyaU0tODJSX1hIR2JjaUQ0NktFRGc4NTFwdlhnY1RydnhodDZCYkNoLVdpVF9GVDE5WmZ3U1lkai1UUGJUbTVqWEZyV09VYTZEd0lSV3ZDTDhTV21UcGxrcjFVb1dqTFJBZ19vdVh2VkZRSmVOVA?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Jisr announces the launch of Jisr Spend and its new brand identity - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWWE4cHlsY2x4dEpfUTNndDVJVjJla29JWnhhdjNKN3BoWmVQQVZWSFRoTWtIdE1ETWhJSG8wSTJ1bGFrckF3MTZ5VjhQUHc3SDllQVBpSU90b0QyaU0tODJSX1hIR2JjaUQ0NktFRG...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRlFNWVZaWWt1RGw0ZUVDT0MwQld5UnVRbjdLc1lyVkpWNFRrU1JLcHRFMGprakowSDBVM2hQOEVyaHg0WnZHMm9aQ3luZ3dqMUpTTENaaV9BOVFUek1hT01La2Y3d0ZXVDZ2RWxPQWdYLWd2TU8xU2dFeDczNHhnb1hBT0xMNWdaWm1uT1hLNmVsUkkwMWswV2p1MFNwY1FBZGxHZS1pV05ibEdsUGI3Z3JrcTdkb2NFMllIejhn?oc=5",
+          "date": "Sun, 30 Mar 2025 07:00:00 GMT",
+          "summary": "Lebanese Army Arrests Operatives Responsible For Rockets Launched At Israel - i24NEWS - <a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQRlFNWVZaWWt1RGw0ZUVDT0MwQld5UnVRbjdLc1lyVkpWNFRrU1JLcHRFMGprakowSDBVM2hQOEVyaHg0WnZHMm9aQ3luZ3dqMUpTTENaaV9BOVFUek1hT01La2Y3d0ZXVDZ2RWxPQW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbmVEWHBDWFVoa0dZR1V4cGZGbmZFT3RlOUY5SDAzNDNLT3pTdHpCUTdvMEdaTUdjTDFGaE5yZnJRdnM5cXB2cVhGQUxtOGJaQi1LX2ZuZ3ZPZEY4Y19ramszZE8xZVNKSElHVTYwekV1d1RQOWtxbDIwUVdEcm5INVpPRkxseDk3S0FUbTVCUkZtejRKNjIwWA?oc=5",
+          "date": "Wed, 01 Oct 2025 07:00:00 GMT",
+          "summary": "Programme to train Omanis in financial sector launched - Times of Oman - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQbmVEWHBDWFVoa0dZR1V4cGZGbmZFT3RlOUY5SDAzNDNLT3pTdHpCUTdvMEdaTUdjTDFGaE5yZnJRdnM5cXB2cVhGQUxtOGJaQi1LX2ZuZ3ZPZEY4Y19ramszZE8xZVNKSElHVTYwek...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOUHc4dThGS3pWa1dqVy15QXR4LTFxVjgyNFFucENLbEVDM0dfMjU1OVpuV0hka3kxb2xNTzE5ZnBYOHZmMjJpNUZ2c0RDSTYyTF8wUjBmVG4xUnRmNXUxOFpJV2w2cXI5S3RyUkJDSlZPdXppQ3VXbW9EdTdaNE5aZVY1ZF84ODlIQXg2WDJmaVJISVRJcEhIYzBHY2tIM25zdHBOMDJobktDUTlWZFJ3a0hsMGhjUlYyZEpUU2h4SkxJdTBGOXBTdVExNm43ZWdFeDFQc0dGUGE?oc=5",
+          "date": "Sun, 25 Jun 2023 07:00:00 GMT",
+          "summary": "At Least Nine Dead in Syria Airstrike That Activists Say Was Launched by Russia - Bloomberg.com - <a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxOUHc4dThGS3pWa1dqVy15QXR4LTFxVjgyNFFucENLbEVDM0dfMjU1OVpuV0hka3kxb2xNTzE5ZnBYOHZmMjJpNUZ2c0RDSTYyTF8wUjBmVG4xUnRmNXUxOFpJV2w2cXI5S3RyUkJDSl...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5falNjdmZIX2YxVTNYdl9NVGJkSGlVTVBPMm9XNEM1S0o1OHlJVjFEcmV3dndNM3NmbmxJV0FSODJLRGhUbU41cGtuOXBMVEpQQmVzWE1wLWZTS2s1azFFYkhQQdIBY0FVX3lxTE5falNjdmZIX2YxVTNYdl9NVGJkSGlVTVBPMm9XNEM1S0o1OHlJVjFEcmV3dndNM3NmbmxJV0FSODJLRGhUbU41cGtuOXBMVEpQQmVzWE1wLWZTS2s1azFFYkhQQQ?oc=5",
+          "date": "Fri, 21 Nov 2025 03:05:39 GMT",
+          "summary": "Shiba Inu and Bitget Wallet launch SHIB-themed crypto card - Bitget - <a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE5falNjdmZIX2YxVTNYdl9NVGJkSGlVTVBPMm9XNEM1S0o1OHlJVjFEcmV3dndNM3NmbmxJV0FSODJLRGhUbU41cGtuOXBMVEpQQmVzWE1wLWZTS2s1azFFYkhQQdIBY0FVX3lxTE5fal...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQc3l5QVpZcGE5Y0drU2pJajQwWGVkODRscWlQcnh3aWZqYi1ubkV6aHBjdGNhX2Vtd0h3QXJVYlZ0dmZCcTNfZ3U3V1k5Skw3ek51WEdZcGNRY2huRFZwY2c1RUN5TXMybTlEbmtOM191M3R6V1Q1d08wRENWOUJpMGUweTIyS3lxaV9zQ0o1dUZxNG1Eb01OSHA3aG1jUHB4YXFNdEpMaVFNelNjSWhYNklHWnpyNjN5dU5mS25CZzdLUlBtMlE?oc=5",
+          "date": "Thu, 10 Sep 2015 07:00:00 GMT",
+          "summary": "Turkistan Islamic Party releases photos from captured Syrian regime airbase - Long War Journal - <a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQc3l5QVpZcGE5Y0drU2pJajQwWGVkODRscWlQcnh3aWZqYi1ubkV6aHBjdGNhX2Vtd0h3QXJVYlZ0dmZCcTNfZ3U3V1k5Skw3ek51WEdZcGNRY2huRFZwY2c1RUN5TXMybTlEbmtOM1...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPVG5ScnBhOS0wLWFLel9yeGdveFhEZ1Nhb3p6M1haRUhralB6RzlONlppZC1XVy1PUU9HRGVCUlc1MnlwUTEzTUhySXZkQTlZMEcwLWdYQXh1cDlqS1FNOVZLMDEtU2hZZjExazV6YmtqQV91Z3lwOFlQcG9tamZnaDJGb1c1MFNZZ3NJb29aaDZxUzdQRU5iX2Q0S1Qwc0lmUFNmYURKbUFKWmEybkk3SVRFaFJLdzdsTW5DblBKYUVQUzFoTWhvczFLOF9KRDFJNUNlYmtrbmg1MHJ4elBfMGxzRWk?oc=5",
+          "date": "Sun, 26 Nov 2023 08:00:00 GMT",
+          "summary": "Zubair Enterprises Development Centre and Al Jisr Foundation launch the 2nd phase of the Azm training programme - Times of Oman - <a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxPVG5ScnBhOS0wLWFLel9yeGdveFhEZ1Nhb3p6M1haRUhralB6RzlONlppZC1XVy1PUU9HRGVCUlc1MnlwUTEzTUhySXZkQTlZMEcwLWdYQXh1cDlqS1FNOVZLMDEtU2hZZjExazV6Ym...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSmZ2VTBXcXNzQ0tJelJGXzJ1Mi1BZzU0SHFldUpEdU1tQTE5NTR6UXJ5czRyczFuZHJHZkcyR1FKMkJXckRKNUdpNllEb1pHZlhIakxWSU5MVmpZVEY4WmR2SlpBb0o4V01mUkJLaXZmX0I1b1ZvUV9sR19YMTQzbDJIWG5mZG40X3lwaUlNLUFyVjZlcHc?oc=5",
+          "date": "Tue, 08 Oct 2024 07:00:00 GMT",
+          "summary": "Ukraine Launches 4 Missiles at Bridge in Crimea - وردنا - <a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNSmZ2VTBXcXNzQ0tJelJGXzJ1Mi1BZzU0SHFldUpEdU1tQTE5NTR6UXJ5czRyczFuZHJHZkcyR1FKMkJXckRKNUdpNllEb1pHZlhIakxWSU5MVmpZVEY4WmR2SlpBb0o4V01mUkJLaX...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNVp3cjgyX3dwTUJoUHFlQkdtNl9ORlVCV0lkNlNZZ2JCOURkc3JCQVVGbHpwXzdqczM0eFNtZ3VISUlKYmt0eHRfZVg0QVdsUG00QmY4SzNvMDJCSFF0cXY2MV9RLThYZjZNbExNUkt4ZWJseTMyelZIT3RpN1FPT2pHTWRxS2YwazlRMmpuNHNRQWZNbW4weElaQkJuQ1EwZFpVV0h0ZzN2ZFQ5SFhVYTJMenY0S0ZWX04xdWtlWQ?oc=5",
+          "date": "Fri, 28 Mar 2025 07:00:00 GMT",
+          "summary": "Lebanese Army says identified rocket launch site toward Israel in Qaaqaaiyet El Jisr, Nabatieh - LBCI Lebanon - <a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQNVp3cjgyX3dwTUJoUHFlQkdtNl9ORlVCV0lkNlNZZ2JCOURkc3JCQVVGbHpwXzdqczM0eFNtZ3VISUlKYmt0eHRfZVg0QVdsUG00QmY4SzNvMDJCSFF0cXY2MV9RLThYZjZNbExNUk...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTVN4RzU3V2w0amtOc2YxUEMzVTBoTnVMZXQ1bjliREV1MkJkeUJMNGhkaEZEWkcwbHM5bkliYzhLeEEyRWFpSU53d1RtelgtTE1ueWNMcGY2M3RNdnNaS2RnVWZ1RU5YQlljZFNvbkdPYkJQM21XbEZ2UXA3WG1tR0RkR29fUkk?oc=5",
+          "date": "Fri, 15 Jan 2021 08:00:00 GMT",
+          "summary": "National breastfeeding campaign launched - Muscat Daily - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNTVN4RzU3V2w0amtOc2YxUEMzVTBoTnVMZXQ1bjliREV1MkJkeUJMNGhkaEZEWkcwbHM5bkliYzhLeEEyRWFpSU53d1RtelgtTE1ueWNMcGY2M3RNdnNaS2RnVWZ1RU5YQlljZFNvbk...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdi02WGtFQkJ3T1pwc1Vya1huSVBXTWJoOFUxTk1Uc0ZxaEhnWW8xWEdwbHBNelJKSEkyNWdBNFNuaGlNTjBoODJ2d2xadHA4Sm40eW9RemV2Y2R3UmJiWnFqUUNoQVZPU3ZOTU4tMEpMSXhQZUdGX2RIT0d2a2VYVjRYOWZZVWluSEFZMWRvZVR3dDdmWDlDSzYxai1MdTA?oc=5",
+          "date": "Thu, 20 Nov 2025 18:05:40 GMT",
+          "summary": "UAE and China Launch Direct CBDC Payments and Jisr Platform - The Crypto Times - <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQdi02WGtFQkJ3T1pwc1Vya1huSVBXTWJoOFUxTk1Uc0ZxaEhnWW8xWEdwbHBNelJKSEkyNWdBNFNuaGlNTjBoODJ2d2xadHA4Sm40eW9RemV2Y2R3UmJiWnFqUUNoQVZPU3ZOTU4tME...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 16 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 2,
+    "signals_without_evidence": 0,
+    "confidence_score": 0.640625,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

@@ -51,7 +51,7 @@ export class ExaService {
   constructor() {
     this.apiKey = config.EXA_API_KEY;
   }
-  async searchCompanies(query: any, count: number, excludeDomains: string[]): Promise<{
+  async searchCompanies(query: any, count: number, excludeDomains: any): Promise<{
     map(arg0: any): unknown;
     exaCompanies: ExaCompany[];
     websetId: any;

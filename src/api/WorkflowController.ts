@@ -1,8 +1,9 @@
 // src/api/WorkflowController.ts
 import { FastifyInstance, FastifyRequest } from 'fastify';
 import { CompanyWorkflow } from '../workflows/CompanyWorkflow.js';
-import { WebSocketManager } from '../websocket/WebSocketManager.js';
-import { supabaseService } from '../services/SupabaseService.js';
+import { wsManager } from '../websocket/WebSocketManager.js';
+import { mongoDBService } from '../services/MongoDBService.js';
+
 import { sessionService } from '../services/SessionService.js';
 import { ConversationContext, intentClassifier } from '../services/IntentClassificationLLM.js';
 
@@ -14,7 +15,7 @@ interface StartWorkflowBody {
 
 export async function WorkflowController(
   fastify: FastifyInstance,
-  options: { wsManager: WebSocketManager }
+  options: { wsManager: WebSocket }
 ) {
   const { wsManager } = options;
   fastify.post('/process-message', async (request: FastifyRequest<{ 
@@ -109,7 +110,7 @@ export async function WorkflowController(
 }
 
 async function getICPModel(modelId: string , userId: string): Promise<any> {
-  let icpmodel = supabaseService.getIcpModel(modelId);
+  let icpmodel = mongoDBService.getIcpModel(modelId);
   if (icpmodel) {
     return icpmodel
   }

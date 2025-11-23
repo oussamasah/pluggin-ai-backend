@@ -1,0 +1,183 @@
+{
+  "company": "Squadio | سكواديو",
+  "website": "https://www.squadio.com",
+  "analysis_date": "2025-11-22",
+  "requested_signals": [
+    "new_funding_round",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2JkdzYwOFlwSUR6a0Rhdw?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "Squadio Raises $3 Million in Pre-Series A - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RERlUkdnLVIwamt5Z0hFa0V5TG9Qb080a2FPREJqYmdabGZ6OWFxOVRkX040UQ?oc=5",
+          "date": "Fri, 31 Oct 2025 07:00:00 GMT",
+          "summary": "INFOGRAPHIC: Startup Funding in Africa and the Middle East — Week 44, 2025 - Techloy - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0VXbmN5b29hOHk5NEZuTGNuNDNSVEdaN1BHRVBoMA?oc=5",
+          "date": "Fri, 14 Jan 2022 08:00:00 GMT",
+          "summary": "Saudi Arabia’s Squadio raises Seed round from SEEDRA Ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9odEh2RDRkTlhhd3RCMElVMF9iVFQ5RUY2SFhpaktJZFFsejhaclFIOE5LTi1lTUVNNm5zZXI1bEx1U2ZDX2laT1RMTV9pOC1zTXVoSUdBenZOLThRV3RZQnhkeWtyeENveXcteXhPWUpGWURnOV9ob1JJNA?oc=5",
+          "date": "Wed, 12 Feb 2025 08:00:00 GMT",
+          "summary": "Saudi investor Joa Capital rolls out $80-mn fund - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE9odEh2RDRkTlhhd3RCMElVMF9iVFQ5RUY2SFhpaktJZFFsejhaclFIOE5LTi1lTUVNNm5zZXI1bEx1U2ZDX2laT1RMTV9pOC1zTXVoSUdBenZOLThRV3RZQnhkeWtyeENveXcteXhPWU...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLUhDQVhLbWhaV2ppTWNRdlc3UjRFLTB3RHdKcFZqNGtOTUUwdjBIRERhczVzNS10SnNLN2hHZUtFRFY0MTVQa08tcUwtWlRIRGtPMVRvNlBTZ2JMcHQ3aGc5X2xDbGlGRkVsdmduU1lOOGpuX2lkanBreEtxa3VnYWV0QXluaGZNZmlJ?oc=5",
+          "date": "Tue, 28 May 2024 07:00:00 GMT",
+          "summary": "Saudi PIF-backed Jada commits capital to healthcare-focused PE fund - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLUhDQVhLbWhaV2ppTWNRdlc3UjRFLTB3RHdKcFZqNGtOTUUwdjBIRERhczVzNS10SnNLN2hHZUtFRFY0MTVQa08tcUwtWlRIRGtPMVRvNlBTZ2JMcHQ3aGc5X2xDbGlGRkVsdmduU1...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2JkdzYwOFlwSUR6a0Rhdw?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "Squadio Raises $3 Million in Pre-Series A - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RERlUkdnLVIwamt5Z0hFa0V5TG9Qb080a2FPREJqYmdabGZ6OWFxOVRkX040UQ?oc=5",
+          "date": "Fri, 31 Oct 2025 07:00:00 GMT",
+          "summary": "INFOGRAPHIC: Startup Funding in Africa and the Middle East — Week 44, 2025 - Techloy - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0VXbmN5b29hOHk5NEZuTGNuNDNSVEdaN1BHRVBoMA?oc=5",
+          "date": "Fri, 14 Jan 2022 08:00:00 GMT",
+          "summary": "Saudi Arabia’s Squadio raises Seed round from SEEDRA Ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE82SHVYOFZkVU9IelUxandGMDg0TVQyYVJfbktYc0xYdURDMDdmS0JHeW1sUlZKWnlZaXZmLXhrclkxYlRNRHRZeExSZUZ1VlFJbDlR?oc=5",
+          "date": "Sat, 01 Nov 2025 07:00:00 GMT",
+          "summary": "Saudi startups surge ahead with bold deals, fresh capital - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE82SHVYOFZkVU9IelUxandGMDg0TVQyYVJfbktYc0xYdURDMDdmS0JHeW1sUlZKWnlZaXZmLXhrclkxYlRNRHRZeExSZUZ1VlFJbDlR?oc=5\" target=\"_blank\">Saudi startups ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2JkdzYwOFlwSUR6a0Rhdw?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "Squadio Raises $3 Million in Pre-Series A - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE82SHVYOFZkVU9IelUxandGMDg0TVQyYVJfbktYc0xYdURDMDdmS0JHeW1sUlZKWnlZaXZmLXhrclkxYlRNRHRZeExSZUZ1VlFJbDlR?oc=5",
+          "date": "Sat, 01 Nov 2025 07:00:00 GMT",
+          "summary": "Saudi startups surge ahead with bold deals, fresh capital - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE82SHVYOFZkVU9IelUxandGMDg0TVQyYVJfbktYc0xYdURDMDdmS0JHeW1sUlZKWnlZaXZmLXhrclkxYlRNRHRZeExSZUZ1VlFJbDlR?oc=5\" target=\"_blank\">Saudi startups ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RERlUkdnLVIwamt5Z0hFa0V5TG9Qb080a2FPREJqYmdabGZ6OWFxOVRkX040UQ?oc=5",
+          "date": "Fri, 31 Oct 2025 07:00:00 GMT",
+          "summary": "INFOGRAPHIC: Startup Funding in Africa and the Middle East — Week 44, 2025 - Techloy - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2JkdzYwOFlwSUR6a0Rhdw?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "Squadio Raises $3 Million in Pre-Series A - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERjhlcktDY0hoYjVRX0ZUMFZZMWRXRkJjMGpOMm9Uall2ZU4tWDd0T3pDMkRON3A0NjBxN0kxWGdXWTdBcDB6MjRkZ2hmcHRNSExEYzlvVUdhRnYzeHhQWmhJUm96T003R1d0aE10d2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0VXbmN5b29hOHk5NEZuTGNuNDNSVEdaN1BHRVBoMA?oc=5",
+          "date": "Fri, 14 Jan 2022 08:00:00 GMT",
+          "summary": "Saudi Arabia’s Squadio raises Seed round from SEEDRA Ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RERlUkdnLVIwamt5Z0hFa0V5TG9Qb080a2FPREJqYmdabGZ6OWFxOVRkX040UQ?oc=5",
+          "date": "Fri, 31 Oct 2025 07:00:00 GMT",
+          "summary": "INFOGRAPHIC: Startup Funding in Africa and the Middle East — Week 44, 2025 - Techloy - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNLUItNS1Gc2dZTDNuYlZnSmtRa0x4NVozWHduanZ6ZnJVelR6dzl6ejk5eDVaRExLdm9lZUhzTnZSMGVGOWNzS0xVenpJdzVDM1JEaUJ6aF8xZjJraldUeV81OEl2TzZFQWJzMmN0RE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLUhDQVhLbWhaV2ppTWNRdlc3UjRFLTB3RHdKcFZqNGtOTUUwdjBIRERhczVzNS10SnNLN2hHZUtFRFY0MTVQa08tcUwtWlRIRGtPMVRvNlBTZ2JMcHQ3aGc5X2xDbGlGRkVsdmduU1lOOGpuX2lkanBreEtxa3VnYWV0QXluaGZNZmlJ?oc=5",
+          "date": "Tue, 28 May 2024 07:00:00 GMT",
+          "summary": "Saudi PIF-backed Jada commits capital to healthcare-focused PE fund - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLUhDQVhLbWhaV2ppTWNRdlc3UjRFLTB3RHdKcFZqNGtOTUUwdjBIRERhczVzNS10SnNLN2hHZUtFRFY0MTVQa08tcUwtWlRIRGtPMVRvNlBTZ2JMcHQ3aGc5X2xDbGlGRkVsdmduU1...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE12YzdSZHpwS25LeUkyQ004QTZxdmdnaTdUVGhJQlphc0xHYWJfbnRFNE9YaVlEWHpoNGtFMmE5Umc2cDlBaFp2ZUdubXpXWWJvc0pVWW5XZW44ZWtZSVh4aUpJeGI?oc=5",
+          "date": "Sat, 01 Nov 2025 07:00:00 GMT",
+          "summary": "Saudi startups surge ahead with bold deals, fresh capital - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE12YzdSZHpwS25LeUkyQ004QTZxdmdnaTdUVGhJQlphc0xHYWJfbnRFNE9YaVlEWHpoNGtFMmE5Umc2cDlBaFp2ZUdubXpXWWJvc0pVWW5XZW44ZWtZSVh4aUpJeGI?oc=5\" target=\"...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0VXbmN5b29hOHk5NEZuTGNuNDNSVEdaN1BHRVBoMA?oc=5",
+          "date": "Fri, 14 Jan 2022 08:00:00 GMT",
+          "summary": "Saudi Arabia’s Squadio raises Seed round from SEEDRA Ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPcWplemdKMVhoMmFGYVlPbWJkX3JmUG5Fa29DSUVxZEV1Y1hNVmlaemJMR1hwOTFxV05WSmNlZWxkR1NtQ1NVbWJlMFUtS2w0VU9oQ1djMWlsME9YUlNxTTR6dlVKbGFYaGxnNlQ1N0...",
+          "confidence": 0.3,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 18 relevant evidence pieces"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 1,
+    "signals_without_evidence": 1,
+    "confidence_score": 0.43333333333333324,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

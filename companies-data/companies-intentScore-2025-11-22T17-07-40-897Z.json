@@ -1,0 +1,32 @@
+{
+  "score": 92,
+  "reason": "Unifonic shows very high intent based on new funding rounds and the recent product launch activity, both of which indicate strong growth momentum. The funding signal is particularly compelling with a robust set of evidence, while the product launch signal, despite being older, reflects continuing innovation efforts.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "excellent",
+      "original_score": 100,
+      "confidence": 0.5675000000000001
+    },
+    {
+      "signal": "new_product",
+      "score": 85,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 85,
+      "confidence": 0.7000000000000001
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "Continued investments indicate a strong belief in Unifonic's market potential and growth trajectory.",
+    "The launch of new products suggests an ability to innovate and meet emerging market needs, which could position Unifonic favorably against competitors."
+  ],
+  "timing_recommendation": "immediate",
+  "risk_factors": [
+    "Dependence on external funding can create vulnerability if investor sentiment shifts.",
+    "The lack of recent product launch news could indicate a stagnation in innovation if not addressed."
+  ]
+}

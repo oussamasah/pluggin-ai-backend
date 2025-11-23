@@ -1,0 +1,34 @@
+{
+  "score": 74,
+  "reason": "The analysis shows strong signals primarily from new funding, suggesting significant business momentum. However, the new product launch signal is weaker and lacks recent evidence, reducing overall score. The combination of a high funding round and a moderate product innovation leads to a comprehensive intent score of 74.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.568421052631579
+    },
+    {
+      "signal": "new_product",
+      "score": 77,
+      "impact": "medium",
+      "evidence_quality": "fair",
+      "original_score": 77,
+      "confidence": 0.6
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "Mozn is in a strong financial position with new funding that can fuel growth and innovation.",
+    "The absence of recent new product launches might indicate a potential area for increased focus to sustain market interest.",
+    "Cross-referencing industry trends may reveal opportunities for additional product development aligned with market needs."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Potential overstretching of resources if funding is not allocated efficiently.",
+    "Risk of competitors overtaking due to lapses in innovation or product updates.",
+    "Reliance on external funding may introduce volatility if market conditions change."
+  ]
+}

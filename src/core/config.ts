@@ -33,6 +33,9 @@ loadEnv();
 // Environment variable schema
 const envSchema = z.object({
   // API Keys (required)
+  ANTHROPIC_API_KEY : z.string().min(1, "ANTHROPIC_API_KEY  is required"),
+  ANTHROPIC_API_URL : z.string().min(1, "ANTHROPIC_API_URL  is required"),
+  MONGODB_URI : z.string().min(1, "MONGODB_URI  is required"),
   PERPLEXITY_API_KEY: z.string().min(1, "PERPLEXITY_API_KEY is required"),
   OPENAI_API_KEY: z.string().min(1, "OPENAI_API_KEY is required"),
   OPENAI_MODEL: z.string().min(1, "OPENAI_MODEL is required"),
@@ -90,6 +93,9 @@ class ConfigManager {
 
       // Load environment variables
       const envVars = {
+        ANTHROPIC_API_KEY : process.env.ANTHROPIC_API_KEY ,
+        ANTHROPIC_API_URL : process.env.ANTHROPIC_API_URL ,
+        MONGODB_URI : process.env.MONGODB_URI ,
         PERPLEXITY_API_KEY: process.env.PERPLEXITY_API_KEY,
         OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY,
         OPENAI_API_KEY: process.env.OPENAI_API_KEY,

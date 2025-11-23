@@ -1,0 +1,1856 @@
+{
+  "company": "HALA",
+  "website": "https://www.hala.com",
+  "analysis_date": "2025-11-23",
+  "requested_signals": [
+    "new_funding_round",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdGJQbmR1YlpxdzlueEJDTXZLcEh1eE50OGdTT3BoYzFlUENFdEJ0Q1l5eVZJR3BSRnRUazVZOUd5RzlpMGp5UDM2YmU4WWs3cmpLR0cwU0dueWFrQzBuODZ0T0IyLV92YUM1RWRUQW9RblJwVzZMczg1Vk5pTGs3b3NrSlVnWWV0X2dpQW9nX2NZeGFySzFNdDd2el9DNkcwSUstdkdpemlRRQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157m in one of the Middle East’s largest fintech Series B rounds, led by TPG and Sanabil Investments - GlobeNewswire - <a href=\"https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ21oUTc4SDJIM0hELXVJMGdYcmllekpYT3pETE1ZYnF6V0Z2bG0yMzdpYTI0VHNzeXNGWXRFSXo5VzEyNm1Gb3JoU3BjZW11bnplc3pCNGR5Ti1FczVKcW5RTFh5akgzWWFEZjFYYUFhTXh3TEZHTFM3dmdCUW1GQm9YSTRpMjM1S0Ffbm40NmhBRXA3NkdF?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "HALA Raises $157 Million in Series B to Expand FinTech Services for Saudi SMEs - FinTech Weekly - <a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ21oUTc4SDJIM0hELXVJMGdYcmllekpYT3pETE1ZYnF6V0Z2bG0yMzdpYTI0VHNzeXNGWXRFSXo5VzEyNm1Gb3JoU3BjZW11bnplc3pCNGR5Ti1FczVKcW5RTFh5akgzWWFEZjFYYU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVmxtWXY0VFk4T0c1WXJvVDZsMUx5MnlUaEE?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech Hala raises landmark $157m Series B - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVm...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ0NtSmZtZWJRRnFSRGtOREdJTHBFUTFYQ0VRS0FteTF3ME5CdHZsOTJ2MmEtcGM4OFYtQ3RQc0hqN1A4VVBYNkNtVDdhMkc2ZU5WMS16MzhXTldBd2ZfWS1FR2wtQXhPX21NazFMLVVUd3JWSGFzcThvejE3QkhUZUtFUQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157 million in landmark Series B round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ0NtSmZtZWJRRnFSRGtOREdJTHBFUTFYQ0VRS0FteTF3ME5CdHZsOTJ2MmEtcGM4OFYtQ3RQc0hqN1A4VVBYNkNtVDdhMkc2ZU5WMS16MzhXTldBd2ZfWS1FR2wtQXhPX21NazFMLV...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOM0ZiQk90TFZid1lmenVBclZVN3dJR1dHOGk0NDhmOERPWFV3UzVUdjJvSGFvREtCVnhsZWtVcHJYVGtxRzVIaDB4eG93SWVWV1EzdHZHZWN0VnpBWGdVMTlHdjZaMjkwSHZRT2JCUDN3TER1U29UNE1sLVVNZXBTc3FmSzl2bUREMkNjQTNndGIyVlpLMnfSAVZBVV95cUxOS1JHN0VYLTlYMHFadmgyTHQ5WXphU09Wb25MQ2VzTkxRR2poZ2Fad2ZCVDFVNUpXNW5oVUx3M05vODJxMFdrWENIQU0tMnBic20tZVF5dw?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi Fintech Hala Secures $157M Of Series B Funding - Law360 - <a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOM0ZiQk90TFZid1lmenVBclZVN3dJR1dHOGk0NDhmOERPWFV3UzVUdjJvSGFvREtCVnhsZWtVcHJYVGtxRzVIaDB4eG93SWVWV1EzdHZHZWN0VnpBWGdVMTlHdjZaMjkwSHZRT2JCUD...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNVItaVJEbWhRdm9sTU1QQQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Hala Raises $157M in Series B Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNV...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iaWdaZF9sNlhBcGxaNTI4OUJvak1rdWlOZ25hWXFTd1o3QTVzSi1BZlpUSVlod3lYNElLSVAwbXdmWkt5QUxJbm1sWUg0QmZrMFFrejB5X1lNQ0hZdWIyQ0FxalhfT1N0?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Hala Secures $157M Series B Funding - USA Herald - <a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iaWdaZF9sNlhBcGxaNTI4OUJvak1rdWlOZ25hWXFTd1o3QTVzSi1BZlpUSVlod3lYNElLSVAwbXdmWkt5QUxJbm1sWUg0QmZrMFFrejB5X1lNQ0hZdWIyQ0FxalhfT1N0?oc=5\" tar...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONVU0dVhocUdXTE82OTgxb3FEVEw2NnBDWm1sNEJxN2Myd2RiWVJjeWlaX285S0ktRUlrOFVwemdxbFRHS3ZtR2JSYWNOTDRtN3o3OHZHYV92UDg0eE41Q1ZkNGM4d1JYRlZsLWtIV2ozcjRBOE9fdFI3VTZUT3ktSk9BZHh3eWJSU1FPY3ZaN0E0eGRfVnE0eA?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA secures $157m Series B to expand FinTech solutions - IBS Intelligence - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxONVU0dVhocUdXTE82OTgxb3FEVEw2NnBDWm1sNEJxN2Myd2RiWVJjeWlaX285S0ktRUlrOFVwemdxbFRHS3ZtR2JSYWNOTDRtN3o3OHZHYV92UDg0eE41Q1ZkNGM4d1JYRlZsLWtIV2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdG9nYlVNcUg4eTRfdXBhVEJ0bGtKdm9kUFFOWWVENGxoLXdJQmNkY3Y4VWtzdjlub1owRnJHeHJ4SDFDVXNlX1U3QXhCOFJFTUlFSkdUbHV3NDc1R3BtekRSSExCVWFGRW5PdW43OVNBV3I2LXdzcHUtZDNGbXAzMlR0ZTJQVlhtZFhCU2RmVQ?oc=5",
+          "date": "Mon, 11 Aug 2025 07:00:00 GMT",
+          "summary": "Startup Funding: Ali A. Abussaud, CEO, Hala VC - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOdG9nYlVNcUg4eTRfdXBhVEJ0bGtKdm9kUFFOWWVENGxoLXdJQmNkY3Y4VWtzdjlub1owRnJHeHJ4SDFDVXNlX1U3QXhCOFJFTUlFSkdUbHV3NDc1R3BtekRSSExCVWFGRW5PdW43OV...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbDlyOThwWU5qYjZFckg1QkVCUHFSOEloeVNrTldSTEJwU0ZCMmFDdTc1NWNPLXR6WmZlT2hHZGFoTnZwSWpvSWhvZFB0S2Y5OUg2bnlRX3RxazdoMGVmQVFxSWFvVjRXNnA2bXFhMzlURXZOMDl3ZWZFT0JiN19XYjZwS01NTGpRUGowOVZfTWo5WWVR?oc=5",
+          "date": "Fri, 19 Sep 2025 07:00:00 GMT",
+          "summary": "MENA Digest: Saudi firms HALA, Bynow, Oman’s Rihal, others get funding - VCCircle - <a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPbDlyOThwWU5qYjZFckg1QkVCUHFSOEloeVNrTldSTEJwU0ZCMmFDdTc1NWNPLXR6WmZlT2hHZGFoTnZwSWpvSWhvZFB0S2Y5OUg2bnlRX3RxazdoMGVmQVFxSWFvVjRXNnA2bXFhMz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE83Q2hWQ0oyOVFvZnVQTV9DZWNxWnFPZkk1dUpQd29Eb0o1SEtMdE5oRWJmQ1FKeUJFTFVYMFRlX3Z4OUEtc21LUjFfQlB5YVpfd2JDbm15U1dNZFZOOEl6NUJucjhweXJzbXlYU1ZiZzVfMkUzTjVHNGxkZlZHdw?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech firm Hala lands $157m series B - Tech in Asia - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE83Q2hWQ0oyOVFvZnVQTV9DZWNxWnFPZkk1dUpQd29Eb0o1SEtMdE5oRWJmQ1FKeUJFTFVYMFRlX3Z4OUEtc21LUjFfQlB5YVpfd2JDbm15U1dNZFZOOEl6NUJucjhweXJzbXlYU1ZiZz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaHFvZG9JX1p6YUJ4Z2RHd24wN1N2MDhsWDRJQmhHOWpLd0pEdU8tX1FYYW81bTdmakdUME5zN2JXcndMaTdHckRUQ1l3UVFRT0VxbWp3b2dWUEp1cUczQ3FyOEk5eDBLeGgyRkZGMEhxQl9RbGV2V0ZKRmx3OGJEaFprUm13WU1kcG5FandYeE1XWGpQWUhoVHJhYnlPdw?oc=5",
+          "date": "Tue, 16 Sep 2025 11:18:57 GMT",
+          "summary": "HALA Raises $157M in One of MENA’s Largest Fintech Series B Rounds - cairoscene.com - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPaHFvZG9JX1p6YUJ4Z2RHd24wN1N2MDhsWDRJQmhHOWpLd0pEdU8tX1FYYW81bTdmakdUME5zN2JXcndMaTdHckRUQ1l3UVFRT0VxbWp3b2dWUEp1cUczQ3FyOEk5eDBLeGgyRkZGME...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSGxDaU5rb3kwOU5zWTNlNGxXMUdTdWN4Z0x2?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech HALA raises $157m in TPG-, PIF-led Series B - DealStreetAsia - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5zVHZQcHNTNWZFX1l0b25MSG9yUVZIYmhZSmx5RnlTQ0Y5OG1CVXJLaGVEZ0FSbVZqVXVNZDVyMWU4Rkl6NHkzUmd1NUl4MUJpVDVjWGl6and1SnIxa3Izb01sM0daRjFXR1pUWDJDcUQ0Q18zNG1kQV9n?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA Raises $157m in One of Middle East’s Largest Fintech Series B Rounds - Tech | Business | Economy - Techeconomy - <a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5zVHZQcHNTNWZFX1l0b25MSG9yUVZIYmhZSmx5RnlTQ0Y5OG1CVXJLaGVEZ0FSbVZqVXVNZDVyMWU4Rkl6NHkzUmd1NUl4MUJpVDVjWGl6and1SnIxa3Izb01sM0daRjFXR1pUWDJDcU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1Yd08yLXBMQjAwM3FMSW9lM0stU0xVdk9GQ2tiY0Y0R0tiOGlpZ0N4cXFkcGpFUEZneHFmTVNPMENqN3JBaGEyV0g5NmF5UFU3N2E4b01wRGlsMDV6X1JUeTFHdGdMdFhqcVJsaFpnWWwxc0pBRThSZXBR?oc=5",
+          "date": "Wed, 13 Dec 2023 08:00:00 GMT",
+          "summary": "Nearpay Closes $14 Million in Series A - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE1Yd08yLXBMQjAwM3FMSW9lM0stU0xVdk9GQ2tiY0Y0R0tiOGlpZ0N4cXFkcGpFUEZneHFmTVNPMENqN3JBaGEyV0g5NmF5UFU3N2E4b01wRGlsMDV6X1JUeTFHdGdMdFhqcVJsaFpnWW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPemVVNGQ4NDBRYkZuRGJsNy1XWlFaMUloYXYyTkVSdHFqRmlnMHRpVVJDRjhPWWlzN1Rha2hmZUl4RXpnN25CTTZsYnRnQUZXWTI2QzFnRENUVG1RaXM5MjFjUGZrdGd2QUthN1ZPWDBKWVNFTTBDdjB3Q0VxOEJSMFV5NHB2dy1GSGFWM1B4dDE3eGpMSHg1VGg2SG1BQ0lZeXQ1SlRiZFZWNUR5QlgwZ1UwWVVxMUVkOFYyN3NzUlVkUGRUZl9QeFZR0gHPAUFVX3lxTE16OGFxUkR3RnR5aGZWMUZQcVJfNDJNUG1LLWJtRXg0NmV5aVRsZi1wYWpRd0tMUktNUmgxR1RoOFVSWklTTjVtLTdiWVlPaWNQSWRGYmlJR0JIOW9oY2JUOTY3NlFJNk1kby1pT19YOFlKRjRMbXIyWVNadGRTNzBFYmRzQktvSmhIN1c1OEdBU1ZuMW5qbjdWMmU3X3c1T1NlbFRyR2pKczJLWmZxY1hFb3pOeGdmWHR0czBZelBiNXFMdVBvblZKOHZ2XzFXVQ?oc=5",
+          "date": "Wed, 01 Oct 2025 07:00:00 GMT",
+          "summary": "iGoWise Mobility Secures ₹8.2 Cr Funding to Launch India’s First Smart Electric Trike - EMobility+ - <a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPemVVNGQ4NDBRYkZuRGJsNy1XWlFaMUloYXYyTkVSdHFqRmlnMHRpVVJDRjhPWWlzN1Rha2hmZUl4RXpnN25CTTZsYnRnQUZXWTI2QzFnRENUVG1RaXM5MjFjUGZrdGd2QUthN1ZPWD...",
+          "confidence": 1,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTDNQakRHN2ZURzA3TWlXSDBaZHpCQUZIQjlJZlJBMnpMVmU1UnRnbUlXT3E2TVFud2J2SlRHdkUzcGtOcHV1NlhqNkI5cFpLbGVPak1aT19DWExRc3I5WnF5VmdmT1dXd0FOYlA3N29vZlZUZVd3OFZWeW1CN2dVUHFMMi1RUUQycFAwY05jSU5UU3hjcUNhQVZkbzZkVFhRYXhR?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility Secures Rs 51 Cr In Pre-series A Funding Round - BW Disrupt - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNTDNQakRHN2ZURzA3TWlXSDBaZHpCQUZIQjlJZlJBMnpMVmU1UnRnbUlXT3E2TVFud2J2SlRHdkUzcGtOcHV1NlhqNkI5cFpLbGVPak1aT19DWExRc3I5WnF5VmdmT1dXd0FOYlA3N2...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNeTVqTWd5NWZXUXQ4NjlIZVBPYjRqbTVEcUcxUWNCejZ0N21BTUFiSzdBVW5TbnN2UmhnRU53UDNEZEdDLWRoQng2ejdUcllJbmYyNFhPNUVIQkpaTUhQSFRTSnc0NWdVWS0yLVMwek5KOVQ1T1JLX0stNldZejRhTnpvdkZQN293ZEpWSmxJd0MxWE9WZmhtSjlQR1JLOHlOQ3pzTE9pdGNTMDAyQmJsSmZla1preU5oN01tTXVsNnhRaFhIclY3cXo1ZjlyYWZWTWR2bnhyNGluRGtuaHJpNzJWRFgxTk1SUW1sdF8tMWhYQ0w5VHc?oc=5",
+          "date": "Tue, 03 Oct 2023 07:00:00 GMT",
+          "summary": "Intella Secures $3.4M in Pre-Series A Funding Round Led by HALA Ventures and Saudi Aramco’s Wa’ed Ventures - Business Wire - <a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxNeTVqTWd5NWZXUXQ4NjlIZVBPYjRqbTVEcUcxUWNCejZ0N21BTUFiSzdBVW5TbnN2UmhnRU53UDNEZEdDLWRoQng2ejdUcllJbmYyNFhPNUVIQkpaTUhQSFRTSnc0NWdVWS0yLVMwek...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNUWtzVUJOZFVQc29BaHhDS3V5RGQ1RkQxS0dyRUtYOUdvRFhjTU95VVQtdFdrblk5RmE5UXJUbmQ5VG5vN0M1cHlNSEc5UXAzUk1HX2V0UE5WQzJ6by1jVXVWXzFRSnpnZ3ZDNDBMQWxhS2ZyckJQTnVNWXZCV2hkTERMM0pJbk9Ha2JuNU9aUzFHWW5xbjVFYVJlYw?oc=5",
+          "date": "Thu, 16 May 2024 07:00:00 GMT",
+          "summary": "SAMA Grants License to ‘Hala Financing’ for Debt-Based Crowdfunding Solutions - waya.media - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNUWtzVUJOZFVQc29BaHhDS3V5RGQ1RkQxS0dyRUtYOUdvRFhjTU95VVQtdFdrblk5RmE5UXJUbmQ5VG5vN0M1cHlNSEc5UXAzUk1HX2V0UE5WQzJ6by1jVXVWXzFRSnpnZ3ZDNDBMQW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYWdOcWJXdF85SlhCN1ZYQ0hRM2NqM3dqU3k5RUhYSGdNS0NUcDZ2TjZ0a1Z5aE41YXExaFh1NXFRTVplNUFiNTdUY0VaWXNFcHdJS3V6VVN3NHFoejk4VmhuT3Z6am50QS02R3J1SlVBekZ3X2cwQ3d0OTBCazRfVUczLUY0amo4ODZLa3YtdHBwVGIzYzZqbVMyRHpWc2w5TDZ2MVBkaS1yVHNZTkE?oc=5",
+          "date": "Sat, 09 Nov 2024 08:00:00 GMT",
+          "summary": "Funding Pulse: Key Startup Deals This Week, Nov 02–08 - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNYWdOcWJXdF85SlhCN1ZYQ0hRM2NqM3dqU3k5RUhYSGdNS0NUcDZ2TjZ0a1Z5aE41YXExaFh1NXFRTVplNUFiNTdUY0VaWXNFcHdJS3V6VVN3NHFoejk4VmhuT3Z6am50QS02R3J1Sl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPSXhUazA5Sktsdk5GVlhNWHNLSkVrT1JEM01ZX1hqT1NldUYzUnFLWkxtQTdoUEZxc1IyckNxQ3o3Zm9zUmQ2ZU9HcDhxSE9Xbjd6cEdyNS1xd1RGOE1WVmtLZzJKWFJTemlSa2EtVlNBMUdhUWV4VzZ4VGgxT0FySGJUM0J5dUw0ZHhVRk5IRHlOeFdyNnI0YlFpa1R4T3U0ZGQwY3hUa0ppeFRJVEJIOUNRT0xWSU9RdXU4U0gwSnFrQThzRUpITDRSeWt0M2NqRGpVaHpsLXowUF8tNmYwZEE0Y0FCVGg2YUHSAe8BQVVfeXFMUEFUTVpzRXNFUU1fM0R2Y2E3S3lKVTBNSnRHYXhqMEMtakFZbmhnekczTkdDY2wtTm1jUDQ1Qk54NDc3c2NwRG8yVkNCWEMwc3pHRFZqdWVpcFNQcFJrV1czVm53cl9lSTdjc203cElYaWR1aThIVUxNemx6M2xEZ1dpWmYydk9qNS1UUmxLSmljYXNwbFZBUmdVeUhyUnZxRTkwMC1FaGVlSjNHVUJxcmhoaHFQaEtPYnhhOUdSeVRYNmV4dGZoY09RWkQ1N1hMTDRzcVVId2dQOWtQNFhyNkdIeUowOElBQ0ZiWnFnWVk?oc=5",
+          "date": "Thu, 29 Feb 2024 08:00:00 GMT",
+          "summary": "Hala Mobility gets funding from and partners with Perpetuity Capital to expand fleet - ET Auto - <a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxPSXhUazA5Sktsdk5GVlhNWHNLSkVrT1JEM01ZX1hqT1NldUYzUnFLWkxtQTdoUEZxc1IyckNxQ3o3Zm9zUmQ2ZU9HcDhxSE9Xbjd6cEdyNS1xd1RGOE1WVmtLZzJKWFJTemlSa2EtVl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5",
+          "date": "Sun, 29 Aug 2021 07:00:00 GMT",
+          "summary": "Hala raises $5 million in Series A - Wamda - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5\" target=\"_blan...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaFR0RC1xclhMXzc2dEljV2I2YVVXSHlvWkVyamthTTRjN0hMalNvdGFuYk54M283emtXS2FpQ1VEQlBnYjNUQ1cxUWNReFJrb0k4RkN2c1R2c3d4NURaU01ZZjB5U3FYb2JzUFAyNHNmcGtKUUp3N0wtQzkyNjh6V1Z3Yy1rSHpHLWs5ck1PVkxQRXVHd1FteXRB?oc=5",
+          "date": "Thu, 29 Feb 2024 08:00:00 GMT",
+          "summary": "Hala Mobility secures INR 1 crore debt funding from Perpetuity Capital - EVreporter • - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPaFR0RC1xclhMXzc2dEljV2I2YVVXSHlvWkVyamthTTRjN0hMalNvdGFuYk54M283emtXS2FpQ1VEQlBnYjNUQ1cxUWNReFJrb0k4RkN2c1R2c3d4NURaU01ZZjB5U3FYb2JzUFAyNH...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5EcFBuWUp5SlRCM3kwMHg2YkI1Mk11STFXTmlqQkZnQVFWRVhoVGpod1QyZ3BUazdKeUFtUVJGblg1WUxMZnRXQkkwSzJHcjRfWU1R?oc=5",
+          "date": "Thu, 16 May 2024 07:00:00 GMT",
+          "summary": "Fintech firm Hala gets SAMA approval to offer debt-based crowdfunding solutions - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE5EcFBuWUp5SlRCM3kwMHg2YkI1Mk11STFXTmlqQkZnQVFWRVhoVGpod1QyZ3BUazdKeUFtUVJGblg1WUxMZnRXQkkwSzJHcjRfWU1R?oc=5\" target=\"_blank\">Fintech firm Ha...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUnF3QkZ3aXAyVjhDel9MbkFfTE9INWdYUXozd2FfMnZPMDRIX3d5NHNTbmRMYnJBMjVham5aRXpXZTg2SW9iVDRSTjZFZFp0cms5TFBmZW93ekxwZkQyU2RZelU4VFBPckdLZWZHLTg5bWxiNWRVWTBVem1nS2RBLTlHQ1Q3bFNsX01QNnpKZEJySzlwa1RIdWZSTGVUSm9xc0NTSjZVUGRRRmFkZVE?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility bags Rs 51 Cr in pre-Series A funding - YourStory.com - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQUnF3QkZ3aXAyVjhDel9MbkFfTE9INWdYUXozd2FfMnZPMDRIX3d5NHNTbmRMYnJBMjVham5aRXpXZTg2SW9iVDRSTjZFZFp0cms5TFBmZW93ekxwZkQyU2RZelU4VFBPckdLZWZHLT...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOY2tXLW91VDRaYU9ZbHZxNGZvbVdKMjRsdXdaMFRManZmbktQU1RMWENUeEZmbXIyZWstMGo1bEhIdVB1QW5nOXNHdHVZR2tlUG5CTnd6em1XV1A2cTJQcmNJREpFaFRLRVl4MmRlZlZQX21yNEJMUGpNMXpxTU9oMUJXM2ZNd0x2UWNBMm9EYWlvTlVBVmVnSW1lTjJhYWJ3VXZaUHg1cVN6U3owaUJWOVpPX2daNTNnTWVtQXpzNmIwZ25ndjZtYjZJVWlkd3BtdXBjOUV4X0p3VjBGMTg2N3QwTkh0VDZLUGfSAeoBQVVfeXFMT2Q3eU94OF83cHVmbWQtdzg0bDJ2QVZOTmhzRHNXX3Q0bTEzdDR3SzZtT1JFYWxOQjRObS1mcUEzQm1EUGxIbVZINDlSWWVTeUU5VFpZaS1KNVZXUUI4T29Ed0ZyVlZ1cFFkalpzQVZtM0c1VUdhYVgzZHdmTV91dXBka3BITy1PbGNmN0htY1dOc3ZOYnRYT25HbjhhMVZFT2NPWE9OUFptUWk3NGNQTU1rNGtoT1Ryc0NFNHphVU9PVXA2Y1NnSzdTcTU0NGctelRRdnQ0RHBaR2ZyVUdvaHcxWVh0c2J6S19B?oc=5",
+          "date": "Wed, 25 Sep 2024 07:00:00 GMT",
+          "summary": "Hong Kong’s Muslim community urges government funding for halal certification body - South China Morning Post - <a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxOY2tXLW91VDRaYU9ZbHZxNGZvbVdKMjRsdXdaMFRManZmbktQU1RMWENUeEZmbXIyZWstMGo1bEhIdVB1QW5nOXNHdHVZR2tlUG5CTnd6em1XV1A2cTJQcmNJREpFaFRLRVl4MmRlZl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWUJrWDFRYnNOUHk3WFpuX0xvM2tjSF9pZC1WNVkyQ1hfV2hndWdtTTlERWxfeUF6em1ZQUR6cmpxOVVKakFzQmE2aGI4WEQ5QXVJRksxTmt2RDl1TUdVS2pPMS1GQ2F3ZkpwSms4cGRoQUEwczJoZkJZQ0dYeTU3MG9jMFZXZTkyQWs1V2ctVFRibV81VnlPUTNLVGNOZw?oc=5",
+          "date": "Tue, 03 Oct 2023 07:00:00 GMT",
+          "summary": "Intella secures $3.4 million pre-Series A round led by HALA Ventures, Wa’ed - Wamda - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPWUJrWDFRYnNOUHk3WFpuX0xvM2tjSF9pZC1WNVkyQ1hfV2hndWdtTTlERWxfeUF6em1ZQUR6cmpxOVVKakFzQmE2aGI4WEQ5QXVJRksxTmt2RDl1TUdVS2pPMS1GQ2F3ZkpwSms4cG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm10NlctU1FONXFFSl9UUWg2TE5QZ1RWN0xDRnZHMFV6ZWNLLXkzek9hLWNMdTBZdVdwOHlqWFhmeEhjeDV4N09vWm1MRDZEZXY4NnBaMVRTcmpHZ9IBwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm10NlctU1FONXFFSl9UUWg2TE5QZ1RWN0xDRnZHMFV6ZWNLLXkzek9hLWNMdTBZdVdwOHlqWFhmeEhjeDV4N09vWm1MRDZEZXY4NnBaMVRTcmpHZw?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "EV-as-a-service startup Hala Mobility raises Rs 51 crore in pre-series A round - Indian Startup News - <a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi Fintech Hala Raises $6.5 Million in a Series A Round - waya.media - <a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5\" target=\"_blank\">Saudi Fi...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVGdUTGVuOXR3OG9IS1NZNkktUWg0Y3NzWHFwUlVTRlJzY1pEaEFTWXNlTW5IN2QtT3I3dmQzR1MtZ1d0OUlVMVFFN1dOZVJ2YVpRLXBKVHV0WlhNYU5aMVB2STZBVEZRUlVoVHdxV1BiaGVubTJwMTBIXzVtY2NDWkd1ZVBUYUxDY2JrTS1IUmM?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility raises ₹51 crore in pre-Series A funding round - MarcaMoney - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNVGdUTGVuOXR3OG9IS1NZNkktUWg0Y3NzWHFwUlVTRlJzY1pEaEFTWXNlTW5IN2QtT3I3dmQzR1MtZ1d0OUlVMVFFN1dOZVJ2YVpRLXBKVHV0WlhNYU5aMVB2STZBVEZRUlVoVHdxV1...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MY2p6Qko3OUo0VWozeU13dTNhd00ySEdLdjVRZG5Yc3U3bGxocUhwYm1qeHpBVXNXbjF5ZllPb2pLaVFjLUxRME9YUmdVQjl4SWfSAVdBVV95cUxOV19iX0FDM1VqWFIyaTN3aXYwMXdyTl8xX080TkFKZjk2bk5td3MwUF9JM3gxLTh0eUt0N0lsX3hEQ21yUzljaGdfUjV6eWZacWFZVVZDek0?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi’s Hala raises $6.5 million Series A to become a digital bank for SMEs - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MY2p6Qko3OUo0VWozeU13dTNhd00ySEdLdjVRZG5Yc3U3bGxocUhwYm1qeHpBVXNXbjF5ZllPb2pLaVFjLUxRME9YUmdVQjl4SWfSAVdBVV95cUxOV19iX0FDM1VqWFIyaTN3aXYwMX...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPN2dxb25EeUpreE9OTzF6Y091NG5sRk5lSUtMLTMwWmxIMi15amdvUHh0b1ZOM25KaXVHOE04TjNiUzlDLWVVbjVxZU5TNzJhZy1DdkhyS2J5LWFoYnNscC01c2IzclNKMFRhVE5fM1c1cGxNdS1vN0ZFcmFSdHF5RnYtSGw2aktOajBveG5KZkdZYjZYNTBhbE9iTUFpTXE3Q2V2U0JqZWdBdW5PckNHenBB0gGyAUFVX3lxTE83Z3FvbkR5Smt4T05PMXpjT3U0bmxGTmVJS0wtMzBabEgyLXlqZ29QeHRvVk4zbkppdUc4TThOM2JTOUMtZVVuNXFlTlM3MmFnLUN2SHJLYnktYWhic2xwLTVzYjNyU0owVGFUTl8zVzVwbE11LW83RkVyYVJ0cXlGdi1IbDZqS05qMG94bkpmR1liNlg1MGFsT2JNQWlNcTdDZXZTQmplZ0F1bk9yQ0d6cEE?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility Secures Rs 51 Crore in Pre-Series A Funding to Expand EV Operations | Startup Story - Startup Story - <a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPN2dxb25EeUpreE9OTzF6Y091NG5sRk5lSUtMLTMwWmxIMi15amdvUHh0b1ZOM25KaXVHOE04TjNiUzlDLWVVbjVxZU5TNzJhZy1DdkhyS2J5LWFoYnNscC01c2IzclNKMFRhVE5fM1...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYXE1RTBVZ0R1SjZweGlZLTRGRXpKMzNDc1ExdG91cnBHbl92SkJtMmp2aXFNQ1FOanVDVFZjVDFTaXBqZ2NaR21FTzM4dzNPdUhVU1hrUkNkWmhRVmVzOTdEZzJhNTR2bFpvbTNMNzg0enlLclMwR2pPakNSdXJxMUNkaWtzZENrbEFYeDZ1X0wzZ2PSAZMBQVVfeXFMTmFxNUUwVWdEdUo2cHhpWS00RkV6SjMzQ3NRMXRvdXJwR25fdkpCbTJqdmlxTUNRTmp1Q1RWY1QxU2lwamdjWkdtRU8zOHczT3VIVVNYa1JDZFpoUVZlczk3RGcyYTU0dmxab20zTDc4NHp5S3JTMEdqT2pDUnVycTFDZGlrc2RDa2xBWHg2dV9MM2dj?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility raises Rs 51 Cr in pre-Series A round - Entrackr - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOYXE1RTBVZ0R1SjZweGlZLTRGRXpKMzNDc1ExdG91cnBHbl92SkJtMmp2aXFNQ1FOanVDVFZjVDFTaXBqZ2NaR21FTzM4dzNPdUhVU1hrUkNkWmhRVmVzOTdEZzJhNTR2bFpvbTNMNz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPdlZGV1k3VE01Y3pzT0Y5bDlHaHNZdFZkNU9ET1ZJR280T2c3M0Jlb3Z0YmpHZkMwQkNvQXJKNjY1SGN5U182NFprRGR3aE5OVGp0ejVlZGNCdmFGVVNmV1pvMWl5U2w0OVFEWjdLRGhRRmxYX2pJeE82VjNDWEF2a3gwNnpJbmdSdGlhUHJHRWpmd3Nj?oc=5",
+          "date": "Wed, 15 Feb 2023 08:00:00 GMT",
+          "summary": "Saudi mobility startup Telgani closes $6 million Series A round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPdlZGV1k3VE01Y3pzT0Y5bDlHaHNZdFZkNU9ET1ZJR280T2c3M0Jlb3Z0YmpHZkMwQkNvQXJKNjY1SGN5U182NFprRGR3aE5OVGp0ejVlZGNCdmFGVVNmV1pvMWl5U2w0OVFEWjdLRG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNWUtFdmhGTUp4NlAzaGZXalZHTjJUUkU5cmZmbVZZS19Ta3lWUjljeUlxaFp6dThndXNxd1ljZjRwYWZYTVQzbkt6TThxVnpSNllNV3lWSlNIWWhIQlpJMVBVRzdDWkxoWGVVRUZVbW9GNzhUUjROOGg1M3ViQzBNelF3MEltZWNMTlYtckFB0gGTAUFVX3lxTE8zZndrWW14T1RSUFNnbVA0QXJkS1ZIaXJIZjFZaXRZTkl5MWpLTkJBTEFkbDAzcHRfRUdrcVllbnNETDAzUmJBUHBwbExKNzRRLVE3TzZKOUwtZnpTSGZmVzl6Qk8tUG12NjhDNUFLcG56QS0wS3psSThyc2trcWxZc0t2dnVTMkRNT1BYYVNsUmlDOA?oc=5",
+          "date": "Sat, 02 May 2015 07:00:00 GMT",
+          "summary": "Australia: Is halal food funding terrorism? - Al Jazeera - <a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNWUtFdmhGTUp4NlAzaGZXalZHTjJUUkU5cmZmbVZZS19Ta3lWUjljeUlxaFp6dThndXNxd1ljZjRwYWZYTVQzbkt6TThxVnpSNllNV3lWSlNIWWhIQlpJMVBVRzdDWkxoWGVVRUZVbW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOM1NFeFhNVWVUYzh6LVlzZnhrdTFnNWNTNGhTYWZ5N0lzb0cyMmhGUWRTWVgxSDNKMzFKbFVTeUE3aDFiNkRzM3hfRjFDZUxjeE80ZlV6Y1ZNLVlrY0JkRC1fNHM4TndsTmhyZ3BMTzFjcldlTW1oSS14TmduWU1PYko1U2UwdFdJ?oc=5",
+          "date": "Mon, 09 Aug 2021 07:00:00 GMT",
+          "summary": "Sarwa closes $15 million Series B round led by Mubadala - Wamda - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOM1NFeFhNVWVUYzh6LVlzZnhrdTFnNWNTNGhTYWZ5N0lzb0cyMmhGUWRTWVgxSDNKMzFKbFVTeUE3aDFiNkRzM3hfRjFDZUxjeE80ZlV6Y1ZNLVlrY0JkRC1fNHM4TndsTmhyZ3BMTz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObUJyTHNYYmJiNHdBSUlqSDJ2MHZjZG1iVDV1Qkt6NTRMTkZpeWRUU1FwMXdibE9QRHA5Wm95T3FDN3Vod1dyT2IyUnN1VERvX0tBeUVNMjliSUdxWXlkbHZTdGhUSlhfZ3BHbHNhdThJZUZjY2syUWFxbGV6aVQ4TElMQ20zWndNb2I3ZDdWbWFsUXdRN1JlYV8zNjFDNXkzMzVyNU9WT3hEMElMYWZFVGVWSFF3aWt0NUJJTzlxSlHSAcYBQVVfeXFMTzdSakJub3VTaFZQd0dIUVctUjRUcG41SlRqcm84RFB6MmN3QzdmdWxSS1l0dk84Qzkzc2VTNEZhSlp2MmRaVFFCLWMwSFE1eGgzbnFVaGxkMmZuVzEzM1FsbE4xTXZ5b3BPb0pjMGVCbXRHMlJaMTM2R1RnNG5KbTJuZWVJUWdLX1NGUXp3S29EbUtfaWZEWTM0aGdzYVVIWHJJeUhBUWM4eWRBQ2tXYWJpazhoeUp6WGFRaG9waG1VbVljSmZ3?oc=5",
+          "date": "Thu, 29 Feb 2024 08:00:00 GMT",
+          "summary": "Hala Mobility Raises INR 1 Crore from Perpetuity Capital to Expand EV Fleet and Finance 500 Electric 2W for Gig Workers - EMobility+ - <a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxObUJyTHNYYmJiNHdBSUlqSDJ2MHZjZG1iVDV1Qkt6NTRMTkZpeWRUU1FwMXdibE9QRHA5Wm95T3FDN3Vod1dyT2IyUnN1VERvX0tBeUVNMjliSUdxWXlkbHZTdGhUSlhfZ3BHbHNhdT...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQSU01U0EwMkdqekJ6UldXMElLRGtGWHNOdG1jaE0tQ3FzRnlXbkt5bG1GTHNxYmVUV0kwOVBzQjNUN1p6YkRvNUNNaE1RTkZsMno5a0d1T2Myb0xlOTJlQmFsa1dWb3ROUElyZFRRU0V6Zlk3TDJIMjB6TmZyVENJclFaaDdwZGhPQUozY3prUGRpVDFaXzJuZndXSDc1WjdySHZIUU83ZHRJSTF5RlhtclN1VldOaVpENnN2c084NDQ3V3V1Znc?oc=5",
+          "date": "Fri, 24 May 2024 07:00:00 GMT",
+          "summary": "Hala Receives License from the Saudi Central Bank to Provide Debt-Based Crowdfunding Solutions - إنت عربي - <a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQSU01U0EwMkdqekJ6UldXMElLRGtGWHNOdG1jaE0tQ3FzRnlXbkt5bG1GTHNxYmVUV0kwOVBzQjNUN1p6YkRvNUNNaE1RTkZsMno5a0d1T2Myb0xlOTJlQmFsa1dWb3ROUElyZFRRU0...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeHM4aU1hdmd6LXZud1pCaHhqR3dkVU1ROXRUcUxvVzlFS2ZfMW44OXV5dFlCZzhrSllKTW5UdzkybE1WZWJaeGE2SWlXR2NDSGRkTGU2aXFHc1poV2lNc2sza0ZJZ1VFeEs5VW1kbEtDSzdxanEwQS1PTWx1TFI1WW84UE5GTEMyekZaUTFhVkhfVzVZV1NhcHlOOVV0VDNPRFp0NzU5RUZtODIzOUg4MVF6N3RhbEw1YlVXWGl6NmlISXF2TnfSAcwBQVVfeXFMTk9Ya1RfU2lFazRuRlZsOVVITmN0azlfUjNCYk1qUFowLWE3a2RwVzlUUFZ4TXdkc09XVXlwRC0yb1FzSDVFTmhXeTZYNUE5U3hiNmdfTnJWcmpNdHk4WFY0WFFQcUpoMDFIMmQ2Qmp4Z2U3dmNxN2FRVFZRRXJuS1ZvTG1WUTN4bDNaRWp0M21FUFNlR3FBSHRTS2lRUEM2WlU2andNQkJTanFaZTBHUU5NVVJKODh5d19QS2VpY3VMY2d2VGdnWTN1WU9m?oc=5",
+          "date": "Wed, 25 May 2022 07:00:00 GMT",
+          "summary": "E-bike sharing start-up Hala raises Rs 6.5 crore in funding - financialexpress.com - <a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQeHM4aU1hdmd6LXZud1pCaHhqR3dkVU1ROXRUcUxvVzlFS2ZfMW44OXV5dFlCZzhrSllKTW5UdzkybE1WZWJaeGE2SWlXR2NDSGRkTGU2aXFHc1poV2lNc2sza0ZJZ1VFeEs5VW1kbE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPcC1HT2RKNzN3ejFuLWpXR3dlbDVZSlh2cXBnVWZjVl84ak51RTJ3SW1oRjVXV3hwbThYMm9Tbi03dVFndU84ZDZTbE5NTVYtODdOUklfanJDYkN2emRSbGRFekk2QjJzSDFJQW9WQ0d6R2UyclBERXh3ZzVpSWtnbUZ0SFdVRVBJeVMwWVBzVXpwTUZ3bE96bGNZZEJucEhyRTlqWHY3b3h3NE5UQ0F6cDd2bC1hQWczYTBLeHJXQQ?oc=5",
+          "date": "Thu, 08 Oct 2015 07:00:00 GMT",
+          "summary": "Cactus Flower: Talking to Hala Elkoussy about film and crowdfunding - مدى مصر - <a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPcC1HT2RKNzN3ejFuLWpXR3dlbDVZSlh2cXBnVWZjVl84ak51RTJ3SW1oRjVXV3hwbThYMm9Tbi03dVFndU84ZDZTbE5NTVYtODdOUklfanJDYkN2emRSbGRFekk2QjJzSDFJQW9WQ0...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRzBzbUFDNEprdFRUOUxORXJLY0FxNXdIb0VfbFJJMVZCQk93U24zcTJFcDExMUpNMXhBY1RHYUtDVVpuZkxSQkVTcmZyRk5DWGJxSmxSallsMC1RUk5lZnVFaG1jZjBGbHFvdmlWWVk3Q1ExWjZuVUJJbU1GaDhWbVhJSVR4Rmd0V3l6UDVhWFZDWVptTVBVUURn?oc=5",
+          "date": "Tue, 11 Nov 2014 08:00:00 GMT",
+          "summary": "Halal terrorism-funding claims 'absolutely wrong' - abc.net.au - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNRzBzbUFDNEprdFRUOUxORXJLY0FxNXdIb0VfbFJJMVZCQk93U24zcTJFcDExMUpNMXhBY1RHYUtDVVpuZkxSQkVTcmZyRk5DWGJxSmxSallsMC1RUk5lZnVFaG1jZjBGbHFvdmlWWV...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNEJHS2Z3U3BYcGxHaDhRdGllX1U0VmJmdGp1bF9KTEVQQzdiX1Fyc3I0ZHNBYjBhTGVfdS14YWU0c0pRMWxpMlpYbEhUUEhlMFp3WlVUdzdRRmVsek9Rci1vUG1UM1JGYXNheGE1MTlmNzJNZVRWYnNucjlucUJNcmtaLVgxX3V5M2I2ZS1SQkNtTEU1SHAySGFKZlJGRkIyRHRyTGNCNzkzdDA1X1owRUFuSU8?oc=5",
+          "date": "Thu, 23 Oct 2025 07:00:00 GMT",
+          "summary": "Adityanath’s Claim on Halal Certification and Terror Funding Baseless, Say Muslim Scholars - Clarion India - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNNEJHS2Z3U3BYcGxHaDhRdGllX1U0VmJmdGp1bF9KTEVQQzdiX1Fyc3I0ZHNBYjBhTGVfdS14YWU0c0pRMWxpMlpYbEhUUEhlMFp3WlVUdzdRRmVsek9Rci1vUG1UM1JGYXNheGE1MT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOWNyZG1NN0w5QTI5QXBNMHNzQ3JRTjZiS2hMNGpBT1dfbkpTdjJrWUU0dFJmMDgxOWd4cDVPdmk1Z2R6LV9qY2wxSFh2M0RSMVpkYUI4YUYxU3M5TnNaNGNOZWhHaXJETW9vSm50b3owa1NSVHZQWHNTVDdhVnBoMDJxUWdBdUE?oc=5",
+          "date": "Tue, 05 Nov 2024 08:00:00 GMT",
+          "summary": "Funding Fuels Growth for Hala Mobility, Mihup, Viraa Care - Techiexpert.com - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPOWNyZG1NN0w5QTI5QXBNMHNzQ3JRTjZiS2hMNGpBT1dfbkpTdjJrWUU0dFJmMDgxOWd4cDVPdmk1Z2R6LV9qY2wxSFh2M0RSMVpkYUI4YUYxU3M5TnNaNGNOZWhHaXJETW9vSm50b3...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdGJQbmR1YlpxdzlueEJDTXZLcEh1eE50OGdTT3BoYzFlUENFdEJ0Q1l5eVZJR3BSRnRUazVZOUd5RzlpMGp5UDM2YmU4WWs3cmpLR0cwU0dueWFrQzBuODZ0T0IyLV92YUM1RWRUQW9RblJwVzZMczg1Vk5pTGs3b3NrSlVnWWV0X2dpQW9nX2NZeGFySzFNdDd2el9DNkcwSUstdkdpemlRRQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157m in one of the Middle East’s largest fintech Series B rounds, led by TPG and Sanabil Investments - GlobeNewswire - <a href=\"https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ0NtSmZtZWJRRnFSRGtOREdJTHBFUTFYQ0VRS0FteTF3ME5CdHZsOTJ2MmEtcGM4OFYtQ3RQc0hqN1A4VVBYNkNtVDdhMkc2ZU5WMS16MzhXTldBd2ZfWS1FR2wtQXhPX21NazFMLVVUd3JWSGFzcThvejE3QkhUZUtFUQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157 million in landmark Series B round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ0NtSmZtZWJRRnFSRGtOREdJTHBFUTFYQ0VRS0FteTF3ME5CdHZsOTJ2MmEtcGM4OFYtQ3RQc0hqN1A4VVBYNkNtVDdhMkc2ZU5WMS16MzhXTldBd2ZfWS1FR2wtQXhPX21NazFMLV...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVmxtWXY0VFk4T0c1WXJvVDZsMUx5MnlUaEE?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech Hala raises landmark $157m Series B - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVm...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ21oUTc4SDJIM0hELXVJMGdYcmllekpYT3pETE1ZYnF6V0Z2bG0yMzdpYTI0VHNzeXNGWXRFSXo5VzEyNm1Gb3JoU3BjZW11bnplc3pCNGR5Ti1FczVKcW5RTFh5akgzWWFEZjFYYUFhTXh3TEZHTFM3dmdCUW1GQm9YSTRpMjM1S0Ffbm40NmhBRXA3NkdF?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "HALA Raises $157 Million in Series B to Expand FinTech Services for Saudi SMEs - FinTech Weekly - <a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ21oUTc4SDJIM0hELXVJMGdYcmllekpYT3pETE1ZYnF6V0Z2bG0yMzdpYTI0VHNzeXNGWXRFSXo5VzEyNm1Gb3JoU3BjZW11bnplc3pCNGR5Ti1FczVKcW5RTFh5akgzWWFEZjFYYU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNVItaVJEbWhRdm9sTU1QQQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Hala Raises $157M in Series B Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNV...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSGxDaU5rb3kwOU5zWTNlNGxXMUdTdWN4Z0x2?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech HALA raises $157m in TPG-, PIF-led Series B - DealStreetAsia - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaHFvZG9JX1p6YUJ4Z2RHd24wN1N2MDhsWDRJQmhHOWpLd0pEdU8tX1FYYW81bTdmakdUME5zN2JXcndMaTdHckRUQ1l3UVFRT0VxbWp3b2dWUEp1cUczQ3FyOEk5eDBLeGgyRkZGMEhxQl9RbGV2V0ZKRmx3OGJEaFprUm13WU1kcG5FandYeE1XWGpQWUhoVHJhYnlPdw?oc=5",
+          "date": "Tue, 16 Sep 2025 11:18:57 GMT",
+          "summary": "HALA Raises $157M in One of MENA’s Largest Fintech Series B Rounds - cairoscene.com - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPaHFvZG9JX1p6YUJ4Z2RHd24wN1N2MDhsWDRJQmhHOWpLd0pEdU8tX1FYYW81bTdmakdUME5zN2JXcndMaTdHckRUQ1l3UVFRT0VxbWp3b2dWUEp1cUczQ3FyOEk5eDBLeGgyRkZGME...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5zVHZQcHNTNWZFX1l0b25MSG9yUVZIYmhZSmx5RnlTQ0Y5OG1CVXJLaGVEZ0FSbVZqVXVNZDVyMWU4Rkl6NHkzUmd1NUl4MUJpVDVjWGl6and1SnIxa3Izb01sM0daRjFXR1pUWDJDcUQ0Q18zNG1kQV9n?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA Raises $157m in One of Middle East’s Largest Fintech Series B Rounds - Tech | Business | Economy - Techeconomy - <a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5zVHZQcHNTNWZFX1l0b25MSG9yUVZIYmhZSmx5RnlTQ0Y5OG1CVXJLaGVEZ0FSbVZqVXVNZDVyMWU4Rkl6NHkzUmd1NUl4MUJpVDVjWGl6and1SnIxa3Izb01sM0daRjFXR1pUWDJDcU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONVU0dVhocUdXTE82OTgxb3FEVEw2NnBDWm1sNEJxN2Myd2RiWVJjeWlaX285S0ktRUlrOFVwemdxbFRHS3ZtR2JSYWNOTDRtN3o3OHZHYV92UDg0eE41Q1ZkNGM4d1JYRlZsLWtIV2ozcjRBOE9fdFI3VTZUT3ktSk9BZHh3eWJSU1FPY3ZaN0E0eGRfVnE0eA?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA secures $157m Series B to expand FinTech solutions - IBS Intelligence - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxONVU0dVhocUdXTE82OTgxb3FEVEw2NnBDWm1sNEJxN2Myd2RiWVJjeWlaX285S0ktRUlrOFVwemdxbFRHS3ZtR2JSYWNOTDRtN3o3OHZHYV92UDg0eE41Q1ZkNGM4d1JYRlZsLWtIV2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5XU0U1ajRfUE5xbUpaSFhQMGhFSl9uejJUdHc5bTN3aU12MWszRktFeVhSUVJERGNhdjNBNGY2ZVc5SDM1eXFNVUROUnFmRk9YempR?oc=5",
+          "date": "Sat, 20 Sep 2025 07:00:00 GMT",
+          "summary": "Startup wrap — Early stage funding maintains growth momentum in MENA - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE5XU0U1ajRfUE5xbUpaSFhQMGhFSl9uejJUdHc5bTN3aU12MWszRktFeVhSUVJERGNhdjNBNGY2ZVc5SDM1eXFNVUROUnFmRk9YempR?oc=5\" target=\"_blank\">Startup wrap — ...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WeDBnVTRXSHRpcWZsYUdUeER1Yjk5X1JFRDhTc096c1dCZmhreVhmNXY3UHpEU1d6LUJFa3ROWkh6LUtFc3ZORVQxS0Nzc0xhOU5KTEFn0gFbQVVfeXFMTklqRHVBUDNfR0s4dFAwNW9LOEJKX29XTWhoVklLZ2psNEdFT20ybU5Za1hDU2phSlVxRjR2b0RyX3pmMWRTdmpvYXRPanlGWkdXYXJDX2ZxaHNKMA?oc=5",
+          "date": "Sun, 07 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi’s Intella raises $12.5 million in Prosus-led Series A to offer AI transcription for 25+ Arabic ... - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WeDBnVTRXSHRpcWZsYUdUeER1Yjk5X1JFRDhTc096c1dCZmhreVhmNXY3UHpEU1d6LUJFa3ROWkh6LUtFc3ZORVQxS0Nzc0xhOU5KTEFn0gFbQVVfeXFMTklqRHVBUDNfR0s4dFAwNW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5",
+          "date": "Sun, 29 Aug 2021 07:00:00 GMT",
+          "summary": "Hala raises $5 million in Series A - Wamda - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5\" target=\"_blan...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYXE1RTBVZ0R1SjZweGlZLTRGRXpKMzNDc1ExdG91cnBHbl92SkJtMmp2aXFNQ1FOanVDVFZjVDFTaXBqZ2NaR21FTzM4dzNPdUhVU1hrUkNkWmhRVmVzOTdEZzJhNTR2bFpvbTNMNzg0enlLclMwR2pPakNSdXJxMUNkaWtzZENrbEFYeDZ1X0wzZ2PSAZMBQVVfeXFMTmFxNUUwVWdEdUo2cHhpWS00RkV6SjMzQ3NRMXRvdXJwR25fdkpCbTJqdmlxTUNRTmp1Q1RWY1QxU2lwamdjWkdtRU8zOHczT3VIVVNYa1JDZFpoUVZlczk3RGcyYTU0dmxab20zTDc4NHp5S3JTMEdqT2pDUnVycTFDZGlrc2RDa2xBWHg2dV9MM2dj?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility raises Rs 51 Cr in pre-Series A round - Entrackr - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOYXE1RTBVZ0R1SjZweGlZLTRGRXpKMzNDc1ExdG91cnBHbl92SkJtMmp2aXFNQ1FOanVDVFZjVDFTaXBqZ2NaR21FTzM4dzNPdUhVU1hrUkNkWmhRVmVzOTdEZzJhNTR2bFpvbTNMNz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZW1WVE1Cb3dPaUVzYkZKaGtkeU9ZQktJVGdSeFB3cnJhTXduUERjaWJ3WHhpYVBhWXNRM3lZNjhJdlpjdGZZQUZfc0FwUE40Q3pXRzFpdjMwZVdKY2hPV0hXTTAzQ256S2tTdWxUYVNBY2pMODJqZUE3aEp3NlhRTFh4WVNSa1ZiTUVzQzhoRGp0S2ZMeHlHYk50dzB6bVJHd1NuOUxUeV9yVnc2?oc=5",
+          "date": "Tue, 31 Aug 2021 07:00:00 GMT",
+          "summary": "We Got Funded: Abu Dhabi-Based Insurtech Startup Hala Raises US$5 Million In Series A Round To Expand Across The Middle East - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNZW1WVE1Cb3dPaUVzYkZKaGtkeU9ZQktJVGdSeFB3cnJhTXduUERjaWJ3WHhpYVBhWXNRM3lZNjhJdlpjdGZZQUZfc0FwUE40Q3pXRzFpdjMwZVdKY2hPV0hXTTAzQ256S2tTdWxUYV...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm10NlctU1FONXFFSl9UUWg2TE5QZ1RWN0xDRnZHMFV6ZWNLLXkzek9hLWNMdTBZdVdwOHlqWFhmeEhjeDV4N09vWm1MRDZEZXY4NnBaMVRTcmpHZ9IBwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm10NlctU1FONXFFSl9UUWg2TE5QZ1RWN0xDRnZHMFV6ZWNLLXkzek9hLWNMdTBZdVdwOHlqWFhmeEhjeDV4N09vWm1MRDZEZXY4NnBaMVRTcmpHZw?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "EV-as-a-service startup Hala Mobility raises Rs 51 crore in pre-series A round - Indian Startup News - <a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPbEU4RjMxTFZOUjlKb2JNYjhoZFBZUGkzcjRkazBVTkNTUF9tdkVHWlU4MVRxNTQtaW9zYjNaVTVJY3hlR3k2ZXBqYXRvT0o3NkNFaUZGSUNxcWlIV1Ntb2xFNU1NSUFmWnNFSkM3cXctUUVJZ053bEhqai1kYzdDUnBiVTM0ZmMwcm52eTJfY00zOXdZc0w1QnFMMzdfUTNwU3Zmb3N6NE1yMjBaR0lTZUV1bXBDVGlhajJhSm5PWUp0bHJKdnJBdXRuS3JOWEV3bDhIVmJtUEIxaElwWm9lMUJxd25rNGNzWkY0OVdvNVl2ejREUlg5V0hhT29QWGNqQVROX0xXaWlaN3JkS1hmaXIxVnJHR3ZRZWVnU0t2bnc4UHJ3R1BvNzJ6NWFZZG1Ccnc?oc=5",
+          "date": "Wed, 03 Nov 2021 07:00:00 GMT",
+          "summary": "Virginia governors' race raised $149 million, watchdog estimates - WUSA9 - <a href=\"https://news.google.com/rss/articles/CBMisgJBVV95cUxPbEU4RjMxTFZOUjlKb2JNYjhoZFBZUGkzcjRkazBVTkNTUF9tdkVHWlU4MVRxNTQtaW9zYjNaVTVJY3hlR3k2ZXBqYXRvT0o3NkNFaUZGSUNxcWlIV1Ntb2xFNU1NSUFmWnNFSkM3cX...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi Fintech Hala Raises $6.5 Million in a Series A Round - waya.media - <a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5\" target=\"_blank\">Saudi Fi...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUnF3QkZ3aXAyVjhDel9MbkFfTE9INWdYUXozd2FfMnZPMDRIX3d5NHNTbmRMYnJBMjVham5aRXpXZTg2SW9iVDRSTjZFZFp0cms5TFBmZW93ekxwZkQyU2RZelU4VFBPckdLZWZHLTg5bWxiNWRVWTBVem1nS2RBLTlHQ1Q3bFNsX01QNnpKZEJySzlwa1RIdWZSTGVUSm9xc0NTSjZVUGRRRmFkZVE?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility bags Rs 51 Cr in pre-Series A funding - YourStory.com - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQUnF3QkZ3aXAyVjhDel9MbkFfTE9INWdYUXozd2FfMnZPMDRIX3d5NHNTbmRMYnJBMjVham5aRXpXZTg2SW9iVDRSTjZFZFp0cms5TFBmZW93ekxwZkQyU2RZelU4VFBPckdLZWZHLT...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaFR0RC1xclhMXzc2dEljV2I2YVVXSHlvWkVyamthTTRjN0hMalNvdGFuYk54M283emtXS2FpQ1VEQlBnYjNUQ1cxUWNReFJrb0k4RkN2c1R2c3d4NURaU01ZZjB5U3FYb2JzUFAyNHNmcGtKUUp3N0wtQzkyNjh6V1Z3Yy1rSHpHLWs5ck1PVkxQRXVHd1FteXRB?oc=5",
+          "date": "Thu, 29 Feb 2024 08:00:00 GMT",
+          "summary": "Hala Mobility secures INR 1 crore debt funding from Perpetuity Capital - EVreporter • - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPaFR0RC1xclhMXzc2dEljV2I2YVVXSHlvWkVyamthTTRjN0hMalNvdGFuYk54M283emtXS2FpQ1VEQlBnYjNUQ1cxUWNReFJrb0k4RkN2c1R2c3d4NURaU01ZZjB5U3FYb2JzUFAyNH...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVpjd1B6N3RvRWdvbm5iU2FFYTBnZENscUQ1WkkxY0RPT1FRbkcyNU1ucXlJbGhZbTdoOWNBaW1KNmhhcnpFR1BZMDk4TFdVSDY0N0RCSUlIekNjXzVUUUpNek9fQ0lxNnB0LUlUTG5nem9yaHBjQ2FpM29LdmcxNmwzTjdVZUJZd2dTb0ZxcjBTLWNBVFU2UjJORVZWZmhRTFZlVNIBqgFBVV95cUxNNHhiWmZLNExVN1FXYWU3QU0zdEp1SUlBLW5uOEJaQkYtZ1lZV3pHSVRfSVVnQnBqbWpib2pYM19TNy1jRmljbDU3dE9LVkRrc1ZiWGJDb0RsM3cxaElmOHFYUGJuTEJqeC1Ra1U4enloMExUZzUxWDVYaDIwX0JzQnVoQUY3Z1RaLUFFa0k0cVRJMG1IQk1vLU5iSkJGdGY1T2R0dUE0NU9Idw?oc=5",
+          "date": "Mon, 22 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi Arabia’s Hala raises USD 6.5 million Series A to become digital bank for SMEs - KrASIA - <a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVpjd1B6N3RvRWdvbm5iU2FFYTBnZENscUQ1WkkxY0RPT1FRbkcyNU1ucXlJbGhZbTdoOWNBaW1KNmhhcnpFR1BZMDk4TFdVSDY0N0RCSUlIekNjXzVUUUpNek9fQ0lxNnB0LUlUTG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVGdUTGVuOXR3OG9IS1NZNkktUWg0Y3NzWHFwUlVTRlJzY1pEaEFTWXNlTW5IN2QtT3I3dmQzR1MtZ1d0OUlVMVFFN1dOZVJ2YVpRLXBKVHV0WlhNYU5aMVB2STZBVEZRUlVoVHdxV1BiaGVubTJwMTBIXzVtY2NDWkd1ZVBUYUxDY2JrTS1IUmM?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility raises ₹51 crore in pre-Series A funding round - MarcaMoney - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNVGdUTGVuOXR3OG9IS1NZNkktUWg0Y3NzWHFwUlVTRlJzY1pEaEFTWXNlTW5IN2QtT3I3dmQzR1MtZ1d0OUlVMVFFN1dOZVJ2YVpRLXBKVHV0WlhNYU5aMVB2STZBVEZRUlVoVHdxV1...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MY2p6Qko3OUo0VWozeU13dTNhd00ySEdLdjVRZG5Yc3U3bGxocUhwYm1qeHpBVXNXbjF5ZllPb2pLaVFjLUxRME9YUmdVQjl4SWfSAVdBVV95cUxOV19iX0FDM1VqWFIyaTN3aXYwMXdyTl8xX080TkFKZjk2bk5td3MwUF9JM3gxLTh0eUt0N0lsX3hEQ21yUzljaGdfUjV6eWZacWFZVVZDek0?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi’s Hala raises $6.5 million Series A to become a digital bank for SMEs - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MY2p6Qko3OUo0VWozeU13dTNhd00ySEdLdjVRZG5Yc3U3bGxocUhwYm1qeHpBVXNXbjF5ZllPb2pLaVFjLUxRME9YUmdVQjl4SWfSAVdBVV95cUxOV19iX0FDM1VqWFIyaTN3aXYwMX...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeHM4aU1hdmd6LXZud1pCaHhqR3dkVU1ROXRUcUxvVzlFS2ZfMW44OXV5dFlCZzhrSllKTW5UdzkybE1WZWJaeGE2SWlXR2NDSGRkTGU2aXFHc1poV2lNc2sza0ZJZ1VFeEs5VW1kbEtDSzdxanEwQS1PTWx1TFI1WW84UE5GTEMyekZaUTFhVkhfVzVZV1NhcHlOOVV0VDNPRFp0NzU5RUZtODIzOUg4MVF6N3RhbEw1YlVXWGl6NmlISXF2TnfSAcwBQVVfeXFMTk9Ya1RfU2lFazRuRlZsOVVITmN0azlfUjNCYk1qUFowLWE3a2RwVzlUUFZ4TXdkc09XVXlwRC0yb1FzSDVFTmhXeTZYNUE5U3hiNmdfTnJWcmpNdHk4WFY0WFFQcUpoMDFIMmQ2Qmp4Z2U3dmNxN2FRVFZRRXJuS1ZvTG1WUTN4bDNaRWp0M21FUFNlR3FBSHRTS2lRUEM2WlU2andNQkJTanFaZTBHUU5NVVJKODh5d19QS2VpY3VMY2d2VGdnWTN1WU9m?oc=5",
+          "date": "Wed, 25 May 2022 07:00:00 GMT",
+          "summary": "E-bike sharing start-up Hala raises Rs 6.5 crore in funding - financialexpress.com - <a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQeHM4aU1hdmd6LXZud1pCaHhqR3dkVU1ROXRUcUxvVzlFS2ZfMW44OXV5dFlCZzhrSllKTW5UdzkybE1WZWJaeGE2SWlXR2NDSGRkTGU2aXFHc1poV2lNc2sza0ZJZ1VFeEs5VW1kbE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVmxtWXY0VFk4T0c1WXJvVDZsMUx5MnlUaEE?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech Hala raises landmark $157m Series B - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVm...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ21oUTc4SDJIM0hELXVJMGdYcmllekpYT3pETE1ZYnF6V0Z2bG0yMzdpYTI0VHNzeXNGWXRFSXo5VzEyNm1Gb3JoU3BjZW11bnplc3pCNGR5Ti1FczVKcW5RTFh5akgzWWFEZjFYYUFhTXh3TEZHTFM3dmdCUW1GQm9YSTRpMjM1S0Ffbm40NmhBRXA3NkdF?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "HALA Raises $157 Million in Series B to Expand FinTech Services for Saudi SMEs - FinTech Weekly - <a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZ21oUTc4SDJIM0hELXVJMGdYcmllekpYT3pETE1ZYnF6V0Z2bG0yMzdpYTI0VHNzeXNGWXRFSXo5VzEyNm1Gb3JoU3BjZW11bnplc3pCNGR5Ti1FczVKcW5RTFh5akgzWWFEZjFYYU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdGJQbmR1YlpxdzlueEJDTXZLcEh1eE50OGdTT3BoYzFlUENFdEJ0Q1l5eVZJR3BSRnRUazVZOUd5RzlpMGp5UDM2YmU4WWs3cmpLR0cwU0dueWFrQzBuODZ0T0IyLV92YUM1RWRUQW9RblJwVzZMczg1Vk5pTGs3b3NrSlVnWWV0X2dpQW9nX2NZeGFySzFNdDd2el9DNkcwSUstdkdpemlRRQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157m in one of the Middle East’s largest fintech Series B rounds, led by TPG and Sanabil Investments - GlobeNewswire - <a href=\"https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ0NtSmZtZWJRRnFSRGtOREdJTHBFUTFYQ0VRS0FteTF3ME5CdHZsOTJ2MmEtcGM4OFYtQ3RQc0hqN1A4VVBYNkNtVDdhMkc2ZU5WMS16MzhXTldBd2ZfWS1FR2wtQXhPX21NazFMLVVUd3JWSGFzcThvejE3QkhUZUtFUQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157 million in landmark Series B round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOZ0NtSmZtZWJRRnFSRGtOREdJTHBFUTFYQ0VRS0FteTF3ME5CdHZsOTJ2MmEtcGM4OFYtQ3RQc0hqN1A4VVBYNkNtVDdhMkc2ZU5WMS16MzhXTldBd2ZfWS1FR2wtQXhPX21NazFMLV...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOM0ZiQk90TFZid1lmenVBclZVN3dJR1dHOGk0NDhmOERPWFV3UzVUdjJvSGFvREtCVnhsZWtVcHJYVGtxRzVIaDB4eG93SWVWV1EzdHZHZWN0VnpBWGdVMTlHdjZaMjkwSHZRT2JCUDN3TER1U29UNE1sLVVNZXBTc3FmSzl2bUREMkNjQTNndGIyVlpLMnfSAVZBVV95cUxOS1JHN0VYLTlYMHFadmgyTHQ5WXphU09Wb25MQ2VzTkxRR2poZ2Fad2ZCVDFVNUpXNW5oVUx3M05vODJxMFdrWENIQU0tMnBic20tZVF5dw?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi Fintech Hala Secures $157M Of Series B Funding - Law360 - <a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOM0ZiQk90TFZid1lmenVBclZVN3dJR1dHOGk0NDhmOERPWFV3UzVUdjJvSGFvREtCVnhsZWtVcHJYVGtxRzVIaDB4eG93SWVWV1EzdHZHZWN0VnpBWGdVMTlHdjZaMjkwSHZRT2JCUD...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iaWdaZF9sNlhBcGxaNTI4OUJvak1rdWlOZ25hWXFTd1o3QTVzSi1BZlpUSVlod3lYNElLSVAwbXdmWkt5QUxJbm1sWUg0QmZrMFFrejB5X1lNQ0hZdWIyQ0FxalhfT1N0?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Hala Secures $157M Series B Funding - USA Herald - <a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iaWdaZF9sNlhBcGxaNTI4OUJvak1rdWlOZ25hWXFTd1o3QTVzSi1BZlpUSVlod3lYNElLSVAwbXdmWkt5QUxJbm1sWUg0QmZrMFFrejB5X1lNQ0hZdWIyQ0FxalhfT1N0?oc=5\" tar...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONVU0dVhocUdXTE82OTgxb3FEVEw2NnBDWm1sNEJxN2Myd2RiWVJjeWlaX285S0ktRUlrOFVwemdxbFRHS3ZtR2JSYWNOTDRtN3o3OHZHYV92UDg0eE41Q1ZkNGM4d1JYRlZsLWtIV2ozcjRBOE9fdFI3VTZUT3ktSk9BZHh3eWJSU1FPY3ZaN0E0eGRfVnE0eA?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA secures $157m Series B to expand FinTech solutions - IBS Intelligence - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxONVU0dVhocUdXTE82OTgxb3FEVEw2NnBDWm1sNEJxN2Myd2RiWVJjeWlaX285S0ktRUlrOFVwemdxbFRHS3ZtR2JSYWNOTDRtN3o3OHZHYV92UDg0eE41Q1ZkNGM4d1JYRlZsLWtIV2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSGxDaU5rb3kwOU5zWTNlNGxXMUdTdWN4Z0x2?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech HALA raises $157m in TPG-, PIF-led Series B - DealStreetAsia - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNVItaVJEbWhRdm9sTU1QQQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Hala Raises $157M in Series B Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNV...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaHFvZG9JX1p6YUJ4Z2RHd24wN1N2MDhsWDRJQmhHOWpLd0pEdU8tX1FYYW81bTdmakdUME5zN2JXcndMaTdHckRUQ1l3UVFRT0VxbWp3b2dWUEp1cUczQ3FyOEk5eDBLeGgyRkZGMEhxQl9RbGV2V0ZKRmx3OGJEaFprUm13WU1kcG5FandYeE1XWGpQWUhoVHJhYnlPdw?oc=5",
+          "date": "Tue, 16 Sep 2025 11:18:57 GMT",
+          "summary": "HALA Raises $157M in One of MENA’s Largest Fintech Series B Rounds - cairoscene.com - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPaHFvZG9JX1p6YUJ4Z2RHd24wN1N2MDhsWDRJQmhHOWpLd0pEdU8tX1FYYW81bTdmakdUME5zN2JXcndMaTdHckRUQ1l3UVFRT0VxbWp3b2dWUEp1cUczQ3FyOEk5eDBLeGgyRkZGME...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE83Q2hWQ0oyOVFvZnVQTV9DZWNxWnFPZkk1dUpQd29Eb0o1SEtMdE5oRWJmQ1FKeUJFTFVYMFRlX3Z4OUEtc21LUjFfQlB5YVpfd2JDbm15U1dNZFZOOEl6NUJucjhweXJzbXlYU1ZiZzVfMkUzTjVHNGxkZlZHdw?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech firm Hala lands $157m series B - Tech in Asia - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE83Q2hWQ0oyOVFvZnVQTV9DZWNxWnFPZkk1dUpQd29Eb0o1SEtMdE5oRWJmQ1FKeUJFTFVYMFRlX3Z4OUEtc21LUjFfQlB5YVpfd2JDbm15U1dNZFZOOEl6NUJucjhweXJzbXlYU1ZiZz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WeDBnVTRXSHRpcWZsYUdUeER1Yjk5X1JFRDhTc096c1dCZmhreVhmNXY3UHpEU1d6LUJFa3ROWkh6LUtFc3ZORVQxS0Nzc0xhOU5KTEFn0gFbQVVfeXFMTklqRHVBUDNfR0s4dFAwNW9LOEJKX29XTWhoVklLZ2psNEdFT20ybU5Za1hDU2phSlVxRjR2b0RyX3pmMWRTdmpvYXRPanlGWkdXYXJDX2ZxaHNKMA?oc=5",
+          "date": "Sun, 07 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi’s Intella raises $12.5 million in Prosus-led Series A to offer AI transcription for 25+ Arabic ... - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WeDBnVTRXSHRpcWZsYUdUeER1Yjk5X1JFRDhTc096c1dCZmhreVhmNXY3UHpEU1d6LUJFa3ROWkh6LUtFc3ZORVQxS0Nzc0xhOU5KTEFn0gFbQVVfeXFMTklqRHVBUDNfR0s4dFAwNW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5zVHZQcHNTNWZFX1l0b25MSG9yUVZIYmhZSmx5RnlTQ0Y5OG1CVXJLaGVEZ0FSbVZqVXVNZDVyMWU4Rkl6NHkzUmd1NUl4MUJpVDVjWGl6and1SnIxa3Izb01sM0daRjFXR1pUWDJDcUQ0Q18zNG1kQV9n?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA Raises $157m in One of Middle East’s Largest Fintech Series B Rounds - Tech | Business | Economy - Techeconomy - <a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5zVHZQcHNTNWZFX1l0b25MSG9yUVZIYmhZSmx5RnlTQ0Y5OG1CVXJLaGVEZ0FSbVZqVXVNZDVyMWU4Rkl6NHkzUmd1NUl4MUJpVDVjWGl6and1SnIxa3Izb01sM0daRjFXR1pUWDJDcU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdVFTallmWlBaMFJFcFlNRW1pckxlMzNJZWtrUWczdHdTcFNwUzRZR1RObG1VRFlzN0tOUk5QUURBQmt0QmxKYkVadUxPWVFvaWlhWkxmT2hkdWhRckV4VjlGZHJ5am1DM1lpQXhlMWk3d1MxQmxhT1pDekQwaXNHdjIxNXZwN3pueTBVaUtRRnY4VTVja2p5bGxJRjZkYTRKYlVtdE5NLTFwdTV0clAxejZR?oc=5",
+          "date": "Fri, 13 Sep 2024 07:00:00 GMT",
+          "summary": "Palestinian-American Poet Hala Alyan Opens 2024 Living Writers Series - The Colgate Maroon-News - <a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPdVFTallmWlBaMFJFcFlNRW1pckxlMzNJZWtrUWczdHdTcFNwUzRZR1RObG1VRFlzN0tOUk5QUURBQmt0QmxKYkVadUxPWVFvaWlhWkxmT2hkdWhRckV4VjlGZHJ5am1DM1lpQXhlMW...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeE5zaW1uMFZ3WUhfalJ3a1ZpekpQNUhXMUEwQ1djeFZjR0E0TWxPWlE3ajBzb25QUVpTcGtFNDdVRkE1bEFlazlaMkIySnJzX0hIOC1MNFd3Y3RaRVV5Q3FTLXd5YnlrZGg3MHktTHp6VmhmY1RpRm0wdG5XN2k3SkNFWFNCR2tsSHc2Q1BtaDA4dHZnR3ZJWHR3TE43QlE?oc=5",
+          "date": "Wed, 18 Dec 2024 13:36:31 GMT",
+          "summary": "How Amr Diab Shaped the Sound of 2024 Hit Series Hala Khassa - cairoscene.com - <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQeE5zaW1uMFZ3WUhfalJ3a1ZpekpQNUhXMUEwQ1djeFZjR0E0TWxPWlE3ajBzb25QUVpTcGtFNDdVRkE1bEFlazlaMkIySnJzX0hIOC1MNFd3Y3RaRVV5Q3FTLXd5YnlrZGg3MHktTH...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNeTVqTWd5NWZXUXQ4NjlIZVBPYjRqbTVEcUcxUWNCejZ0N21BTUFiSzdBVW5TbnN2UmhnRU53UDNEZEdDLWRoQng2ejdUcllJbmYyNFhPNUVIQkpaTUhQSFRTSnc0NWdVWS0yLVMwek5KOVQ1T1JLX0stNldZejRhTnpvdkZQN293ZEpWSmxJd0MxWE9WZmhtSjlQR1JLOHlOQ3pzTE9pdGNTMDAyQmJsSmZla1preU5oN01tTXVsNnhRaFhIclY3cXo1ZjlyYWZWTWR2bnhyNGluRGtuaHJpNzJWRFgxTk1SUW1sdF8tMWhYQ0w5VHc?oc=5",
+          "date": "Tue, 03 Oct 2023 07:00:00 GMT",
+          "summary": "Intella Secures $3.4M in Pre-Series A Funding Round Led by HALA Ventures and Saudi Aramco’s Wa’ed Ventures - Business Wire - <a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxNeTVqTWd5NWZXUXQ4NjlIZVBPYjRqbTVEcUcxUWNCejZ0N21BTUFiSzdBVW5TbnN2UmhnRU53UDNEZEdDLWRoQng2ejdUcllJbmYyNFhPNUVIQkpaTUhQSFRTSnc0NWdVWS0yLVMwek...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYUZ2M0NMQ0R2N2owSVdrd2JmQ0dDcXZuMWVNLU5wdEVqR2xUYWVncU82RkdhbXNodHNsYnVMVkFDMk90Q1NKam1NUE91VVctcE1pcG1fOTRpMDZlYWotTXpGUHAyYzB5R3YwQUVVd3hPZFh5bzBBR3pFX2NGbzNHdXFIQQ?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Wamda participates in Hala’s $6.5 million Series A round - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPYUZ2M0NMQ0R2N2owSVdrd2JmQ0dDcXZuMWVNLU5wdEVqR2xUYWVncU82RkdhbXNodHNsYnVMVkFDMk90Q1NKam1NUE91VVctcE1pcG1fOTRpMDZlYWotTXpGUHAyYzB5R3YwQUVVd3...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZW1WVE1Cb3dPaUVzYkZKaGtkeU9ZQktJVGdSeFB3cnJhTXduUERjaWJ3WHhpYVBhWXNRM3lZNjhJdlpjdGZZQUZfc0FwUE40Q3pXRzFpdjMwZVdKY2hPV0hXTTAzQ256S2tTdWxUYVNBY2pMODJqZUE3aEp3NlhRTFh4WVNSa1ZiTUVzQzhoRGp0S2ZMeHlHYk50dzB6bVJHd1NuOUxUeV9yVnc2?oc=5",
+          "date": "Tue, 31 Aug 2021 07:00:00 GMT",
+          "summary": "We Got Funded: Abu Dhabi-Based Insurtech Startup Hala Raises US$5 Million In Series A Round To Expand Across The Middle East - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNZW1WVE1Cb3dPaUVzYkZKaGtkeU9ZQktJVGdSeFB3cnJhTXduUERjaWJ3WHhpYVBhWXNRM3lZNjhJdlpjdGZZQUZfc0FwUE40Q3pXRzFpdjMwZVdKY2hPV0hXTTAzQ256S2tTdWxUYV...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTDNQakRHN2ZURzA3TWlXSDBaZHpCQUZIQjlJZlJBMnpMVmU1UnRnbUlXT3E2TVFud2J2SlRHdkUzcGtOcHV1NlhqNkI5cFpLbGVPak1aT19DWExRc3I5WnF5VmdmT1dXd0FOYlA3N29vZlZUZVd3OFZWeW1CN2dVUHFMMi1RUUQycFAwY05jSU5UU3hjcUNhQVZkbzZkVFhRYXhR?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility Secures Rs 51 Cr In Pre-series A Funding Round - BW Disrupt - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNTDNQakRHN2ZURzA3TWlXSDBaZHpCQUZIQjlJZlJBMnpMVmU1UnRnbUlXT3E2TVFud2J2SlRHdkUzcGtOcHV1NlhqNkI5cFpLbGVPak1aT19DWExRc3I5WnF5VmdmT1dXd0FOYlA3N2...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOVk5EeGdBVnBzaDNVdEhOZlVxLTI0R3dOSUY5aFNRT0xDMEtuSjFpb1liMEpVNmR5WE1hWEd4STJYdVowV3FJMlZocWdpQndneHZLNzdqUmlqX0M2aHdYRy1uNW9nWEhqRnNyckxfTzBkTEhaZThwbXZKcldPMjBHYl9meVlZR3B2aExEMTZVUEpiUVc3amZNV0NGLWpFdw?oc=5",
+          "date": "Fri, 12 Jan 2024 08:00:00 GMT",
+          "summary": "Hany Shenouda Resurrects Al Masreyeen's Essence in ‘Hala Khasa’ Series - cairoscene.com - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOVk5EeGdBVnBzaDNVdEhOZlVxLTI0R3dOSUY5aFNRT0xDMEtuSjFpb1liMEpVNmR5WE1hWEd4STJYdVowV3FJMlZocWdpQndneHZLNzdqUmlqX0M2aHdYRy1uNW9nWEhqRnNyckxfTz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOS3V4ekw5ckVKWnk1QzN4SFFKLWRXWl9COG1DdzBRbmNsNVV3SVpGRGFleXh6QTN5S0VHdzd5XzgwR1J6dHNIc0ItT084TVdadnlVMjZGNWhqUlM3NGhCaTJyUlUtYWtHRWZMQndJZDNiQUVkREo1TEFoa3pvSmphWjJwbEhsS3VITlpQRGdkWVQ?oc=5",
+          "date": "Tue, 06 Feb 2024 08:00:00 GMT",
+          "summary": "‘Hala Khasa’ Series Shines Light on Autism | REVIEW - Egyptian Streets - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOS3V4ekw5ckVKWnk1QzN4SFFKLWRXWl9COG1DdzBRbmNsNVV3SVpGRGFleXh6QTN5S0VHdzd5XzgwR1J6dHNIc0ItT084TVdadnlVMjZGNWhqUlM3NGhCaTJyUlUtYWtHRWZMQndJZD...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5",
+          "date": "Sun, 29 Aug 2021 07:00:00 GMT",
+          "summary": "Hala raises $5 million in Series A - Wamda - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5\" target=\"_blan...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MY2p6Qko3OUo0VWozeU13dTNhd00ySEdLdjVRZG5Yc3U3bGxocUhwYm1qeHpBVXNXbjF5ZllPb2pLaVFjLUxRME9YUmdVQjl4SWfSAVdBVV95cUxOV19iX0FDM1VqWFIyaTN3aXYwMXdyTl8xX080TkFKZjk2bk5td3MwUF9JM3gxLTh0eUt0N0lsX3hEQ21yUzljaGdfUjV6eWZacWFZVVZDek0?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi’s Hala raises $6.5 million Series A to become a digital bank for SMEs - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MY2p6Qko3OUo0VWozeU13dTNhd00ySEdLdjVRZG5Yc3U3bGxocUhwYm1qeHpBVXNXbjF5ZllPb2pLaVFjLUxRME9YUmdVQjl4SWfSAVdBVV95cUxOV19iX0FDM1VqWFIyaTN3aXYwMX...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYXE1RTBVZ0R1SjZweGlZLTRGRXpKMzNDc1ExdG91cnBHbl92SkJtMmp2aXFNQ1FOanVDVFZjVDFTaXBqZ2NaR21FTzM4dzNPdUhVU1hrUkNkWmhRVmVzOTdEZzJhNTR2bFpvbTNMNzg0enlLclMwR2pPakNSdXJxMUNkaWtzZENrbEFYeDZ1X0wzZ2PSAZMBQVVfeXFMTmFxNUUwVWdEdUo2cHhpWS00RkV6SjMzQ3NRMXRvdXJwR25fdkpCbTJqdmlxTUNRTmp1Q1RWY1QxU2lwamdjWkdtRU8zOHczT3VIVVNYa1JDZFpoUVZlczk3RGcyYTU0dmxab20zTDc4NHp5S3JTMEdqT2pDUnVycTFDZGlrc2RDa2xBWHg2dV9MM2dj?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility raises Rs 51 Cr in pre-Series A round - Entrackr - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOYXE1RTBVZ0R1SjZweGlZLTRGRXpKMzNDc1ExdG91cnBHbl92SkJtMmp2aXFNQ1FOanVDVFZjVDFTaXBqZ2NaR21FTzM4dzNPdUhVU1hrUkNkWmhRVmVzOTdEZzJhNTR2bFpvbTNMNz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OMkZSMVp6M01QcXRKVGN3WE90bVQxZ3UtZGN4Vk1qejNyaGstYmlRT1pHY0sxM2tyczZvN0NlVGR4YUp0Z3djcTJzblNZUjRDNVZaNzJB?oc=5",
+          "date": "Tue, 21 Mar 2023 07:00:00 GMT",
+          "summary": "Anas Bukhash, Hala Kazim partner with OSN to launch original series this Ramadan - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OMkZSMVp6M01QcXRKVGN3WE90bVQxZ3UtZGN4Vk1qejNyaGstYmlRT1pHY0sxM2tyczZvN0NlVGR4YUp0Z3djcTJzblNZUjRDNVZaNzJB?oc=5\" target=\"_blank\">Anas Bukhas...",
+          "confidence": 1,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZy1SZFNKbjhoOW9kUlZHZzQ3bmRQNVdXM1otUHBXdzVKa0ZvalFTbnNkQ0dFMHJacEtEM2dOYV84YVVwbmQwYUducGVsbl9IMkxZT2NnREh3WjFaWGl6bWVsdDBTeUNRaFNIRGZqaHEzR3VZalZqMXNiU1d3Y1ZBM2hVZGFyZzhsSnNIUy14cnl6a1JMN2VTaDRpTl9aN2N3em9oS3pR?oc=5",
+          "date": "Wed, 22 Mar 2023 07:00:00 GMT",
+          "summary": "OSN ties with Anas Bukhash and Hala Kazim to launch Ramadan series - BroadcastPro ME - <a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQZy1SZFNKbjhoOW9kUlZHZzQ3bmRQNVdXM1otUHBXdzVKa0ZvalFTbnNkQ0dFMHJacEtEM2dOYV84YVVwbmQwYUducGVsbl9IMkxZT2NnREh3WjFaWGl6bWVsdDBTeUNRaFNIRGZqaH...",
+          "confidence": 1,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi Fintech Hala Raises $6.5 Million in a Series A Round - waya.media - <a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5\" target=\"_blank\">Saudi Fi...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPTW9MaEVIS2pkRnExWkdGSEg2NkpSRkJoejE2Z2hWRTJEdDRnUy1LWUFtQ1FadUlGWjZJT05OV2QtS2s0WGxwYWNnTUhadlg5bV9CQTgtbmUxV0RBekNDelBhX0prZ1Y2UmFTY0VoOXg1RjdpZTJQVFVBamhfdUw3b2xpWldyWDFna25qd0I2V0tCRmxBWGMwTEZjUVA2dXhQQXRSdGVnNHRwTUVmR0gxZE9XNEZ5MHVqMkoydVNBeS1fLXlURFBUcVppUmlaOGV1dHBNLU9aMFF3SmJzTElXMWMzcXc?oc=5",
+          "date": "Wed, 02 May 2018 07:00:00 GMT",
+          "summary": "‘This Is Us’ Costume Designer Hala Bahmet On Managing Time Jumps & Designing Kate’s Wedding Dress – Production Value Video Series - Deadline - <a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxPTW9MaEVIS2pkRnExWkdGSEg2NkpSRkJoejE2Z2hWRTJEdDRnUy1LWUFtQ1FadUlGWjZJT05OV2QtS2s0WGxwYWNnTUhadlg5bV9CQTgtbmUxV0RBekNDelBhX0prZ1Y2UmFTY0VoOX...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVpjd1B6N3RvRWdvbm5iU2FFYTBnZENscUQ1WkkxY0RPT1FRbkcyNU1ucXlJbGhZbTdoOWNBaW1KNmhhcnpFR1BZMDk4TFdVSDY0N0RCSUlIekNjXzVUUUpNek9fQ0lxNnB0LUlUTG5nem9yaHBjQ2FpM29LdmcxNmwzTjdVZUJZd2dTb0ZxcjBTLWNBVFU2UjJORVZWZmhRTFZlVNIBqgFBVV95cUxNNHhiWmZLNExVN1FXYWU3QU0zdEp1SUlBLW5uOEJaQkYtZ1lZV3pHSVRfSVVnQnBqbWpib2pYM19TNy1jRmljbDU3dE9LVkRrc1ZiWGJDb0RsM3cxaElmOHFYUGJuTEJqeC1Ra1U4enloMExUZzUxWDVYaDIwX0JzQnVoQUY3Z1RaLUFFa0k0cVRJMG1IQk1vLU5iSkJGdGY1T2R0dUE0NU9Idw?oc=5",
+          "date": "Mon, 22 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi Arabia’s Hala raises USD 6.5 million Series A to become digital bank for SMEs - KrASIA - <a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVpjd1B6N3RvRWdvbm5iU2FFYTBnZENscUQ1WkkxY0RPT1FRbkcyNU1ucXlJbGhZbTdoOWNBaW1KNmhhcnpFR1BZMDk4TFdVSDY0N0RCSUlIekNjXzVUUUpNek9fQ0lxNnB0LUlUTG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm10NlctU1FONXFFSl9UUWg2TE5QZ1RWN0xDRnZHMFV6ZWNLLXkzek9hLWNMdTBZdVdwOHlqWFhmeEhjeDV4N09vWm1MRDZEZXY4NnBaMVRTcmpHZ9IBwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm10NlctU1FONXFFSl9UUWg2TE5QZ1RWN0xDRnZHMFV6ZWNLLXkzek9hLWNMdTBZdVdwOHlqWFhmeEhjeDV4N09vWm1MRDZEZXY4NnBaMVRTcmpHZw?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "EV-as-a-service startup Hala Mobility raises Rs 51 crore in pre-series A round - Indian Startup News - <a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQM01ZNXQyM2drYW9Rdk5XV28wUTlGeEUxYWdKaGRraTdqbjZtSVJySDA5SEdnY3o5VmpmWmtSSEVuekhGVHhFTjRVUU5FdXNFOEljTUQ1LXZEODJWNDRLVTFsLVIyRExsamc5aHVHbm...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lRk14ejN6U1ZDQi1XcGtMQnNhN19ZaC0ybjNwOU5iR0IxQWJMWDdaSzFBQk5MX1I0VW5iWVY4d2pDdUI0clo1WjBRZC1DY1FmZUJSWkhoemxmbUczUmt6RQ?oc=5",
+          "date": "Mon, 22 Jul 2024 07:00:00 GMT",
+          "summary": "Hala Sedki Joins TV Series \"Ash Ash\" - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lRk14ejN6U1ZDQi1XcGtMQnNhN19ZaC0ybjNwOU5iR0IxQWJMWDdaSzFBQk5MX1I0VW5iWVY4d2pDdUI0clo1WjBRZC1DY1FmZUJSWkhoemxmbUczUmt6RQ?oc=5\" target=\"_blan...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUnF3QkZ3aXAyVjhDel9MbkFfTE9INWdYUXozd2FfMnZPMDRIX3d5NHNTbmRMYnJBMjVham5aRXpXZTg2SW9iVDRSTjZFZFp0cms5TFBmZW93ekxwZkQyU2RZelU4VFBPckdLZWZHLTg5bWxiNWRVWTBVem1nS2RBLTlHQ1Q3bFNsX01QNnpKZEJySzlwa1RIdWZSTGVUSm9xc0NTSjZVUGRRRmFkZVE?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility bags Rs 51 Cr in pre-Series A funding - YourStory.com - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQUnF3QkZ3aXAyVjhDel9MbkFfTE9INWdYUXozd2FfMnZPMDRIX3d5NHNTbmRMYnJBMjVham5aRXpXZTg2SW9iVDRSTjZFZFp0cms5TFBmZW93ekxwZkQyU2RZelU4VFBPckdLZWZHLT...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5qZnQ0QlNDXzUwYmNqNWlpbHJNNHRNeE9kSGs1LWZ3cDNpdTk1OHZLRmhDZndkSjFXMktXcXIxU3pOY3ZGOFFBX19ucFc5U05URmQ2MDBvNm5uQm5kTm96alM0ak55OVJH?oc=5",
+          "date": "Thu, 21 Dec 2023 08:00:00 GMT",
+          "summary": "TV Series \"Hala Khasa\" First Look Unveiled - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5qZnQ0QlNDXzUwYmNqNWlpbHJNNHRNeE9kSGs1LWZ3cDNpdTk1OHZLRmhDZndkSjFXMktXcXIxU3pOY3ZGOFFBX19ucFc5U05URmQ2MDBvNm5uQm5kTm96alM0ak55OVJH?oc=5\" tar...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9sOTlhTjRZX0dUaDFhVU5pdTBqRmVCSUFDZDhfVzh3SllFZkRyS2FuMnp3MjJFZEc2ZXViNUQzYlMxY3VYRXdIYzJ0cnhVSVdlaGFMMkdleU15aWotWXpmWHowVG5SZw?oc=5",
+          "date": "Wed, 25 Oct 2023 07:00:00 GMT",
+          "summary": "TV Series \"Hala Khasa\" Begins Production - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE9sOTlhTjRZX0dUaDFhVU5pdTBqRmVCSUFDZDhfVzh3SllFZkRyS2FuMnp3MjJFZEc2ZXViNUQzYlMxY3VYRXdIYzJ0cnhVSVdlaGFMMkdleU15aWotWXpmWHowVG5SZw?oc=5\" targe...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQeGc3MlRrbVhvVktvVUd3bUdpOXR2czBCSGFnYVFxX0VwWnRXdTVzVXhpamhDRGdJejZSLUhObkVpYTBNTXFLUGcwVU1LdjFtVzFwSTVwa0JReEQzaVlCalktanpJMzZ6aEdnVm9SMENWX3JISFhyeDdCTDdKeHNaSHR3Nk5pTFRkVG1uWUhzWExMRDJ5WHFiWjlGRVJSSHZJVGdBWFFjelRIY3po0gG_AUFVX3lxTFBwMWNYcFNBM1FXR2k4bFhwaHJ4ZWRlM29YTTQzUmloVFNrTUYzUzdnc2tweWZZbXRHaTMzdVU2bTM1aFVBWWF1ZERlV0swSk5GNjlzOFlmYTMwZGNnZjZfY1NwS0dVam5SdWtHR05sM3VvdkhUVVQzSXZDZGFnUF95XzNwT2hpOU9OQ2dtVi1nWDVfUlM0eUV6Yl9MLWxvSjFNcVRKa1o0OWtEU00zSFA0N0RPRFFRYW5aTzVFSElN?oc=5",
+          "date": "Wed, 22 Mar 2023 07:00:00 GMT",
+          "summary": "Ramadan 2023: Top shows and series to watch this season - Gulf News - <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQeGc3MlRrbVhvVktvVUd3bUdpOXR2czBCSGFnYVFxX0VwWnRXdTVzVXhpamhDRGdJejZSLUhObkVpYTBNTXFLUGcwVU1LdjFtVzFwSTVwa0JReEQzaVlCalktanpJMzZ6aEdnVm9SME...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzeU50WV9UWDBoVFRlMUMyTmx2Wi1KOWp5NU1sZTNJRExmZ19aWVVNMnFsYTRENXp1TFQwY2NyY2E5UHJRWURFVF9yS3lqMWY0bzBHYVVTSlJtUHM4NW9lX29Kc1g?oc=5",
+          "date": "Fri, 15 Dec 2023 08:00:00 GMT",
+          "summary": "TV Series \"Hala Khasa\" Wraps Production - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTFAzeU50WV9UWDBoVFRlMUMyTmx2Wi1KOWp5NU1sZTNJRExmZ19aWVVNMnFsYTRENXp1TFQwY2NyY2E5UHJRWURFVF9yS3lqMWY0bzBHYVVTSlJtUHM4NW9lX29Kc1g?oc=5\" target=\"...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPN2dxb25EeUpreE9OTzF6Y091NG5sRk5lSUtMLTMwWmxIMi15amdvUHh0b1ZOM25KaXVHOE04TjNiUzlDLWVVbjVxZU5TNzJhZy1DdkhyS2J5LWFoYnNscC01c2IzclNKMFRhVE5fM1c1cGxNdS1vN0ZFcmFSdHF5RnYtSGw2aktOajBveG5KZkdZYjZYNTBhbE9iTUFpTXE3Q2V2U0JqZWdBdW5PckNHenBB0gGyAUFVX3lxTE83Z3FvbkR5Smt4T05PMXpjT3U0bmxGTmVJS0wtMzBabEgyLXlqZ29QeHRvVk4zbkppdUc4TThOM2JTOUMtZVVuNXFlTlM3MmFnLUN2SHJLYnktYWhic2xwLTVzYjNyU0owVGFUTl8zVzVwbE11LW83RkVyYVJ0cXlGdi1IbDZqS05qMG94bkpmR1liNlg1MGFsT2JNQWlNcTdDZXZTQmplZ0F1bk9yQ0d6cEE?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility Secures Rs 51 Crore in Pre-Series A Funding to Expand EV Operations | Startup Story - Startup Story - <a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPN2dxb25EeUpreE9OTzF6Y091NG5sRk5lSUtMLTMwWmxIMi15amdvUHh0b1ZOM25KaXVHOE04TjNiUzlDLWVVbjVxZU5TNzJhZy1DdkhyS2J5LWFoYnNscC01c2IzclNKMFRhVE5fM1...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVGdUTGVuOXR3OG9IS1NZNkktUWg0Y3NzWHFwUlVTRlJzY1pEaEFTWXNlTW5IN2QtT3I3dmQzR1MtZ1d0OUlVMVFFN1dOZVJ2YVpRLXBKVHV0WlhNYU5aMVB2STZBVEZRUlVoVHdxV1BiaGVubTJwMTBIXzVtY2NDWkd1ZVBUYUxDY2JrTS1IUmM?oc=5",
+          "date": "Mon, 04 Nov 2024 08:00:00 GMT",
+          "summary": "Hala Mobility raises ₹51 crore in pre-Series A funding round - MarcaMoney - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNVGdUTGVuOXR3OG9IS1NZNkktUWg0Y3NzWHFwUlVTRlJzY1pEaEFTWXNlTW5IN2QtT3I3dmQzR1MtZ1d0OUlVMVFFN1dOZVJ2YVpRLXBKVHV0WlhNYU5aMVB2STZBVEZRUlVoVHdxV1...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc2tEVHZlR0lMSW1VR0ZuVUdCMm00TWJqUzJhc2xlYThEU1V0WVJtUWl1c1l5SGJvcHEzbWMyd1BCRTRlSE9VcWJ6NlNUbUlxX0g0MWREOWtqeDNza1I5NnVubUg5TnltOVN1bnFRcF9maVdLMWFhWnhKa3BOaDZ4YUN1Mzh6ZzV2?oc=5",
+          "date": "Thu, 11 Jan 2024 08:00:00 GMT",
+          "summary": "Hala Khasa (Special Case): How To Watch Ghada Adel and Taha Desouky’s New Series - Harper's Bazaar Arabia - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc2tEVHZlR0lMSW1VR0ZuVUdCMm00TWJqUzJhc2xlYThEU1V0WVJtUWl1c1l5SGJvcHEzbWMyd1BCRTRlSE9VcWJ6NlNUbUlxX0g0MWREOWtqeDNza1I5NnVubUg5TnltOVN1bnFRcF...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4xUDRDT0gxZUJuaGxOS0FTek1kTFQ4Q09DMDAxZmVTanpMcjQyZGRWMk5LUWJ0Q0VxYlVxNDBWc1NwaXRsRk5udTRhWnNyYXdGTjVSNTdOaVhELXMyWUN0MVJtSVdrUmREaVhv?oc=5",
+          "date": "Wed, 18 Oct 2023 07:00:00 GMT",
+          "summary": "Ghada Adel to Star in TV Series \"Hala Khasa\" - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE4xUDRDT0gxZUJuaGxOS0FTek1kTFQ4Q09DMDAxZmVTanpMcjQyZGRWMk5LUWJ0Q0VxYlVxNDBWc1NwaXRsRk5udTRhWnNyYXdGTjVSNTdOaVhELXMyWUN0MVJtSVdrUmREaVhv?oc=5\"...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBGWnRjMVhJWU5wTlh6T3JjYkNtS3lhMHVKM1ZGekN6ZmZieWlRaE5xM0JlUVRfYnl5UG44MXdJRW5xN1pmZE92QkZ6VVFGZFE1YXU3TzlabllKcUFYVWs3T05ubDF6SGVWRkw2ZXBR?oc=5",
+          "date": "Tue, 26 Dec 2023 08:00:00 GMT",
+          "summary": "TV Series \"Hala Khasa\" Premiere Date Announced - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBGWnRjMVhJWU5wTlh6T3JjYkNtS3lhMHVKM1ZGekN6ZmZieWlRaE5xM0JlUVRfYnl5UG44MXdJRW5xN1pmZE92QkZ6VVFGZFE1YXU3TzlabllKcUFYVWs3T05ubDF6SGVWRkw2ZXBR?o...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwUHpDOHR0VGgtSGk3YXgwWjllYi1abWEwcHVsVkQzMHRSeTkzb3ZNVWlCSjhmUjc0bksxQ2xyZDdudEdkRUVON0NxZll4S3hraldMQlNjeUtEU2ZDMC1JcDVUZGZ0bUJjRnRBWm5vZw?oc=5",
+          "date": "Mon, 25 Dec 2023 08:00:00 GMT",
+          "summary": "TV Series \"Hala Khasa\" Gets New Look and Poster - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTFBwUHpDOHR0VGgtSGk3YXgwWjllYi1abWEwcHVsVkQzMHRSeTkzb3ZNVWlCSjhmUjc0bksxQ2xyZDdudEdkRUVON0NxZll4S3hraldMQlNjeUtEU2ZDMC1JcDVUZGZ0bUJjRnRBWm5vZw...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA0NV9yTnEtZHJQcTZJaDVJVUxkbFdDaTBUN1ZoeWpqMTF3X0h2aC1tdGRiUGthZFJHU19XRGdWeDY3djhRTUd1TzNZb1RfUjVSaUE?oc=5",
+          "date": "Sat, 25 Mar 2017 07:00:00 GMT",
+          "summary": "Other Sports: Manama pip Hala to extend series - Gulf Daily News - <a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFA0NV9yTnEtZHJQcTZJaDVJVUxkbFdDaTBUN1ZoeWpqMTF3X0h2aC1tdGRiUGthZFJHU19XRGdWeDY3djhRTUd1TzNZb1RfUjVSaUE?oc=5\" target=\"_blank\">Other Sports: Ma...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaHlRWFRyenpjQWROY2ZiZEdrSndJVXRRZDFVLVRqd09GSHMtd2ctWm1PWG11ZGF3MTNkaGwxZTJmQVVvVGpqNE9vQUJKVHkzSHNWQ2hraGZuaHdRT2R2cXhtckhwd0tycGxHZEkxT3pyN2lVM0FXRWJmZHJLRHRzRnY5Q3gxQnFlTDJpWWxybUlwOTR5Z05xMnpueDhhT1o3dnVvZTRhVjZ2Q2k5?oc=5",
+          "date": "Fri, 07 Jun 2019 07:00:00 GMT",
+          "summary": "Barun Sobti rocks the cop look in web series Halahal - IWMBuzz - <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPaHlRWFRyenpjQWROY2ZiZEdrSndJVXRRZDFVLVRqd09GSHMtd2ctWm1PWG11ZGF3MTNkaGwxZTJmQVVvVGpqNE9vQUJKVHkzSHNWQ2hraGZuaHdRT2R2cXhtckhwd0tycGxHZEkxT3...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LWswYThZRFJ1WVhoRnhnaWJaS050U0dpUzQyMVFwemFwTjRYdVFyMzlibVUtUlNhek94VElWRFpfNA?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "HALA Capital launches as CMA-licensed private capital firm, expanding beyond ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVmxtWXY0VFk4T0c1WXJvVDZsMUx5MnlUaEE?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech Hala raises landmark $157m Series B - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxORzVqUHdkTUZmMmlUQ3k2QTRxUDlubm5od1p5ay1HbnM4QUhIanBwSzhKekFmUFB6R0pNNk9MMzlLLVN3WEVSc3JUY0pCQ25WREhLRmNHMUQyUHBtZU9TVjVCelFtdUdDS254NmtDVm...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdGJQbmR1YlpxdzlueEJDTXZLcEh1eE50OGdTT3BoYzFlUENFdEJ0Q1l5eVZJR3BSRnRUazVZOUd5RzlpMGp5UDM2YmU4WWs3cmpLR0cwU0dueWFrQzBuODZ0T0IyLV92YUM1RWRUQW9RblJwVzZMczg1Vk5pTGs3b3NrSlVnWWV0X2dpQW9nX2NZeGFySzFNdDd2el9DNkcwSUstdkdpemlRRQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157m in one of the Middle East’s largest fintech Series B rounds, led by TPG and Sanabil Investments - GlobeNewswire - <a href=\"https://news.google.com/rss/articles/CBMikAJBVV95cUxPS1BVQ3lUcWJiU2tMZzQ2UWd3S3UyVVRZSlVYNFI4NC1OdDhqeTh3T0IwZDNrbGJ0aGRuRC1MTnZ4YWpwUzhyNE5nOVpyejZIVGYzM2VzSmZNSjZ2X1pSUXpRSFhkVExvZ1dNeWZqdG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOZ1BQRWtZSTVSVnI1dXNIZWdDa3UtVnFtS2RUclo1cm9OSnlZRmhMb1kwd29FZVVYaVpOdzUyVkFRaDUyQUdfaElwV05oUHVaR3UzeFlROEhCY2N5NHBwTkViUVh5dmNaU2NNREt0OEJGcDFqNHVZZlV1LVJnWlZQSDVYR1JfRWlzTGxxR1VMMA?oc=5",
+          "date": "Wed, 29 Oct 2025 07:00:00 GMT",
+          "summary": "HALA Gains Licence From Saudi Capital Market Authority - cairoscene.com - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOZ1BQRWtZSTVSVnI1dXNIZWdDa3UtVnFtS2RUclo1cm9OSnlZRmhMb1kwd29FZVVYaVpOdzUyVkFRaDUyQUdfaElwV05oUHVaR3UzeFlROEhCY2N5NHBwTkViUVh5dmNaU2NNREt0OE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5XU0U1ajRfUE5xbUpaSFhQMGhFSl9uejJUdHc5bTN3aU12MWszRktFeVhSUVJERGNhdjNBNGY2ZVc5SDM1eXFNVUROUnFmRk9YempR?oc=5",
+          "date": "Sat, 20 Sep 2025 07:00:00 GMT",
+          "summary": "Startup wrap — Early stage funding maintains growth momentum in MENA - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE5XU0U1ajRfUE5xbUpaSFhQMGhFSl9uejJUdHc5bTN3aU12MWszRktFeVhSUVJERGNhdjNBNGY2ZVc5SDM1eXFNVUROUnFmRk9YempR?oc=5\" target=\"_blank\">Startup wrap — ...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOVDN6dU1MbV9TU1RycEVWaVFzTW9icnE1UjlCU2xOLUJjVHh6MGxySGNVaHRNSlFJWUtJMUM2SkQ0TW9MTlF6MGFRa0lpYkQtRDNhOEZtOUpDVUtyU0ZkUEJ2cTgwbEx3QjU1NUtPQUp2MU9RR0NBV2FfZURZRFE1eHFjOA?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "HALA raises $157 million in Series B funding round - My Startup World - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOVDN6dU1MbV9TU1RycEVWaVFzTW9icnE1UjlCU2xOLUJjVHh6MGxySGNVaHRNSlFJWUtJMUM2SkQ0TW9MTlF6MGFRa0lpYkQtRDNhOEZtOUpDVUtyU0ZkUEJ2cTgwbEx3QjU1NUtPQU...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNVItaVJEbWhRdm9sTU1QQQ?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Hala Raises $157M in Series B Funding - FinSMEs - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9pRlR5T3RLQzJ1alJKRDNEZzZPaVRKTHV0dUxBNnFiNm1IUC1qLW9lT1c2ZmMzWWlfdVFFVTRTQnhjZmhPc2g1empIZUFfU1Q0MVczS0VZZzZST2ZsMXBqWDNHQUdxdVpZbmFQbEJNNV...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iaWdaZF9sNlhBcGxaNTI4OUJvak1rdWlOZ25hWXFTd1o3QTVzSi1BZlpUSVlod3lYNElLSVAwbXdmWkt5QUxJbm1sWUg0QmZrMFFrejB5X1lNQ0hZdWIyQ0FxalhfT1N0?oc=5",
+          "date": "Mon, 15 Sep 2025 07:00:00 GMT",
+          "summary": "Hala Secures $157M Series B Funding - USA Herald - <a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iaWdaZF9sNlhBcGxaNTI4OUJvak1rdWlOZ25hWXFTd1o3QTVzSi1BZlpUSVlod3lYNElLSVAwbXdmWkt5QUxJbm1sWUg0QmZrMFFrejB5X1lNQ0hZdWIyQ0FxalhfT1N0?oc=5\" tar...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE83Q2hWQ0oyOVFvZnVQTV9DZWNxWnFPZkk1dUpQd29Eb0o1SEtMdE5oRWJmQ1FKeUJFTFVYMFRlX3Z4OUEtc21LUjFfQlB5YVpfd2JDbm15U1dNZFZOOEl6NUJucjhweXJzbXlYU1ZiZzVfMkUzTjVHNGxkZlZHdw?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech firm Hala lands $157m series B - Tech in Asia - <a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE83Q2hWQ0oyOVFvZnVQTV9DZWNxWnFPZkk1dUpQd29Eb0o1SEtMdE5oRWJmQ1FKeUJFTFVYMFRlX3Z4OUEtc21LUjFfQlB5YVpfd2JDbm15U1dNZFZOOEl6NUJucjhweXJzbXlYU1ZiZz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSDhVUS1TT1FIMUhPVkZJV3FSb21YQUpwQlh4RHFLeXUxSXQtU0dHcldJYkNOc0FZaWJna2R5eUE0OV9JY0tWOV82R0ZVZWI2NWVwdkhyekhOb2hmbWNsMjNyY3htRDBHR3dOdWZseU9ZbF95aVNCUEJadUFTeTRkZEw2V0dpcVlCYlNONTFn?oc=5",
+          "date": "Mon, 23 Dec 2024 08:00:00 GMT",
+          "summary": "Top Venture Capitalists 2024 - Forbes Middle East - <a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOSDhVUS1TT1FIMUhPVkZJV3FSb21YQUpwQlh4RHFLeXUxSXQtU0dHcldJYkNOc0FZaWJna2R5eUE0OV9JY0tWOV82R0ZVZWI2NWVwdkhyekhOb2hmbWNsMjNyY3htRDBHR3dOdWZseU...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUThOa1RaM19TeHROXy1hM1VOTVJMMkFmWGRUSHdOVmhITzVfVElGS2p5TWlRcnNLc2lHU19mS0RtWmZLTHRfd2N3YmRpRU1zRy04eUtydnRQc0pWcWFZaEZfdGU1X2VMYUUtLVVnNjhYVGdRc1R2NzhlR0dCckluSGlPOA?oc=5",
+          "date": "Mon, 20 Jan 2025 08:00:00 GMT",
+          "summary": "Rize closes $35 million Series A led by Raed Ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOUThOa1RaM19TeHROXy1hM1VOTVJMMkFmWGRUSHdOVmhITzVfVElGS2p5TWlRcnNLc2lHU19mS0RtWmZLTHRfd2N3YmRpRU1zRy04eUtydnRQc0pWcWFZaEZfdGU1X2VMYUUtLVVnNj...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNU9jTmFwZUwtcmhITGRVd1BJbTRUUjdEUkxUTVZnVG5FVG15VTE5eVZGejVBb25jRDBfUmdmbGptZDNzakRCZ3FTUzFJakJ3bVdGb0s0MHlJS2lFWURyMU85NzNtSlNZcnF5MzVzNkFtNXdrSUluUzZZQ3JCcmtCdm9VSDBVYXdFNG1RTXFuTzhWZWpqaGxnNFFLTDExTVN5SVRMaXFSM0ZYTnFzVTFxWV9FLXJiRGJJRl9CTw?oc=5",
+          "date": "Sat, 18 Mar 2023 07:00:00 GMT",
+          "summary": "Hala Ventures's Ali Abussaud Wants To Support Global-Minded Startups From Saudi Arabia - Entrepreneur - <a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNNU9jTmFwZUwtcmhITGRVd1BJbTRUUjdEUkxUTVZnVG5FVG15VTE5eVZGejVBb25jRDBfUmdmbGptZDNzakRCZ3FTUzFJakJ3bVdGb0s0MHlJS2lFWURyMU85NzNtSlNZcnF5MzVzNk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeTdveHRDOXB1TmE0SkZWZTZDamZZcG1UcHBCUDl5UnlNZnk2MkhOcnRFWm5BQ09mREI4Njk2b3hxMlpQWEFvbGRfTW4yWWtMTl95QU85eUp0cVd0dE5uYkVOX3QzTzE5cllHVEZMZTlPa0kxbTU5bWFsNmItRXBBQw?oc=5",
+          "date": "Thu, 05 Oct 2023 07:00:00 GMT",
+          "summary": "Intella Closes $3.4 Million in Pre-Series A - The SaaS News - <a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQeTdveHRDOXB1TmE0SkZWZTZDamZZcG1UcHBCUDl5UnlNZnk2MkhOcnRFWm5BQ09mREI4Njk2b3hxMlpQWEFvbGRfTW4yWWtMTl95QU85eUp0cVd0dE5uYkVOX3QzTzE5cllHVEZMZT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNeTVqTWd5NWZXUXQ4NjlIZVBPYjRqbTVEcUcxUWNCejZ0N21BTUFiSzdBVW5TbnN2UmhnRU53UDNEZEdDLWRoQng2ejdUcllJbmYyNFhPNUVIQkpaTUhQSFRTSnc0NWdVWS0yLVMwek5KOVQ1T1JLX0stNldZejRhTnpvdkZQN293ZEpWSmxJd0MxWE9WZmhtSjlQR1JLOHlOQ3pzTE9pdGNTMDAyQmJsSmZla1preU5oN01tTXVsNnhRaFhIclY3cXo1ZjlyYWZWTWR2bnhyNGluRGtuaHJpNzJWRFgxTk1SUW1sdF8tMWhYQ0w5VHc?oc=5",
+          "date": "Tue, 03 Oct 2023 07:00:00 GMT",
+          "summary": "Intella Secures $3.4M in Pre-Series A Funding Round Led by HALA Ventures and Saudi Aramco’s Wa’ed Ventures - Business Wire - <a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxNeTVqTWd5NWZXUXQ4NjlIZVBPYjRqbTVEcUcxUWNCejZ0N21BTUFiSzdBVW5TbnN2UmhnRU53UDNEZEdDLWRoQng2ejdUcllJbmYyNFhPNUVIQkpaTUhQSFRTSnc0NWdVWS0yLVMwek...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSGxDaU5rb3kwOU5zWTNlNGxXMUdTdWN4Z0x2?oc=5",
+          "date": "Tue, 16 Sep 2025 07:00:00 GMT",
+          "summary": "Saudi fintech HALA raises $157m in TPG-, PIF-led Series B - DealStreetAsia - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNE9tdGhWQlJwYmI1Ym51ZlBsaEF1SUFjRTlLMlk0UmhOUmp5a3RJUGtWV3EtMWdxd0NzaXhsYVdpQ3VpUkYwVzlfa3VlMEtJRTdQQ3lTUkwxQ1pOdmVuUkpmMU5EVnc0YzZPU2dGSG...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5",
+          "date": "Sun, 21 Mar 2021 07:00:00 GMT",
+          "summary": "Saudi Fintech Hala Raises $6.5 Million in a Series A Round - waya.media - <a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxOWJ5SDJPc1hPYTFITUVxQjd2ZW0yLVRwYk5XblcwQXNsTTBad0syVl9XYWRKa1ZuZktvM19jbG9UTERxZDlNdlBlVUxjUndWS1BPTGkzbDM?oc=5\" target=\"_blank\">Saudi Fi...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOM1NFeFhNVWVUYzh6LVlzZnhrdTFnNWNTNGhTYWZ5N0lzb0cyMmhGUWRTWVgxSDNKMzFKbFVTeUE3aDFiNkRzM3hfRjFDZUxjeE80ZlV6Y1ZNLVlrY0JkRC1fNHM4TndsTmhyZ3BMTzFjcldlTW1oSS14TmduWU1PYko1U2UwdFdJ?oc=5",
+          "date": "Mon, 09 Aug 2021 07:00:00 GMT",
+          "summary": "Sarwa closes $15 million Series B round led by Mubadala - Wamda - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOM1NFeFhNVWVUYzh6LVlzZnhrdTFnNWNTNGhTYWZ5N0lzb0cyMmhGUWRTWVgxSDNKMzFKbFVTeUE3aDFiNkRzM3hfRjFDZUxjeE80ZlV6Y1ZNLVlrY0JkRC1fNHM4TndsTmhyZ3BMTz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LWswYThZRFJ1WVhoRnhnaWJaS050U0dpUzQyMVFwemFwTjRYdVFyMzlibVUtUlNhek94VElWRFpfNA?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "HALA Capital launches as CMA-licensed private capital firm, expanding beyond ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5",
+          "date": "Sun, 29 Aug 2021 07:00:00 GMT",
+          "summary": "Hala raises $5 million in Series A - Wamda - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uZFFpU2ZBU0UwbFlTd0lxMEtxM3RBYnhUeVhIekI1VGJGdEtqc2I2LVVuVVFwWWFwS1FqUXpzbXV1UV9yRFBZVkoxVXNHREV2SjdiUGJncExiLUxJNUJjcQ?oc=5\" target=\"_blan...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1qQk1SN2s0ckVjR1phRzkyWVVwTkU1VGFab1pIbDRZRjF0aEc0cFkxMUVoVEdKeDdSZExCVFBnNm5PU3lwNm1LSFBSc2ZpWVRpdnp0U0dtS1dfbGhlbmtYYVVkNGFNZ2s?oc=5",
+          "date": "Fri, 12 Jul 2024 07:00:00 GMT",
+          "summary": "Dubai’s Hala ventures into Egypt, marking first expansion beyond the UAE - Techpoint Africa - <a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1qQk1SN2s0ckVjR1phRzkyWVVwTkU1VGFab1pIbDRZRjF0aEc0cFkxMUVoVEdKeDdSZExCVFBnNm5PU3lwNm1LSFBSc2ZpWVRpdnp0U0dtS1dfbGhlbmtYYVVkNGFNZ2s?oc=5\" targ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPRTEzTmFRdzRqbGw5OXk0ajVtU3JGd2l5M0dvM1ZoOWlQSEFpUWZiSFBsbnduZEVGeHQ3cHhYUXo4VkxjVWtmblI0OXBMM3dCV2RzcDRPLXRrRjFXVDc5TlhuT0htbkgzbVo2c0ZycV9jeHRwdzgzZUZDMXQyZGM1UUt5MTZydmF6VWhtNVpPU0d6Zw?oc=5",
+          "date": "Wed, 10 May 2023 07:00:00 GMT",
+          "summary": "Marble Capital launches N3bn Halal Commodities Fund - - Business News Nigeria - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPRTEzTmFRdzRqbGw5OXk0ajVtU3JGd2l5M0dvM1ZoOWlQSEFpUWZiSFBsbnduZEVGeHQ3cHhYUXo4VkxjVWtmblI0OXBMM3dCV2RzcDRPLXRrRjFXVDc5TlhuT0htbkgzbVo2c0ZycV...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRjZxVE5jNUF0N0twdXpVZFo4LU9FbDl0eFBJTWx4VTQzWFFvYmVWTy0tOWtvNTJfaUxRbGJtcnFLVXNZWElzMV81enEzLWExLU1ENmJaVXppdjdtM2RkN1BCLXJKdW5jYjdnU0JoWjVxT3ZvTFRYLU1pcXFaQmZEY3lZNlpjc1lUX3NGZXM2UTRuQdIBlwFBVV95cUxOd3BNQ28zYWdZVkJXanVmY0YyNWpkeE5ORDNJOHhiUEY3RDRuVEFVbVZxXzRlZVRWem5XQzJxT0FLaUp3SWtfMWRubzlDYmdXY0c5Wm1WaHRWLTNmTGxKZ3VOMlpndFY5UUtYTWJiSHk2NEpyQXN2QkpJMVRzOS0zZ1REbG1SUmJLelAwVkxBM1laQkJKNm9z?oc=5",
+          "date": "Wed, 10 May 2023 07:00:00 GMT",
+          "summary": "Marble Capital launches N3bn Halal commodities fund - Vanguard News - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQRjZxVE5jNUF0N0twdXpVZFo4LU9FbDl0eFBJTWx4VTQzWFFvYmVWTy0tOWtvNTJfaUxRbGJtcnFLVXNZWElzMV81enEzLWExLU1ENmJaVXppdjdtM2RkN1BCLXJKdW5jYjdnU0JoWj...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 132 relevant evidence pieces"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPemVVNGQ4NDBRYkZuRGJsNy1XWlFaMUloYXYyTkVSdHFqRmlnMHRpVVJDRjhPWWlzN1Rha2hmZUl4RXpnN25CTTZsYnRnQUZXWTI2QzFnRENUVG1RaXM5MjFjUGZrdGd2QUthN1ZPWDBKWVNFTTBDdjB3Q0VxOEJSMFV5NHB2dy1GSGFWM1B4dDE3eGpMSHg1VGg2SG1BQ0lZeXQ1SlRiZFZWNUR5QlgwZ1UwWVVxMUVkOFYyN3NzUlVkUGRUZl9QeFZR0gHPAUFVX3lxTE16OGFxUkR3RnR5aGZWMUZQcVJfNDJNUG1LLWJtRXg0NmV5aVRsZi1wYWpRd0tMUktNUmgxR1RoOFVSWklTTjVtLTdiWVlPaWNQSWRGYmlJR0JIOW9oY2JUOTY3NlFJNk1kby1pT19YOFlKRjRMbXIyWVNadGRTNzBFYmRzQktvSmhIN1c1OEdBU1ZuMW5qbjdWMmU3X3c1T1NlbFRyR2pKczJLWmZxY1hFb3pOeGdmWHR0czBZelBiNXFMdVBvblZKOHZ2XzFXVQ?oc=5",
+          "date": "Wed, 01 Oct 2025 07:00:00 GMT",
+          "summary": "iGoWise Mobility Secures ₹8.2 Cr Funding to Launch India’s First Smart Electric Trike - EMobility+ - <a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPemVVNGQ4NDBRYkZuRGJsNy1XWlFaMUloYXYyTkVSdHFqRmlnMHRpVVJDRjhPWWlzN1Rha2hmZUl4RXpnN25CTTZsYnRnQUZXWTI2QzFnRENUVG1RaXM5MjFjUGZrdGd2QUthN1ZPWD...",
+          "confidence": 1,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OMkZSMVp6M01QcXRKVGN3WE90bVQxZ3UtZGN4Vk1qejNyaGstYmlRT1pHY0sxM2tyczZvN0NlVGR4YUp0Z3djcTJzblNZUjRDNVZaNzJB?oc=5",
+          "date": "Tue, 21 Mar 2023 07:00:00 GMT",
+          "summary": "Anas Bukhash, Hala Kazim partner with OSN to launch original series this Ramadan - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OMkZSMVp6M01QcXRKVGN3WE90bVQxZ3UtZGN4Vk1qejNyaGstYmlRT1pHY0sxM2tyczZvN0NlVGR4YUp0Z3djcTJzblNZUjRDNVZaNzJB?oc=5\" target=\"_blank\">Anas Bukhas...",
+          "confidence": 1,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZy1SZFNKbjhoOW9kUlZHZzQ3bmRQNVdXM1otUHBXdzVKa0ZvalFTbnNkQ0dFMHJacEtEM2dOYV84YVVwbmQwYUducGVsbl9IMkxZT2NnREh3WjFaWGl6bWVsdDBTeUNRaFNIRGZqaHEzR3VZalZqMXNiU1d3Y1ZBM2hVZGFyZzhsSnNIUy14cnl6a1JMN2VTaDRpTl9aN2N3em9oS3pR?oc=5",
+          "date": "Wed, 22 Mar 2023 07:00:00 GMT",
+          "summary": "OSN ties with Anas Bukhash and Hala Kazim to launch Ramadan series - BroadcastPro ME - <a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQZy1SZFNKbjhoOW9kUlZHZzQ3bmRQNVdXM1otUHBXdzVKa0ZvalFTbnNkQ0dFMHJacEtEM2dOYV84YVVwbmQwYUducGVsbl9IMkxZT2NnREh3WjFaWGl6bWVsdDBTeUNRaFNIRGZqaH...",
+          "confidence": 1,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBGWnRjMVhJWU5wTlh6T3JjYkNtS3lhMHVKM1ZGekN6ZmZieWlRaE5xM0JlUVRfYnl5UG44MXdJRW5xN1pmZE92QkZ6VVFGZFE1YXU3TzlabllKcUFYVWs3T05ubDF6SGVWRkw2ZXBR?oc=5",
+          "date": "Tue, 26 Dec 2023 08:00:00 GMT",
+          "summary": "TV Series \"Hala Khasa\" Premiere Date Announced - Sada Elbalad english - <a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBGWnRjMVhJWU5wTlh6T3JjYkNtS3lhMHVKM1ZGekN6ZmZieWlRaE5xM0JlUVRfYnl5UG44MXdJRW5xN1pmZE92QkZ6VVFGZFE1YXU3TzlabllKcUFYVWs3T05ubDF6SGVWRkw2ZXBR?o...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LWswYThZRFJ1WVhoRnhnaWJaS050U0dpUzQyMVFwemFwTjRYdVFyMzlibVUtUlNhek94VElWRFpfNA?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "HALA Capital launches as CMA-licensed private capital firm, expanding beyond ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNb1c4WThsM2JIWFZ1MEtvNnJ4S1NlbTJxRkFLcFlFc0IxcVIzNkdnS05laEotSE5iN3NwVmg2NTFUV3hJTzJiQ1Q0bjBhenVXNl83eUFzOHhwdU9LNTl6bUJzMTRsZ3dJT0tFSDZ2MUNCOFNUS0ZhMUpDRm80UkxSX1V1U01wUGwzRHIwWEpDY1lZWkNMWm13cWd3VQ?oc=5",
+          "date": "Wed, 19 Nov 2025 14:48:15 GMT",
+          "summary": "“We are now in the big leagues”: Manzil launches halal ETF on Nasdaq exchange - BetaKit - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNb1c4WThsM2JIWFZ1MEtvNnJ4S1NlbTJxRkFLcFlFc0IxcVIzNkdnS05laEotSE5iN3NwVmg2NTFUV3hJTzJiQ1Q0bjBhenVXNl83eUFzOHhwdU9LNTl6bUJzMTRsZ3dJT0tFSDZ2MU...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LWswYThZRFJ1WVhoRnhnaWJaS050U0dpUzQyMVFwemFwTjRYdVFyMzlibVUtUlNhek94VElWRFpfNA?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "HALA Capital launches as CMA-licensed private capital firm, expanding beyond ventures - Wamda - <a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNNnVLMmt3LXg2QnBOdGlfS19hZV9nRUdvZmhiYWVWMU16NjRpZzB5cWJLUUxMVXlMTEpzbHd6blF5YTFxakdvRWJKX1ZzZzZpMVdYWjBzbGlUcjloM1p4MjFfLUlRRW5qdm5hb2I3LW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTzE1eldjVUdxa3UzelpIbXJqVEE5d1pMc1h3a1hCbVJtQ21MZXNTa0I0Wk1GVFZMdUZ6QnZOaVdNcVA4SzN5aE5saGl5YUE1YlowTVZ0c01objBTV3JPcVVqWXluS1FxVnBzbU1WejlSYVQ0QTkyTWx4bUpxYWtSWVYyVTFzSmhPNEpVX3o3VHhINm1DV1BUT1ZPc05fR3JGVWdHelQwTjdnV3psbGR1WHZPMA?oc=5",
+          "date": "Fri, 05 Sep 2025 07:00:00 GMT",
+          "summary": "New halal restaurant chain Slaw Burger launches in Palatine, Schaumburg - Daily Herald - <a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQTzE1eldjVUdxa3UzelpIbXJqVEE5d1pMc1h3a1hCbVJtQ21MZXNTa0I0Wk1GVFZMdUZ6QnZOaVdNcVA4SzN5aE5saGl5YUE1YlowTVZ0c01objBTV3JPcVVqWXluS1FxVnBzbU1Wej...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9uT0R3cW9vMm5mSGlxcmVhTF9xN0U3Z2V0VFNULXBOeFlSRkVoMmRLUDVweDNPbVJkRmxfcXVtUEIyZ1pVRzZ0MDY2VlFnLTdCcG02d2VwTWVHREpkcGF1RnhKU0dYY3AtbkhNTVFQbmtJWmF5M1E?oc=5",
+          "date": "Mon, 25 Aug 2025 07:00:00 GMT",
+          "summary": "Saudi AI Firm Launches Halal Chatbot - Gizmodo - <a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE9uT0R3cW9vMm5mSGlxcmVhTF9xN0U3Z2V0VFNULXBOeFlSRkVoMmRLUDVweDNPbVJkRmxfcXVtUEIyZ1pVRzZ0MDY2VlFnLTdCcG02d2VwTWVHREpkcGF1RnhKU0dYY3AtbkhNTVFQbm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcGRLM3NaMkh3ZEhZWWpHZ2xpSmF0NHlKeGhSRGdZMVFKVWtWZE5MVktvSFRZX1JaZm9RaE13Sm9QSmlqSC1GSGM5eVlPOURTY0sxbVVqWjh0akh6eHZjc2ZPWENjczVxb3BoSnlGRGl1cUozV1FHckZpcUNaQ0xqT3lkZlpoMWNIeUxRWA?oc=5",
+          "date": "Tue, 25 Feb 2025 08:00:00 GMT",
+          "summary": "Hala Launches Hala EV, Four New EV Models to Its Fleet - intlbm - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQcGRLM3NaMkh3ZEhZWWpHZ2xpSmF0NHlKeGhSRGdZMVFKVWtWZE5MVktvSFRZX1JaZm9RaE13Sm9QSmlqSC1GSGM5eVlPOURTY0sxbVVqWjh0akh6eHZjc2ZPWENjczVxb3BoSnlGRG...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNGNfUEpTSkV5bW9aYkF5VWxuSk5uaFFGQmQ4WmRVYzFXRUpGbW5ZYUNucndRVW1TdFZJcTBBOUNnd3luV3NWTmtISEdZSkJYMTRRb1lOcHNlZC1ycFlMWml5N2JEb0FZN0tsbm5VWnFkLVZGdkFsZlgyQWgzcVd2bC1mVnNJNmFOZ1M3Y0pncU3SAZYBQVVfeXFMT2M3UUJHOExkQUR0VEVwRFdHOTB3THFzTWhUbkRjWTFkcTJvblVqc0xZaUwtcTZiVElaYTBpdDR2ZzFFSUwteEtKdnZtbjBaemt1ZWZTbnY5WGFhaUljci1Od0hiUTROR2hadUhLcTkzV2d3VWYzVFN6S2ZLcU5lZGJtYUJQTlBGbm9wd09TcVYxTkxhQlpn?oc=5",
+          "date": "Tue, 26 Aug 2025 07:00:00 GMT",
+          "summary": "Halal-GPT: Saudi company Humain launches 'Islamic AI chatbot' - The New Arab - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPNGNfUEpTSkV5bW9aYkF5VWxuSk5uaFFGQmQ4WmRVYzFXRUpGbW5ZYUNucndRVW1TdFZJcTBBOUNnd3luV3NWTmtISEdZSkJYMTRRb1lOcHNlZC1ycFlMWml5N2JEb0FZN0tsbm5VWn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1TSUs2M3AyX2lPeTdwZExuTlZLZjhTbHExWHcyZFlIdUVFUzRTa2xBTUkxM0l2N0x4RU04U0gxLUpVSHBUOXBpN3pVQWRTY1FJc3Z5RE1R?oc=5",
+          "date": "Tue, 21 Oct 2025 07:00:00 GMT",
+          "summary": "Philippines launches ‘Muslim Travelogue’ in halal tourism push - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1TSUs2M3AyX2lPeTdwZExuTlZLZjhTbHExWHcyZFlIdUVFUzRTa2xBTUkxM0l2N0x4RU04U0gxLUpVSHBUOXBpN3pVQWRTY1FJc3Z5RE1R?oc=5\" target=\"_blank\">Philippines...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPa0lxZFBJT19TalU2UzAxR1BGbkRsa05NNUJvdTlHVExTa1JVc3drbWl6cl9yeG43MzUwOFZuYWxJU0hCSXR0ZU4xSmtmRExHRzJrNHUyaWExNTFtY2Vkd2tpY1U2ZEhiR3J1eUZCdjhIeWVqUXF1VmdMTGdQNVVjY2ZmZjUyN2h5eENkcV9od2pVeDI0R0Z2b3Z1Yw?oc=5",
+          "date": "Wed, 14 May 2025 07:00:00 GMT",
+          "summary": "Laos Launches Halal Certification Project to Boost Exports - Laotian Times - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPa0lxZFBJT19TalU2UzAxR1BGbkRsa05NNUJvdTlHVExTa1JVc3drbWl6cl9yeG43MzUwOFZuYWxJU0hCSXR0ZU4xSmtmRExHRzJrNHUyaWExNTFtY2Vkd2tpY1U2ZEhiR3J1eUZCdj...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeEU3Snl1TF90a3VFeFRzcjNDODVGSk5SX0NQYVZaYUdwTmN3OFJZTHFfUm1GTkhGUFNhMWd5WE5ibVFmNTkwUTBfamFMdGhrUGE1Q3Z4Y0FIdjJJTjUzeksxamI2WnB5VGRtd1NMX3BmQ0EzU2g3UDVTRy02Nl9MTVpqS1dnM0hq?oc=5",
+          "date": "Thu, 31 Jul 2025 07:00:00 GMT",
+          "summary": "Germany launches halal guide for GCC travellers - connectingtravel.com - <a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeEU3Snl1TF90a3VFeFRzcjNDODVGSk5SX0NQYVZaYUdwTmN3OFJZTHFfUm1GTkhGUFNhMWd5WE5ibVFmNTkwUTBfamFMdGhrUGE1Q3Z4Y0FIdjJJTjUzeksxamI2WnB5VGRtd1NMX3...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNS0szaDlxMV82TFhxdU83MkNRY3g0UVF6S3V2cllQcklqNlZBU2dJUEUxQUhJckJPNG1rTkJfTTBTSWNXV1hpNUxKMUdNTTlhSFZiRmQxeV9nMlRjUVJybzZNWE5wN2dRdFpLWl8yVmZUQTNlUjJDMTVOblpfbENlcjRsX25Yd3Fra1d2TTdZSEFRMUlrRmF1ZlJ4ak0wRVlNRFFRTQ?oc=5",
+          "date": "Mon, 27 Oct 2025 07:00:00 GMT",
+          "summary": "Nigeria Officially Launches National Halal Economy Initiative - CSAAE - <a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNS0szaDlxMV82TFhxdU83MkNRY3g0UVF6S3V2cllQcklqNlZBU2dJUEUxQUhJckJPNG1rTkJfTTBTSWNXV1hpNUxKMUdNTTlhSFZiRmQxeV9nMlRjUVJybzZNWE5wN2dRdFpLWl8yVm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5JbkE4bS1VendnclFjMzFRU29kT1d2Q0xYZVBoc3U4aDlQbUJ0U3d1Z2hkSUxmZWRTNkdxZUNMTWhqUC1FMVlQLXRfNXVxVFpTNTdfVWNEYzNoR3RZOTFqWjhfTWJzSi1zeDhsNGZhdUMwSUJ5dW1Bd1Jn?oc=5",
+          "date": "Mon, 07 Jul 2025 07:00:00 GMT",
+          "summary": "Halal project to launch Southeast Asia mission - Agência de Notícias Brasil-Árabe - ANBA - <a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5JbkE4bS1VendnclFjMzFRU29kT1d2Q0xYZVBoc3U4aDlQbUJ0U3d1Z2hkSUxmZWRTNkdxZUNMTWhqUC1FMVlQLXRfNXVxVFpTNTdfVWNEYzNoR3RZOTFqWjhfTWJzSi1zeDhsNGZhdU...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVkh0azVWZXJWLW92akFmTWh0QlhncW44dDJZZjZLNDhLLU5tVFhjTW5YR0pXcmpOVjRuMXNmeF9vOFBkMmVPbDZQSWE0Tjh0cTQ5VmlteXhDbG53bkEzZXlET2t0N2lvZWpDd2doZVptSHJaSTFsVnVkRmo5QXFWVkpjSkdCTnAzbjFGN3h2X25YUkgtQlFGNWV5NGs4OVdGNFhaRmtCWTBUZ0F1WmY4WWdWU3FRV1VCTGVINHMzMVhVQWVOWUpjemhpUHU5cWZuU3RtQjJNR25OQTdPNVQ0VUxn0gHnAUFVX3lxTFAyY1JIZ0Q0cmc2VTJCZHdCazJiNFNBUkpfdnNMT1dRT0pZb1A0elNBUkRTYXZFUWxGS0FWQmY5TTVGWmRWY2ZtMjhBdG9vZG82c3JXc0pNR0JrYW5SZWVHaURBdkVvenlhSllGSG5VZFh4dzNLbmhqeGIteWlBX2wwc3lGVlVlemVWcWNiNVhKbUlkb2xkQUlWb0VlNGhKelpMWDZSdW40Snd0bW83dGY1OEU0OUM0MlQ2a0tYLUNnaXNhNzI0VlhzcFpoZWI2dzNVVmR1aTBTNm13VV82MUZmbFdhcXlTbw?oc=5",
+          "date": "Tue, 26 Aug 2025 07:00:00 GMT",
+          "summary": "Saudi startup launches world's first halal AI fluent in Arabic and Islamic culture - India Today - <a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVkh0azVWZXJWLW92akFmTWh0QlhncW44dDJZZjZLNDhLLU5tVFhjTW5YR0pXcmpOVjRuMXNmeF9vOFBkMmVPbDZQSWE0Tjh0cTQ5VmlteXhDbG53bkEzZXlET2t0N2lvZWpDd2doZV...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPLXIzbkh5N2tlU0lxc3VWbjRxNk1za0FiR3I0MmNiUEl5VUlYUzBrNTEyX0thZmxVQWlaWC1LaGFNTEhNbTdoUHNYbkowWGFEa05nVjNmNlYxOGI5Vk5PcTZQbHJNOF9TQURpVzAyZzI1cTNab0p1dFY0UzVVWFVHeWN5LVVKWVJJcXB5VHNXdw?oc=5",
+          "date": "Wed, 15 Oct 2025 07:00:00 GMT",
+          "summary": "Wholly Halal launches meat delivery service in Ontario - 🇨🇦 Grocery Business Canada - <a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPLXIzbkh5N2tlU0lxc3VWbjRxNk1za0FiR3I0MmNiUEl5VUlYUzBrNTEyX0thZmxVQWlaWC1LaGFNTEhNbTdoUHNYbkowWGFEa05nVjNmNlYxOGI5Vk5PcTZQbHJNOF9TQURpVzAyZz...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNc1M4S0Nzd01NbVEwbXVRdS13dG1kQXNGdGpvUUExdEM2SVV3aFdHMU1VN0NtOEJLZTRnT2RNalBQaGo0N25GMGoxMEQ1cHV6S3RheWtvRkJUWW4yMndLYjgwSGZoZXMtYW4xNzJaQzJMd0g4Y2hZMHVBWDlYcUc2QlZFaktwZktzVlk5dnZNbDVocDg?oc=5",
+          "date": "Tue, 28 Sep 2021 07:00:00 GMT",
+          "summary": "Hala Ayala launches new TV ad touting her work in Richmond - Virginia Scope - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNc1M4S0Nzd01NbVEwbXVRdS13dG1kQXNGdGpvUUExdEM2SVV3aFdHMU1VN0NtOEJLZTRnT2RNalBQaGo0N25GMGoxMEQ1cHV6S3RheWtvRkJUWW4yMndLYjgwSGZoZXMtYW4xNzJaQz...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ0RZdm81LTVpQjFjeExQUUNYaUhIcDlFTTU5bDBvdG5BMXdiSUlTSGtnOHpzRkNrTklOYy1WUVNSanRfeVd0cks3cWV4WDlOSFRaaWkyQXJadDNPWWZvekl2R1p3TGJGY1plbHVsbWFQX3YxelVmTEM5X290UTVJYlR5U2p4RXQ2T3k0V3V4bHFKQS1udXgzRXdTcEs2Qm1LMmc?oc=5",
+          "date": "Wed, 03 Sep 2025 07:00:00 GMT",
+          "summary": "Media guru Javed Husain launches UK’s first halal-only food delivery app - BizAsiaLive - <a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ0RZdm81LTVpQjFjeExQUUNYaUhIcDlFTTU5bDBvdG5BMXdiSUlTSGtnOHpzRkNrTklOYy1WUVNSanRfeVd0cks3cWV4WDlOSFRaaWkyQXJadDNPWWZvekl2R1p3TGJGY1plbHVsbW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaE5EUmlaSTZ1TWtQMzNJWnkwS1VMbHhSWkdsN1JwLTJyWHhzRFVrLVY2bWRqclJndUVPaEJjZEhHeHRLRFFwVHRjeTFuS2poM1RJT296T2RRRXFoSVhtR091aTVKQWlNcHNObUNVWEtJQTlxRG9JQi1OSmpXR3FFZ2JodFVobzQ3SHZWRDZPWGNsalI0LThvVk5BQTl3SGJMUWhOZA?oc=5",
+          "date": "Thu, 24 Jul 2025 07:00:00 GMT",
+          "summary": "Afrinvest launches Shari’ah-compliant N2.5 billion Halal Fund - Business News Nigeria - <a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOaE5EUmlaSTZ1TWtQMzNJWnkwS1VMbHhSWkdsN1JwLTJyWHhzRFVrLVY2bWRqclJndUVPaEJjZEhHeHRLRFFwVHRjeTFuS2poM1RJT296T2RRRXFoSVhtR091aTVKQWlNcHNObUNVWE...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbHVWUm1uaVRSbXFBOEoyN0djYy1PUFVqZ3pOVDc0c2VBTHY2NUlIMEJuOXJkSnZmZTdWclIyYUw5a1JhSWwtZUJiclpmelRmN2NmNDBJMXg0QVNZeEItOW4wbkUwRFY1TldySk9FcDRib3MyMVNkMkFHRFUxZGNPOXpxbTZ2Qks0NjVwUzBPeERaUHg0Y1Nzbkx3MzllaFpZ?oc=5",
+          "date": "Wed, 26 Feb 2025 08:00:00 GMT",
+          "summary": "Dubai’s Hala launches electric taxi fleet with no extra cost - Arabian Business - <a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPbHVWUm1uaVRSbXFBOEoyN0djYy1PUFVqZ3pOVDc0c2VBTHY2NUlIMEJuOXJkSnZmZTdWclIyYUw5a1JhSWwtZUJiclpmelRmN2NmNDBJMXg0QVNZeEItOW4wbkUwRFY1TldySk9FcD...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc0g4dVNzZTF0NURna1RSWDRqNGVXRTVQbVRKVHhMZi1nT1V4MkIwSFV5TE9BSDBFLVVzNkN4ODhYNEZQR0cxQUJOT1NVSEowcXZLVHZpaTdnbzBJcVJEMldmMWlIbG9PY3diNU16NTlxY0VOX0dpR2VQVUVMaXloMTc2UFV1My01cHA2MDJJQUJ3Z3JaSWhVX2JuVHJnOVlYRlFoVVMwcTA3c1XSAbABQVVfeXFMTUpNdzY2Sm53czFETjhZRmYtQU5nVm1TRGppSU5lWW1kWjRyOGRRN0dxRWNRS2pHOGRzUGlvd2Z3bXNlM1hWT1hxTGQ4cmMyYVJsOFh5eG9qQU9rSGdGdHBveWliMVRwTXQ1anFCWk9URWdvWDZFRHN2eWtPNlZBZ29qMC0tRGkwaWNhdFd0ZFVtMTVWXzBBc2piQ2ZoVzl1X01xS1R1b1lfYjRjR2lISFQ?oc=5",
+          "date": "Sun, 19 Oct 2025 07:00:00 GMT",
+          "summary": "Hindu Janajagruti Samiti launches ‘Halal-Free Diwali’ campaign - The Hans India - <a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc0g4dVNzZTF0NURna1RSWDRqNGVXRTVQbVRKVHhMZi1nT1V4MkIwSFV5TE9BSDBFLVVzNkN4ODhYNEZQR0cxQUJOT1NVSEowcXZLVHZpaTdnbzBJcVJEMldmMWlIbG9PY3diNU16NT...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQaWFBMHdQWjRIazdaQ2pRTmRyYWthTjB1bDhtbEM2NkNIemJRcUx4RnVmWW8tdzlXN3BpQXkxMnB4Z1RMaWpKNEQxdHdKSWhYdkRXQ2toUGJPOUpxUkFBNHl1SnBGNHZUOWV1ZzE1X0MxU0VZdkpCdGdUVzQ0ODVTeDJkTldCYjNCTDlNSEdKRy1tSnBTZHBmM3NfNXZkckhEa2hqUUh4WFJ0YzVzT0N6XzJIbW83R3AtSHY3cnRwaWM2Yjhianp6NGJZbkh4dEVhU0U0cFRjUTJtQ3dHdDI4VktETmdSRllFa3I4cjFqazZucnVzWkFHQ1FDT3g0Q2QzVWp6ajRoc2hManPSAZACQVVfeXFMUDFjazV1NjRkYVA5WlEtVk4wb3huX0xlVlNQc3FhaGFGOFJXWTcwYU9FY0oyUlduXzAwTmx1elhOMWMwaFZ5TEExeFpZazRGdXd3Z2hOZ3VRY3hsMTJveFI4NkxXaV9JUFZhMXR1QW5ZM0JvRlJiYXZqWjgzeFV6VXF6ck14a1BtbUpSZWlhMEwyZ3R2YzFXdjlKQmNGSnNZNXpZQUxfR3ZiMGMwZUxIVHlUbUpiUlpZN0VVX1plWkI3VXhtajMyTmxmOEwwWXVGdUJseTdUU2xFT2t1ajlhX092WC04dThwbUdqSzMtWU81N2hyZndUNzJvZ1JENGVCa1FoMFJELUlTcElOeUlXOG8?oc=5",
+          "date": "Thu, 28 Aug 2025 07:00:00 GMT",
+          "summary": "This Muslim country launches world's first 'Halal AI'; not Pakistan, Iran, Indonesia, UAE, Qatar, the name is - india.com - <a href=\"https://news.google.com/rss/articles/CBMiiwJBVV95cUxQaWFBMHdQWjRIazdaQ2pRTmRyYWthTjB1bDhtbEM2NkNIemJRcUx4RnVmWW8tdzlXN3BpQXkxMnB4Z1RMaWpKNEQxdHdKSWhYdkRXQ2toUGJPOUpxUkFBNHl1SnBGNHZUOWV1ZzE1X0...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQaFZaWFBWQmhuZW0xSFEydnBmcFE1WWdBRHZld1Q3WTdXd2s1NVZ4YktRZnItOHNPTFpsMGFOLW5hSkFEWW9Yb2Qyb3NpN0NvdTRuNHl4VWRpOGUtS203MVRQMF80MjJGdkZzRm5iTkg1ZThBLW5TcHRlWHNla0NlTGdNQmFsSjl3VExROU9TU09BOEw5SFhrT3ZCbV9tTTVjOGZRLUR5bw?oc=5",
+          "date": "Thu, 28 Nov 2024 08:00:00 GMT",
+          "summary": "Manzil Wealth launches Canada’s first halal wealth management platform - FinTech Global - <a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQaFZaWFBWQmhuZW0xSFEydnBmcFE1WWdBRHZld1Q3WTdXd2s1NVZ4YktRZnItOHNPTFpsMGFOLW5hSkFEWW9Yb2Qyb3NpN0NvdTRuNHl4VWRpOGUtS203MVRQMF80MjJGdkZzRm5iTk...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPT2duVFZ6bUZSUmlXX2cwR2R0R2hzcWwyVktBSzhLcU9fbFdkODRYbUNGUUx3QXBGcnRueVlwV010R3BvTl9JcGFnb05DNFY1TGR5ODJhVW1FR1JaOHlDdFNwX0N2RDlGZVJ4V1ludWphOXRRZjNzdEZ3cWZPZ0hpNEMybjZpd2plTVJOakZUVWdUaHRPOE5QSm5NT2tFOTUzWXZGOEVfNnAzeUtoeVVHemJpTzFlZXdpM0VR0gHAAUFVX3lxTFBTN1BjdnJfNEY5cC1kU0dPTGJoZlFaNTg5cjA3Mkc4M2p0R0g0ZDVDZlJjWjJyMDlfYjJNWVNnOG03d0RiQmptWXh1ZzNNNWt4R3VQLWRzQ215YzRFVkFZMlEwakEzeUpmaWs2SG55STZaQ3plb1RER2VPV0ttSXd5eWFieHoyUjR4UVVXT0Vtam1INFpsaUNCNUxwWXNQcXlKdW90aWl3SXpRWEJJZ1RSMVFJa3BVeGdBT1BUTWlEbg?oc=5",
+          "date": "Fri, 06 Jun 2025 07:00:00 GMT",
+          "summary": "Ooredoo launches ‘Hala Digital’ to democratise digital access for all - Qatar Tribune - <a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxPT2duVFZ6bUZSUmlXX2cwR2R0R2hzcWwyVktBSzhLcU9fbFdkODRYbUNGUUx3QXBGcnRueVlwV010R3BvTl9JcGFnb05DNFY1TGR5ODJhVW1FR1JaOHlDdFNwX0N2RDlGZVJ4V1ludW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNU09DU2dCbDJxVHF1ZWM4Y1RydXZ5NXI3YUk1RFV1dkNtWDZsUFFlRzdkeWVqcWU4eXZLU3hOZU82UmFpaFNkY0UxTUhUcTlsZjYwUUNNQ2J0cUtCLXh0YWNoc2lFNUFZVWpfWHRqd25aaS0zSTgxdXdTOTNhZlZqcUdkMDRwdDVOeERjd1ZpLVpJTjVSUk5yLTg2S1VkUWdrc2kyUzh3VlJIYU0?oc=5",
+          "date": "Tue, 09 Sep 2025 07:00:00 GMT",
+          "summary": "Indonesia to Launch 6 New Special Economic Zones, Including First Halal SEZ - Tempo.co English - <a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNU09DU2dCbDJxVHF1ZWM4Y1RydXZ5NXI3YUk1RFV1dkNtWDZsUFFlRzdkeWVqcWU4eXZLU3hOZU82UmFpaFNkY0UxTUhUcTlsZjYwUUNNQ2J0cUtCLXh0YWNoc2lFNUFZVWpfWHRqd2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPLTlsR0hQcDJ0TWhyejBXUFltekp1UkV2bUFYNExUYmFBdjhpcGFUYk5lWnRWWFZrRG1nbldfcndKZ1B3Z1p0anZ6WFpndEZmLUYzVW5zWUFnQl9tbTZxNklGc2V6OThKeVN2bkc2MENtRHFKX3BkcVlsVFBRb2c0UnVUWWM3NEV5QW9KR1dvWXRtZzZ5SmhTZk0zQ2pEcjdZTzgwdTJ4MTcyWExZeVZsadIBtgFBVV95cUxQZ1dCWEt3TGtZQTJvamtJaW52ZTFvZzlmY1JXOXhESDI0c2NRbU05TXNMQ3VWYU1DOUVKanJidmxPY0pPcnZEN3ZRNWRzbjN1MXZscVpENWFSSTF5OHo2X3pOaGdBdkgzM2E2NUFMZjRRdDBmZ19VWjRHVzU1WmdzTlZrNkZDU3Yyb1NoTms5d0R3QjA4aEpPTW1QMUNtTGdnUW1TRkJIN1l4MlJnNXBUQjN5VGh6Zw?oc=5",
+          "date": "Mon, 17 Feb 2025 08:00:00 GMT",
+          "summary": "You’ve Got To Try The New And Unique Halal Certified Beverage Recently Launched In Dubai - curlytales.com - <a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPLTlsR0hQcDJ0TWhyejBXUFltekp1UkV2bUFYNExUYmFBdjhpcGFUYk5lWnRWWFZrRG1nbldfcndKZ1B3Z1p0anZ6WFpndEZmLUYzVW5zWUFnQl9tbTZxNklGc2V6OThKeVN2bkc2ME...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE93WFVqaFBIQXRVdWdmN0dLeEM3WUw1ak9rZ2xLV1RoYWhsVl9jZ3VFVFNzXzdlZ0tKMUdDbm1vV3otNG1HZ1hKdWMtbnNuLS1RNXZxMEcwQmNpRkloMUlGVG56V0FCNEROeUE?oc=5",
+          "date": "Thu, 20 Feb 2025 08:00:00 GMT",
+          "summary": "Dubai company launches halal-brewed Arabian Ale - Arabian Gulf Business Insight | AGBI - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE93WFVqaFBIQXRVdWdmN0dLeEM3WUw1ak9rZ2xLV1RoYWhsVl9jZ3VFVFNzXzdlZ0tKMUdDbm1vV3otNG1HZ1hKdWMtbnNuLS1RNXZxMEcwQmNpRkloMUlGVG56V0FCNEROeUE?oc=5\" ...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5LUHpWZXl5TjJJcUczM0tlLWtFa2tsNHF0Wmd1XzhORVl2S2hwTTMzczRacjFVMkszQzRFM2xJV0hXZUlLeFNEaXVJay0xWjV2eVVaeVZB?oc=5",
+          "date": "Tue, 19 Mar 2024 07:00:00 GMT",
+          "summary": "Acclaimed Arab-American reporter Hala Gorani launches new book - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5LUHpWZXl5TjJJcUczM0tlLWtFa2tsNHF0Wmd1XzhORVl2S2hwTTMzczRacjFVMkszQzRFM2xJV0hXZUlLeFNEaXVJay0xWjV2eVVaeVZB?oc=5\" target=\"_blank\">Acclaimed A...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPbHVLTXlNcFVxWmg2WUNqTXNwclhZTm5femFSRmNwRXZqQnJ4ekNHTXFhVkpmMkMxT1QtaXEySHhnWGRCQWlFSUMtWWh4emkxbzJiU2tvNzRRaXNnQldRLUl5a0dLeVhGU2VXN0pwVUh1SVVfVXpFajh1d1RsdHY1QnkwTzV5S3lnQzlFLXhENC1WdUdleGtnWkppX281dw?oc=5",
+          "date": "Wed, 10 Jul 2024 07:00:00 GMT",
+          "summary": "The Halal Guys brand launches LTO chicken wings - The National Provisioner - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPbHVLTXlNcFVxWmg2WUNqTXNwclhZTm5femFSRmNwRXZqQnJ4ekNHTXFhVkpmMkMxT1QtaXEySHhnWGRCQWlFSUMtWWh4emkxbzJiU2tvNzRRaXNnQldRLUl5a0dLeVhGU2VXN0pwVU...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdGhFZG42SWZjcG9NVFljN0MxZ2t0UlZ0akFOUG9MYkFlSHBNc1JGNjFma2xyVjI4X3k2ZkZOaWRaMVdHTnJuVXFXQmdjZjBEYmdrMVBTak9GRkJIWktKSVhaT2ZWVXJEelF6NVNTSlpVZXZsTk43cEtfemY5S2QzcHdocVFycm5IY3h1dnF0MnhIRU9HMXg4VThB?oc=5",
+          "date": "Fri, 29 Nov 2024 08:00:00 GMT",
+          "summary": "Manzil Wealth Launches Halal Wealth Management Solution in Canada - The Fintech Times - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQdGhFZG42SWZjcG9NVFljN0MxZ2t0UlZ0akFOUG9MYkFlSHBNc1JGNjFma2xyVjI4X3k2ZkZOaWRaMVdHTnJuVXFXQmdjZjBEYmdrMVBTak9GRkJIWktKSVhaT2ZWVXJEelF6NVNTSl...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOQlhpdklTUkpMT0FZV1RNLXktSHF1c1I4R1NucnFGdGpQbkVEYk1POHBPdGd4MDBlOHZOTnBnS1hyOVFDcFY2UC1SR0VUVlI4dkVDbDhvXzdIT2p3T24zbGdmN3Y5RWFLbnJwdEhFOEk1TElkV2FGaFJiLXhOcE93d3pISzJUd20yd2JLdzBxOGRueDQ?oc=5",
+          "date": "Mon, 16 Jun 2025 07:00:00 GMT",
+          "summary": "Sabah launches first halal hub for SMEs - The Star | Malaysia - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOQlhpdklTUkpMT0FZV1RNLXktSHF1c1I4R1NucnFGdGpQbkVEYk1POHBPdGd4MDBlOHZOTnBnS1hyOVFDcFY2UC1SR0VUVlI4dkVDbDhvXzdIT2p3T24zbGdmN3Y5RWFLbnJwdEhFOE...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOODh4NlNnVktrQl9NWG95QkVZd2kzT0ppcC1VeHJ0M2ZzakFwUHBwWGZmMFFUSmNSWTRyWlc2bjVhWGdDR05rcWVYb0FVVXNqdXlBVGNqRmFuLUswUDQtVWl1TnNzNWNOdmwtbWZHVnBQY1ZVVWFfSXN5UzY2cC1Qdi11dVIyazFSV1hXY2s2d3BrRHVoLXdfclp2R1A2OHN5NEl0b1NTZ1dQVXBGN3dXZ2IxV3FhNHNQS2tn?oc=5",
+          "date": "Fri, 12 Apr 2024 07:00:00 GMT",
+          "summary": "Halal pet food company to launch in the UK - PetfoodIndustry - <a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOODh4NlNnVktrQl9NWG95QkVZd2kzT0ppcC1VeHJ0M2ZzakFwUHBwWGZmMFFUSmNSWTRyWlc2bjVhWGdDR05rcWVYb0FVVXNqdXlBVGNqRmFuLUswUDQtVWl1TnNzNWNOdmwtbWZHVn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxONVdIX05xdHlvalF6S0ZoSDNaeTZPQ3c0b29qZHBzcVh3OWhCLW9hUmltRWE3NW5aV3FlVkxTWmdrZXJRTTN2MlIyQWxxVXNXUVA4eGxjS1JKUXJJWmw0bVQwTG1adkVwb1hFZnNXR0txcjdMNG5jNkpROGotcGJhelVyZWk4TnhINGtCcGpwQzl4cTJLbExGaUxhNDUxV29sY2dqTkRoMjk?oc=5",
+          "date": "Wed, 10 Oct 2018 07:00:00 GMT",
+          "summary": "Chinese authorities launch 'anti-halal' crackdown in Xinjiang | China - The Guardian - <a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxONVdIX05xdHlvalF6S0ZoSDNaeTZPQ3c0b29qZHBzcVh3OWhCLW9hUmltRWE3NW5aV3FlVkxTWmdrZXJRTTN2MlIyQWxxVXNXUVA4eGxjS1JKUXJJWmw0bVQwTG1adkVwb1hFZnNXR0...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYjY0ZjNiWWZqcFhES1dhU25DT0RNdHZNVWdrZURCNUdxTWlHb2hfc29pdFdEWHk4OEw1N1BqRE9iRDNmTTN4R1JiTHFrNkpjZi1mNW55RWE3STdYS0x4Mlh2NGFtdnBYQWpaak1aVG5qWTlseFpvbUZLZWVvdU1xaA?oc=5",
+          "date": "Thu, 04 Feb 2021 08:00:00 GMT",
+          "summary": "Hala Yalla Launches Agool, the First Saudi Messaging App - waya.media - <a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPYjY0ZjNiWWZqcFhES1dhU25DT0RNdHZNVWdrZURCNUdxTWlHb2hfc29pdFdEWHk4OEw1N1BqRE9iRDNmTTN4R1JiTHFrNkpjZi1mNW55RWE3STdYS0x4Mlh2NGFtdnBYQWpaak1aVG...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQV2RmRllOZHBhS08zZ3lIOTJWZ09rajFXTkRrcnlvQS1hY0d6Qi1IRkRxclN6QTY4cHVoYnBUMmdpTTdHU3N5ZUg3dEZ6ZV9xOTg4TWcxOE95U2x3VmVJSzdoNk9Ub2hUVUUyY1FVOTVDOUUxZHVRMDUtVHBOZmtHQjBqUTRpaS1rNC1YTFMtNkE3akljam5uTjBNeWNmSEg2UVlzNDFVbHlyUjNncGFfV3N6V1BvdHlXSEVjbXZ3?oc=5",
+          "date": "Tue, 13 Feb 2024 08:00:00 GMT",
+          "summary": "CJ Foods Launched Halal Korean Mandu and Hoppang in Malaysia - PR Newswire - <a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQV2RmRllOZHBhS08zZ3lIOTJWZ09rajFXTkRrcnlvQS1hY0d6Qi1IRkRxclN6QTY4cHVoYnBUMmdpTTdHU3N5ZUg3dEZ6ZV9xOTg4TWcxOE95U2x3VmVJSzdoNk9Ub2hUVUUyY1FVOT...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPV2lUTnZ5QjNyTlotZHRacHROVjh2MFczRkw1X2w2MUUxaTRZR1R6Ny05VWFkcDByLXdNbjZsUHU1enl4SWlvRTB3MkZDV1JRV3AtLUgzYXRXLW9USnh0NVk5Q3pmSXhRaHprV1p6VFpEc0VMNm9IRk9rWmZWNHIxalRJRkRBa2lpMzNfU0tieU0tME9nUWc?oc=5",
+          "date": "Tue, 19 Nov 2024 08:00:00 GMT",
+          "summary": "Hejaz launches Australia’s first halal investment app - IBS Intelligence - <a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPV2lUTnZ5QjNyTlotZHRacHROVjh2MFczRkw1X2w2MUUxaTRZR1R6Ny05VWFkcDByLXdNbjZsUHU1enl4SWlvRTB3MkZDV1JRV3AtLUgzYXRXLW9USnh0NVk5Q3pmSXhRaHprV1p6VF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNcVktMlpPZ0hkalVvdVJQSFY1bWpmSDlzTmR4Z2ZYc3ZuNDNaczRnVGlEMVM2Q0huSmkyd0d4S3V2VHBGRmlrSzE4SE1NanpaRjVMTUMyTFdYSTdKcXFadV9HRE9ZLUJSM1lieWZDeVBJbllKTEw1c0lxLVhCOUlXVzNhSkNCTmNzYlVjYjNDQnpxbHEwODhMZ182eUp3Q3BYQ2JOOW0xa0o4TE9CRDhONlhYTUtGNThnc1lRNFR1QVE4VHBmdUliRUx4VU93R2NXWDFTcVBsbw?oc=5",
+          "date": "Mon, 15 Aug 2016 07:00:00 GMT",
+          "summary": "Cherkizovo launches halal export brand of chicken - WATTPoultry.com - <a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNcVktMlpPZ0hkalVvdVJQSFY1bWpmSDlzTmR4Z2ZYc3ZuNDNaczRnVGlEMVM2Q0huSmkyd0d4S3V2VHBGRmlrSzE4SE1NanpaRjVMTUMyTFdYSTdKcXFadV9HRE9ZLUJSM1lieWZDeV...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOX0dsUkhaWEtETnd1LTRJeXpIbVpHckttR3d1eVZkZEdxUEwxUkRLdFpwY09lYVdtZk14YzRqSzNXSzZwWTNOcm13S1pFZTVOODBMYllxMzBwcEdYV1pWb05ETXNVbzUxQmRhcm9sMGlJaHlmcF9IajBfNUxaMUt2OEJFOA?oc=5",
+          "date": "Sun, 08 Nov 2020 16:22:34 GMT",
+          "summary": "Hala Owais just launched her lash brand and we’re *so* excited - Cosmopolitan Middle East - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOX0dsUkhaWEtETnd1LTRJeXpIbVpHckttR3d1eVZkZEdxUEwxUkRLdFpwY09lYVdtZk14YzRqSzNXSzZwWTNOcm13S1pFZTVOODBMYllxMzBwcEdYV1pWb05ETXNVbzUxQmRhcm9sMG...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTFQ4NzJxWFBlTERwVmhYckh4WXBoMmJyQlVHTHg5d3BTX3ByUGpURG1wdUFKTW81eEdxb2VmY1dpYm9mN1FaNmFUaDFwZERlanpoWTZ1eFM4T00zX3hJNlpBcWY4ejlDSjR6TFJma29OMDJuTzlmV1ZFdWlqcXpBU01QVC1HWEc3MnBTaXpWdFVzVmhlVEExWFN1bjItODVIWlJlenFqNHhaWFhkYy0zZNIBtAFBVV95cUxPY2d1ZjFXYVBDQU4weTNFYlAtRU05V3BsQ0daVjROcnZuWEtDbFRNZVl6VDlWM1I2THJPQ1FxLXlXWGxSTV9uemtJYW9kU1lEcS1sODMzUEUyaXdMTlA5dXdTOWQ3dXFRUm9iVFdYWTNjTU85ZmUyOVU1Z1FlcjdBZUY1aTM0UUc5T0NjVkFYUzlOUHducm1vQzd6c0NXZ2VXZFpZc1FBTjY1Uzlyb3FoY2dSRUM?oc=5",
+          "date": "Mon, 06 Jan 2025 08:00:00 GMT",
+          "summary": "Kuwait launches long-awaited Ya Hala shopping festival - Kuwait Times - <a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNTFQ4NzJxWFBlTERwVmhYckh4WXBoMmJyQlVHTHg5d3BTX3ByUGpURG1wdUFKTW81eEdxb2VmY1dpYm9mN1FaNmFUaDFwZERlanpoWTZ1eFM4T00zX3hJNlpBcWY4ejlDSjR6TFJma2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRWVDU1RNRURMNFBhSG5LOTFXOFFGZ0poZ2NGOUFmSDNzWTdrT25vXzVKeTRGczhCdGZKX0lLLWRVbzZZMUZzc3VtSnozcXVhdlI5YlNsZ25acmNtU1UwODU1ZXFVa0NSb3FfWVZnU2RVcjRkbUFSLW1OUTBPUHoyZmpFVnJNS0FEWlk2UTVVZkpUNHJnWEV3Y0xmT3lEVkp3SGxTRHBvOHBhZExtRU5XR0ZDbDZyc2x6aS1BOUxZSGo?oc=5",
+          "date": "Mon, 31 Oct 2022 07:00:00 GMT",
+          "summary": "Hala launches ‘Hala Home’, a central hub for all Captains’ needs - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRWVDU1RNRURMNFBhSG5LOTFXOFFGZ0poZ2NGOUFmSDNzWTdrT25vXzVKeTRGczhCdGZKX0lLLWRVbzZZMUZzc3VtSnozcXVhdlI5YlNsZ25acmNtU1UwODU1ZXFVa0NSb3FfWVZnU2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVmZTQTRUNGdzLXE5WFdzZEtqUFlibVVqRlM3Q3NxUl8ybkk3NXkxVGh5cVZFSFZUSC1zX0pGaUdhWFBxY3Y5R0VFd2JIaWtJWE9qUEpNTjdEYTIyNG92LVdIa2ZFSjlra2k4dWV6VFQzR1hMV0lIN2d6NXhuZHBlcEpPcWhETHJRT1pQRXIydjlDQjFoLWIwRHRYVVQzdTVn?oc=5",
+          "date": "Tue, 04 Jul 2023 07:00:00 GMT",
+          "summary": "Hala launches “Careem Pay” digital wallet to speed up payments - IBS Intelligence - <a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOVmZTQTRUNGdzLXE5WFdzZEtqUFlibVVqRlM3Q3NxUl8ybkk3NXkxVGh5cVZFSFZUSC1zX0pGaUdhWFBxY3Y5R0VFd2JIaWtJWE9qUEpNTjdEYTIyNG92LVdIa2ZFSjlra2k4dWV6VF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNbmtqVVZlS2QzaGN1bTc4SGFxaEtIYzFfVFdFNlpIWWVsMFBkRkU3UnZqZjhjV3UtdWdNa082bl9qQU5yTFFHcEFYLTNqSDZoOEpJZVl5dFhRT1VVa0p6cGpOaG9USy1jUXh5Z2xrcjdmSDlTTXRJWEI0M0VwOXBuNGtFbV9xdG_SAYwBQVVfeXFMT1J3dTg2VVhlbVVrdC1vUzAwcnE4MDJCcUJKVGJMQXRsSllyZ01jamROSUlCVGVDek40QnpZczZKWHAtVk52d3ZPM3U1V0t5ZDM1Tll5d1cxZnlzbFBYODhsbTNHVFJXWXpKOGJUMWN6YVZTMGZHeXpIMDc3QXZIOWhDeGN0WDhXbjFqUGQ?oc=5",
+          "date": "Mon, 05 Oct 2015 07:00:00 GMT",
+          "summary": "Russia’s kosher kingpin launches halal meat empire - The Times of Israel - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNbmtqVVZlS2QzaGN1bTc4SGFxaEtIYzFfVFdFNlpIWWVsMFBkRkU3UnZqZjhjV3UtdWdNa082bl9qQU5yTFFHcEFYLTNqSDZoOEpJZVl5dFhRT1VVa0p6cGpOaG9USy1jUXh5Z2xrcj...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQ0FEVG5JNHk1bWdyYmQxM2NTZGFZLVZJVHJFQ29HVHVDZU5Xalo1cXNKQlhBdkVISURxX2pVc1cwcmlhMlYtdk5yWWxnR1VmZTdrM2pkUExPU1pCMU96MFI3UnZpaEZsWXFKdnMtQmVZLWloZk9tMGVpZjFPbmwzb3NzZHI3YmV6ZWlKTldPdDIzbzdVcE9sM1M1U05UbDU1alE5YTFQeWJRRHfSAbABQVVfeXFMTWk3NXV5emtqYjBEeHo4SHQ1MTN5WEVWdkdaYVFlUUVfejFDMFVzdndLWFhURzFRTF9WeVNOb28wQ24tYXh6NUxwVWNjSUxoTXk2M3ZseWtIMS1YOVliZHZ0RDRKWk56RllPc3FrWjNON2ltcXR4UXZyblR1VGVxY0Z5UVkxOG9CODFsalAyQTAtSHR4SXB3RDFHV3d1Yk9tR0RjdEVvNjM2bFpxVC00R3U?oc=5",
+          "date": "Tue, 11 Jun 2019 07:00:00 GMT",
+          "summary": "Egypt company launches ‘VIP travel service’ for Gaza Palestinians - Middle East Monitor - <a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQ0FEVG5JNHk1bWdyYmQxM2NTZGFZLVZJVHJFQ29HVHVDZU5Xalo1cXNKQlhBdkVISURxX2pVc1cwcmlhMlYtdk5yWWxnR1VmZTdrM2pkUExPU1pCMU96MFI3UnZpaEZsWXFKdnMtQm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WaXMwNlVZRmdWYmQxUEZNdFlzdkRWV2NWeHl2a2Mwdk1wYURLU2ZlS2RaaktjN2w1Y3F2VlFqNmZOb09TTmtJQXMtbDhuNXNHZ245d3p3?oc=5",
+          "date": "Fri, 14 Jun 2024 07:00:00 GMT",
+          "summary": "Philippines launches first halal travel and trade expo - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WaXMwNlVZRmdWYmQxUEZNdFlzdkRWV2NWeHl2a2Mwdk1wYURLU2ZlS2RaaktjN2w1Y3F2VlFqNmZOb09TTmtJQXMtbDhuNXNHZ245d3p3?oc=5\" target=\"_blank\">Philippines...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdkV4NkZDZmZ6bDVuZmtTNjhtOWFRbTgyY0puMENfcTMzMWhIcGpMWndiY2ZZcllLTmVVS181MHM3WTN4VEpIZjk0VWUwdDFjUFNlbkdlakduVjJtbWFqaFp0ckpweWRlTWFidWU4bHBHdFVNamdnWm0xX240NmVRZVA2Q2NrR2lQSnpLckFMMEFRbVQ3bmFBUXRHaWV2TGtSVTYtck1lZHNUUlB6WS0yZWlqMXJhaU15T0ZqWDlPeWZOeEx5T0RmV19qTW9BU2FFS05QTWFTVQ?oc=5",
+          "date": "Wed, 18 Jul 2018 07:00:00 GMT",
+          "summary": "ARN, Hala China to launch radio station to cater to Chinese expats in Dubai - Digital Studio Middle East - <a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdkV4NkZDZmZ6bDVuZmtTNjhtOWFRbTgyY0puMENfcTMzMWhIcGpMWndiY2ZZcllLTmVVS181MHM3WTN4VEpIZjk0VWUwdDFjUFNlbkdlakduVjJtbWFqaFp0ckpweWRlTWFidWU4bH...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRUwtQ2V4OExZSWdYdFdXcEtyeXZ4M0ZhQUVQSkJBdUVvaG91SnJfNkNyR3gwblpEU1VHLURaNlpjbzd1dDNGRkFyTFdxellpT0FhNnhCTHQyQjloOTFlWVlnUTJiZE5IZmdUSFBQbG10VmdlSXpHY0J2UXNXNUY4QTA5SkZfdWFtOFpLRnJ2RlllaGhsYXNSWg?oc=5",
+          "date": "Tue, 11 Jan 2022 08:00:00 GMT",
+          "summary": "RTA & Hala launch in-car interactive screens in partnership with Binary - Campaign Middle East - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNRUwtQ2V4OExZSWdYdFdXcEtyeXZ4M0ZhQUVQSkJBdUVvaG91SnJfNkNyR3gwblpEU1VHLURaNlpjbzd1dDNGRkFyTFdxellpT0FhNnhCTHQyQjloOTFlWVlnUTJiZE5IZmdUSFBQbG...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPYVh6YW1uU1B2MDFXRUlyZlc3WVpnU3FsbFFSbUd6R19ZekxyX1gyNHlnV0FvT1NBcjg4MnZYZEhXWThLT015RVM5U0k0TTVHUVV0TDExZW5QblBza0hfNWpIZ2JwZWIxMGlPejl1UzZGSHRrVTdxUzQyOTBGQ051T2J2OVdZNmJmeS0yVnM2NWJIaVFoZE9XMUhkQTYxcGNHeWlUb2ZMM2MxY2pBTS1LbG5DTXNHMXhLcUhhNUEyc2RJNWpBb1F2cDZPZFhNNGl3Z2NRX2ExS0s2UUhTM1pQd29nSGhXY2FFTUtWUFdfejR2T2Zf?oc=5",
+          "date": "Wed, 10 Mar 2021 08:00:00 GMT",
+          "summary": "Malaysia halal rules: New QR code launched to recognise foreign certification bodies in wake of meat scandal - FoodNavigator-Asia.com - <a href=\"https://news.google.com/rss/articles/CBMi9AFBVV95cUxPYVh6YW1uU1B2MDFXRUlyZlc3WVpnU3FsbFFSbUd6R19ZekxyX1gyNHlnV0FvT1NBcjg4MnZYZEhXWThLT015RVM5U0k0TTVHUVV0TDExZW5QblBza0hfNWpIZ2JwZWIxMGlPejl1Uz...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9LUGNtNHZMVWlMNDhJWERPNFJoN0dsY1hRUGFUcmdvMlJTVjZkRUtfS0ZaTnZ5Q2Y1QVhDN1BSOTc3VTg3aWZjWm0xdVlHcXRTTHfSAVdBVV95cUxObWJvRnB4dEZ2d2JvTFlCcllrT2FkcVVUekplZlNickhKcTR4TWY3dmZHY3BOSW9FV0NhRkhKUlRENHNwdDA5ak12Rzc1dzNRNGV5Vy11Wk0?oc=5",
+          "date": "Tue, 03 Sep 2019 07:00:00 GMT",
+          "summary": "Dubai’s transport regulator and Careem officially launch taxi-hailing service ‘Hala’ - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9LUGNtNHZMVWlMNDhJWERPNFJoN0dsY1hRUGFUcmdvMlJTVjZkRUtfS0ZaTnZ5Q2Y1QVhDN1BSOTc3VTg3aWZjWm0xdVlHcXRTTHfSAVdBVV95cUxObWJvRnB4dEZ2d2JvTFlCcllrT2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObHkzeUxKV2s3a0lHSHpfWTlXMF9VWk01YVVJV2wwTlU3Ni1yTXVDajBUcE9vNDRTdWt4U051NlpVazR2ZGRyRW5ZNGczWmxlNUxSSmo2bmZ1Q21ya2U5VG9ZUVpfWG5qN1JTbUNPQnIxZnJlR2NvTWFBNWh1dFpzZWRIM2drVlM2cGVVZ09CNWVHazRtSnp2Vi1B?oc=5",
+          "date": "Mon, 09 Nov 2020 08:00:00 GMT",
+          "summary": "Private sector airliner Hala Air launches VIP charter flights - Libya Herald - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxObHkzeUxKV2s3a0lHSHpfWTlXMF9VWk01YVVJV2wwTlU3Ni1yTXVDajBUcE9vNDRTdWt4U051NlpVazR2ZGRyRW5ZNGczWmxlNUxSSmo2bmZ1Q21ya2U5VG9ZUVpfWG5qN1JTbUNPQn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOX25ObWtMc1NDRk80a2NoVExXLXZDdkFsemREeUNYVUl5ZmJkYXdsWkZyUENtZHA5Uy1zcG5LS0pVLW9pNkZXb1JKeS1FWndfcHNLN1pxQ2FjMkNadzlrbi00MzdZVzNSUTUtSXM4cFRxRUY4NmlROEQxNEJ3eDdhSEd4Yno?oc=5",
+          "date": "Wed, 23 Aug 2017 07:00:00 GMT",
+          "summary": "Wealthsimple launches Halal investing portfolio for observant Muslims - CBC - <a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOX25ObWtMc1NDRk80a2NoVExXLXZDdkFsemREeUNYVUl5ZmJkYXdsWkZyUENtZHA5Uy1zcG5LS0pVLW9pNkZXb1JKeS1FWndfcHNLN1pxQ2FjMkNadzlrbi00MzdZVzNSUTUtSXM4cF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWU9nb082YmtBSlZqd1lGeWZnbkhhTEFpaFVDdG5yR0R4ZjhVRDQxdng2ZXFrWjFBdjktNjM3c2Y3b1VwQUQxaU9tWDktUWpXeE9lOXBWNkJIcU0zTnVtVmZmQzdEV2J4QlRTYU9LYnJxOVlrb21jLWVpZC0zLWJIZW0tRENiaFFoRV83OXVqWFlyckpRVDRJRzYyUGtjM3Jq?oc=5",
+          "date": "Mon, 11 May 2020 07:00:00 GMT",
+          "summary": "World’s first Halal network launched aiming to tap $5 tr market - Siasat.com - <a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOWU9nb082YmtBSlZqd1lGeWZnbkhhTEFpaFVDdG5yR0R4ZjhVRDQxdng2ZXFrWjFBdjktNjM3c2Y3b1VwQUQxaU9tWDktUWpXeE9lOXBWNkJIcU0zTnVtVmZmQzdEV2J4QlRTYU9LYn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOQVUzbFFOMlRjVzZFTDVEUGIyTzR4UnE3Wk5lTmJHUGxhYXhSWlV4YlpHeHJQclY0S09uUmx1ZzJJY3JhMTRUcklBck82RktfM1lHc1hWSHRHWEE3UmZ6ODJfYmZIRkFQTXl1blVIeS1IUV9kWktOMnJ1UFNwa3JzZk1MZk5zVGtkclNOVzM2RnFMRkRhcWUyeXd2OVRzNXBKYWNOV2xDaFM2aEFycm5zYTJEeVlsWExWa29YR003akI1Sm1vdm0wVkRFRHZYQ2RET3VVWkFSQndDN01mUE5GV3lSbUl0anR2NFh2bjdEelZ2SzMwMGFkZXln?oc=5",
+          "date": "Tue, 15 Oct 2024 07:00:00 GMT",
+          "summary": "Hala launches subscription for taxi rides to and from any Dubai Metro Station with 'Hala Rides for Metro’ - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMi-gFBVV95cUxOQVUzbFFOMlRjVzZFTDVEUGIyTzR4UnE3Wk5lTmJHUGxhYXhSWlV4YlpHeHJQclY0S09uUmx1ZzJJY3JhMTRUcklBck82RktfM1lHc1hWSHRHWEE3UmZ6ODJfYmZIRkFQTXl1blVIeS...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE02VWd5NWZPVVZDMm9xOFJJMjJhcG5FaHpmWHhTMmFUSTJWc3Y5NWF5UzZDclluUmVmb0hhZ0xqcXlPMVlTeFFIcFNselN6ZnRiaktrM3lpSFhHQ3AxeW11QzlNM0dwc1BmUXdybHdZQ2FoNzdtQjBjenFoQkF4SkXSAYcBQVVfeXFMT29WZ19RSEdGanNvNjc4R2VmamotZTg5Q18zWl9HaF9rblRKbzMtaGpYMmF0WGhDd0tuVHdFU0hqRkl2eENtYkJub2tLT243RjhrRmVEWHh1bWE1S1FOVEp0WUhyMEFMMF9IRDdPbVMxcms0eUYwOWVtRzByTXJQb1pDVkdVaW5N?oc=5",
+          "date": "Fri, 07 Jan 2022 08:00:00 GMT",
+          "summary": "Halal Implementation Council launched - The Express Tribune - <a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE02VWd5NWZPVVZDMm9xOFJJMjJhcG5FaHpmWHhTMmFUSTJWc3Y5NWF5UzZDclluUmVmb0hhZ0xqcXlPMVlTeFFIcFNselN6ZnRiaktrM3lpSFhHQ3AxeW11QzlNM0dwc1BmUXdybHdZQ2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNGM2aUxNYjAtdnMyay1ZTm84aWoyeV9KZTYtYmppQURtdENITGZ6SzltZlVpVXp0di1pM1p4TmcwdzZPRnpvN3p5QmJQNmJmSWJjRkMzN3pjSUhDMTY2Mjh4Y0VZZXVPeHFUNmVfbFQxbktQTjltYVFtZGJqUGc4VHc5VlFvdXBSeW41UE93VkJ4bHE0YWc?oc=5",
+          "date": "Wed, 26 Oct 2022 07:00:00 GMT",
+          "summary": "Manzil launches “the Halal version of Wealthsimple” for Muslim Canadians - BetaKit - <a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPNGM2aUxNYjAtdnMyay1ZTm84aWoyeV9KZTYtYmppQURtdENITGZ6SzltZlVpVXp0di1pM1p4TmcwdzZPRnpvN3p5QmJQNmJmSWJjRkMzN3pjSUhDMTY2Mjh4Y0VZZXVPeHFUNmVfbF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONncwQ1BmNjhVcV9lOHlDZ01HekdhUUJDa05HUFJtSU9LZm84ZzUzWWtCd0dOZl8xbTl3c1VGakhLeEUySkk5OVdTVEpNMXZfWDlDQWllSEJNMlprVW50YmV3VmN1N0dXa2lsQmM4Nm1QdGs5eFZUd3R0cjBKRGtaT0JZTXBWZjNVV09ickVmZEhhelBud2ppd2ZTNktMQTRqcksxb04zTmQydWJDYmw5OXB5U0lSbTQ?oc=5",
+          "date": "Tue, 13 Feb 2024 08:00:00 GMT",
+          "summary": "CJ Foods Launched Halal Korean Mandu and Hoppang in Malaysia - PR Newswire Asia - <a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxONncwQ1BmNjhVcV9lOHlDZ01HekdhUUJDa05HUFJtSU9LZm84ZzUzWWtCd0dOZl8xbTl3c1VGakhLeEUySkk5OVdTVEpNMXZfWDlDQWllSEJNMlprVW50YmV3VmN1N0dXa2lsQmM4Nm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaHYwRUFKVjhLWXRidjJxR2ZOU1NhRzVTcVQzSUFXekdDVXFvcFRiZkRHbHJZdUFzOHJ1ZWp5cFR1MGhpbGhZZW42TjEtVmhYeldUREc1S0x1d09wUDdjMHJKTWNJeGFqUzRCV09tRmxpZFd6OHl3RW42elVJMEhWVWltcTVEZUNYZWRGTi00MXZxaVVJVno5c2RaN04zZEQ5VWJmaUJMMzMxbkEyYTBjdTQ0NDkzbWkwWkdDMU11RzA?oc=5",
+          "date": "Tue, 18 Oct 2022 07:00:00 GMT",
+          "summary": "Hindu outfits launch campaign against Halal products in Karnataka - Deccan Herald - <a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaHYwRUFKVjhLWXRidjJxR2ZOU1NhRzVTcVQzSUFXekdDVXFvcFRiZkRHbHJZdUFzOHJ1ZWp5cFR1MGhpbGhZZW42TjEtVmhYeldUREc1S0x1d09wUDdjMHJKTWNJeGFqUzRCV09tRm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBoUFFXTnJ3cmhnUkJDTHRhN1ZKTWpNTEZlUk1jVHp1bDZqdkV2NnE0UGllNC1aY3YtWGZ3ZTBmWEJ6N1Z5Y0laMDZSd2ZHTXhMd2ZVNg?oc=5",
+          "date": "Wed, 23 Mar 2022 07:00:00 GMT",
+          "summary": "Hala group launches Hala Cashier after acquiring FRESH POS - Saudi Gazette - <a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTFBoUFFXTnJ3cmhnUkJDTHRhN1ZKTWpNTEZlUk1jVHp1bDZqdkV2NnE0UGllNC1aY3YtWGZ3ZTBmWEJ6N1Z5Y0laMDZSd2ZHTXhMd2ZVNg?oc=5\" target=\"_blank\">Hala group la...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeVJhMGV1NTBvWFAtNDhkZUgwdkl2MV9vMy1lX0NGM016RVN2emwzMloyQ2dCSDVzVXRrOHlOQmlWNGoxNXNRTlJ4dGM1MWNDOXNVVEJfNXdReDI5OHZmUEZvRHlrNE14UUFsdjFUWFM4TVFzN3NUOVBsSVJ1eFI0YQ?oc=5",
+          "date": "Tue, 28 Sep 2021 07:00:00 GMT",
+          "summary": "RTA and HALA launch ‘Auto Dispatch’ innovative technology of taxis using at Expo 2020 - Government of Dubai Media Office - <a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNeVJhMGV1NTBvWFAtNDhkZUgwdkl2MV9vMy1lX0NGM016RVN2emwzMloyQ2dCSDVzVXRrOHlOQmlWNGoxNXNRTlJ4dGM1MWNDOXNVVEJfNXdReDI5OHZmUEZvRHlrNE14UUFsdjFUWF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQU9MT0lBalpwR1pZeFM2N3RLWm1kQl91VVlRanh5cFIycU84S1pxaWlPaUdhdTVpbW1TdHJWV3JMSXBaeC1NM0NYc0tzTUlDcDRieVd2dktNanJzek5FYzVXRGtSc1dmUTlaNDc1MEs2VWpjUmxoaUsxdnh6Y3F0a2xQdGd6OXI5N1RoUkU1d0lZUWF0WWZhazQ4dWJ1NktORzZiUUZsRTRHZWVtTnc3TnBWV2ppTlU?oc=5",
+          "date": "Thu, 24 Oct 2024 07:00:00 GMT",
+          "summary": "Malaysia's Borong partners Maybank to launch country's first B2B halal marketplace - TNGlobal - <a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQQU9MT0lBalpwR1pZeFM2N3RLWm1kQl91VVlRanh5cFIycU84S1pxaWlPaUdhdTVpbW1TdHJWV3JMSXBaeC1NM0NYc0tzTUlDcDRieVd2dktNanJzek5FYzVXRGtSc1dmUTlaNDc1ME...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQd2x6WXVmSDVMRlk2NlVlZG1BOHNFaHprVDdlVzdjRlpkaFB5TDFHTWRWTE1VSXFfMDlxZGloc3ZZaHVCcGFpYzBOQ2xmR3BPek1zNlIwemNKYVRhZHhsMi1sSWR2bVQyRWwya19vU0tmMjZ0RDU4cVNLVk9DZXRpOUdISWxUQ0xzQkdsYlFSRzRianBpQXBuNW52S3c?oc=5",
+          "date": "Tue, 28 Jun 2022 07:00:00 GMT",
+          "summary": "Ooredoo Oman launches new Hala business prepaid plans - Telecompaper - <a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQd2x6WXVmSDVMRlk2NlVlZG1BOHNFaHprVDdlVzdjRlpkaFB5TDFHTWRWTE1VSXFfMDlxZGloc3ZZaHVCcGFpYzBOQ2xmR3BPek1zNlIwemNKYVRhZHhsMi1sSWR2bVQyRWwya19vU0...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE92amNiTXBKM1R2eWZ3MHJiSXBWcy1tckR5UzZjc3BIZ2Q2VVhDLTdOM0JCSjdtTWZCcUdjNjREVmFhOFU1ZUxnSlNFTkhNSGU3U1Ntdl82S3c3TDhjMU5IcHFZUzdlMS1lRGE1eHAyb2FySHZ0amc?oc=5",
+          "date": "Fri, 15 Dec 2023 08:00:00 GMT",
+          "summary": "Abu Dhabi launches free Hala Wi-Fi across emirate - Gulf Business - <a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE92amNiTXBKM1R2eWZ3MHJiSXBWcy1tckR5UzZjc3BIZ2Q2VVhDLTdOM0JCSjdtTWZCcUdjNjREVmFhOFU1ZUxnSlNFTkhNSGU3U1Ntdl82S3c3TDhjMU5IcHFZUzdlMS1lRGE1eHAyb2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQT2UwRm5nUXR4TmZkb1hGakJVYmpHNFdhcEk0cVh5aE1LOEh1ZlpQT3ZEYUFMRTA3UnZDcHMtdWI1YWdESlAxaUFNa3V0N2dKZE9ydjBhb2JUX2lkVjJVWmpHSGNHekViSzU3dk5CVWFqc3B4ejdYcnVVVDJGOHp1VktCalE4SElMRjJqV2dZZEpHLUJHNUwzMWxWd1hsaVVzMk5ndnNRemtIaXBYMFM5YW05cXBhdw?oc=5",
+          "date": "Wed, 19 Nov 2014 08:00:00 GMT",
+          "summary": "Hala launches GCC-specific Heli wheel loader - Construction Week Online - <a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQT2UwRm5nUXR4TmZkb1hGakJVYmpHNFdhcEk0cVh5aE1LOEh1ZlpQT3ZEYUFMRTA3UnZDcHMtdWI1YWdESlAxaUFNa3V0N2dKZE9ydjBhb2JUX2lkVjJVWmpHSGNHekViSzU3dk5CVW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNTnBQWmo4cEpKWnQzYVNHd1U3M1lnNWRBNjBwanJsVk8wcHZYMzVZdHVaR084ZmN2N3h2eHAwMXhCYlY5YVktYlVtZEYxQWpUZUJ4Q0N6aFh4aGxFVlNhUlk1bVRxQ0dRRHFsWl9LbkYxcVBwbkZiaEtqOVF4SE1veWhR?oc=5",
+          "date": "Wed, 21 Aug 2013 07:00:00 GMT",
+          "summary": "OSN Ya Hala Launches in the UK - thenationalnews.com - <a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNTnBQWmo4cEpKWnQzYVNHd1U3M1lnNWRBNjBwanJsVk8wcHZYMzVZdHVaR084ZmN2N3h2eHAwMXhCYlY5YVktYlVtZEYxQWpUZUJ4Q0N6aFh4aGxFVlNhUlk1bVRxQ0dRRHFsWl9Lbk...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNd0N2bnd3cmhLY0FqT0gyNEdRb2l4aG81SEFGZ2tha3lPWDQtMkktNE9SODYwbGRpUG5NdER3Vjd1Y3RtOTBDcm0tbnV4ajlzMVBwM3NSTmppdUd0eTFZcVBpNWVnQlZHcUxTTDlDcWZNUEYxbGozVlpONTA4Q3lsUG5mSDYxZ1ZyMXQ0Z2RPUDkwOTZ2R19SaUFrQ21ETmpDMlEyZU9FZzFIZw?oc=5",
+          "date": "Wed, 23 Mar 2022 07:00:00 GMT",
+          "summary": "Hala group launches Hala Cashier after acquiring FRESH POS - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNd0N2bnd3cmhLY0FqT0gyNEdRb2l4aG81SEFGZ2tha3lPWDQtMkktNE9SODYwbGRpUG5NdER3Vjd1Y3RtOTBDcm0tbnV4ajlzMVBwM3NSTmppdUd0eTFZcVBpNWVnQlZHcUxTTDlDcW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPMkk0YVZUZVhZUDNqQUtRMks0TnpQSDBSYjdqbkFNbGptdS1CRlo1bHlJYnZ1aVR0LUJKcVRUSDZhZi1aZzVKVnR1a3FDQ24tLXc3WEJISnpPcjNqb2FnSXJiTEFqUG9NdVZkSDdCNmRHek1aV1I1b243OGJjRWIyWDdtTC01Y2RTMGpSRzlQUDQtejh0OWlDRXJHZkhqa0lQbDNneWl1cTZ2ZHk5OVN5eWN5NXVONzhIZU5YMWpkQmRfTkNWaWZNM2NkNUpWYndvZlZ0dGplVjdoQk8xUmROYTJUSDd3b1dJQm5LZEZNS1hObzQza2c?oc=5",
+          "date": "Fri, 15 Dec 2023 08:00:00 GMT",
+          "summary": "Department of Municipalities and Transport launches Hala Wi-Fi to provide free public internet across Abu Dhabi - مكتب أبوظبي الإعلامي - <a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxPMkk0YVZUZVhZUDNqQUtRMks0TnpQSDBSYjdqbkFNbGptdS1CRlo1bHlJYnZ1aVR0LUJKcVRUSDZhZi1aZzVKVnR1a3FDQ24tLXc3WEJISnpPcjNqb2FnSXJiTEFqUG9NdVZkSDdCNm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNWXU4MkgzNFVBLTk4bm92QURMd1VOcFpOSF9Qdl9pRGVnUHpva3lBdE5iX2xucV95WklkZTBVVDZtSHdRdGVjdTNYTnFhSDNkRjBlTGZJbXFaXzF1RU5QSVNGclZ1YmFjRDRNSnZ1T1pwdnBxLTA4SXhrblF1bVhHRkdZX3BxSjloWmxRM2FPLV84MzJ4bk1UVWZvNA?oc=5",
+          "date": "Tue, 28 Sep 2021 07:00:00 GMT",
+          "summary": "Dubai’s RTA, Hala launch ‘auto dispatch’ technology of taxis at Expo 2020 - Gulf Business - <a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNWXU4MkgzNFVBLTk4bm92QURMd1VOcFpOSF9Qdl9pRGVnUHpva3lBdE5iX2xucV95WklkZTBVVDZtSHdRdGVjdTNYTnFhSDNkRjBlTGZJbXFaXzF1RU5QSVNGclZ1YmFjRDRNSnZ1T1...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA1eG1FbnFpcldlMkJvUjdXLU1JN1lMdXgwV2tqS0Uxa3h4emxtOEJqUmJNWFNNS2lvSVlwWFVZdHh6WGozVGsxY0hhTm0tRDBYNUE?oc=5",
+          "date": "Sun, 06 Mar 2016 08:00:00 GMT",
+          "summary": "Mobily launches new monthly Hala for prepaid customers - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFA1eG1FbnFpcldlMkJvUjdXLU1JN1lMdXgwV2tqS0Uxa3h4emxtOEJqUmJNWFNNS2lvSVlwWFVZdHh6WGozVGsxY0hhTm0tRDBYNUE?oc=5\" target=\"_blank\">Mobily launches ...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOb0hLdjZ4SWxiRU52clJOYWdXQnhQOC1NRzhNcks4cGdUeEdjSF9CMVJiQkxmbTZlSXNzN1ZnWHFqZ2F4dW1ZU1FveXZYc2xJV29iZXhjZEtWdlYtdHhwSXNBUkdHT3I5U3BicGhoS3hfc25sMEJ1UEpJei0wcm83OUFySWRRRXYxRFJMSzNNSTF0aDgwbS1XNHI1QU5yd0gtU1ZId3hqcW1yM05EZTN3VDFtdlk?oc=5",
+          "date": "Tue, 30 Nov 2021 08:00:00 GMT",
+          "summary": "Free e-scooter ride for 3 months in IIIT Hyderabad: Hala Mobility launches App - NewsMeter - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOb0hLdjZ4SWxiRU52clJOYWdXQnhQOC1NRzhNcks4cGdUeEdjSF9CMVJiQkxmbTZlSXNzN1ZnWHFqZ2F4dW1ZU1FveXZYc2xJV29iZXhjZEtWdlYtdHhwSXNBUkdHT3I5U3BicGhoS3...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPb2hKR2ZDTUd0VHFFem9rRzRNOVBjZHRVWlBReEg3QUdMaEFKbUM2M0wzU1RYNjdIR0JONzNKekIxaGhIM1lUUmNPLUxNQUVNLXdiV3Uya1FhRVBKYjYxMmxyTDdaMTF1NGdCeVY5Yk9DeWJYV2FNVnZJMXZ6WlRuRHAxNERKWHZENjFyOWRYNy1nQmVYaVJFWWpBbE56U2RXUko4alBR?oc=5",
+          "date": "Mon, 20 May 2024 07:00:00 GMT",
+          "summary": "Hala and Rituals Cosmetics launch first-ever car fragrance partnership in Dubai - Campaign Middle East - <a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPb2hKR2ZDTUd0VHFFem9rRzRNOVBjZHRVWlBReEg3QUdMaEFKbUM2M0wzU1RYNjdIR0JONzNKekIxaGhIM1lUUmNPLUxNQUVNLXdiV3Uya1FhRVBKYjYxMmxyTDdaMTF1NGdCeVY5Yk...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOalpmUTFLX1VtZThwWXdVdGlmUDktQTh1SDhxTm5zTEdrM1FYTEFaMW1HMUxwemQ0emo0elVZX2xXOHZ1dWxrM2QtYUVKVk5ieTZiSjhfZHVpc25JR1EtNDVSaEV4bjRjNzVtVkVSYy1DcUxsOHRQc1JyNnREREFtYmJRTkNBdEdxNzBDZlVWRHBWVC05c2VuWjZSY2lBeWxHaVdjeUFzQ2R4OVllbnc?oc=5",
+          "date": "Wed, 04 Sep 2019 07:00:00 GMT",
+          "summary": "Dubai’s RTA, Careem launch new e-hailing taxi service Hala - Logistics Middle East - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOalpmUTFLX1VtZThwWXdVdGlmUDktQTh1SDhxTm5zTEdrM1FYTEFaMW1HMUxwemQ0emo0elVZX2xXOHZ1dWxrM2QtYUVKVk5ieTZiSjhfZHVpc25JR1EtNDVSaEV4bjRjNzVtVkVSYy...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSFp4a3hreEhZSVNrM1pZc3Z6bTVESExfaGlTNUZJc0R5aGRVQmExNHhtcnF6OWktTWFxZlZiWEpUbnNkOXJfQ2hCRDdnVXY5TWRPVUhQeFVwbzBScFBmU0xSNF9vTHRzYmR6NGhad0tSRDVOcU93OWFfYVI2YUdlR2h4U1BSRE5EMXdEdHdxazA?oc=5",
+          "date": "Tue, 19 Nov 2024 08:00:00 GMT",
+          "summary": "Australia's first halal financial app launched by Hejaz - futurefive.com.au - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSFp4a3hreEhZSVNrM1pZc3Z6bTVESExfaGlTNUZJc0R5aGRVQmExNHhtcnF6OWktTWFxZlZiWEpUbnNkOXJfQ2hCRDdnVXY5TWRPVUhQeFVwbzBScFBmU0xSNF9vTHRzYmR6NGhad0...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQdWhzR1ZwWlF5bjJ5VjhHOEluYkhKTm56eHM4dnpOa3FVZGM3NnRsRG91Y2xSSDlFeFVwNXpkcVcxRUY4VnAxNWtHY21xejhVR01RV0NMRklZMl9KdENxQnlZSElfN1Bfejd6cUtWelRTeWVucXFVc09oSFo0WThQalE5TVhXX1dkcm82Rm1ndjZtU2N2WmxjVm91QVlnZw?oc=5",
+          "date": "Wed, 24 Jul 2013 07:00:00 GMT",
+          "summary": "Ooredoo launches fast credit service for Hala customers - Telecompaper - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQdWhzR1ZwWlF5bjJ5VjhHOEluYkhKTm56eHM4dnpOa3FVZGM3NnRsRG91Y2xSSDlFeFVwNXpkcVcxRUY4VnAxNWtHY21xejhVR01RV0NMRklZMl9KdENxQnlZSElfN1Bfejd6cUtWel...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPX1RCazhjSkhIR21lRUR1empSSlI2dE44SnNDMFplRkc3VGNZbVVBZ0p5dFZpUjBJbnNNYlR0em1BdkRoRUpYZGRxOFVSLXJQN1V3OHhubEoyeVdiVDlubkdGcTZJV3RZVE04OTJZQlA2bnAxSzM1SUhwbWdGcllFc1lfVW81UzZtS29hVlJFTGJNQzlSRTdNQkFTVnlZcDEzVThOMDdMc9IBrAFBVV95cUxQbWpIZEh3MzJDUTR5RmNKaE1wUFowT0dwcmdTMVk4RV9aUDRRU3BFTWNoa1JCWFMtaGl2elBIV2dkYXlTU1RORGhldEJyYWFUUFBFdTF1RDdxOGNjb3NSN0JGZ2haeFM1cXRKUmpSbWNPa05nYkFKb0RjUjhrOHg2aWZtMlRfUmROOEJxTDBpY0tqb2ZXSUx5Y3dGM0xmVEU1TVZfRWxyeTNxOWI2?oc=5",
+          "date": "Mon, 30 Sep 2024 07:00:00 GMT",
+          "summary": "Indonesia launches Halal International Trust Organization in Japan - ANTARA News - <a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPX1RCazhjSkhIR21lRUR1empSSlI2dE44SnNDMFplRkc3VGNZbVVBZ0p5dFZpUjBJbnNNYlR0em1BdkRoRUpYZGRxOFVSLXJQN1V3OHhubEoyeVdiVDlubkdGcTZJV3RZVE04OTJZQl...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdE9GRTBnNUZRVURLczdmZGpJb3RmZ2d5MzN3U2RKQjVuSk9lR1oyNDh2UjdzU0VDOTZiRF9MYkY0amszdWNHbENvZ1FOTnNwWjNmbGRyc3ZvaFJUUFJNVGFMRmR5R0xCZF9RRmltQnUzS3pVdE9WXzliWjdqdmkyY3JjUjk5c1VTWnN1UjViY1JZNmlySTlUUzc1Mm1XdTJGZ0c4Q1l6WjE2MHliN19r?oc=5",
+          "date": "Thu, 31 Mar 2022 07:00:00 GMT",
+          "summary": "Cordros launches Halal fixed income fund targeting ethical investors - Business News Nigeria - <a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNdE9GRTBnNUZRVURLczdmZGpJb3RmZ2d5MzN3U2RKQjVuSk9lR1oyNDh2UjdzU0VDOTZiRF9MYkY0amszdWNHbENvZ1FOTnNwWjNmbGRyc3ZvaFJUUFJNVGFMRmR5R0xCZF9RRmltQn...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPRTEzTmFRdzRqbGw5OXk0ajVtU3JGd2l5M0dvM1ZoOWlQSEFpUWZiSFBsbnduZEVGeHQ3cHhYUXo4VkxjVWtmblI0OXBMM3dCV2RzcDRPLXRrRjFXVDc5TlhuT0htbkgzbVo2c0ZycV9jeHRwdzgzZUZDMXQyZGM1UUt5MTZydmF6VWhtNVpPU0d6Zw?oc=5",
+          "date": "Wed, 10 May 2023 07:00:00 GMT",
+          "summary": "Marble Capital launches N3bn Halal Commodities Fund - - Business News Nigeria - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPRTEzTmFRdzRqbGw5OXk0ajVtU3JGd2l5M0dvM1ZoOWlQSEFpUWZiSFBsbnduZEVGeHQ3cHhYUXo4VkxjVWtmblI0OXBMM3dCV2RzcDRPLXRrRjFXVDc5TlhuT0htbkgzbVo2c0ZycV...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQLWpieEpIN1BPN3lCR1BMVl84ZGtzU2xSTFZ2NkRXY01FaVcybkh2RnJQU2xHQ3AtbHdtVXN5SG4zMFhZYlR3U255NmJTSk40LUNDSFJNeW9rSzB3VER6dkx4Z2RnZkZsdkN6SkE5emd1RURpT19OenRaVWpYMFB3UFlwMk5JVFItd3Jnem9fQ212VFpYbzJjQzIwbHJlZ3pNSlZ30gGoAUFVX3lxTE54aHZQS1JRalRxaWdqMmlSU2tPVWo0UUh2cEdfOGU3ZW9pU3RreFJHYUNjZVZ1RHdDMXBtOE1fLUE0RmJPbGM2eVBiMDRBa3NUaGpNdWVBZ21MbzFPZTB3V3FqZzlOSUJxY2gxb1FvTVlDWjJHYXppLXNiN0ppemlqTXpUdmwzZUd2OHFnVzNzTVRDS2hfaExRQ054WUVma2ZCeFBCX3hmQw?oc=5",
+          "date": "Wed, 13 Jun 2018 07:00:00 GMT",
+          "summary": "'Halal Richard Branson' is launching Britain's first Sharia airline - Metro.co.uk - <a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQLWpieEpIN1BPN3lCR1BMVl84ZGtzU2xSTFZ2NkRXY01FaVcybkh2RnJQU2xHQ3AtbHdtVXN5SG4zMFhZYlR3U255NmJTSk40LUNDSFJNeW9rSzB3VER6dkx4Z2RnZkZsdkN6SkE5em...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUWRpN1I4VzRPdFNBQzNmZmRYNHVaWTdqMXdtTE5ldE9TUXVnQWdQX2JaOHNNYWVDbFdzQmFmMF9Cdk00ZTJtWlpJX0ZhaUs2WmwzQ2tCaVBOWmJFSklSMS0xTkVaZ3NadlpoZURqaEN1THZ1cjJiT3RzU3FiVWRKcmNRZENuaWdCUHFPajZwUUlOVmR3aV9RNmZ0WWthbUxrQ0NkWHRzUXBjQWVFbWFRVWJXU0JkaDhJYm5sT3BKY2liTVFjamo0cVJlTQ?oc=5",
+          "date": "Thu, 19 Nov 2020 08:00:00 GMT",
+          "summary": "Hala Group launches wellbeing platform to support 2,000 staff - employeebenefits.co.uk - <a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxPUWRpN1I4VzRPdFNBQzNmZmRYNHVaWTdqMXdtTE5ldE9TUXVnQWdQX2JaOHNNYWVDbFdzQmFmMF9Cdk00ZTJtWlpJX0ZhaUs2WmwzQ2tCaVBOWmJFSklSMS0xTkVaZ3NadlpoZURqaE...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPV3l0R2NEdzV0MzN2QVhWaEdkRVU5aVhTbDhvcVViYkFYNGNYZF9VME02OGNuTkVkcjl3Z2VxM0JXa1l3eEVmeXBnS0tlZlh5U1FYRWhUV1dyNUhNVklYemQ2VmZrSlFoei1FUFVPSFgxV3ktNkVhdkt1VkhxSHY2Y0MxSzgwWHlHalFMU2tRdkdZNktTbndHNGY1QUJrTnprY2NfZmxFSVlRRzZMcXd6cWNlQ283U2pJdTNNaTdFSk96Z1N0cWNr?oc=5",
+          "date": "Tue, 02 Apr 2019 07:00:00 GMT",
+          "summary": "Indonesia Halal Economy and Strategy Roadmap 2018/2019 Launched - Agroberichten Buitenland - <a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPV3l0R2NEdzV0MzN2QVhWaEdkRVU5aVhTbDhvcVViYkFYNGNYZF9VME02OGNuTkVkcjl3Z2VxM0JXa1l3eEVmeXBnS0tlZlh5U1FYRWhUV1dyNUhNVklYemQ2VmZrSlFoei1FUFVPSF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQY29GcVlYdzF1dG1BVEQwRXRTX056VzJaQXZYdWhTaWJnZ3hReGo4VnV3LXZiY2NScnFSeVpoTUJ5SzB3Wkhkc1BrSm12SDhTVHB4YThldEpvS3JYbklIT3J5VVI3ZmFZcHlhLS1xVkhFMVF5RDhtUUR3Z3kzdW1HQ3N6NDk3WDBoSE1CeEttY3FHUQ?oc=5",
+          "date": "Thu, 26 May 2022 07:00:00 GMT",
+          "summary": "Ooredoo launches Hala Double Data promo - The Peninsula Qatar - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQY29GcVlYdzF1dG1BVEQwRXRTX056VzJaQXZYdWhTaWJnZ3hReGo4VnV3LXZiY2NScnFSeVpoTUJ5SzB3Wkhkc1BrSm12SDhTVHB4YThldEpvS3JYbklIT3J5VVI3ZmFZcHlhLS1xVk...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWmRJQjBZdGVLZktCNTRZSHEzdVROeUduUlVBNl9nWWNKOTJ0VkhXVUlkUlI0VWRFZHhJNkJfMkpvZTd0N0JQYTNFdDloRF9YeW5YbFdjS05xbUI5eWRscDVTeldfVVZnVXhvTUdreHdLUUtIVFdmLV9PS2NOMGR6ako0b0tmVG1XSlQ3Q3ZnVWM3T2wx0gGaAUFVX3lxTE9xWGo0UC10RlRhWk91Q0xVcG1VUEZ0SEZsWENvYm1uUElLVjFlcm02ZkZ0ck8zaWNfR3FTLXR5RHhXSGVwaGNhU1pVWjhTRVVOdjVvdzhjTFNmcHZNeGJPdEZjSTRtc3JybVhsWF9pSlVfU05rWmd2QXZGMWdYcV80OVhyazFoYlNCRnRyMFZJdkNLbDZnczRFbmc?oc=5",
+          "date": "Thu, 09 Sep 2021 07:00:00 GMT",
+          "summary": "Entrepreneur launches UK’s first halal cat food - Middle East Monitor - <a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNWmRJQjBZdGVLZktCNTRZSHEzdVROeUduUlVBNl9nWWNKOTJ0VkhXVUlkUlI0VWRFZHhJNkJfMkpvZTd0N0JQYTNFdDloRF9YeW5YbFdjS05xbUI5eWRscDVTeldfVVZnVXhvTUdreH...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBrV2p5UFIwMDk3Yk9FT0FvRFM5bUJJWEdGMjFKZmtxU2g2VG1waGlpdl91dG1HZUFxMUxkRGc3c1JUWnRvYzg5cWdKN195bmU1elY2SlBfc1FwSm5XdzN6c1NaZVI5UWdHVWtXMVg3aw?oc=5",
+          "date": "Wed, 06 Jul 2016 07:00:00 GMT",
+          "summary": "David Hala released - Gold Coast Titans - <a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTFBrV2p5UFIwMDk3Yk9FT0FvRFM5bUJJWEdGMjFKZmtxU2g2VG1waGlpdl91dG1HZUFxMUxkRGc3c1JUWnRvYzg5cWdKN195bmU1elY2SlBfc1FwSm5XdzN6c1NaZVI5UWdHVWtXMVg3aw...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPajNFSHRBYWRZRUZOUUVQcWxmVFN4N0xVNXYxZnhCQUhrZVVLT2JudG1zdE11MkJ5c1QtbFhNM1lmUDF5eVE5UUlzNk1IajdoMF82M1RRTmNNMDI4dU5QVTk1ZExGaEtMbkY2S0FkeFZIbjFUV1RRYTFHZTl3TEhEWENBX2hUeVBqOTgyc2Y5Vk5CRXluRDd5V0VuNWdOVUdMV0RRcTZfYzZjeGNuaTdta0ZjdzI?oc=5",
+          "date": "Fri, 14 Apr 2023 07:00:00 GMT",
+          "summary": "foodpanda launches first-of-its-kind halal-certified food delivery service in Malaysia - marketech apac - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPajNFSHRBYWRZRUZOUUVQcWxmVFN4N0xVNXYxZnhCQUhrZVVLT2JudG1zdE11MkJ5c1QtbFhNM1lmUDF5eVE5UUlzNk1IajdoMF82M1RRTmNNMDI4dU5QVTk1ZExGaEtMbkY2S0FkeF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRjZxVE5jNUF0N0twdXpVZFo4LU9FbDl0eFBJTWx4VTQzWFFvYmVWTy0tOWtvNTJfaUxRbGJtcnFLVXNZWElzMV81enEzLWExLU1ENmJaVXppdjdtM2RkN1BCLXJKdW5jYjdnU0JoWjVxT3ZvTFRYLU1pcXFaQmZEY3lZNlpjc1lUX3NGZXM2UTRuQdIBlwFBVV95cUxOd3BNQ28zYWdZVkJXanVmY0YyNWpkeE5ORDNJOHhiUEY3RDRuVEFVbVZxXzRlZVRWem5XQzJxT0FLaUp3SWtfMWRubzlDYmdXY0c5Wm1WaHRWLTNmTGxKZ3VOMlpndFY5UUtYTWJiSHk2NEpyQXN2QkpJMVRzOS0zZ1REbG1SUmJLelAwVkxBM1laQkJKNm9z?oc=5",
+          "date": "Wed, 10 May 2023 07:00:00 GMT",
+          "summary": "Marble Capital launches N3bn Halal commodities fund - Vanguard News - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQRjZxVE5jNUF0N0twdXpVZFo4LU9FbDl0eFBJTWx4VTQzWFFvYmVWTy0tOWtvNTJfaUxRbGJtcnFLVXNZWElzMV81enEzLWExLU1ENmJaVXppdjdtM2RkN1BCLXJKdW5jYjdnU0JoWj...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOUdtSjRxc0Y1RmRDTUpkUWRXN0ZtcTBtTlE5clNMbVNBakFBcnVaX18zRmhLLTBqLUlHYXdkQ0RVY2tGc202RDJiWngtcDZvSU9GdnhfVkZoZlhyNlRLeTJyUU94UXhCc2xzd1M2Sk9zQzR1dzFPR0pudnA0cnUycWlnSmNzYnNiLWlKQmRwWHVjVXVBQ3hwSHVIOFozY0xkdl9aaDd5YnYtQWcxVUx4alRRUzY5R1lm?oc=5",
+          "date": "Fri, 01 Nov 2024 07:00:00 GMT",
+          "summary": "Bank Indonesia Launches Simfratani ERP System to Boost Halal Industry Digitalization - Tempo.co English - <a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOUdtSjRxc0Y1RmRDTUpkUWRXN0ZtcTBtTlE5clNMbVNBakFBcnVaX18zRmhLLTBqLUlHYXdkQ0RVY2tGc202RDJiWngtcDZvSU9GdnhfVkZoZlhyNlRLeTJyUU94UXhCc2xzd1M2Sk...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQNG16dU5CYWwwWU41cDAzREViRTBlRHJEeU5acWNBSWtOUE1ZYTV0aEU3TGxyMUpTOGk4RVVTVVJoSnA1UUxSdHQ5MU44SHl1NWxxSEVLZGF2X1VGQnJ5SEtlZ1NQRmh0eFVRT0tSaHRGR2ZQcHZaSUNTUzBMVC1RdUhoUW04TjM2YV93emdn0gGTAUFVX3lxTE81RG5xZFB5bDdXSXNPM1lXTVRKa3ZlZWo2dDdnZUNjbnpKRVRNWkFPNUpuV0JSM2Qzc2xzb1NpM2ZVUkFaSzFST1dVN0d5UFFUYU5GRXNINVlSd0UzMDNEUlozZ3J2Q00xZzJrWjRmbE9mbzZzaFotZ0dfaVF6ZlJ6VVBqOWU2VWQ0bS1ZRXFUTnRWcw?oc=5",
+          "date": "Thu, 10 Feb 2022 08:00:00 GMT",
+          "summary": "LuLu Hypermarket launches ‘LuLu Hala February’ promotions - Times Kuwait - <a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQNG16dU5CYWwwWU41cDAzREViRTBlRHJEeU5acWNBSWtOUE1ZYTV0aEU3TGxyMUpTOGk4RVVTVVJoSnA1UUxSdHQ5MU44SHl1NWxxSEVLZGF2X1VGQnJ5SEtlZ1NQRmh0eFVRT0tSaH...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVnV3UW95U0dLWmUtU1RlcFJmaVBLbmE4eGI3NDNnMnBxdVpXNXEwTnc1R1NGZDQ1YU11VEctREpzcFdHRVczdVRGWDdKOV9GY0lWdHF5VVhDYUQ4NGdBRTd6dXdhakM3TXoxYlg5UHd2WTIyX1JhWkdnT1YtdXVPalB6LUN0UzZJZV9kT0hfVHF6MExKTEZsc3FHc05mV1lXRS00bjY1ZkVRd1ctaG1rSUY4MHZ2QkNtQnI1Q01R?oc=5",
+          "date": "Tue, 23 Jan 2018 08:00:00 GMT",
+          "summary": "South Korean spicy ramen craze continues, halal version to be launched in Indonesia - The Straits Times - <a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOVnV3UW95U0dLWmUtU1RlcFJmaVBLbmE4eGI3NDNnMnBxdVpXNXEwTnc1R1NGZDQ1YU11VEctREpzcFdHRVczdVRGWDdKOV9GY0lWdHF5VVhDYUQ4NGdBRTd6dXdhakM3TXoxYlg5UH...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPT2ZSNnJXaElQMTZldHl4bEpuc2FVNGVBSzQzSlJKWnc2NHJyekM0cTFXSzBhOWtuVkFLZjZwbzlLQzBkQ01YTGlKajNiVEN1NkFEVGJJY3piZTN6ZTNDc2txMWdsZFlSbk5DU3JiY0wtOEhWdjdsYll5UkVwLUczalFTYThrOWMwcDJzRV80MTZhdUlsVjhVYnlPbUl3cjZrb2xjQmxNMmhUdFNkYUhTc3JkbXJoRm40MVlmbWMzNXdkOUVaV2M5Qjc4Zy03S3BVT3EtZw?oc=5",
+          "date": "Mon, 05 Feb 2024 08:00:00 GMT",
+          "summary": "ZUS Coffee launches 'COFFIZZ': Malaysia's first halal-canned sparkling coffee - Sinar Daily - <a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxPT2ZSNnJXaElQMTZldHl4bEpuc2FVNGVBSzQzSlJKWnc2NHJyekM0cTFXSzBhOWtuVkFLZjZwbzlLQzBkQ01YTGlKajNiVEN1NkFEVGJJY3piZTN6ZTNDc2txMWdsZFlSbk5DU3JiY0...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOY0FXVW52LWRIQVV2MlU1LXZJMzFSY0RQMXg4Y3liU2VfVVhvZGdHcWpYUFVWN2JpeFhQbndaWkVvNi02bWc4c25uZDBBYWJiNW1JUkN4V0g0ZW1ZMlF2azdKYWc3cjlPRmduRjdTLTI3YnZ0NkJ2el84SlBNcExkQ093REpiNkNYSDNEcFB1VWJoOGo3Z1kxR1Y1ZzlBdHVVeWV0OEFBVWVVOERUdmEya2VVTnYyUVdRQmljbExB0gHLAUFVX3lxTE1JWnpRVDVQZWZfekllVW1rVjE5a2FObGdkOUxLbnlHQndENGRad1gwZWlGXzFTV1NXS2swcGRINk9ZQ0hjMV9uanNhcTZuZ0F3dmFJWGRYNTVPOXZJdENQODY3N0ljUlNWbmhERV83cm9mSHFzWEl2SFF5SGxteUVNUWJFSU85LXVwQ1JJTVd1N3dCdndhMFdoVENzcERiaUNDT1JQRG1iLVBrS1dUVlMxYS1HNk5NZDVlVF85cjNIOFh1UW1HRXJnSjBr?oc=5",
+          "date": "Fri, 30 Aug 2019 07:00:00 GMT",
+          "summary": "RTA, Careem Officially Launch ‘Hala’ e-Hailing Service in Dubai - Transport and Logistics ME - <a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOY0FXVW52LWRIQVV2MlU1LXZJMzFSY0RQMXg4Y3liU2VfVVhvZGdHcWpYUFVWN2JpeFhQbndaWkVvNi02bWc4c25uZDBBYWJiNW1JUkN4V0g0ZW1ZMlF2azdKYWc3cjlPRmduRjdTLT...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQX3VHcVVmandQMUIzN0Ytd3NBdVdnOTlHQWtEVkFVZFhYanM5SUlWX0c1cjM1Tmd6aFRGd1U5c0JXd3VnUjQ3VE9weDJLbjNtX2hzd0dQSlVTT24xTFNraTd2QUxzNVFSbEVNVk1haURMekw5YU1pNlE1SDdnZU1NLUZod0ZEb2swcERCaw?oc=5",
+          "date": "Wed, 07 Mar 2018 08:00:00 GMT",
+          "summary": "Cambodia launches Halal certification and label - Khmer Times - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQX3VHcVVmandQMUIzN0Ytd3NBdVdnOTlHQWtEVkFVZFhYanM5SUlWX0c1cjM1Tmd6aFRGd1U5c0JXd3VnUjQ3VE9weDJLbjNtX2hzd0dQSlVTT24xTFNraTd2QUxzNVFSbEVNVk1haU...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9IZlZtVktGY2h2YlpKMzZnamRNSklKZ2NYbnl6eFAzNmRjUjRaUWRkT0tNWTY0VDhCTFh4V2ZHLVpkTXdhcnlDdjRLTnlqdkt6WmtkUEdPTWJ0UjRSMWtJZkdFS2xYWV9Ndm50SUxoMWRLdk1uekZ5MdIBfkFVX3lxTE5LRTktOGVtbDZqalotbjg4YzhRTGpEY0llNGhrd3E4U0FDNmowWWhtZjVma1U2aUpJdG5IZzdLb3V3Ry10cThCWEp2WGk5RTRvVUNrZ0NFb0Z4UDExLWZqWjB5bkFRcDRFOWZ0Y3J5WEI4Q0p5dDVGcW10SlFxUQ?oc=5",
+          "date": "Wed, 19 Feb 2020 08:00:00 GMT",
+          "summary": "LuLu Hypermarket launches Hala Feb 2020 - Times Kuwait - <a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE9IZlZtVktGY2h2YlpKMzZnamRNSklKZ2NYbnl6eFAzNmRjUjRaUWRkT0tNWTY0VDhCTFh4V2ZHLVpkTXdhcnlDdjRLTnlqdkt6WmtkUEdPTWJ0UjRSMWtJZkdFS2xYWV9Ndm50SUxoMW...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQWDRmMTdJb1M1cDFEU0dTRHlBb05MMDBLWDJGcThZc3lhQjVjWjQxdVBhazJnSEJoNmlROHZmZnNySFdZb0t1ZHdsN1lOd21PbU1LVlBPS3I1al93UlNENEdxWDVaMFZnTzlWUEVIWmlaSDM1MHhJdkFrZURfUXVmWVl0LVFnOVZDV0HSAY8BQVVfeXFMUHVIaG91VDNjQVdkUjE4WTBkRVFaMEllRWhaV09IdE1ZbVJKdFFRMHZjRWd6Nmk3T2o1WWRKRFMwbkRHNDQ5WDJxS0hpQVE2d05COHh1Vmx6N29JTDV1T0hERHZ2ZkNmREF0Y0tzLXMtYTVzWnpZczJ2RWctT1dsbkw3YktaNkJsaU5WdGM1bFU?oc=5",
+          "date": "Mon, 16 Mar 2015 07:00:00 GMT",
+          "summary": "Ooredoo launches third Hala Smart campaign| Gulf Times - Gulf Times - <a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQWDRmMTdJb1M1cDFEU0dTRHlBb05MMDBLWDJGcThZc3lhQjVjWjQxdVBhazJnSEJoNmlROHZmZnNySFdZb0t1ZHdsN1lOd21PbU1LVlBPS3I1al93UlNENEdxWDVaMFZnTzlWUEVIWm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1TMHcwWXFLYzNaVUtLM05veTBGZ19QbVA5SlVUanNSUTdoNjUxV0dCbERFbnpoNTlNUWllb1g4WmZzbndNbnNZUUZUdzFLRWxyalQ5a1ExbFlyRUdLUFNZN1NydWpwMlhsUFR3ZE9xMlRidWVLTS0zNEQ2WdIBgAFBVV95cUxNWUlUWG1mazBsc0pmRWpmSHBMR2ZBVk9IN0RobldkcVFmcHhkaG4weXFUU1BsNUJZTHZqUllMTU1NcnZUV1JWX2lQbVpxeU9MSzBPWFVOSDluQkZndmpEcWdTYnYtRjZPNzJCOVZUVEpSQXM3XzJITl9LejhHU1BfaA?oc=5",
+          "date": "Thu, 04 Dec 2014 08:00:00 GMT",
+          "summary": "Ooredoo launches Hala Egypt Key| Gulf Times - Gulf Times - <a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1TMHcwWXFLYzNaVUtLM05veTBGZ19QbVA5SlVUanNSUTdoNjUxV0dCbERFbnpoNTlNUWllb1g4WmZzbndNbnNZUUZUdzFLRWxyalQ5a1ExbFlyRUdLUFNZN1NydWpwMlhsUFR3ZE9xMl...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMThLSWRyTGRteEtVb2Z3VjVwS0ZGanhpdEFVSXhpU2V6Zms0UV8za2tNS25VUlNJMDhaWEF6VGQ1S09NaW9TU0pEZ3NQc2FEcEhwZi1QaERIVWJ2Y0tYRFhOa21qcWstVERwYlRneFh6Z2lrZDBZU01pU0JqVlp4X3JmTHFvelJDOFdZRVljMkpUVUpJVm93ZUtsZlJ5azdfYk1fdk5sSdIBrAFBVV95cUxQQVh2Yl8xaHB5TllrQ21fNWVHemNUTklNZkN0bUYxYXFaODU4WVg3UFpTRFcyOHFxcHJvMEFkRFI3U1hZTDN4NWxDZnVIeXYzM1YzNUNMa0lfek8yNzA1MW5SNDJSbEpUUDVWSnV2bl9kRTZtaGVNZ2huRzVjZGY4TjI4cmpnOGQ3UVlsUVpoUnR0SUhORjd1dW1rQXc1MU1RSW9nUUE0WkF4ejVH?oc=5",
+          "date": "Sat, 30 Mar 2024 07:00:00 GMT",
+          "summary": "Religious Affairs Ministry launches Indonesia Global Halal Fashion - ANTARA News - <a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQMThLSWRyTGRteEtVb2Z3VjVwS0ZGanhpdEFVSXhpU2V6Zms0UV8za2tNS25VUlNJMDhaWEF6VGQ1S09NaW9TU0pEZ3NQc2FEcEhwZi1QaERIVWJ2Y0tYRFhOa21qcWstVERwYlRneF...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 95 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 2,
+    "signals_without_evidence": 0,
+    "confidence_score": 0.6817145135566194,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "score": 60,
+  "reason": "Menaitech shows moderate intent primarily driven by the new product launch signal, which indicates growth potential but lacks supporting signals such as funding or partnership activity. The low volume of recent evidence and absence of other strong signals reduce overall confidence.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    },
+    {
+      "signal": "new_product",
+      "score": 72,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 72,
+      "confidence": 0.7
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "Menaitech's new product launch may position the company for growth in their market.",
+    "The absence of recent funding could limit the scale of expansion or marketing efforts."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Lack of diverse signals could indicate fragile growth potential.",
+    "Without new funding, the company may face challenges in product promotion and scaling."
+  ]
+}

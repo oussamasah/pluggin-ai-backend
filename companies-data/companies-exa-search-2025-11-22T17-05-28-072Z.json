@@ -1,0 +1,241 @@
+{
+  "exaCompanies": [
+    {
+      "id": "witem_01kap8dks4dw44635ddw44635d",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01kap8de0d65008kcte8hv5zmx",
+      "websetId": "webset_01kap8ddbvxeg6jebsh9qnsj5w",
+      "properties": {
+        "type": "company",
+        "url": "https://unifonic.com",
+        "description": "Unifonic is a SaaS provider of AI-driven customer engagement solutions, including SMS, WhatsApp, webchat, messenger, and push notifications; headquartered in Saudi Arabia with 269 employees, $70M revenue, and $146M funding, operating primarily in the Kingdom of Saudi Arabia.",
+        "content": "## **The _**AI platform**_**\n\n## for every conversation.\n\nBuild personalized omnichannel customer engagement powered by AI. It's easy.\n\n## World-class speed, quality and reliability\n\n## _Our channels_\n\n#### SMS\n\n90% of text messages are read within three minutes, keep your customers in the loop with SMS alerts and campaigns.\n\n#### WhatsApp\n\nSend notifications, customer service messages and essential information and get instant feedback on WhatsApp.\n\n#### Webchat\n\nQualify leads, drive consideration, close sales, provide support, and have one-to-one conversations with your customers at scale.\n\n#### Messenger\n\nAutomate inbound Messenger conversations to drive sales and provide customer support.\n\n#### Push\n\nSend visible, relevant, and timely mobile Push Notifications to increase in-app engagements.\n\n#### Voice\n\nGive your brand a voice with meaningful and contextual Voice interactions with global connectivity.\n\n## How Unifonic helped _SPL_\n\nSaudi Arabian postal firm SPL launched a digital assistant on WhatsApp for more effective customer service and accurate deliveries, while cutting business costs and expanding its services.\n\n50%\n\nReduction in call centre wait times attributable to whatsapp\n\n90%\n\ninquiries resolved within WhatsApp\n\n30%\n\nincrease in response times\n\n75%\n\nReduction in costs attributable to WhatsApp\n\n## _Transform_ the way you  communicate\n\n### Automation made easy\n\nA seamless solution for better workflows. Access pre-built templates that help to implement popular use-cases such as abandoned cart reminders, sending OTPs, and triggering chatbot automation.\n\n### Enhance the tools you use\n\n100+ native integrations are included with Flow Studio, including Salesforce, Hubspot, Shopify, and many more.\n\n## Built for  _how you work_\n\n### Marketing\n\nDiscover the power of marketing automation. Harness the world's most popular messaging apps to start conversations, boost sales, and increase loyalty.\n\n### IT & Operations\n\nSimplify operations with low-code development tool and improve customer service efficiency with AI-powered chatbots and automated workflows.\n\n### Customer Support\n\nDeliver world-class customer service on your customers' preferred channels and offer 24/7 AI-powered support.\n\n## Get started with Unifonic today",
+        "company": {
+          "name": "Unifonic",
+          "location": "undefined, Saudi Arabia",
+          "employees": 269,
+          "industry": "Information Technology & Services",
+          "about": "Unifonic is a leading customer engagement platform and Software-as-a-Service (SaaS) provider based in the Middle East. It uses conversational AI technology to streamline omnichannel communication and revolutionize customer experiences for businesses.\nUnifonic’s solutions empower organizations to manage all their customer communication channels, including text, voice, WhatsApp, and web, from a single platform. This helps businesses to create stronger customer relationships while minimizing communication infrastructure costs.\n\nUnifonic specializes in connecting local enterprises with their customers, including leading banks, financial institutions, and government entities throughout the region, as well as healthcare, retail, e-commerce, and transport and logistics providers worldwide.\n\nWith proven expertise in serving emerging markets since 2006, Unifonic safely handles over 10 billion annual transactions for millions of recipients across 160 countries. \nUnifonic’s commitment to service excellence is backed by a local corporate presence in six countries and a dedicated team of over 400 professionals serving clients 24/7.\n\nFor additional information about Unifonic, please visit their website at\nhttps://www.unifonic.com/.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQF2VZRjqCAcIA/company-logo_200_200/company-logo_200_200/0/1727178183733/unifonic_logo?e=2147483647&v=beta&t=ChyMfXVflFni8OatDkpCmIyKHZEapfpInbAiwxzg6co"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has between 201 and 500 employees",
+          "reasoning": "Unifonic’s internal company profile lists 269 employees, which is within the 201‑500 employee range specified in the criterion.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Unifonic",
+              "snippet": "Unifonic is a Information Technology & Services company (private) with 269 employees (+10.1% YoY growth), $70.0M annual revenue, founded in 2006, headquartered in Saudi Arabia. Has $146.0M in total funding, last round was a Series B in 2021-09-15. Unifonic is a company that provides AI-driven solutions to elevate customer engagement. They offer a range of products and services including SMS, Wha...",
+              "url": "https://unifonic.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company is headquartered or primarily operates in the Kingdom of Saudi Arabia (KSA)",
+          "reasoning": "The internal company profile explicitly states that Unifonic is headquartered in Saudi Arabia, meeting the criterion that the company is headquartered or primarily operates in the Kingdom of Saudi Arabia.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Unifonic",
+              "snippet": "Unifonic is a Information Technology & Services company (private) with 269 employees (+10.1% YoY growth), $70.0M annual revenue, founded in 2006, headquartered in Saudi Arabia. Has $146.0M in total funding, last round was a Series B in 2021-09-15. Unifonic is a company that provides AI-driven solutions to elevate customer engagement. They offer a range of products and services including SMS, Wha...",
+              "url": "https://unifonic.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the SaaS (Software as a Service) industry",
+          "reasoning": "Unifonic’s internal profile lists it under the category “saas (software as a service)” and describes its offerings—AI‑driven customer engagement solutions such as SMS, WhatsApp, webchat, messenger, and push notifications—as cloud‑based services. These characteristics align with the definition of a SaaS company.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Unifonic",
+              "snippet": "Unifonic is a Information Technology & Services company (private) with 269 employees (+10.1% YoY growth), $70.0M annual revenue, founded in 2006, headquartered in Saudi Arabia. Has $146.0M in total funding, last round was a Series B in 2021-09-15. Unifonic is a company that provides AI-driven solutions to elevate customer engagement. They offer a range of products and services including SMS, Wha...",
+              "url": "https://unifonic.com"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-22T17:05:07.364Z",
+      "updatedAt": "2025-11-22T17:05:07.364Z"
+    },
+    {
+      "id": "witem_01kap8dmqt1dq78g711dq78g71",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01kap8de0d65008kcte8hv5zmx",
+      "websetId": "webset_01kap8ddbvxeg6jebsh9qnsj5w",
+      "properties": {
+        "type": "company",
+        "url": "https://rewaatech.com",
+        "description": "Rewaa (Rewaatech) is a SaaS software development company specializing in cloud-based inventory, sales, and accounting management solutions; 289 employees; founded 2018; headquartered in Saudi Arabia; $6.8M annual revenue; $39.8M total funding; active in e-commerce, AI, and ERP markets; 278,300 monthly website visits; ranked #117,957 globally.",
+        "content": "[Skip to content](https://www.rewaatech.com/www.rewaatech.com#content)\n\n- [للمبيعات: 8001244020](tel:+9668001244020)\n\n- [دخول التاجر](https://platform.rewaatech.com/register?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=header-%D8%B4%D8%B1%D9%83%D8%A9-%D8%B1%D9%88%D8%A7%D8%A1-%7C-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC-%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D8%A9-%D9%88%D9%83%D8%A7%D8%B4%D9%8A%D8%B1-%D9%88%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D8%AE%D8%B2%D9%88%D9%86-%D9%88%D8%A3%D9%83%D8%AB%D8%B1-ar)\n\nMenu\n\n[دخول التاجر](https://platform.rewaatech.com/login)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=header-contact-us-ar)\n\n- [: 0115202721](tel:+9660115202721)\n\nMenu\n\n[دخول التاجر](https://platform.rewaatech.com/login)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=header-contact-us-ar)\n\n# رواء \\| تجارتك في نظام واحد\n\n### أسرع في الإنجاز، أوضح في الأرقام، وأقوى في المتابعة\n\n- كاشير ومحاسبة متكاملة\n- إدارة العملاء والمستخدمين\n- تقـــــــارير ضــــــريبية دقيقــــة\n- إدارة المشتـــريات والموردين\n\n[جرّبه الحين](https://platform.rewaatech.com/register%20%20%20?utm_pl=online%20%20%20&utm_me=owned%20%20%20&utm_ch=direct%20%20%20&utm_pu=website-rewaa.com%20%20%20&utm_ca=hero-section-ar)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=zatca-homeslide3)\n\n# كاشير رواء لإدارة المحلات يفهم تجارتك\n\n### أدق في المبيعات، أذكى في القرارات، وأسهل في التحكم\n\n- كــــــــــــاشيـــــــر متـكــــــــامــــــــل\n- إصـــــــدار الفـــــــــــواتيــر الضــــــــــــريبيــــة\n- إدارة المبيعات والمخزون\n- متوافق مع هيئة الزكاة والضريبة\n\n[جرّبه الحين](https://platform.rewaatech.com/register%20%20%20?utm_pl=online%20%20%20&utm_me=owned%20%20%20&utm_ch=direct%20%20%20&utm_pu=website-rewaa.com%20%20%20&utm_ca=hero-section-ar)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=retail-homeslide2)\n\n# كاشير رواء لإدارة المحلات يفهم تجارتك\n\n### أدق في المبيعات، أذكى في القرارات، وأسهل في التحكم\n\n- كــــــــــــاشيـــــــر متـكــــــــامــــــــل\n- إصـــــــدار الفـــــــــــواتيــر الضــــــــــــريبيــــة\n- إدارة المبيعات والمخزون\n- متوافق مع هيئة الزكاة والضريبة\n\n[جرّبه الحين](https://platform.rewaatech.com/register%20%20%20?utm_pl=online%20%20%20&utm_me=owned%20%20%20&utm_ch=direct%20%20%20&utm_pu=website-rewaa.com%20%20%20&utm_ca=hero-section-ar)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=retail-homeslide2)\n\n# أجهزة كاشير رواء للمطاعم والمقاهي\n\n### أسرع في الطلب، أذكى في الإدارة، وأقوى وقت الذروة\n\n- كــــــــــــاشيـــــــر متـكــــــــامــــــــل\n- إدارة المبيعات والمخزون\n- إدارة الطلبــات والمطــبخ\n- إصـدار الفـــواتير الضريبية\n\n[جرّبه الحين](https://platform.rewaatech.com/register%20%20%20?utm_pl=online%20%20%20&utm_me=owned%20%20%20&utm_ch=direct%20%20%20&utm_pu=website-rewaa.com%20%20%20&utm_ca=hero-section-ar)\n\n[تواصل معنا](https://lp.rewaa.com/event-lp/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=fb-homeslide1)\n\n# أجهزة كاشير رواء للمطاعم والمقاهي\n\n### أسرع في الطلب، أذكى في الإدارة، وأقوى وقت الذروة\n\n- كــــــــــــاشيـــــــر متـكــــــــامــــــــل\n- إدارة المبيعات والمخزون\n- إدارة الطلبــات والمطــبخ\n- إصـدار الفـــواتير الضريبية\n\n[جرّبه الحين](https://platform.rewaatech.com/register%20%20%20?utm_pl=online%20%20%20&utm_me=owned%20%20%20&utm_ch=direct%20%20%20&utm_pu=website-rewaa.com%20%20%20&utm_ca=hero-section-ar)\n\n[تواصل معنا](https://lp.rewaa.com/event-lp/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=fb-homeslide1)\n\nPrevious\n\nNext\n\n# رِواء برنامج محاسبي وكاشير\n\n### متوافق\n\n### مع المرحلة الثانية من الفاتورة الإلكترونية\n\n- برنامج محاسبة\n- كاشير\n- إدارة المخزون\n- فاتورة ضريبية\n\n[جرَب الآن](https://platform.rewaatech.com/register%20%20%20?utm_pl=online%20%20%20&utm_me=owned%20%20%20&utm_ch=direct%20%20%20&utm_pu=website-rewaa.com%20%20%20&utm_ca=hero-section-ar)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=homepage-section-one-contact-us-ar)\n\n## الشريك التقني لإدارة محلات التجزئة\n\n- إدارة المخزون\n- نقاط بيع\n- تسجيل القيود المحاسبية\n- إدارة العروض والخصومات\n- الربط مع المتجر الإلكتروني\n\n[جرَب الآن](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=homepage-section-one-ar-m)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=homepage-section-one-ar-m)\n\nنظام معتمد من\n\n# رواء الشريك التقني لإدارة محلات التجزئة\n\n- إدارة المخزون\n- نقاط بيع\n- تسجيل القيود المحاسبية\n- إدارة العروض والخصومات\n- الربط مع المتجر الإلكتروني\n\n[شراكتك مع رواء](https://www.rewaatech.com/%d8%b4%d8%b1%d8%a7%d9%83%d8%aa%d9%83-%d9%85%d8%b9-%d8%b1%d9%88%d8%a7%d8%a1/)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=homepage-section-one-contact-us-ar)\n\nنظام معتمد من\n\n## الشريك التقني لإدارة محلات التجزئة\n\n- إدارة المخزون\n- نقاط بيع\n- تسجيل القيود المحاسبية\n- إدارة العروض والخصومات\n- الربط مع المتجر الإلكتروني\n\n[جرَب الآن](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=homepage-section-one-ar-m)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=homepage-section-one-ar-m)\n\nنظام معتمد من\n\n## عملاء رِواء\n\n# رِواء برنامج محاسبي وكاشير\n\n### متوافق مع المرحلة الثانية من الفاتورة الإلكترونية\n\n- برنامج محاسبة\n- كاشير\n- إدارة المخزون\n\n[جرَب الآن](https://platform.rewaatech.com/register%20%20%20?utm_pl=online%20%20%20&utm_me=owned%20%20%20&utm_ch=direct%20%20%20&utm_pu=website-rewaa.com%20%20%20&utm_ca=hero-section-ar)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=homepage-section-one-contact-us-ar)\n\n## عملاء رواء\n\n## لماذا تختار برنامج رواء؟\n\n### معك أينما كنت وفي أي وقت\n\nحيث تمكنك رواء من متابعة مخزونك ومبيعاتك وتكاليفك وجميع عمليات البيع في الفروع والمتجر الإلكتروني من خلال تقارير المخزون والمبيعات المحدثة تلقائيًا والمصنفة حسب المدة الزمنية والفروع بالإضافة إلى تقارير الإقرار الضريبي.\n\n### إدارة مخزون مخصصة لمحلات التجزئة\n\nصممت رواء نظام مخصص لإدارة مخزون محلات التجزئة وتغطية جميع احتياجاتها بدءً من إضافة جميع أنواع المنتجات كالمنتج بنوع واحد أو المنتج متعدد الأنواع أو حتى الموزون وغيرها مع إمكانية تتبع كل منتج حسب نوعه.\n\n### تقليل التكاليف التشغيلية\n\nويحدث ذلك من خلال أتمتة جميع العمليات التشغيلية المتعلقة بإدارة المخزون والمبيعات ونقاط البيع وتقليل الأخطاء البشرية التي تحدث بسبب الإدخالات اليدوية.\n\n## حقق أهدافك في تجارة التجزئةوقلل تكاليفك التشغيلية مع رواء\n\n- نسخة تجريبية مجانية لمدة 14 يومًا\n- ضمان إرجاع ذهبي\n\n[القطاعات التي تخدمها رواء](https://www.rewaatech.com/%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9%d8%a7%d8%aa/)\n\n[تواصل معنا](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=contact-us-ar-middle)\n\n## ماذا تقدم رواء لتاجر التجزئة\n\n#### كل ماتحتاجه في شاشة واحدة\n\nإدارة للمخزون والمبيعات\n\nنقاط بيع\n\nبرنامج محاسبي\n\nتطبيق التاجر\n\nالربط مع جهاز المدفوعات\n\nإدارة للمخزون والمبيعات\n\n### إدارة للمخزون والمبيعات\n\nبرنامج رِواء مخصص لتغطية كل احتياجات محلات التجزئة المتعلقة بإدارة المخزون مثل إمكانية إضافة جميع أنواع المنتجات، جرد المخزون، إنشاء أوامر الشراء للموردين، بالإضافة إلى إدارة عمليات إرجاع ونقل المخزون. ومن ناحية أخرى تمكن رِواء من متابعة أدق التفاصيل المتعلقة بإدارة المبيعات من خلال تقديم تقارير عن المبيعات لأي فترة زمنية حسب المنتج،الفئة، والفرع وغيرها من التفاصيل.\n\n[أعرف المزيد](https://www.rewaatech.com/%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d8%ac-%d8%a5%d8%af%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d9%85%d8%ae%d8%b2%d9%88%d9%86/)\n\nنقاط بيع\n\n### نقاط بيع\n\nتوفر رِواء برنامج نقاط بيع مخصص لمحلات التجزئة يمكّن من إجراء عمليات البيع بكل سهولة حتى عند انقطاع الاتصال بالإنترنت، أيضًا يمكَن التاجر من التحكم بصلاحيات المستخدمين حسب دورهم الوظيفي. مع إمكانية إضافة عدد لا محدود من صناديق البيع وإصدار عدد لا محدود من الفواتير المتطابقة مع هيئة الزكاة والضريبة والجمارك.\n\n[أعرف المزيد](https://www.rewaatech.com/%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d8%ac-%d8%a7%d9%84%d9%83%d8%a7%d8%b4%d9%8a%d8%b1/)\n\nبرنامج محاسبي\n\n### برنامج محاسبي\n\nولتكون رواء الشريك التقني المتكامل لتاجر التجزئة، أطلقت برنامج رِواء للمحاسبة المبسطة الذي يسهل على التاجر حساب مبيعاته، مصاريفه ومشترياته بدقة وسهولة وذلك بسبب أنه بمجرد إتمام أي عملية بيع أو إصدار أي فاتورة يتم إرسالها مباشرة للنظام المحاسبي دون الحاجة لإدخالها يدويًا.\n\n[أعرف المزيد](https://www.rewaatech.com/%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d8%ac-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%b3%d8%a8%d8%a9/)\n\nتطبيق التاجر\n\n### تطبيق التاجر\n\nلتسهل رِواء على التاجر إدارة ومتابعة تجارته أينما كان وفي أي وقت، صممت تطبيق التاجر الذي يساعده في متابعة تفاصيل مبيعاته حسب كل منتج، فئة أو حتى كل فرع. بالإضافة إلى إمكانية متابعة مستويات المخزون لكل منتج و الإطلاع على ملخص يشمل أهم الأمور التي تهم أي تاجر تجزئة لمعرفة أداء نشاطه.\n\n[أعرف المزيد](https://www.rewaatech.com/%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d8%ac-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%88%d9%81%d8%a7%d8%aa/)\n\nالربط مع جهاز المدفوعات\n\n### الربط مع جهاز المدفوعات\n\nلتقليل الأخطاء التي تحدث عند إدخال المبالغ في جهاز الدفع, قدمت رِواء خاصية ربط جهاز الدفع مع برنامج رواء لنقاط البيع حيث يسمح الربط هذا بانتقال مبلغ الفاتورة مباشرة من نظام نقاط البيع إلى جهاز الدفع دون الحاجة لإدخالها يدويًا.\n\n[أعرف المزيد](https://www.rewaatech.com/%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d8%ac-%d8%a7%d9%84%d9%83%d8%a7%d8%b4%d9%8a%d8%b1/)\n\n## ميزات تقدمها رواء لمستخدميها\n\n#### سجل في رواء واستفد من الخدمات المجانية التي نقدمها في منصتنا\n\nالدعم الفني24/7\n\nسهولة الانتقالإلى رواء\n\nتحديثات مستمرة مجانية\n\nمركز المساعدة\n\nالدعم الفني24/7\n\n### الدعم الفني 24/7\n\nتواصل مع فريق الدعم الفني على مدار 24 ساعة للإجابة على جميع استفساراتك سواء كان من خلال المحادثات الفورية داخل المنصة أو عن طريق الاتصال الهاتفي.\n\nسهولة الانتقالإلى رواء\n\n### سهولة الانتقال إلى رواء\n\nيمكنك نقل جميع بياناتك المتعلقة بمنتجاتك ومخزونك من أي منصة أخرى إلى منصة رِواء خلال خطوات بسيطة وبعدة طرق.\n\nتحديثات مستمرة مجانية\n\n### تحديثات مستمرة مجانية\n\nحرصًا على تلبية طلبات جميع العملاء، تقوم رواء بعمل تحديثات دورية على مدار السنة وتقدمها للمستخدمين بشكل مجاني.\n\nمركز المساعدة\n\n### مركز المساعدة\n\nتوفر رواء مركز مساعدة يحتوي على تفاصيل جميع الخصائص المتوفرة في رواء مع شروحات عن آلية استخدامها والاستفادة منها.\n\n## آراء العملاء\n\nالأفضل في التاريخ .. الكلمة اللي توصف برنامج رواء.\n\n### أنظمة ميسان للاتصالات\n\nمذهل جداً .. تجربتنا مع برنامج رواء ممتازة ولله الحمد.\n\n### مؤسسة حكاية خشب للتحف والهدايا والأعمال اليدوية\n\nالدخول على المنصة اونلاين وهذه ميزة مهمة بالنسبة لنا، ونتطلع لرؤية تطورات المنصة دايما.\n\n### جلسة عصر للشعبيات\n\nتعامل جدا راقي وأخلاق فوق الوصف وسرعة استجابة.\n\n### مؤسسة شادن للحلويات\n\n## الأسئلة الشائعة\n\nهل يمكنني إضافة المصاريف على برنامج رواء ؟\n\nنعم، حيث تقدم رواء برنامج محاسبي لمساعدتك في حساب تكاليفك ومصاريفك بشكل سهل ودقيق.\n\nهل يمكنني نقل بياناتي من نظامي الحالي إلى برنامج رواء؟\n\nنعم، يمكنك نقل بياناتك من أي نظام آخر إلى منصة رواء بكل سهولة وبطرق متعددة.\n\nهل يمكنني استخدام المنصة من الجوال؟\n\nنعم يمكنك تحميل تطبيق رواء من خلال متجر آبل ستور وقوقل بلاي ستور.\n\nهل توفر رواء أجهزة الكاشير وقارئ الباركود؟\n\nنعم، نقوم في رواء بتوفير الأجهزة بسعر مخفض عن سعر السوق لعملاء رواء.\n\nهل تتوافق رواء مع أنظمة هيئة الزكاة والضريبة والجمارك؟\n\nنعم.\n\nهل تقدم رواء الاشتراك الشهري بدلاً عن السنوي؟\n\nفي الوقت الحالي طريقة الاشتراك في برنامج رواء هي سنوية فقط\n\nكيف يمكنني الاستفسار عن الخدمات ؟\n\nيمكنك التواصل معنا إما عن طريق المحادثات الفورية داخل المنصة أو عن طريق الاتصال الهاتفي على الرقم: 8001244020.\n\nهل تحديث برنامج رواء مدفوع؟\n\nجميع مشتركي منصة رواء يتم تحديث أنظمتهم إلكترونياً وبشكل مجاني.\n\nحلول تقنية مخصصة\nلإدارة محلات التجزئة\n\n[ابدأ الآن](https://offer.rewaatech.com/registration-form-n/?utm_pl=online&utm_me=owned&utm_ch=direct&utm_pu=website-rewaa.com&utm_ca=footer-ar)\n\n[شراكتك مع رواء](https://www.rewaatech.com/%d8%b4%d8%b1%d8%a7%d9%83%d8%aa%d9%83-%d9%85%d8%b9-%d8%b1%d9%88%d8%a7%d8%a1/)\n\nتأسست رواء عام 2018، لتكون الشريك التقني المتكامل لكل تاجر تجزئة من خلال تقديم حلول تقنية متقدمة لإدارة المخزون والمبيعات والمدفوعات والتي تسهل على التاجر إدارة تجارته من شاشة واحدة.\n\n[Facebook](https://www.facebook.com/rewaatech/)[Twitter](https://twitter.com/rewaatech)[Youtube](https://www.youtube.com/@RewaaTechnology)[Instagram](https://www.instagram.com/rewaatech/)\n\n### الشركة\n\n### المنتجات\n\n### سياسات الشركة\n\n#### جميع الحقوق محفوظة **شركة رواء التقنية لتقنية المعلومات** © 2025\n\nWhatsApp us\n\n## بياناتك معنا محميّة!\n\nنهتم بخصوصيتك، ونستخدم ملفات تعريف الإرتباط في جمع المعلومات المطلوبة فقط، وذلك لتحسين تجربتك في تصفح الموقع، كما لا نشارك معلوماتك مع أي أطراف خارجية بدون موافقتك.\n\n[قبول](https://www.rewaatech.com/www.rewaatech.com#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9)\n\n[سياسة الخصوصية](https://www.rewaatech.com/%d8%b3%d9%8a%d8%a7%d8%b3%d8%a9-%d8%a7%d9%84%d8%ae%d8%b5%d9%88%d8%b5%d9%8a%d8%a9/)",
+        "company": {
+          "name": "Rewaa",
+          "location": "undefined, Saudi Arabia",
+          "employees": 289,
+          "industry": "Software Development",
+          "about": "Rewaa gives merchants a simpler way to run their business—by bringing all operations into one connected system.\nFrom sales and inventory to accounting and reporting, Rewaa helps reduce the daily load and gives merchants more time to focus on growth.\nWe work with businesses of all sizes and types—supporting them with practical tools that keep their work organized and their numbers in sync.\nOne system. Less mess. Real control.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQGMbAhjS1X7vg/company-logo_200_200/B4DZjscfDKGsAM-/0/1756313548588?e=2147483647&v=beta&t=W8Nvi0npe92cYG8gareGwNguQ4n69fGxq-0THdr7qoc"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has between 201 and 500 employees",
+          "reasoning": "The internal company profile lists Rewaa’s workforce as 289 employees, which falls within the required 201‑500 employee range.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Rewaa",
+              "snippet": "Rewaa is a Software Development company (private) with 289 employees (-6.3% YoY growth), $6.8M annual revenue, founded in 2018, headquartered in Saudi Arabia. Has $39.8M in total funding, last round was a Series A in 2023-08-28. The company provides a range of products and services related to inventory management and sales management. They offer electronic invoices, accounting...",
+              "url": "https://rewaatech.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company is headquartered or primarily operates in the Kingdom of Saudi Arabia (KSA)",
+          "reasoning": "The internal company profile for Rewaa (Rewaatech) explicitly states that the company is headquartered in Saudi Arabia. This satisfies the criterion that the company is headquartered or primarily operates in the Kingdom of Saudi Arabia.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Rewaa",
+              "snippet": "Rewaa is a Software Development company (private) with 289 employees (-6.3% YoY growth), $6.8M annual revenue, founded in 2018, headquartered in Saudi Arabia. Has $39.8M in total funding, last round was a Series A in 2023-08-28. The company provides a range of products and services related to inventory management and sales management. They offer electronic invoices, accounting...",
+              "url": "https://rewaatech.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the SaaS (Software as a Service) industry",
+          "reasoning": "Rewaa’s internal profile lists it as a software development company that offers cloud‑based inventory, accounting, and POS solutions. Multiple independent sources confirm the platform is delivered as a cloud service: a search result notes it is a “cloud‑based POS and accounting platform”; another explicitly calls it a “SaaS inventory management startup”; and a third confirms it is a “dynamic Saudi B2B SaaS technology company.” All references point to the same domain (rewaatech.com). Therefore the company operates in the SaaS industry.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Rewaa | The best POS & Accounting Solutions",
+              "snippet": "Rewaa combines a POS system, accounting, and inventory management all in one platform designed to enhance business operations and boost sales.",
+              "url": "https://www.rewaatech.com/en"
+            },
+            {
+              "title": "Your Complete Guide to Setting Up Rewaa POS Devices - رواء",
+              "snippet": "Rewaa provides a fully integrated cloud-based POS and accounting platform, along with carefully selected hardware devices that are fully compatible with the ...",
+              "url": "https://help.platform.rewaatech.com/en/articles/11399530-your-complete-guide-to-setting-up-rewaa-pos-devices"
+            },
+            {
+              "title": "Rewaa Company Success Story | Snapchat For Business",
+              "snippet": "Is Rewaa a SaaS platform?\nMeet Rewaa, a dynamic Saudi B2B SaaS technology company dedicated to revolutionizing merchants' business management in all sectors.",
+              "url": "https://forbusiness.snapchat.com/inspiration/rewaa-success-story"
+            },
+            {
+              "title": "Rewaa Platform - Salla App Store",
+              "snippet": "Rewaa provide an advanced cloud-based software to support retailers to manage orders between branches through linking online stores for unified management.",
+              "url": "https://apps.salla.sa/en/app/1677069629"
+            },
+            {
+              "title": "How Rewaatech became 1.3x faster with Middleware",
+              "snippet": "Their platform provides comprehensive solutions for automating inventory, sales, and expense management, alongside discount and online store integration. Rewaa ...",
+              "url": "https://middlewarehq.com/case-study-reewatech"
+            },
+            {
+              "title": "Maximising ROI: From clicks to conversions: A Saudi success story",
+              "snippet": "Who is the CEO of Rewaa?\nMohammed Alqasir, CEO of Rewaa, believes technology can change the world for the better.",
+              "url": "https://www.thinkwithgoogle.com/intl/en-emea/future-of-marketing/digital-transformation/b2b-rawaa-boosts-roi-with-data-driven-marketing"
+            },
+            {
+              "title": "Wa'ed Ventures leads a US $27 million Series A round for Rewaa ...",
+              "snippet": "Since its foundation in 2018 by Mohammed Alqasir and Abdullah Aljadhai, Rewaa provides a cloud-based solution that interlaces online and physical store ...",
+              "url": "https://graphenevc.com/waed-ventures-leads-a-us-27-million-series-a-round-for-rewaa-with-participation-from-stcs-cif-the-largest-series-a-round-for-a-saas-company-in-mena-302"
+            },
+            {
+              "title": "Rewaa – Derayah VC",
+              "snippet": "Rewaa is a Saudi SaaS inventory management startup that provides a cloud-based integrated platform that synchronizes the inventory between the online channels ...",
+              "url": "https://www.derayah.vc/our-portfolio/rewaa"
+            },
+            {
+              "title": "Rewaa's Journey to Best Workplace Environment Certification",
+              "snippet": "What are the benefits of using Rewaa?\nCatering to a diverse range of merchants, including retail store owners, restaurant proprietors, and service providers, Rewaa provides essential tools such as advanced accounting software, inventory management, point of sale systems, and promotional offer platforms.",
+              "url": "https://bestplacestoworkfor.org/fr/node/2418"
+            },
+            {
+              "title": "Rewaa | Company Profile - Bitscale",
+              "snippet": "Rewaa is a Saudi Arabian technology company established in 2018, specializing in an integrated omnichannel platform for the retail sector. The ...",
+              "url": "https://bitscale.ai/directory/rewaa"
+            },
+            {
+              "title": "Rewaa",
+              "snippet": "Rewaa is a Software Development company (private) with 289 employees (-6.3% YoY growth), $6.8M annual revenue, founded in 2018, headquartered in Saudi Arabia. Has $39.8M in total funding, last round was a Series A in 2023-08-28. The company provides a range of products and services related to inventory management and sales management. They offer electronic invoices, accounting...",
+              "url": "https://rewaatech.com"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-22T17:05:08.346Z",
+      "updatedAt": "2025-11-22T17:05:08.346Z"
+    },
+    {
+      "id": "witem_01kap8dpb5y5f5xfvyy5f5xfvy",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01kap8de0d65008kcte8hv5zmx",
+      "websetId": "webset_01kap8ddbvxeg6jebsh9qnsj5w",
+      "properties": {
+        "type": "company",
+        "url": "https://jisr.net",
+        "description": "Jisr | جسر is a SaaS-based human resources services company headquartered in Saudi Arabia, with 301 employees and $60M in funding. It offers a cloud platform for HR management, compliance, payroll, and employee engagement, designed to meet local Saudi labor law requirements and automate administrative tasks.",
+        "content": "[REQUEST A DEMO](https://jisr.net/en/request-demo)\n\n# Where HR and Finance move as one\n\nMeet Jisr: A new-age platform for growing businesses to scale HR processes, manage talent and control spend.\n\n[REQUEST A DEMO](https://jisr.net/en/request-demo)\n\nTrusted by 4500+ HR and Finance teams in Saudi Arabia\n\n## End the silos, bridge HR and Finance with Jisr\n\n## Where workforce strategy meets financial control\n\n[**Core HR suite**\\\n\\\nCentralize and streamline your people data, payroll, compliance and HR operations.](https://jisr.net/en/hr-software)\n\n[HR](https://jisr.net/en/human-resource-management) [Payroll](https://jisr.net/en/payroll-management) [Time and Attendance](https://jisr.net/en/attendance-management) [Compliance](https://jisr.net/en/saudi-compliance-management)\n\n[**Talent suite**\\\n\\\nHire top talent, engage your employees, upskill your workforce and build a path to grow for your top performers.](https://jisr.net/en/talent-management)\n\n[Recruitment](https://jisr.net/en/ats-system) [Performance](https://jisr.net/en/employee-performance-management) [Engagement](https://jisr.net/en/employee-engagement) [Learning](https://jisr.net/en/learning-management-system)\n\n[**Spend suite**\\\n\\\nNever lose track of any employee expense. Control overspending, enforce policies, and reconcile automatically.](https://jisr.net/en/spend-management)\n\n[Travel](https://jisr.net/en/travel-management) [Expense](https://jisr.net/en/expense-management) [Cards](https://jisr.net/en/card-management-system)\n\n## Built in Saudi, made for MENA\n\n### Local salary data for fair compensation\n\nLeverage pay data for Saudi workforce and ensure fair compensation for all.\n\n### Localized for continuous compliance\n\nStay compliant with GOSI, Muqeem, WPS, Mudad and more from day one.\n\n### Local salary data for fair compensation\n\nLeverage pay data for Saudi workforce and ensure fair compensation for all.\n\n### Localized for continuous compliance\n\nStay compliant with GOSI, Muqeem, WPS, Mudad and more from day one.\n\n## Hear why 4500+ customers trust Jisr\n\n#### \"What’s most impressive about Jisr is its continuous updates that align with Ministry of Labor regulations, and its outstanding support team. We highly recommend Jisr as the ideal solution for managing all HR processes.\"\n\n\"What’s most impressive about Jisr is its continuous updates that align with Ministry of Labor regulations, and its outstanding support team. We highly recommend Jisr as the ideal solution for managing all HR processes.\"\n\nHassan Mahmoud Khairy\n\nHassan Mahmoud Khairy\n\nHR Director at Fatoor Faris\n\nHR Director at Fatoor Faris\n\n#### \"An excellent platform that I strongly recommend to every HR professional. Jisr boosts employee satisfaction, enhances transparency and accessibility of information, saves valuable time, effort, and costs.\"\n\n\"An excellent platform that I strongly recommend to every HR professional. Jisr boosts employee satisfaction, enhances transparency and accessibility of information, saves valuable time, effort, and costs.\"\n\nAhmed bin Abdulmeniem Al-Harbi\n\nAhmed bin Abdulmeniem Al-Harbi\n\nHR Manager Cosmoplast\n\nHR Manager Cosmoplast\n\n#### \"Before Jisr App, our expense process was an absolute nightmare of missing receipts and endless email chains. Now, it's seamless. We've saved countless hours and finally have a clear picture of our spending.\"\n\n\"Before Jisr App, our expense process was an absolute nightmare of missing receipts and endless email chains. Now, it's seamless. We've saved countless hours and finally have a clear picture of our spending.\"\n\nHussein Al-Shehri\n\nHussein Al-Shehri\n\nHR Director at Burj Hamam Restaurants\n\nHR Director at Burj Hamam Restaurants\n\n#### “I can confidently say that Jisr strengthened our relationship with employees and brought transparency to all HR processes. Tasks that used to take days are now completed within hours, allowing us to focus on building a better workplace.”\n\n“I can confidently say that Jisr strengthened our relationship with employees and brought transparency to all HR processes. Tasks that used to take days are now completed within hours, allowing us to focus on building a better workplace.”\n\nFaisal Yahya Al-Dhafar\n\nFaisal Yahya Al-Dhafar\n\nHR Director at DSS\n\nHR Director at DSS\n\n## Built for Enterprise, made without complexity\n\n#### Ready to use integrations with top ERPs and accounting systems\n\nReduce errors, save time and get real-time visibility into payroll costs. With Jisr, sync payroll data into your GL with zero manual effort.\n\n[LEARN MORE](https://jisr.net/en/integrations)\n\n#### One platform for endless customizations and unlimited possibilities\n\nCustomize your workflows, personalize your policies and manage complex org structures across entities, projects, employees, departments and more.\n\n[LEARN MORE](https://jisr.net/en/request-demo)\n\n#### Expert HR and Finance support and services, just for you\n\nFrom instant support and Business Reviews to professional services, an army of 200+ professionals in Riyadh, Dammam, and Jeddah are ready for you.\n\n[LEARN MORE](https://jisr.net/en/request-demo)\n\n#### Ready to use integrations with top ERPs and accounting systems\n\nReduce errors, save time and get real-time visibility into payroll costs. With Jisr, sync payroll data into your GL with zero manual effort.\n\n[LEARN MORE](https://jisr.net/en/integrations)\n\n#### One platform for endless customizations and unlimited possibilities\n\nCustomize your workflows, personalize your policies and manage complex org structures across entities, projects, employees, departments and more.\n\n[LEARN MORE](https://jisr.net/en/request-demo)\n\n#### Expert HR and Finance support and services, just for you\n\nFrom instant support and Business Reviews to professional services, an army of 200+ professionals in Riyadh, Dammam, and Jeddah are ready for you.\n\n[LEARN MORE](https://jisr.net/en/request-demo)\n\n## Made for the future of work\n\nNo special training required for employees to get started\n\nA system so easy to use, your employees will love it!\n\nWe’ve built Jisr to be intuitive, which means your employees don’t have to go through long training cycles to request a leave or report their attendance.\n\nAlways connected for day-to-day updates – and the big moments\n\nAlways connected for day-to-day updates – and the big moments\n\nWhether it’s clocking in and out, finding the perfect spot for your next team lunch, or celebrating birthdays and work anniversaries — Jisr keeps you effortlessly connected with your people.\n\nNo special training required for employees to get started\n\nWe’ve built Jisr to be intuitive, which means your employees don’t have to go through long training cycles to request a leave or report their attendance.\n\nAlways connected for day-to-day updates – and the big moments\n\nWhether it’s clocking in and out, finding the perfect spot for your next team lunch, or celebrating birthdays and work anniversaries — Jisr keeps you effortlessly connected with your people.\n\n## From HR to Finance, Jisr is here for you\n\n##### HR Admins\n\nSimplify and manage every stage of your employees’ lifecycle without constant manual work.\n\n##### HR Managers\n\nScale and automate your HR operations and employee processes to drive HR efficiency.\n\n##### CHRO\n\nGet real-time visibility into your workforce data and make data-driven employee decisions.\n\n##### Managers\n\nEnforce policies without remembering and redirect employees to a smooth HR and payroll experience.\n\n##### Payroll Managers\n\nRun effortless payroll, from pay calculations to payroll accounting.\n\n##### Employees\n\nEmpower your employees with self-service tools and intuitive mobile app to free your HR team from repetitive tasks.\n\n##### HR Admins\n\nSimplify and manage every stage of your employees’ lifecycle without constant manual work.\n\n##### HR Managers\n\nScale and automate your HR operations and employee processes to drive HR efficiency.\n\n##### CHRO\n\nGet real-time visibility into your workforce data and make data-driven employee decisions.\n\n##### Managers\n\nEnforce policies without remembering and redirect employees to a smooth HR and payroll experience.\n\n##### Payroll Managers\n\nRun effortless payroll, from pay calculations to payroll accounting.\n\n##### Employees\n\nEmpower your employees with self-service tools and intuitive mobile app to free your HR team from repetitive tasks.\n\n###### HR Admins\n\nSimplify and manage every stage of your employees’ lifecycle without constant manual work.\n\n###### HR Managers\n\nScale and automate your HR operations and employee processes to drive HR efficiency.\n\n###### CHRO\n\nGet real-time visibility into your workforce data and make data-driven employee decisions.\n\n###### Managers\n\nEnforce policies without remembering and redirect employees to a smooth HR and payroll experience.\n\n###### Payroll Managers\n\nRun effortless payroll, from pay calculations to payroll accounting.\n\n###### Employees\n\nEmpower your employees with self-service tools and intuitive mobile app to free your HR team from repetitive tasks.\n\n##### Ready to optimize with Jisr?\n\n[REQUEST A DEMO](https://jisr.net/en/request-demo) [TAKE A PRODUCT TOUR](https://jisr.net/en/demo-hub)",
+        "company": {
+          "name": "Jisr | جسر",
+          "location": "undefined, Saudi Arabia",
+          "employees": 301,
+          "industry": "Human Resources Services",
+          "about": "What is Jisr: \n\nCloud-Based Platform to manage your People, designed according to the local needs and compatible Saudi Labour Law. Jisr provides a different digital experience for your employees and Helps you Automate lots of Admin work so you can focus on your People.\n\nHow does Jisr work?\n\nFlexible and single platform to manage All employees Data, Compliance with Saudi Labor Law, Automated payroll, Reports that Support Business Decisions, Financial Data integrated into your Accounting System. Effective performance management, custom reports, and more.\n\nWhy choose Jisr?\nJoin +3000 Saudi companies that trust Jisr. With +350,000 employees in +16 industries managed by the Jisr platform every workday.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQHW3NMlPfimmQ/company-logo_200_200/B4DZbUh6xTG8AI-/0/1747322383945/jisr_hr_logo?e=2147483647&v=beta&t=JIO3Ghhy2RE2Crh3pShpeFe5XaVCy3e_nT4n6xmigic"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has between 201 and 500 employees",
+          "reasoning": "The company profile lists 301 employees, which falls within the 201‑500 employee range specified in the criterion.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Jisr | جسر",
+              "snippet": "Jisr | جسر is a Human Resources Services company (private) with 301 employees (+41.5% YoY growth), founded in 2016, headquartered in Saudi Arabia. Has $60.0M in total funding, last round was a Series A - Jisr HR in 2023-10-04.  What is Jisr: \n\nCloud-Based Platform to manage your People, designed according to the local needs and compatible Saudi Labour Law. Jisr provides a di...",
+              "url": "https://jisr.net"
+            }
+          ]
+        },
+        {
+          "criterion": "Company is headquartered or primarily operates in the Kingdom of Saudi Arabia (KSA)",
+          "reasoning": "The internal company profile for Jisr states that it is headquartered in Saudi Arabia, which directly satisfies the criterion that the company is headquartered or primarily operates in the Kingdom of Saudi Arabia.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Jisr | جسر",
+              "snippet": "Jisr | جسر is a Human Resources Services company (private) with 301 employees (+41.5% YoY growth), founded in 2016, headquartered in Saudi Arabia. Has $60.0M in total funding, last round was a Series A - Jisr HR in 2023-10-04.  What is Jisr: \n\nCloud-Based Platform to manage your People, designed according to the local needs and compatible Saudi Labour Law. Jisr provides a di...",
+              "url": "https://jisr.net"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the SaaS (Software as a Service) industry",
+          "reasoning": "Jisr’s internal profile describes it as a \"Cloud‑Based Platform to manage your People\" and lists it under HR solutions and human capital management. A cloud‑based platform that delivers HR services over the internet is the classic SaaS model. Therefore the company operates in the SaaS industry.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Jisr | جسر",
+              "snippet": "Jisr | جسر is a Human Resources Services company (private) with 301 employees (+41.5% YoY growth), founded in 2016, headquartered in Saudi Arabia. Has $60.0M in total funding, last round was a Series A - Jisr HR in 2023-10-04.  What is Jisr: \n\nCloud-Based Platform to manage your People, designed according to the local needs and compatible Saudi Labour Law. Jisr provides a di...",
+              "url": "https://jisr.net"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-22T17:05:09.989Z",
+      "updatedAt": "2025-11-22T17:05:09.989Z"
+    }
+  ],
+  "websetId": "webset_01kap8ddbvxeg6jebsh9qnsj5w"
+}

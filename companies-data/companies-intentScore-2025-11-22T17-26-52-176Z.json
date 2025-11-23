@@ -1,0 +1,34 @@
+{
+  "score": 71,
+  "reason": "Mozn exhibits strong intent driven primarily by a recent funding round, signaling significant business momentum. However, the evidence regarding new product launches is lacking in recency and quality, impacting the overall intent assessment. While the funding signal suggests a financial push, the outdated product evidence creates uncertainty in strategic direction.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "excellent",
+      "original_score": 100,
+      "confidence": 0.568421052631579
+    },
+    {
+      "signal": "new_product",
+      "score": 77,
+      "impact": "medium",
+      "evidence_quality": "fair",
+      "original_score": 77,
+      "confidence": 0.6
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "Financial backing indicates readiness for expansion or product development.",
+    "The absence of recent products may suggest a need to monitor their innovation pipeline.",
+    "The fintech sector remains competitive; new initiatives may be crucial for maintaining market relevance."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Potential volatility in funding sources could impact future growth.",
+    "Limited recent product initiatives indicate a potential gap in innovation.",
+    "Dependence on a few high-confidence sources for funding news may skew the perception of overall stability."
+  ]
+}

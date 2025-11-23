@@ -1,0 +1,34 @@
+{
+  "score": 100,
+  "reason": "Rewaa exhibits very high intent primarily driven by a strong funding round and a new product launch. The funding signal comes from 54 pieces of evidence, suggesting robust financial backing for growth. The new product launch signal indicates a commitment to innovation and market expansion. Both signals are relevant and have maintained good recency, contributing to a strategic focus.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.405555555555556
+    },
+    {
+      "signal": "new_product",
+      "score": 85,
+      "impact": "high",
+      "evidence_quality": "excellent",
+      "original_score": 85,
+      "confidence": 0.7
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "Rewaa is positioned well for market expansion with substantial funding.",
+    "The new product launch suggests a proactive approach to addressing market needs.",
+    "Strong backing from reputable investors may increase Rewaa's visibility in the fintech space."
+  ],
+  "timing_recommendation": "immediate",
+  "risk_factors": [
+    "Potential over-reliance on single funding sources.",
+    "Market competition may impact the success of the new product.",
+    "Evidence quality from some news sources varies, impacting reliability."
+  ]
+}

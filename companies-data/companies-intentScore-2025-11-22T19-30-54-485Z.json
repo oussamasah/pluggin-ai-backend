@@ -1,0 +1,32 @@
+{
+  "score": 81,
+  "reason": "Squadio shows a very high intent primarily due to its recent funding round, which is a strong signal indicating capital availability and growth aspirations. However, the lack of new product launches reduces the overall score slightly despite the overwhelming strength of the funding signal.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.43333333333333324
+    },
+    {
+      "signal": "new_product",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "The recent funding round positions Squadio for expansion but the absence of a new product suggests potential gaps in market offering.",
+    "Focus on product development may enhance competitive position in the fintech industry."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Reliance on a single funding signal without complementary product development.",
+    "Market environment uncertainties may impact future fundraising or expansion efforts."
+  ]
+}

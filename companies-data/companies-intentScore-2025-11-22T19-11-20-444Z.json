@@ -1,0 +1,32 @@
+{
+  "score": 79,
+  "reason": "The intent score has been derived from strong evidence of a recent new product launch, coupled with historical data from the funding round. The funding round was substantial but not recent enough to contribute significantly to current intent. Overall signals indicate a strong momentum in product development, indicating growth readiness.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 60,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 84,
+      "confidence": 0.6394736842105264
+    },
+    {
+      "signal": "new_product",
+      "score": 95,
+      "impact": "high",
+      "evidence_quality": "fair",
+      "original_score": 95,
+      "confidence": 0.5333333333333333
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "Zid is actively expanding its product offerings, which could attract new customers and market segments.",
+    "The substantial funding round indicates financial stability, which allows for scaling operations and product development."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "The lag in sourcing recent evidence for the funding round may indicate potential market volatility or shifting investor interest.",
+    "Quality of some evidence is moderate, which may affect the reliability of current insights."
+  ]
+}

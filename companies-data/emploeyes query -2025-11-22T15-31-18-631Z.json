@@ -1,0 +1,30 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "is_working": 1
+          }
+        },
+        {
+          "term": {
+            "active_experience_company_id": 95495435
+          }
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "match_phrase": {
+                  "active_experience_title": "CEO"
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        }
+      ]
+    }
+  }
+}

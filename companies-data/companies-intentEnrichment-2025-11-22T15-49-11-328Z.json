@@ -1,0 +1,224 @@
+{
+  "company": "Mozn",
+  "website": "https://www.mozn.sa",
+  "analysis_date": "2025-11-22",
+  "requested_signals": [
+    "new_funding_round",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcXcyY2ZoZm5rMkFPaFBZWWpleWxSNlR1OHR0S0VsWA?oc=5",
+          "date": "Fri, 04 Feb 2022 08:00:00 GMT",
+          "summary": "Saudi AI startup Mozn raises $10 million Series A funding - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcX...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNR1JoZkhOV0pCWERlYkdVQVd1TUdEcXhicWRxZDZjZS1BU29wbURCbklWZ2NfVXFtVGVVeVVtZnl6MzkyUVFPOE9KdTJ3ZEJmUEJBbG90dV9WaG0xQmRyeEZNdndja3NrMGhLWXh4M2pfbzhMdDdqdmxDYzQ5N0YweEdZTW8wWnExNmhsYVdnY3MxRkExWEF6UlV3dWI1eXFLTzBSdjU1bXRFd2twT2kwTmZ1c2d5cXBFMU9YWjZOZ1E3ZTNuMEdRTFZmNDhsSnhaMDg5TDgxdmNzcjJDV0ZfeFp2eXk3UQ?oc=5",
+          "date": "Fri, 30 Jul 2021 07:00:00 GMT",
+          "summary": "Egypt: Crackdown on human rights defenders continues amid ongoing “foreign funding” investigation - Amnesty International - <a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxNR1JoZkhOV0pCWERlYkdVQVd1TUdEcXhicWRxZDZjZS1BU29wbURCbklWZ2NfVXFtVGVVeVVtZnl6MzkyUVFPOE9KdTJ3ZEJmUEJBbG90dV9WaG0xQmRyeEZNdndja3NrMGhLWXh4M2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk1Uek5zLXA5Y0xPZnJzZ1F5enhYZHI1OVNvSXVRMEFKYmJDMms?oc=5",
+          "date": "Mon, 07 Feb 2022 08:00:00 GMT",
+          "summary": "Khwarizmi Ventures closes $70 million fund to invest in MENAP startups - waya.media - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUEtuRFR0WldPVlF6SXA5OEVLMVlad1V5Nkp6WFVkWTNjOUxUZldvZDZKY2pDNVltZnlTT2NsY08yOW02UU9vNWhNRUU5SGpSUVFzWjU2djdGRlVscERNNEF6dTE5aDMzaU9SS0hxYkRoSXFRODFFX2hyaTRtT092clJPYUs1eDRWWlFWWTVXalRLbTJRN0FBVnVn?oc=5",
+          "date": "Wed, 10 Sep 2025 07:00:00 GMT",
+          "summary": "VentureSouq closes second fintech fund backed by major regional LPs - Wamda - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNUEtuRFR0WldPVlF6SXA5OEVLMVlad1V5Nkp6WFVkWTNjOUxUZldvZDZKY2pDNVltZnlTT2NsY08yOW02UU9vNWhNRUU5SGpSUVFzWjU2djdGRlVscERNNEF6dTE5aDMzaU9SS0hxYk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcXcyY2ZoZm5rMkFPaFBZWWpleWxSNlR1OHR0S0VsWA?oc=5",
+          "date": "Fri, 04 Feb 2022 08:00:00 GMT",
+          "summary": "Saudi AI startup Mozn raises $10 million Series A funding - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcX...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk1Uek5zLXA5Y0xPZnJzZ1F5enhYZHI1OVNvSXVRMEFKYmJDMms?oc=5",
+          "date": "Mon, 07 Feb 2022 08:00:00 GMT",
+          "summary": "Khwarizmi Ventures closes $70 million fund to invest in MENAP startups - waya.media - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE43Y2tMbS1Ma1p5RWEwTmhIRS1FWXVWOGJOQnE3X0E3SW5CdTEyS3lqWXJnNm5QSndUb0t0anlLMS11aEprQzRqZ2ZYbnNwUHBSc2d1YTZwODlTdFNW?oc=5",
+          "date": "Sun, 06 Feb 2022 08:00:00 GMT",
+          "summary": "Taffi Raises $2M Seed Funding - waya.media - <a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE43Y2tMbS1Ma1p5RWEwTmhIRS1FWXVWOGJOQnE3X0E3SW5CdTEyS3lqWXJnNm5QSndUb0t0anlLMS11aEprQzRqZ2ZYbnNwUHBSc2d1YTZwODlTdFNW?oc=5\" target=\"_blank\">Taf...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNN19DRWFocTFJcnpZWnRFZE1qTDd2aktXQlhNck12eF9QQnkyYmhMM3lDbHFIVEtiUDg4OTJyaE01OTF2YkM3Ykc3NlhtaExaVmxTOHVUMnREQnU2V3hLUno1Q1VKYnhOUkpYRjBGQUktZlRicjE2bFNkOGN6SmRXMUxrMA?oc=5",
+          "date": "Mon, 07 Feb 2022 08:00:00 GMT",
+          "summary": "Get to Know MENA’s Top Startup Funding Rounds this January - waya.media - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNN19DRWFocTFJcnpZWnRFZE1qTDd2aktXQlhNck12eF9QQnkyYmhMM3lDbHFIVEtiUDg4OTJyaE01OTF2YkM3Ykc3NlhtaExaVmxTOHVUMnREQnU2V3hLUno1Q1VKYnhOUkpYRjBGQU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5qTmpCRkFXU2doMThLbE9KV21hMVJmeGZQV1pId1k1UGV0TjRPSlpmVUw2bFkzVzI1MnlUYVFtUFdCWHUzZzBlMWRfOWZVNm9pSkVuWUNYaFVscHo0VDFxajRUSGxjUFRPdUs2c1NFMDY?oc=5",
+          "date": "Mon, 13 Feb 2023 08:00:00 GMT",
+          "summary": "Carefer raises $2.9m in a pre-Series A round - waya.media - <a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5qTmpCRkFXU2doMThLbE9KV21hMVJmeGZQV1pId1k1UGV0TjRPSlpmVUw2bFkzVzI1MnlUYVFtUFdCWHUzZzBlMWRfOWZVNm9pSkVuWUNYaFVscHo0VDFxajRUSGxjUFRPdUs2c1NFMD...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcXcyY2ZoZm5rMkFPaFBZWWpleWxSNlR1OHR0S0VsWA?oc=5",
+          "date": "Fri, 04 Feb 2022 08:00:00 GMT",
+          "summary": "Saudi AI startup Mozn raises $10 million Series A funding - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcX...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk1Uek5zLXA5Y0xPZnJzZ1F5enhYZHI1OVNvSXVRMEFKYmJDMms?oc=5",
+          "date": "Mon, 07 Feb 2022 08:00:00 GMT",
+          "summary": "Khwarizmi Ventures closes $70 million fund to invest in MENAP startups - waya.media - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE43Y2tMbS1Ma1p5RWEwTmhIRS1FWXVWOGJOQnE3X0E3SW5CdTEyS3lqWXJnNm5QSndUb0t0anlLMS11aEprQzRqZ2ZYbnNwUHBSc2d1YTZwODlTdFNW?oc=5",
+          "date": "Sun, 06 Feb 2022 08:00:00 GMT",
+          "summary": "Taffi Raises $2M Seed Funding - waya.media - <a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE43Y2tMbS1Ma1p5RWEwTmhIRS1FWXVWOGJOQnE3X0E3SW5CdTEyS3lqWXJnNm5QSndUb0t0anlLMS11aEprQzRqZ2ZYbnNwUHBSc2d1YTZwODlTdFNW?oc=5\" target=\"_blank\">Taf...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5qTmpCRkFXU2doMThLbE9KV21hMVJmeGZQV1pId1k1UGV0TjRPSlpmVUw2bFkzVzI1MnlUYVFtUFdCWHUzZzBlMWRfOWZVNm9pSkVuWUNYaFVscHo0VDFxajRUSGxjUFRPdUs2c1NFMDY?oc=5",
+          "date": "Mon, 13 Feb 2023 08:00:00 GMT",
+          "summary": "Carefer raises $2.9m in a pre-Series A round - waya.media - <a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5qTmpCRkFXU2doMThLbE9KV21hMVJmeGZQV1pId1k1UGV0TjRPSlpmVUw2bFkzVzI1MnlUYVFtUFdCWHUzZzBlMWRfOWZVNm9pSkVuWUNYaFVscHo0VDFxajRUSGxjUFRPdUs2c1NFMD...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNN19DRWFocTFJcnpZWnRFZE1qTDd2aktXQlhNck12eF9QQnkyYmhMM3lDbHFIVEtiUDg4OTJyaE01OTF2YkM3Ykc3NlhtaExaVmxTOHVUMnREQnU2V3hLUno1Q1VKYnhOUkpYRjBGQUktZlRicjE2bFNkOGN6SmRXMUxrMA?oc=5",
+          "date": "Mon, 07 Feb 2022 08:00:00 GMT",
+          "summary": "Get to Know MENA’s Top Startup Funding Rounds this January - waya.media - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNN19DRWFocTFJcnpZWnRFZE1qTDd2aktXQlhNck12eF9QQnkyYmhMM3lDbHFIVEtiUDg4OTJyaE01OTF2YkM3Ykc3NlhtaExaVmxTOHVUMnREQnU2V3hLUno1Q1VKYnhOUkpYRjBGQU...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUEtuRFR0WldPVlF6SXA5OEVLMVlad1V5Nkp6WFVkWTNjOUxUZldvZDZKY2pDNVltZnlTT2NsY08yOW02UU9vNWhNRUU5SGpSUVFzWjU2djdGRlVscERNNEF6dTE5aDMzaU9SS0hxYkRoSXFRODFFX2hyaTRtT092clJPYUs1eDRWWlFWWTVXalRLbTJRN0FBVnVn?oc=5",
+          "date": "Wed, 10 Sep 2025 07:00:00 GMT",
+          "summary": "VentureSouq closes second fintech fund backed by major regional LPs - Wamda - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNUEtuRFR0WldPVlF6SXA5OEVLMVlad1V5Nkp6WFVkWTNjOUxUZldvZDZKY2pDNVltZnlTT2NsY08yOW02UU9vNWhNRUU5SGpSUVFzWjU2djdGRlVscERNNEF6dTE5aDMzaU9SS0hxYk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcXcyY2ZoZm5rMkFPaFBZWWpleWxSNlR1OHR0S0VsWA?oc=5",
+          "date": "Fri, 04 Feb 2022 08:00:00 GMT",
+          "summary": "Saudi AI startup Mozn raises $10 million Series A funding - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcX...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk1Uek5zLXA5Y0xPZnJzZ1F5enhYZHI1OVNvSXVRMEFKYmJDMms?oc=5",
+          "date": "Mon, 07 Feb 2022 08:00:00 GMT",
+          "summary": "Khwarizmi Ventures closes $70 million fund to invest in MENAP startups - waya.media - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPbFFXcXNLWkk1UklNM3k2Rmh5X1plNENqNEpCQ1dmc3o3c1lrLXBDZThoZXNmMWJwQTNQTXV4cmhjb19KMUtqS19qUXNZY0wtdG8yZGVGS1VFMHpMX01MZE9Ja0FUWmh5eDg2cXhLRk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcXcyY2ZoZm5rMkFPaFBZWWpleWxSNlR1OHR0S0VsWA?oc=5",
+          "date": "Fri, 04 Feb 2022 08:00:00 GMT",
+          "summary": "Saudi AI startup Mozn raises $10 million Series A funding - Wamda - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPTFEtWk5DWWZIWnpEN0xvS0pmdUR4czUxQUlfdFNPYWlmT2FtRk45dlhud1BDM1NoMzFKbEl4a3Y3V3JNWWpyOVR2YlhzRGFfbzZsY0R2TXNCOTFIaVk2VHZET1A3Ql9Rd3B0LTRQcX...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUEtuRFR0WldPVlF6SXA5OEVLMVlad1V5Nkp6WFVkWTNjOUxUZldvZDZKY2pDNVltZnlTT2NsY08yOW02UU9vNWhNRUU5SGpSUVFzWjU2djdGRlVscERNNEF6dTE5aDMzaU9SS0hxYkRoSXFRODFFX2hyaTRtT092clJPYUs1eDRWWlFWWTVXalRLbTJRN0FBVnVn?oc=5",
+          "date": "Wed, 10 Sep 2025 07:00:00 GMT",
+          "summary": "VentureSouq closes second fintech fund backed by major regional LPs - Wamda - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNUEtuRFR0WldPVlF6SXA5OEVLMVlad1V5Nkp6WFVkWTNjOUxUZldvZDZKY2pDNVltZnlTT2NsY08yOW02UU9vNWhNRUU5SGpSUVFzWjU2djdGRlVscERNNEF6dTE5aDMzaU9SS0hxYk...",
+          "confidence": 0.3,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 19 relevant evidence pieces"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQazFtUjA1ejlSTEZ0VzNiZWNWaExScEIzekNZeGdfNUFKeWY4ZW5idjN0T1Y3SDhMTi1DQl9teTRHbFJQMGJmRFdVZ1hPdkZFOVdCZ2htOVBOdlloUjVjeHNkd2V0dTBxVDBLTDJ0RzRRb2tFdXd6SWFkLVZWV09xZ0VWU1NCZWE3T1FkWEFHRC1aUG9KQkdJdjhnZHRIV1lGRldIUFRGdU94U1JWYVFWbDlmWU5xMFZJYUl1dmMwVjV4bWJ1R21WalVYcmIxa3c1N0J1ME9NT2EyQmpPcFBMNVpoc3ZGMFljNEhSRFN1NlgzOG5VOW1LcVNfdExrUHVDaGRwMDczbk0?oc=5",
+          "date": "Thu, 21 Jun 2018 07:00:00 GMT",
+          "summary": "Release on bail of Ms. Mozn Hassan, woman human rights defender,… - World Organisation Against Torture | OMCT - <a href=\"https://news.google.com/rss/articles/CBMiiAJBVV95cUxQazFtUjA1ejlSTEZ0VzNiZWNWaExScEIzekNZeGdfNUFKeWY4ZW5idjN0T1Y3SDhMTi1DQl9teTRHbFJQMGJmRFdVZ1hPdkZFOVdCZ2htOVBOdlloUjVjeHNkd2V0dTBxVDBLTDJ0Rz...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTWZ6SVRHLUZ3SEYxVWN1MWJZVzJaZEN1WExoX0hZcHNrZnR3Q05BMzE1Si1FS3VZS0ktZDFfQVVRWVRNUE9RQWFzWUJzX0Y3dkliZ2RlTmJaU2tWWU44eEUwRllvNWYxeWdyWWRMM29sWFBxeEtuT3RrNGpZYVgtQ0xnSTBud1hCY0VvYU50LXNyd0tyU1c4NjhpZ1hRYnJ4dmJsci1YdDFxQVdiVUdtYU56UTZpX1FqdDlnMk9ZTXBwYjNLVkpF?oc=5",
+          "date": "Thu, 11 May 2023 07:00:00 GMT",
+          "summary": "Nigerian-founded Salad launches to support employees’ financial health. 2 other story and a trivia - Ripples Nigeria - <a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPTWZ6SVRHLUZ3SEYxVWN1MWJZVzJaZEN1WExoX0hZcHNrZnR3Q05BMzE1Si1FS3VZS0ktZDFfQVVRWVRNUE9RQWFzWUJzX0Y3dkliZ2RlTmJaU2tWWU44eEUwRllvNWYxeWdyWWRMM2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZzA5aE84eFhDc1ROUGFjbVVVYm9RbXRseTJYLVowNVN5TGR1MzIyMjZXZm1aMUdLcngtWDVGeENCWkRvaFlhM0xadlFzTTNweEZsNG9JSTVaNTk4TkliT0l5cXNZS3NLQ0Q4WWJPN2Q1U2RrbHNMcHlEVDNMaG1ZTjFkWFZlenJNYWM4VFdnWWRPWV85UDhCaA?oc=5",
+          "date": "Wed, 22 May 2024 07:00:00 GMT",
+          "summary": "Announcing the launch of the MENA Gender Clinic - Right Livelihood - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPZzA5aE84eFhDc1ROUGFjbVVVYm9RbXRseTJYLVowNVN5TGR1MzIyMjZXZm1aMUdLcngtWDVGeENCWkRvaFlhM0xadlFzTTNweEZsNG9JSTVaNTk4TkliT0l5cXNZS3NLQ0Q4WWJPN2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTWZ6SVRHLUZ3SEYxVWN1MWJZVzJaZEN1WExoX0hZcHNrZnR3Q05BMzE1Si1FS3VZS0ktZDFfQVVRWVRNUE9RQWFzWUJzX0Y3dkliZ2RlTmJaU2tWWU44eEUwRllvNWYxeWdyWWRMM29sWFBxeEtuT3RrNGpZYVgtQ0xnSTBud1hCY0VvYU50LXNyd0tyU1c4NjhpZ1hRYnJ4dmJsci1YdDFxQVdiVUdtYU56UTZpX1FqdDlnMk9ZTXBwYjNLVkpF?oc=5",
+          "date": "Thu, 11 May 2023 07:00:00 GMT",
+          "summary": "Nigerian-founded Salad launches to support employees’ financial health. 2 other story and a trivia - Ripples Nigeria - <a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPTWZ6SVRHLUZ3SEYxVWN1MWJZVzJaZEN1WExoX0hZcHNrZnR3Q05BMzE1Si1FS3VZS0ktZDFfQVVRWVRNUE9RQWFzWUJzX0Y3dkliZ2RlTmJaU2tWWU44eEUwRllvNWYxeWdyWWRMM2...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 4 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 2,
+    "signals_without_evidence": 0,
+    "confidence_score": 0.5842105263157895,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

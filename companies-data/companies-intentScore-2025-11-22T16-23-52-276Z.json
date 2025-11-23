@@ -1,0 +1,33 @@
+{
+  "score": 40,
+  "reason": "The analysis revealed one strong signal regarding a new funding round; however, all evidence is outdated and lacks recency, impacting the overall intent score significantly. The absence of new product information further limits the scoring. Overall confidence is medium due to the quality of evidence being average.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 60,
+      "impact": "high",
+      "evidence_quality": "fair",
+      "original_score": 83,
+      "confidence": 0.5999999999999999
+    },
+    {
+      "signal": "new_product",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "Potential to leverage fundraising for product development is present, but lacking actual product launches limits strategic maneuvers.",
+    "Focus on strengthening product offerings to align with capital raised."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Outdated funding news may indicate a decline in momentum or interest.",
+    "Lack of new product development signals potential stagnation in market growth.",
+    "Limited data sources may not provide a comprehensive view of Labayh's current activities."
+  ]
+}

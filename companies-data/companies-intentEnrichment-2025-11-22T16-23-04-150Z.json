@@ -1,0 +1,47 @@
+{
+  "company": "Menaitech",
+  "website": "https://www.menaitech.com",
+  "analysis_date": "2025-11-22",
+  "requested_signals": [
+    "new_funding_round",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVG5weUNneGdEMzU2cU1JYmt4Ul9ydkVHcWhBUXFsMV9lZk5lVFI4Z29teGRkYkZfaUVSVW5OenkxT05ncmZDNXRoVU5TVlpGWVNRd3dva05SRW1kenBHVXZULU1TODB4OXhjTC1WdmdySmNra19MRFhsUjVyRl80bjNUTWpNZmVjOHVpNE5FNFA?oc=5",
+          "date": "Tue, 20 Jul 2010 07:00:00 GMT",
+          "summary": "JorAMCo Launches MenaITech’s Self Services System - albawaba.com - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNVG5weUNneGdEMzU2cU1JYmt4Ul9ydkVHcWhBUXFsMV9lZk5lVFI4Z29teGRkYkZfaUVSVW5OenkxT05ncmZDNXRoVU5TVlpGWVNRd3dva05SRW1kenBHVXZULU1TODB4OXhjTC1Wdm...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 1 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 1,
+    "signals_without_evidence": 1,
+    "confidence_score": 0.7,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

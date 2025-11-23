@@ -1,0 +1,480 @@
+{
+  "company": "Rewaa",
+  "website": "https://www.rewaatech.com",
+  "analysis_date": "2025-11-22",
+  "requested_signals": [
+    "new_funding_round",
+    "new_product"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQTcteXpXU2I3OEhhM3ZmRDBuSFR5RGgtT0Y2dy04dklueXR2ZlRIeVVpajYxbWx1NEE?oc=5",
+          "date": "Tue, 29 Aug 2023 07:00:00 GMT",
+          "summary": "Rewaa closes $27 million Series A round led by Wa'ed - Wamda - <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQdThhMkVPenJfUE9SU290MmJ5elZCb0x1aExfR2VLdlhIaTlURFZYY2NNRU4yU3dZQWJNcTdTSlc5WXlKNC1DVi1JbFVGOU4xN2ZlY0pVMVdKQUM2M0w4dXVpcndNLXFraWNWdDZmOXYwVk40MUNPdlRBWlRyRm94RDQxSG9mNEFPRTBibUhKcl9VTFFIMUFDbW0xVUhkLTVGUXE3SnZZZ2RFaFJDbUdnX2Zsb1JmTjBQeDkyVGFOTC1zdW9IRnEwTEQ2UmF1NFlTRG9jZjJIMjVLZGU3ajlweTBqVkMtTkFOSDZhcnZiRmM3aGdhaXJtczA2M3YtdnJoejdNVEVUbi1EUlRZUkExLTR6bjlKNTBNZlI5STQ5bFVfemQzS0hPZjNZdUdVOUtV?oc=5",
+          "date": "Wed, 30 Aug 2023 07:00:00 GMT",
+          "summary": "Wa’ed Ventures Leads a US $27 Million Series A Round for Rewaa, with Participation from STC’s CIF, the Largest Series A Round for a SaaS Company in MENA - Business Wire - <a href=\"https://news.google.com/rss/articles/CBMisAJBVV95cUxQdThhMkVPenJfUE9SU290MmJ5elZCb0x1aExfR2VLdlhIaTlURFZYY2NNRU4yU3dZQWJNcTdTSlc5WXlKNC1DVi1JbFVGOU4xN2ZlY0pVMVdKQUM2M0w4dXVpcndNLXFraWNWdDZmOX...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV95cUxNWUhuSkxqbG43eHkzT2M1VlpNMFdJeHZxOEVESWNyNDNBOWZNS05HRGhRSWdSejZ4dlFqYms1YmE3Yno1TUIxdlEzV2xETVdJajNaVkpHeENJc2RzSmJhS3g4aVRoSUQ3VERydm8yVzQ?oc=5",
+          "date": "Thu, 17 Oct 2024 07:00:00 GMT",
+          "summary": "SVC invests $15 million in Vision Ventures’ second $90 million Saqr Fund II - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FTnZuRjZLTHFHZkFYeW9pSnFocW93MHBjVnMtRkVBb1oyVEVqNld6TXRfdmhWZHBTekxjMnFQc2JwNGx2UldtNHQ3STRGZEhwSTc0eWZ0bXZockhYeXJXYg?oc=5",
+          "date": "Sat, 02 Sep 2023 07:00:00 GMT",
+          "summary": "MENA startups continue to demonstrate growth with $76m raised in August - arabnews.jp - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FTnZuRjZLTHFHZkFYeW9pSnFocW93MHBjVnMtRkVBb1oyVEVqNld6TXRfdmhWZHBTekxjMnFQc2JwNGx2UldtNHQ3STRGZEhwSTc0eWZ0bXZockhYeXJXYg?oc=5\" target=\"_blan...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQlk3VHdGZHFQVWF0U0lSNDV5alE3OUR5NEZ6Q0RSNEFsLXpiZmduR1ljX1NRb3RxeTBYTHlSZ1ZwYm0ybllad1YyMUdJeTNwd0NqdFllSm5sUVpxcWxfcWFUcWJXWDN1OG1xeHZDbzBMWk1FVFN6aFR2UVMzV1FUYzVZYTlWYkxRa1RzbHNweHRTbVhzOXNBUk9ZRTFFTGV2ZGROT3JGZTk5djlESWt3?oc=5",
+          "date": "Thu, 31 Aug 2023 05:15:34 GMT",
+          "summary": "Rewaa’s US$27 million Series A: Leading a New Era in Retail Inventory Solutions - SME10X - <a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPQlk3VHdGZHFQVWF0U0lSNDV5alE3OUR5NEZ6Q0RSNEFsLXpiZmduR1ljX1NRb3RxeTBYTHlSZ1ZwYm0ybllad1YyMUdJeTNwd0NqdFllSm5sUVpxcWxfcWFUcWJXWDN1OG1xeHZDbz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPRUN0WUh4Szh3VzRacFRqYW41QmNsdVUtOFBTSmNsbm9BV09HVnJrWGg2dXZSd05IMDBHVWk2ZWw0aktQSlVCSUczVHRaRkxiYWN6czI5Nkp4emt4MWVTUVd5RWlZWmtwQ09jZkZOOFZBZndDMVNuZUJCbHlmNmJfUFZIMVdRZVFlWktRUkkxbGJ6UU1KdDZ6MkItVVNIUHNTS1ZuSFlpa2gxVXpyS203ZTRKRk1jM1VHU1A3b24zR2ZPUTJjcXJFbVA0TGM?oc=5",
+          "date": "Wed, 16 Apr 2025 07:00:00 GMT",
+          "summary": "Steele Family Foundation funding empowers co-op students to transform refugee education - University of Waterloo - <a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPRUN0WUh4Szh3VzRacFRqYW41QmNsdVUtOFBTSmNsbm9BV09HVnJrWGg2dXZSd05IMDBHVWk2ZWw0aktQSlVCSUczVHRaRkxiYWN6czI5Nkp4emt4MWVTUVd5RWlZWmtwQ09jZkZOOF...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUEZVUXc1Q09MZzhGdXBHS0lUejVIVTFJWTlVTDgyRVRTbEhUXzZWTUNRT1paSl9wNDBRcmZQbkRwNngzdmtJeXEyZkRhU3hfTVhtb2xxWWN3LUk4MmY5NXdoZ3M4YWNQRFZtZkE?oc=5",
+          "date": "Mon, 28 Aug 2023 07:00:00 GMT",
+          "summary": "Saudi Aramco’s venture capital arm leads $27m round for tech start-up Rewaa - thenationalnews.com - <a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQTcteXpXU2I3OEhhM3ZmRDBuSFR5RGgtT0Y2dy04dklueXR2ZlRIeVVpajYxbWx1NEE?oc=5",
+          "date": "Tue, 29 Aug 2023 07:00:00 GMT",
+          "summary": "Rewaa closes $27 million Series A round led by Wa'ed - Wamda - <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQdThhMkVPenJfUE9SU290MmJ5elZCb0x1aExfR2VLdlhIaTlURFZYY2NNRU4yU3dZQWJNcTdTSlc5WXlKNC1DVi1JbFVGOU4xN2ZlY0pVMVdKQUM2M0w4dXVpcndNLXFraWNWdDZmOXYwVk40MUNPdlRBWlRyRm94RDQxSG9mNEFPRTBibUhKcl9VTFFIMUFDbW0xVUhkLTVGUXE3SnZZZ2RFaFJDbUdnX2Zsb1JmTjBQeDkyVGFOTC1zdW9IRnEwTEQ2UmF1NFlTRG9jZjJIMjVLZGU3ajlweTBqVkMtTkFOSDZhcnZiRmM3aGdhaXJtczA2M3YtdnJoejdNVEVUbi1EUlRZUkExLTR6bjlKNTBNZlI5STQ5bFVfemQzS0hPZjNZdUdVOUtV?oc=5",
+          "date": "Wed, 30 Aug 2023 07:00:00 GMT",
+          "summary": "Wa’ed Ventures Leads a US $27 Million Series A Round for Rewaa, with Participation from STC’s CIF, the Largest Series A Round for a SaaS Company in MENA - Business Wire - <a href=\"https://news.google.com/rss/articles/CBMisAJBVV95cUxQdThhMkVPenJfUE9SU290MmJ5elZCb0x1aExfR2VLdlhIaTlURFZYY2NNRU4yU3dZQWJNcTdTSlc5WXlKNC1DVi1JbFVGOU4xN2ZlY0pVMVdKQUM2M0w4dXVpcndNLXFraWNWdDZmOX...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FTnZuRjZLTHFHZkFYeW9pSnFocW93MHBjVnMtRkVBb1oyVEVqNld6TXRfdmhWZHBTekxjMnFQc2JwNGx2UldtNHQ3STRGZEhwSTc0eWZ0bXZockhYeXJXYg?oc=5",
+          "date": "Sat, 02 Sep 2023 07:00:00 GMT",
+          "summary": "MENA startups continue to demonstrate growth with $76m raised in August - arabnews.jp - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FTnZuRjZLTHFHZkFYeW9pSnFocW93MHBjVnMtRkVBb1oyVEVqNld6TXRfdmhWZHBTekxjMnFQc2JwNGx2UldtNHQ3STRGZEhwSTc0eWZ0bXZockhYeXJXYg?oc=5\" target=\"_blan...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUEZVUXc1Q09MZzhGdXBHS0lUejVIVTFJWTlVTDgyRVRTbEhUXzZWTUNRT1paSl9wNDBRcmZQbkRwNngzdmtJeXEyZkRhU3hfTVhtb2xxWWN3LUk4MmY5NXdoZ3M4YWNQRFZtZkE?oc=5",
+          "date": "Mon, 28 Aug 2023 07:00:00 GMT",
+          "summary": "Saudi Aramco’s venture capital arm leads $27m round for tech start-up Rewaa - thenationalnews.com - <a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdnE5azhLYVAtVXZSVUt0cUwzOUM2cUttRFlvSFFFdTFkY0x3OF9LYnVmajVlMmV0NURrQW9ILWZRSXV5V2tBcXZ1MzRLVGkyc0c1TG9meVNRb0NkTUpHRDFZYmpBX1I2cmc1dzRNSFIwbTJzQTVnRDNYMDY1bWRRNGRNSzhRSDdKb2RrcG1jRjN6V2Y5?oc=5",
+          "date": "Sun, 10 Sep 2023 07:00:00 GMT",
+          "summary": "UAE-based Web3 gaming platform GAM3S.GG closes US$2m seed funding round - waya.media - <a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNdnE5azhLYVAtVXZSVUt0cUwzOUM2cUttRFlvSFFFdTFkY0x3OF9LYnVmajVlMmV0NURrQW9ILWZRSXV5V2tBcXZ1MzRLVGkyc0c1TG9meVNRb0NkTUpHRDFZYmpBX1I2cmc1dzRNSF...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV95cUxNWUhuSkxqbG43eHkzT2M1VlpNMFdJeHZxOEVESWNyNDNBOWZNS05HRGhRSWdSejZ4dlFqYms1YmE3Yno1TUIxdlEzV2xETVdJajNaVkpHeENJc2RzSmJhS3g4aVRoSUQ3VERydm8yVzQ?oc=5",
+          "date": "Thu, 17 Oct 2024 07:00:00 GMT",
+          "summary": "SVC invests $15 million in Vision Ventures’ second $90 million Saqr Fund II - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcmVXQ01wNnpkdU9qN2NqNEtoTXFvTk1kLWR1by1namh5eWRRdjctZy1KTE1KclJySVU1RWVwcTVPMnY5cU90N25pTkN5SW9fNmxSXzdQWmdpQk16ckFMUm1jbEd5Q1ZsbzViajJRZEZqZWJSSnFXdEs3Z1JhZ0dPdTJCYlY4Y1pTUmRuNDhFMFZQUzVHZUcybg?oc=5",
+          "date": "Thu, 07 Sep 2023 07:00:00 GMT",
+          "summary": "Mubadala Capital signs MoU with Brazil’s Petrobras for biofuel exploration - waya.media - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNcmVXQ01wNnpkdU9qN2NqNEtoTXFvTk1kLWR1by1namh5eWRRdjctZy1KTE1KclJySVU1RWVwcTVPMnY5cU90N25pTkN5SW9fNmxSXzdQWmdpQk16ckFMUm1jbEd5Q1ZsbzViajJRZE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQdThhMkVPenJfUE9SU290MmJ5elZCb0x1aExfR2VLdlhIaTlURFZYY2NNRU4yU3dZQWJNcTdTSlc5WXlKNC1DVi1JbFVGOU4xN2ZlY0pVMVdKQUM2M0w4dXVpcndNLXFraWNWdDZmOXYwVk40MUNPdlRBWlRyRm94RDQxSG9mNEFPRTBibUhKcl9VTFFIMUFDbW0xVUhkLTVGUXE3SnZZZ2RFaFJDbUdnX2Zsb1JmTjBQeDkyVGFOTC1zdW9IRnEwTEQ2UmF1NFlTRG9jZjJIMjVLZGU3ajlweTBqVkMtTkFOSDZhcnZiRmM3aGdhaXJtczA2M3YtdnJoejdNVEVUbi1EUlRZUkExLTR6bjlKNTBNZlI5STQ5bFVfemQzS0hPZjNZdUdVOUtV?oc=5",
+          "date": "Wed, 30 Aug 2023 07:00:00 GMT",
+          "summary": "Wa’ed Ventures Leads a US $27 Million Series A Round for Rewaa, with Participation from STC’s CIF, the Largest Series A Round for a SaaS Company in MENA - Business Wire - <a href=\"https://news.google.com/rss/articles/CBMisAJBVV95cUxQdThhMkVPenJfUE9SU290MmJ5elZCb0x1aExfR2VLdlhIaTlURFZYY2NNRU4yU3dZQWJNcTdTSlc5WXlKNC1DVi1JbFVGOU4xN2ZlY0pVMVdKQUM2M0w4dXVpcndNLXFraWNWdDZmOX...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQTcteXpXU2I3OEhhM3ZmRDBuSFR5RGgtT0Y2dy04dklueXR2ZlRIeVVpajYxbWx1NEE?oc=5",
+          "date": "Tue, 29 Aug 2023 07:00:00 GMT",
+          "summary": "Rewaa closes $27 million Series A round led by Wa'ed - Wamda - <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQlk3VHdGZHFQVWF0U0lSNDV5alE3OUR5NEZ6Q0RSNEFsLXpiZmduR1ljX1NRb3RxeTBYTHlSZ1ZwYm0ybllad1YyMUdJeTNwd0NqdFllSm5sUVpxcWxfcWFUcWJXWDN1OG1xeHZDbzBMWk1FVFN6aFR2UVMzV1FUYzVZYTlWYkxRa1RzbHNweHRTbVhzOXNBUk9ZRTFFTGV2ZGROT3JGZTk5djlESWt3?oc=5",
+          "date": "Thu, 31 Aug 2023 05:15:34 GMT",
+          "summary": "Rewaa’s US$27 million Series A: Leading a New Era in Retail Inventory Solutions - SME10X - <a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPQlk3VHdGZHFQVWF0U0lSNDV5alE3OUR5NEZ6Q0RSNEFsLXpiZmduR1ljX1NRb3RxeTBYTHlSZ1ZwYm0ybllad1YyMUdJeTNwd0NqdFllSm5sUVpxcWxfcWFUcWJXWDN1OG1xeHZDbz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FTnZuRjZLTHFHZkFYeW9pSnFocW93MHBjVnMtRkVBb1oyVEVqNld6TXRfdmhWZHBTekxjMnFQc2JwNGx2UldtNHQ3STRGZEhwSTc0eWZ0bXZockhYeXJXYg?oc=5",
+          "date": "Sat, 02 Sep 2023 07:00:00 GMT",
+          "summary": "MENA startups continue to demonstrate growth with $76m raised in August - arabnews.jp - <a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FTnZuRjZLTHFHZkFYeW9pSnFocW93MHBjVnMtRkVBb1oyVEVqNld6TXRfdmhWZHBTekxjMnFQc2JwNGx2UldtNHQ3STRGZEhwSTc0eWZ0bXZockhYeXJXYg?oc=5\" target=\"_blan...",
+          "confidence": 0.7,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUEZVUXc1Q09MZzhGdXBHS0lUejVIVTFJWTlVTDgyRVRTbEhUXzZWTUNRT1paSl9wNDBRcmZQbkRwNngzdmtJeXEyZkRhU3hfTVhtb2xxWWN3LUk4MmY5NXdoZ3M4YWNQRFZtZkE?oc=5",
+          "date": "Mon, 28 Aug 2023 07:00:00 GMT",
+          "summary": "Saudi Aramco’s venture capital arm leads $27m round for tech start-up Rewaa - thenationalnews.com - <a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcmVXQ01wNnpkdU9qN2NqNEtoTXFvTk1kLWR1by1namh5eWRRdjctZy1KTE1KclJySVU1RWVwcTVPMnY5cU90N25pTkN5SW9fNmxSXzdQWmdpQk16ckFMUm1jbEd5Q1ZsbzViajJRZEZqZWJSSnFXdEs3Z1JhZ0dPdTJCYlY4Y1pTUmRuNDhFMFZQUzVHZUcybg?oc=5",
+          "date": "Thu, 07 Sep 2023 07:00:00 GMT",
+          "summary": "Mubadala Capital signs MoU with Brazil’s Petrobras for biofuel exploration - waya.media - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNcmVXQ01wNnpkdU9qN2NqNEtoTXFvTk1kLWR1by1namh5eWRRdjctZy1KTE1KclJySVU1RWVwcTVPMnY5cU90N25pTkN5SW9fNmxSXzdQWmdpQk16ckFMUm1jbEd5Q1ZsbzViajJRZE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV95cUxNWUhuSkxqbG43eHkzT2M1VlpNMFdJeHZxOEVESWNyNDNBOWZNS05HRGhRSWdSejZ4dlFqYms1YmE3Yno1TUIxdlEzV2xETVdJajNaVkpHeENJc2RzSmJhS3g4aVRoSUQ3VERydm8yVzQ?oc=5",
+          "date": "Thu, 17 Oct 2024 07:00:00 GMT",
+          "summary": "SVC invests $15 million in Vision Ventures’ second $90 million Saqr Fund II - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPd21ZMzMxMlFwOFU0S2dPSVlQbXRDRDlpT01JV0tWZ3pwYmlHWl9WTnJlclhGYllxX0NkcEN0Z0xVeUREaVlPWUxkcmZxa3pCYlU0N21ITS1pckg4eWV6ajlkeGhyQ3ZoWDJmSWQxSWdIY0FHcHAxTmRSVE5vd0JieTlZMnR0dFM5NTB6ZHlyeWRqWFV1cmo5TWR3?oc=5",
+          "date": "Mon, 17 Nov 2025 02:10:00 GMT",
+          "summary": "What to Know Before Getting Capital One Venture - NerdWallet - <a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPd21ZMzMxMlFwOFU0S2dPSVlQbXRDRDlpT01JV0tWZ3pwYmlHWl9WTnJlclhGYllxX0NkcEN0Z0xVeUREaVlPWUxkcmZxa3pCYlU0N21ITS1pckg4eWV6ajlkeGhyQ3ZoWDJmSWQxSW...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1ySE00S2EzZDE3S3VjUlkxZDRZZkdzRHl3TkpUTHlLbnFjM09fMVJPaVlhR1JKWTZFdEZuQnJldV85SC12T1VMbXhvS21tbzZHX3REVnhWZThnYUNnWDNmcFBxWTlUbzdSeldWUmF2NlhKamZOR1hyQmRjLUw?oc=5",
+          "date": "Tue, 18 Nov 2025 22:30:00 GMT",
+          "summary": "Capital One airline and hotel transfer partners: How to maximize your miles - The Points Guy - <a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE1ySE00S2EzZDE3S3VjUlkxZDRZZkdzRHl3TkpUTHlLbnFjM09fMVJPaVlhR1JKWTZFdEZuQnJldV85SC12T1VMbXhvS21tbzZHX3REVnhWZThnYUNnWDNmcFBxWTlUbzdSeldWUmF2Nl...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPREE1VlN5LXdwSjhnN0t0ZFhCZEVadnNlOFBITVY3ZmxzWEdpa29OeEVmem1jbkRZYnNZMVRvQTFCb2dLRjFPOGlSajJTellqSEVuSnp3bE9ZOE9GdndESHNlbHQyRGNIYVB3S2JSeDIyX1RZM1hIbTkyVUluMDlWR3BQTHROVkR0X2NMbTBEcWNNcDdoVVE?oc=5",
+          "date": "Wed, 12 Nov 2025 08:00:00 GMT",
+          "summary": "How to Make the Most of Your Capital One Venture Rewards Card - NerdWallet - <a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPREE1VlN5LXdwSjhnN0t0ZFhCZEVadnNlOFBITVY3ZmxzWEdpa29OeEVmem1jbkRZYnNZMVRvQTFCb2dLRjFPOGlSajJTellqSEVuSnp3bE9ZOE9GdndESHNlbHQyRGNIYVB3S2JSeD...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOXzRIazZvVk5kbG83Q0xLNjN0THVoSHItTXdYQ0w2cHJYb0M3UjNqc0RXSmh3TlE3NDlqYTFSSkdIeGF1WEhpU1V6d1pYZUJRQW16NEJqTDFTZzZsT0FIeFcxYW1KZjhQZEV6eXNldXdlZy1NQ1d2N2hFVk5YcUktQVZXdXRTaVBIWENQLTFJN2ZSZkNoZy1TWA?oc=5",
+          "date": "Mon, 18 Aug 2025 07:00:00 GMT",
+          "summary": "How I Pair The Capital One Venture X and Savor - Bankrate - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOXzRIazZvVk5kbG83Q0xLNjN0THVoSHItTXdYQ0w2cHJYb0M3UjNqc0RXSmh3TlE3NDlqYTFSSkdIeGF1WEhpU1V6d1pYZUJRQW16NEJqTDFTZzZsT0FIeFcxYW1KZjhQZEV6eXNldX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYi1OeGZwYXdwdmVlUmdFOTNwTVpBQ09hTTMxQ2xmR3hFT0JlbzlHTWhQemlZSDdTYzRiVGNYbjNhM1ZtTVZSYndSR19kb1F2Ui1jUEI5MnpKUFJ2OWJjb19VeGZ4UkQySC05R3cxcmswR29ZRGVUb0dPYzdXc0o3R0t0VFUxdkh2M1pWTHpMdWRqTm9Bb01JeVBHeDhnRkgybGfSAacBQVVfeXFMTW85aGhCVWluYTVFS0tTUVc5OGFfUk4tazM0bVoxZ2NtdkFRNTNUTFNJcjR6QmJ0Wnh6Ylh5NXdZRFdKN3BaQ2h2aUJSY3VncTFuRWp4dkdhRVVYZE4xNjhKVDlBSXl4bEttTWl4bG5LZUQ2YmV2WnJkWXFHUVFWZC1JbFBXOUJJcUR0RXdtWTktRmUtMG0tbzI5aG95WUZDSzByeGpfeWs?oc=5",
+          "date": "Tue, 15 Jul 2025 07:00:00 GMT",
+          "summary": "American Express Gold Card vs Capital One Venture Rewards Credit Card: Which is the best for your needs? - CNBC - <a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQYi1OeGZwYXdwdmVlUmdFOTNwTVpBQ09hTTMxQ2xmR3hFT0JlbzlHTWhQemlZSDdTYzRiVGNYbjNhM1ZtTVZSYndSR19kb1F2Ui1jUEI5MnpKUFJ2OWJjb19VeGZ4UkQySC05R3cxcm...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOaFNHY0NFUC1USnlhNmcyS2xoM29UWkVaVzFTSzdtR0NPVFJkMFVmdjlJSGwtc3A4NUFfWDFFZGRORU5LNkcwTjRVemVZeFl6b0pBOVI2bF9wdkZ3djg0SjdlOEZEZl8yTkszZ1JzZXpmdmpZYWRKbzJmX21hTkMxOGxBZHphbTJpM3NlRDA3Njd4R3o5ZHVDT2trYnIxY3FadWs4dlZ6ZDA1dzlkaTNLYnRjbGpHY1k?oc=5",
+          "date": "Mon, 13 Oct 2025 07:00:00 GMT",
+          "summary": "Capital One Venture Card’s Welcome Bonus History: 2020 to Today - Upgraded Points - <a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOaFNHY0NFUC1USnlhNmcyS2xoM29UWkVaVzFTSzdtR0NPVFJkMFVmdjlJSGwtc3A4NUFfWDFFZGRORU5LNkcwTjRVemVZeFl6b0pBOVI2bF9wdkZ3djg0SjdlOEZEZl8yTkszZ1JzZX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWnZtMDNpdmtJaWJhSks1ckpTcEp5UEFKM0ZOOUtGX01PZVd6S1VhbW9GR0pFUGMwSmEtYzRtRVZhRVkzQkxnXzl6TWZKeXlmcHBBRnVXd0tVN0dCV05kYVFQdXIxODZOZU9rcDMyREFEM0gyRjVweTR5OXNPZDQ3OVJ6bUNYb2l6M2R1Q1lsdWk2WWh2VHVQSDV5Ni1UTUh0VFJGSXNNeXpHd21kRDQwcG5LZTlqdw?oc=5",
+          "date": "Tue, 08 Jul 2025 07:00:00 GMT",
+          "summary": "Capital One VentureOne Rewards review: A beginner travel card that covers the basics - Yahoo Finance - <a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPWnZtMDNpdmtJaWJhSks1ckpTcEp5UEFKM0ZOOUtGX01PZVd6S1VhbW9GR0pFUGMwSmEtYzRtRVZhRVkzQkxnXzl6TWZKeXlmcHBBRnVXd0tVN0dCV05kYVFQdXIxODZOZU9rcDMyRE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBfVEdXTm5FWktmZVJCbHJxYTNPb1pjN2l3S19SbXJNSW5kNFZaZjhDa0VhaWNMSG5CNkpzQkJvQ3RpVXdFeFppay1wck5GaHg1RlBVeEQ3eVlfVVVmOWE4aGp4UTV5dzZIMHF0bTlrcHlIZW1JVUFVa2l6WQ?oc=5",
+          "date": "Sun, 10 Aug 2025 07:00:00 GMT",
+          "summary": "Capital One Venture Rewards vs. Capital One Venture X: Worth the extra $300? - The Points Guy - <a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBfVEdXTm5FWktmZVJCbHJxYTNPb1pjN2l3S19SbXJNSW5kNFZaZjhDa0VhaWNMSG5CNkpzQkJvQ3RpVXdFeFppay1wck5GaHg1RlBVeEQ3eVlfVVVmOWE4aGp4UTV5dzZIMHF0bTlrcH...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9FQlBBQTc4NWt2dWFnbXZ4ME1xY3U3V2ZtWmpzWnNnNWFHQWJhaEhDMTNwUk5ndXNOMEt5MnBpTC1FZV9TZWQwa1JFVEVwMWVRSVYwWndxX3RfMExDdElkT3czdTZYeklBV2YyOGJ3V3VtOVlrLXB2SUJHbzVtd28?oc=5",
+          "date": "Wed, 12 Nov 2025 08:00:00 GMT",
+          "summary": "12 Benefits of the Capital One Venture - NerdWallet - <a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE9FQlBBQTc4NWt2dWFnbXZ4ME1xY3U3V2ZtWmpzWnNnNWFHQWJhaEhDMTNwUk5ndXNOMEt5MnBpTC1FZV9TZWQwa1JFVEVwMWVRSVYwWndxX3RfMExDdElkT3czdTZYeklBV2YyOGJ3V3...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSkFkemFtWHpWVVJwS3F3ejNRQXJYRXllQVFIVlRsVnJTS041QUUxQ0ZzWEh5NjJFWGltYnE2ZF9MRDcyVy1aY3Vpcnhzc3AwbWlqZGM3ZWFIYnhmNWVGM21yS1lxZWFJd2ticzJQbXJmbk5EbE5hMmNfZm1Hb0lIaGdyenppZnFoNnJQM2lUQ3BhNmc?oc=5",
+          "date": "Wed, 26 Feb 2025 08:00:00 GMT",
+          "summary": "How To Use The Venture X To Maximize Rewards - Forbes - <a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQSkFkemFtWHpWVVJwS3F3ejNRQXJYRXllQVFIVlRsVnJTS041QUUxQ0ZzWEh5NjJFWGltYnE2ZF9MRDcyVy1aY3Vpcnhzc3AwbWlqZGM3ZWFIYnhmNWVGM21yS1lxZWFJd2ticzJQbX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbThBWmlMZWNPOFhNbUVqTm1neWpTM1BZTnZZNk5YUlRzV3lwbVdHWXV4TlZzNW40dFJyRlE1cGxHMVQxR2JUcVpfSEMtWGl1cFA5LUZjV1Njb0VpZEVNOXFCaFhQbDdKbEp3VzFwbUkzaE1aQ3B0c0JncURKRXEyOUU5SnVJcmxacTNBNnd3?oc=5",
+          "date": "Wed, 19 Feb 2025 08:00:00 GMT",
+          "summary": "Capital One Venture Card Review: 2x Miles & More - One Mile at a Time - <a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQbThBWmlMZWNPOFhNbUVqTm1neWpTM1BZTnZZNk5YUlRzV3lwbVdHWXV4TlZzNW40dFJyRlE1cGxHMVQxR2JUcVpfSEMtWGl1cFA5LUZjV1Njb0VpZEVNOXFCaFhQbDdKbEp3VzFwbU...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XV1lUVDdQNkNIbldrS2N1Mm1BT1JCWXA3aUJTdW9CRlMyLVBuUmdnMDhVLVBpM1VwQjFrT2s4TmpROGk2cVRlTlB3WFMtRmRzVUZJR1VDZFlrcmhyM0w4UzRTcjhYaWV3U3kyT25ZUdIBdEFVX3lxTE1jbDhMUFBDeUI0MC1JbTJINXRuSGZaRDFXaGxyR2o0c0x3VTdLN0NwWFJjUXNaQjFJTzg0MDVaVTFnSXhWQ0pINldoVTBXMkt6WVE4TnY5bzIwOF9FRUt4MHVMZEFJTmdPN0pqdnUxa2JPc1Bo?oc=5",
+          "date": "Tue, 18 Feb 2025 20:22:08 GMT",
+          "summary": "Limited-time: Earn $1,000 in bonus travel rewards with the Capital One Venture Rewards Card - CNBC - <a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE9XV1lUVDdQNkNIbldrS2N1Mm1BT1JCWXA3aUJTdW9CRlMyLVBuUmdnMDhVLVBpM1VwQjFrT2s4TmpROGk2cVRlTlB3WFMtRmRzVUZJR1VDZFlrcmhyM0w4UzRTcjhYaWV3U3kyT25ZUd...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNWVlGVWZJZ2tlVDlVVDM4Y053TGR0dl9Ub2FNWVdQcmRJcVczNUw0OHMzcXJFVUxQR3J1UFJXOTRmYlZNUkltWWdYVWVlWFlEQ2NDSFV4am16ekFYVW5zY2diMWhoLU11Y0g1LUFIWi12aGEwalZPQWxYeFBqeWt5R1NIV2YyaHhZMEk5ckVmR290b1lqUTdQSmdfZGJGaG11ZGF3d1JNVlZSa0FM?oc=5",
+          "date": "Thu, 26 Jun 2025 07:00:00 GMT",
+          "summary": "Capital One Venture vs. Capital One VentureOne Rewards Credit Card - Bankrate - <a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNWVlGVWZJZ2tlVDlVVDM4Y053TGR0dl9Ub2FNWVdQcmRJcVczNUw0OHMzcXJFVUxQR3J1UFJXOTRmYlZNUkltWWdYVWVlWFlEQ2NDSFV4am16ekFYVW5zY2diMWhoLU11Y0g1LUFIWi...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWE5pc084enlnTkNKNmhFSnh3d0c3MHRfOTdOdTVOWWJOR2tkTzluQjZjOW9PTW1iVVlXRi1yNHFZMWJNU2pjamdtZEtlZklwQ1RNUG9HcVpOUUtMU1YwNDJKUmYtR3hfeW9sUDJWZ2VPbnVQRWg4MlAtcDZsbDUzY3pVT1FldktOYzFlZG5iM3pyQXlXN0FtS083Umd2bWVWXzYyb0F1dUtwZVpNbzE4OE16SW53bWN3dzFWZXRucWxqdUU?oc=5",
+          "date": "Thu, 01 Aug 2024 07:00:00 GMT",
+          "summary": "Bilt Rewards Secures $150 Million in Additional Funding Led by Ontario Teachers' Pension Plan Growth - Bilt Rewards - <a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWE5pc084enlnTkNKNmhFSnh3d0c3MHRfOTdOdTVOWWJOR2tkTzluQjZjOW9PTW1iVVlXRi1yNHFZMWJNU2pjamdtZEtlZklwQ1RNUG9HcVpOUUtMU1YwNDJKUmYtR3hfeW9sUDJWZ2...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPYjNBTnZQbkozRlRFQk43cmY0UDlkMU9uNHNRVGh4bUNONVJjUWV1MnBKdktiTlpYSjFCeFo4SlFnTkhkVmt6LTRfS0c2R1JBMVpnNGlQNE5TRTRLSjB2dDJwLWJaWlBqUWVKdi1xX1dvcUpwaW5pbW5qRzdnMVpjdHdKVEdjM2tpUjFtSQ?oc=5",
+          "date": "Fri, 08 Aug 2025 07:00:00 GMT",
+          "summary": "Maximize Capital One miles: Book travel and redeem rewards - The Points Guy - <a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPYjNBTnZQbkozRlRFQk43cmY0UDlkMU9uNHNRVGh4bUNONVJjUWV1MnBKdktiTlpYSjFCeFo4SlFnTkhkVmt6LTRfS0c2R1JBMVpnNGlQNE5TRTRLSjB2dDJwLWJaWlBqUWVKdi1xX1...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1kZDJRYXNOYVNTWkE4bDFjNmJUS3JLd0NTQ3NGdmo1enhtenpYQXRFNldFSDZReVRsWWNKU2pBcVIwNm56elFlN2xqZU1kalNHTDNfWFBKUk45MjMtdDNkSDlhRGVrbTZMbm8xUk9WN0paZkUzQm5zcEpGcw?oc=5",
+          "date": "Wed, 12 Nov 2025 08:00:00 GMT",
+          "summary": "Capital One Miles: How to Earn and Use Them - NerdWallet - <a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1kZDJRYXNOYVNTWkE4bDFjNmJUS3JLd0NTQ3NGdmo1enhtenpYQXRFNldFSDZReVRsWWNKU2pBcVIwNm56elFlN2xqZU1kalNHTDNfWFBKUk45MjMtdDNkSDlhRGVrbTZMbm8xUk9WN0...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9Ha0J6MFA4Q2FMWHNGU21TRUdsUlJzQndMOFlidFpBLUV4MDVEWjZlZi1uZExsREdpTXJDQUpDVHJ6dGRBSkh6UVhLdWZNQUlXM0l2N0FvTUd6bC1rdVpjRm9tMGs2ZEJKcVFtQVZMNGJDUQ?oc=5",
+          "date": "Tue, 30 Sep 2025 07:00:00 GMT",
+          "summary": "Capital One Travel: How to book flights, hotels and more - The Points Guy - <a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE9Ha0J6MFA4Q2FMWHNGU21TRUdsUlJzQndMOFlidFpBLUV4MDVEWjZlZi1uZExsREdpTXJDQUpDVHJ6dGRBSkh6UVhLdWZNQUlXM0l2N0FvTUd6bC1rdVpjRm9tMGs2ZEJKcVFtQVZMNG...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJZ3R6emZWaHN3MmNoZUczY2dYdE52YmxVX3EtMU1NVjU1VHJJX0ZwVGU5NzhYTmZaRElEeUxaTDd1NnFTUjc1eDVfc21FSGxLODRkb3ZxTWtrXzhPdXhFZ3FncjRMQlpQVWZub04taUtzSTl5d2c?oc=5",
+          "date": "Fri, 14 Nov 2025 14:43:00 GMT",
+          "summary": "Capital One Venture Review: Easy Earnings, Effortless Redemptions - NerdWallet - <a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBJZ3R6emZWaHN3MmNoZUczY2dYdE52YmxVX3EtMU1NVjU1VHJJX0ZwVGU5NzhYTmZaRElEeUxaTDd1NnFTUjc1eDVfc21FSGxLODRkb3ZxTWtrXzhPdXhFZ3FncjRMQlpQVWZub04taU...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE92dTVnUHFfRWpnV1JnQzUyZTBuVnlfZlkzZnhheWxBYUNLTlUzVl9rR2EzaThZYS0wZnZJTGluMEhlcU9MTEhiTUpqOVNsMWM2RUtyRXRXZzZuLUxLNk82bW9aV2dBY0p1T1VGQjZTaHFqLXZTSXVKYUJCLWk?oc=5",
+          "date": "Mon, 05 May 2025 07:00:00 GMT",
+          "summary": "Current welcome offer on the Capital One Venture Rewards card - The Points Guy - <a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE92dTVnUHFfRWpnV1JnQzUyZTBuVnlfZlkzZnhheWxBYUNLTlUzVl9rR2EzaThZYS0wZnZJTGluMEhlcU9MTEhiTUpqOVNsMWM2RUtyRXRXZzZuLUxLNk82bW9aV2dBY0p1T1VGQjZTaH...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5BLWNoQUczbm5IaXQ4M0RZenROOW1paWs4VU5WWTBzME54c3l2LWx6SHpGNjltUld2RzYwZEp5Y3NYMHYxRC1YQ2hvZG1xYU4xNlo5SUhJcFZGc3V6c29reWhDQjFmbm5ERmJ6Qk9CNnRNWDB0aVZtNlpR?oc=5",
+          "date": "Thu, 13 Nov 2025 08:00:00 GMT",
+          "summary": "Capital One VentureOne Review: Value Sooner Rather Than Later - NerdWallet - <a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5BLWNoQUczbm5IaXQ4M0RZenROOW1paWs4VU5WWTBzME54c3l2LWx6SHpGNjltUld2RzYwZEp5Y3NYMHYxRC1YQ2hvZG1xYU4xNlo5SUhJcFZGc3V6c29reWhDQjFmbm5ERmJ6Qk9CNn...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQTcteXpXU2I3OEhhM3ZmRDBuSFR5RGgtT0Y2dy04dklueXR2ZlRIeVVpajYxbWx1NEE?oc=5",
+          "date": "Tue, 29 Aug 2023 07:00:00 GMT",
+          "summary": "Rewaa closes $27 million Series A round led by Wa'ed - Wamda - <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUEZVUXc1Q09MZzhGdXBHS0lUejVIVTFJWTlVTDgyRVRTbEhUXzZWTUNRT1paSl9wNDBRcmZQbkRwNngzdmtJeXEyZkRhU3hfTVhtb2xxWWN3LUk4MmY5NXdoZ3M4YWNQRFZtZkE?oc=5",
+          "date": "Mon, 28 Aug 2023 07:00:00 GMT",
+          "summary": "Saudi Aramco’s venture capital arm leads $27m round for tech start-up Rewaa - thenationalnews.com - <a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRlFGN3I3Zk53VE82WWZYUUJRa3hTaGw0U0xvMXltNnNxeXdxNng4V2xkNEI4N0NDbGtMcll0UXNpbWYxMHQxNXkxa3otQzREODBJMFR1QnVIVW1WYTNCcjBNRUtiUFhhVFBEQW9wdHlwaXo2WVpQUnJwZ1pYd3FxM0k2VnpSbWFJNU9LSW5oclNOeTJiVEtNVVUtQjIzWU5zSVY1cGhYNF9VcWR3MWowVHhHVVduTjh5OUxR?oc=5",
+          "date": "Sat, 03 Aug 2024 07:00:00 GMT",
+          "summary": "Bilt Rewards Raises $150 Million to Turn Rent Payments Into Travel: Startup Funding Roundup - Skift - <a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRlFGN3I3Zk53VE82WWZYUUJRa3hTaGw0U0xvMXltNnNxeXdxNng4V2xkNEI4N0NDbGtMcll0UXNpbWYxMHQxNXkxa3otQzREODBJMFR1QnVIVW1WYTNCcjBNRUtiUFhhVFBEQW9wdH...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1ZelREYUliV0s1UGVFYkZJNUI0SFFQTXE1b3ZMMXF6TUVBbmx4Q1pqbzR6YUZOY2xYbXlkamhKZXJOaG81U3RsZFlNWnpsYkh4RGd2VWtmbGFsc1ExcnhyLTlBRVluMmFLRk44bUZTblR6a2NhMV9odnQ1Rlp0Tnc?oc=5",
+          "date": "Wed, 05 Jun 2024 22:23:02 GMT",
+          "summary": "7 types of purchases you should make with your Capital One Venture Rewards card - The Points Guy - <a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1ZelREYUliV0s1UGVFYkZJNUI0SFFQTXE1b3ZMMXF6TUVBbmx4Q1pqbzR6YUZOY2xYbXlkamhKZXJOaG81U3RsZFlNWnpsYkh4RGd2VWtmbGFsc1ExcnhyLTlBRVluMmFLRk44bUZTbl...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRDAwaWhWU0NiZDV3ZTFteVFfbF9OcERFM1JqV0I3M193U2JzSXQ2WkVDQUFfZklaVWpTSno3NmlHUHIwZzNsa3U1RjBoYkxUWEE0ejN5akRmdzNHZWFWUWFpUTNtWUhzSHV4UWcwTG1BUGVYSjh6Q3MxcVZRZFctS1NBclk?oc=5",
+          "date": "Wed, 05 Jun 2024 21:21:06 GMT",
+          "summary": "Capital One Venture Rewards Credit Card review: Full details - The Points Guy - <a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNRDAwaWhWU0NiZDV3ZTFteVFfbF9OcERFM1JqV0I3M193U2JzSXQ2WkVDQUFfZklaVWpTSno3NmlHUHIwZzNsa3U1RjBoYkxUWEE0ejN5akRmdzNHZWFWUWFpUTNtWUhzSHV4UWcwTG...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQlk3VHdGZHFQVWF0U0lSNDV5alE3OUR5NEZ6Q0RSNEFsLXpiZmduR1ljX1NRb3RxeTBYTHlSZ1ZwYm0ybllad1YyMUdJeTNwd0NqdFllSm5sUVpxcWxfcWFUcWJXWDN1OG1xeHZDbzBMWk1FVFN6aFR2UVMzV1FUYzVZYTlWYkxRa1RzbHNweHRTbVhzOXNBUk9ZRTFFTGV2ZGROT3JGZTk5djlESWt3?oc=5",
+          "date": "Thu, 31 Aug 2023 05:15:34 GMT",
+          "summary": "Rewaa’s US$27 million Series A: Leading a New Era in Retail Inventory Solutions - SME10X - <a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPQlk3VHdGZHFQVWF0U0lSNDV5alE3OUR5NEZ6Q0RSNEFsLXpiZmduR1ljX1NRb3RxeTBYTHlSZ1ZwYm0ybllad1YyMUdJeTNwd0NqdFllSm5sUVpxcWxfcWFUcWJXWDN1OG1xeHZDbz...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPd2xRUUNVOFZlU3RTcnFHQVJzeERPU2dLUFJuTXVJNzVSTDJBQjBSbVNiRmVmTXk1ZEplcW1HMFc5aFhNQ3lkZmh1RzY4SVNaZEQwb3hDcF9zeU90M29TSHZZQkF5amxSM0FRaHdGODI3aVF6b1pfRDJzNEs1NENtN0tCSdIBiAFBVV95cUxPNDI2S040SE02R2dTLXRSeGZqbkxheWJKNktteHU4bnlIcHlXQjIwNS1nSWNMazcyOGpZVXcwTkRfMnpKZ3NNOWtYaUlpTExpWE0wY1BvRG5Ha0pKMVhRYmU4NkE2ZFVYeXg2ckdORjdzaHcwaHJnS0pRcXFqckdDMjR1b0hTbENn?oc=5",
+          "date": "Sat, 21 Jan 2023 14:17:46 GMT",
+          "summary": "Capital One Venture Rewards Credit Card vs. Capital One Venture X: Which is the better travel rewards card for you? - CNBC - <a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPd2xRUUNVOFZlU3RTcnFHQVJzeERPU2dLUFJuTXVJNzVSTDJBQjBSbVNiRmVmTXk1ZEplcW1HMFc5aFhNQ3lkZmh1RzY4SVNaZEQwb3hDcF9zeU90M29TSHZZQkF5amxSM0FRaHdGOD...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxObU54NzlTRTVIdlFMVVRocWhBMm4tMjZuYjZkai10X21jcjZGclU0aGRyLXExN0FWSnZrRnZEbzlRMTROcjQ3VDFaQXRYemRwRndKaU05TG04cnVMTGNyaGkzZW9nMVpFLUhFVWZURmNGaVkybmh1eFB3elRyc0JZVg?oc=5",
+          "date": "Mon, 22 Jan 2024 08:00:00 GMT",
+          "summary": "How To Transfer, Combine, & Share Capital One Miles - One Mile at a Time - <a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxObU54NzlTRTVIdlFMVVRocWhBMm4tMjZuYjZkai10X21jcjZGclU0aGRyLXExN0FWSnZrRnZEbzlRMTROcjQ3VDFaQXRYemRwRndKaU05TG04cnVMTGNyaGkzZW9nMVpFLUhFVWZURm...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBrN29VanQxQ3UxbW01ZFpLYzNOSFdJcnNfRmNuX09Wa3dQdW44dzdsSDZpSWp4bmp3NUVSamV2RllEUGt6RHZwdTV6WFVFUC0tYlZqWFZZN05ReTAxRlhQQ3FDR0wtQQ?oc=5",
+          "date": "Fri, 14 Jun 2019 19:49:53 GMT",
+          "summary": "Capital One Venture Rewards Credit Card Review [2025]: How I Optimize Rewards and Benefits - FinanceBuzz - <a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTFBrN29VanQxQ3UxbW01ZFpLYzNOSFdJcnNfRmNuX09Wa3dQdW44dzdsSDZpSWp4bmp3NUVSamV2RllEUGt6RHZwdTV6WFVFUC0tYlZqWFZZN05ReTAxRlhQQ3FDR0wtQQ?oc=5\" targe...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZ3B5Nnk0cV9NcGFzUzZXOF9BdTRvbHNTYnV3QktWeXFOR05HVk1hcGFnMlFna2x2d3dTLTJkUGRtTkxwOEhxbmRlMnJ1OTlsWW9lc1VfSGloaGFjSmRDTzBOeXM0R0syUDJLT3BFdnpUdEhTakxTMm4yYkMwcHdyZzJqbjhfX3JfTDhON09BVjRCRE1ZMmNEYg?oc=5",
+          "date": "Thu, 27 Feb 2025 08:00:00 GMT",
+          "summary": "Capital One Venture Rewards Card: Best Ever 100K Referral offer (targeted) - Frequent Miler - <a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOZ3B5Nnk0cV9NcGFzUzZXOF9BdTRvbHNTYnV3QktWeXFOR05HVk1hcGFnMlFna2x2d3dTLTJkUGRtTkxwOEhxbmRlMnJ1OTlsWW9lc1VfSGloaGFjSmRDTzBOeXM0R0syUDJLT3BFdn...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQTcteXpXU2I3OEhhM3ZmRDBuSFR5RGgtT0Y2dy04dklueXR2ZlRIeVVpajYxbWx1NEE?oc=5",
+          "date": "Tue, 29 Aug 2023 07:00:00 GMT",
+          "summary": "Rewaa closes $27 million Series A round led by Wa'ed - Wamda - <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPazZ0NWlid1RVOXZUT0E0bU9scjljTVpPUWdMeURfVGUyMzhwdzI2UUY0Sl80OG12Sks5amJOSWpNaTVHUHhyOHl0ZmFnVFZvWnZoNkhTelpMY240Zzkxb1MwNHF1NFdxd080aVpOQT...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUEZVUXc1Q09MZzhGdXBHS0lUejVIVTFJWTlVTDgyRVRTbEhUXzZWTUNRT1paSl9wNDBRcmZQbkRwNngzdmtJeXEyZkRhU3hfTVhtb2xxWWN3LUk4MmY5NXdoZ3M4YWNQRFZtZkE?oc=5",
+          "date": "Mon, 28 Aug 2023 07:00:00 GMT",
+          "summary": "Saudi Aramco’s venture capital arm leads $27m round for tech start-up Rewaa - thenationalnews.com - <a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPOFNVNWNYTUphSUZ3UHhvcW53d0lLNmRYRW94SS1ySDV0bFpoaTZkUElJeDd6R0ZZbU5pTnE4THZubnZlbE9oVGVLX2RNSjY5d2F4QV9uYXk1MUVkYVkyR1dfQ1lJRlZaTGFtLXBVUE...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV95cUxNWUhuSkxqbG43eHkzT2M1VlpNMFdJeHZxOEVESWNyNDNBOWZNS05HRGhRSWdSejZ4dlFqYms1YmE3Yno1TUIxdlEzV2xETVdJajNaVkpHeENJc2RzSmJhS3g4aVRoSUQ3VERydm8yVzQ?oc=5",
+          "date": "Thu, 17 Oct 2024 07:00:00 GMT",
+          "summary": "SVC invests $15 million in Vision Ventures’ second $90 million Saqr Fund II - MENAbytes - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFBxdVBuNmFQTGRmTjZsV3N5djVSRzZsTlh4Q1JHV0pyTG9oNjhENjBfZU1xdEZxdXY0OHh0YWwxa0o0c0NfeWd2RzI4SmhmN1lsQURfNG1GNjVoZkdoaEhrN2lmbVlKc052dWfSAW9BVV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 54 relevant evidence pieces"
+    },
+    {
+      "signal": "new_product",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa0o4S1pyeUhoTlVyd1gzaW00elBwN1VJOW1LTkhEMmlEYWdRWlRxUWJkci1DTkZVbkl0VVc5b1BJNFdtRy0xYjUtTWFNaDI0ako2WVZNS2FqX1VUWjdxT2RVZHE2eVRqRHpLV0llWHM1d1hyOWdOQXlEaHRkM0VFM0hGN1A3bUlocklNOXNSOURpdmlpSU1pWWR1QjFuVXg0QnFjYjVvWno?oc=5",
+          "date": "Mon, 03 Nov 2025 17:49:35 GMT",
+          "summary": "ReWa, Greenville Tech launch ReWa Scholars Program - Greenville Business Magazine - <a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa0o4S1pyeUhoTlVyd1gzaW00elBwN1VJOW1LTkhEMmlEYWdRWlRxUWJkci1DTkZVbkl0VVc5b1BJNFdtRy0xYjUtTWFNaDI0ako2WVZNS2FqX1VUWjdxT2RVZHE2eVRqRHpLV0llWH...",
+          "confidence": 0.7,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 1 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 2,
+    "signals_without_evidence": 0,
+    "confidence_score": 0.552777777777778,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

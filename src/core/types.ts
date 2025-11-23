@@ -151,28 +151,33 @@ export interface Company {
   }
   
   export interface ICPConfig {
-    modelName: string;
-    industries: string[];
-    geographies: string[];
-    employeeRange: string;
-    annualRevenue: string;
-    mustHaveTech: string[];
-    mustHaveCompliance: string[];
-    mustHaveMotion: string;
-    excludedIndustries: string[];
-    excludedGeographies: string[];
-    excludedTechnologies: string[];
-    excludedSizeRange: string;
-    buyingTriggers: any[];
-    targetPersonas: string[];
+    modelName: string
+    industries: string[]
+    geographies: string[]
+    employeeRange: string
+    annualRevenue: string
+    mustHaveTech: string[]
+    mustHaveCompliance: string[]
+    mustHaveMotion: string
+    excludedIndustries: string[]
+    excludedGeographies: string[]
+    excludedTechnologies: string[]
+    excludedSizeRange: string
+    buyingTriggers: string[]
+    targetPersonas: string[]
     scoringWeights: {
-      firmographic: number;
-      technographic: number;
-      intent: number;
-      behavioral: number;
-    };
+      firmographic: number
+      technographic: number
+      intent: number
+      behavioral: number
+    }
+    productSettings: {
+      productNames: string[]
+      valueProposition: string
+      uniqueSellingPoints: string[]
+      painPointsSolved: string[]
+    }
   }
-  
   export interface WorkflowProgress {
     sessionId: string;
     status: SearchStatus;

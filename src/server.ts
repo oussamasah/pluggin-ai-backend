@@ -4,13 +4,15 @@ import websocket from '@fastify/websocket';
 import cors from '@fastify/cors';
 import { WorkflowController } from './api/WorkflowController.js';
 import { config } from './core/config.js';
-import { wsManager } from './websocket/WebSocketManager.js'; // Import singleton
+import { wsManager } from './websocket/WebSocketManager.js';
 import { SessionController } from './api/SessionController.js';
 import { ICPModelController } from './api/ICPModelController.js';
 import { ICPConfigController } from './api/ICPConfigController.js';
 import { AnalysisController } from './api/AnalysisController.js';
 import { IntentController } from './api/IntentController.js';
 import { CompaniesController } from './api/CompaniesController.js';
+import { connectDatabase, disconnectDatabase } from './database/connection.js';
+
 const fastify = Fastify({
   logger: {
     level: 'error',
@@ -38,13 +40,14 @@ async function setupServer() {
   await fastify.register(ICPConfigController, { prefix: '/api' });
   
   await fastify.register(CompaniesController, { prefix: '/api' });
+  
   fastify.get('/health', async () => {
     return { status: 'ok', timestamp: new Date().toISOString() };
   });
 
   fastify.get('/', async () => {
     return { 
-      message: 'Workflow API Server', 
+      message: 'Workflow API Server new mongodb', 
       version: '1.0.0',
       endpoints: {
         health: '/health',
@@ -101,12 +104,18 @@ async function setupServer() {
 
 const start = async () => {
   try {
+    // Connect to MongoDB before starting server
+    console.log('🔌 Connecting to MongoDB...');
+    await connectDatabase(process.env.MONGODB_URI!);
+    console.log('✅ MongoDB connected successfully');
+
     await setupServer();
     await fastify.listen({ port: config.PORT, host: '0.0.0.0' });
     console.log(`🚀 Server running on http://localhost:${config.PORT}`);
     console.log(`🎯 WebSocketManager instance ready:`, wsManager.debugInstance());
   } catch (err) {
     fastify.log.error(err);
+    console.error('❌ Failed to start server:', err);
     process.exit(1);
   }
 };
@@ -114,15 +123,28 @@ const start = async () => {
 process.on('SIGINT', async () => {
   console.log('\n🛑 Shutting down server gracefully...');
   wsManager.destroy();
+  await disconnectDatabase();
   await fastify.close();
+  console.log('✅ Server shut down complete');
   process.exit(0);
 });
 
 process.on('SIGTERM', async () => {
   console.log('\n🛑 Shutting down server gracefully...');
   wsManager.destroy();
+  await disconnectDatabase();
   await fastify.close();
+  console.log('✅ Server shut down complete');
   process.exit(0);
+});
+
+// Handle uncaught errors
+process.on('unhandledRejection', async (reason, promise) => {
+  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
+  wsManager.destroy();
+  await disconnectDatabase();
+  await fastify.close();
+  process.exit(1);
 });
 
 start();

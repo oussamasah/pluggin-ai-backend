@@ -22,7 +22,6 @@
         "@fastify/redis": "^5.0.0",
         "@fastify/websocket": "^8.2.0",
         "@google/genai": "^1.29.1",
-    
         "@modelcontextprotocol/sdk": "^1.20.1",
         "@perplexity-ai/perplexity_ai": "^0.16.0",
         "@supabase/supabase-js": "^2.38.0",
@@ -34,6 +33,7 @@
         "fastify": "^4.24.3",
         "ioredis": "^5.3.2",
         "langchain": "^0.3.36",
+        "mongoose": "^9.0.0",
         "pino": "^10.1.0",
         "pino-pretty": "^13.1.1",
         "uuid": "^9.0.1",
