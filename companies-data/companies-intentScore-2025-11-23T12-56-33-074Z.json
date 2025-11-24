@@ -1,0 +1,40 @@
+{
+  "score": 97,
+  "reason": "D360 Bank shows very high intent primarily due to a significant new funding round in a recent timeframe. This funding activity indicates a strong capability for growth and development, despite the absence of other important signals like hiring or new office openings. The evidence quality for the funding round is good, although the overall confidence is moderate, indicating some uncertainty around these signals.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 93,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 93,
+      "confidence": 0.4434782608695652
+    },
+    {
+      "signal": "new_office",
+      "score": 0,
+      "impact": "low",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    },
+    {
+      "signal": "hiring_in_finance_department",
+      "score": 0,
+      "impact": "medium",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "D360 Bank is well-positioned to leverage its new funding for strategic initiatives and market expansion.",
+    "Monitoring additional signals closely, especially regarding hiring and product development, is essential for understanding future intentions."
+  ],
+  "timing_recommendation": "immediate",
+  "risk_factors": [
+    "Limited evidence from other critical signals may indicate a lack of broader business activities.",
+    "Potential volatility around funding results may impact future business decisions."
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "company": "D360 Bank",
+  "website": "https://www.d360.com",
+  "analysis_date": "2025-11-23",
+  "requested_signals": [
+    "new_funding_round",
+    "new_office",
+    "hiring_in_finance_department"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUEtFNC1LcUVlMk1JcmpyUTNoSGVKaS1ocUFFVFNHZDV1d2VlUF8zSUVlM0xWM01ETnp0aXJTVEFTLUsxdEhyTDBfdHlnX3FhUUdDVHZ5RDBlUWVjUV95MExrbUI0c3ltOUEyZk1SRlFOZmRiNEoxclhVTE5tN0V3NDlfdlRJM1A0eDhzeWw3T1ZSRkJINDlpSjhNbDljLWs2N2RMT0ZSTXdELTB6d1E?oc=5",
+          "date": "Mon, 02 Jun 2025 07:00:00 GMT",
+          "summary": "Saudi PIF-Backed Digital Bank Courts Investors for Funding - Bloomberg.com - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPUEtFNC1LcUVlMk1JcmpyUTNoSGVKaS1ocUFFVFNHZDV1d2VlUF8zSUVlM0xWM01ETnp0aXJTVEFTLUsxdEhyTDBfdHlnX3FhUUdDVHZ5RDBlUWVjUV95MExrbUI0c3ltOUEyZk1SRl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0xVHU0UTFVbjU5LWNoZVdCcWpwYUo1SktBYnpQSmtjazl3aXpLR21XNnRmVzNVU2Nxam9zemFFVG9vQURfVVhsQTgzY0RIQ21rRXo3T19iUFJHdlBNSldPQzB3ZFI?oc=5",
+          "date": "Tue, 03 Jun 2025 07:00:00 GMT",
+          "summary": "PIF-backed D360 bank eyes global investors for Series A round - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE0xVHU0UTFVbjU5LWNoZVdCcWpwYUo1SktBYnpQSmtjazl3aXpLR21XNnRmVzNVU2Nxam9zemFFVG9vQURfVVhsQTgzY0RIQ21rRXo3T19iUFJHdlBNSldPQzB3ZFI?oc=5\" target=\"...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5",
+          "date": "Wed, 04 Jun 2025 07:00:00 GMT",
+          "summary": "Derayah Financial: D360 Bank EGM OKs 27% capital hike to SAR 2.1B via SAR 450M rights issue - ارقام - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5\" ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeUVZMnBVREVlSnNfSWowOTl2QUFPaGVpWXNQdkpfMXFhRGhLZFRvdTh1bzZKTU9ibkVNajRBMDE2YXUwb3dUOUozY0NITHhzLUZveXhjVFNYdUxGSGtXcm9Pb0FCWnZUZjNtdGxOY00zMzA2bGFzRE5qREo4ODFmcE9SZEl3Mnc?oc=5",
+          "date": "Tue, 20 May 2025 07:00:00 GMT",
+          "summary": "Capital One Review 2025: Is Its Checking Account Right For You? - Business Insider - <a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPeUVZMnBVREVlSnNfSWowOTl2QUFPaGVpWXNQdkpfMXFhRGhLZFRvdTh1bzZKTU9ibkVNajRBMDE2YXUwb3dUOUozY0NITHhzLUZveXhjVFNYdUxGSGtXcm9Pb0FCWnZUZjNtdGxOY0...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9Xd1AxZDBYaDA5Y3pla3AyUnY0aGpHal90NzRPSWdmUnJFdkcxOG5XOUp2YjdsSDdZRXBzTjY2STNxbGJZWFJSSHR5WHRTZ0tvSjZNZExXcTNMUDJMbW9tMjdJbXhyQV8wUGNB?oc=5",
+          "date": "Thu, 23 Jan 2025 08:00:00 GMT",
+          "summary": "Capital One 360 Bank Review 2025: Checking, Savings and CDs - NerdWallet - <a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE9Xd1AxZDBYaDA5Y3pla3AyUnY0aGpHal90NzRPSWdmUnJFdkcxOG5XOUp2YjdsSDdZRXBzTjY2STNxbGJZWFJSSHR5WHRTZ0tvSjZNZExXcTNMUDJMbW9tMjdJbXhyQV8wUGNB?oc=5\"...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zSEdHOThqS0NDVG5mQXQ5eEN6YmNNQzdwMVlDYml2cEZMay1qM3FqcnhBUmswSy03QzhtRFFuVjJKMUl0OUFkdzRzcHBEQmxXc2ZMWk9SR1RqUdIBZkFVX3lxTE11Ql9MY0toblZlb1VIRWx1dFhsRTQ1cnRoVktYeDl4c0Z0Z3FXR0pJcnpQNG5qNnd4SEJhbkRwdm4xTEIxUkIwMmRvaVIyeFIweFhPdmlDV0lVTVVBT01zME9vR29JQQ?oc=5",
+          "date": "Fri, 05 May 2023 07:00:00 GMT",
+          "summary": "Capital One 360 Bank Review - money.com - <a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zSEdHOThqS0NDVG5mQXQ5eEN6YmNNQzdwMVlDYml2cEZMay1qM3FqcnhBUmswSy03QzhtRFFuVjJKMUl0OUFkdzRzcHBEQmxXc2ZMWk9SR1RqUdIBZkFVX3lxTE11Ql9MY0toblZlb1...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9uWkpkR2hZVW5fQjQ5YjQ2ZDI5UXRHUXVHR18yNjRWOHJTU0NVUEFoNmZ6eWk4aU5Oa1ZCTGhkZHNaa19jYXBmQ3poUGFwUk1VTW56SXlUa0hkRHlvR2xqT2RzZHlUeGZyTEE?oc=5",
+          "date": "Tue, 15 Feb 2022 08:00:00 GMT",
+          "summary": "Saudi Cabinet approves license for digital D360 Bank with SAR 1.65 bln capital - ارقام - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9uWkpkR2hZVW5fQjQ5YjQ2ZDI5UXRHUXVHR18yNjRWOHJTU0NVUEFoNmZ6eWk4aU5Oa1ZCTGhkZHNaa19jYXBmQ3poUGFwUk1VTW56SXlUa0hkRHlvR2xqT2RzZHlUeGZyTEE?oc=5\" ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB4QnpJLXRmUXpiejZ0V0lhaUltSS1LcDFTbmJ1OGkxLS11UnFZcDdoWW1pdV9HTnJHMWl6bGtMUGgyYXhvVEFwZDA0SFBXWkVWeEZ3a01BMGsyYnFMNHpKdFlXOHd6NXc5dEdRdVlUcjhaT3ByVnZB?oc=5",
+          "date": "Tue, 08 Apr 2025 07:00:00 GMT",
+          "summary": "Capital One 360 Bank Review: Pros, Cons, And Alternatives - The College Investor - <a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFB4QnpJLXRmUXpiejZ0V0lhaUltSS1LcDFTbmJ1OGkxLS11UnFZcDdoWW1pdV9HTnJHMWl6bGtMUGgyYXhvVEFwZDA0SFBXWkVWeEZ3a01BMGsyYnFMNHpKdFlXOHd6NXc5dEdRdVlUcj...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBPUmp0UTV5bWJXbE5hYnIxdklldkk2V3ZpaVMwMVU2bXVfZ2xTVUc2VHVDV1NaUVBLY0ltT3k3Y0U3cG9nLVJsbUVwSE5tbEYydGRYM2JRbU9YSFIyYk9raGg4UjNiNHlCbEE?oc=5",
+          "date": "Wed, 12 Nov 2025 08:00:00 GMT",
+          "summary": "Capital One 360 Promotions: $250 Checking, $1500 Savings - Best Wallet Hacks - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFBPUmp0UTV5bWJXbE5hYnIxdklldkk2V3ZpaVMwMVU2bXVfZ2xTVUc2VHVDV1NaUVBLY0ltT3k3Y0U3cG9nLVJsbUVwSE5tbEYydGRYM2JRbU9YSFIyYk9raGg4UjNiNHlCbEE?oc=5\" ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUEtFNC1LcUVlMk1JcmpyUTNoSGVKaS1ocUFFVFNHZDV1d2VlUF8zSUVlM0xWM01ETnp0aXJTVEFTLUsxdEhyTDBfdHlnX3FhUUdDVHZ5RDBlUWVjUV95MExrbUI0c3ltOUEyZk1SRlFOZmRiNEoxclhVTE5tN0V3NDlfdlRJM1A0eDhzeWw3T1ZSRkJINDlpSjhNbDljLWs2N2RMT0ZSTXdELTB6d1E?oc=5",
+          "date": "Mon, 02 Jun 2025 07:00:00 GMT",
+          "summary": "Saudi PIF-Backed Digital Bank Courts Investors for Funding - Bloomberg.com - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPUEtFNC1LcUVlMk1JcmpyUTNoSGVKaS1ocUFFVFNHZDV1d2VlUF8zSUVlM0xWM01ETnp0aXJTVEFTLUsxdEhyTDBfdHlnX3FhUUdDVHZ5RDBlUWVjUV95MExrbUI0c3ltOUEyZk1SRl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0xVHU0UTFVbjU5LWNoZVdCcWpwYUo1SktBYnpQSmtjazl3aXpLR21XNnRmVzNVU2Nxam9zemFFVG9vQURfVVhsQTgzY0RIQ21rRXo3T19iUFJHdlBNSldPQzB3ZFI?oc=5",
+          "date": "Tue, 03 Jun 2025 07:00:00 GMT",
+          "summary": "PIF-backed D360 bank eyes global investors for Series A round - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE0xVHU0UTFVbjU5LWNoZVdCcWpwYUo1SktBYnpQSmtjazl3aXpLR21XNnRmVzNVU2Nxam9zemFFVG9vQURfVVhsQTgzY0RIQ21rRXo3T19iUFJHdlBNSldPQzB3ZFI?oc=5\" target=\"...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5",
+          "date": "Wed, 04 Jun 2025 07:00:00 GMT",
+          "summary": "Derayah Financial: D360 Bank EGM OKs 27% capital hike to SAR 2.1B via SAR 450M rights issue - ارقام - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5\" ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1veTQ0WWFJZ3A3amk1OUJCU2VuYUZobXZiQzdBSUdMS3RBVlB0aTdpSTlBWENZLTNHSnFiOE9uS2JnbW5Ha3FXbUl2ZTNmdzFqS3VNeU12WGl0UnZQ?oc=5",
+          "date": "Wed, 16 Feb 2022 08:00:00 GMT",
+          "summary": "UAE’s digital bank Zand raises new funding - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1veTQ0WWFJZ3A3amk1OUJCU2VuYUZobXZiQzdBSUdMS3RBVlB0aTdpSTlBWENZLTNHSnFiOE9uS2JnbW5Ha3FXbUl2ZTNmdzFqS3VNeU12WGl0UnZQ?oc=5\" target=\"_blank\">UAE...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1NcUoxLTdQSHdOSmg1dTduVkh5OVFmT0l4cEF1TDN3X25jVk8xUXhfd3RmNG9yY1lIUDNJUmpidWZCZ3Ztdno1em81VnRwVnRLZzFvSHppcmpiYUlCaUtuYnE0WHhBYXBFSFFUUFJxMlZlWlk?oc=5",
+          "date": "Wed, 16 Feb 2022 08:00:00 GMT",
+          "summary": "Qashio raises $2.5 million in pre-seed funding - waya.media - <a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE1NcUoxLTdQSHdOSmg1dTduVkh5OVFmT0l4cEF1TDN3X25jVk8xUXhfd3RmNG9yY1lIUDNJUmpidWZCZ3Ztdno1em81VnRwVnRLZzFvSHppcmpiYUlCaUtuYnE0WHhBYXBFSFFUUFJxMl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUEtFNC1LcUVlMk1JcmpyUTNoSGVKaS1ocUFFVFNHZDV1d2VlUF8zSUVlM0xWM01ETnp0aXJTVEFTLUsxdEhyTDBfdHlnX3FhUUdDVHZ5RDBlUWVjUV95MExrbUI0c3ltOUEyZk1SRlFOZmRiNEoxclhVTE5tN0V3NDlfdlRJM1A0eDhzeWw3T1ZSRkJINDlpSjhNbDljLWs2N2RMT0ZSTXdELTB6d1E?oc=5",
+          "date": "Mon, 02 Jun 2025 07:00:00 GMT",
+          "summary": "Saudi PIF-Backed Digital Bank Courts Investors for Funding - Bloomberg.com - <a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPUEtFNC1LcUVlMk1JcmpyUTNoSGVKaS1ocUFFVFNHZDV1d2VlUF8zSUVlM0xWM01ETnp0aXJTVEFTLUsxdEhyTDBfdHlnX3FhUUdDVHZ5RDBlUWVjUV95MExrbUI0c3ltOUEyZk1SRl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0xVHU0UTFVbjU5LWNoZVdCcWpwYUo1SktBYnpQSmtjazl3aXpLR21XNnRmVzNVU2Nxam9zemFFVG9vQURfVVhsQTgzY0RIQ21rRXo3T19iUFJHdlBNSldPQzB3ZFI?oc=5",
+          "date": "Tue, 03 Jun 2025 07:00:00 GMT",
+          "summary": "PIF-backed D360 bank eyes global investors for Series A round - Arab News - <a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE0xVHU0UTFVbjU5LWNoZVdCcWpwYUo1SktBYnpQSmtjazl3aXpLR21XNnRmVzNVU2Nxam9zemFFVG9vQURfVVhsQTgzY0RIQ21rRXo3T19iUFJHdlBNSldPQzB3ZFI?oc=5\" target=\"...",
+          "confidence": 0.6,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5",
+          "date": "Wed, 04 Jun 2025 07:00:00 GMT",
+          "summary": "Derayah Financial: D360 Bank EGM OKs 27% capital hike to SAR 2.1B via SAR 450M rights issue - ارقام - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5\" ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9uWkpkR2hZVW5fQjQ5YjQ2ZDI5UXRHUXVHR18yNjRWOHJTU0NVUEFoNmZ6eWk4aU5Oa1ZCTGhkZHNaa19jYXBmQ3poUGFwUk1VTW56SXlUa0hkRHlvR2xqT2RzZHlUeGZyTEE?oc=5",
+          "date": "Tue, 15 Feb 2022 08:00:00 GMT",
+          "summary": "Saudi Cabinet approves license for digital D360 Bank with SAR 1.65 bln capital - ارقام - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9uWkpkR2hZVW5fQjQ5YjQ2ZDI5UXRHUXVHR18yNjRWOHJTU0NVUEFoNmZ6eWk4aU5Oa1ZCTGhkZHNaa19jYXBmQ3poUGFwUk1VTW56SXlUa0hkRHlvR2xqT2RzZHlUeGZyTEE?oc=5\" ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5",
+          "date": "Wed, 04 Jun 2025 07:00:00 GMT",
+          "summary": "Derayah Financial: D360 Bank EGM OKs 27% capital hike to SAR 2.1B via SAR 450M rights issue - ارقام - <a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE9XXy13SnFBLUpFd21yajYxeTk2VlVsdkgySy1OUE80cFloVVRmLVBtc1B4a1lsd3ZoQ0h0eFNsdDlfR2RnVDhfcUhrTnY3Si1icWtWMU94cDd1eHU2QkVXTV9haERTVGFMMnc?oc=5\" ...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWE5EZHF3cEc0RjVNTldjRjlUZ3QtVE5JZkx4b3RUWHRrTndGUTdmd3pYQU80V0s4eFp0blE1TmZGMTZSZ0NzVE44TV9ib29KZEpFMXdyaVRWdHVwUS00Q2dmWGw2cU5Ma0hCMzRGeHBia0tDZ1M0a2hxeVFSWnU0NmFkUmFCRlJTTnZ6TEY5eEpJN0hER1loc0x2ZGlodDBYZkZpeVQ2cGswVjJyMmV6ckwzVl9pUERmUTFfZjhIRQ?oc=5",
+          "date": "Fri, 28 Mar 2025 00:23:28 GMT",
+          "summary": "Thunes closes Series C funding round, secures more than $60m in total - FinTech Futures - <a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQWE5EZHF3cEc0RjVNTldjRjlUZ3QtVE5JZkx4b3RUWHRrTndGUTdmd3pYQU80V0s4eFp0blE1TmZGMTZSZ0NzVE44TV9ib29KZEpFMXdyaVRWdHVwUS00Q2dmWGw2cU5Ma0hCMzRGeH...",
+          "confidence": 0.8999999999999999,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNX3BuNzJLS0g4TlZIc1Q1RHMxYkNhV3pPVUpfYy1fM0s5bmh1OVp4UzF4c2g1X2pyRFRXQVNlMkNNVnhtX2o4Q2dLeFo1Y2FpSjAwNUd2ZHRVN0xLVkIwUmI5MzJyemFsVjA3RHVzVzhybENMcEJyQlgteEFkcU9JOFA5ZmU3Y3BMcDFvWDJmck10dw?oc=5",
+          "date": "Mon, 23 Dec 2024 08:00:00 GMT",
+          "summary": "Al Madinah Ventures Refuels KSA’s Startup Ecosystem with USD 10M Fund - waya.media - <a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNX3BuNzJLS0g4TlZIc1Q1RHMxYkNhV3pPVUpfYy1fM0s5bmh1OVp4UzF4c2g1X2pyRFRXQVNlMkNNVnhtX2o4Q2dLeFo1Y2FpSjAwNUd2ZHRVN0xLVkIwUmI5MzJyemFsVjA3RHVzVz...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWXZjcnZ0bGlwSTZHU2lkMGVCbGhQeVRIemZEOXZyaldFcFhLWG9IR3Q2MzdpcERtSTNvNW5yZnc3SFVObURFaU83UV9HOVo2ajhNVUdySFpiTUpSbE1rZWZpeU1xMVctMUphUW95azI2ejlfX3BJYkNMQ0F4OFNHX0tqMjZaTzNrekFMcUZlVUw0cVd0aGt2QVR0VkhCZEV2cVVaaTNR?oc=5",
+          "date": "Sun, 22 Dec 2024 08:00:00 GMT",
+          "summary": "Witamax and Renew Capital Invest in Morocco’s Talaty to Boost AI Financing Solutions - waya.media - <a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPWXZjcnZ0bGlwSTZHU2lkMGVCbGhQeVRIemZEOXZyaldFcFhLWG9IR3Q2MzdpcERtSTNvNW5yZnc3SFVObURFaU83UV9HOVo2ajhNVUdySFpiTUpSbE1rZWZpeU1xMVctMUphUW95az...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1NcUoxLTdQSHdOSmg1dTduVkh5OVFmT0l4cEF1TDN3X25jVk8xUXhfd3RmNG9yY1lIUDNJUmpidWZCZ3Ztdno1em81VnRwVnRLZzFvSHppcmpiYUlCaUtuYnE0WHhBYXBFSFFUUFJxMlZlWlk?oc=5",
+          "date": "Wed, 16 Feb 2022 08:00:00 GMT",
+          "summary": "Qashio raises $2.5 million in pre-seed funding - waya.media - <a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE1NcUoxLTdQSHdOSmg1dTduVkh5OVFmT0l4cEF1TDN3X25jVk8xUXhfd3RmNG9yY1lIUDNJUmpidWZCZ3Ztdno1em81VnRwVnRLZzFvSHppcmpiYUlCaUtuYnE0WHhBYXBFSFFUUFJxMl...",
+          "confidence": 0.6,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 23 relevant evidence pieces"
+    },
+    {
+      "signal": "new_office",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "hiring_in_finance_department",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 1,
+    "signals_without_evidence": 2,
+    "confidence_score": 0.4434782608695652,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

@@ -11,6 +11,7 @@ interface StartWorkflowBody {
   query: string;
   sessionId: string;
   icpModelId?: string;
+  count?: string;
 }
 
 export async function WorkflowController(
@@ -50,7 +51,7 @@ export async function WorkflowController(
     }
   });
   fastify.post('/search-companies', async (request: FastifyRequest<{ Body: StartWorkflowBody }>, reply) => {
-    const { query, sessionId, icpModelId } = request.body;
+    const { query, sessionId, icpModelId,count } = request.body;
     const userId = request.headers['x-user-id'] as string || 'demo-user';
 
     try {
@@ -65,7 +66,7 @@ export async function WorkflowController(
       setTimeout(async () => {
         try {
           const workflow = new CompanyWorkflow(sessionId, userId);
-          const companies = await workflow.execute(query, icpModel);
+          const companies = await workflow.execute(query, icpModel,count);
           
           //console.log(`✅ Workflow completed for session ${sessionId}, found ${companies.length} companies`);
           

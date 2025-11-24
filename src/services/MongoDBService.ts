@@ -215,17 +215,15 @@ async saveCompanyWithSessionAndICP(
     sessionId: string,
     icpModelId: string,
     companyData: any
-  ): Promise<{ success: boolean; error?: string; data?: any }> {
-    
+  ): Promise<any> {  // Return the saved company data directly
     try {
       const result = await this.saveCompanyData(sessionId, icpModelId, companyData);
-      return { success: true, data: result };
+      return result;  // Return the data directly
     } catch (error) {
       console.error("Exception saving company:", error);
-      return { 
-        success: false, 
-        error: error instanceof Error ? error.message : "Failed to save company data" 
-      };
+      throw new Error(
+        error instanceof Error ? error.message : "Failed to save company data"
+      );
     }
   }
   

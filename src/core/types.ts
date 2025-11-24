@@ -1,5 +1,12 @@
 // src/core/types.ts
 export interface Company {
+  country: any;
+  employees: number | undefined;
+  annual_revenue: any;
+  revenue: any;
+  icp_score: number;
+  intent_score: number;
+  created_at: boolean;
   company_id?: string;
 
   // 🏢 Basic Identity

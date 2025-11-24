@@ -1,0 +1,255 @@
+{
+  "exaCompanies": [
+    {
+      "id": "witem_01karcd6v75f7hht655f7hht65",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01karccv4c3b4t72pwwmsgqmvk",
+      "websetId": "webset_01karcct4t4sk86xthyd3kxahs",
+      "properties": {
+        "type": "company",
+        "url": "https://d360.com",
+        "description": "D360 Bank is a Saudi Arabia-based private digital bank with 326 employees and 46.8% annual growth; it offers tailored, secure, and transparent banking solutions. The bank secured $439.7M in funding and recently expanded its operations within Saudi Arabia in late 2024, demonstrating active regional growth and market entry.",
+        "content": "![](https://d360.com/_next/static/media/logo-color.7d088050.svg)\n\n![](https://d360.com/_next/static/media/close.a98e321b.svg)\n\n- English\n\n\nحمّل التطبيقترتيبك في القائمة\n\n# البنك اللي تبيه، يجيك ما تجيه..\n\nانضم لقائمة الانتظار\n\n![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin1.11cdf1fa.png&w=256&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin2.00b9b5bb.png&w=384&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin3.72246df7.png&w=640&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin4.867abaab.png&w=3840&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin5.a92a4790.png&w=640&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin6.126e60f1.png&w=256&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin7.485b0736.png&w=384&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin8.d5012a91.png&w=256&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin9.1b7ce694.png&w=384&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin10.762ebf87.png&w=256&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin11.e3bdb6ff.png&w=1920&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin12.d0cd8b81.png&w=640&q=75)![object](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbin13.f6c7d9b0.png&w=640&q=75)\n\nليش\n\n![d360](https://d360.com/_next/static/media/d360-text.e38a5c53.svg)بنك\n\nمرن\n\nآمن\n\nواضح\n\nسريع\n\n## مرن\n\nيفهمك وتقدر تستخدمه في أي مكان وزمان\n\n01\n\n![](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdiamond-faq-1.e8dfda7b.png&w=96&q=75)![](https://d360.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdiamond-faq-2.f913d368.png&w=128&q=75)\n\n# الأسئلة المكررة\n\n## هذا الموقع يستخدم ملفات تعريف الارتباط\n\nنستخدم ملفات تعريف الارتباط لتحسين المحتوى الموجه إليك وتحليل الزيارات لنتمكن من تزويدك بأفضل\nتجربة ممكنة. [لقراءة المزيد](https://d360.com/ar/privacy-policy)\n\nقبول",
+        "company": {
+          "name": "D360 Bank",
+          "location": "undefined, Saudi Arabia",
+          "employees": 326,
+          "industry": "Banking",
+          "about": "D360 Bank is a shariah-compliant digital bank that aims to provide the best financial experience in the Kingdom.\n\nOur Vision:\n\nTo reinvent finance through innovation & technology making it convenient, accessible & fair to all.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQF9MeDfBI7rOg/company-logo_200_200/company-logo_200_200/0/1672326247375/d360bank_logo?e=2147483647&v=beta&t=ASwI8QHdmjlAH-aGq5kon_GzuzOvhAuYJ8cb_etypWw"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has engaged in expansion activities (such as opening new branches, entering new markets, or increasing operations) within the last 2 years (2024-2025)",
+          "reasoning": "The SAMA announcement on December 17, 2024 indicates that D360 Bank launched its banking operations in Saudi Arabia, which is an expansion activity (opening new operations/entering a market). This event falls within the 2024‑2025 window, satisfying the criterion.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "SAMA Announces Launch of D360 Banking Operations in Saudi ...",
+              "snippet": "SAMA Announces Launch of D360 Banking Operations in Saudi Arabia. Riyadh, December 17, 2024, SPA -- The Saudi Central Bank (SAMA) has given the D360 Bank, a licensed digital bank, permission to start its banking operations in the Kingdom of Saudi Arabia. highlights: [December 17, 2024]",
+              "url": "https://www.spa.gov.sa/en/N2229282"
+            },
+            {
+              "title": "PIF-backed D360 bank eyes global investors for Series A round",
+              "snippet": "Saudi Arabia's Public Investment Fund-backed digital bank D360 is in early talks with potential global investors as it prepares for a Series A funding round.",
+              "url": "https://www.arabnews.com/node/2603184/business-economy"
+            },
+            {
+              "title": "Derayah Financial Co. Announces The Approval Of Bank D360 ...",
+              "snippet": "Who owns D360 Bank?\nThe Derayah Financial Company (\"the Company\") announces that the Extraordinary General Assembly of the D360 Bank (\"the Bank\"), in which the Company currently owns a 20% equity interest, has granted its approval.\nJun 4, 2025",
+              "url": "https://ksatools.eurolandir.com/tools/Pressreleases/GetPressRelease"
+            },
+            {
+              "title": "SAMA Announces the Launch of D360 Banking Operations in the ...",
+              "snippet": "The Saudi Central Bank (SAMA) granted the Digital Bank “D360\", a licensed digital bank, no objection to commence its banking operations in the Kingdom.",
+              "url": "https://www.sama.gov.sa/en-US/News/Pages/news-1061.aspx"
+            },
+            {
+              "title": "D360 Bank Welcomes One Million Customers in Four Months",
+              "snippet": "D360 Bank, the innovative Saudi Shariah-compliant digital bank, has announced that it has reached more than one million customers within the first four months ...",
+              "url": "https://m.eyeofriyadh.com/news/details/d360-bank-welcomes-one-million-customers-in-four-months"
+            },
+            {
+              "title": "Derayah Financial: D360 Bank EGM OKs 27% capital hike to SAR ...",
+              "snippet": "According to data available with Argaam, in December 2024, the Saudi Central Bank (SAMA) issued its no-objection for D360 Bank to commence its ...",
+              "url": "https://www.argaam.com/en/article/articledetail/id/1819442"
+            },
+            {
+              "title": "Bank Closures News 2025: Why Are Banks Collapsing?",
+              "snippet": "What banks are going under in 2024?\nAccording to the FDIC, there were only two bank failures in 2024. The first was in April of the Republic First Bank in Philadelphia, and the second was The First National Bank of Lindsay in October, located in Lindsay, Oklahoma.",
+              "url": "https://integratedcashlogistics.com/bank-closures-news"
+            },
+            {
+              "title": "Saudi Digital Bank D360 Eyes Series A in 2025, Targets Global ...",
+              "snippet": "PIF-backed digital bank D360 plans a Series A funding round in 2025 to support SME services and a potential future IPO.",
+              "url": "https://fintechnews.ae/26465/fintech-saudi-arabia/saudi-digital-bank-d360-series-a-2025"
+            },
+            {
+              "title": "As 2024 ends, my journey with D360 Bank has come to ... - LinkedIn",
+              "snippet": "As 2024 ends, my journey with D360 Bank has come to an end after nearly five amazing years. It has been such a privilege to help in building ...",
+              "url": "https://www.linkedin.com/posts/abdelazizmohammed_as-2024-ends-my-journey-with-d360-bank-has-activity-7277281707844644864-tN-H"
+            },
+            {
+              "title": "D360 Bank - Public Investment Fund",
+              "snippet": "Which bank is D360 Bank affiliated with?\nD360 Bank is a digital banking institution in Saudi Arabia that adheres to Sharia principles. Investors in the bank include The Public Investment Fund and, Derayah Financial Company complemented by several financial and investment connoisseurs within the Kingdom.",
+              "url": "https://www.pif.gov.sa/en/our-investments/our-portfolio/d360-bank"
+            },
+            {
+              "title": "D360 Bank",
+              "snippet": "D360 Bank is a Banking company (private) with 326 employees (+46.8% YoY growth), headquartered in Saudi Arabia. Has $439.7M in total funding, last round was a Venture Round - D360 bank in 2023-01-01. D360 Bank is a banking partner that offers tailored services to meet specific needs. They provide flexible, secure, transparent, fast, and flexible ba...",
+              "url": "https://d360.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the banking industry AND is headquartered or primarily operates in Saudi Arabia (KSA) AND has between 201 and 500 employees",
+          "reasoning": "According to the internal company profile, D360 Bank is a banking company headquartered in Saudi Arabia and has 326 employees, which falls within the 201‑500 employee range. The profile lists the industry as Banking and the headquarters location as Saudi Arabia, satisfying all three parts of the criterion.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "D360 Bank",
+              "snippet": "D360 Bank is a Banking company (private) with 326 employees (+46.8% YoY growth), headquartered in Saudi Arabia. Has $439.7M in total funding, last round was a Venture Round - D360 bank in 2023-01-01. D360 Bank is a banking partner that offers tailored services to meet specific needs. They provide flexible, secure, transparent, fast, and flexible ba...",
+              "url": "https://d360.com"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-23T12:53:17.287Z",
+      "updatedAt": "2025-11-23T12:53:17.287Z"
+    },
+    {
+      "id": "witem_01karcd78z944m74z9944m74z9",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01karccv4c3b4t72pwwmsgqmvk",
+      "websetId": "webset_01karcct4t4sk86xthyd3kxahs",
+      "properties": {
+        "type": "company",
+        "url": "https://visionbank.com.sa",
+        "description": "Vision Bank is a Saudi, Sharia-compliant private banking institution with 208 employees and 23.6% annual growth; licensed by the Saudi Central Bank in June 2021. It provides secure digital banking services for personal and business clients, and launched a new digital banking app in July 2025, reflecting recent operational expansion.",
+        "content": "## The Future of Smart Banking Starts With You\n\n### We bring you carefully designed financial solutions tailored to meet your needs and aspirations, helping you achieve your financial goals effortlessly and enhancing your quality of life.\n\nCreate a Murabaha Term Deposit in less than a minute with an amount of only 1,000 SAR Enjoy competitive returns with short to long terms starting from just seven days.\n\nVision Bank savings account taking just seconds to open and its designed to help you achieve your goals with simple and confident steps.\n\nChoose from a variety of designs to find the card that suits you best, all while maintaining privacy and security.\n\n1. ## Security is Our Priority\n\n\n\nWe employ the best practices and cutting-edge technologies to deliver reliable banking services.\n\n\nItem 1 of 4\n\n## FAQs\n\n### Is Vision Bank licensed in Saudi Arabia?\n\nYes, Vision Bank is licensed in KSA and regulated and supervised by the Saudi Central Bank (SAMA).\n\n### Is Vision Bank compliant with Islamic Shariah Principles?\n\nYes.\n\n### Is Vision Bank a wallet?\n\nNo. Vision Bank is a digital bank that will offer a full range of financial solutions.\n\n### When will I have an account with Vision Bank?\n\nRegister on the priority list through the Vision Bank website or application. When it is your turn, you will receive an SMS with an invite code to open your account. This code can only be used once.\n\n© 2025 Vision Bank. All rights reserved.\n\nClosed Joint Stock Company with a Capital of SAR 1,500,000,000, CR No. 1010850478 Licensed in accordance with the Council of Ministers decree No. 672 dated 12/11/1442H corresponding to 22/06/2021G, Subject to the supervision of the Saudi Central Bank, 6537 King Abdulaziz Rd., King Salman Dist. 12432 Riyadh, Saudi Arabia.\n\n## © 2025 Vision Bank. All rights reserved. Closed Joint Stock Company, Capital of SAR 1,500,000,000. Commercial Registration 1010850478, National Address 6537 Riyadh 12432-2693, Kingdom of Saudi Arabia",
+        "company": {
+          "name": "Vision Bank",
+          "location": "undefined, Saudi Arabia",
+          "employees": 208,
+          "industry": "Banking",
+          "about": "Vision Bank your lifestyle partner that provides fully secured digital banking services that suits your way of life and accommodate both your personal or enterprise banking needs. \n\nVision bank is a Saudi, Sharia compliant bank licensed by the Saudi Central Bank in June of 2021.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/D4D0BAQFtfvjCzUKnkw/company-logo_200_200/company-logo_200_200/0/1705830621222/visionbanksa_logo?e=2147483647&v=beta&t=PW98Ebs2u4X1_POYAFCclriNvZyV0oNF-HyJIWqf7dU"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has engaged in expansion activities (such as opening new branches, entering new markets, or increasing operations) within the last 2 years (2024-2025)",
+          "reasoning": "Based on the company profile, Vision Bank is a relatively new digital bank licensed in June 2021. The search results indicate that Vision Bank launched its digital banking app in Saudi Arabia in July 2025. While there is no evidence of new physical branches, the launch of the app represents an expansion of its operations and services within the last two years. Therefore, the company has engaged in expansion activities within the specified timeframe.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "SAMA Grants Vision Bank Non-objection to Commence its ...",
+              "snippet": "The Saudi Central Bank (SAMA) has granted Vision Bank a non-objection to commence its digital banking operations in Saudi Arabia.",
+              "url": "https://www.sama.gov.sa/en-US/News/Pages/news-1102.aspx"
+            },
+            {
+              "title": "Vision Bank launches digital banking app in Saudi Arabia",
+              "snippet": "Vision Bank, which claims to be the first Sharia-compliant digital bank in Saudi Arabia, has launched its mobile app after two years in development.",
+              "url": "https://www.fintechfutures.com/digital-banking/vision-bank-launches-digital-banking-app-in-saudi-arabia"
+            },
+            {
+              "title": "Top 10 Upcoming Construction Projects in Saudi Arabia 2025",
+              "snippet": "What are the new projects in Saudi Arabia 2025?\nNew projects in Saudi Arabia 2025 like the New Murabba, NEOM, Red Sea project, Qiddiya city, and Jeddah Central are reshaping Saudi Arabia's urban development and economic landscape.Sep 19, 2025",
+              "url": "https://www.blackridgeresearch.com/blog/latest-list-top-new-upcoming-ongoing-construction-projects-in-saudi-arabia-ksa-riyadh-jeddah"
+            },
+            {
+              "title": "Vision Bank Receives Saudi Central Bank No Objection for ...",
+              "snippet": "Vision Bank has received the “No Objection” from SAMA to commence its banking operations in the Kingdom.",
+              "url": "https://ffnews.com/newsarticle/paytech/vision-bank-receives-saudi-central-bank-no-objection-for-official-launch"
+            },
+            {
+              "title": "SAMA approves Vision Bank to launch digital services",
+              "snippet": "Riyadh – Sharikat Muasher: The Saudi Central Bank (SAMA) granted Vision Bank a non-objection to begin offering digital banking services in ...",
+              "url": "https://sharikatmubasher.com/news/article/21506472/sama-approves-vision-bank-to-launch-digital-services?companyNews=0"
+            },
+            {
+              "title": "alinma Bank Wins “Fastest Growing Islamic Corporate Bank in Saudi ...",
+              "snippet": "Which is the fastest growing bank in Saudi Arabia?\nalinma Bank Wins “Fastest Growing Islamic Corporate Bank in Saudi Arabia 2025”",
+              "url": "https://alinma.com/en/About-the-Bank/The-Bank/News/2025/9/Fastest-Growing-Islamic-Corporate-Bank-KSA-2025"
+            },
+            {
+              "title": "Saudi Arabia's First Digital-Only Banks Launch with Rapid ...",
+              "snippet": "The country's three licensed digital banks have officially commenced operations after gaining approval from the central bank.",
+              "url": "https://fintechnews.ae/24113/fintech-saudi-arabia/saudi-arabias-first-digital-only-banks-launch-with-rapid-adoption"
+            },
+            {
+              "title": "Saudi Corporates Will Eye Cross-Border Issuance T",
+              "snippet": "We anticipate that Saudi banks will extend about $65 billion-$75 billion in new corporate loans annually over 2025-2026, primarily to the ...",
+              "url": "https://www.spglobal.com/ratings/en/regulatory/article/saudi-corporates-will-eye-cross-border-issuance-to-fund-investments-as-banks-turn-to-external-debt-s101656406"
+            },
+            {
+              "title": null,
+              "snippet": "What is Vision 2030 in Saudi Arabia?\nundefined",
+              "url": "https://api.exa.ai/crawl-ping?value=What%20is%20Vision%202030%20in%20Saudi%20Arabia%3F%0Aundefined"
+            },
+            {
+              "title": "Vision Bank's Hamad Alqunaibet On Redefining Digital ...",
+              "snippet": "Vision Bank recently received the “no objection” from the Saudi Central Bank (SAMA) to commence its banking operations in the Kingdom.",
+              "url": "https://en.incarabia.com/vision-bank%E2%80%99s-hamad-alqunaibet-on-redefining-digital-banking-in-saudi-arabia-781209.html"
+            },
+            {
+              "title": "New Hours of Operation - Vision Bank",
+              "snippet": "Vision Bank will be updating our branch hours beginning Monday, July 7, 2025. We remain committed to providing convenient, community-focused service.",
+              "url": "https://www.visionbank.bank/insight/new-hours-of-operation-"
+            },
+            {
+              "title": "Vision Bank - See the Difference! | Serving Oklahoma Since 1901",
+              "snippet": "\"Established in 1901, Vision Bank is a locally-owned community bank dedicated to helping the people and businesses of Oklahoma by offering trusted financial ...",
+              "url": "https://www.visionbank.bank"
+            },
+            {
+              "title": "Why PNC, Chase, Bank of America are still opening bank branches",
+              "snippet": "Which banks are opening new branches?\nThree of the largest banks in the United States — JPMorgan Chase, Bank of America and PNC Financial Services Group — are leading the charge. Those three institutions want to open a combined 870 new branches by 2030. They're not the only ones.",
+              "url": "https://tscg.com/why-pnc-chase-bank-of-america-are-still-opening-bank-branches"
+            },
+            {
+              "title": "VISION - Vision Bank will be updating our branch hours beginning ...",
+              "snippet": "Vision Bank will be updating our branch hours beginning Monday, July 7, 2025. We remain committed to providing convenient, community-focused ...",
+              "url": "https://m.facebook.com/visionbankok/photos/vision-bank-will-be-updating-our-branch-hours-beginning-monday-july-7-2025-we-re/1266072308859655"
+            },
+            {
+              "title": "We are excited to announce the opening of our Norman branch ...",
+              "snippet": "3600 W. Main Street, Suite 100 Norman, OK 73072. The new location will open for business on Feb. 12, 2024. This larger space will allow us to provide a better ...",
+              "url": "https://www.instagram.com/p/C20RK-TJKZ5"
+            },
+            {
+              "title": "What's Going On In Banking 2025 | Cornerstone Advisors",
+              "snippet": "What's going on in banking in 2025?\nBig fintech is viewed as the biggest threat by both banks and credit unions. In 2025, 28% of banks and 29% of credit unions plan to implement generative AI tools for the first time. 45% of banks and 38% of credit unions offer real-time payments—although roughly 8 in 10 only receive payments.",
+              "url": "https://www.crnrstone.com/gritty-insights/research/whats-going-on-in-banking-2025"
+            },
+            {
+              "title": "vision bank - Facebook",
+              "snippet": "Vision Bank will be updating our branch hours beginning Monday, July 7, 2025. We remain committed to providing convenient, community-focused ...",
+              "url": "https://www.facebook.com/visionbankok/posts/vision-bank-will-be-updating-our-branch-hours-beginning-monday-july-7-2025-we-re/1266072382192981"
+            },
+            {
+              "title": "VisionBank: See what we can do for you.",
+              "snippet": "Supporting our communities and customers - VisionBank - providing service from 13 locations across Altoona, Ames, Bondurant, Boone, Clive, Grimes, Huxley, ...",
+              "url": "https://www.visionbank.com"
+            },
+            {
+              "title": "Bank of America and Wells Fargo Continue Nationwide Shutdowns ...",
+              "snippet": "Is Bank of America and other banks closing branches in 2025 due to shift to digital banking?\n💰🏦 Major Banks Closing More Branches — Bank of America and Wells Fargo Continue Nationwide Shutdowns As more Americans turn to online and mobile banking, two of the nation's largest financial institutions — Bank of America and Wells Fargo — are continuing to close dozens of physical branches across the country in 2025.",
+              "url": "https://www.facebook.com/ActionEyeNews/posts/-major-banks-closing-more-branches-bank-of-america-and-wells-fargo-continue-nati/1263945195776010"
+            },
+            {
+              "title": "Vision BankOn Account | Vision Bank | Oklahoma",
+              "snippet": "The Vision BankOn account offers a free debit card, online banking, no overdraft fees, a $25 minimum deposit, no monthly fee, and free mobile deposit.",
+              "url": "https://www.visionbank.bank/bank/personal/vision-bankon-account"
+            },
+            {
+              "title": "Vision Bank",
+              "snippet": "Vision Bank is a Banking company (private) with 208 employees (+23.6% YoY growth), headquartered in Saudi Arabia.  Vision Bank your lifestyle partner that provides fully secured digital banking services that suits your way of life and accommodate both your persona...",
+              "url": "https://visionbank.com.sa"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the banking industry AND is headquartered or primarily operates in Saudi Arabia (KSA) AND has between 201 and 500 employees",
+          "reasoning": "Vision Bank is listed as a Banking company with 208 employees, which falls within the 201‑500 employee range. The profile states it is headquartered in Saudi Arabia and operates as a Saudi, Sharia‑compliant bank licensed by the Saudi Central Bank. All three criteria—banking industry, Saudi Arabia headquarters, and 201‑500 employees—are met.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Vision Bank",
+              "snippet": "Vision Bank is a Banking company (private) with 208 employees (+23.6% YoY growth), headquartered in Saudi Arabia.  Vision Bank your lifestyle partner that provides fully secured digital banking services that suits your way of life and accommodate both your persona...",
+              "url": "https://visionbank.com.sa"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-23T12:53:17.727Z",
+      "updatedAt": "2025-11-23T12:53:17.727Z"
+    }
+  ],
+  "websetId": "webset_01karcct4t4sk86xthyd3kxahs"
+}

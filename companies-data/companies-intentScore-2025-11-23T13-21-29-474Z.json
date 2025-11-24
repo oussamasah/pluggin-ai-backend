@@ -1,0 +1,38 @@
+{
+  "score": 0,
+  "reason": "Fallback analysis: Limited evidence available for reliable intent assessment.. Based on 0 signals with evidence from 0 total sources.",
+  "factors": [
+    {
+      "signal": "new_funding_round",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "confidence": 0,
+      "original_score": 0
+    },
+    {
+      "signal": "new_office",
+      "score": 0,
+      "impact": "low",
+      "evidence_quality": "poor",
+      "confidence": 0,
+      "original_score": 0
+    },
+    {
+      "signal": "hiring_in_finance_department",
+      "score": 0,
+      "impact": "low",
+      "evidence_quality": "poor",
+      "confidence": 0,
+      "original_score": 0
+    }
+  ],
+  "confidence": "low",
+  "strategic_insights": [
+    "Limited insights available due to insufficient data"
+  ],
+  "timing_recommendation": "monitor",
+  "risk_factors": [
+    "3 signals lack source evidence"
+  ]
+}

@@ -108,7 +108,7 @@ export class CompanyWorkflow {
     }
   }
 
-  async execute(query: string, icpModel: ICPModel): Promise<Company[]> {
+  async execute(query: string, icpModel: ICPModel,count:string): Promise<Company[]> {
     let companies: any = [];
 
     try {
@@ -283,7 +283,7 @@ export class CompanyWorkflow {
       console.log(userCompanies)
       const uniqueIDs = [...new Set(userCompanies.map((com: { exaId: any; }) => com.exaId))];
       console.log("excludedCompanies",uniqueIDs)
-     const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery,3,uniqueIDs);
+     const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery,count,uniqueIDs);
      this.saveCompanies("exa-search",exaCompanies)
       console.log(`Found ${exaCompanies.exaCompanies?.length} potential companies`);
       await this.sleep(3000); 
@@ -524,25 +524,39 @@ export class CompanyWorkflow {
         let enr = {...com.intent_enrichment}
         delete com.employees;
         delete com.intent_enrichment;
-        
-        const {data} = await mongoDBService.saveCompanyWithSessionAndICP(this.sessionId, icpModel.id, com);
-        console.log(data)
-        if (employees.length > 0) {
-          await mongoDBService.insertEmployees(employees,data._id);
+        let gtmIntel =null
+        try {
+          const data = await mongoDBService.saveCompanyWithSessionAndICP(
+            this.sessionId, 
+            icpModel.id, 
+            com
+          );
+          
+          console.log(data);
+          
+          if (employees.length > 0) {
+            await mongoDBService.insertEmployees(employees, data._id);
+          }
+          
+           gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
+            new Types.ObjectId(this.sessionId),
+            new Types.ObjectId(icpModel.id),
+            new Types.ObjectId(data._id),
+            enr
+          );
+          console.log(gtmIntel)
+        } catch (error) {
+          console.error('❌ Failed to save company:', error);
+          // Handle error appropriately
         }
-        const gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
-          new Types.ObjectId(this.sessionId),
-          new Types.ObjectId(icpModel.id),
-          new Types.ObjectId(data._id),
-          enr
-        );
-        console.log(gtmIntel)
+    
       }));
 
       
       // Generate final search summary
       const searchSummary = await ollamaService.generateSearchSummary(query, icpModel, companies, companies.length);
       await this.sleep(1000); 
+      await sessionService.updateSessionQuery(this.sessionId, [...query,searchSummary]);
       
       await this.updateSubstep('4.3', {
         status: 'completed',

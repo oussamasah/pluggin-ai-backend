@@ -1,0 +1,45 @@
+{
+  "company": "Tayseer Finance  - التيسير للتمويل",
+  "website": "https://www.tayseerme.com",
+  "analysis_date": "2025-11-23",
+  "requested_signals": [
+    "new_funding_round",
+    "new_office",
+    "hiring_in_finance_department"
+  ],
+  "results": [
+    {
+      "signal": "new_funding_round",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_office",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "hiring_in_finance_department",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 0,
+    "signals_without_evidence": 3,
+    "confidence_score": 0,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

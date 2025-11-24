@@ -387,14 +387,22 @@ public async searchEmployees(
   jobTitles: string[],
   afterId?: string
 ): Promise<EmployeeSearchResponse> {
-  // Build the URL with pagination parameter if provided (only if it's a valid string)
   let url = `/employee_multi_source/search/es_dsl`;
   if (afterId && afterId.trim() !== '') {
     url += `?after=${encodeURIComponent(afterId)}`;
   }
 
-  // Build the Elasticsearch DSL Query using non-nested top-level fields
-  // This is simpler and more reliable than nested queries
+  // Validate company website
+  if (!companyWebsite || companyWebsite.trim() === '') {
+    throw new Error('Company website cannot be empty');
+  }
+
+  // Default to CEO if no job titles provided
+  const effectiveJobTitles = (jobTitles && jobTitles.length > 0) 
+    ? jobTitles 
+    : ['CEO'];
+
+  // Build the Elasticsearch DSL Query
   const esQuery = {
     query: {
       bool: {
@@ -414,7 +422,7 @@ public async searchEmployees(
           // Match any of the job titles using OR logic
           {
             bool: {
-              should: jobTitles.map(title => ({
+              should: effectiveJobTitles.map(title => ({
                 match_phrase: {
                   active_experience_title: title
                 }
@@ -426,11 +434,14 @@ public async searchEmployees(
       }
     }
   };
-await this.saveCompanies(esQuery)
+  await this.saveCompanies(esQuery);
+  
   try {
     console.log(`🔍 Searching employees at: ${companyWebsite}`);
-    console.log(`🎯 Job titles: ${jobTitles.join(', ')}`);
+    console.log(`🎯 Job titles: ${effectiveJobTitles.join(', ')}`);
     console.log(`📄 Request URL: ${url}`);
+    console.log(`📝 Query: ${JSON.stringify(esQuery, null, 2)}`);
+
     
     const response = await this.client.post(url, esQuery);
     
@@ -453,12 +464,14 @@ await this.saveCompanies(esQuery)
     console.error('Response:', JSON.stringify(error.response?.data, null, 2));
     console.error('Request Query:', JSON.stringify(esQuery, null, 2));
     
-    throw new Error(
-      `CoreSignal Employee API failed: ${error.response?.data?.Error || error.message}`
-    );
+    return {
+      results:  [],
+      total_results: 0,
+      total_pages: 0,
+      next_page_after: null
+    } as EmployeeSearchResponse;
   }
 }
-
 /**
  * Alternative method using nested experience query (more complex but more flexible).
  * Use this if you need to search historical positions, not just current ones.
@@ -529,6 +542,8 @@ public async searchEmployeesNested(
   };
 
   try {
+    console.log(`📝 Query: ${JSON.stringify(esQuery, null, 2)}`);
+
     const response = await this.client.post(url, esQuery);
     
     const totalResults = parseInt(response.headers['x-total-results'] || '0', 10);
@@ -545,10 +560,13 @@ public async searchEmployeesNested(
     console.error('❌ CoreSignal Employee API Error:');
     console.error('Status:', error.response?.status);
     console.error('Response:', JSON.stringify(error.response?.data, null, 2));
-    
-    throw new Error(
-      `CoreSignal Employee API failed: ${error.response?.data?.Error || error.message}`
-    );
+    return {
+      results: [],
+      total_results: 0,
+      total_pages: 0,
+      next_page_after: null
+    } as EmployeeSearchResponse;
+  
   }
 }
 
@@ -601,6 +619,8 @@ if(jobTitles.length==0){
   };
 await this.saveCompanies(esQuery)
   try {
+    console.log(`📝 Query: ${JSON.stringify(esQuery, null, 2)}`);
+    
     const response = await this.client.post(url, esQuery);
     
     const totalResults = parseInt(response.headers['x-total-results'] || '0', 3);
@@ -618,9 +638,12 @@ await this.saveCompanies(esQuery)
     console.error('Status:', error.response?.status);
     console.error('Response:', JSON.stringify(error.response?.data, null, 2));
     
-    throw new Error(
-      `CoreSignal Employee API failed: ${error.response?.data?.Error || error.message}`
-    );
+    return {
+      results: [],
+      total_results: 0,
+      total_pages: 0,
+      next_page_after: null
+    } as EmployeeSearchResponse;
   }
 }
 
