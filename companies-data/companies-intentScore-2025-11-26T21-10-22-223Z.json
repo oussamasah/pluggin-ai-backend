@@ -1,0 +1,40 @@
+{
+  "score": 30,
+  "reason": "Emircom currently exhibits minimal intent based on the available signals. The analysis revealed one strong signal from an older partnership with Cisco, but no recent activity related to new offices or department expansions. The reliance on outdated information significantly lowers the overall intent score. The average confidence level remains low due to the quality of the evidence being poor across the board.",
+  "factors": [
+    {
+      "signal": "new_office",
+      "score": 0,
+      "impact": "low",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    },
+    {
+      "signal": "increase_in_sales_department",
+      "score": 0,
+      "impact": "low",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    },
+    {
+      "signal": "new_partnership",
+      "score": 60,
+      "impact": "medium",
+      "evidence_quality": "fair",
+      "original_score": 60,
+      "confidence": 0.3
+    }
+  ],
+  "confidence": "low",
+  "strategic_insights": [
+    "The lack of recent tangible signals indicates a period of stagnation.",
+    "While the historical strength of the Cisco partnership offers potential, the absence of recent engagement is concerning."
+  ],
+  "timing_recommendation": "monitor",
+  "risk_factors": [
+    "All signals with no recent developments may indicate inertia in business activities and strategic planning.",
+    "Dependence on a single partnership as a signal may not reflect the full operational health of the company."
+  ]
+}

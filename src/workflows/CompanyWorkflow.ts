@@ -113,9 +113,11 @@ export class CompanyWorkflow {
 
     try {
       const coreSignal = new CoreSignalService();
-
+        let session = await sessionService.getSession(this.sessionId);
+        let queries = session?.query;
+        queries.push("CHAT_USER: "+query)
       // Update session query in database
-      await sessionService.updateSessionQuery(this.sessionId, [query]);
+      await sessionService.updateSessionQuery(this.sessionId, queries);
 
       // PHASE 1: Dynamic ICP Discovery
       await this.updateStatus({
@@ -287,7 +289,35 @@ export class CompanyWorkflow {
      this.saveCompanies("exa-search",exaCompanies)
       console.log(`Found ${exaCompanies.exaCompanies?.length} potential companies`);
       await this.sleep(3000); 
-    
+      if(exaCompanies.exaCompanies.length == 0){
+        queries.push("CHAT_ASSISTANT: "+`**Search Results: 0 Companies Found**
+
+          Your current ICP configuration may be too restrictive for available data. Here's what we recommend:
+          
+          🎯 **ICP Refinement Tips:**
+          - Industry: Try adding adjacent verticals
+          - Size: Consider expanding employee count range
+          - Location: Include more regions or remove geographic limits
+          - Keywords: Use more general terms first, then narrow down
+          
+          *Tip: Start broad and gradually refine based on initial results.*`)
+        await sessionService.updateSessionQuery(this.sessionId, queries);
+              // FINAL: Complete workflow
+        console.log('🎉No company found');
+        await this.sendSearchComplete([], 0, `**Search Results: 0 Companies Found**
+
+Your current ICP configuration may be too restrictive for available data. Here's what we recommend:
+
+🎯 **ICP Refinement Tips:**
+- Industry: Try adding adjacent verticals
+- Size: Consider expanding employee count range
+- Location: Include more regions or remove geographic limits
+- Keywords: Use more general terms first, then narrow down
+
+*Tip: Start broad and gradually refine based on initial results.*`);
+  
+        return [];
+      }
       await this.updateSubstep('1.2', {
         status: 'completed',
         completedAt: new Date(),
@@ -556,7 +586,8 @@ export class CompanyWorkflow {
       // Generate final search summary
       const searchSummary = await ollamaService.generateSearchSummary(query, icpModel, companies, companies.length);
       await this.sleep(1000); 
-      await sessionService.updateSessionQuery(this.sessionId, [...query,searchSummary]);
+      queries.push("CHAT_ASSISTANT: "+searchSummary)
+      await sessionService.updateSessionQuery(this.sessionId, queries);
       
       await this.updateSubstep('4.3', {
         status: 'completed',

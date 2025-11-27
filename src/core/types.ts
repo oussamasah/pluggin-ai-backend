@@ -88,7 +88,7 @@ export interface Company {
     id: string;
     name: string;
     createdAt: Date;
-    query: string;
+    query: any;
     resultsCount: number;
     companies?: Company[];
     searchStatus?: SearchStatus;
@@ -158,6 +158,8 @@ export interface Company {
   }
   
   export interface ICPConfig {
+    companySize: string;
+    locations: any;
     modelName: string
     industries: string[]
     geographies: string[]

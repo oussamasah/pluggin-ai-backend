@@ -1,0 +1,94 @@
+{
+  "company": "Sedin Technologies",
+  "website": "https://www.sedintechnologies.com",
+  "analysis_date": "2025-11-26",
+  "requested_signals": [
+    "new_office",
+    "increase_in_sales_department",
+    "new_partnership"
+  ],
+  "results": [
+    {
+      "signal": "new_office",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "increase_in_sales_department",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_partnership",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNa1lKVHE2Yk82Xzl2Si1qSE12VEJDV25MenVmdUY4NEJIcWwyeHVScEtGVVhHRXlibUtjNF9xbTBOaTRFVF9IQ3Fyb0RxU3RmYXVxWWJ5WXV0b3FtQ2k2VVlTSlNBbi16UzZndDlIOW1GRFdDTFpUY0JjeXJyOVBYaXI3cmpoZnN2b05GV2ZrdEtDNE9RMkhuOFBERnJ2Zw?oc=5",
+          "date": "Sat, 11 Oct 2025 07:00:00 GMT",
+          "summary": "Infobip Redefines Engagement With Global Partnerships - BW Businessworld - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNa1lKVHE2Yk82Xzl2Si1qSE12VEJDV25MenVmdUY4NEJIcWwyeHVScEtGVVhHRXlibUtjNF9xbTBOaTRFVF9IQ3Fyb0RxU3RmYXVxWWJ5WXV0b3FtQ2k2VVlTSlNBbi16UzZndDlIOW...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSUhVMjVSN19DU3llWEdtdFRlNE9pMno0NDc1QU9xSThqb0pYV3k1ZFZPSzA4OENjNTREbExQclc1eFBjTkx2alhzclpwLW1paTBjdDJkSkxnRS1CMjdrbUIteVpJY1lGZHZuVUc4eWZyYnpNeER1bkNiMXRnOXI2dURuR3lnbHNQdU56V2dvMkk3SXhzVlFYbXVNd1A?oc=5",
+          "date": "Tue, 28 Jun 2022 07:00:00 GMT",
+          "summary": "Daniel and Henrik Sedin had a true Hall of Fame partnership - Yahoo - <a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQSUhVMjVSN19DU3llWEdtdFRlNE9pMno0NDc1QU9xSThqb0pYV3k1ZFZPSzA4OENjNTREbExQclc1eFBjTkx2alhzclpwLW1paTBjdDJkSkxnRS1CMjdrbUIteVpJY1lGZHZuVUc4eW...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOY2R0MWpwNW5HTWM5TnJ2c1B4amxRQUJ2c2xxd2YxbWR5Q0ZNX052a01DRXgxbUExVUUyS2VMaDlmejNhWFg2YkE4QktGSlJFWjVUWGhwSnlmcnlxd3pTMGNLNmg1U3lSR3ZMM1lXV1NKS2FfbngtOUhISFhWc0dOZWRQOGNNRnk1ZFNvdEszVnRQSlVMVk9nUmg3RTR1ZVY1OVJld0JVT2pwcmx3MVJz?oc=5",
+          "date": "Fri, 18 Nov 2022 08:00:00 GMT",
+          "summary": "Groups request stronger collaboration among major players to foster MSMEs growth - MSME Africa - <a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOY2R0MWpwNW5HTWM5TnJ2c1B4amxRQUJ2c2xxd2YxbWR5Q0ZNX052a01DRXgxbUExVUUyS2VMaDlmejNhWFg2YkE4QktGSlJFWjVUWGhwSnlmcnlxd3pTMGNLNmg1U3lSR3ZMM1lXV1...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNa1lKVHE2Yk82Xzl2Si1qSE12VEJDV25MenVmdUY4NEJIcWwyeHVScEtGVVhHRXlibUtjNF9xbTBOaTRFVF9IQ3Fyb0RxU3RmYXVxWWJ5WXV0b3FtQ2k2VVlTSlNBbi16UzZndDlIOW1GRFdDTFpUY0JjeXJyOVBYaXI3cmpoZnN2b05GV2ZrdEtDNE9RMkhuOFBERnJ2Zw?oc=5",
+          "date": "Sat, 11 Oct 2025 07:00:00 GMT",
+          "summary": "Infobip Redefines Engagement With Global Partnerships - BW Businessworld - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNa1lKVHE2Yk82Xzl2Si1qSE12VEJDV25MenVmdUY4NEJIcWwyeHVScEtGVVhHRXlibUtjNF9xbTBOaTRFVF9IQ3Fyb0RxU3RmYXVxWWJ5WXV0b3FtQ2k2VVlTSlNBbi16UzZndDlIOW...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOY2R0MWpwNW5HTWM5TnJ2c1B4amxRQUJ2c2xxd2YxbWR5Q0ZNX052a01DRXgxbUExVUUyS2VMaDlmejNhWFg2YkE4QktGSlJFWjVUWGhwSnlmcnlxd3pTMGNLNmg1U3lSR3ZMM1lXV1NKS2FfbngtOUhISFhWc0dOZWRQOGNNRnk1ZFNvdEszVnRQSlVMVk9nUmg3RTR1ZVY1OVJld0JVT2pwcmx3MVJz?oc=5",
+          "date": "Fri, 18 Nov 2022 08:00:00 GMT",
+          "summary": "Groups request stronger collaboration among major players to foster MSMEs growth - MSME Africa - <a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOY2R0MWpwNW5HTWM5TnJ2c1B4amxRQUJ2c2xxd2YxbWR5Q0ZNX052a01DRXgxbUExVUUyS2VMaDlmejNhWFg2YkE4QktGSlJFWjVUWGhwSnlmcnlxd3pTMGNLNmg1U3lSR3ZMM1lXV1...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNa1lKVHE2Yk82Xzl2Si1qSE12VEJDV25MenVmdUY4NEJIcWwyeHVScEtGVVhHRXlibUtjNF9xbTBOaTRFVF9IQ3Fyb0RxU3RmYXVxWWJ5WXV0b3FtQ2k2VVlTSlNBbi16UzZndDlIOW1GRFdDTFpUY0JjeXJyOVBYaXI3cmpoZnN2b05GV2ZrdEtDNE9RMkhuOFBERnJ2Zw?oc=5",
+          "date": "Sat, 11 Oct 2025 07:00:00 GMT",
+          "summary": "Infobip Redefines Engagement With Global Partnerships - BW Businessworld - <a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNa1lKVHE2Yk82Xzl2Si1qSE12VEJDV25MenVmdUY4NEJIcWwyeHVScEtGVVhHRXlibUtjNF9xbTBOaTRFVF9IQ3Fyb0RxU3RmYXVxWWJ5WXV0b3FtQ2k2VVlTSlNBbi16UzZndDlIOW...",
+          "confidence": 0.3,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 6 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 1,
+    "signals_without_evidence": 2,
+    "confidence_score": 0.3,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

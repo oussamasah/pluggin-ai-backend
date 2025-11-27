@@ -168,7 +168,8 @@ export class ExaService {
           return { exaCompanies: companies, websetId: websetId };
         } catch (error) {
           console.error('Exa search error:', error);
-          throw error;
+          return { exaCompanies: [], websetId: null };
+
         }
       },
       'searchCompanies',

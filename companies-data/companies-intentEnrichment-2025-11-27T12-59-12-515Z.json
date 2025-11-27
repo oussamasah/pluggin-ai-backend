@@ -1,0 +1,78 @@
+{
+  "company": "PIT Solution Private Limited",
+  "website": "https://www.pitsolutions.com",
+  "analysis_date": "2025-11-27",
+  "requested_signals": [
+    "new_office",
+    "increase_in_sales_department",
+    "new_partnership"
+  ],
+  "results": [
+    {
+      "signal": "new_office",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "increase_in_sales_department",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_partnership",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZnlYckZTdnNXNkhQNDEteW5KcldaTG9scTd5dW9veEFHSDVEVFNKU2xoeEVSWXBnSE94NHU2OEg4MGNEUmVJTm1pbVhZRDRfdFZVYnZlNnNGdURLbFJsZFVKM1pubjZueHNnTjlGM2diU2FVeW5LVW1tdE9fTE5JMjNMeDZGYWdocm5yMVF1MFJlVWtNV3dVUEc4bWRTZHJRRExMcFBUMFU?oc=5",
+          "date": "Tue, 11 Nov 2025 14:13:25 GMT",
+          "summary": "LSEG Announces Strategic Partnership with Nasdaq(R) - York Dispatch - <a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZnlYckZTdnNXNkhQNDEteW5KcldaTG9scTd5dW9veEFHSDVEVFNKU2xoeEVSWXBnSE94NHU2OEg4MGNEUmVJTm1pbVhZRDRfdFZVYnZlNnNGdURLbFJsZFVKM1pubjZueHNnTjlGM2...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNEdxd3JyWnNjaDF6c2h0di1SSXYwa1FpSHc4MDNPaVhsXzZUXzJtV0tFWkxaMm41UVBKazd6WkliZjFadVpWMFo1WkZLbWR5cE1ISHhITGFKcWFpZ2pCN1o4aDI3WGtHRUs4QjdQWXlaV2N1QjRkNmtHTnR5Y0RySmkxRkV0RFVXYmtHU0t3c29DZzlSV3J0bzc5NkNpaHlCUktUYjQ3MHE3a2MtaTRLMw?oc=5",
+          "date": "Thu, 06 Nov 2025 08:00:00 GMT",
+          "summary": "LSEG Announces Strategic Partnership with Nasdaq(R) - Daytona Beach News-Journal - <a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPNEdxd3JyWnNjaDF6c2h0di1SSXYwa1FpSHc4MDNPaVhsXzZUXzJtV0tFWkxaMm41UVBKazd6WkliZjFadVpWMFo1WkZLbWR5cE1ISHhITGFKcWFpZ2pCN1o4aDI3WGtHRUs4QjdQWX...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOVXVDSURHYjd1Y2VoOWc4Z3Fnd1VBVDg5MEY3bzZGVlVHaVdjN1B3VGVZeHAwaHFYTE9qR3Y5Z2dCZEtuLUg0UUxsaXc5VXVTQTY5QzFRTzFZbjFEMzM4Y2ZGTVg4UjhfOHo1OEo0T09rRFo2eGR3ZzJFaDllVlZKeW1nblhmcU8xRjhIVkhhWHJPempONWZ5Z0w1aWVqejcyeE5lbnZFTWVMcEhEM0NZZnRFTmE3STZiMEpBWFR1T0p3a1JhdHVJd1BWTldXN0xPSVZhV2Q0c9IB1wFBVV95cUxOVXVDSURHYjd1Y2VoOWc4Z3Fnd1VBVDg5MEY3bzZGVlVHaVdjN1B3VGVZeHAwaHFYTE9qR3Y5Z2dCZEtuLUg0UUxsaXc5VXVTQTY5QzFRTzFZbjFEMzM4Y2ZGTVg4UjhfOHo1OEo0T09rRFo2eGR3ZzJFaDllVlZKeW1nblhmcU8xRjhIVkhhWHJPempONWZ5Z0w1aWVqejcyeE5lbnZFTWVMcEhEM0NZZnRFTmE3STZiMEpBWFR1T0p3a1JhdHVJd1BWTldXN0xPSVZhV2Q0cw?oc=5",
+          "date": "Mon, 24 Mar 2025 07:00:00 GMT",
+          "summary": "PATH Recharge launches India’s premiere way-side-amenity in collaboration with Village Food Courts - TheWire.in - <a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxOVXVDSURHYjd1Y2VoOWc4Z3Fnd1VBVDg5MEY3bzZGVlVHaVdjN1B3VGVZeHAwaHFYTE9qR3Y5Z2dCZEtuLUg0UUxsaXc5VXVTQTY5QzFRTzFZbjFEMzM4Y2ZGTVg4UjhfOHo1OEo0T0...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd3hJelp0RlBKMHY1eFg2RGRtM19aRTQwOW5pZ3lfWVR1Q0hoZWhGcTcxa0J0VlBBWXBPa2k4VV92b0oxVkFzbUFQQzEyRVg5RllqWFNJRzZjMkZRSXVVWFZEeFR6SUJRSjB6QjB5MHRVbzNxRVVXRk5UcmtHTXd0NkpsWDZQajYxSE1nX2Zyb0o?oc=5",
+          "date": "Thu, 19 Aug 2021 07:00:00 GMT",
+          "summary": "Bosch, M&M in collaboration for XUV700 SUV - Deccan Herald - <a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQd3hJelp0RlBKMHY1eFg2RGRtM19aRTQwOW5pZ3lfWVR1Q0hoZWhGcTcxa0J0VlBBWXBPa2k4VV92b0oxVkFzbUFQQzEyRVg5RllqWFNJRzZjMkZRSXVVWFZEeFR6SUJRSjB6QjB5MH...",
+          "confidence": 0.3,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 4 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 1,
+    "signals_without_evidence": 2,
+    "confidence_score": 0.3,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

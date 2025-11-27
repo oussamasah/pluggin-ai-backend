@@ -67,81 +67,78 @@ export class MongoDBService {
       return null;
     }
   }
-  async getUserSessions(userId: string): Promise<SearchSession[]> {
-    const MAX_RETRIES = 3
-    const RETRY_DELAY = 1000
-  
-    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-      try {
-        console.log(`🔍 Database query attempt ${attempt} for user ${userId}`)
-        
-        const sessions = await Session.find({ userId })
-          .populate('icpModelId')
-          .sort({ createdAt: -1 })
-          .lean()
-  
-        console.log(`🔍 Found ${sessions.length} sessions`)
-  
-        if (!sessions || sessions.length === 0) {
-          console.log('🔍 No sessions found for user')
-          return []
-        }
-  
-        const sessionIds = sessions.map((s: any) => s._id)
-        console.log('🔍 Session IDs:', sessionIds)
-  
-        // Add timeout to prevent hanging queries
-        const companiesPromise = Company.find({ 
-          sessionId: { $in: sessionIds } 
-        })
-        .populate('employees')
-        .lean()
-        .maxTimeMS(30000) // 30 second timeout
-  
-        const [companies, substeps] = await Promise.all([
-          companiesPromise,
-          SessionSubstep.find({ sessionId: { $in: sessionIds } }).lean()
-        ])
-  
-        console.log(`🔍 Found ${companies.length} companies across all sessions`)
-  
-        // Debug: Check if companies have data
-        companies.forEach((company, index) => {
-          console.log(`🔍 Company ${index + 1}:`, {
-            name: company.name,
-            hasEmployees: !!company.employees,
-            employeeCount: company.employees?.length,
-            hasScoringMetrics: !!company.scoringMetrics,
-            hasIntentSignals: !!company.intentSignals
-          })
-        })
-  
-        const result = sessions.map((session: any) => 
-          this.mapSessionToType(
-            session,
-            companies.filter(c => c.sessionId.toString() === session._id.toString()),
-            substeps.filter(s => s.sessionId.toString() === session._id.toString())
-          )
-        )
-  
-        console.log('🔍 Successfully mapped sessions with companies')
-        return result
-  
-      } catch (error) {
-        console.error(`❌ Database query attempt ${attempt} failed:`, error)
-        
-        if (attempt === MAX_RETRIES) {
-          throw new Error(`Failed to fetch user sessions after ${MAX_RETRIES} attempts: ${error.message}`)
-        }
-        
-        // Wait before retrying
-        await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * attempt))
-      }
-    }
-    
-    return []
-  }
+// In MongoDBService.ts - update getUserSessions method
+async getUserSessions(userId: string): Promise<SearchSession[]> {
+  const MAX_RETRIES = 3
+  const RETRY_DELAY = 1000
 
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      console.log(`🔍 Database query attempt ${attempt} for user ${userId}`)
+      
+      const sessions = await Session.find({ userId })
+        .populate('icpModelId')
+        .sort({ createdAt: -1 })
+        .lean()
+
+      console.log(`🔍 Found ${sessions.length} sessions`)
+
+      if (!sessions || sessions.length === 0) {
+        console.log('🔍 No sessions found for user')
+        return []
+      }
+
+      const sessionIds = sessions.map((s: any) => s._id)
+      console.log('🔍 Session IDs:', sessionIds)
+
+      // Add timeout to prevent hanging queries
+      const companiesPromise = Company.find({ 
+        sessionId: { $in: sessionIds } 
+      })
+      .populate('employees')
+      .lean()
+      .maxTimeMS(30000) // 30 second timeout
+
+      const companies = await companiesPromise
+
+      console.log(`🔍 Found ${companies.length} companies across all sessions`)
+
+      // Debug: Check if companies have data
+      companies.forEach((company, index) => {
+        console.log(`🔍 Company ${index + 1}:`, {
+          name: company.name,
+          hasEmployees: !!company.employees,
+          employeeCount: company.employees?.length,
+          hasScoringMetrics: !!company.scoringMetrics,
+          hasIntentSignals: !!company.intentSignals
+        })
+      })
+
+      const result = sessions.map((session: any) => 
+        this.mapSessionToType(
+          session,
+          companies.filter(c => c.sessionId.toString() === session._id.toString()),
+          session.searchStatus?.substeps || [] // Get substeps from session document
+        )
+      )
+
+      console.log('🔍 Successfully mapped sessions with companies and substeps')
+      return result
+
+    } catch (error) {
+      console.error(`❌ Database query attempt ${attempt} failed:`, error)
+      
+      if (attempt === MAX_RETRIES) {
+        throw new Error(`Failed to fetch user sessions after ${MAX_RETRIES} attempts: ${error.message}`)
+      }
+      
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * attempt))
+    }
+  }
+  
+  return []
+}
   async updateSessionQuery(sessionId: string, query: string[]): Promise<SearchSession> {
     const session = await Session.findByIdAndUpdate(
       sessionId,
@@ -683,40 +680,88 @@ async saveCompanyWithSessionAndICP(
   // SUBSTEP MANAGEMENT
   // =====================================================
 
-  async updateSubstep(sessionId: string, substep: SubStep): Promise<void> {
-    await SessionSubstep.findOneAndUpdate(
-      { 
-        sessionId: new Types.ObjectId(sessionId),
-        stepId: substep.id 
-      },
-      {
-        sessionId: new Types.ObjectId(sessionId),
-        stepId: substep.id,
-        name: substep.name,
-        description: substep.description,
-        status: substep.status,
-        category: substep.category,
-        priority: substep.priority,
-        tools: substep.tools,
-        message: substep.message,
-        progress: substep.progress,
-        startedAt: substep.startedAt,
-        completedAt: substep.completedAt
-      },
-      { upsert: true, new: true }
-    );
-  }
+// In MongoDBService.ts - replace the updateSubstep method
+async updateSubstep(sessionId: string, substep: SubStep): Promise<void> {
+  try {
+    console.log('🔄 MongoDBService.updateSubstep called:', { sessionId, substep });
 
-  async getSessionSubsteps(sessionId: string): Promise<SubStep[]> {
-    const substeps = await SessionSubstep.find({ 
-      sessionId: new Types.ObjectId(sessionId) 
-    })
-      .sort('stepId')
+    // Get the current session to check existing substeps
+    const session = await Session.findById(sessionId);
+    if (!session) {
+      throw new Error(`Session ${sessionId} not found`);
+    }
+
+    console.log('📊 Current session substeps:', session.searchStatus?.substeps);
+
+    // Get current substeps array or initialize empty array
+    const currentSubsteps = session.searchStatus?.substeps || [];
+    
+    // Find if substep already exists
+    const existingIndex = currentSubsteps.findIndex((s: any) => s.id === substep.id);
+    
+    let updatedSubsteps: any[];
+    if (existingIndex >= 0) {
+      // Update existing substep
+      updatedSubsteps = currentSubsteps.map((s: any, index: number) => 
+        index === existingIndex ? { ...s.toObject?.() || s, ...substep } : s
+      );
+      console.log(`📝 Updated existing substep at index ${existingIndex}`);
+    } else {
+      // Add new substep
+      updatedSubsteps = [...currentSubsteps, substep];
+      console.log('📝 Added new substep');
+    }
+
+    console.log('📊 Updated substeps array:', updatedSubsteps);
+
+    // Update the session with the new substeps array
+    const result = await Session.findByIdAndUpdate(
+      sessionId,
+      { 
+        $set: { 
+          'searchStatus.substeps': updatedSubsteps,
+          'updatedAt': new Date()
+        } 
+      },
+      { new: true }
+    );
+
+    if (!result) {
+      throw new Error('Failed to update session substeps');
+    }
+
+    console.log('✅ MongoDBService.updateSubstep completed successfully');
+    console.log('✅ Updated session searchStatus:', result.searchStatus);
+    
+  } catch (error) {
+    console.error('❌ Error in MongoDBService.updateSubstep:', error);
+    throw error;
+  }
+}
+
+// In MongoDBService.ts - enhance the getSession method
+async getSession(sessionId: string): Promise<SearchSession | null> {
+  try {
+    const session = await Session.findById(sessionId)
+      .populate('icpModelId')
       .lean();
 
-    return substeps.map(this.mapSubstepToType);
-  }
+    if (!session) return null;
 
+    // Get related data
+    const companies = await Company.find({ sessionId: session._id }).lean();
+    
+    // Substeps are now stored in the session document itself, no need to query SessionSubstep
+    const substeps = session.searchStatus?.substeps || [];
+
+    console.log('🔍 getSession - substeps from session:', substeps);
+
+    return this.mapSessionToType(session, companies, substeps);
+  } catch (error) {
+    console.error('Error fetching session:', error);
+    return null;
+  }
+}
   // =====================================================
   // UTILITY/MAPPING METHODS
   // =====================================================

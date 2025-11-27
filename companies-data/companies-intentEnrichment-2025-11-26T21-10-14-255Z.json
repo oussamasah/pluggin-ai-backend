@@ -1,0 +1,70 @@
+{
+  "company": "Emircom",
+  "website": "https://www.emircom.com",
+  "analysis_date": "2025-11-26",
+  "requested_signals": [
+    "new_office",
+    "increase_in_sales_department",
+    "new_partnership"
+  ],
+  "results": [
+    {
+      "signal": "new_office",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "increase_in_sales_department",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_partnership",
+      "evidence": [
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEVYVWVCTkJ5VEtOWmdKNnZDMllkQS04Z3R3cEJCNXcxaGRCazZveG5pd3FFX0Vyb25ZaDQ5RTFrZzFUc1dGNU8tclNCY243UjNoTGVTaDFLTTBjY0VfZW11aVNya1VUZGZkU2ZMRVFLNVVLVDZZSTMwOW12eDZPU3VFckpKQTYweXI4cHNSM1NxMFI0cmd3eUI1T1hvWFZ4M3pzU0dQMGFIWG1Xci1LYk8xb00?oc=5",
+          "date": "Sun, 21 Apr 2019 07:00:00 GMT",
+          "summary": "Emircom celebrates success of long-standing partnership with Cisco - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEVYVWVCTkJ5VEtOWmdKNnZDMllkQS04Z3R3cEJCNXcxaGRCazZveG5pd3FFX0Vyb25ZaDQ5RTFrZzFUc1dGNU8tclNCY243UjNoTGVTaDFLTTBjY0VfZW11aVNya1VUZGZkU2ZMRV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEVYVWVCTkJ5VEtOWmdKNnZDMllkQS04Z3R3cEJCNXcxaGRCazZveG5pd3FFX0Vyb25ZaDQ5RTFrZzFUc1dGNU8tclNCY243UjNoTGVTaDFLTTBjY0VfZW11aVNya1VUZGZkU2ZMRVFLNVVLVDZZSTMwOW12eDZPU3VFckpKQTYweXI4cHNSM1NxMFI0cmd3eUI1T1hvWFZ4M3pzU0dQMGFIWG1Xci1LYk8xb00?oc=5",
+          "date": "Sun, 21 Apr 2019 07:00:00 GMT",
+          "summary": "Emircom celebrates success of long-standing partnership with Cisco - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEVYVWVCTkJ5VEtOWmdKNnZDMllkQS04Z3R3cEJCNXcxaGRCazZveG5pd3FFX0Vyb25ZaDQ5RTFrZzFUc1dGNU8tclNCY243UjNoTGVTaDFLTTBjY0VfZW11aVNya1VUZGZkU2ZMRV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        },
+        {
+          "source": "Google News",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEVYVWVCTkJ5VEtOWmdKNnZDMllkQS04Z3R3cEJCNXcxaGRCazZveG5pd3FFX0Vyb25ZaDQ5RTFrZzFUc1dGNU8tclNCY243UjNoTGVTaDFLTTBjY0VfZW11aVNya1VUZGZkU2ZMRVFLNVVLVDZZSTMwOW12eDZPU3VFckpKQTYweXI4cHNSM1NxMFI0cmd3eUI1T1hvWFZ4M3pzU0dQMGFIWG1Xci1LYk8xb00?oc=5",
+          "date": "Sun, 21 Apr 2019 07:00:00 GMT",
+          "summary": "Emircom celebrates success of long-standing partnership with Cisco - ZAWYA - <a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOTEVYVWVCTkJ5VEtOWmdKNnZDMllkQS04Z3R3cEJCNXcxaGRCazZveG5pd3FFX0Vyb25ZaDQ5RTFrZzFUc1dGNU8tclNCY243UjNoTGVTaDFLTTBjY0VfZW11aVNya1VUZGZkU2ZMRV...",
+          "confidence": 0.3,
+          "data_source": "news"
+        }
+      ],
+      "found": true,
+      "reasoning": "Found 3 relevant evidence pieces"
+    }
+  ],
+  "summary": {
+    "total_signals": 3,
+    "signals_with_evidence": 1,
+    "signals_without_evidence": 2,
+    "confidence_score": 0.3,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

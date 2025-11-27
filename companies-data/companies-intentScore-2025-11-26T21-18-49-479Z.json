@@ -1,0 +1,40 @@
+{
+  "score": 60,
+  "reason": "The analysis of Sedin Technologies shows strong intent primarily driven by the new partnership signal. While the partnership signal indicates a clear business momentum and growth strategy, the lack of other significant signals (new office and increase in sales department) reduces overall intent scoring. The confidence level in sources is considered fair, impacting the reliability of the assessment.",
+  "factors": [
+    {
+      "signal": "new_partnership",
+      "score": 87,
+      "impact": "high",
+      "evidence_quality": "fair",
+      "original_score": 87,
+      "confidence": 0.3
+    },
+    {
+      "signal": "new_office",
+      "score": 0,
+      "impact": "low",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    },
+    {
+      "signal": "increase_in_sales_department",
+      "score": 0,
+      "impact": "medium",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "Sedin Technologies demonstrates potential for growth through partnerships, indicating possible future expansions or product developments.",
+    "The current lack of diverse signals suggests the need for strategic tracking of additional development areas such as hiring or product launches."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Dependence on a single high-quality signal (partnership) can lead to overestimation of intent.",
+    "Limited evidence from other signals may hinder a more holistic understanding of the company's strategic direction."
+  ]
+}
