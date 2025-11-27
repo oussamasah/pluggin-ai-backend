@@ -528,8 +528,7 @@ async getSearchStatus(sessionId: string): Promise<SearchStatus | null> {
 
   
 async  insertEmployees(employeesData: any[], targetCompanyId: any) {
-  console.log("--------------------------------------")
-  console.log(employeesData)
+
   if( !employeesData) return;
   const employeesToInsert = employeesData.map(employee => ({
       id: employee.id,

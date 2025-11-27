@@ -282,7 +282,7 @@ export class CompanyWorkflow {
         startedAt: new Date()
       });
       const userCompanies = await mongoDBService.getCompaniesByUserId(this.userId);
-      console.log(userCompanies)
+    
       const uniqueIDs = [...new Set(userCompanies.map((com: { exaId: any; }) => com.exaId))];
       console.log("excludedCompanies",uniqueIDs)
      const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery,count,uniqueIDs);
@@ -368,16 +368,8 @@ Your current ICP configuration may be too restrictive for available data. Here's
       });
       
       for (const c of companies) {
-        console.log('Exa enrichment data:', c.exa_enrichement); // Debug log
         
         // Add null checking before accessing exa_enrichement
-        if (c.exa_enrichement && c.exa_enrichement.length > 0) {
-          console.log('Exa enrichment properties:', c.exa_enrichement[0].properties);
-          console.log('Exa enrichment evaluations:', c.exa_enrichement[0].evaluations);
-        } else {
-          console.log('No exa_enrichment data available for company:', c.name);
-        }
-      
         const fitscore = await ollamaService.scoreCompanyFit(c, icpModel.config);
         c.scoring_metrics = c.scoring_metrics ?? {};
         c.scoring_metrics.fit_score = fitscore;
@@ -488,8 +480,6 @@ Your current ICP configuration may be too restrictive for available data. Here's
             companyUrl: c.website || '',
             signals: icpModel.config.buyingTriggers
           };
-          console.log("signals enrichement ==> ",icpModel.config.buyingTriggers)
-          console.log("request ==> ",request)
          
           // Detect intents for a company
           const intentEnrichment = await detectIntentWithEvidence(
@@ -498,7 +488,6 @@ Your current ICP configuration may be too restrictive for available data. Here's
             icpModel.config.buyingTriggers
           );
           
-          console.log(intentEnrichment.summary);
           //const intentEnrichment = await perplexityService.getIntentEnrichment(request);
           this.saveCompanies("intentEnrichment",intentEnrichment)
           c.intent_enrichment = intentEnrichment;

@@ -131,8 +131,6 @@ export class ExaService {
             }));
           }
           
-          console.log('--- Search Body Contents ---');
-          console.log(JSON.stringify(searchBody, null, 2));
           
           const response = await fetch(`${this.baseUrl}/websets/v0/websets`, {
             method: 'POST',

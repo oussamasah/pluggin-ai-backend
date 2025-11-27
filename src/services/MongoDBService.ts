@@ -636,8 +636,7 @@ async saveCompanyWithSessionAndICP(
       userId: modelData.userId,
       config: modelData.config
     });
-    console.log("icp created ",icpModel)
-
+ 
     return this.mapIcpModelToType(icpModel);
   }
 

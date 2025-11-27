@@ -320,8 +320,7 @@ const companies = await CompanyModel.find(filter)
 })
 .populate('gtmIntelligence')
 .lean({ virtuals: true });
-console.log("companies")
-console.log(companies)
+
       // Get available filters for frontend
       const availableFilters = await getAvailableFilters(sessionIds);
 
@@ -345,8 +344,7 @@ console.log(companies)
         },
         filters: availableFilters
       };
-console.log("fetching data")
-console.log(response)
+
       reply.send(response);
     } catch (error) {
       console.error('Error fetching companies:', error);
