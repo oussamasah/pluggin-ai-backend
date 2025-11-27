@@ -101,19 +101,7 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
 
       const companies = await companiesPromise
 
-      console.log(`🔍 Found ${companies.length} companies across all sessions`)
-
-      // Debug: Check if companies have data
-      companies.forEach((company, index) => {
-        console.log(`🔍 Company ${index + 1}:`, {
-          name: company.name,
-          hasEmployees: !!company.employees,
-          employeeCount: company.employees?.length,
-          hasScoringMetrics: !!company.scoringMetrics,
-          hasIntentSignals: !!company.intentSignals
-        })
-      })
-
+     
       const result = sessions.map((session: any) => 
         this.mapSessionToType(
           session,
@@ -790,15 +778,10 @@ async getSession(sessionId: string): Promise<SearchSession | null> {
     };
   }
   private mapCompanyToType(data: any): CompanyType {
-    console.log('🔍 Raw company data:', data)
+    
     
     // Debug employees data
-    console.log('🔍 Employees data:', {
-      rawEmployees: data.employees,
-      employeeCount: data.employeeCount,
-      isArray: Array.isArray(data.employees),
-      type: typeof data.employees
-    })
+   
   
     // Handle employees data properly
     let employeeCount = data.employeeCount || 0
