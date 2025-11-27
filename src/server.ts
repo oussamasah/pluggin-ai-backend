@@ -41,7 +41,7 @@ async function setupServer() {
   
   await fastify.register(CompaniesController, { prefix: '/api' });
   
-  fastify.get('/health', async () => {
+  fastify.get('/api/health', async () => {
     return { status: 'ok', timestamp: new Date().toISOString() };
   });
 
@@ -57,7 +57,7 @@ async function setupServer() {
     };
   });
 
-  fastify.get('/debug/websocket', async () => {
+  fastify.get('/api/debug/websocket', async () => {
     return wsManager.debugInstance();
   });
 

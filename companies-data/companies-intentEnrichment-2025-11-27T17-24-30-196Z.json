@@ -1,0 +1,38 @@
+{
+  "company": "PKF Al-Bassam",
+  "website": "https://www.pkfalbassam.com",
+  "analysis_date": "2025-11-27",
+  "requested_signals": [
+    "new_product",
+    "new_partnership"
+  ],
+  "results": [
+    {
+      "signal": "new_product",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_partnership",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 0,
+    "signals_without_evidence": 2,
+    "confidence_score": 0,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter",
+      "Company Website",
+      "Company Blog"
+    ]
+  }
+}

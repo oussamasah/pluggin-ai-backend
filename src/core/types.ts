@@ -82,8 +82,11 @@ export interface Company {
   enrichement?:any
   exa_enrichement?:any
 }
-
-  
+export interface WebSocketManagerInterface {
+  broadcastToSession(sessionId: string, message: any): void;
+  debugInstance(): any;
+  // Add other methods your WebSocketManager has
+}
   export interface SearchSession {
     id: string;
     name: string;

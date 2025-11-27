@@ -1,0 +1,87 @@
+{
+  "exaCompanies": [
+    {
+      "id": "witem_01kb35pc37cx7za3jccx7za3jc",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01kb35mcs42x7ywgbz41zctjw2",
+      "websetId": "webset_01kb35mbrmv8y6jv2jdzp9vz94",
+      "properties": {
+        "type": "company",
+        "url": "https://zapsgroup.com",
+        "description": "Management consulting company headquartered in Saudi Arabia; 201-500 employees; provides strategic growth solutions and tailored strategies to local and global institutions across multiple industries, emphasizing innovative approaches and expertise.",
+        "content": "<div><div>\n<h2>About us</h2>\n<p>\nAt ZAPS, we're more than just consultants; we're your strategic partner in growth.\n</p>\n<p>\nWith a deep understanding of the modern business landscape across many industries, we provide innovative solutions and unparalleled expertise to help you advance.\n</p>\n<p>\nOur tailored strategies, combined with cutting-edge technology, empower businesses to navigate challenges and seize opportunities on multiple fronts.\n</p>\n<p>\nWe specialize in serving not only local but global institutions across diverse domains ranging from financial institutions (banks &amp; insurance) to telecoms, to retail, and more, offering solutions and services that address their unique needs and drive growth as well.\n</p>\n<p>\nOur agile framework coupled with client-centricity and extensive partner network, provides us with a wealth of resources and insights, enabling us to deliver the most effective solutions for our clients and their customers.\n</p>\n<p>\n<b>VISION - </b>\nBridging gaps while creating opportunities <br/>\n<b>MISSION -</b> Generate value through meaningful partnerships and efficient technological solutions\n</p>\n</div></div>",
+        "company": {
+          "name": "ZAPS Group",
+          "location": null,
+          "employees": null,
+          "industry": null,
+          "about": "Management consulting company headquartered in Saudi Arabia; 201-500 employees; provides strategic growth solutions and tailored strategies to local and global institutions across multiple industries, emphasizing innovative approaches and expertise.",
+          "logoUrl": "https://zapsgroup.com/images/icons/fav%20icon.png"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has between 201 and 500 employees",
+          "reasoning": "The LinkedIn company profile for ZAPS Group lists its company size as \"201‑500 employees,\" which directly satisfies the criterion of having between 201 and 500 employees. This source is authoritative and recent. While the internal company profile also lists a range of \"201‑500 employees,\" it additionally reports a current headcount of 90, which appears to be an inconsistency; however, the range provided matches the criterion. Other sources (ZoomInfo reports 51‑200, Crunchbase does not specify employees) do not contradict the LinkedIn range. Given the most authoritative and recent evidence, the company meets the employee‑count requirement.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "ZAPS Group - LinkedIn",
+              "snippet": "https://zapsgroup.com/. External link for ZAPS Group. Industry: Strategic Management Services. Company size: 201-500 employees. Headquarters: Riyadh, Central.",
+              "url": "https://www.linkedin.com/company/zaps-group"
+            },
+            {
+              "title": "ZAPS Group",
+              "snippet": "ZAPS is a strategic partner in growth, providing innovative solutions and tailored strategies to local and global institutions, including financial, telecom, ...",
+              "url": "https://zapsgroup.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company is headquartered or primarily operates in the Kingdom of Saudi Arabia (KSA)",
+          "reasoning": "The internal company profile for ZAPS Group (retrieved via company_profile_from_domain) explicitly states that the company is headquartered in Saudi Arabia. This satisfies the criterion that the company is headquartered or primarily operates in the Kingdom of Saudi Arabia. Additional confirmation comes from a search result that lists the company’s headquarters as Saudi Arabia. No conflicting information indicates a different primary location.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "ZAPS Group",
+              "snippet": "ZAPS is a strategic partner in growth, providing innovative solutions and tailored strategies to local and global institutions, including financial, telecom, ...",
+              "url": "https://zapsgroup.com"
+            },
+            {
+              "title": "ZAPS Group - Services & Company Info",
+              "snippet": "ZAPS Group is a leading business consultancy and service provider with headquarters in Saudi Arabia and operations across the UAE, Bahrain, and India.",
+              "url": "https://clutch.co/profile/zaps-group"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in the consulting management industry",
+          "reasoning": "ZAPS Group’s website describes itself as a strategic partner that provides innovative solutions and tailored strategies to institutions across multiple industries, indicating a consulting‑type service model.  The site also states it “serves local and global institutions” and offers “solutions and services that address their unique needs and drive growth,” which aligns with the typical scope of management consulting.  External listings reinforce this: a Clutch profile and a press release both identify ZAPS Group as a “leading business consultancy and service provider.”  These statements collectively show that the company operates in the consulting management industry.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "ZAPS Group",
+              "snippet": "ZAPS is a strategic partner in growth, providing innovative solutions and tailored strategies to local and global institutions, including financial, telecom, ...",
+              "url": "https://zapsgroup.com"
+            },
+            {
+              "title": "ZAPS Group - Services & Company Info - Clutch",
+              "snippet": "ZAPS Group is a leading business consultancy and service provider with headquarters in Saudi Arabia and operations across the UAE, Bahrain, and India.",
+              "url": "https://clutch.co/profile/zaps-group"
+            },
+            {
+              "title": "ZAPS Group ( zapsgroup) - PressReleasePoint",
+              "snippet": "ZAPS Group is a leading business consultancy and service provider with headquarters in Saudi Arabia and operations across the UAE, Bahrain, ...",
+              "url": "https://www.pressreleasepoint.com/user/zapsgroup"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-27T17:27:36.295Z",
+      "updatedAt": "2025-11-27T17:27:36.295Z"
+    }
+  ],
+  "websetId": "webset_01kb35mbrmv8y6jv2jdzp9vz94"
+}

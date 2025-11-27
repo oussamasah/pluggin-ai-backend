@@ -838,7 +838,6 @@ async getSession(sessionId: string): Promise<SearchSession | null> {
       content: ''
     }
   
-    console.log('🔍 Mapped company:', mappedCompany)
     return mappedCompany
   }
   private mapIcpModelToType(data: any): ICPModelType {
