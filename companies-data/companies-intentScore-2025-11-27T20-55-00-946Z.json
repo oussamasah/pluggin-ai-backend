@@ -1,0 +1,32 @@
+{
+  "score": 100,
+  "reason": "The analysis indicates a very high level of intent due to the strong signals from new product launches and partnerships. The evidence indicates significant recent activity, particularly with 322 sources reporting on new products, showcasing the company's alignment with market needs. The strength and recency of these signals contribute to high scoring despite some limitations in confidence due to varying evidence quality.",
+  "factors": [
+    {
+      "signal": "new_product",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "excellent",
+      "original_score": 100,
+      "confidence": 0.5928571428571445
+    },
+    {
+      "signal": "new_partnership",
+      "score": 88,
+      "impact": "medium",
+      "evidence_quality": "good",
+      "original_score": 88,
+      "confidence": 0.34166666666666706
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "The company's robust pipeline of new product launches indicates a proactive growth strategy, positioning it favorably against competitors.",
+    "Recent partnerships may enhance capabilities and market reach, suggesting a strategy to diversify offerings and improve customer value."
+  ],
+  "timing_recommendation": "immediate",
+  "risk_factors": [
+    "Average confidence in partnership sources may indicate potential misinformation or noise in data.",
+    "Dependence on specific news sources could limit the breadth of insights and may not capture all relevant activities."
+  ]
+}

@@ -397,7 +397,7 @@ class WebSocketManager {
       
       if (readyState === WebSocket.OPEN) {
         try {
-          //console.log(`✅ Sending ${message.type} to client: ${clientId}`);
+          console.log(`✅ Sending ${message.type} to client: ${clientId}`);
           client.socket.send(messageStr);
           sentCount++;
         } catch (error) {

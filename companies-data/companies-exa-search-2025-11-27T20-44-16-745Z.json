@@ -1,0 +1,65 @@
+{
+  "exaCompanies": [
+    {
+      "id": "witem_01kb3gyencc9g3kyzcc9g3kyzc",
+      "object": "webset_item",
+      "source": "search",
+      "sourceId": "wsearch_01kb3gw29d549rraqz8a23wkcf",
+      "websetId": "webset_01kb3gw18ept6rqrf4m7w6zbk4",
+      "properties": {
+        "type": "company",
+        "url": "https://gizaarabia.com",
+        "description": "Giza Arabia is a private Information Technology & Services company specializing in digital transformation and systems integration for asset-intensive industries such as telecom, utilities, and oil & gas. With 300 employees and a 61.9% YoY growth, it is headquartered in Saudi Arabia and recently acquired Logical Applications for Business Solutions in August 2024, demonstrating active expansion and strategic growth.",
+        "content": "![Image](https://gizaarabia.com/assets/landing/images/giza-load.gif)",
+        "company": {
+          "name": "Giza Arabia",
+          "location": "undefined, Saudi Arabia",
+          "employees": 300,
+          "industry": "Information Technology & Services",
+          "about": "Giza Arabia a leading digital transformation enabler and systems integrator in the MEA region designs and deploys industry-specific technology solutions for asset-intensive industries such as the Telecoms, Utilities, Oil & Gas, Smart Mobility and other market sectors. \n\nGiza Arabia helps its clients streamline their operations and businesses through their portfolio of solutions, managed services, and consultancy practice. Giza Arabia’s team of over 600 professionals present in the KSA, and serving over 3 countries, allow the Company to service an ever-increasing client base.\n\nGiza Arabia covers major economical sectors in the Saudi market and plans to further expand services offered to more sectors, with mega projects implemented in various sectors.",
+          "logoUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQHqOjFa7o63Rw/company-logo_200_200/company-logo_200_200/0/1663687524796/giza_arabia_logo?e=2147483647&v=beta&t=XSlksohdQ7nouKMSlV1RY4JtpsUwRoLoVBzIEp3iWGk"
+        }
+      },
+      "evaluations": [
+        {
+          "criterion": "Company has announced or completed at least one of the following activities in 2024 or 2025: funding round, hiring initiative, business expansion, partnership, or acquisition",
+          "reasoning": "Giza Arabia announced the acquisition of a majority stake in Logical Applications for Business Solutions (LABS) in August 2024.  Telecompaper reported that the company “has successfully acquired a majority stake in LABS” on 12 Aug 2024, and mnation.uk confirmed the transaction on 15 Aug 2024.  This acquisition activity falls within the 2024–2025 window and meets the criterion.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Giza Arabia expands portfolio with acquisition of majority ...",
+              "snippet": "Giza Arabia, a subsidiary of Giza Systems and owned by Solutions by STC, has successfully acquired a majority stake in LABS (Logical ...",
+              "url": "https://www.telecompaper.com/news/giza-arabia-expands-portfolio-with-acquisition-of-majority-stake-in-labs--1509071"
+            },
+            {
+              "title": "Giza Arabia Becomes Majority Shareholder of LABS in KSA",
+              "snippet": "Giza Arabic finalises its acquisition of the majority of shares from Logical Solutions and Systems for Workers (LABS) this week.",
+              "url": "https://mnation.uk/giza-arabic-becomes-majority-shareholder-of-labs-in-ksa"
+            },
+            {
+              "title": "Giza Arabia",
+              "snippet": "Giza Arabia is a Information Technology & Services company (private) with 300 employees (+61.9% YoY growth), founded in 2006, headquartered in Saudi Arabia. Recently acquired Logical Applications for Business Solutions. None Giza Arabia a leading digital transformation enabler and systems integrator in the MEA region designs and deploys industry-specific technology so...",
+              "url": "https://gizaarabia.com"
+            }
+          ]
+        },
+        {
+          "criterion": "Company operates in consulting management industry, is headquartered or has significant operations in Saudi Arabia (KSA), and has between 201 and 500 employees",
+          "reasoning": "Giza Arabia’s internal profile lists 300 employees, which falls within the 201‑500 range. The company is headquartered in Saudi Arabia, satisfying the location requirement. The profile also notes a “consultancy practice” and that the company provides managed services and consulting, aligning with business/management consulting services. No evidence contradicts these facts.",
+          "satisfied": "yes",
+          "references": [
+            {
+              "title": "Giza Arabia",
+              "snippet": "Giza Arabia is a Information Technology & Services company (private) with 300 employees (+61.9% YoY growth), founded in 2006, headquartered in Saudi Arabia. Recently acquired Logical Applications for Business Solutions. None Giza Arabia a leading digital transformation enabler and systems integrator in the MEA region designs and deploys industry-specific technology so...",
+              "url": "https://www.gizaarabia.com"
+            }
+          ]
+        }
+      ],
+      "enrichments": [],
+      "createdAt": "2025-11-27T20:44:15.404Z",
+      "updatedAt": "2025-11-27T20:44:15.404Z"
+    }
+  ],
+  "websetId": "webset_01kb3gw18ept6rqrf4m7w6zbk4"
+}

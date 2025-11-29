@@ -1,0 +1,43 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "is_working": 1
+          }
+        },
+        {
+          "term": {}
+        },
+        {
+          "bool": {
+            "should": [
+              {
+                "match_phrase": {
+                  "active_experience_title": "CEO"
+                }
+              },
+              {
+                "match_phrase": {
+                  "active_experience_title": "CFO"
+                }
+              },
+              {
+                "match_phrase": {
+                  "active_experience_title": "Financial. manager"
+                }
+              },
+              {
+                "match_phrase": {
+                  "active_experience_title": "Accounting manager"
+                }
+              }
+            ],
+            "minimum_should_match": 1
+          }
+        }
+      ]
+    }
+  }
+}

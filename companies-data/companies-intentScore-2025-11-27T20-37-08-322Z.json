@@ -1,0 +1,32 @@
+{
+  "score": 86,
+  "reason": "The overall intent score reflects strong signals from new product launches and partnerships, though the average confidence levels for these signals could impact their overall reliability.",
+  "factors": [
+    {
+      "signal": "new_product",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.5935185185185203
+    },
+    {
+      "signal": "new_partnership",
+      "score": 88,
+      "impact": "medium",
+      "evidence_quality": "fair",
+      "original_score": 88,
+      "confidence": 0.3371134020618561
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "The company is actively launching new products, suggesting a strong focus on innovation.",
+    "Recent partnerships could enhance market reach but may lack robustness due to lower confidence in the source quality."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "The average confidence level for evidence is moderate, signaling potential issues with reliability.",
+    "The reliance on a limited number of data sources may lead to an incomplete picture of the company's activities."
+  ]
+}

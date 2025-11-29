@@ -1,0 +1,32 @@
+{
+  "score": 100,
+  "reason": "The company exhibits very high intent primarily due to a significant signal from a new product launch, which has strong evidence and recency, supplemented by a noteworthy partnership signal. Despite some variation in evidence quality, the overall business indicators suggest a clear momentum towards growth and development.",
+  "factors": [
+    {
+      "signal": "new_product",
+      "score": 100,
+      "impact": "high",
+      "evidence_quality": "good",
+      "original_score": 100,
+      "confidence": 0.5922600619195063
+    },
+    {
+      "signal": "new_partnership",
+      "score": 88,
+      "impact": "medium",
+      "evidence_quality": "fair",
+      "original_score": 88,
+      "confidence": 0.3408163265306126
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "The launch of new products indicates readiness for market expansion and capturing new customer segments.",
+    "Partnerships may facilitate access to new markets or technologies, enhancing competitive advantage."
+  ],
+  "timing_recommendation": "immediate",
+  "risk_factors": [
+    "Variation in source credibility may affect the reliability of signals.",
+    "The average confidence of evidence is moderate, indicating a need for further verification and analysis."
+  ]
+}

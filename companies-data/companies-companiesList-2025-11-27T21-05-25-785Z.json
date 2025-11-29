@@ -1,0 +1,8 @@
+[
+  {
+    "requested_url": "https://arabdreams.com",
+    "error": true,
+    "status": 404,
+    "message": "Request failed with status code 404"
+  }
+]
