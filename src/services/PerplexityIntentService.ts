@@ -103,7 +103,7 @@ export interface CompleteIntentEnrichmentResponse {
 export interface PerplexityRequest {
   companyName: string;
   companyUrl: string;
-  signals: IntentSignal[];
+  signals?:String [];
   debug?: boolean;
 }
 

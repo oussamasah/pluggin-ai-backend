@@ -331,7 +331,10 @@ Your current ICP configuration may be too restrictive for available data. Here's
       });
       
       const listUrls: string[] = exaCompanies.exaCompanies.map((c: any) => c.properties.url);
+      console.log("list urls")
+      console.log(listUrls)
         let companiesList = await coreSignal.enrichCompaniesByUrls(listUrls);
+        console.log(companiesList)
          this.saveCompanies("companiesList",companiesList)
       await this.sleep(3000); 
       
@@ -540,7 +543,10 @@ Your current ICP configuration may be too restrictive for available data. Here's
       await Promise.all(companies.map(async (com: any) => {
         com.company_id = uuidv4();
         const employees = [...(com.employees || [])];
-        let enr = {...com.intent_enrichment}
+        const enr = {...(com.intent_enrichment || {})}
+        console.log("com.intent_enrichment 2 ",enr)
+
+        console.log("entrichemnt ",enr)
         delete com.employees;
         delete com.intent_enrichment;
         let gtmIntel =null
@@ -556,12 +562,17 @@ Your current ICP configuration may be too restrictive for available data. Here's
           if (employees.length > 0) {
             await mongoDBService.insertEmployees(employees, data._id);
           }
-          
+        const coresignalData = await mongoDBService.getEnrichmentByCompanyIdAndSource(
+          data._id, 
+          'Coresignal'
+        );
+        console.log("entrichemnt 2 ",coresignalData)
+
            gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
             new Types.ObjectId(this.sessionId),
             new Types.ObjectId(icpModel.id),
             new Types.ObjectId(data._id),
-            enr
+            coresignalData
           );
           console.log(gtmIntel)
         } catch (error) {
@@ -716,12 +727,12 @@ Your current ICP configuration may be too restrictive for available data. Here's
     };
 
     const company: Company = {
-     exa_id:exa.websetId,
-      name: rawData.company_name || '',
+      exa_id: exa.websetId,
+      name: rawData.company_name || exa.properties.company.name || "undefined",
       domain: extractDomain(rawData.website),
-      website: rawData.website || undefined,
-      logo_url: rawData.company_logo_url || undefined,
-      description: rawData.description || rawData.description_enriched || undefined,
+      website: rawData.website || exa.properties.url || undefined,
+      logo_url: rawData.company_logo_url || exa.properties.company.logoUrl  || undefined,
+      description: rawData.description || exa.properties.description || rawData.description_enriched || undefined,
       founded_year: rawData.founded_year ? parseInt(rawData.founded_year) : undefined,
 
       location: {
@@ -741,12 +752,12 @@ Your current ICP configuration may be too restrictive for available data. Here's
         crunchbase: rawData.crunchbase_url || undefined,
       },
 
-      industry: rawData.industry ? [rawData.industry] : [],
+      industry: rawData.industry ? [rawData.industry] : [exa.properties.company.industry],
       business_model: determineBusinessModel(rawData),
       target_market: determineTargetMarket(rawData.employees_count),
       ownership_type: determineOwnershipType(rawData.is_public, rawData.parent_company_information),
 
-      employee_count: rawData.employees_count || undefined,
+      employee_count: rawData.employees_count || exa.properties.company.employees || undefined,
       revenue_estimated: rawData.revenue_annual || undefined,
       funding_stage: determineFundingStage(rawData),
       total_funding: rawData.last_funding_round_amount_raised || undefined,
@@ -767,7 +778,14 @@ Your current ICP configuration may be too restrictive for available data. Here's
 
       scoring_metrics: undefined,
       enrichement: rawData,
-      exa_enrichement: exa_enrichement
+      exa_enrichement: exa_enrichement,
+      country: undefined,
+      employees: undefined,
+      annual_revenue: undefined,
+      revenue: undefined,
+      icp_score: 0,
+      intent_score: 0,
+      created_at: false
     };
 
     // Clean up undefined nested objects

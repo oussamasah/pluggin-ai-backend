@@ -1,0 +1,32 @@
+{
+  "score": 84,
+  "reason": "The analysis indicates a very high intent score primarily driven by substantial evidence of employee joining the company, which strongly suggests expansion and potential growth. However, the lack of evidence for new investment diminishes the overall scoring balance slightly, but the consistent pattern in hiring indicates a strong momentum.",
+  "factors": [
+    {
+      "signal": "new_investment",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    },
+    {
+      "signal": "employee_joined_company",
+      "score": 84,
+      "impact": "high",
+      "evidence_quality": "fair",
+      "original_score": 84,
+      "confidence": 0.576095617529882
+    }
+  ],
+  "confidence": "high",
+  "strategic_insights": [
+    "The surge in hiring suggests the company is ramping up operations, potentially indicating upcoming product launches or market expansions.",
+    "Investing in talent could mean the company is positioning itself strongly against competitors, highlighting aggressive growth strategies."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "The absence of new funding signals raises concerns about financial sustainability for ambitious growth plans.",
+    "Reliability of sources varies, which could affect the credibility of evidence used in the analysis."
+  ]
+}

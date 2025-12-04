@@ -1,0 +1,32 @@
+{
+  "score": 80,
+  "reason": "The analysis shows a significant signal related to employee joins, indicating strong hiring activity which often correlates with business growth and momentum. However, the lack of evidence for new investments limits overall score. While the hiring signal is strong, the absence of funding or new product launches affects the comprehensive intent assessment.",
+  "factors": [
+    {
+      "signal": "new_investment",
+      "score": 0,
+      "impact": "high",
+      "evidence_quality": "poor",
+      "original_score": 0,
+      "confidence": 0
+    },
+    {
+      "signal": "employee_joined_company",
+      "score": 84,
+      "impact": "medium",
+      "evidence_quality": "good",
+      "original_score": 84,
+      "confidence": 0.5721374045801544
+    }
+  ],
+  "confidence": "medium",
+  "strategic_insights": [
+    "The company is likely expanding its team, which indicates potential growth and future projects.",
+    "The absence of recent investment signals may indicate a reliance on existing capital."
+  ],
+  "timing_recommendation": "short-term",
+  "risk_factors": [
+    "Lack of funding signals could hamper future scalability.",
+    "Dependence solely on hiring without investment might lead to resource constraints."
+  ]
+}

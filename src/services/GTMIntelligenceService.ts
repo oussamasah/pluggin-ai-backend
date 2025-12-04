@@ -28,6 +28,7 @@ export class GTMIntelligenceService {
   ): Promise<IGTMIntelligence> {
     try {
       console.log('Starting GTM Intelligence generation...');
+      console.log('coresignalData',coresignalData);
 
       // Get company and ICP model data
       const company = await Company.findById(companyId);
@@ -97,6 +98,9 @@ export class GTMIntelligenceService {
       const prompt = generateGTMAnalysisPrompt(coresignalData, icpModel);
 
       console.log('Calling Claude API...');
+      console.log('Calling Claude API...',coresignalData);
+      console.log('Calling Claude API...',icpModel);
+      console.log('Calling Claude API...',prompt);
 
       // Call Claude service - get the raw markdown response
       const markdownResponse = await this.claudeService.generate(prompt);

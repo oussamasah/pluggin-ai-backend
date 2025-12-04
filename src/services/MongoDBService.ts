@@ -74,22 +74,22 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
-      console.log(`🔍 Database query attempt ${attempt} for user ${userId}`)
+     //console.log(`🔍 Database query attempt ${attempt} for user ${userId}`)
       
       const sessions = await Session.find({ userId })
         .populate('icpModelId')
         .sort({ createdAt: -1 })
         .lean()
 
-      console.log(`🔍 Found ${sessions.length} sessions`)
+     //console.log(`🔍 Found ${sessions.length} sessions`)
 
       if (!sessions || sessions.length === 0) {
-        console.log('🔍 No sessions found for user')
+       //console.log('🔍 No sessions found for user')
         return []
       }
 
       const sessionIds = sessions.map((s: any) => s._id)
-      console.log('🔍 Session IDs:', sessionIds)
+     //console.log('🔍 Session IDs:', sessionIds)
 
       // Add timeout to prevent hanging queries
       const companiesPromise = Company.find({ 
@@ -110,7 +110,7 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
         )
       )
 
-      console.log('🔍 Successfully mapped sessions with companies and substeps')
+     //console.log('🔍 Successfully mapped sessions with companies and substeps')
       return result
 
     } catch (error) {
@@ -211,7 +211,81 @@ async saveCompanyWithSessionAndICP(
       );
     }
   }
-  
+  /**
+ * Get all enrichments for a specific company
+ * @param companyId - The company ID to fetch enrichments for
+ * @returns Array of enrichment documents
+ */
+async getEnrichmentsByCompanyId(companyId: string): Promise<any[]> {
+  try {
+    if (!Types.ObjectId.isValid(companyId)) {
+      throw new Error('Invalid company ID');
+    }
+
+    const enrichments = await Enrichment.find({ 
+      companyId: new Types.ObjectId(companyId) 
+    })
+      .sort({ createdAt: -1 })
+      .lean();
+
+    return enrichments.map(enrichment => ({
+      id: enrichment._id.toString(),
+      companyId: enrichment.companyId.toString(),
+      sessionId: enrichment.sessionId.toString(),
+      icpModelId: enrichment.icpModelId?.toString(),
+      data: enrichment.data,
+      source: enrichment.source,
+      createdAt: enrichment.createdAt,
+      updatedAt: enrichment.updatedAt
+    }));
+  } catch (error) {
+    console.error('Error fetching enrichments by company ID:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get enrichment by company ID and source
+ * @param companyId - The company ID
+ * @param source - The enrichment source (e.g., "Coresignal", "Exa")
+ * @returns Single enrichment document or null
+ */
+async getEnrichmentByCompanyIdAndSource(
+  companyId: string, 
+  source: string
+): Promise<any | null> {
+  try {
+    if (!Types.ObjectId.isValid(companyId)) {
+      throw new Error('Invalid company ID');
+    }
+
+    const enrichment = await Enrichment.findOne({ 
+      companyId: new Types.ObjectId(companyId),
+      source 
+    })
+      .sort({ createdAt: -1 })
+      .lean();
+
+    if (!enrichment) {
+      return null;
+    }
+
+    return {
+      id: enrichment._id.toString(),
+      companyId: enrichment.companyId.toString(),
+      sessionId: enrichment.sessionId.toString(),
+      icpModelId: enrichment.icpModelId?.toString(),
+      data: enrichment.data,
+      source: enrichment.source,
+      createdAt: enrichment.createdAt,
+      updatedAt: enrichment.updatedAt
+    };
+  } catch (error) {
+    console.error('Error fetching enrichment by company ID and source:', error);
+    throw error;
+  }
+}
+
   private async saveCompanyData(sessionId: string, icpModelId: string, companyData: any) {
     const {
       business_model,
@@ -312,13 +386,13 @@ async saveCompanyWithSessionAndICP(
       scoringMetrics: scoring_metrics || cleanCompanyData.scoring_metrics || {},
     };
   
-    console.log("💾 Saving company with data:", JSON.stringify(companyToSave, null, 2));
+   //console.log("💾 Saving company with data:", JSON.stringify(companyToSave, null, 2));
   
     // 1. Save the company with error handling
     let savedCompany;
     try {
       savedCompany = await Company.create(companyToSave);
-      console.log("✅ Company saved successfully with ID:", savedCompany._id);
+     //console.log("✅ Company saved successfully with ID:", savedCompany._id);
     } catch (dbError) {
       console.error("❌ Database error saving company:", dbError);
       throw new Error(`Failed to save company: ${dbError instanceof Error ? dbError.message : 'Unknown error'}`);
@@ -330,7 +404,7 @@ async saveCompanyWithSessionAndICP(
     const enrichmentPromises = [];
     
     if (enrichement && Object.keys(enrichement).length > 0) {
-      console.log("💾 Saving Coresignal enrichment");
+     //console.log("💾 Saving Coresignal enrichment");
       enrichmentPromises.push(
         this.saveEnrichment(
           companyId.toString(),
@@ -346,7 +420,7 @@ async saveCompanyWithSessionAndICP(
     }
   
     if (exa_enrichement && Object.keys(exa_enrichement).length > 0) {
-      console.log("💾 Saving Exa enrichment");
+     //console.log("💾 Saving Exa enrichment");
       enrichmentPromises.push(
         this.saveEnrichment(
           companyId.toString(),
@@ -364,10 +438,10 @@ async saveCompanyWithSessionAndICP(
     // 3. Save employees with error handling
     let employeesSaved = 0;
     if (employees && Array.isArray(employees) && employees.length > 0) {
-      console.log(`💾 Saving ${employees.length} employees`);
+     //console.log(`💾 Saving ${employees.length} employees`);
       try {
         employeesSaved = await this.saveEmployees(companyId.toString(), employees);
-        console.log(`✅ Successfully saved ${employeesSaved} employees`);
+       //console.log(`✅ Successfully saved ${employeesSaved} employees`);
       } catch (employeeError) {
         console.error("❌ Failed to save employees:", employeeError);
         // Don't throw - continue with company save
@@ -399,7 +473,7 @@ async saveCompanyWithSessionAndICP(
   ): Promise<any> {
     try {
       if (!data || Object.keys(data).length === 0) {
-        console.log(`⚠️ No enrichment data provided for source: ${source}`);
+       //console.log(`⚠️ No enrichment data provided for source: ${source}`);
         return null;
       }
   
@@ -412,7 +486,7 @@ async saveCompanyWithSessionAndICP(
       };
   
       const savedEnrichment = await Enrichment.create(enrichmentData);
-      console.log(`✅ ${source} enrichment saved successfully`);
+     //console.log(`✅ ${source} enrichment saved successfully`);
       return savedEnrichment;
     } catch (error) {
       console.error(`❌ Error saving ${source} enrichment:`, error);
@@ -542,7 +616,7 @@ async saveCompanyWithSessionAndICP(
   
       const data = await Employee.create(employeesToSave, session ? { session } : {});
   
-      console.log(`✅ Saved ${employeesToSave.length} employees for company ${companyId}`);
+     //console.log(`✅ Saved ${employeesToSave.length} employees for company ${companyId}`);
       return data;
     } catch (error) {
       console.error("Exception saving employees:", error);
@@ -569,7 +643,7 @@ async saveCompanyWithSessionAndICP(
 
       const result = await Enrichment.create([enrichment], session ? { session } : {});
 
-      console.log(`✅ Enrichment saved for company ${companyId} from ${source}`);
+     //console.log(`✅ Enrichment saved for company ${companyId} from ${source}`);
       return result;
     } catch (error) {
       console.error("Exception saving enrichment:", error);
@@ -670,7 +744,7 @@ async saveCompanyWithSessionAndICP(
 // In MongoDBService.ts - replace the updateSubstep method
 async updateSubstep(sessionId: string, substep: SubStep): Promise<void> {
   try {
-    console.log('🔄 MongoDBService.updateSubstep called:', { sessionId, substep });
+   //console.log('🔄 MongoDBService.updateSubstep called:', { sessionId, substep });
 
     // Get the current session to check existing substeps
     const session = await Session.findById(sessionId);
@@ -678,7 +752,7 @@ async updateSubstep(sessionId: string, substep: SubStep): Promise<void> {
       throw new Error(`Session ${sessionId} not found`);
     }
 
-    console.log('📊 Current session substeps:', session.searchStatus?.substeps);
+   //console.log('📊 Current session substeps:', session.searchStatus?.substeps);
 
     // Get current substeps array or initialize empty array
     const currentSubsteps = session.searchStatus?.substeps || [];
@@ -692,14 +766,13 @@ async updateSubstep(sessionId: string, substep: SubStep): Promise<void> {
       updatedSubsteps = currentSubsteps.map((s: any, index: number) => 
         index === existingIndex ? { ...s.toObject?.() || s, ...substep } : s
       );
-      console.log(`📝 Updated existing substep at index ${existingIndex}`);
+     //console.log(`📝 Updated existing substep at index ${existingIndex}`);
     } else {
       // Add new substep
       updatedSubsteps = [...currentSubsteps, substep];
-      console.log('📝 Added new substep');
+     //console.log('📝 Added new substep');
     }
 
-    console.log('📊 Updated substeps array:', updatedSubsteps);
 
     // Update the session with the new substeps array
     const result = await Session.findByIdAndUpdate(
@@ -717,8 +790,7 @@ async updateSubstep(sessionId: string, substep: SubStep): Promise<void> {
       throw new Error('Failed to update session substeps');
     }
 
-    console.log('✅ MongoDBService.updateSubstep completed successfully');
-    console.log('✅ Updated session searchStatus:', result.searchStatus);
+  
     
   } catch (error) {
     console.error('❌ Error in MongoDBService.updateSubstep:', error);
@@ -741,7 +813,7 @@ async getSession(sessionId: string): Promise<SearchSession | null> {
     // Substeps are now stored in the session document itself, no need to query SessionSubstep
     const substeps = session.searchStatus?.substeps || [];
 
-    console.log('🔍 getSession - substeps from session:', substeps);
+   //console.log('🔍 getSession - substeps from session:', substeps);
 
     return this.mapSessionToType(session, companies, substeps);
   } catch (error) {
@@ -871,11 +943,11 @@ async getSession(sessionId: string): Promise<SearchSession | null> {
   // Additional method for legacy insertEmployees
 // In MongoDBService.ts - fix the insertEmployees method
 async insertEmployees(employeesData: any[], targetCompanyId: string) {
-    console.log("--------------------------------------");
-    console.log("Employees data:", employeesData);
+   //console.log("--------------------------------------");
+   //console.log("Employees data:", employeesData);
     
     if (!employeesData || !Array.isArray(employeesData) || employeesData.length === 0) {
-      console.log("No employees data to save");
+     //console.log("No employees data to save");
       return [];
     }
     
