@@ -3,6 +3,7 @@ import { EmployeeSearchResponse } from '../core/types';
 import fs from 'fs/promises';
 import path from 'path';
 import { config } from '../core/config.js';
+import { ollamaService } from './OllamaService';
 
 
 interface CoreSignalFilters {
@@ -232,57 +233,165 @@ export class CoreSignalService {
       );
     }
   }
-
-  /**
-   * Search companies using Elasticsearch DSL (Advanced)
-   */
-  async searchCompaniesESL(
-    filters: CoreSignalFilters,
-    pagination: PaginationOptions = {}
-  ): Promise<SearchResponse> {
+  async searchCompanies(
+    searchText: string,
+    after?: string | number,
+    itemsPerPage: number = 1,
+    excludeUrls?: string[],
+    excludeDomains?: string[]
+  ): Promise<any> {
     try {
-      const { after, itemsPerPage = 10, sort = ['_score'] } = pagination;
-      
-      // Build Elasticsearch query
-      const query = this.buildElasticsearchQuery(filters);
-      
-      //console.log('🔍 CoreSignal ES DSL Search');
-      //console.log('ES Query:', JSON.stringify(query, null, 2));
-
-      const requestBody = {
-        query: query,
-        sort: sort
+      console.log("searchText=================", searchText);
+      console.log("Excluding URLs:", excludeUrls);
+      console.log("Excluding domains:", excludeDomains);
+  
+      const requestBody: any = {
+        query: {
+          bool: {
+            must: [
+              {
+                query_string: {
+                  query: searchText,
+                  default_field: "description",
+                  default_operator: "and"
+                }
+              }
+            ]
+          }
+        }
       };
-
-      let url = '/company_base/search/es_dsl';
+  
+      // Add exclusions if provided
+      const mustNotClauses: any[] = [];
+  
+      if (excludeUrls && excludeUrls.length > 0) {
+        mustNotClauses.push({
+          terms: {
+            "website.keyword": excludeUrls
+          }
+        });
+      }
+  
+      if (excludeDomains && excludeDomains.length > 0) {
+        excludeDomains.forEach(domain => {
+          mustNotClauses.push({
+            wildcard: {
+              "website": {
+                "value": `*${domain}*`
+              }
+            }
+          });
+        });
+      }
+  
+      if (mustNotClauses.length > 0) {
+        requestBody.query.bool.must_not = mustNotClauses;
+      }
+  
+      console.log("requestBody=================", JSON.stringify(requestBody, null, 2));
+  
+      let url = '/company_multi_source/search/es_dsl';
       const params = new URLSearchParams();
       
-      if (after) params.append('after', after);
-      if (itemsPerPage) params.append('items_per_page', itemsPerPage.toString());
+      if (after) params.append('after', after.toString());
+      params.append('items_per_page', itemsPerPage.toString());
       
       if (params.toString()) url += `?${params.toString()}`;
-
-      const response = await this.client.post(url, requestBody);
+  
+      const response = await this.client.post(url, requestBody, {
+        headers: { 'Content-Type': 'application/json' }
+      });
       
       const headers = {
         xNextPageAfter: response.headers['x-next-page-after'],
         xTotalPages: parseInt(response.headers['x-total-pages'] || '0'),
         xTotalResults: parseInt(response.headers['x-total-results'] || '0')
       };
-
-      //console.log('✅ Success! Found:', response.data?.length || 0, 'companies');
-      
+  
       return {
         data: response.data || [],
         headers
       };
+      
     } catch (error: any) {
-      console.error('❌ CoreSignal API Error:', error.response?.data);
-      throw new Error(
-        `CoreSignal API failed: ${error.response?.data?.Error || error.message}`
-      );
+      console.error('❌ CoreSignal search error:', error);
+      return {
+        data: [],
+        headers: {
+          xNextPageAfter: 'None',
+          xTotalPages: 0,
+          xTotalResults: 0
+        }
+      };
     }
   }
+/**
+ * Collect company data by CoreSignal IDs
+ */
+async collectCompaniesByIds(ids: string[]): Promise<any[]> {
+  try {
+    console.log(`📥 Collecting data for ${ids.length} companies by IDs...`);
+
+    const collectedCompanies: any[] = [];
+    const batchSize = 5; // Process in batches to avoid rate limits
+    
+    for (let i = 0; i < ids.length; i += batchSize) {
+      const batch = ids.slice(i, i + batchSize);
+      
+      // Collect each company in parallel (within batch)
+      const batchPromises = batch.map(async (id) => {
+        try {
+          // Validate ID
+          const cleanId = id;
+          if (!cleanId) {
+            console.warn(`⚠️ Invalid ID: ${id}`);
+            return null;
+          }
+
+          const apiUrl = `/company_multi_source/collect/${cleanId}`;
+          
+          console.log(`🔍 Collecting data for ID: ${cleanId}`);
+          const response = await this.client.get(apiUrl);
+          
+          // Add the original ID to the response for reference
+          if (response.data) {
+            response.data.requested_id = cleanId;
+          }
+          
+          return response.data;
+        } catch (error: any) {
+          console.warn(`⚠️ Failed to collect ID ${id}:`, error.response?.status, error.response?.data?.message || error.message);
+          
+          // Return error information but don't break the entire batch
+          return {
+            requested_id: id,
+            error: true,
+            status: error.response?.status,
+            message: error.response?.data?.message || error.message
+          };
+        }
+      });
+
+      const batchResults = await Promise.all(batchPromises);
+      collectedCompanies.push(...batchResults.filter(result => result !== null));
+
+      // Small delay between batches to respect rate limits
+      if (i + batchSize < ids.length) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+    }
+
+    console.log(`✅ Successfully collected ${collectedCompanies.filter(c => !c.error).length}/${ids.length} companies`);
+
+    return collectedCompanies;
+  } catch (error: any) {
+    console.error('❌ Collect API Error:', error.response?.data);
+    throw new Error(
+      `Failed to collect companies by IDs: ${error.response?.data?.Error || error.message}`
+    );
+  }
+}
+
   /**
  * Enrich multiple companies by their website URLs
  */
@@ -860,17 +969,7 @@ async enrichCompanyByUrl(url: string): Promise<any> {
     };
   }
 
-  /**
-   * Main search method - uses Simple Filter API by default
-   */
-  async searchCompanies(
-    filters: CoreSignalFilters,
-    pagination: PaginationOptions = {}
-  ): Promise<SearchResponse> {
-    // Use Simple Filter API - it's easier and more reliable
-    return this.searchCompaniesSimple(filters, pagination);
-  }
-
+ 
   /**
    * Health check
    */

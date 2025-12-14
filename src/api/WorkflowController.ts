@@ -12,6 +12,7 @@ interface StartWorkflowBody {
   sessionId: string;
   icpModelId?: string;
   count?: string;
+  searchType?: string;
 }
 
 export async function WorkflowController(
@@ -51,7 +52,7 @@ export async function WorkflowController(
     }
   });
   fastify.post('/search-companies', async (request: FastifyRequest<{ Body: StartWorkflowBody }>, reply) => {
-    const { query, sessionId, icpModelId,count } = request.body;
+    const { query, sessionId, icpModelId,count='1',searchType="search" } = request.body;
     const userId = request.headers['x-user-id'] as string || 'demo-user';
 
     try {
@@ -63,17 +64,19 @@ export async function WorkflowController(
       //console.log("📢 Starting workflow execution in background...");
       
       // Start workflow asynchronously
-      setTimeout(async () => {
+   
         try {
+          console.log("====================================================",searchType)
+        
           const workflow = new CompanyWorkflow(sessionId, userId);
-          const companies = await workflow.execute(query, icpModel,count);
+          const companies = await workflow.execute(query, icpModel,count,searchType);
           
           //console.log(`✅ Workflow completed for session ${sessionId}, found ${companies.length} companies`);
           
         } catch (error) {
           console.error('❌ Workflow execution error:', error);
         }
-      }, 100);
+     
 
       reply.send({
         success: true,
@@ -110,7 +113,7 @@ export async function WorkflowController(
   });
 }
 
-async function getICPModel(modelId: string , userId: string): Promise<any> {
+async function getICPModel(modelId: any , userId: string): Promise<any> {
   let icpmodel = mongoDBService.getIcpModel(modelId);
   if (icpmodel) {
     return icpmodel

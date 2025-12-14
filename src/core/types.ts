@@ -1,6 +1,9 @@
 // src/core/types.ts
 export interface Company {
   country: any;
+  basic_info?: any;
+  contact_info?: any;
+  business_classification?: any;
   employees: number | undefined;
   annual_revenue: any;
   revenue: any;
@@ -227,6 +230,7 @@ export interface EmployeeRecord {
 
 // Update SearchResponse to be more specific for Employee data
 export interface EmployeeSearchResponse {
+  next_page_after: string | undefined;
   results: number[];
   total_results: number;
   // The CoreSignal API also includes total_pages, page, and pagination data

@@ -156,6 +156,8 @@ export async function CompaniesController(fastify: FastifyInstance) {
       });
 
       // Get user's sessions to get session IDs
+      console.log("===========userId===============")
+      console.log(userId)
       const sessions = await Session.find({ userId }).select('_id').lean();
       const sessionIds = sessions.map(session => session._id);
 

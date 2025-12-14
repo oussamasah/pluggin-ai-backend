@@ -8,20 +8,15 @@ import { SearchStatus, SubStep, Company, ICPModel, SearchSession } from '../core
 import { sessionService } from '../services/SessionService.js';
 import fs from 'fs/promises';
 import path from 'path';
-
-import { QueryMergerService } from '../services/QueryMergerService.js';
-import { LLMQueryFilterExtractor } from '../services/LLMQueryFilterExtractor .js';
-import { mapCoresignalToCompany } from '../services/CoreSignalToCompany.js';
 import { CoreSignalService } from '../services/CoresignalService.js';
 import { mongoDBService } from '../services/MongoDBService.js';
 
-import { detectIntentWithEvidence, generateOptimizedExaQuery } from '../services/HighConfidenceIntentDetector.js';
-import { PerplexityIntentService, PerplexityRequest } from '../services/PerplexityIntentService.js';
 import { config } from '../core/config.js';
 import { IntentScoringService } from '../services/IntentScoringService.js';
-import { createUltimateAgent } from '../services/UltimateIntentDetectionAgent.js';
 import mongoose, { Types } from 'mongoose';
 import { gtmIntelligenceService } from '../services/GTMIntelligenceService';
+import { formatPlainTextToCoresignalQuery } from '../services/CoreSignalQueryFormatter.js';
+import { detectIntentWithEvidence, generateOptimizedExaQuery } from '../services/HighConfidenceIntentDetector.js';
 export class CompanyWorkflow {
   private sessionId: string;
   private userId: string;
@@ -35,7 +30,7 @@ export class CompanyWorkflow {
     try {
       // Save to database first
       await sessionService.updateSearchStatus(this.sessionId, status);
-      
+
       // Then broadcast via WebSocket
       const message = {
         type: 'workflow-status',
@@ -45,7 +40,7 @@ export class CompanyWorkflow {
           substeps: status.substeps || []
         }
       };
-      
+
       wsManager.broadcastToSession(this.sessionId, message);
     } catch (error) {
       console.error('Error updating search status:', error);
@@ -60,10 +55,10 @@ export class CompanyWorkflow {
         status: updates.status || 'pending',
         ...updates
       };
-      
+
       // Save to database
       await sessionService.updateSubstep(this.sessionId, substep);
-      
+
       // Broadcast via WebSocket
       const message = {
         type: 'workflow-substep',
@@ -73,7 +68,7 @@ export class CompanyWorkflow {
           ...updates
         }
       };
-      
+
       wsManager.broadcastToSession(this.sessionId, message);
     } catch (error) {
       console.error('Error updating substep:', error);
@@ -91,7 +86,7 @@ export class CompanyWorkflow {
         totalSteps: 4,
         details: searchSummary
       });
-      
+
       // Broadcast completion
       const message = {
         type: 'search-complete',
@@ -101,21 +96,22 @@ export class CompanyWorkflow {
         resultsCount,
         timestamp: new Date().toISOString()
       };
-      
+
       wsManager.broadcastToSession(this.sessionId, message);
     } catch (error) {
       console.error('Error completing search:', error);
     }
   }
 
-  async execute(query: string, icpModel: ICPModel,count:string): Promise<Company[]> {
+  async execute(query: string, icpModel: ICPModel, count: string, searchType: string): Promise<Company[]> {
     let companies: any = [];
-
+    let exaCompanies: any = [];
+    let companiesList: any = [];
     try {
       const coreSignal = new CoreSignalService();
-        let session = await sessionService.getSession(this.sessionId);
-        let queries = session?.query;
-        queries.push("CHAT_USER: "+query)
+      let session = await sessionService.getSession(this.sessionId);
+      let queries = session?.query;
+      queries.push("CHAT_USER: " + query)
       // Update session query in database
       await sessionService.updateSessionQuery(this.sessionId, queries);
 
@@ -128,196 +124,233 @@ export class CompanyWorkflow {
         totalSteps: 4,
         substeps: [
           // Phase 1: Dynamic ICP Discovery
-          { 
+          {
             id: '1.1',
-            name: 'Generating ICP hypotheses', 
+            name: 'Generating ICP hypotheses',
             description: 'Defining best customer patterns based on ICP model',
-            status: 'pending', 
+            status: 'pending',
             category: 'icp-discovery',
             priority: 'high',
             tools: ['query-merger', 'llm-processor'],
-            message: 'Analyzing ICP configuration...' 
+            message: 'Analyzing ICP configuration...'
           },
-          { 
+          {
             id: '1.2',
-            name: 'Market discovery scouting', 
+            name: 'Market discovery scouting',
             description: 'Finding companies matching ICP patterns',
-            status: 'pending', 
+            status: 'pending',
             category: 'icp-discovery',
             priority: 'high',
             tools: ['exa-ai', 'search-engine'],
-            message: 'Scouting for matching companies' 
+            message: 'Scouting for matching companies'
           },
-          { 
+          {
             id: '1.3',
-            name: 'Data cleaning and validation', 
+            name: 'Data cleaning and validation',
             description: 'Ensuring accurate and fresh company information',
-            status: 'pending', 
+            status: 'pending',
             category: 'icp-discovery',
             priority: 'high',
             tools: ['data-validator', 'quality-checker'],
-            message: 'Validating company data quality' 
+            message: 'Validating company data quality'
           },
-          
+
           // Phase 2: Account Intelligence
-          { 
+          {
             id: '2.1',
-            name: 'Multi-source data enrichment', 
+            name: 'Multi-source data enrichment',
             description: 'Adding firmographic, tech, and growth insights',
-            status: 'pending', 
+            status: 'pending',
             category: 'account-intelligence',
             priority: 'high',
             tools: ['coresignal-api', 'data-enricher'],
-            message: 'Enriching company data from multiple sources' 
+            message: 'Enriching company data from multiple sources'
           },
-          { 
+          {
             id: '2.2',
-            name: 'Fit scoring and ranking', 
+            name: 'Fit scoring and ranking',
             description: 'Ranking accounts by relevance and potential',
-            status: 'pending', 
+            status: 'pending',
             category: 'account-intelligence',
             priority: 'high',
             tools: ['ollama-scoring', 'ranking-engine'],
-            message: 'Calculating fit scores' 
+            message: 'Calculating fit scores'
           },
-          { 
+          {
             id: '2.3',
-            name: 'Reasoning explanation', 
+            name: 'Reasoning explanation',
             description: 'Showing why each account fits your ICP',
-            status: 'pending', 
+            status: 'pending',
             category: 'account-intelligence',
             priority: 'medium',
             tools: ['llm-explainer', 'reasoning-generator'],
-            message: 'Generating fit reasoning' 
+            message: 'Generating fit reasoning'
           },
-          
+
           // Phase 3: Persona Intelligence
-          { 
+          {
             id: '3.1',
-            name: 'Identifying relevant personas', 
+            name: 'Identifying relevant personas',
             description: 'Finding key decision-makers for outreach',
-            status: 'pending', 
+            status: 'pending',
             category: 'persona-intelligence',
             priority: 'high',
             tools: ['coresignal-employees', 'persona-matcher'],
-            message: 'Identifying target personas' 
+            message: 'Identifying target personas'
           },
-          { 
+          {
             id: '3.2',
-            name: 'Mapping psychographic data', 
+            name: 'Mapping psychographic data',
             description: 'Understanding interests, roles, and behavior',
-            status: 'pending', 
+            status: 'pending',
             category: 'persona-intelligence',
             priority: 'medium',
             tools: ['psychographic-analyzer', 'behavior-mapper'],
-            message: 'Analyzing psychographic profiles' 
+            message: 'Analyzing psychographic profiles'
           },
-          { 
+          {
             id: '3.3',
-            name: 'Enriching contact information', 
+            name: 'Enriching contact information',
             description: 'Adding valid emails and LinkedIn profiles',
-            status: 'pending', 
+            status: 'pending',
             category: 'persona-intelligence',
             priority: 'medium',
             tools: ['contact-enricher', 'profile-validator'],
-            message: 'Enriching contact details' 
+            message: 'Enriching contact details'
           },
-          
+
           // Phase 4: Intent & Timing Intelligence
-          { 
+          {
             id: '4.1',
-            name: 'Detecting buying signals', 
+            name: 'Detecting buying signals',
             description: 'Spotting signs of market interest or activity',
-            status: 'pending', 
+            status: 'pending',
             category: 'intent-intelligence',
             priority: 'high',
             tools: ['perplexity-ai', 'signal-detector'],
-            message: 'Scanning for intent signals' 
+            message: 'Scanning for intent signals'
           },
-          { 
+          {
             id: '4.2',
-            name: 'Scoring intent readiness', 
+            name: 'Scoring intent readiness',
             description: 'Measuring how ready each account is to buy',
-            status: 'pending', 
+            status: 'pending',
             category: 'intent-intelligence',
             priority: 'high',
             tools: ['intent-scorer', 'readiness-analyzer'],
-            message: 'Calculating intent scores' 
+            message: 'Calculating intent scores'
           },
-          { 
+          {
             id: '4.3',
-            name: 'Summarizing reasoning and storage', 
+            name: 'Summarizing reasoning and storage',
             description: 'Explaining triggers and saving insights',
-            status: 'pending', 
+            status: 'pending',
             category: 'intent-intelligence',
             priority: 'medium',
             tools: ['summary-generator', 'data-storage'],
-            message: 'Finalizing and storing insights' 
+            message: 'Finalizing and storing insights'
           }
         ]
       });
 
       // PHASE 1: Dynamic ICP Discovery
-      console.log('🔍 Starting PHASE 1: Dynamic ICP Discovery');
-      
+      console.log('🔍 Starting PHASE 1: Dynamic ICP Discovery', searchType);
+
       // Step 1.1: Generate ICP hypotheses
 
       await this.updateSubstep('1.1', {
         status: 'in-progress',
         startedAt: new Date()
       });
-      
-      const mergedQuery = await generateOptimizedExaQuery(icpModel.config, query,true);
-      console.log("Generated ICP query:", mergedQuery);
-      await this.sleep(5000); 
-      await this.updateSubstep('1.1', {
-        status: 'completed',
-        completedAt: new Date(),
-        message: 'ICP hypotheses generated successfully'
-      });
 
-      // Step 1.2: Market discovery scouting
-      await this.updateSubstep('1.2', {
-        status: 'in-progress',
-        startedAt: new Date()
-      });
+
+      console.log("====================================================", searchType)
       const userCompanies = await mongoDBService.getCompaniesByUserId(this.userId);
-    
-      const uniqueIDs = [...new Set(userCompanies.map((com: { exaId: any; }) => com.exaId))];
-      console.log("excludedCompanies",uniqueIDs)
-     const exaCompanies = await exaService.searchCompanies(mergedQuery.optimizedQuery,count,uniqueIDs);
-     this.saveCompanies("exa-search",exaCompanies)
-      console.log(`Found ${exaCompanies.exaCompanies?.length} potential companies`);
-      await this.sleep(3000); 
-      if(exaCompanies.exaCompanies.length == 0){
-        queries.push("CHAT_ASSISTANT: "+`**Search Results: 0 Companies Found**
+      const adaptedQuery = await generateOptimizedExaQuery(icpModel.config,query, true);
+      if (searchType == 'search') {
+        console.log("query =====================",adaptedQuery.optimizedQuery)
 
-          Your current ICP configuration may be too restrictive for available data. Here's what we recommend:
-          
-          🎯 **ICP Refinement Tips:**
-          - Industry: Try adding adjacent verticals
-          - Size: Consider expanding employee count range
-          - Location: Include more regions or remove geographic limits
-          - Keywords: Use more general terms first, then narrow down
-          
-          *Tip: Start broad and gradually refine based on initial results.*`)
-        await sessionService.updateSessionQuery(this.sessionId, queries);
-              // FINAL: Complete workflow
-        console.log('🎉No company found');
+        const mergedQuery = await formatPlainTextToCoresignalQuery(adaptedQuery.optimizedQuery);
+
+        console.log("Generated ICP query:", mergedQuery)
+
+        await this.sleep(5000);
+        await this.updateSubstep('1.1', {
+          status: 'completed',
+          completedAt: new Date(),
+          message: 'ICP hypotheses generated successfully'
+        });
+
+        // Step 1.2: Market discovery scouting
+        await this.updateSubstep('1.2', {
+          status: 'in-progress',
+          startedAt: new Date()
+        });
+        try {
+          let response = await coreSignal.searchCompanies(mergedQuery, undefined, parseInt(count), userCompanies.map((c: any) => c.website));
+          exaCompanies = response.data || [];
+          console.log(exaCompanies, "exaCompanies")
+          console.log(exaCompanies, "exaCompanies")
+          this.saveCompanies("coreSignal", companies)
+        } catch (error) {
+          console.error('Error searching companies:', error);
+          await this.updateSubstep('1.2', {
+            status: 'error',
+            completedAt: new Date(),
+            message: 'Error searching companies'
+          });
+
+        }
+
+        console.log(`Found ${exaCompanies?.length} potential companies`);
+
+      } else if (searchType == 'deepResearch') {
+        await this.sleep(5000);
+        await this.updateSubstep('1.1', {
+          status: 'completed',
+          completedAt: new Date(),
+          message: 'ICP hypotheses generated successfully'
+        });
+
+        // Step 1.2: Market discovery scouting
+        await this.updateSubstep('1.2', {
+          status: 'in-progress',
+          startedAt: new Date()
+        });
+        const uniqueIDs = [...new Set(userCompanies.map((com: { exaId: any; }) => com.exaId))];
+        exaCompanies = await exaService.searchCompanies(adaptedQuery.optimizedQuery, count, uniqueIDs);
+       
+
+
+      }
+      await this.sleep(3000);
+
+      if (exaCompanies == undefined || exaCompanies == null || exaCompanies.length == 0 || exaCompanies?.data?.length == 0 || exaCompanies?.exaCompanies?.length == 0) {
+
         await this.sendSearchComplete([], 0, `**Search Results: 0 Companies Found**
 
-Your current ICP configuration may be too restrictive for available data. Here's what we recommend:
+              Your current ICP configuration may be too restrictive for available data. Here's what we recommend:
 
-🎯 **ICP Refinement Tips:**
-- Industry: Try adding adjacent verticals
-- Size: Consider expanding employee count range
-- Location: Include more regions or remove geographic limits
-- Keywords: Use more general terms first, then narrow down
+              🎯 **ICP Refinement Tips:**
+              - Industry: Try adding adjacent verticals
+              - Size: Consider expanding employee count range
+              - Location: Include more regions or remove geographic limits
+              - Keywords: Use more general terms first, then narrow down
 
-*Tip: Start broad and gradually refine based on initial results.*`);
-  
+              *Tip: Start broad and gradually refine based on initial results.*`);
+
         return [];
       }
+
+      let listUrls: string[] = [];
+
+      if(searchType == 'search'){
+        companiesList = await coreSignal.collectCompaniesByIds(exaCompanies);
+      }else if(searchType == 'deepResearch'){
+         listUrls= exaCompanies.exaCompanies.map((c: any) => c.properties.url);   
+         companiesList = await coreSignal.enrichCompaniesByUrls(listUrls);
+      }
+
       await this.updateSubstep('1.2', {
         status: 'completed',
         completedAt: new Date(),
@@ -329,15 +362,10 @@ Your current ICP configuration may be too restrictive for available data. Here's
         status: 'in-progress',
         startedAt: new Date()
       });
-      
-      const listUrls: string[] = exaCompanies.exaCompanies.map((c: any) => c.properties.url);
-      console.log("list urls")
-      console.log(listUrls)
-        let companiesList = await coreSignal.enrichCompaniesByUrls(listUrls);
-        console.log(companiesList)
-         this.saveCompanies("companiesList",companiesList)
-      await this.sleep(3000); 
-      
+
+
+      await this.sleep(3000);
+
       await this.updateSubstep('1.3', {
         status: 'completed',
         completedAt: new Date(),
@@ -346,18 +374,18 @@ Your current ICP configuration may be too restrictive for available data. Here's
 
       // PHASE 2: Account Intelligence
       console.log('🧠 Starting PHASE 2: Account Intelligence');
-      
+
       // Step 2.1: Multi-source data enrichment
       await this.updateSubstep('2.1', {
         status: 'in-progress',
         startedAt: new Date()
       });
-      
+
       companies = await Promise.all(
-        companiesList.map(c => this.transformToCompany(c,exaCompanies))
+        companiesList.map((c: any) => this.transformToCompany(c, exaCompanies))
       );
-      await this.sleep(4000); 
-      
+      await this.sleep(4000);
+
       await this.updateSubstep('2.1', {
         status: 'completed',
         completedAt: new Date(),
@@ -369,9 +397,9 @@ Your current ICP configuration may be too restrictive for available data. Here's
         status: 'in-progress',
         startedAt: new Date()
       });
-      
+
       for (const c of companies) {
-        
+
         // Add null checking before accessing exa_enrichement
         const fitscore = await ollamaService.scoreCompanyFit(c, icpModel.config);
         c.scoring_metrics = c.scoring_metrics ?? {};
@@ -379,8 +407,8 @@ Your current ICP configuration may be too restrictive for available data. Here's
         this.sleep(1000);
         console.log(`Fit score for ${c.name}: ${fitscore.score}`);
       }
-      await this.sleep(5000); 
-      
+      await this.sleep(5000);
+
       await this.updateSubstep('2.2', {
         status: 'completed',
         completedAt: new Date(),
@@ -392,11 +420,11 @@ Your current ICP configuration may be too restrictive for available data. Here's
         status: 'in-progress',
         startedAt: new Date()
       });
-      
+
       // Note: Reasoning is already included in the fit_score object from Ollama
       // This step ensures the reasoning is properly structured and stored
-      await this.sleep(5000); 
-      
+      await this.sleep(5000);
+
       await this.updateSubstep('2.3', {
         status: 'completed',
         completedAt: new Date(),
@@ -405,28 +433,28 @@ Your current ICP configuration may be too restrictive for available data. Here's
 
       // PHASE 3: Persona Intelligence
       console.log('👥 Starting PHASE 3: Persona Intelligence');
-      
+
       // Step 3.1: Identifying relevant personas
       await this.updateSubstep('3.1', {
         status: 'in-progress',
         startedAt: new Date()
       });
-      
+
       for (const c of companies) {
         if (c.scoring_metrics?.fit_score?.score) {
           const employees = await coreSignal.searchEmployeesByCompanyId(
             c.enrichement.id,
             icpModel.config.targetPersonas
           );
-          
+
           if (employees.results.length > 0) {
             const employeesEnrichments = await coreSignal.collectEmployees(employees.results);
             c.employees = employeesEnrichments;
           }
         }
       }
-      await this.sleep(2000); 
-      
+      await this.sleep(2000);
+
       await this.updateSubstep('3.1', {
         status: 'completed',
         completedAt: new Date(),
@@ -438,11 +466,11 @@ Your current ICP configuration may be too restrictive for available data. Here's
         status: 'in-progress',
         startedAt: new Date()
       });
-      
+
       // Psychographic data is already included in employee enrichment from CoreSignal
       // This includes interests, skills, experience patterns, etc.
-      await this.sleep(2000); 
-      
+      await this.sleep(2000);
+
       await this.updateSubstep('3.2', {
         status: 'completed',
         completedAt: new Date(),
@@ -454,11 +482,11 @@ Your current ICP configuration may be too restrictive for available data. Here's
         status: 'in-progress',
         startedAt: new Date()
       });
-      
+
       // Contact information is included in the employee data from CoreSignal
       // This step validates and ensures contact data quality
-      await this.sleep(2000); 
-      
+      await this.sleep(2000);
+
       await this.updateSubstep('3.3', {
         status: 'completed',
         completedAt: new Date(),
@@ -467,40 +495,39 @@ Your current ICP configuration may be too restrictive for available data. Here's
 
       // PHASE 4: Intent & Timing Intelligence
       console.log('🎯 Starting PHASE 4: Intent & Timing Intelligence');
-      
+
       // Step 4.1: Detecting buying signals
       await this.updateSubstep('4.1', {
         status: 'in-progress',
         startedAt: new Date()
       });
-      if(icpModel.config.buyingTriggers.length> 0 ){
-      const perplexityService = new PerplexityIntentService(config.PERPLEXITY_API_KEY);
-      
-      for (const c of companies) {
-        try {
-          const request: PerplexityRequest = {
-            companyName: c.name,
-            companyUrl: c.website || '',
-            signals: icpModel.config.buyingTriggers
-          };
-         
-          // Detect intents for a company
-          const intentEnrichment = await detectIntentWithEvidence(
-            c.name,
-            c.website,
-            icpModel.config.buyingTriggers
-          );
-          
-          //const intentEnrichment = await perplexityService.getIntentEnrichment(request);
-          this.saveCompanies("intentEnrichment",intentEnrichment)
-          c.intent_enrichment = intentEnrichment;
-          c.intent_signals=intentEnrichment;
-        } catch (error) {
-          console.error(`Error detecting intent signals for ${c.name}:`, error);
+      if (icpModel.config.buyingTriggers.length > 0) {
+
+        for (const c of companies) {
+          try {
+            const request: any = {
+              companyName: c.name,
+              companyUrl: c.website || '',
+              signals: icpModel.config.buyingTriggers
+            };
+
+            // Detect intents for a company
+            const intentEnrichment = await detectIntentWithEvidence(
+              c.name,
+              c.website,
+              icpModel.config.buyingTriggers
+            );
+
+            //const intentEnrichment = await perplexityService.getIntentEnrichment(request);
+            this.saveCompanies("intentEnrichment", intentEnrichment)
+            c.intent_enrichment = intentEnrichment;
+            c.intent_signals = intentEnrichment;
+          } catch (error) {
+            console.error(`Error detecting intent signals for ${c.name}:`, error);
+          }
         }
       }
-       }
-      await this.sleep(2000); 
+      await this.sleep(2000);
       await this.updateSubstep('4.1', {
         status: 'completed',
         completedAt: new Date(),
@@ -512,21 +539,21 @@ Your current ICP configuration may be too restrictive for available data. Here's
         status: 'in-progress',
         startedAt: new Date()
       });
-      if(icpModel.config.buyingTriggers.length> 0 ){
-      
-      for (const c of companies) {
-        if (c.intent_enrichment) {
-          const intentScore = await IntentScoringService.calculateIntentScore(
-            c.intent_enrichment
-          );
-          this.saveCompanies("intentScore",intentScore);
-          c.scoring_metrics = c.scoring_metrics ?? {};
-          c.scoring_metrics.intent_score = intentScore;
+      if (icpModel.config.buyingTriggers.length > 0) {
+
+        for (const c of companies) {
+          if (c.intent_enrichment) {
+            const intentScore = await IntentScoringService.calculateIntentScore(
+              c.intent_enrichment
+            );
+            this.saveCompanies("intentScore", intentScore);
+            c.scoring_metrics = c.scoring_metrics ?? {};
+            c.scoring_metrics.intent_score = intentScore;
+          }
         }
       }
-      }
-      await this.sleep(3000); 
-      
+      await this.sleep(3000);
+
       await this.updateSubstep('4.2', {
         status: 'completed',
         completedAt: new Date(),
@@ -538,37 +565,37 @@ Your current ICP configuration may be too restrictive for available data. Here's
         status: 'in-progress',
         startedAt: new Date()
       });
-      
+
       // Save all data to database
       await Promise.all(companies.map(async (com: any) => {
         com.company_id = uuidv4();
         const employees = [...(com.employees || [])];
-        const enr = {...(com.intent_enrichment || {})}
-        console.log("com.intent_enrichment 2 ",enr)
+        const enr = { ...(com.intent_enrichment || {}) }
+        console.log("com.intent_enrichment 2 ", enr)
 
-        console.log("entrichemnt ",enr)
+        console.log("entrichemnt ", enr)
         delete com.employees;
         delete com.intent_enrichment;
-        let gtmIntel =null
+        let gtmIntel = null
         try {
           const data = await mongoDBService.saveCompanyWithSessionAndICP(
-            this.sessionId, 
-            icpModel.id, 
+            this.sessionId,
+            icpModel.id,
             com
           );
-          
+
           console.log(data);
-          
+
           if (employees.length > 0) {
             await mongoDBService.insertEmployees(employees, data._id);
           }
-        const coresignalData = await mongoDBService.getEnrichmentByCompanyIdAndSource(
-          data._id, 
-          'Coresignal'
-        );
-        console.log("entrichemnt 2 ",coresignalData)
+          const coresignalData = await mongoDBService.getEnrichmentByCompanyIdAndSource(
+            data._id,
+            'Coresignal'
+          );
+          console.log("entrichemnt 2 ", coresignalData)
 
-           gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
+          gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
             new Types.ObjectId(this.sessionId),
             new Types.ObjectId(icpModel.id),
             new Types.ObjectId(data._id),
@@ -579,16 +606,16 @@ Your current ICP configuration may be too restrictive for available data. Here's
           console.error('❌ Failed to save company:', error);
           // Handle error appropriately
         }
-    
+
       }));
 
-      
+
       // Generate final search summary
       const searchSummary = await ollamaService.generateSearchSummary(query, icpModel, companies, companies.length);
-      await this.sleep(1000); 
-      queries.push("CHAT_ASSISTANT: "+searchSummary)
+      await this.sleep(1000);
+      queries.push("CHAT_ASSISTANT: " + searchSummary)
       await sessionService.updateSessionQuery(this.sessionId, queries);
-      
+
       await this.updateSubstep('4.3', {
         status: 'completed',
         completedAt: new Date(),
@@ -603,13 +630,13 @@ Your current ICP configuration may be too restrictive for available data. Here's
 
     } catch (error: any) {
       console.error('❌ Workflow error:', error);
-      
+
       // Mark all steps as error
       const errorSubsteps = [
-        '1.1', '1.2', '1.3', '2.1', '2.2', '2.3', 
+        '1.1', '1.2', '1.3', '2.1', '2.2', '2.3',
         '3.1', '3.2', '3.3', '4.1', '4.2', '4.3'
       ];
-      
+
       for (const stepId of errorSubsteps) {
         await this.updateSubstep(stepId, {
           status: 'error',
@@ -639,16 +666,16 @@ Your current ICP configuration may be too restrictive for available data. Here's
   // They don't need changes as they're utility functions
   getAllUniqueCompanyIDs(cmps: Company[]): string[] {
     // Remove duplicates using Set
-    return [...new Set(cmps.map(c=>c.exa_id))];
+    return [...new Set(cmps.map(c => c.exa_id))];
   }
   normalizeDomain(url: string): string {
     if (!url) return '';
-    
+
     try {
       // Handle both full URLs and plain domains
       const urlString = url.startsWith('http') ? url : `https://${url}`;
       const urlObj = new URL(urlString);
-      
+
       return urlObj.hostname
         .toLowerCase()
         .replace(/^www\./, '')  // Remove www prefix
@@ -663,25 +690,25 @@ Your current ICP configuration may be too restrictive for available data. Here's
         .trim();
     }
   }
-  
-  transformToCompany(rawData: any,exa:any): Promise<Company> {
-    let exa_enrichement = exa.exaCompanies.filter((exa: any) => {
+
+  transformToCompany(rawData: any, exa: any): Promise<Company> {
+    let exa_enrichement = exa?.exaCompanies?.filter((exa: any) => {
       const exaDomain = this.normalizeDomain(exa.properties?.url || '');
-      const rawDomain =  this.normalizeDomain(rawData.website || '');
-      console.log("rawDomain",rawDomain)
-      console.log("exaDomain",exaDomain)
+      const rawDomain = this.normalizeDomain(rawData.website || '');
+      console.log("rawDomain", rawDomain)
+      console.log("exaDomain", exaDomain)
       const matches = exaDomain == rawDomain;
-      
+
       // Debug logging (remove in production)
       if (matches) {
         console.log(`✓ Match found: ${exaDomain} === ${rawDomain}`);
       }
-      
+
       return matches;
     });
-    
+
     // Log if no matches found
-  
+
     // Your existing implementation
     const extractDomain = (url?: string): string => {
       if (!url) return '';
@@ -727,11 +754,11 @@ Your current ICP configuration may be too restrictive for available data. Here's
     };
 
     const company: Company = {
-      exa_id: exa.websetId,
+      exa_id: exa.websetId || exa.id,
       name: rawData.company_name || exa.properties.company.name || "undefined",
       domain: extractDomain(rawData.website),
       website: rawData.website || exa.properties.url || undefined,
-      logo_url: rawData.company_logo_url || exa.properties.company.logoUrl  || undefined,
+      logo_url: rawData.company_logo_url || exa.properties.company.logoUrl || undefined,
       description: rawData.description || exa.properties.description || rawData.description_enriched || undefined,
       founded_year: rawData.founded_year ? parseInt(rawData.founded_year) : undefined,
 
@@ -795,28 +822,28 @@ Your current ICP configuration may be too restrictive for available data. Here's
     if (!company.contact?.email && !company.contact?.phone) {
       company.contact = undefined;
     }
-    if (!company.social_profiles?.linkedin && !company.social_profiles?.twitter && 
-        !company.social_profiles?.facebook && !company.social_profiles?.instagram && 
-        !company.social_profiles?.crunchbase) {
+    if (!company.social_profiles?.linkedin && !company.social_profiles?.twitter &&
+      !company.social_profiles?.facebook && !company.social_profiles?.instagram &&
+      !company.social_profiles?.crunchbase) {
       company.social_profiles = undefined;
     }
-    if (!company.relationships?.customers && !company.relationships?.partners && 
-        !company.relationships?.competitors) {
+    if (!company.relationships?.customers && !company.relationships?.partners &&
+      !company.relationships?.competitors) {
       company.relationships = undefined;
     }
 
     return Promise.resolve(company);
   }
-private sleep(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+  private sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
   async saveCompanies(sessionId: string, companies: any): Promise<void> {
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const filename = `companies-${sessionId}-${timestamp}.json`;
       const filePath = path.join(process.cwd(), 'companies-data', filename);
-      
+
       await fs.mkdir(path.dirname(filePath), { recursive: true });
       await fs.writeFile(filePath, JSON.stringify(companies, null, 2));
 
@@ -827,15 +854,15 @@ private sleep(ms: number): Promise<void> {
   }
 
   private async processCompany(
-    websetId: any, 
-    exaCompany: any, 
-    icpModel: ICPModel, 
-    companyIndex: number, 
+    websetId: any,
+    exaCompany: any,
+    icpModel: ICPModel,
+    companyIndex: number,
     totalCompanies: number
   ): Promise<Company | null> {
     const companyName = exaCompany.properties?.company?.name || 'Unknown Company';
     //console.log(`🔍 Processing company: ${companyName}`);
-    
+
     try {
       // Enrich with Explorium - This covers parts of step 2.1
       //console.log(`🔍 Matching business with Explorium: ${companyName}`);
@@ -846,44 +873,44 @@ private sleep(ms: number): Promise<void> {
 
       if (!exploriumId) {
         //console.log(`❌ No Explorium match for ${companyName}`);
-       let exaEnrichments = await exaService.createAndWaitForEnrichment({websetId,icpModel})
-       const icpScore = await ollamaService.scoreCompanyFit(
-        exaCompany,
-        icpModel.config
-      );
+        let exaEnrichments = await exaService.createAndWaitForEnrichment({ websetId, icpModel })
+        const icpScore = await ollamaService.scoreCompanyFit(
+          exaCompany,
+          icpModel.config
+        );
         // Build company object
-      const company: Company = {
-        id: exaCompany.id || uuidv4(),
-        name: companyName,
-        description: exaCompany.properties?.description,
-        criterian : exaCompany.evaluations?.criterion,
-        satisfied : exaCompany.evaluations?.satisfied,
-        reasoning : exaCompany.evaluations?.reasoning,
-        references : exaCompany.evaluations?.references,
-        exa_created_at : exaCompany?.createdAt,
-        exa_updated_at : exaCompany?.updatedAt,
-        content:exaCompany.properties?.content,
-        website_traffic:null,
-        prospects:null,
-        about: exaCompany.properties?.company?.about,
-        industry: exaCompany.properties?.company?.industry,
-        employees: exaCompany.properties?.company?.employees,
-        location:exaCompany.properties?.company?.location,
-        logo_url: exaCompany.properties?.company?.logoUrl ,
-        firmographic:null,
-        website: exaCompany.properties?.url,
-        linkedin_url:null,
-        icp_score: icpScore,
-        intent_score: 0,
-        explorium_id:null,
-        growth_signals: [],
-        technologies: [], // TODO: Implement tech stack detection for step 2.3
-        revenue:null,
-        hiring:null
-      };
+        const company: Company = {
+          id: exaCompany.id || uuidv4(),
+          name: companyName,
+          description: exaCompany.properties?.description,
+          criterian: exaCompany.evaluations?.criterion,
+          satisfied: exaCompany.evaluations?.satisfied,
+          reasoning: exaCompany.evaluations?.reasoning,
+          references: exaCompany.evaluations?.references,
+          exa_created_at: exaCompany?.createdAt,
+          exa_updated_at: exaCompany?.updatedAt,
+          content: exaCompany.properties?.content,
+          website_traffic: null,
+          prospects: null,
+          about: exaCompany.properties?.company?.about,
+          industry: exaCompany.properties?.company?.industry,
+          employees: exaCompany.properties?.company?.employees,
+          location: exaCompany.properties?.company?.location,
+          logo_url: exaCompany.properties?.company?.logoUrl,
+          firmographic: null,
+          website: exaCompany.properties?.url,
+          linkedin_url: null,
+          icp_score: icpScore,
+          intent_score: 0,
+          explorium_id: null,
+          growth_signals: [],
+          technologies: [], // TODO: Implement tech stack detection for step 2.3
+          revenue: null,
+          hiring: null
+        };
 
-      //console.log(`✅ Successfully built company object for ${companyName}`);
-      return company;
+        //console.log(`✅ Successfully built company object for ${companyName}`);
+        return company;
 
       }
 
@@ -894,11 +921,11 @@ private sleep(ms: number): Promise<void> {
         exploriumService.getProspects(exploriumId, icpModel),
         exploriumService.getFirmographic(exploriumId)
       ]);
-      
+
 
       //console.log(`📊 Retrieved ${events.length} events and ${prospects.length} prospects for ${companyName}`);
       //console.log("==========================================================================");
-   
+
 
       // Step 3.1 & 3.2: Apply scoring model and calculate fit score
       //console.log(`🎯 Scoring ICP fit for ${companyName}`);
@@ -909,15 +936,15 @@ private sleep(ms: number): Promise<void> {
         this.formatCompanyData(exaCompany, firmographic),
         icpModel.config
       );
-      
+
 
       //console.log(`✅ ICP Score for ${companyName}: ${icpScore.score}/100`);
 
       // Step 4.1: Scan intent signals (partial implementation)
       //console.log(`🎯 Scoring intent for ${companyName}`);
-      const intentScore = events.length > 0 
-      ? await ollamaService.scoreCompanyIntent(events, icpModel.config)
-      : { score: 0, reason: 'No events found', confidence: 0, factors: [] };
+      const intentScore = events.length > 0
+        ? await ollamaService.scoreCompanyIntent(events, icpModel.config)
+        : { score: 0, reason: 'No events found', confidence: 0, factors: [] };
 
       //console.log(`✅ Intent Score for ${companyName}: ${intentScore.score}/100`);
 
@@ -926,26 +953,26 @@ private sleep(ms: number): Promise<void> {
         id: exaCompany.id || uuidv4(),
         name: companyName,
         description: exaCompany.properties?.description,
-        criterian : exaCompany.evaluations?.criterion,
-        satisfied : exaCompany.evaluations?.satisfied,
-        reasoning : exaCompany.evaluations?.reasoning,
-        references : exaCompany.evaluations?.references,
-        exa_created_at : exaCompany?.createdAt,
-        exa_updated_at : exaCompany?.updatedAt,
-        content:exaCompany.properties?.content,
-        website_traffic:websiteTraffic,
-        prospects:prospects,
+        criterian: exaCompany.evaluations?.criterion,
+        satisfied: exaCompany.evaluations?.satisfied,
+        reasoning: exaCompany.evaluations?.reasoning,
+        references: exaCompany.evaluations?.references,
+        exa_created_at: exaCompany?.createdAt,
+        exa_updated_at: exaCompany?.updatedAt,
+        content: exaCompany.properties?.content,
+        website_traffic: websiteTraffic,
+        prospects: prospects,
         about: exaCompany.properties?.company?.about,
         industry: exaCompany.properties?.company?.industry,
         employees: exaCompany.properties?.company?.employees,
         location: firmographic?.country_name || exaCompany.properties?.company?.location,
-        logo_url: exaCompany.properties?.company?.logoUrl ||  firmographic?.business_logo,
-        firmographic:firmographic,
+        logo_url: exaCompany.properties?.company?.logoUrl || firmographic?.business_logo,
+        firmographic: firmographic,
         website: exaCompany.properties?.url,
         linkedin_url: firmographic?.linkedin_profile,
         icp_score: icpScore,
         intent_score: intentScore.score,
-        explorium_id:exploriumId,
+        explorium_id: exploriumId,
         growth_signals: events.map((e: any) => e.event_name),
         technologies: [], // TODO: Implement tech stack detection for step 2.3
         revenue: firmographic?.yearly_revenue_range,
@@ -976,7 +1003,7 @@ private sleep(ms: number): Promise<void> {
 
   private parseEmployeeCount(employeeRange: string): number {
     if (!employeeRange) return 0;
-    
+
     const ranges: { [key: string]: number } = {
       '1-10': 5,
       '11-50': 30,
@@ -987,14 +1014,14 @@ private sleep(ms: number): Promise<void> {
       '5001-10000': 7500,
       '10000+': 15000
     };
-    
+
     return ranges[employeeRange] || 0;
   }
 
   private detectHiring(events: any[]): boolean {
     const hiringKeywords = ['hire', 'hiring', 'job', 'career', 'recruit', 'position'];
-    return events.some(event => 
-      hiringKeywords.some(keyword => 
+    return events.some(event =>
+      hiringKeywords.some(keyword =>
         event.event_name?.toLowerCase().includes(keyword)
       )
     );
