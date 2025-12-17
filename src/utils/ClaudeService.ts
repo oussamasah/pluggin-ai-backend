@@ -3,7 +3,7 @@ import axios, { AxiosError } from 'axios';
 import { config } from '../core/config';
 
 interface ClaudeMessage {
-  role: 'user' | 'assistant';
+  role: 'user' | 'assistant' | 'system';
   content: string;
 }
 
@@ -129,24 +129,36 @@ export class ClaudeService {
   }
 
   /**
-   * Generate response using Claude with rate limiting and retry logic
+   * Generate response using Claude with system prompt and user message
    */
-  async generate(prompt: string, maxTokens: number = 4096): Promise<string> {
+  async generate(
+    prompt: string, 
+    systemPrompt?: string, 
+    model:string="claude-3-5-haiku-20241022",
+    maxTokens: number = 4096
+  ): Promise<string> {
     return await this.rateLimiter.execute(async () => {
       return await this.retryWithBackoff(async () => {
         try {
+          const requestBody: any = {
+            model: model,
+            max_tokens: maxTokens,
+            messages: [
+              {
+                role: 'user',
+                content: prompt
+              }
+            ]
+          };
+
+          // Add system prompt if provided
+          if (systemPrompt) {
+            requestBody.system = systemPrompt;
+          }
+
           const response = await axios.post<ClaudeResponse>(
             `${this.baseUrl}/messages`,
-            {
-              model: 'claude-sonnet-4-20250514',
-              max_tokens: maxTokens,
-              messages: [
-                {
-                  role: 'user',
-                  content: prompt
-                }
-              ]
-            },
+            requestBody,
             {
               headers: {
                 'Content-Type': 'application/json',
@@ -192,7 +204,7 @@ export class ClaudeService {
   }
 
   /**
-   * Generate with conversation history
+   * Generate with conversation history including system prompts
    */
   async generateWithHistory(
     messages: ClaudeMessage[],
@@ -201,13 +213,25 @@ export class ClaudeService {
     return await this.rateLimiter.execute(async () => {
       return await this.retryWithBackoff(async () => {
         try {
+          // Separate system messages from conversation
+          const systemMessages = messages.filter(m => m.role === 'system');
+          const conversationMessages = messages.filter(m => m.role !== 'system');
+          
+          const requestBody: any = {
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: maxTokens,
+            messages: conversationMessages
+          };
+
+          // Combine system messages if any
+          if (systemMessages.length > 0) {
+            const combinedSystem = systemMessages.map(m => m.content).join('\n\n');
+            requestBody.system = combinedSystem;
+          }
+
           const response = await axios.post<ClaudeResponse>(
             `${this.baseUrl}/messages`,
-            {
-              model: 'claude-sonnet-4-20250514',
-              max_tokens: maxTokens,
-              messages: messages
-            },
+            requestBody,
             {
               headers: {
                 'Content-Type': 'application/json',
@@ -228,17 +252,43 @@ export class ClaudeService {
   }
 
   /**
+   * Generate with conversation history and system prompt
+   */
+  async generateWithContext(
+    systemPrompt: string,
+    messages: ClaudeMessage[],
+    maxTokens: number = 4096
+  ): Promise<string> {
+    const allMessages: ClaudeMessage[] = [
+      { role: 'system', content: systemPrompt },
+      ...messages
+    ];
+    
+    return this.generateWithHistory(allMessages, maxTokens);
+  }
+
+  /**
    * Generate and parse JSON response
    */
-  async generateJSON<T>(prompt: string, maxTokens: number = 4096): Promise<T> {
+  async generateJSON<T>(
+    prompt: string, 
+    systemPrompt?: string, 
+    maxTokens: number = 4096
+  ): Promise<T> {
     try {
-      const response = await this.generate(prompt, maxTokens);
+      const response = await this.generate(prompt, systemPrompt,"claude-3-5-haiku-20241022", maxTokens);
       
       // Try to extract JSON from markdown code blocks if present
       let jsonText = response.trim();
       const jsonMatch = jsonText.match(/```json\n?([\s\S]*?)\n?```/);
       if (jsonMatch) {
         jsonText = jsonMatch[1];
+      } else {
+        // Try other code block formats
+        const codeMatch = jsonText.match(/```\n?([\s\S]*?)\n?```/);
+        if (codeMatch) {
+          jsonText = codeMatch[1];
+        }
       }
       
       return JSON.parse(jsonText);
@@ -266,6 +316,7 @@ export class ClaudeService {
       processing: (this.rateLimiter as any).processing
     };
   }
+  
 }
 
 export const claudeService = new ClaudeService();

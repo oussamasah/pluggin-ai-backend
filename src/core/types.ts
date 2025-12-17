@@ -91,6 +91,7 @@ export interface WebSocketManagerInterface {
   // Add other methods your WebSocketManager has
 }
   export interface SearchSession {
+    refinementState: any;
     id: string;
     name: string;
     createdAt: Date;

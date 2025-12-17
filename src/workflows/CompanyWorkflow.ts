@@ -1,8 +1,7 @@
 // src/workflows/CompanyWorkflow.ts
 import { v4 as uuidv4 } from 'uuid';
-import { ExaCompany, exaService } from '../services/ExaService.js';
+import { exaService } from '../services/ExaService.js';
 import { exploriumService } from '../services/ExploriumService.js';
-import { ollamaService } from '../services/OllamaService.js';
 import { wsManager } from '../websocket/WebSocketManager.js';
 import { SearchStatus, SubStep, Company, ICPModel, SearchSession } from '../core/types.js';
 import { sessionService } from '../services/SessionService.js';
@@ -10,13 +9,12 @@ import fs from 'fs/promises';
 import path from 'path';
 import { CoreSignalService } from '../services/CoresignalService.js';
 import { mongoDBService } from '../services/MongoDBService.js';
-
-import { config } from '../core/config.js';
 import { IntentScoringService } from '../services/IntentScoringService.js';
-import mongoose, { Types } from 'mongoose';
+import  { Types } from 'mongoose';
 import { gtmIntelligenceService } from '../services/GTMIntelligenceService';
 import { formatPlainTextToCoresignalQuery } from '../services/CoreSignalQueryFormatter.js';
 import { detectIntentWithEvidence, generateOptimizedExaQuery } from '../services/HighConfidenceIntentDetector.js';
+import { scoringService } from '../services/ScoringService.js';
 export class CompanyWorkflow {
   private sessionId: string;
   private userId: string;
@@ -266,13 +264,12 @@ export class CompanyWorkflow {
 
       console.log("====================================================", searchType)
       const userCompanies = await mongoDBService.getCompaniesByUserId(this.userId);
-      const adaptedQuery = await generateOptimizedExaQuery(icpModel.config,query, true);
+     
       if (searchType == 'search') {
-        console.log("query =====================",adaptedQuery.optimizedQuery)
 
-        const mergedQuery = await formatPlainTextToCoresignalQuery(adaptedQuery.optimizedQuery);
+        const mergedQuery = await formatPlainTextToCoresignalQuery(query);
 
-        console.log("Generated ICP query:", mergedQuery)
+        console.log("Generated ICP query:", query)
 
         await this.sleep(5000);
         await this.updateSubstep('1.1', {
@@ -287,7 +284,13 @@ export class CompanyWorkflow {
           startedAt: new Date()
         });
         try {
-          let response = await coreSignal.searchCompanies(mergedQuery, undefined, parseInt(count), userCompanies.map((c: any) => c.website));
+          let excludeUrls =userCompanies.map((c: any) => c.website);
+          let response = await coreSignal.searchCompanies(
+            query,
+            undefined,
+            parseInt(count),
+            excludeUrls  // Pass the exclude list
+          );
           exaCompanies = response.data || [];
           console.log(exaCompanies, "exaCompanies")
           console.log(exaCompanies, "exaCompanies")
@@ -318,7 +321,8 @@ export class CompanyWorkflow {
           startedAt: new Date()
         });
         const uniqueIDs = [...new Set(userCompanies.map((com: { exaId: any; }) => com.exaId))];
-        exaCompanies = await exaService.searchCompanies(adaptedQuery.optimizedQuery, count, uniqueIDs);
+
+        exaCompanies = await exaService.searchCompanies(query, count, uniqueIDs);
        
 
 
@@ -401,7 +405,7 @@ export class CompanyWorkflow {
       for (const c of companies) {
 
         // Add null checking before accessing exa_enrichement
-        const fitscore = await ollamaService.scoreCompanyFit(c, icpModel.config);
+        const fitscore = await scoringService.scoreCompanyFit(c, icpModel.config);
         c.scoring_metrics = c.scoring_metrics ?? {};
         c.scoring_metrics.fit_score = fitscore;
         this.sleep(1000);
@@ -611,7 +615,7 @@ export class CompanyWorkflow {
 
 
       // Generate final search summary
-      const searchSummary = await ollamaService.generateSearchSummary(query, icpModel, companies, companies.length);
+      const searchSummary = await scoringService.generateSearchSummary(query, icpModel, companies, companies.length);
       await this.sleep(1000);
       queries.push("CHAT_ASSISTANT: " + searchSummary)
       await sessionService.updateSessionQuery(this.sessionId, queries);
@@ -754,8 +758,8 @@ export class CompanyWorkflow {
     };
 
     const company: Company = {
-      exa_id: exa.websetId || exa.id,
-      name: rawData.company_name || exa.properties.company.name || "undefined",
+      exa_id: exa.websetId,
+      name: rawData?.company_name || exa?.properties?.company.name || "undefined",
       domain: extractDomain(rawData.website),
       website: rawData.website || exa.properties.url || undefined,
       logo_url: rawData.company_logo_url || exa.properties.company.logoUrl || undefined,
@@ -874,7 +878,7 @@ export class CompanyWorkflow {
       if (!exploriumId) {
         //console.log(`❌ No Explorium match for ${companyName}`);
         let exaEnrichments = await exaService.createAndWaitForEnrichment({ websetId, icpModel })
-        const icpScore = await ollamaService.scoreCompanyFit(
+        const icpScore = await scoringService.scoreCompanyFit(
           exaCompany,
           icpModel.config
         );
@@ -932,7 +936,7 @@ export class CompanyWorkflow {
       //console.log(`📊 Retrieved ${events.length} events, ${prospects.length} prospects, and ${websiteTraffic ? 'website traffic' : 'no traffic data'} for ${companyName}`);
 
       // Continue with scoring even if some data is missing
-      const icpScore = await ollamaService.scoreCompanyFit(
+      const icpScore = await scoringService.scoreCompanyFit(
         this.formatCompanyData(exaCompany, firmographic),
         icpModel.config
       );
@@ -943,7 +947,7 @@ export class CompanyWorkflow {
       // Step 4.1: Scan intent signals (partial implementation)
       //console.log(`🎯 Scoring intent for ${companyName}`);
       const intentScore = events.length > 0
-        ? await ollamaService.scoreCompanyIntent(events, icpModel.config)
+        ? await scoringService.scoreCompanyIntent(events, icpModel.config)
         : { score: 0, reason: 'No events found', confidence: 0, factors: [] };
 
       //console.log(`✅ Intent Score for ${companyName}: ${intentScore.score}/100`);
@@ -1027,47 +1031,5 @@ export class CompanyWorkflow {
     );
   }
 
-  private logMissingImplementations() {
-    console.log(`
-    🔍 BACKEND IMPLEMENTATION STATUS:
-    =================================
-    
-    ✅ IMPLEMENTED STEPS:
-    - 1.1: Query database (Exa.ai integration)
-    - 2.1: Fetch company details (Explorium integration)
-    - 3.1: Apply scoring model (Ollama integration)
-    - 3.2: Calculate fit score (Ollama integration)
-    - 4.1: Scan intent signals (Partial - events analysis)
-    
-    ⚠️  NEEDS IMPLEMENTATION:
-    - 1.2: Filter results - Add actual filtering logic
-    - 1.3: Validate matches - Add validation logic
-    - 2.2: Get financial data - Add financial data collection
-    - 2.3: Enhance tech stack - Add tech stack detection
-    - 3.3: Rank companies - Add ranking algorithm
-    - 4.2: Evaluate engagement - Add engagement metrics
-    - 4.3: Generate insights - Add insights generation
-    
-    💡 IMPLEMENTATION NOTES:
-    - Steps 1.2 & 1.3: Currently simulated with timeouts
-    - Step 2.2: Need financial API integration
-    - Step 2.3: Need tech stack detection service
-    - Step 3.3: Need ranking algorithm based on scores
-    - Step 4.2: Need engagement metrics from Explorium or similar
-    - Step 4.3: Need insights generation logic
-    `);
-  }
-  private extractCompanyFilters(allFilters: any): any {
-    return {
-      industry: allFilters.industry,
-      country: allFilters.country,
-      location: allFilters.location,
-      employees_count_gte: allFilters.employees_count_gte,
-      employees_count_lte: allFilters.employees_count_lte,
-      funding_last_round_type: allFilters.funding_last_round_type,
-      funding_last_round_date_gte: allFilters.funding_last_round_date_gte,
-      funding_last_round_date_lte: allFilters.funding_last_round_date_lte,
-      funding_rounds_count_gte: allFilters.funding_rounds_count_gte
-    };
-  }
+
 }

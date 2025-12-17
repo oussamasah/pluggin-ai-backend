@@ -3,7 +3,6 @@ import { EmployeeSearchResponse } from '../core/types';
 import fs from 'fs/promises';
 import path from 'path';
 import { config } from '../core/config.js';
-import { ollamaService } from './OllamaService';
 
 
 interface CoreSignalFilters {
@@ -233,98 +232,185 @@ export class CoreSignalService {
       );
     }
   }
-  async searchCompanies(
-    searchText: string,
-    after?: string | number,
-    itemsPerPage: number = 1,
-    excludeUrls?: string[],
-    excludeDomains?: string[]
-  ): Promise<any> {
-    try {
-      console.log("searchText=================", searchText);
-      console.log("Excluding URLs:", excludeUrls);
-      console.log("Excluding domains:", excludeDomains);
+/**
+ * Normalize website URL to match CoreSignal's format
+ * CoreSignal stores websites without protocol and www
+ */
+private normalizeWebsite(url: string): string {
+  if (!url) return '';
   
-      const requestBody: any = {
-        query: {
-          bool: {
-            must: [
-              {
-                query_string: {
-                  query: searchText,
-                  default_field: "description",
-                  default_operator: "and"
-                }
-              }
-            ]
-          }
-        }
-      };
-  
-      // Add exclusions if provided
-      const mustNotClauses: any[] = [];
-  
-      if (excludeUrls && excludeUrls.length > 0) {
-        mustNotClauses.push({
-          terms: {
-            "website.keyword": excludeUrls
-          }
-        });
-      }
-  
-      if (excludeDomains && excludeDomains.length > 0) {
-        excludeDomains.forEach(domain => {
-          mustNotClauses.push({
-            wildcard: {
-              "website": {
-                "value": `*${domain}*`
+  return url
+    .toLowerCase()
+    .replace(/^https?:\/\//, '')  // Remove protocol
+    .replace(/^www\./, '')         // Remove www
+    .replace(/\/.*$/, '')          // Remove path
+    .trim();
+}
+
+/**
+ * Extract domain from URL for domain-level exclusions
+ */
+private extractDomain(url: string): string {
+  const normalized = this.normalizeWebsite(url);
+  // Get the main domain (e.g., "example.com" from "subdomain.example.com")
+  const parts = normalized.split('.');
+  if (parts.length >= 2) {
+    return parts.slice(-2).join('.');
+  }
+  return normalized;
+}
+
+async searchCompanies(
+  searchText: string,
+  after?: string | number,
+  itemsPerPage: number = 10,
+  excludeUrls?: string[],
+  excludeDomains?: string[]
+): Promise<any> {
+  try {
+    console.log("🔍 Search Parameters:");
+    console.log("Search text:", searchText);
+    console.log("Excluding URLs:", excludeUrls);
+    console.log("Excluding domains:", excludeDomains);
+
+    // Normalize all exclude URLs
+    const normalizedExcludeUrls = excludeUrls?.map(url => this.normalizeWebsite(url)) || [];
+    const normalizedExcludeDomains = excludeDomains?.map(domain => this.extractDomain(domain)) || [];
+
+    console.log("📝 Normalized excludes:");
+    console.log("URLs:", normalizedExcludeUrls);
+    console.log("Domains:", normalizedExcludeDomains);
+
+    const requestBody: any = {
+      query: {
+        bool: {
+          must: [
+            {
+              query_string: {
+                query: searchText,
+                default_field: "description",
+                default_operator: "and" // Changed to 'or' for better results
               }
             }
-          });
+          ],
+          
+          must_not: [] // Initialize must_not array
+        }
+      },
+      "sort": [
+        "_score"
+    ]
+    };
+
+    // Add URL exclusions - try multiple field variations
+    if (normalizedExcludeUrls.length > 0) {
+      // Try exact match on website field
+      requestBody.query.bool.must_not.push({
+        terms: {
+          "website": normalizedExcludeUrls
+        }
+      });
+
+      // Also try with .keyword suffix for exact matching
+      requestBody.query.bool.must_not.push({
+        terms: {
+          "website.keyword": normalizedExcludeUrls
+        }
+      });
+
+      // Add wildcard patterns for each URL
+      normalizedExcludeUrls.forEach(url => {
+        requestBody.query.bool.must_not.push({
+          wildcard: {
+            "website": `*${url}*`
+          }
         });
-      }
-  
-      if (mustNotClauses.length > 0) {
-        requestBody.query.bool.must_not = mustNotClauses;
-      }
-  
-      console.log("requestBody=================", JSON.stringify(requestBody, null, 2));
-  
-      let url = '/company_multi_source/search/es_dsl';
-      const params = new URLSearchParams();
+      });
+    }
+
+    // Add domain exclusions
+    if (normalizedExcludeDomains.length > 0) {
+      normalizedExcludeDomains.forEach(domain => {
+        requestBody.query.bool.must_not.push({
+          wildcard: {
+            "website": `*${domain}*`
+          }
+        });
+      });
+    }
+
+    console.log("📡 Request Body:", JSON.stringify(requestBody, null, 2));
+
+    let url = '/company_multi_source/search/es_dsl';
+    const params = new URLSearchParams();
+    
+    if (after) params.append('after', after.toString());
+    params.append('items_per_page', itemsPerPage.toString());
+    
+    if (params.toString()) {
+      url += `?${params.toString()}`;
+    }
+
+    console.log("🌐 API URL:", url);
+
+    const response = await this.client.post(url, requestBody, {
+      headers: { 'Content-Type': 'application/json' }
+    });
+    
+    const headers = {
+      xNextPageAfter: response.headers['x-next-page-after'],
+      xTotalPages: parseInt(response.headers['x-total-pages'] || '0'),
+      xTotalResults: parseInt(response.headers['x-total-results'] || '0')
+    };
+
+    console.log(`✅ Found ${response.data?.length || 0} companies (Total: ${headers.xTotalResults})`);
+
+    // Additional client-side filtering as backup
+    let filteredData = response.data || [];
+    
+    if (normalizedExcludeUrls.length > 0 || normalizedExcludeDomains.length > 0) {
+      const beforeFilter = filteredData.length;
       
-      if (after) params.append('after', after.toString());
-      params.append('items_per_page', itemsPerPage.toString());
-      
-      if (params.toString()) url += `?${params.toString()}`;
-  
-      const response = await this.client.post(url, requestBody, {
-        headers: { 'Content-Type': 'application/json' }
+      filteredData = filteredData.filter((company: any) => {
+        const companyWebsite = this.normalizeWebsite(company.website || '');
+        const companyDomain = this.extractDomain(company.website || '');
+        
+        // Check if company URL is in exclude list
+        if (normalizedExcludeUrls.includes(companyWebsite)) {
+          console.log(`🚫 Filtered out: ${company.website} (exact URL match)`);
+          return false;
+        }
+        
+        // Check if company domain is in exclude list
+        if (normalizedExcludeDomains.some(domain => companyDomain.includes(domain))) {
+          console.log(`🚫 Filtered out: ${company.website} (domain match)`);
+          return false;
+        }
+        
+        return true;
       });
       
-      const headers = {
-        xNextPageAfter: response.headers['x-next-page-after'],
-        xTotalPages: parseInt(response.headers['x-total-pages'] || '0'),
-        xTotalResults: parseInt(response.headers['x-total-results'] || '0')
-      };
-  
-      return {
-        data: response.data || [],
-        headers
-      };
-      
-    } catch (error: any) {
-      console.error('❌ CoreSignal search error:', error);
-      return {
-        data: [],
-        headers: {
-          xNextPageAfter: 'None',
-          xTotalPages: 0,
-          xTotalResults: 0
-        }
-      };
+      console.log(`🔍 Client-side filtering: ${beforeFilter} -> ${filteredData.length} companies`);
     }
+
+    return {
+      data: filteredData,
+      headers
+    };
+    
+  } catch (error: any) {
+    console.error('❌ CoreSignal search error:', error.response?.data || error.message);
+    return {
+      data: [],
+      headers: {
+        xNextPageAfter: 'None',
+        xTotalPages: 0,
+        xTotalResults: 0
+      }
+    };
   }
+}
+
 /**
  * Collect company data by CoreSignal IDs
  */

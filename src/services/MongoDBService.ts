@@ -67,6 +67,143 @@ export class MongoDBService {
       return null;
     }
   }
+  // In your MongoDBService.ts - add these methods
+
+async updateSessionRefinementState(
+  sessionId: string,
+  stage: 'initial' | 'proposed' | 'refining' | 'confirmed' | 'searching',
+  currentQuery?: string,
+  proposalHistory?: Array<{
+    query: string;
+    timestamp: Date;
+    userFeedback?: string;
+  }>
+): Promise<SearchSession | null> {
+  try {
+    console.log('🔄 Updating session refinement state:', {
+      sessionId,
+      stage,
+      currentQuery,
+      hasHistory: !!proposalHistory
+    });
+
+    const updateData: any = {
+      'refinementState.stage': stage,
+      updatedAt: new Date()
+    };
+
+    if (currentQuery !== undefined) {
+      updateData['refinementState.currentQuery'] = currentQuery;
+      updateData.currentProposal = currentQuery; // Also update currentProposal field
+    }
+
+    if (proposalHistory) {
+      updateData['refinementState.proposalHistory'] = proposalHistory;
+    }
+
+    // Also update searchStatus if stage is 'searching'
+    if (stage === 'searching') {
+      updateData['searchStatus.stage'] = 'searching';
+      updateData['searchStatus.message'] = `Searching for companies: ${currentQuery || 'based on refined criteria'}`;
+      updateData['searchStatus.progress'] = 10;
+      updateData['searchStatus.currentStep'] = 1;
+    }
+
+    const session = await Session.findByIdAndUpdate(
+      sessionId,
+      { $set: updateData },
+      { new: true }
+    ).lean();
+
+    if (!session) {
+      throw new Error(`Session ${sessionId} not found`);
+    }
+
+    // Get related data for full session object
+    const companies = await Company.find({ sessionId: session._id }).lean();
+    const substeps = session.searchStatus?.substeps || [];
+
+    return this.mapSessionToType(session, companies, substeps);
+  } catch (error) {
+    console.error('❌ Error updating session refinement state:', error);
+    throw error;
+  }
+}
+// In your SessionService.ts or MongoDBService.ts
+
+async updateSession(
+  sessionId: string, 
+  updates: any
+): Promise<SearchSession | null> {
+  try {
+    // Prepare the update object for MongoDB
+    const setData: any = { updatedAt: new Date() };
+    
+    // Handle refinementState updates
+    if (updates.refinementState) {
+      if (updates.refinementState.stage !== undefined) {
+        setData['refinementState.stage'] = updates.refinementState.stage;
+      }
+      if (updates.refinementState.currentQuery !== undefined) {
+        setData['refinementState.currentQuery'] = updates.refinementState.currentQuery;
+      }
+    }
+    
+    // Handle currentProposal
+    if (updates.currentProposal !== undefined) {
+      setData.currentProposal = updates.currentProposal;
+    }
+    
+    // Handle query updates (add to query array)
+    if (updates.query !== undefined) {
+      // If you want to add to the query array
+      setData.$push = { query: updates.query };
+    }
+    
+    // Update the session
+    const session = await Session.findByIdAndUpdate(
+      sessionId,
+      { $set: setData },
+      { new: true }
+    ).lean();
+
+    if (!session) {
+      throw new Error(`Session ${sessionId} not found`);
+    }
+
+    // Get related data
+    const companies = await Company.find({ sessionId: session._id }).lean();
+    const substeps = session.searchStatus?.substeps || [];
+
+    return this.mapSessionToType(session, companies, substeps);
+  } catch (error) {
+    console.error('Error updating session:', error);
+    throw error;
+  }
+}
+// Add a helper method to get refinement state
+async getSessionRefinementState(sessionId: string): Promise<{
+  stage: 'initial' | 'proposed' | 'refining' | 'confirmed' | 'searching';
+  currentQuery: string;
+  proposalHistory: Array<any>;
+} | null> {
+  try {
+    const session = await Session.findById(sessionId)
+      .select('refinementState currentProposal')
+      .lean();
+
+    if (!session) return null;
+
+    return {
+      stage: session.refinementState?.stage || 'initial',
+      currentQuery: session.refinementState?.currentQuery || session.currentProposal || '',
+      proposalHistory: session.refinementState?.proposalHistory || []
+    };
+  } catch (error) {
+    console.error('Error getting refinement state:', error);
+    return null;
+  }
+}
 // In MongoDBService.ts - update getUserSessions method
 async getUserSessions(userId: string): Promise<SearchSession[]> {
   const MAX_RETRIES = 3

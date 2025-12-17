@@ -72,6 +72,30 @@ export class SessionService {
   async deleteIcpModel(modelId: string): Promise<void> {
     return await mongoDBService.deleteIcpModel(modelId);
   }
+  // In your SessionService.ts - add this method
+async updateSessionRefinementState(
+  sessionId: string,
+  stage: 'initial' | 'proposed' | 'refining' | 'confirmed' | 'searching',
+  currentQuery?: string,
+  proposalHistory?: Array<{
+    query: string;
+    timestamp: Date;
+    userFeedback?: string;
+  }>
+): Promise<SearchSession | null> {
+  return await mongoDBService.updateSessionRefinementState(
+    sessionId,
+    stage,
+    currentQuery,
+    proposalHistory
+  );
+}
+async updateSession(
+  sessionId: string, 
+  updates: any
+): Promise<SearchSession | null> {
+  return await mongoDBService.updateSession(sessionId,updates)
+}
 }
 
 export const sessionService = SessionService.getInstance();

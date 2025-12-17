@@ -1,0 +1,36 @@
+{
+  "company": "Baselayer",
+  "website": "https://www.baselayer.com",
+  "analysis_date": "2025-12-17",
+  "requested_signals": [
+    "ipo_announcement",
+    "new_office"
+  ],
+  "results": [
+    {
+      "signal": "ipo_announcement",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    },
+    {
+      "signal": "new_office",
+      "evidence": [],
+      "found": false,
+      "reasoning": "No evidence found"
+    }
+  ],
+  "summary": {
+    "total_signals": 2,
+    "signals_with_evidence": 0,
+    "signals_without_evidence": 2,
+    "confidence_score": 0,
+    "data_sources_used": [
+      "Google News",
+      "Crunchbase",
+      "TechCrunch",
+      "LinkedIn",
+      "Twitter"
+    ]
+  }
+}

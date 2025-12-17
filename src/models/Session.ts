@@ -1,6 +1,15 @@
-
-// src/models/Session.ts
+// src/models/Session.ts - Updated version
 import mongoose, { Schema, Document, Types } from 'mongoose';
+
+export interface IRefinementState {
+  stage: 'initial' | 'proposed' | 'refining' | 'confirmed' | 'searching';
+  currentQuery?: string;
+  proposalHistory?: Array<{
+    query: string;
+    timestamp: Date;
+    userFeedback?: string;
+  }>;
+}
 
 export interface ISearchStatus {
   stage: 'idle' | 'error' | 'refining-query' | 'awaiting-clarification' | 'searching' | 'analyzing' | 'filtering' | 'complete' | 'enriching' | 'scoring';
@@ -19,11 +28,34 @@ export interface ISession extends Document {
   userId: string;
   icpModelId?: Types.ObjectId;
   searchStatus: ISearchStatus;
+  
+  // 🔄 New fields for refinement
+  refinementState: IRefinementState;
+  currentProposal?: string;
+  
   createdAt: Date;
   updatedAt: Date;
 }
 
-// Define the nested schema for searchStatus
+// Define the nested schema for refinementState
+const RefinementStateSchema = new Schema({
+  stage: { 
+    type: String, 
+    enum: ['initial', 'proposed', 'refining', 'confirmed', 'searching'],
+    default: 'initial' 
+  },
+  currentQuery: { type: String, default: '' },
+  proposalHistory: {
+    type: [{
+      query: { type: String, required: true },
+      timestamp: { type: Date, default: Date.now },
+      userFeedback: { type: String }
+    }],
+    default: []
+  }
+}, { _id: false });
+
+// Define the nested schema for searchStatus (existing)
 const SearchStatusSchema = new Schema({
   stage: { 
     type: String, 
@@ -35,7 +67,7 @@ const SearchStatusSchema = new Schema({
   currentStep: { type: Number, default: 0 },
   totalSteps: { type: Number, default: 4 },
   substeps: { type: [Schema.Types.Mixed], default: [] }
-}, { _id: false }); // _id: false prevents creating _id for subdocument
+}, { _id: false });
 
 const SessionSchema = new Schema<ISession>(
   {
@@ -54,7 +86,18 @@ const SessionSchema = new Schema<ISession>(
         totalSteps: 4,
         substeps: []
       })
-    }
+    },
+    
+    // 🔄 New fields for refinement
+    refinementState: {
+      type: RefinementStateSchema,
+      default: () => ({
+        stage: 'initial',
+        currentQuery: '',
+        proposalHistory: []
+      })
+    },
+    currentProposal: { type: String, default: '' }
   },
   { 
     timestamps: true,

@@ -1,4 +1,5 @@
 // src/services/IntentClassificationLLM.ts
+import { claudeService } from '../utils/ClaudeService.js';
 import { ollamaService, OllamaService } from './OllamaService.js';
 
 export interface IntentClassification {
@@ -75,7 +76,7 @@ Be precise and consider conversation context when available.`;
     const prompt = this.buildClassificationPrompt(message, context);
 
     try {
-      const response = await this.ollamaService.generate(prompt, systemPrompt);
+      const response = await claudeService.generate(prompt, systemPrompt);
       return this.parseIntentResponse(response, message, context);
     } catch (error) {
       console.error('Intent classification error:', error);

@@ -2,7 +2,6 @@
 import { WebSocket } from 'ws';
 import { config } from '../core/config.js';
 import { ExaWebset, ICPModel } from '../core/types.js';
-import { ollamaService } from './OllamaService.js';
 
 export interface ExaCompany {
   id: string;
@@ -123,14 +122,14 @@ export class ExaService {
               entity: { type: 'company' }
             }
           };
-      
-          if (excludeDomains && excludeDomains.length > 0) {
+      console.log(excludeDomains)
+          if (excludeDomains && excludeDomains.length > 0 && excludeDomains[0]!= undefined) {
             searchBody.search.exclude = excludeDomains.map((id: string) => ({
               "source": "webset",
               "id": id
             }));
           }
-          
+          console.log("Exa search body ",searchBody)
           
           const response = await fetch(`${this.baseUrl}/websets/v0/websets`, {
             method: 'POST',

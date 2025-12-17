@@ -1,6 +1,7 @@
 import { ollamaService } from './OllamaService';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import { claudeService } from '../utils/ClaudeService';
 
 // ==================== ENHANCED INTERFACES ====================
 
@@ -673,7 +674,7 @@ Return ONLY JSON in this exact format:
 }`;
 
     try {
-      const response = await this.ollamaService.generate(prompt, systemPrompt);
+      const response = await claudeService.generate(prompt, systemPrompt);
       const parsedResponse = this.parseOllamaResponse(response);
       
       return {
@@ -1056,7 +1057,7 @@ Be reasonable - if there are strong indicators, mark as found even if not 100% c
 Return only valid JSON.`;
 
     try {
-      const response = await ollamaService.generate(prompt, 'You are a business intelligence analyst.');
+      const response = await claudeService.generate(prompt, 'You are a business intelligence analyst.');
       const parsed = this.parseAIResponse(response);
       
       return signals.map(signal => {
