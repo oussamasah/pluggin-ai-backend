@@ -1,16 +1,13 @@
 // src/services/ClaudeScoringService.ts
 import { config } from '../core/config.js';
-import { ClaudeService } from '../utils/ClaudeService.js';
+import { openRouterService } from '../utils/OpenRouterService.js';
 import { ScoringResult } from './OllamaService.js';
 
 export class ScoringService {
-  private claudeService: ClaudeService;
-
-  constructor() {
-    this.claudeService = new ClaudeService();
-  }
 
   async scoreCompanyFit(company: any, icpConfig: any): Promise<ScoringResult> {
+
+
     const systemPrompt = `You are a B2B marketing and target audience analysis expert. 
   Evaluate companies against ICP criteria and provide a JSON response with score (0-100) and reason.`;
 
@@ -18,6 +15,8 @@ export class ScoringService {
     const exaEnrichment = company.exa_enrichement && company.exa_enrichement[0];
     const description = exaEnrichment?.properties?.description || 'No description available';
     const evaluations = exaEnrichment?.evaluations?.map((e: { criterion: any; }) => e.criterion) || [];
+
+    const { enrichement, exa_enrichement, ...companyClone } = company;
 
     const prompt = `You are an expert B2B sales intelligence analyst specializing in Ideal Customer Profile (ICP) scoring. Your task is to evaluate companies against specific ICP criteria and generate accurate, data-driven fit scores from 0-100 based solely on the weighted criteria specified in the ICP configuration.
 
@@ -31,7 +30,7 @@ export class ScoringService {
 
   *Company Data:*
   json
-  ${JSON.stringify(company, null, 2)}
+  ${JSON.stringify(companyClone, null, 2)}
 
   *Industry and Employees range Data :*
   ${JSON.stringify(description, null, 2)}
@@ -207,7 +206,7 @@ export class ScoringService {
   `;
 
     try {
-      const response = await this.claudeService.generate(prompt, systemPrompt);
+      const response = await openRouterService.generate(prompt, systemPrompt,config.OLLAMA_MODEL);
       console.log("Claude scoring response:", response);
       const parsed = this.parseJSONResponse(response);
 
@@ -269,7 +268,7 @@ export class ScoringService {
     `;
 
     try {
-      const response = await this.claudeService.generate(prompt, systemPrompt);
+      const response = await await openRouterService.generate(prompt, systemPrompt,config.OLLAMA_MODEL);
       const parsed = this.parseJSONResponse(response);
       
       return {
@@ -473,7 +472,7 @@ ICP ALIGNMENT INSIGHTS:
 Provide a concise summary focusing on how well the search results match the ICP criteria and highlight the most promising companies based on fit and intent scores.`;
 
     try {
-      const response = await this.claudeService.generate(prompt, systemPrompt);
+      const response = await  openRouterService.generate(prompt, systemPrompt);
       return response;
     } catch (error) {
       console.error('Error generating search summary with Claude:', error);
@@ -534,7 +533,7 @@ Return your response as valid JSON:
 }`;
 
     try {
-      const response = await this.claudeService.generate(prompt, systemPrompt);
+      const response = await  openRouterService.generate(prompt, systemPrompt);
       const parsed = this.parseJSONResponse(response);
       
       // Fallback if parsing fails
@@ -575,7 +574,7 @@ Analyze potential issues and provide recommendations:
 `;
 
     try {
-      const response = await this.claudeService.generate(prompt, systemPrompt);
+      const response = await  openRouterService.generate(prompt, systemPrompt);
       const parsed = this.parseJSONResponse(response);
       
       return {

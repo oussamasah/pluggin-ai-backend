@@ -1,17 +1,27 @@
-// src/services/ClaudeService.ts
+// src/services/OpenRouterService.ts
 import axios, { AxiosError } from 'axios';
 import { config } from '../core/config';
 
-interface ClaudeMessage {
+interface OpenRouterMessage {
   role: 'user' | 'assistant' | 'system';
   content: string;
 }
 
-interface ClaudeResponse {
-  content: Array<{ text: string; type: string }>;
+interface OpenRouterResponse {
   id: string;
+  choices: Array<{
+    message: {
+      content: string;
+      role: string;
+    };
+    finish_reason: string;
+  }>;
   model: string;
-  stop_reason: string;
+  usage?: {
+    prompt_tokens: number;
+    completion_tokens: number;
+    total_tokens: number;
+  };
 }
 
 class RateLimiter {
@@ -67,17 +77,19 @@ class RateLimiter {
   }
 }
 
-export class ClaudeService {
+export class OpenRouterService {
   private apiKey: string;
   private baseUrl: string;
   private timeout: number;
   private rateLimiter: RateLimiter;
   private maxRetries: number = 5;
   private baseRetryDelay: number = 2000;
+  private siteName?: string;
+  private siteUrl?: string;
 
   constructor() {
-    this.apiKey = config.ANTHROPIC_API_KEY;
-    this.baseUrl = config.ANTHROPIC_API_URL || 'https://api.anthropic.com/v1';
+    this.apiKey = config.OPENROUTER_API_KEY;
+    this.baseUrl = 'https://openrouter.ai/api/v1';
     this.timeout = 600000; // 10 minutes
     this.rateLimiter = new RateLimiter(50); // 50 requests per minute
   }
@@ -96,7 +108,6 @@ export class ClaudeService {
       
       // Check if it's a rate limit error (429)
       if (axiosError.response?.status === 429 && retryCount < this.maxRetries) {
-        // Get retry-after header or calculate exponential backoff
         const retryAfter = axiosError.response.headers['retry-after'];
         const delay = retryAfter 
           ? parseInt(retryAfter) * 1000 
@@ -123,80 +134,95 @@ export class ClaudeService {
         return this.retryWithBackoff(fn, retryCount + 1);
       }
       
-      // If we've exhausted retries or it's a different error, throw
       throw error;
     }
   }
 
   /**
-   * Generate response using Claude with system prompt and user message
+   * Generate response using OpenRouter with system prompt and user message
+   * 
+   * Available Claude models on OpenRouter:
+   * - anthropic/claude-3.5-sonnet
+   * - anthropic/claude-3-opus
+   * - anthropic/claude-3-sonnet
+   * - anthropic/claude-3-haiku
    */
   async generate(
     prompt: string, 
     systemPrompt?: string, 
-    model:string="claude-3-5-haiku-20241022",
+    model: string = "anthropic/claude-3-haiku",
     maxTokens: number = 4096
   ): Promise<string> {
     return await this.rateLimiter.execute(async () => {
       return await this.retryWithBackoff(async () => {
         try {
-          const requestBody: any = {
-            model: model,
-            max_tokens: maxTokens,
-            messages: [
-              {
-                role: 'user',
-                content: prompt
-              }
-            ]
-          };
-
+          const messages: OpenRouterMessage[] = [];
+          
           // Add system prompt if provided
           if (systemPrompt) {
-            requestBody.system = systemPrompt;
+            messages.push({
+              role: 'system',
+              content: systemPrompt
+            });
+          }
+          
+          messages.push({
+            role: 'user',
+            content: prompt
+          });
+
+          const requestBody: any = {
+            model: model,
+            messages: messages,
+            max_tokens: maxTokens,
+          };
+
+          const headers: any = {
+            'Authorization': `Bearer ${this.apiKey}`,
+            'Content-Type': 'application/json',
+          };
+
+          // Add optional site info for OpenRouter ranking
+          if (this.siteName) {
+            headers['HTTP-Referer'] = this.siteUrl || 'https://localhost';
+            headers['X-Title'] = this.siteName;
           }
 
-          const response = await axios.post<ClaudeResponse>(
-            `${this.baseUrl}/messages`,
+          const response = await axios.post<OpenRouterResponse>(
+            `${this.baseUrl}/chat/completions`,
             requestBody,
             {
-              headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': this.apiKey,
-                'anthropic-version': '2023-06-01'
-              },
+              headers,
               timeout: this.timeout
             }
           );
 
-          if (!response.data.content || response.data.content.length === 0) {
-            throw new Error('Empty response from Claude API');
+          if (!response.data.choices || response.data.choices.length === 0) {
+            throw new Error('Empty response from OpenRouter API');
           }
 
-          return response.data.content[0].text;
+          return response.data.choices[0].message.content;
         } catch (error: any) {
           const axiosError = error as AxiosError;
           
-          // Enhanced error logging
           if (axiosError.response) {
-            console.error('Claude API error:', {
+            console.error('OpenRouter API error:', {
               status: axiosError.response.status,
               statusText: axiosError.response.statusText,
               data: axiosError.response.data,
-              headers: axiosError.response.headers
             });
             
             throw new Error(
-              `Failed to generate response from Claude: ${axiosError.response.status} - ${
+              `Failed to generate response from OpenRouter: ${axiosError.response.status} - ${
                 (axiosError.response.data as any)?.error?.message || axiosError.response.statusText
               }`
             );
           } else if (axiosError.request) {
-            console.error('Claude API network error:', axiosError.message);
-            throw new Error(`Network error when calling Claude API: ${axiosError.message}`);
+            console.error('OpenRouter API network error:', axiosError.message);
+            throw new Error(`Network error when calling OpenRouter API: ${axiosError.message}`);
           } else {
-            console.error('Claude API unknown error:', axiosError.message);
-            throw new Error(`Failed to generate response from Claude: ${axiosError.message}`);
+            console.error('OpenRouter API unknown error:', axiosError.message);
+            throw new Error(`Failed to generate response from OpenRouter: ${axiosError.message}`);
           }
         }
       });
@@ -204,48 +230,45 @@ export class ClaudeService {
   }
 
   /**
-   * Generate with conversation history including system prompts
+   * Generate with conversation history
    */
   async generateWithHistory(
-    messages: ClaudeMessage[],
+    messages: OpenRouterMessage[],
+    model: string = "anthropic/claude-3.5-sonnet",
     maxTokens: number = 4096
   ): Promise<string> {
     return await this.rateLimiter.execute(async () => {
       return await this.retryWithBackoff(async () => {
         try {
-          // Separate system messages from conversation
-          const systemMessages = messages.filter(m => m.role === 'system');
-          const conversationMessages = messages.filter(m => m.role !== 'system');
-          
           const requestBody: any = {
-            model: 'claude-sonnet-4-20250514',
+            model: model,
+            messages: messages,
             max_tokens: maxTokens,
-            messages: conversationMessages
           };
 
-          // Combine system messages if any
-          if (systemMessages.length > 0) {
-            const combinedSystem = systemMessages.map(m => m.content).join('\n\n');
-            requestBody.system = combinedSystem;
+          const headers: any = {
+            'Authorization': `Bearer ${this.apiKey}`,
+            'Content-Type': 'application/json',
+          };
+
+          if (this.siteName) {
+            headers['HTTP-Referer'] = this.siteUrl || 'https://localhost';
+            headers['X-Title'] = this.siteName;
           }
 
-          const response = await axios.post<ClaudeResponse>(
-            `${this.baseUrl}/messages`,
+          const response = await axios.post<OpenRouterResponse>(
+            `${this.baseUrl}/chat/completions`,
             requestBody,
             {
-              headers: {
-                'Content-Type': 'application/json',
-                'x-api-key': this.apiKey,
-                'anthropic-version': '2023-06-01'
-              },
+              headers,
               timeout: this.timeout
             }
           );
 
-          return response.data.content[0].text;
+          return response.data.choices[0].message.content;
         } catch (error: any) {
-          console.error('Claude API error:', error);
-          throw new Error(`Failed to generate response from Claude: ${error.message}`);
+          console.error('OpenRouter API error:', error);
+          throw new Error(`Failed to generate response from OpenRouter: ${error.message}`);
         }
       });
     });
@@ -256,15 +279,16 @@ export class ClaudeService {
    */
   async generateWithContext(
     systemPrompt: string,
-    messages: ClaudeMessage[],
+    messages: OpenRouterMessage[],
+    model: string = "anthropic/claude-3.5-sonnet",
     maxTokens: number = 4096
   ): Promise<string> {
-    const allMessages: ClaudeMessage[] = [
+    const allMessages: OpenRouterMessage[] = [
       { role: 'system', content: systemPrompt },
-      ...messages
+      ...messages.filter(m => m.role !== 'system')
     ];
     
-    return this.generateWithHistory(allMessages, maxTokens);
+    return this.generateWithHistory(allMessages, model, maxTokens);
   }
 
   /**
@@ -272,11 +296,12 @@ export class ClaudeService {
    */
   async generateJSON<T>(
     prompt: string, 
-    systemPrompt?: string, 
+    systemPrompt?: string,
+    model: string = "anthropic/claude-3-haiku",
     maxTokens: number = 4096
   ): Promise<T> {
     try {
-      const response = await this.generate(prompt, systemPrompt,"claude-3-5-haiku-20241022", maxTokens);
+      const response = await this.generate(prompt, systemPrompt, model, maxTokens);
       
       // Try to extract JSON from markdown code blocks if present
       let jsonText = response.trim();
@@ -284,7 +309,6 @@ export class ClaudeService {
       if (jsonMatch) {
         jsonText = jsonMatch[1];
       } else {
-        // Try other code block formats
         const codeMatch = jsonText.match(/```\n?([\s\S]*?)\n?```/);
         if (codeMatch) {
           jsonText = codeMatch[1];
@@ -293,17 +317,22 @@ export class ClaudeService {
       
       return JSON.parse(jsonText);
     } catch (error: any) {
-      console.error('Failed to parse Claude JSON response:', error);
+      console.error('Failed to parse OpenRouter JSON response:', error);
       console.error('Raw response:', error.response);
-      throw new Error(`Invalid JSON response from Claude: ${error.message}`);
+      throw new Error(`Invalid JSON response from OpenRouter: ${error.message}`);
     }
   }
 
   /**
    * Stream response (for future implementation)
    */
-  async *generateStream(prompt: string, maxTokens: number = 4096): AsyncGenerator<string> {
-    // Implement streaming if needed
+  async *generateStream(
+    prompt: string, 
+    systemPrompt?: string,
+    model: string = "anthropic/claude-3.5-sonnet",
+    maxTokens: number = 4096
+  ): AsyncGenerator<string> {
+    // OpenRouter supports streaming via the 'stream: true' parameter
     throw new Error('Streaming not yet implemented');
   }
 
@@ -316,7 +345,23 @@ export class ClaudeService {
       processing: (this.rateLimiter as any).processing
     };
   }
-  
+
+  /**
+   * Get available models from OpenRouter
+   */
+  async getAvailableModels(): Promise<any> {
+    try {
+      const response = await axios.get(`${this.baseUrl}/models`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`,
+        }
+      });
+      return response.data;
+    } catch (error: any) {
+      console.error('Failed to fetch models:', error);
+      throw new Error(`Failed to fetch available models: ${error.message}`);
+    }
+  }
 }
 
-export const claudeService = new ClaudeService();
+export const openRouterService = new OpenRouterService();

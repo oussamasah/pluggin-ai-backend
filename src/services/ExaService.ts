@@ -122,6 +122,7 @@ export class ExaService {
               entity: { type: 'company' }
             }
           };
+          excludeDomains = excludeDomains.filter((domain: any) => domain !== undefined);
       console.log(excludeDomains)
           if (excludeDomains && excludeDomains.length > 0 && excludeDomains[0]!= undefined) {
             searchBody.search.exclude = excludeDomains.map((id: string) => ({

@@ -1,0 +1,130 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "nested": {
+            "path": "experience",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "term": {
+                      "experience.active_experience": 1
+                    }
+                  },
+                  {
+                    "term": {
+                      "experience.company_id": 8046026
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "should": [
+        {
+          "match_phrase": {
+            "active_experience_title": {
+              "query": "CEO",
+              "boost": 3
+            }
+          }
+        },
+        {
+          "match": {
+            "active_experience_title": {
+              "query": "CEO",
+              "fuzziness": "AUTO",
+              "boost": 2
+            }
+          }
+        },
+        {
+          "match_phrase": {
+            "active_experience_title": {
+              "query": "head of sales",
+              "boost": 3
+            }
+          }
+        },
+        {
+          "match": {
+            "active_experience_title": {
+              "query": "head of sales",
+              "fuzziness": "AUTO",
+              "boost": 2
+            }
+          }
+        },
+        {
+          "nested": {
+            "path": "experience",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "term": {
+                      "experience.active_experience": 1
+                    }
+                  },
+                  {
+                    "match": {
+                      "experience.position_title": {
+                        "query": "CEO",
+                        "fuzziness": "AUTO"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "boost": 1.5
+          }
+        },
+        {
+          "nested": {
+            "path": "experience",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "term": {
+                      "experience.active_experience": 1
+                    }
+                  },
+                  {
+                    "match": {
+                      "experience.position_title": {
+                        "query": "head of sales",
+                        "fuzziness": "AUTO"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "boost": 1.5
+          }
+        }
+      ],
+      "minimum_should_match": 1
+    }
+  },
+  "size": 5,
+  "sort": [
+    "_score"
+  ],
+  "_source": [
+    "id",
+    "name",
+    "active_experience_title",
+    "active_experience_company_id",
+    "active_experience_company_name",
+    "location",
+    "professional_network_url",
+    "experience"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "is_working": 1
+          }
+        },
+        {
+          "term": {
+            "active_experience_company_id": 134464
+          }
+        }
+      ],
+      "should": [
+        {
+          "match_phrase": {
+            "active_experience_title": {
+              "query": "CEO",
+              "boost": 3
+            }
+          }
+        },
+        {
+          "match": {
+            "active_experience_title": {
+              "query": "CEO",
+              "fuzziness": "AUTO",
+              "boost": 2
+            }
+          }
+        },
+        {
+          "wildcard": {
+            "active_experience_title.keyword": {
+              "value": "*ceo*",
+              "boost": 1,
+              "case_insensitive": true
+            }
+          }
+        },
+        {
+          "match_phrase": {
+            "active_experience_title": {
+              "query": "head of sales",
+              "boost": 3
+            }
+          }
+        },
+        {
+          "match": {
+            "active_experience_title": {
+              "query": "head of sales",
+              "fuzziness": "AUTO",
+              "boost": 2
+            }
+          }
+        },
+        {
+          "wildcard": {
+            "active_experience_title.keyword": {
+              "value": "*head of sales*",
+              "boost": 1,
+              "case_insensitive": true
+            }
+          }
+        }
+      ],
+      "minimum_should_match": 1
+    }
+  },
+  "size": 5,
+  "sort": [
+    "_score"
+  ],
+  "_source": [
+    "id",
+    "name",
+    "active_experience_title",
+    "active_experience_company_id",
+    "active_experience_company_name",
+    "location",
+    "linkedin_url"
+  ]
+}

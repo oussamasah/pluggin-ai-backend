@@ -1,6 +1,7 @@
 // src/services/QueryRefinementService.ts
+import { config } from '../core/config.js';
 import { ICPModel } from '../core/types.js';
-import { claudeService } from '../utils/ClaudeService.js';
+import { openRouterService } from '../utils/OpenRouterService.js';
 
 /**
  * PRODUCTION-GRADE QUERY REFINEMENT SERVICE
@@ -141,7 +142,7 @@ export class QueryRefinementService {
     const prompt = this.buildPrompt(userMessage);
     
     try {
-      const response = await claudeService.generate(prompt, undefined,"claude-3-5-haiku-20241022", 4096);
+      const response = await openRouterService.generate(prompt, undefined,config.OLLAMA_MODEL, 4096);
       return this.parseClaudeResponse(response);
     } catch (error) {
       console.error('❌ Claude API error:', error);

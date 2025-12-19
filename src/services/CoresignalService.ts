@@ -3,6 +3,7 @@ import { EmployeeSearchResponse } from '../core/types';
 import fs from 'fs/promises';
 import path from 'path';
 import { config } from '../core/config.js';
+import { openRouterService } from '../utils/OpenRouterService';
 
 
 interface CoreSignalFilters {
@@ -289,7 +290,7 @@ async searchCompanies(
               query_string: {
                 query: searchText,
                 default_field: "description",
-                default_operator: "and" // Changed to 'or' for better results
+                default_operator: "or" // Changed to 'or' for better results
               }
             }
           ],
@@ -582,9 +583,12 @@ public async searchEmployees(
   jobTitles: string[],
   afterId?: string
 ): Promise<EmployeeSearchResponse> {
-  let url = `/employee_multi_source/search/es_dsl`;
+  // 1. Start with the limit parameter
+  let url = `/employee_multi_source/search/es_dsl?items_per_page=5`;
+
+  // 2. FIX: Use '&' instead of '?' for the second parameter
   if (afterId && afterId.trim() !== '') {
-    url += `?after=${encodeURIComponent(afterId)}`;
+    url += `&after=${encodeURIComponent(afterId)}`;
   }
 
   // Validate company website
@@ -592,35 +596,20 @@ public async searchEmployees(
     throw new Error('Company website cannot be empty');
   }
 
-  // Default to CEO if no job titles provided
   const effectiveJobTitles = (jobTitles && jobTitles.length > 0) 
     ? jobTitles 
     : ['CEO'];
 
-  // Build the Elasticsearch DSL Query
   const esQuery = {
     query: {
       bool: {
         must: [
-          // Search for active employees (currently working)
-          {
-            term: {
-              is_working: 1
-            }
-          },
-          // Match the company website
-          {
-            match_phrase: {
-              active_experience_company_website: companyWebsite
-            }
-          },
-          // Match any of the job titles using OR logic
+          { term: { is_working: 1 } },
+          { match_phrase: { active_experience_company_website: companyWebsite } },
           {
             bool: {
               should: effectiveJobTitles.map(title => ({
-                match_phrase: {
-                  active_experience_title: title
-                }
+                match_phrase: { active_experience_title: title }
               })),
               minimum_should_match: 1
             }
@@ -629,26 +618,26 @@ public async searchEmployees(
       }
     }
   };
+
   await this.saveCompanies(esQuery);
   
   try {
     console.log(`🔍 Searching employees at: ${companyWebsite}`);
-    console.log(`🎯 Job titles: ${effectiveJobTitles.join(', ')}`);
     console.log(`📄 Request URL: ${url}`);
-    console.log(`📝 Query: ${JSON.stringify(esQuery, null, 2)}`);
 
-    
     const response = await this.client.post(url, esQuery);
     
-    // Extract pagination info from response headers
+    // 3. Optional: Hard-limit the returned results to 5 just in case
+    const results = (response.data || []).slice(0, 5);
+    
     const totalResults = parseInt(response.headers['x-total-results'] || '0', 10);
     const totalPages = parseInt(response.headers['x-total-pages'] || '0', 10);
+    
+    // If you strictly want only ONE page ever, you can return null for nextPageAfter
     const nextPageAfter = response.headers['x-next-page-after'];
     
-    console.log(`✅ Found ${totalResults} results (${totalPages} pages)`);
-    
     return {
-      results: response.data || [],
+      results: results,
       total_results: totalResults,
       total_pages: totalPages,
       next_page_after: nextPageAfter
@@ -764,46 +753,73 @@ public async searchEmployeesNested(
   
   }
 }
+public async getVariationJobTitles(jobs: string[]): Promise<string[]> {
+  // 1. Construct a prompt that handles multiple inputs as a single batch
+  const prompt = `
+You are a job title keyword expansion specialist. 
+Your task: Transform the following list of job titles into a single, comprehensive list of variations and synonyms.
 
-/**
- * Search for employees by company ID instead of website.
- * @param companyId The Coresignal company ID.
- * @param jobTitles Array of job titles to search for.
- * @param afterId Optional pagination token.
- * @returns The search response.
- */
+### INPUT ROLES:
+${jobs.join(', ')}
+
+### RULES:
+1. For EACH role, generate 5-12 variations (synonyms, abbreviations like CEO/CTO, and formatting differences like & vs and).
+2. Include common combinations (e.g., "Founder & [Role]", "Co-founder and [Role]").
+3. Focus on EXACT matches that appear on LinkedIn profiles.
+4. IMPORTANT: Do not include "Assistant", "Deputy", or "Chief of Staff".
+5. Return ONLY the titles, one per line. No numbering, no bullets, and no intro text.
+
+### OUTPUT FORMAT:
+Title 1
+Title 2
+Title 3
+`;
+
+  try {
+    const result = await openRouterService.generate(prompt, undefined, config.OLLAMA_MODEL);
+    
+    // 2. Clean the output: 
+    // - Split by newline
+    // - Trim whitespace
+    // - Remove empty lines
+    // - Remove duplicates (Set)
+    const variations = result
+      .split('\n')
+      .map(line => line.trim())
+      .filter(line => line.length > 0);
+
+    return Array.from(new Set(variations));
+  } catch (error) {
+    console.error("LLM Generation failed, falling back to original list", error);
+    return jobs;
+  }
+}
 public async searchEmployeesByCompanyId(
   companyId: number,
-  jobTitles: string[],
-  afterId?: string
+  jobs: string[] // Pass your LLM-generated list here
 ): Promise<EmployeeSearchResponse> {
-  let url = `/employee_multi_source/search/es_dsl`;
-  if (afterId && afterId.trim() !== '') {
-    url += `?after=${encodeURIComponent(afterId)}`;
-  }
-if(jobTitles.length==0){
-  jobTitles.push("CEO")
-}
+  
+  const url = `/employee_multi_source/search/es_dsl?items_per_page=5`;
+let enrichedJobTitles = await this.getVariationJobTitles(jobs);
+console.log("enrichedJobTitles")
+console.log("variation : ",enrichedJobTitles)
   const esQuery = {
     query: {
       bool: {
         must: [
-          {
-            term: {
-              is_working: 1
-            }
-          },
-          {
-            term: {
-              active_experience_company_id: companyId
-            }
-          },
+          // 1. Ensure they are currently at the correct company
+          { term: { active_experience_company_id: companyId } },
+          
+          // 2. Ensure they are currently active (Integer 1)
+          { term: { is_working: 1 } },
+
+          // 4. Use your Enriched List for the title match
           {
             bool: {
-              should: jobTitles.map(title => ({
-                match_phrase: {
-                  active_experience_title: title
-                }
+              should: enrichedJobTitles.map(title => ({
+                // match_phrase is better than term because LLM titles 
+                // often contain spaces (e.g., "Founder and CEO")
+                match_phrase: { active_experience_title: title }
               })),
               minimum_should_match: 1
             }
@@ -812,15 +828,67 @@ if(jobTitles.length==0){
       }
     }
   };
-await this.saveCompanies(esQuery)
+console.log("employees api query : ")
+console.log(esQuery)
   try {
-    console.log(`📝 Query: ${JSON.stringify(esQuery, null, 2)}`);
-    
     const response = await this.client.post(url, esQuery);
     
-    const totalResults = parseInt(response.headers['x-total-results'] || '0', 3);
-    const totalPages = parseInt(response.headers['x-total-pages'] || '0', 1);
+    // Safety slice to exactly 5 results
+    const results = (response.data || []).slice(0, 5);
+
+    return {
+      results: results,
+      total_results: parseInt(response.headers['x-total-results'] || '0', 10),
+      total_pages: 1,
+      next_page_after: null
+    } as EmployeeSearchResponse;
+
+  } catch (error: any) {
+    console.error('❌ Accuracy Search Failed:', error.response?.data || error.message);
+    return { results: [], total_results: 0, total_pages: 0, next_page_after: null };
+  }
+}
+// SIMPLIFIED VERSION: Just get ANY employees from the company
+public async searchAnyEmployeesByCompanyId(
+  companyId: number,
+  maxResults: number = 5
+): Promise<EmployeeSearchResponse> {
+  const url = `/employee_multi_source/search/es_dsl?size=${maxResults}`;
+
+  // Minimal query - just get employees from this company
+  const esQuery = {
+    query: {
+      nested: {
+        path: "experience",
+        query: {
+          bool: {
+            must: [
+              {
+                term: {
+                  "experience.active_experience": 1
+                }
+              },
+              {
+                term: {
+                  "experience.company_id": companyId
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  };
+
+  try {
+    console.log(`📝 Simplified Query: ${JSON.stringify(esQuery, null, 2)}`);
+    const response = await this.client.post(url, esQuery);
+    
+    const totalResults = parseInt(response.headers['x-total-results'] || '0', 10);
+    const totalPages = parseInt(response.headers['x-total-pages'] || '0', 10);
     const nextPageAfter = response.headers['x-next-page-after'];
+    
+    console.log(`✅ Found ${response.data?.length || 0} employees (Total: ${totalResults})`);
     
     return {
       results: response.data || [],
@@ -829,10 +897,7 @@ await this.saveCompanies(esQuery)
       next_page_after: nextPageAfter
     } as EmployeeSearchResponse;
   } catch (error: any) {
-    console.error('❌ CoreSignal Employee API Error:');
-    console.error('Status:', error.response?.status);
-    console.error('Response:', JSON.stringify(error.response?.data, null, 2));
-    
+    console.error('❌ Error:', error.response?.status, error.response?.data);
     return {
       results: [],
       total_results: 0,
@@ -842,13 +907,37 @@ await this.saveCompanies(esQuery)
   }
 }
 
-/**
- * Fetches all employees matching the criteria by automatically handling pagination.
- * @param companyWebsite Company website (e.g., "aiqintelligence.ai").
- * @param jobTitles Array of job titles to search for.
- * @param maxPages Optional limit on number of pages to fetch (default: unlimited).
- * @returns Array of all employee results.
- */
+// ULTRA-SIMPLE DEBUG: Test if company exists
+public async debugCompanyEmployees(companyId: number): Promise<void> {
+  console.log(`🔍 Testing company ${companyId}...`);
+  
+  const url = '/employee_multi_source/search/es_dsl?size=1';
+  
+  // Simplest possible query
+  const esQuery = {
+    query: {
+      nested: {
+        path: "experience",
+        query: {
+          term: {
+            "experience.company_id": companyId
+          }
+        }
+      }
+    }
+  };
+
+  try {
+    const response = await this.client.post(url, esQuery);
+    const total = response.headers['x-total-results'];
+    console.log(`✅ Company has ${total} employees in database`);
+    if (response.data && response.data.length > 0) {
+      console.log(`📄 Sample employee:`, JSON.stringify(response.data[0], null, 2));
+    }
+  } catch (error: any) {
+    console.error(`❌ Error:`, error.response?.status, error.response?.data);
+  }
+}
 public async searchAllEmployees(
   companyWebsite: string,
   jobTitles: string[],

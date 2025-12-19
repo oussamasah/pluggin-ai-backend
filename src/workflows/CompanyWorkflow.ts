@@ -10,9 +10,9 @@ import path from 'path';
 import { CoreSignalService } from '../services/CoresignalService.js';
 import { mongoDBService } from '../services/MongoDBService.js';
 import { IntentScoringService } from '../services/IntentScoringService.js';
-import  { Types } from 'mongoose';
+import { Types } from 'mongoose';
 import { gtmIntelligenceService } from '../services/GTMIntelligenceService';
-import { formatPlainTextToCoresignalQuery } from '../services/CoreSignalQueryFormatter.js';
+import { gtmPersonaIntelligenceService } from '../services/GTMPersonaInteligenceService.js';
 import { detectIntentWithEvidence, generateOptimizedExaQuery } from '../services/HighConfidenceIntentDetector.js';
 import { scoringService } from '../services/ScoringService.js';
 export class CompanyWorkflow {
@@ -264,12 +264,10 @@ export class CompanyWorkflow {
 
       console.log("====================================================", searchType)
       const userCompanies = await mongoDBService.getCompaniesByUserId(this.userId);
-     
+
       if (searchType == 'search') {
 
-        const mergedQuery = await formatPlainTextToCoresignalQuery(query);
 
-        console.log("Generated ICP query:", query)
 
         await this.sleep(5000);
         await this.updateSubstep('1.1', {
@@ -284,7 +282,7 @@ export class CompanyWorkflow {
           startedAt: new Date()
         });
         try {
-          let excludeUrls =userCompanies.map((c: any) => c.website);
+          let excludeUrls = userCompanies.map((c: any) => c.website);
           let response = await coreSignal.searchCompanies(
             query,
             undefined,
@@ -321,9 +319,10 @@ export class CompanyWorkflow {
           startedAt: new Date()
         });
         const uniqueIDs = [...new Set(userCompanies.map((com: { exaId: any; }) => com.exaId))];
-
+        console.log("exclude those ids websets exa:::")
+        console.log(uniqueIDs)
         exaCompanies = await exaService.searchCompanies(query, count, uniqueIDs);
-       
+
 
 
       }
@@ -348,11 +347,11 @@ export class CompanyWorkflow {
 
       let listUrls: string[] = [];
 
-      if(searchType == 'search'){
+      if (searchType == 'search') {
         companiesList = await coreSignal.collectCompaniesByIds(exaCompanies);
-      }else if(searchType == 'deepResearch'){
-         listUrls= exaCompanies.exaCompanies.map((c: any) => c.properties.url);   
-         companiesList = await coreSignal.enrichCompaniesByUrls(listUrls);
+      } else if (searchType == 'deepResearch') {
+        listUrls = exaCompanies.exaCompanies.map((c: any) => c.properties.url);
+        companiesList = await coreSignal.enrichCompaniesByUrls(listUrls);
       }
 
       await this.updateSubstep('1.2', {
@@ -450,11 +449,24 @@ export class CompanyWorkflow {
             c.enrichement.id,
             icpModel.config.targetPersonas
           );
+          console.log(employees)
 
           if (employees.results.length > 0) {
             const employeesEnrichments = await coreSignal.collectEmployees(employees.results);
             c.employees = employeesEnrichments;
+            console.log("score is good and tpersona saved")
+            console.log(c.employees)
+            // Generate persona intelligence for each employee
+           
+
+          } else {
+            console.log("score is good but persone coresignal result length empty")
+            console.log("coresignal result response")
+            console.log(employees)
           }
+        } else {
+          console.log("This companies score:: ", c.scoring_metrics?.fit_score?.score)
+          console.log("Perosona not reached for this score")
         }
       }
       await this.sleep(2000);
@@ -573,44 +585,59 @@ export class CompanyWorkflow {
       // Save all data to database
       await Promise.all(companies.map(async (com: any) => {
         com.company_id = uuidv4();
-        const employees = [...(com.employees || [])];
-        const enr = { ...(com.intent_enrichment || {}) }
-        console.log("com.intent_enrichment 2 ", enr)
-
-        console.log("entrichemnt ", enr)
+        const employees = com.employees && com.employees.length >0 ? com.employees: [];
+        
+        // Remove employees and intent enrichment before saving company
         delete com.employees;
         delete com.intent_enrichment;
-        let gtmIntel = null
+        
         try {
+          // 1. Save company
           const data = await mongoDBService.saveCompanyWithSessionAndICP(
             this.sessionId,
             icpModel.id,
             com
           );
-
-          console.log(data);
-
+      
+          console.log(`✅ Company saved: ${com.name} (ID: ${data._id})`);
+      
+          // 2. Save employees
           if (employees.length > 0) {
             await mongoDBService.insertEmployees(employees, data._id);
+            console.log(`✅ Saved ${employees.length} employees`);
           }
+      
+          // 3. Get Coresignal data
           const coresignalData = await mongoDBService.getEnrichmentByCompanyIdAndSource(
             data._id,
             'Coresignal'
           );
-          console.log("entrichemnt 2 ", coresignalData)
-
-          gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
+      
+          // 4. Generate GTM Intelligence overview
+          const gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
             new Types.ObjectId(this.sessionId),
             new Types.ObjectId(icpModel.id),
             new Types.ObjectId(data._id),
             coresignalData
           );
-          console.log(gtmIntel)
+          console.log(`✅ GTM Intelligence generated for ${com.name}`);
+      
+          // 5. Generate Persona Intelligence (only if we have employees)
+          if (employees.length > 0) {
+            const gtmPersonaResult = await gtmPersonaIntelligenceService.batchGeneratePersonaIntelligence(  
+              new Types.ObjectId(this.sessionId),
+              new Types.ObjectId(icpModel.id),
+              new Types.ObjectId(data._id)
+            );
+            
+            console.log(`✅ Persona Intelligence: ${gtmPersonaResult.success} succeeded, ${gtmPersonaResult.failed} failed`);
+          } else {
+            console.log(`⚠️ No employees found for ${com.name}, skipping persona generation`);
+          }
+      
         } catch (error) {
-          console.error('❌ Failed to save company:', error);
-          // Handle error appropriately
+          console.error(`❌ Failed to process company ${com.name}:`, error);
         }
-
       }));
 
 
@@ -761,10 +788,10 @@ export class CompanyWorkflow {
       exa_id: exa.websetId,
       name: rawData?.company_name || exa?.properties?.company.name || "undefined",
       domain: extractDomain(rawData.website),
-      website: rawData.website || exa.properties.url || undefined,
-      logo_url: rawData.company_logo_url || exa.properties.company.logoUrl || undefined,
-      description: rawData.description || exa.properties.description || rawData.description_enriched || undefined,
-      founded_year: rawData.founded_year ? parseInt(rawData.founded_year) : undefined,
+      website: rawData?.website || exa?.properties?.url || undefined,
+      logo_url: rawData?.company_logo_url || exa?.properties?.company.logoUrl || undefined,
+      description: rawData?.description || exa?.properties?.description || rawData?.description_enriched || undefined,
+      founded_year: rawData?.founded_year ? parseInt(rawData.founded_year) : undefined,
 
       location: {
         city: rawData.hq_city || undefined,
@@ -783,19 +810,19 @@ export class CompanyWorkflow {
         crunchbase: rawData.crunchbase_url || undefined,
       },
 
-      industry: rawData.industry ? [rawData.industry] : [exa.properties.company.industry],
+      industry: rawData.industry ? [rawData.industry] : [exa?.properties?.company.industry],
       business_model: determineBusinessModel(rawData),
       target_market: determineTargetMarket(rawData.employees_count),
       ownership_type: determineOwnershipType(rawData.is_public, rawData.parent_company_information),
 
-      employee_count: rawData.employees_count || exa.properties.company.employees || undefined,
-      revenue_estimated: rawData.revenue_annual || undefined,
+      employee_count: rawData?.employees_count || exa?.properties?.company?.employees || undefined,
+      revenue_estimated: rawData?.revenue_annual || undefined,
       funding_stage: determineFundingStage(rawData),
-      total_funding: rawData.last_funding_round_amount_raised || undefined,
+      total_funding: rawData?.last_funding_round_amount_raised || undefined,
 
-      technologies: rawData.technologies_used?.map((t: any) => t.technology) || undefined,
+      technologies: rawData?.technologies_used?.map((t: any) => t.technology) || undefined,
 
-      intent_signals: rawData.company_updates?.slice(0, 5).map((update: any) => ({
+      intent_signals: rawData?.company_updates?.slice(0, 5).map((update: any) => ({
         name: 'company_update',
         detected_date: new Date(update.date),
         confidence: update.reactions_count || 0,
@@ -810,10 +837,10 @@ export class CompanyWorkflow {
       scoring_metrics: undefined,
       enrichement: rawData,
       exa_enrichement: exa_enrichement,
-      country: undefined,
-      employees: undefined,
-      annual_revenue: undefined,
-      revenue: undefined,
+      country: rawData.hq_country || undefined,
+      employees: rawData.employees_count || undefined,
+      annual_revenue: rawData.revenue_annual || undefined,
+      revenue: rawData.revenue_quarterly || undefined,
       icp_score: 0,
       intent_score: 0,
       created_at: false

@@ -13,6 +13,7 @@ import { IntentController } from './api/IntentController.js';
 import { CompaniesController } from './api/CompaniesController.js';
 import { connectDatabase, disconnectDatabase } from './database/connection.js';
 import { RefinementController } from './api/RefinementController.js';
+import { EmployeeController } from './api/EmployeeController.js';
 
 const fastify = Fastify({
   logger: {
@@ -37,6 +38,7 @@ async function setupServer() {
     prefix: '/api' 
   });
   await fastify.register(IntentController, { prefix: '/api' }); 
+  await fastify.register(EmployeeController, { prefix: '/api' }); 
   await fastify.register(RefinementController, { prefix: '/api' }); 
   await fastify.register(AnalysisController, { prefix: '/api' }); 
   await fastify.register(ICPConfigController, { prefix: '/api' });

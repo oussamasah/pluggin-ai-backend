@@ -1,6 +1,6 @@
 // src/services/ICPConfigAgent.ts
 import { ICPConfig, ICPModel } from '../core/types.js';
-import { claudeService } from '../utils/ClaudeService.js';
+import { openRouterService } from '../utils/OpenRouterService.js';
 
 export interface AIConversationMessage {
   role: 'user' | 'assistant' | 'system';
@@ -79,7 +79,7 @@ The more details you provide, the better I can tailor your ICP!`;
       const systemPrompt = this.getSystemPrompt();
       const fullPrompt = `${systemPrompt}\n\nCurrent Conversation:\n${conversationContext}\n\nassistant:`;
 
-      const response = await claudeService.generate(fullPrompt);
+      const response = await openRouterService.generate(fullPrompt);
       const parsedResponse = this.parseAIResponse(response);
       
       // Add assistant response to history
@@ -220,7 +220,7 @@ Business Context: ${businessContext}
 Provide a JSON response with basic ICP configuration including industries, company size, geography, and key technologies.`;
 
     try {
-      const response = await claudeService.generate(prompt, this.getSystemPrompt());
+      const response =await openRouterService.generate(prompt, this.getSystemPrompt());
       const parsed = this.parseAIResponse(response);
       
       return parsed.suggestion || {

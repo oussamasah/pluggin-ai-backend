@@ -4,19 +4,15 @@ import { GTMIntelligence, IGTMIntelligence } from '../models/GTMIntelligence';
 import { Company } from '../models/Company';
 import { ICPModel } from '../models/ICPModel';
 import { generateGTMAnalysisPrompt } from '../utils/promptGenerator';
-import { ClaudeService, claudeService } from '../utils/ClaudeService';
+import { config } from '../core/config';
+import { openRouterService } from '../utils/OpenRouterService';
 
 export interface CoreSignalData {
   [key: string]: any;
 }
 
 export class GTMIntelligenceService {
-  private claudeService: ClaudeService;
-
-  constructor() {
-    this.claudeService = claudeService;
-  }
-
+ 
   /**
    * Generate complete GTM Intelligence with Claude and save
    */
@@ -98,12 +94,9 @@ export class GTMIntelligenceService {
       const prompt = generateGTMAnalysisPrompt(coresignalData, icpModel);
 
       console.log('Calling Claude API...');
-      console.log('Calling Claude API...',coresignalData);
-      console.log('Calling Claude API...',icpModel);
-      console.log('Calling Claude API...',prompt);
-
       // Call Claude service - get the raw markdown response
-      const markdownResponse = await this.claudeService.generate(prompt);
+      const markdownResponse = await openRouterService.generate(prompt, undefined,config.OLLAMA_MODEL);
+      
 
       console.log('Claude response received, saving as markdown...');
 
