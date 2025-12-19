@@ -796,29 +796,23 @@ Title 3
 }
 public async searchEmployeesByCompanyId(
   companyId: number,
-  jobs: string[] // Pass your LLM-generated list here
+  jobs: string[]
 ): Promise<EmployeeSearchResponse> {
   
-  const url = `/employee_multi_source/search/es_dsl?items_per_page=5`;
-let enrichedJobTitles = await this.getVariationJobTitles(jobs);
-console.log("enrichedJobTitles")
-console.log("variation : ",enrichedJobTitles)
+  const url = `/employee_multi_source/search/es_dsl?items_per_page=5`; // Fetch more so we can filter duplicates and still have 5
+
+  // 1. Get enriched titles
+  let enrichedJobTitles = await this.getVariationJobTitles(jobs);
+  
   const esQuery = {
     query: {
       bool: {
         must: [
-          // 1. Ensure they are currently at the correct company
           { term: { active_experience_company_id: companyId } },
-          
-          // 2. Ensure they are currently active (Integer 1)
           { term: { is_working: 1 } },
-
-          // 4. Use your Enriched List for the title match
           {
             bool: {
               should: enrichedJobTitles.map(title => ({
-                // match_phrase is better than term because LLM titles 
-                // often contain spaces (e.g., "Founder and CEO")
                 match_phrase: { active_experience_title: title }
               })),
               minimum_should_match: 1
@@ -828,17 +822,30 @@ console.log("variation : ",enrichedJobTitles)
       }
     }
   };
-console.log("employees api query : ")
-console.log(esQuery)
+
   try {
     const response = await this.client.post(url, esQuery);
+    const data = response.data || [];
+
+    // 2. DE-DUPLICATION LOGIC
+    // We use a Map to track unique IDs. If the ID is already seen, we skip it.
+    const uniqueProfilesMap = new Map();
     
-    // Safety slice to exactly 5 results
-    const results = (response.data || []).slice(0, 5);
+    for (const profile of data) {
+      // Use the unique ID from Coresignal (check your response for exact naming)
+      const profileId = profile.coresignal_employee_id || profile.coresignalEmployeeId || profile.id;
+      
+      if (!uniqueProfilesMap.has(profileId)) {
+        uniqueProfilesMap.set(profileId, profile);
+      }
+    }
+
+    // 3. Take only the first 5 unique profiles
+    const results = Array.from(uniqueProfilesMap.values()).slice(0, 5);
 
     return {
       results: results,
-      total_results: parseInt(response.headers['x-total-results'] || '0', 10),
+      total_results: results.length, // Local total of unique items
       total_pages: 1,
       next_page_after: null
     } as EmployeeSearchResponse;
