@@ -7,6 +7,9 @@ import { Session } from '../models/Session.js';
 import { Types } from 'mongoose';
 import { log } from 'console';
 import { GTMIntelligence } from '../models/GTMIntelligence.js';
+import { autoEmbeddingService } from '../services/vector/AutoEmbeddingService.js';
+import { Employee } from '../models/Employee.js';
+import { Enrichment } from '../models/Enrichment.js';
 
 interface GetCompaniesQuery {
   // Pagination
@@ -731,6 +734,227 @@ const companies = await CompanyModel.find(filter)
       reply.status(500).send({
         success: false,
         error: 'Failed to bulk update companies'
+      });
+    }
+  });
+
+  // 🔧 MANUAL EMBEDDING ENDPOINTS
+
+  // Embed a specific company by ID
+  fastify.post('/companies/:companyId/embed', async (
+    request: FastifyRequest<{ Params: { companyId: string } }>,
+    reply
+  ) => {
+    try {
+      const { companyId } = request.params;
+      const userId = request.headers['x-user-id'] as string || 'demo-user';
+
+      console.log(`🔧 Manual embedding requested for company: ${companyId}`);
+
+      if (!Types.ObjectId.isValid(companyId)) {
+        return reply.status(400).send({
+          success: false,
+          error: 'Invalid company ID'
+        });
+      }
+
+      // Verify user has access to this company
+      const sessions = await Session.find({ userId }).select('_id').lean();
+      const sessionIds = sessions.map(session => session._id);
+
+      const company = await CompanyModel.findOne({
+        _id: new Types.ObjectId(companyId),
+        sessionId: { $in: sessionIds }
+      });
+
+      if (!company) {
+        return reply.status(404).send({
+          success: false,
+          error: 'Company not found or access denied'
+        });
+      }
+
+      // Generate embedding
+      await autoEmbeddingService.autoEmbedOnSave(company, 'company');
+      await company.save();
+
+      console.log(`✅ Successfully embedded company: ${company.name} (${companyId})`);
+
+      reply.send({
+        success: true,
+        message: `Embedding generated for ${company.name}`,
+        companyId: companyId,
+        hasEmbedding: !!company.embedding && Array.isArray(company.embedding) && company.embedding.length > 0,
+        embeddingGeneratedAt: company.embeddingGeneratedAt
+      });
+    } catch (error: any) {
+      console.error('Error embedding company:', error);
+      reply.status(500).send({
+        success: false,
+        error: 'Failed to generate embedding',
+        details: error.message
+      });
+    }
+  });
+
+  // Embed all companies without embeddings (for a specific user)
+  fastify.post('/companies/embed/all', async (
+    request: FastifyRequest<{ 
+      Body?: { 
+        limit?: number;
+        forceRegenerate?: boolean;
+      } 
+    }>,
+    reply
+  ) => {
+    try {
+      const userId = request.headers['x-user-id'] as string || 'demo-user';
+      const { limit = 100, forceRegenerate = false } = request.body || {};
+
+      console.log(`🔧 Batch embedding requested for user: ${userId}, limit: ${limit}, forceRegenerate: ${forceRegenerate}`);
+
+      // Get user's sessions
+      const sessions = await Session.find({ userId }).select('_id').lean();
+      const sessionIds = sessions.map(session => session._id);
+
+      if (sessionIds.length === 0) {
+        return reply.send({
+          success: true,
+          message: 'No sessions found for user',
+          embedded: 0,
+          failed: 0
+        });
+      }
+
+      // Find companies without embeddings
+      const query: any = {
+        sessionId: { $in: sessionIds }
+      };
+
+      if (!forceRegenerate) {
+        query.$or = [
+          { embedding: { $exists: false } },
+          { embedding: null },
+          { embedding: { $size: 0 } },
+          { embeddingGeneratedAt: { $exists: false } }
+        ];
+      }
+
+      const companies = await CompanyModel.find(query).limit(limit);
+      
+      console.log(`📊 Found ${companies.length} companies to embed`);
+
+      let embedded = 0;
+      let failed = 0;
+      const errors: string[] = [];
+
+      for (const company of companies) {
+        try {
+          await autoEmbeddingService.autoEmbedOnSave(company, 'company');
+          await company.save();
+          embedded++;
+          console.log(`✅ Embedded company ${embedded}/${companies.length}: ${company.name}`);
+          
+          // Rate limiting
+          await new Promise(resolve => setTimeout(resolve, 100));
+        } catch (error: any) {
+          failed++;
+          const errorMsg = `Failed to embed ${company.name}: ${error.message}`;
+          errors.push(errorMsg);
+          console.error(`❌ ${errorMsg}`);
+        }
+      }
+
+      reply.send({
+        success: true,
+        message: `Batch embedding completed`,
+        total: companies.length,
+        embedded,
+        failed,
+        errors: errors.slice(0, 10) // Return first 10 errors
+      });
+    } catch (error: any) {
+      console.error('Error in batch embedding:', error);
+      reply.status(500).send({
+        success: false,
+        error: 'Failed to batch embed companies',
+        details: error.message
+      });
+    }
+  });
+
+  // Embed employees for a specific company
+  fastify.post('/companies/:companyId/embed/employees', async (
+    request: FastifyRequest<{ Params: { companyId: string } }>,
+    reply
+  ) => {
+    try {
+      const { companyId } = request.params;
+      const userId = request.headers['x-user-id'] as string || 'demo-user';
+
+      if (!Types.ObjectId.isValid(companyId)) {
+        return reply.status(400).send({
+          success: false,
+          error: 'Invalid company ID'
+        });
+      }
+
+      // Verify user has access
+      const sessions = await Session.find({ userId }).select('_id').lean();
+      const sessionIds = sessions.map(session => session._id);
+
+      const company = await CompanyModel.findOne({
+        _id: new Types.ObjectId(companyId),
+        sessionId: { $in: sessionIds }
+      });
+
+      if (!company) {
+        return reply.status(404).send({
+          success: false,
+          error: 'Company not found or access denied'
+        });
+      }
+
+      // Find employees without embeddings
+      const employees = await Employee.find({
+        companyId: new Types.ObjectId(companyId),
+        $or: [
+          { embedding: { $exists: false } },
+          { embedding: null },
+          { embedding: { $size: 0 } }
+        ]
+      }).limit(100);
+
+      console.log(`🔧 Embedding ${employees.length} employees for company: ${company.name}`);
+
+      let embedded = 0;
+      let failed = 0;
+
+      for (const employee of employees) {
+        try {
+          await autoEmbeddingService.autoEmbedOnSave(employee, 'employee');
+          await employee.save();
+          embedded++;
+          await new Promise(resolve => setTimeout(resolve, 100));
+        } catch (error: any) {
+          failed++;
+          console.error(`❌ Failed to embed employee ${employee.fullName}:`, error);
+        }
+      }
+
+      reply.send({
+        success: true,
+        message: `Embedded ${embedded} employees for ${company.name}`,
+        embedded,
+        failed,
+        total: employees.length
+      });
+    } catch (error: any) {
+      console.error('Error embedding employees:', error);
+      reply.status(500).send({
+        success: false,
+        error: 'Failed to embed employees',
+        details: error.message
       });
     }
   });

@@ -126,21 +126,43 @@ export class AutoEmbeddingService {
    */
   async autoEmbedOnSave(doc: any, docType: string): Promise<void> {
     try {
+      const docId = doc._id?.toString() || doc.name || doc.fullName || 'unknown';
+      const hasEmbedding = doc.embedding && Array.isArray(doc.embedding) && doc.embedding.length > 0;
+      
+      console.log(`🔍 [AutoEmbed] Checking ${docType} (${docId}): hasEmbedding=${hasEmbedding}, embeddingGeneratedAt=${doc.embeddingGeneratedAt}`);
+      
       // Skip if already has recent embedding
-      if (doc.embedding && doc.embeddingGeneratedAt) {
+      if (hasEmbedding && doc.embeddingGeneratedAt) {
         const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-        if (doc.embeddingGeneratedAt > thirtyDaysAgo) {
+        const generatedAt = new Date(doc.embeddingGeneratedAt);
+        if (generatedAt > thirtyDaysAgo) {
+          console.log(`⏭️  [AutoEmbed] Skipping ${docType} (${docId}) - recent embedding exists (generated: ${generatedAt.toISOString()})`);
           return; // Already has recent embedding
         }
+        console.log(`🔄 [AutoEmbed] Regenerating old embedding for ${docType} (${docId}) - generated: ${generatedAt.toISOString()}`);
       }
 
-      console.log(`🔧 Auto-embedding ${docType}: ${doc.name || doc.fullName || doc._id}`);
+      console.log(`🔧 [AutoEmbed] Starting embedding generation for ${docType}: ${docId}`);
       
       // Generate embedding text
       const embeddingText = this.generateEmbeddingText(doc, docType);
       
+      if (!embeddingText || embeddingText.trim().length === 0) {
+        console.warn(`⚠️  [AutoEmbed] Empty embedding text for ${docType} (${docId}), skipping`);
+        return;
+      }
+      
+      console.log(`📝 [AutoEmbed] Generated embedding text (${embeddingText.length} chars) for ${docType} (${docId})`);
+      
       // Generate embedding
       const embedding = await this.generateEmbedding(embeddingText);
+      
+      if (!embedding || !Array.isArray(embedding) || embedding.length === 0) {
+        console.error(`❌ [AutoEmbed] Invalid embedding generated for ${docType} (${docId})`);
+        return;
+      }
+      
+      console.log(`✅ [AutoEmbed] Generated embedding vector (${embedding.length} dimensions) for ${docType} (${docId})`);
       
       // Update document
       doc.embedding = embedding;
@@ -152,12 +174,14 @@ export class AutoEmbeddingService {
         const searchKeywords = this.extractKeywords(embeddingText);
         doc.searchKeywords = [...new Set([...(doc.searchKeywords || []), ...searchKeywords])];
         doc.semanticSummary = embeddingText.substring(0, 500);
+        console.log(`🔑 [AutoEmbed] Extracted ${searchKeywords.length} keywords for ${docType} (${docId})`);
       }
       
-      console.log(`✅ Auto-embedded ${docType}`);
+      console.log(`✅ [AutoEmbed] Successfully embedded ${docType} (${docId})`);
       
-    } catch (error) {
-      console.error(`❌ Auto-embedding failed for ${docType}:`, error);
+    } catch (error: any) {
+      console.error(`❌ [AutoEmbed] Failed to embed ${docType} (${doc.name || doc.fullName || doc._id}):`, error);
+      console.error(`❌ [AutoEmbed] Error stack:`, error.stack);
       // Don't throw - we don't want to break the save operation
     }
   }
