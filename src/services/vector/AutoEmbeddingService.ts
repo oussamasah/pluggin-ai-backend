@@ -1,4 +1,4 @@
-// src/services/AutoEmbeddingService.ts
+// src/services/vector/AutoEmbeddingService.ts
 import { OpenAI } from 'openai';
 import { Company, Employee, Enrichment, GTMIntelligence, GTMPersonaIntelligence } from '../../models/index';
 
