@@ -15,7 +15,8 @@ export class GTMPersonaIntelligenceService {
   async batchGeneratePersonaIntelligence(
     sessionId: Types.ObjectId,
     icpModelId: Types.ObjectId,
-    companyId: Types.ObjectId
+    companyId: Types.ObjectId,
+    userId:string
   ): Promise<{
     success: number;
     failed: number;
@@ -59,7 +60,8 @@ export class GTMPersonaIntelligenceService {
             icpModelId,
             companyId,
             employee,
-            productData
+            productData,
+            userId
           );
           successCount++;
           console.log(`✅ Generated persona for ${employee.fullName}`);
@@ -94,7 +96,8 @@ export class GTMPersonaIntelligenceService {
     icpModelId: Types.ObjectId,
     companyId: Types.ObjectId,
     employee: any,
-    productData: any
+    productData: any,
+    userId:string
   ): Promise<void> {
     try {
       // Check if exists
@@ -109,6 +112,7 @@ export class GTMPersonaIntelligenceService {
       
       // Prepare employee data
       const employeeData = {
+      
         fullName: employee.fullName,
         activeExperienceTitle: employee.activeExperienceTitle,
         headline: employee.headline,
@@ -145,6 +149,7 @@ export class GTMPersonaIntelligenceService {
       
       // Save to GTMPersonaIntelligence
       const personaIntel = new GTMPersonaIntelligence({
+        userId: userId,
         sessionId,
         icpModelId,
         companyId,

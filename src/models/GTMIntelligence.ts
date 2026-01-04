@@ -9,24 +9,24 @@ export interface IGTMIntelligence extends Document {
   
   // Text-based analysis fields
   overview: string;
-  employeeAnalysis: string;
-  financialAnalysis: string;
-  technologyAnalysis: string;
-  intentSignals: string;
-  competitorAnalysis: string;
-  gtmStrategy: string;
-  recommendations: string;
+  userId: string;
+  embedding: {
+    type: [Number],
+    default: undefined,
+    index: 'vector', // For MongoDB Atlas vector search
+    select: false, // Don't include in queries by default
+  },
+  embeddingText: { type: String, select: false },
+  embeddingVersion: { type: String, default: 'v1' },
+  embeddingGeneratedAt: { type: Date },
   
-  // Scoring and metadata
-  icpFitScore: number;
-  confidenceScore: number;
-  dataCompleteness: number;
-  lastRefreshed: Date;
-  dataSources: string[];
-  refreshStatus: 'pending' | 'in_progress' | 'completed' | 'failed';
-  refreshError?: string;
-  
-  // Timestamps
+  // ✅ NEW: Search optimization
+  searchKeywords: {
+    type: [String],
+    default: [],
+    index: true,
+  },
+  semanticSummary: { type: String },
   createdAt: Date;
   updatedAt: Date;
 }
@@ -57,68 +57,23 @@ const GTMIntelligenceSchema = new Schema<IGTMIntelligence>(
       type: String, 
       required: true 
     },
-    employeeAnalysis: { 
-      type: String, 
-      required: true 
+    embedding: {
+      type: [Number],
+      default: undefined,
+      index: 'vector', // For MongoDB Atlas vector search
+      select: false, // Don't include in queries by default
     },
-    financialAnalysis: { 
-      type: String, 
-      required: true 
+    embeddingText: { type: String, select: false },
+    embeddingVersion: { select: false,type: String, default: 'v1' },
+    embeddingGeneratedAt: { select: false,type: Date },
+    userId: { type: String, required: true, select: false,index: true },
+    // ✅ NEW: Search optimization
+    searchKeywords: {
+      type: [String],
+      default: [],
+      index: true,select: false
     },
-    technologyAnalysis: { 
-      type: String, 
-      required: true 
-    },
-    intentSignals: { 
-      type: String, 
-      required: true 
-    },
-    competitorAnalysis: { 
-      type: String, 
-      required: true 
-    },
-    gtmStrategy: { 
-      type: String, 
-      required: true 
-    },
-    recommendations: { 
-      type: String, 
-      required: true 
-    },
-    
-    // Scoring and metadata
-    icpFitScore: { 
-      type: Number, 
-      min: 0, 
-      max: 100, 
-      default: 0 
-    },
-    confidenceScore: { 
-      type: Number, 
-      min: 0, 
-      max: 100, 
-      default: 0 
-    },
-    dataCompleteness: { 
-      type: Number, 
-      min: 0, 
-      max: 100, 
-      default: 0 
-    },
-    lastRefreshed: { 
-      type: Date, 
-      default: Date.now 
-    },
-    dataSources: { 
-      type: [String], 
-      default: [] 
-    },
-    refreshStatus: { 
-      type: String, 
-      enum: ['pending', 'in_progress', 'completed', 'failed'],
-      default: 'pending'
-    },
-    refreshError: String
+    semanticSummary: { type: String },
   },
   { 
     timestamps: true,
@@ -135,12 +90,9 @@ GTMIntelligenceSchema.index({ lastRefreshed: -1 });
 // Text search index for analysis fields
 GTMIntelligenceSchema.index({
   overview: 'text',
-  employeeAnalysis: 'text',
-  financialAnalysis: 'text',
-  technologyAnalysis: 'text',
-  competitorAnalysis: 'text',
-  recommendations: 'text'
+  'searchKeywords': 'text',
 });
+GTMIntelligenceSchema.index({ 'embeddingGeneratedAt': -1 });
 
 // Virtual for easy access to company data
 GTMIntelligenceSchema.virtual('company', {

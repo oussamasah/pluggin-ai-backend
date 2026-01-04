@@ -336,10 +336,11 @@ async getUserSessions(userId: string): Promise<SearchSession[]> {
 async saveCompanyWithSessionAndICP(
     sessionId: string,
     icpModelId: string,
-    companyData: any
+    companyData: any,
+    userId:string
   ): Promise<any> {  // Return the saved company data directly
     try {
-      const result = await this.saveCompanyData(sessionId, icpModelId, companyData);
+      const result = await this.saveCompanyData(sessionId, icpModelId, companyData,userId);
       return result;  // Return the data directly
     } catch (error) {
       console.error("Exception saving company:", error);
@@ -423,7 +424,7 @@ async getEnrichmentByCompanyIdAndSource(
   }
 }
 
-  private async saveCompanyData(sessionId: string, icpModelId: string, companyData: any) {
+  private async saveCompanyData(sessionId: string, icpModelId: string, companyData: any,userId:string) {
     const {
       business_model,
       location,
@@ -474,7 +475,7 @@ async getEnrichmentByCompanyIdAndSource(
       name,
       sessionId: new Types.ObjectId(sessionId),
       icpModelId: new Types.ObjectId(icpModelId),
-      
+      userId:userId,
       // Direct mappings
       domain: domain || cleanCompanyData.domain,
       website: website || cleanCompanyData.website,
@@ -548,7 +549,8 @@ async getEnrichmentByCompanyIdAndSource(
           sessionId,
           icpModelId,
           enrichement,
-          "Coresignal"
+          "Coresignal",
+          userId
         ).catch(error => {
           console.error("❌ Failed to save Coresignal enrichment:", error);
           return null; // Continue even if enrichment fails
@@ -564,7 +566,8 @@ async getEnrichmentByCompanyIdAndSource(
           sessionId,
           icpModelId,
           exa_enrichement,
-          "Exa"
+          "Exa",
+          userId
         ).catch(error => {
           console.error("❌ Failed to save Exa enrichment:", error);
           return null;
@@ -577,7 +580,7 @@ async getEnrichmentByCompanyIdAndSource(
     if (employees && Array.isArray(employees) && employees.length > 0) {
      //console.log(`💾 Saving ${employees.length} employees`);
       try {
-        employeesSaved = await this.saveEmployees(companyId.toString(), employees);
+        employeesSaved = await this.saveEmployees(companyId.toString(), employees,userId);
        //console.log(`✅ Successfully saved ${employeesSaved} employees`);
       } catch (employeeError) {
         console.error("❌ Failed to save employees:", employeeError);
@@ -606,7 +609,8 @@ async getEnrichmentByCompanyIdAndSource(
     sessionId: string,
     icpModelId: string,
     data: any,
-    source: string
+    source: string,
+    userId: string
   ): Promise<any> {
     try {
       if (!data || Object.keys(data).length === 0) {
@@ -619,7 +623,8 @@ async getEnrichmentByCompanyIdAndSource(
         sessionId: new Types.ObjectId(sessionId),
         icpModelId: new Types.ObjectId(icpModelId),
         data,
-        source
+        source,
+        userId:userId
       };
   
       const savedEnrichment = await Enrichment.create(enrichmentData);
@@ -632,7 +637,7 @@ async getEnrichmentByCompanyIdAndSource(
   }
   
   // Enhanced saveEmployees method
-  private async saveEmployees(companyId: string, employees: any[]): Promise<number> {
+  private async saveEmployees(companyId: string, employees: any[],userId:string): Promise<number> {
     let savedCount = 0;
     
     for (const employee of employees) {
@@ -644,6 +649,7 @@ async getEnrichmentByCompanyIdAndSource(
         }
   
         const employeeData = {
+          userId:userId,
           companyId: new Types.ObjectId(companyId),
           coresignalEmployeeId: employee.coresignal_employee_id || 
                               employee.coresignalEmployeeId ||
@@ -1079,16 +1085,20 @@ async getSession(sessionId: string): Promise<SearchSession | null> {
 
   // Additional method for legacy insertEmployees
 // In MongoDBService.ts - fix the insertEmployees method
-async insertEmployees(employeesData: any[], targetCompanyId: string) {
-   //console.log("--------------------------------------");
-   //console.log("Employees data:", employeesData);
-    
+async insertEmployees(employeesData: any[], targetCompanyId: string,userId:string) {
+
     if (!employeesData || !Array.isArray(employeesData) || employeesData.length === 0) {
      //console.log("No employees data to save");
       return [];
     }
-    
-    return await this.saveEmployees(targetCompanyId, employeesData);
+// ✅ Correct way: Attach userId to every individual employee record
+const enrichedEmployees = employeesData.map(employee => ({
+  ...employee,
+  userId: userId,
+  companyId: targetCompanyId // Ensure the link to the company is also set
+}));
+
+return await this.saveEmployees(targetCompanyId, enrichedEmployees,userId);
   }
 
 

@@ -300,26 +300,45 @@ export class OpenRouterService {
     model: string = "anthropic/claude-3-haiku",
     maxTokens: number = 4096
   ): Promise<T> {
+    let rawResponse = "";
     try {
-      const response = await this.generate(prompt, systemPrompt, model, maxTokens);
+      // 1. Forceful Prompting
+      const enhancedPrompt = `${prompt}\n\nCRITICAL: Return ONLY valid JSON. No preamble, no conversational filler, no markdown formatting. Starting with '{' and ending with '}'.`;
       
-      // Try to extract JSON from markdown code blocks if present
-      let jsonText = response.trim();
+      rawResponse = await this.generate(enhancedPrompt, systemPrompt, model, maxTokens);
+      
+      let jsonText = rawResponse.trim();
+
+      // 2. Try Standard Markdown Block Extraction
       const jsonMatch = jsonText.match(/```json\n?([\s\S]*?)\n?```/);
+      const genericMatch = jsonText.match(/```\n?([\s\S]*?)\n?```/);
+      
       if (jsonMatch) {
         jsonText = jsonMatch[1];
+      } else if (genericMatch) {
+        jsonText = genericMatch[1];
       } else {
-        const codeMatch = jsonText.match(/```\n?([\s\S]*?)\n?```/);
-        if (codeMatch) {
-          jsonText = codeMatch[1];
+        // 3. BRUTE FORCE EXTRACTION (The "Golden" Fix)
+        // This finds the first { and the last } and takes everything in between.
+        const firstBracket = jsonText.indexOf('{');
+        const lastBracket = jsonText.lastIndexOf('}');
+        
+        if (firstBracket !== -1 && lastBracket !== -1 && lastBracket > firstBracket) {
+          jsonText = jsonText.substring(firstBracket, lastBracket + 1);
         }
       }
-      
-      return JSON.parse(jsonText);
+
+      // 4. Final cleaning: remove any trailing commas or control characters
+      jsonText = jsonText.trim();
+
+      return JSON.parse(jsonText) as T;
     } catch (error: any) {
-      console.error('Failed to parse OpenRouter JSON response:', error);
-      console.error('Raw response:', error.response);
-      throw new Error(`Invalid JSON response from OpenRouter: ${error.message}`);
+      console.error('--- OPENROUTER PARSE ERROR ---');
+      console.error('Error Message:', error.message);
+      console.error('Raw Content Received:', rawResponse);
+      console.error('-------------------------------');
+      
+      throw new Error(`Failed to parse OpenRouter JSON: ${error.message}`);
     }
   }
 

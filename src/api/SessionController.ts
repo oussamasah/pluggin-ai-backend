@@ -75,44 +75,18 @@ export async function SessionController(fastify: FastifyInstance) {
   }>, reply) => {
     try {
       const { query } = request.body;
-      
-      //console.log('🚀 API Route - PATCH /sessions/:sessionId/query');
-      //console.log('  - Session ID:', request.params.sessionId);
-      //console.log('  - Query received:', query);
-      //console.log('  - Query type:', typeof query);
-      //console.log('  - Is array:', Array.isArray(query));
-      if (Array.isArray(query)) {
-        //console.log('  - Array length:', query.length);
-        //console.log('  - Array contents:');
-        query.forEach((q, i) => console.log(`    [${i}]: ${q}`));
-      }
+
   
-      // Get current session state before update for comparison
-      const currentSession = await sessionService.getSession(request.params.sessionId);
-      //console.log('  - Current session query:', currentSession?.query);
-      //console.log('  - Current query type:', typeof currentSession?.query);
-      if (currentSession?.query && Array.isArray(currentSession.query)) {
-        //console.log('  - Current query length:', currentSession.query.length);
-        //console.log('  - Current query contents:');
-        currentSession.query.forEach((q, i) => console.log(`    [${i}]: ${q}`));
-      }
+
   
       const session = await sessionService.updateSessionQuery(request.params.sessionId, query);
       
-      //console.log('✅ API Route - Update completed:');
-      //console.log('  - Returned session query:', session.query);
-      //console.log('  - Returned query type:', typeof session.query);
-      if (Array.isArray(session.query)) {
-        //console.log('  - Returned query length:', session.query.length);
-        //console.log('  - Returned query contents:');
-        session.query.forEach((q, i) => console.log(`    [${i}]: ${q}`));
-      }
+
   
       // Verify the update was successful
       const verifySession = await sessionService.getSession(request.params.sessionId);
       //console.log('🔍 API Route - Verification (fresh fetch):');
-      console.log('  - Verified query:', verifySession?.query);
-      console.log('  - Verified query type:', typeof verifySession?.query);
+   
       if (verifySession?.query && Array.isArray(verifySession.query)) {
         console.log('  - Verified query length:', verifySession.query.length);
       }

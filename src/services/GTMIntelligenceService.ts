@@ -20,7 +20,8 @@ export class GTMIntelligenceService {
     sessionId: Types.ObjectId,
     icpModelId: Types.ObjectId,
     companyId: Types.ObjectId,
-    coresignalData: CoreSignalData
+    coresignalData: CoreSignalData,
+    userId:string
   ): Promise<IGTMIntelligence> {
     try {
       console.log('Starting GTM Intelligence generation...');
@@ -49,6 +50,7 @@ export class GTMIntelligenceService {
         sessionId,
         icpModelId,
         companyId,
+        userId: userId,
         // Save entire markdown in overview field
         overview: markdownAnalysis,
         // Set other fields as empty or default values

@@ -17,6 +17,7 @@ export interface ICompany extends Document {
   description?: string;
   foundedYear?: number;
   city?: string;
+  userId?: string;
   country?: string;
   countryCode?: string;
   contactEmail?: string;
@@ -39,7 +40,23 @@ export interface ICompany extends Document {
   scoringMetrics: Record<string, any>;
   totalFunding?: number;
   exaId?: string;
+  embedding: {
+    type: [Number],
+    default: undefined,
+    index: 'vector', // For MongoDB Atlas vector search
+    select: false, // Don't include in queries by default
+  },
+  embeddingText: { type: String, select: false },
+  embeddingVersion: { type: String, default: 'v1' },
+  embeddingGeneratedAt: { type: Date },
   
+  // ✅ NEW: Search optimization
+  searchKeywords: {
+    type: [String],
+    default: [],
+    index: true,
+  },
+  semanticSummary: { type: String },
   // Virtual field
   gtmIntelligence?: IGTMIntelligence;
   
@@ -79,7 +96,25 @@ const CompanySchema = new Schema<ICompany>(
     relationships: { type: Schema.Types.Mixed, default: {} },
     scoringMetrics: { type: Schema.Types.Mixed, default: {} },
     totalFunding: Number,
-    exaId: String
+    exaId: String,
+    userId: { type: String, required: true, index: true },
+    embedding: {
+      type: [Number],
+      default: undefined,
+      index: 'vector', // For MongoDB Atlas vector search
+      select: false, // Don't include in queries by default
+    },
+    embeddingText: { type: String, select: false },
+    embeddingVersion: { select: false,type: String, default: 'v1' },
+    embeddingGeneratedAt: {select: false, type: Date },
+    
+    // ✅ NEW: Search optimization
+    searchKeywords: {
+      type: [String],
+      default: [],
+      index: true,select: false
+    },
+    semanticSummary: {select: false, type: String },
   },
   { 
     timestamps: true,
@@ -105,6 +140,7 @@ CompanySchema.virtual('employees', {
 CompanySchema.index({ sessionId: 1, createdAt: -1 });
 CompanySchema.index({ icpModelId: 1 });
 CompanySchema.index({ exaId: 1 });
-CompanySchema.index({ name: 'text', description: 'text' });
+CompanySchema.index({ name: 'text', description: 'text', 'searchKeywords': 'text' });
+CompanySchema.index({ 'embeddingGeneratedAt': -1 });
 
 export const Company = mongoose.model<ICompany>('Company', CompanySchema);

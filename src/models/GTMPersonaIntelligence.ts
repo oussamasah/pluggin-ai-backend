@@ -8,6 +8,24 @@ export interface GTMPersonaIntelligence extends Document {
   companyId: Types.ObjectId;
   employeeId: Types.ObjectId;
   overview: string;
+  userId: string;
+  embedding: {
+    type: [Number],
+    default: undefined,
+    index: 'vector', // For MongoDB Atlas vector search
+    select: false, // Don't include in queries by default
+  },
+  embeddingText: { type: String, select: false },
+  embeddingVersion: { type: String, default: 'v1' },
+  embeddingGeneratedAt: { type: Date },
+  
+  // ✅ NEW: Search optimization
+  searchKeywords: {
+    type: [String],
+    default: [],
+    index: true,
+  },
+  semanticSummary: { type: String },
   createdAt: Date;
   updatedAt: Date;
 }
@@ -44,6 +62,24 @@ const GTMPersonaIntelligenceSchema= new Schema<GTMPersonaIntelligence>(
       type: String, 
       required: true 
     },
+    embedding: {
+      type: [Number],
+      default: undefined,
+      index: 'vector', // For MongoDB Atlas vector search
+      select: false, // Don't include in queries by default
+    },
+    embeddingText: { type: String, select: false },
+    embeddingVersion: {select: false, type: String, default: 'v1' },
+    embeddingGeneratedAt: { select: false,type: Date },
+    userId: { type: String, required: true, index: true },
+    // ✅ NEW: Search optimization
+    searchKeywords: {
+      type: [String],
+      default: [],
+      index: true,
+      select: false
+    },
+    semanticSummary: { type: String },
 },
   { 
     timestamps: true,
@@ -53,11 +89,14 @@ const GTMPersonaIntelligenceSchema= new Schema<GTMPersonaIntelligence>(
 
 // Indexes for efficient querying
 GTMPersonaIntelligenceSchema.index({ sessionId: 1, employeeId: 1, companyId: 1 }, { unique: true });
+GTMPersonaIntelligenceSchema.index({ 'embeddingGeneratedAt': -1 });
 
 
 // Text search index for analysis fields
 GTMPersonaIntelligenceSchema.index({
-  overview: 'text'
+  overview: 'text',
+  'searchKeywords': 'text',
+
 });
 
 // Virtual for easy access to company data

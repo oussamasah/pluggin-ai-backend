@@ -17,6 +17,7 @@ const ICPModelSchema = new Schema<IICPModel>(
     isPrimary: { type: Boolean, default: false },
     userId: { type: String, required: true, index: true },
     config: { type: Schema.Types.Mixed, required: true }
+    
   },
   { 
     timestamps: true,

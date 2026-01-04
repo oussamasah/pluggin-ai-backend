@@ -596,14 +596,15 @@ export class CompanyWorkflow {
           const data = await mongoDBService.saveCompanyWithSessionAndICP(
             this.sessionId,
             icpModel.id,
-            com
+            com,
+            this.userId
           );
       
           console.log(`✅ Company saved: ${com.name} (ID: ${data._id})`);
       
           // 2. Save employees
           if (employees.length > 0) {
-            await mongoDBService.insertEmployees(employees, data._id);
+            await mongoDBService.insertEmployees(employees, data._id,this.userId);
             console.log(`✅ Saved ${employees.length} employees`);
           }
       
@@ -618,7 +619,8 @@ export class CompanyWorkflow {
             new Types.ObjectId(this.sessionId),
             new Types.ObjectId(icpModel.id),
             new Types.ObjectId(data._id),
-            coresignalData
+            coresignalData,
+            this.userId
           );
           console.log(`✅ GTM Intelligence generated for ${com.name}`);
       
@@ -627,7 +629,8 @@ export class CompanyWorkflow {
             const gtmPersonaResult = await gtmPersonaIntelligenceService.batchGeneratePersonaIntelligence(  
               new Types.ObjectId(this.sessionId),
               new Types.ObjectId(icpModel.id),
-              new Types.ObjectId(data._id)
+              new Types.ObjectId(data._id),
+              this.userId
             );
             
             console.log(`✅ Persona Intelligence: ${gtmPersonaResult.success} succeeded, ${gtmPersonaResult.failed} failed`);

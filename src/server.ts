@@ -14,14 +14,10 @@ import { CompaniesController } from './api/CompaniesController.js';
 import { connectDatabase, disconnectDatabase } from './database/connection.js';
 import { RefinementController } from './api/RefinementController.js';
 import { EmployeeController } from './api/EmployeeController.js';
+import { registerEmbeddingHooks } from './models/hooks/embeddingHooks.js';
 
 const fastify = Fastify({
-  logger: {
-    level: 'error',
-    transport: {
-      target: 'pino-pretty'
-    }
-  }
+  
 });
 
 async function setupServer() {
@@ -45,9 +41,7 @@ async function setupServer() {
   
   await fastify.register(CompaniesController, { prefix: '/api' });
   
-  fastify.get('/api/health', async () => {
-    return { status: 'ok', timestamp: new Date().toISOString() };
-  });
+ 
 
   fastify.get('/', async () => {
     return { 
@@ -112,7 +106,7 @@ const start = async () => {
     console.log('🔌 Connecting to MongoDB...');
     await connectDatabase(process.env.MONGODB_URI!);
     console.log('✅ MongoDB connected successfully');
-
+    registerEmbeddingHooks();
     await setupServer();
     await fastify.listen({ port: config.PORT, host: '0.0.0.0' });
     console.log(`🚀 Server running on http://localhost:${config.PORT}`);
