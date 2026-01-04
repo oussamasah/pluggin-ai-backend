@@ -7,8 +7,8 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
-RUN npm install openai
+RUN npm install --legacy-peer-deps
+RUN npm install openai --legacy-peer-deps
 
 
 # Copy source code
