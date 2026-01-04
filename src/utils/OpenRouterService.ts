@@ -383,4 +383,4 @@ export class OpenRouterService {
   }
 }
 
-export const openRouterService = new responseOpenRouterService();
+export const openRouterService = new OpenRouterService();
