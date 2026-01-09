@@ -447,6 +447,8 @@ async getEnrichmentByCompanyIdAndSource(
       funding_stage,
       total_funding,
       exa_id,
+      explorium_business_id,
+      exploriumBusinessId,
       intent_signals,
       relationships,
       scoring_metrics,
@@ -488,6 +490,7 @@ async getEnrichmentByCompanyIdAndSource(
       fundingStage: funding_stage || cleanCompanyData.funding_stage,
       totalFunding: total_funding || cleanCompanyData.total_funding,
       exaId: exa_id || cleanCompanyData.exa_id,
+      exploriumBusinessId: explorium_business_id || exploriumBusinessId || cleanCompanyData.explorium_business_id || cleanCompanyData.exploriumBusinessId,
       
       // Location data
       city: location?.city || cleanCompanyData.city,
@@ -604,7 +607,7 @@ async getEnrichmentByCompanyIdAndSource(
   }
   
   // Enhanced saveEnrichment method
-  private async saveEnrichment(
+  async saveEnrichment(
     companyId: string,
     sessionId: string,
     icpModelId: string,

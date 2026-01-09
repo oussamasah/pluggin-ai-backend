@@ -613,6 +613,16 @@ public async searchEmployees(
               })),
               minimum_should_match: 1
             }
+          },
+          // Filter for decision makers only
+          {
+            bool: {
+              should: [
+                { term: { is_decision_maker: 1 } },
+                { term: { isDecisionMaker: true } }
+              ],
+              minimum_should_match: 1
+            }
           }
         ]
       }
@@ -799,9 +809,10 @@ public async searchEmployeesByCompanyId(
   jobs: string[]
 ): Promise<EmployeeSearchResponse> {
   
-  const url = `/employee_multi_source/search/es_dsl?items_per_page=5`; // Fetch more so we can filter duplicates and still have 5
+  // 1. INCREASE LIMIT: To get all matching profiles across all titles, 
+  // increase items_per_page. Max is usually 100-1000.
+  const url = `/employee_multi_source/search/es_dsl?items_per_page=100`;
 
-  // 1. Get enriched titles
   let enrichedJobTitles = await this.getVariationJobTitles(jobs);
   
   const esQuery = {
@@ -810,10 +821,12 @@ public async searchEmployeesByCompanyId(
         must: [
           { term: { active_experience_company_id: companyId } },
           { term: { is_working: 1 } },
+          { term: { is_decision_maker: 1 } }, // Added to match your previous requirement
           {
             bool: {
               should: enrichedJobTitles.map(title => ({
-                match_phrase: { active_experience_title: title }
+                // USE .keyword for an EXACT character-for-character match
+                term: { "active_experience_title.keyword": title }
               })),
               minimum_should_match: 1
             }
@@ -825,27 +838,26 @@ public async searchEmployeesByCompanyId(
 
   try {
     const response = await this.client.post(url, esQuery);
-    const data = response.data || [];
+    // Coresignal ES DSL returns results in 'data' or 'results' depending on version
+    const data = response.data || []; 
 
-    // 2. DE-DUPLICATION LOGIC
-    // We use a Map to track unique IDs. If the ID is already seen, we skip it.
+    // 2. ROBUST DE-DUPLICATION
     const uniqueProfilesMap = new Map();
     
     for (const profile of data) {
-      // Use the unique ID from Coresignal (check your response for exact naming)
-      const profileId = profile.coresignal_employee_id || profile.coresignalEmployeeId || profile.id;
+      // Coresignal unique identifier is typically just 'id' in the member object
+      const profileId = profile.id || profile.coresignal_id;
       
-      if (!uniqueProfilesMap.has(profileId)) {
+      if (profileId && !uniqueProfilesMap.has(profileId)) {
         uniqueProfilesMap.set(profileId, profile);
       }
     }
 
-    // 3. Take only the first 5 unique profiles
-    const results = Array.from(uniqueProfilesMap.values()).slice(0, 5);
+    const results = Array.from(uniqueProfilesMap.values());
 
     return {
       results: results,
-      total_results: results.length, // Local total of unique items
+      total_results: results.length,
       total_pages: 1,
       next_page_after: null
     } as EmployeeSearchResponse;

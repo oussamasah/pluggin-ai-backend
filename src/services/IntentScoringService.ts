@@ -1,5 +1,8 @@
 // ollama-intent-scoring-service.ts
 import { ollamaService } from './OllamaService';
+import { openRouterService } from '../utils/OpenRouterService.js';
+import { ICPModel, Company } from '../core/types.js';
+import { ExploriumEvent } from './ExploriumService.js';
 
 // ==================== INTERFACES ====================
 
@@ -296,7 +299,7 @@ ALWAYS return valid JSON in this exact format:
     // Transform from input format to EnhancedIntentResponse
     try {
       return this.transformInputToEnhancedResponse(response);
-    } catch (error) {
+    } catch (error: any) {
       console.error('❌ Error transforming input response:', error);
       return this.createDefaultResponse();
     }
@@ -306,17 +309,17 @@ ALWAYS return valid JSON in this exact format:
    * Sanitize existing EnhancedIntentResponse
    */
   private sanitizeEnhancedResponse(response: any): EnhancedIntentResponse {
-    const sanitized: EnhancedIntentResponse = {
+      const sanitized: EnhancedIntentResponse = {
       company_name: response.company_name || 'Unknown Company',
       industry: response.industry || 'Unknown Industry',
       evaluated_signals: Array.isArray(response.evaluated_signals) 
-        ? response.evaluated_signals.filter(signal => 
+        ? response.evaluated_signals.filter((signal: any) => 
             signal && typeof signal === 'object' && signal.signal
-          ).map(signal => ({
+          ).map((signal: any) => ({
             signal: signal.signal || 'unknown_signal',
             score: typeof signal.score === 'number' ? Math.max(0, Math.min(100, signal.score)) : 0,
             reason: signal.reason || 'No reason provided',
-            sources: Array.isArray(signal.sources) ? signal.sources.filter(source => 
+            sources: Array.isArray(signal.sources) ? signal.sources.filter((source: any) => 
               source && typeof source === 'object' && source.source_type
             ) : []
           }))
@@ -595,7 +598,7 @@ Return only valid JSON in the specified format.`;
       
       return result;
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('❌ Error enhancing AI score:', error);
       throw new Error(`Score enhancement failed: ${error.message}`);
     }
@@ -846,6 +849,355 @@ Return only valid JSON in the specified format.`;
     }
 
     return risks.length > 0 ? risks.slice(0, 3) : ['No significant risks identified'];
+  }
+
+  /**
+   * Score intent based on Explorium events using OpenRouter AI
+   */
+  async calculateIntentScoreFromExploriumEvents(
+    icpModel: ICPModel,
+    company: Company,
+    exploriumEvents: ExploriumEvent[],
+    exploriumBusinessId?: string
+  ): Promise<any> {
+    try {
+      console.log(`🧠 Starting Explorium-based intent scoring for ${company.name}`);
+      
+      // Build the analysis prompt
+      const analysisPrompt = this.buildExploriumAnalysisPrompt(
+        icpModel,
+        company,
+        exploriumEvents,
+        exploriumBusinessId
+      );
+
+      // System prompt template
+      const systemPrompt = this.getExploriumSystemPrompt();
+
+      // Call OpenRouter to get JSON response
+      const analysisResult = await openRouterService.generateJSON<any>(
+        analysisPrompt,
+        systemPrompt,
+        'anthropic/claude-3.5-sonnet',
+        8192
+      );
+
+      console.log(`✅ Intent scoring complete for ${company.name}: Score ${analysisResult.analysis_metadata?.final_intent_score || 0}/100`);
+
+      return analysisResult;
+    } catch (error: any) {
+      console.error(`❌ Error calculating intent score from Explorium events:`, error);
+      // Return fallback structure
+      return {
+        analysis_metadata: {
+          target_company: company.name,
+          business_id: exploriumBusinessId || '',
+          analysis_date: new Date().toISOString(),
+          timeframe_analyzed: 'Last 90 days',
+          data_sources: 'Explorium Business Intelligence',
+          total_events_detected: exploriumEvents.length,
+          final_intent_score: 0,
+          overall_confidence: 'LOW'
+        },
+        error: error.message
+      };
+    }
+  }
+
+  /**
+   * Build the analysis prompt with all parameters filled in
+   */
+  private buildExploriumAnalysisPrompt(
+    icpModel: ICPModel,
+    company: Company,
+    exploriumEvents: ExploriumEvent[],
+    exploriumBusinessId?: string
+  ): string {
+    const config = icpModel.config;
+    const productSettings = config.productSettings || {};
+    
+    // Get buying triggers (max 5)
+    const buyingTriggers = (config.buyingTriggers || []).slice(0, 5);
+    
+    // Calculate equal weights if we have triggers
+    const weightPerSignal = buyingTriggers.length > 0 ? Math.round(100 / buyingTriggers.length) : 20;
+    const remainder = 100 - (weightPerSignal * buyingTriggers.length);
+    
+    // Build signal configuration
+    const signalConfigs = buyingTriggers.map((trigger, index) => {
+      let weight = weightPerSignal;
+      // Add remainder to first signal
+      if (index === 0) weight += remainder;
+      return {
+        signal: trigger,
+        weight: weight
+      };
+    });
+
+    // Group events by event_type
+    const eventsByType: Record<string, ExploriumEvent[]> = {};
+    exploriumEvents.forEach(event => {
+      const eventType = event.event_name || event.data?.event_type || 'unknown';
+      if (!eventsByType[eventType]) {
+        eventsByType[eventType] = [];
+      }
+      eventsByType[eventType].push(event);
+    });
+
+    // Build signal configuration text
+    const signalConfigText = signalConfigs.map((config, index) => {
+      const eventType = config.signal;
+      const events = eventsByType[eventType] || [];
+      return `**Signal ${index + 1}**: ${eventType} - Weight: ${config.weight}% (${events.length} events detected)`;
+    }).join('\n');
+
+    // Format company data
+    const companyName = company.name || 'Unknown Company';
+    const industry = (company.industry && company.industry.length > 0) 
+      ? company.industry.join(', ') 
+      : 'Unknown';
+    const companySize = company.employee_count 
+      ? `${company.employee_count} employees` 
+      : config.employeeRange || 'Unknown';
+    const location = company.location?.country || company.country || 'Unknown';
+    const annualRevenue = company.annual_revenue 
+      ? `$${company.annual_revenue}` 
+      : config.annualRevenue || 'Unknown';
+
+    // Format product settings
+    const offerName = (productSettings.productNames && productSettings.productNames.length > 0)
+      ? productSettings.productNames.join(', ')
+      : 'Not specified';
+    const valueProposition = productSettings.valueProposition || 'Not specified';
+    const usp = (productSettings.uniqueSellingPoints && productSettings.uniqueSellingPoints.length > 0)
+      ? productSettings.uniqueSellingPoints.join(', ')
+      : 'Not specified';
+    const painPoints = (productSettings.painPointsSolved && productSettings.painPointsSolved.length > 0)
+      ? productSettings.painPointsSolved.join(', ')
+      : 'Not specified';
+    const targetPersonas = (config.targetPersonas && config.targetPersonas.length > 0)
+      ? config.targetPersonas.join(', ')
+      : 'Not specified';
+
+    // Format API response data
+    const apiResponseData = JSON.stringify({
+      output_events: exploriumEvents.map(event => ({
+        event_id: event.event_id,
+        event_name: event.event_name,
+        event_time: event.event_time,
+        data: event.data,
+        business_id: event.business_id
+      })),
+      total_events: exploriumEvents.length,
+      business_id: exploriumBusinessId
+    }, null, 2);
+
+    // Calculate timestamp_from (90 days ago)
+    const ninetyDaysAgo = new Date();
+    ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90);
+    const timestampFrom = ninetyDaysAgo.toISOString();
+
+    // Build the prompt
+    let prompt = `# INTENT SIGNAL DETECTION & SCORING ANALYSIS
+
+## INPUT DATA
+
+### 1. ICP PROFILE
+- **Company Name**: ${companyName}
+- **Industry**: ${industry}
+- **Company Size**: ${companySize}
+- **Location**: ${location}
+- **Annual Revenue ($)**: ${annualRevenue}
+
+### 2. YOUR OFFER
+- **Product/Service**: ${offerName}
+- **Value Proposition**: ${valueProposition}
+- **Unique Selling Points (USP)**: ${usp}
+- **Target Personas**: ${targetPersonas}
+- **Pain Points You Solve**: ${painPoints}
+
+### 3. CUSTOM BUYING SIGNALS (User-Selected Events)
+
+${signalConfigText}
+
+**Note**: Signal weights sum to 100%
+
+### 4. EXPLORIUM API RESPONSE DATA
+
+**API Request Parameters:**
+\`\`\`json
+{
+  "event_types": ${JSON.stringify(buyingTriggers)},
+  "business_ids": ["${exploriumBusinessId || 'unknown'}"],
+  "timestamp_from": "${timestampFrom}"
+}
+\`\`\`
+
+**API Response:**
+\`\`\`json
+${apiResponseData}
+\`\`\`
+
+**Data Coverage Context:**
+- Events are limited to the last 3 months (90 days)
+- Real-time updates from Explorium's global business intelligence
+- Coverage: 150+ countries, thousands of monthly events
+- If no events found for a signal, this indicates absence of that activity
+
+---
+
+## ANALYSIS REQUEST
+
+Please analyze the Explorium event data and provide a complete intent signal analysis following the methodology outlined in the system prompt. Return the structured JSON output as specified.`;
+
+    return prompt;
+  }
+
+  /**
+   * Get the system prompt template
+   */
+  private getExploriumSystemPrompt(): string {
+    return `# INTENT SIGNAL DETECTION & SCORING SYSTEM
+
+## ROLE & MISSION
+
+You are an expert B2B buying intent analyst specializing in detecting and scoring purchasing signals from Business Events API. Your mission is to analyze business event data, identify specific buying signals, calculate weighted scores, and provide actionable GTM intelligence.
+
+## ANALYSIS METHODOLOGY
+
+### STEP 1: EVENT PARSING & VALIDATION
+
+For each selected signal, analyze the Explorium API response:
+- Check if events exist for this event_type
+- Extract all event instances with timestamps
+- Validate event data completeness and quality
+- Note if zero events found (this is meaningful data)
+
+### STEP 2: SIGNAL SCORING FRAMEWORK
+
+For each signal, calculate a **Raw Score (0-100)** based on two factors:
+
+#### A. EVENT OCCURRENCE (50 points)
+
+Score based on the number of events detected for this signal:
+- **5+ Events**: 45-50 points - Very strong sustained activity
+- **4 Events**: 38-44 points - Strong sustained activity
+- **3 Events**: 30-37 points - Strong activity pattern
+- **2 Events**: 20-29 points - Moderate consistent activity
+- **1 Event**: 10-19 points - Initial activity detected
+- **0 Events**: 0 points - No signal detected
+
+#### B. EVENT RECENCY (50 points)
+
+Score based on how recent the events are (use the most recent event):
+- **0-7 days ago**: 45-50 points - Extremely recent, high urgency
+- **8-14 days ago**: 38-44 points - Very recent activity
+- **15-30 days ago**: 30-37 points - Recent activity
+- **31-45 days ago**: 20-29 points - Moderately recent
+- **46-60 days ago**: 10-19 points - Older but within relevant window
+- **61-90 days ago**: 1-9 points - Old activity, low relevance
+- **No events or 90+ days**: 0 points - No recent activity
+
+#### TOTAL RAW SCORE PER SIGNAL
+
+Signal Raw Score (0-100) = Event Occurrence Score (0-50) + Event Recency Score (0-50)
+
+### STEP 3: WEIGHTED FINAL SCORE CALCULATION
+
+Final Intent Score = Σ(Signal_Raw_Score × Signal_Weight_Percentage / 100)
+
+### STEP 4: OUTPUT REQUIREMENTS
+
+Return valid JSON in this exact structure:
+{
+  "analysis_metadata": {
+    "target_company": "",
+    "business_id": "",
+    "analysis_date": "",
+    "timeframe_analyzed": "Last 90 days",
+    "data_sources": "Explorium Business Intelligence",
+    "total_events_detected": 0,
+    "final_intent_score": 0,
+    "overall_confidence": "HIGH|MEDIUM|LOW"
+  },
+  "signal_breakdown": [
+    {
+      "signal_id": 1,
+      "event_type": "",
+      "signal_name": "",
+      "weight_percentage": 0,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH|MEDIUM|LOW",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "",
+        "buying_intent_interpretation": "",
+        "timing_implications": "",
+        "competitive_context": ""
+      },
+      "red_flags": []
+    }
+  ],
+  "gtm_intelligence": {
+    "overall_buying_readiness": {
+      "readiness_level": "HIGH|MEDIUM|LOW",
+      "stage_in_buyers_journey": "awareness|consideration|decision",
+      "estimated_decision_timeline": "",
+      "reasoning": ""
+    },
+    "timing_recommendation": {
+      "optimal_outreach_window": "",
+      "urgency_level": "HIGH|MEDIUM|LOW",
+      "trigger_events_to_reference": [],
+      "reasoning": ""
+    },
+    "messaging_strategy": {
+      "primary_pain_points_detected": [],
+      "relevant_value_props_to_emphasize": [],
+      "proof_points_to_highlight": [],
+      "recommended_messaging_angle": "",
+      "events_to_reference_in_outreach": []
+    },
+    "stakeholder_targeting": {
+      "recommended_buyer_personas": [],
+      "departments_showing_activity": [],
+      "decision_maker_signals": []
+    },
+    "risk_assessment": {
+      "potential_blockers": [],
+      "negative_signals_detected": [],
+      "missing_positive_signals": []
+    }
+  },
+  "offer_alignment_playbook": {
+    "positioning_strategy": "",
+    "key_features_to_emphasize": [],
+    "relevant_use_case": "",
+    "objection_handling": []
+  }
+}
+
+## CRITICAL GUIDELINES
+
+1. **Evidence-Based Only**: Score strictly on detected Explorium events, not assumptions
+2. **Zero-Score Honesty**: If no events detected, give 0 points with clear explanation
+3. **Weight Respect**: Apply user-defined weights exactly as configured
+4. **Math Transparency**: Show complete scoring breakdown per signal
+5. **GTM Intelligence Quality**: Provide concise, actionable insights (2-3 sentences max per insight)
+6. **Event Citation**: Reference specific events with data (amounts, dates, types)
+7. **Buying Logic**: Explicitly connect events to buying intent
+
+Return ONLY valid JSON. No preamble, no markdown formatting, no conversational filler.`;
   }
 }
 

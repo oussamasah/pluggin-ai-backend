@@ -13,7 +13,6 @@ import { IntentScoringService } from '../services/IntentScoringService.js';
 import { Types } from 'mongoose';
 import { gtmIntelligenceService } from '../services/GTMIntelligenceService';
 import { gtmPersonaIntelligenceService } from '../services/GTMPersonaInteligenceService.js';
-import { detectIntentWithEvidence, generateOptimizedExaQuery } from '../services/HighConfidenceIntentDetector.js';
 import { scoringService } from '../services/ScoringService.js';
 export class CompanyWorkflow {
   private sessionId: string;
@@ -512,34 +511,45 @@ export class CompanyWorkflow {
       // PHASE 4: Intent & Timing Intelligence
       console.log('🎯 Starting PHASE 4: Intent & Timing Intelligence');
 
-      // Step 4.1: Detecting buying signals
+      // Step 4.1: Detecting buying signals using Explorium
       await this.updateSubstep('4.1', {
         status: 'in-progress',
         startedAt: new Date()
       });
       if (icpModel.config.buyingTriggers.length > 0) {
-
         for (const c of companies) {
           try {
-            const request: any = {
-              companyName: c.name,
-              companyUrl: c.website || '',
-              signals: icpModel.config.buyingTriggers
-            };
-
-            // Detect intents for a company
-            const intentEnrichment = await detectIntentWithEvidence(
+            // Match business with Explorium using domain name
+            const companyDomain = c.domain || c.website || '';
+            const exploriumBusinessId = await exploriumService.matchBusiness(
               c.name,
-              c.website,
-              icpModel.config.buyingTriggers
+              companyDomain
             );
 
-            //const intentEnrichment = await perplexityService.getIntentEnrichment(request);
-            this.saveCompanies("intentEnrichment", intentEnrichment)
-            c.intent_enrichment = intentEnrichment;
-            c.intent_signals = intentEnrichment;
+            if (exploriumBusinessId) {
+              // Save explorium_business_id to company
+              c.explorium_business_id = exploriumBusinessId;
+              c.exploriumBusinessId = exploriumBusinessId;
+
+              // Get events from Explorium based on buying triggers
+              const exploriumEvents = await exploriumService.getEvents(
+                exploriumBusinessId,
+                icpModel
+              );
+console.log(exploriumEvents, "exploriumEvents")
+              // Save events as enrichment with source "explorium"
+              if (exploriumEvents && exploriumEvents.length > 0) {
+                // Store events in company for later saving
+                c.explorium_events = exploriumEvents;
+                console.log(`✅ Found ${exploriumEvents.length} Explorium events for ${c.name}`);
+              } else {
+                console.log(`⚠️ No Explorium events found for ${c.name}`);
+              }
+            } else {
+              console.log(`⚠️ Could not match ${c.name} with Explorium`);
+            }
           } catch (error) {
-            console.error(`Error detecting intent signals for ${c.name}:`, error);
+            console.error(`Error processing Explorium data for ${c.name}:`, error);
           }
         }
       }
@@ -556,15 +566,34 @@ export class CompanyWorkflow {
         startedAt: new Date()
       });
       if (icpModel.config.buyingTriggers.length > 0) {
-
         for (const c of companies) {
-          if (c.intent_enrichment) {
-            const intentScore = await IntentScoringService.calculateIntentScore(
-              c.intent_enrichment
-            );
-            this.saveCompanies("intentScore", intentScore);
-            c.scoring_metrics = c.scoring_metrics ?? {};
-            c.scoring_metrics.intent_score = intentScore;
+          // Use Explorium events for intent scoring if available
+          if (c.explorium_events && c.explorium_events.length > 0) {
+            try {
+              const intentScoreResult = await IntentScoringService.calculateIntentScoreFromExploriumEvents(
+                icpModel,
+                c,
+                c.explorium_events,
+                c.explorium_business_id || c.exploriumBusinessId
+              );
+              this.saveCompanies("intentScore", intentScoreResult);
+              c.scoring_metrics = c.scoring_metrics ?? {};
+              c.scoring_metrics.intent_score = intentScoreResult;
+              console.log(`✅ Intent score calculated for ${c.name}: ${intentScoreResult.analysis_metadata?.final_intent_score || 0}/100`);
+            } catch (error) {
+              console.error(`Error calculating intent score for ${c.name}:`, error);
+              // Set default intent score on error
+              c.scoring_metrics = c.scoring_metrics ?? {};
+              c.scoring_metrics.intent_score = {
+                analysis_metadata: {
+                  final_intent_score: 0,
+                  overall_confidence: 'LOW'
+                },
+                error: error instanceof Error ? error.message : 'Unknown error'
+              };
+            }
+          } else {
+            console.log(`⚠️ No Explorium events available for intent scoring: ${c.name}`);
           }
         }
       }
@@ -586,10 +615,12 @@ export class CompanyWorkflow {
       await Promise.all(companies.map(async (com: any) => {
         com.company_id = uuidv4();
         const employees = com.employees && com.employees.length >0 ? com.employees: [];
+        const exploriumEvents = com.explorium_events || [];
         
-        // Remove employees and intent enrichment before saving company
+        // Remove employees, intent enrichment, and explorium_events before saving company
         delete com.employees;
         delete com.intent_enrichment;
+        delete com.explorium_events;
         
         try {
           // 1. Save company
@@ -608,13 +639,26 @@ export class CompanyWorkflow {
             console.log(`✅ Saved ${employees.length} employees`);
           }
       
-          // 3. Get Coresignal data
+          // 3. Save Explorium events as enrichment
+          if (exploriumEvents.length > 0) {
+            await mongoDBService.saveEnrichment(
+              data._id.toString(),
+              this.sessionId,
+              icpModel.id,
+              exploriumEvents,
+              'Explorium',
+              this.userId
+            );
+            console.log(`✅ Saved ${exploriumEvents.length} Explorium events as enrichment for ${com.name}`);
+          }
+      
+          // 4. Get Coresignal data
           const coresignalData = await mongoDBService.getEnrichmentByCompanyIdAndSource(
             data._id,
             'Coresignal'
           );
       
-          // 4. Generate GTM Intelligence overview
+          // 5. Generate GTM Intelligence overview
           const gtmIntel = await gtmIntelligenceService.generateCompleteGTMIntelligence(
             new Types.ObjectId(this.sessionId),
             new Types.ObjectId(icpModel.id),
@@ -624,7 +668,7 @@ export class CompanyWorkflow {
           );
           console.log(`✅ GTM Intelligence generated for ${com.name}`);
       
-          // 5. Generate Persona Intelligence (only if we have employees)
+          // 6. Generate Persona Intelligence (only if we have employees)
           if (employees.length > 0) {
             const gtmPersonaResult = await gtmPersonaIntelligenceService.batchGeneratePersonaIntelligence(  
               new Types.ObjectId(this.sessionId),

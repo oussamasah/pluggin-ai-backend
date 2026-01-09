@@ -1,0 +1,247 @@
+{
+  "analysis_metadata": {
+    "target_company": "WilliamsMarston",
+    "business_id": "3d716e97cfdd413bde06e2d4f12dc738",
+    "analysis_date": "2023-10-10",
+    "timeframe_analyzed": "Last 90 days",
+    "data_sources": "Explorium Business Intelligence",
+    "total_events_detected": 14,
+    "final_intent_score": 10,
+    "overall_confidence": "MEDIUM"
+  },
+  "signal_breakdown": [
+    {
+      "signal_id": 1,
+      "event_type": "new_funding_round",
+      "signal_name": "Funding Activity",
+      "weight_percentage": 20,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "No funding rounds detected in the last 90 days",
+        "buying_intent_interpretation": "Absence of recent funding suggests no immediate capital injection",
+        "timing_implications": "No funding-driven urgency identified",
+        "competitive_context": "Company may be operating on existing resources"
+      },
+      "red_flags": [
+        "No recent funding activity detected"
+      ]
+    },
+    {
+      "signal_id": 2,
+      "event_type": "new_investment",
+      "signal_name": "Investment Activity",
+      "weight_percentage": 20,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "No investment activities detected in the last 90 days",
+        "buying_intent_interpretation": "No investment-driven expansion signals",
+        "timing_implications": "No investment-related buying triggers",
+        "competitive_context": "May be focused on organic growth"
+      },
+      "red_flags": [
+        "No recent investment activity detected"
+      ]
+    },
+    {
+      "signal_id": 3,
+      "event_type": "new_partnership",
+      "signal_name": "Partnership Activity",
+      "weight_percentage": 20,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "No partnership announcements detected in the last 90 days",
+        "buying_intent_interpretation": "No partnership-driven expansion signals",
+        "timing_implications": "No partnership-related buying triggers",
+        "competitive_context": "May be focused on internal growth"
+      },
+      "red_flags": [
+        "No recent partnership activity detected"
+      ]
+    },
+    {
+      "signal_id": 4,
+      "event_type": "new_product",
+      "signal_name": "Product Launch Activity",
+      "weight_percentage": 20,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "No new product launches detected in the last 90 days",
+        "buying_intent_interpretation": "No product expansion signals",
+        "timing_implications": "No product-related buying triggers",
+        "competitive_context": "Focus may be on existing service offerings"
+      },
+      "red_flags": [
+        "No recent product launch activity detected"
+      ]
+    },
+    {
+      "signal_id": 5,
+      "event_type": "employee_joined_company",
+      "signal_name": "Hiring Activity",
+      "weight_percentage": 20,
+      "raw_score": 50,
+      "weighted_contribution": 10,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 14,
+        "events": [
+          {
+            "role": "Managing Director",
+            "department": "Operations",
+            "date": "2025-09-01"
+          },
+          {
+            "role": "Director Of Advisory",
+            "department": "Finance",
+            "date": "2025-09-01"
+          },
+          {
+            "role": "Director",
+            "date": "2025-08-01"
+          }
+        ]
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 50,
+        "event_recency_score": 50,
+        "total_raw_score": 50,
+        "weighted_contribution": 10
+      },
+      "signal_analysis": {
+        "what_detected": "Significant senior-level hiring in Advisory and Operations roles",
+        "buying_intent_interpretation": "Strong expansion signals in advisory services",
+        "timing_implications": "Active growth phase with recent senior hires",
+        "competitive_context": "Building advisory and operational capabilities"
+      },
+      "red_flags": []
+    }
+  ],
+  "gtm_intelligence": {
+    "overall_buying_readiness": {
+      "readiness_level": "MEDIUM",
+      "stage_in_buyers_journey": "awareness",
+      "estimated_decision_timeline": "3-6 months",
+      "reasoning": "Strong hiring signals but lack of other growth indicators suggests methodical expansion"
+    },
+    "timing_recommendation": {
+      "optimal_outreach_window": "Next 30 days",
+      "urgency_level": "MEDIUM",
+      "trigger_events_to_reference": [
+        "Recent senior advisory hires",
+        "Operations expansion"
+      ],
+      "reasoning": "Multiple senior hires indicate organizational growth and potential process optimization needs"
+    },
+    "messaging_strategy": {
+      "primary_pain_points_detected": [
+        "Scaling advisory operations",
+        "Operational efficiency",
+        "Team growth management"
+      ],
+      "relevant_value_props_to_emphasize": [
+        "AI-powered growth optimization",
+        "Automated GTM processes",
+        "Scalable targeting capabilities"
+      ],
+      "proof_points_to_highlight": [
+        "Support for growing advisory teams",
+        "Operational efficiency gains"
+      ],
+      "recommended_messaging_angle": "Enabling efficient scaling of advisory services through AI-powered GTM automation",
+      "events_to_reference_in_outreach": [
+        "Recent Director and Managing Director hires"
+      ]
+    },
+    "stakeholder_targeting": {
+      "recommended_buyer_personas": [
+        "Operations leadership",
+        "Advisory directors",
+        "Finance leadership"
+      ],
+      "departments_showing_activity": [
+        "Operations",
+        "Advisory Services",
+        "Finance"
+      ],
+      "decision_maker_signals": [
+        "Multiple Managing Director hires",
+        "Strategic Advisory Board expansion"
+      ]
+    },
+    "risk_assessment": {
+      "potential_blockers": [
+        "No recent funding or investment activity",
+        "Focus may be on human capital vs. technology investment"
+      ],
+      "negative_signals_detected": [
+        "Absence of product/partnership expansion"
+      ],
+      "missing_positive_signals": [
+        "No technology investment signals",
+        "No partnership activities"
+      ]
+    }
+  },
+  "offer_alignment_playbook": {
+    "positioning_strategy": "Position as essential scaling tool for growing advisory teams",
+    "key_features_to_emphasize": [
+      "AI-powered research automation",
+      "Intelligent targeting",
+      "Streamlined GTM execution"
+    ],
+    "relevant_use_case": "Enabling efficient scaling of advisory services through automated GTM processes",
+    "objection_handling": [
+      "Focus on ROI through operational efficiency",
+      "Highlight quick implementation with minimal disruption",
+      "Emphasize support for growing teams"
+    ]
+  }
+}

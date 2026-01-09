@@ -1,0 +1,253 @@
+{
+  "analysis_metadata": {
+    "target_company": "C2FO",
+    "business_id": "82d3dd1b5e65b5a2b25d1e2c9bccaf3c",
+    "analysis_date": "2024-01-10",
+    "timeframe_analyzed": "Last 90 days",
+    "data_sources": "Explorium Business Intelligence",
+    "total_events_detected": 5,
+    "final_intent_score": 32,
+    "overall_confidence": "MEDIUM"
+  },
+  "signal_breakdown": [
+    {
+      "signal_id": 1,
+      "event_type": "new_investment",
+      "signal_name": "New Investment Activity",
+      "weight_percentage": 20,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "No investment events detected in the analysis period",
+        "buying_intent_interpretation": "Lack of new investment activity suggests no immediate capital deployment signals",
+        "timing_implications": "No timing implications from investment perspective",
+        "competitive_context": "Unable to determine competitive position from investment angle"
+      },
+      "red_flags": [
+        "No investment activity could indicate conservative spending period"
+      ]
+    },
+    {
+      "signal_id": 2,
+      "event_type": "new_funding_round",
+      "signal_name": "New Funding Activity",
+      "weight_percentage": 20,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "No funding rounds detected in the analysis period",
+        "buying_intent_interpretation": "Absence of new funding suggests no immediate capital expansion plans",
+        "timing_implications": "No timing implications from funding perspective",
+        "competitive_context": "No funding-related competitive insights available"
+      },
+      "red_flags": [
+        "Lack of recent funding could indicate limited budget for new tools"
+      ]
+    },
+    {
+      "signal_id": 3,
+      "event_type": "new_product",
+      "signal_name": "Product Launch Activity",
+      "weight_percentage": 20,
+      "raw_score": 0,
+      "weighted_contribution": 0,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 0,
+        "events": []
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 0,
+        "event_recency_score": 0,
+        "total_raw_score": 0,
+        "weighted_contribution": 0
+      },
+      "signal_analysis": {
+        "what_detected": "No new product launches detected in the analysis period",
+        "buying_intent_interpretation": "No product expansion signals present",
+        "timing_implications": "No timing implications from product perspective",
+        "competitive_context": "No product-related competitive insights available"
+      },
+      "red_flags": [
+        "Absence of product launches might indicate focus on existing operations"
+      ]
+    },
+    {
+      "signal_id": 4,
+      "event_type": "new_partnership",
+      "signal_name": "Partnership Activity",
+      "weight_percentage": 20,
+      "raw_score": 80,
+      "weighted_contribution": 16,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 3,
+        "events": [
+          {
+            "date": "2025-12-26",
+            "partner": "Bank of India",
+            "type": "Strategic Partnership"
+          },
+          {
+            "date": "2025-12-23",
+            "partner": "Bank of India",
+            "type": "Strategic Partnership"
+          },
+          {
+            "date": "2025-09-23",
+            "partner": "Central Bank of India",
+            "type": "Strategic Partnership"
+          }
+        ]
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 35,
+        "event_recency_score": 45,
+        "total_raw_score": 80,
+        "weighted_contribution": 16
+      },
+      "signal_analysis": {
+        "what_detected": "Multiple strategic banking partnerships focused on MSME financing solutions",
+        "buying_intent_interpretation": "Strong expansion signals in financial services sector",
+        "timing_implications": "Active partnership formation suggests operational scaling",
+        "competitive_context": "Expanding network of banking partners indicates market leadership pursuit"
+      },
+      "red_flags": []
+    },
+    {
+      "signal_id": 5,
+      "event_type": "employee_joined_company",
+      "signal_name": "New Hire Activity",
+      "weight_percentage": 20,
+      "raw_score": 80,
+      "weighted_contribution": 16,
+      "confidence_level": "HIGH",
+      "events_detected": {
+        "count": 2,
+        "events": [
+          {
+            "date": "2025-07-01",
+            "role": "Senior Director",
+            "name": "Mary H."
+          }
+        ]
+      },
+      "scoring_breakdown": {
+        "event_occurrence_score": 25,
+        "event_recency_score": 55,
+        "total_raw_score": 80,
+        "weighted_contribution": 16
+      },
+      "signal_analysis": {
+        "what_detected": "Senior leadership hire indicating organizational growth",
+        "buying_intent_interpretation": "Executive hiring suggests strategic expansion",
+        "timing_implications": "Recent senior hire indicates active growth phase",
+        "competitive_context": "Leadership expansion signals market competition"
+      },
+      "red_flags": []
+    }
+  ],
+  "gtm_intelligence": {
+    "overall_buying_readiness": {
+      "readiness_level": "MEDIUM",
+      "stage_in_buyers_journey": "consideration",
+      "estimated_decision_timeline": "Q1-Q2 2024",
+      "reasoning": "Active partnerships and senior hiring suggest strategic growth phase but lack of new investment/funding may impact purchase timing"
+    },
+    "timing_recommendation": {
+      "optimal_outreach_window": "Next 30-60 days",
+      "urgency_level": "MEDIUM",
+      "trigger_events_to_reference": [
+        "Recent banking partnerships",
+        "Senior Director hire"
+      ],
+      "reasoning": "Multiple recent partnerships indicate active expansion period suitable for new tool adoption"
+    },
+    "messaging_strategy": {
+      "primary_pain_points_detected": [
+        "Scaling operations across multiple banking partnerships",
+        "Need for efficient growth management"
+      ],
+      "relevant_value_props_to_emphasize": [
+        "AI-driven GTM automation",
+        "Streamlined partnership management",
+        "Scalable growth operations"
+      ],
+      "proof_points_to_highlight": [
+        "Success with financial services companies",
+        "Partnership optimization capabilities"
+      ],
+      "recommended_messaging_angle": "Emphasize how AI can streamline management of growing partnership network",
+      "events_to_reference_in_outreach": [
+        "Recent Bank of India partnership",
+        "Senior Director appointment"
+      ]
+    },
+    "stakeholder_targeting": {
+      "recommended_buyer_personas": [
+        "Senior Director of Partnerships",
+        "Head of Growth",
+        "CEO"
+      ],
+      "departments_showing_activity": [
+        "Executive Leadership",
+        "Partnerships"
+      ],
+      "decision_maker_signals": [
+        "Recent senior leadership hire",
+        "Strategic partnership initiatives"
+      ]
+    },
+    "risk_assessment": {
+      "potential_blockers": [
+        "No recent funding rounds",
+        "Possible budget constraints",
+        "Multiple ongoing partnership integrations"
+      ],
+      "negative_signals_detected": [
+        "Lack of investment activity",
+        "No product launches"
+      ],
+      "missing_positive_signals": [
+        "Direct technology investment",
+        "Digital transformation initiatives"
+      ]
+    }
+  },
+  "offer_alignment_playbook": {
+    "positioning_strategy": "Position as essential AI tool for managing rapid partnership expansion and growth",
+    "key_features_to_emphasize": [
+      "Partnership intelligence automation",
+      "Scalable GTM operations",
+      "AI-driven growth planning"
+    ],
+    "relevant_use_case": "Automating partner discovery and engagement across financial services sector",
+    "objection_handling": [
+      "Focus on ROI through partnership optimization",
+      "Emphasize minimal integration effort",
+      "Highlight quick time-to-value"
+    ]
+  }
+}

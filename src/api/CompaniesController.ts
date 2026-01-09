@@ -409,9 +409,16 @@ const companies = await CompanyModel.find(filter)
         });
       }
 
+      // Merge overview into company before mapping
+      const companyWithOverview = overview 
+        ? { ...company, gtmIntelligence: overview }
+        : company;
+      
+      const mappedCompany = mapCompanyToType(companyWithOverview);
+      
       reply.send({
         success: true,
-        company: mapCompanyToType(company),
+        company: mappedCompany,
         overview: overview
       });
     } catch (error) {
@@ -1086,7 +1093,10 @@ function mapCompanyToType(company: any): Company {
     explorium_id: company.exaId || '',
     content: '',
     icp_score: company.scoringMetrics?.fit_score?.score || company.scoringMetrics?.icp_score,
-    intent_score: company.scoringMetrics?.intent_score?.score
+    // Handle both old structure (score) and new Explorium structure (analysis_metadata.final_intent_score)
+    intent_score: company.scoringMetrics?.intent_score?.analysis_metadata?.final_intent_score !== undefined
+      ? company.scoringMetrics.intent_score.analysis_metadata.final_intent_score
+      : company.scoringMetrics?.intent_score?.score
   };
 }
 function calculateCompanyStats(companies: Company[]): CompanyStatsResponse['stats'] {

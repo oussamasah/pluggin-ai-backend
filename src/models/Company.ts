@@ -40,6 +40,7 @@ export interface ICompany extends Document {
   scoringMetrics: Record<string, any>;
   totalFunding?: number;
   exaId?: string;
+  exploriumBusinessId?: string;
   embedding: {
     type: [Number],
     default: undefined,
@@ -97,6 +98,7 @@ const CompanySchema = new Schema<ICompany>(
     scoringMetrics: { type: Schema.Types.Mixed, default: {} },
     totalFunding: Number,
     exaId: String,
+    exploriumBusinessId: String,
     userId: { type: String, required: true, index: true },
     embedding: {
       type: [Number],

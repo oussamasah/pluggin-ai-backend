@@ -67,18 +67,18 @@ export class ExploriumService {
 
       // Set the date to 90 days ago (approximately 3 months)
       const ninetyDaysAgo = new Date();
-      ninetyDaysAgo.setDate(now.getDate() - 90); 
+      ninetyDaysAgo.setDate(now.getDate() - 240);
 
       const requestBody: any = {
         business_ids: [businessId],
-        timestamp_from:  ninetyDaysAgo.toISOString()
+        timestamp_from: ninetyDaysAgo.toISOString()
       };
 
       // Only add event_types if buyingTriggers exist and is not empty
       if (icpModel.config.buyingTriggers && icpModel.config.buyingTriggers.length > 0) {
         requestBody.event_types = icpModel.config.buyingTriggers;
       }
-//console.log(requestBody)
+      console.log(requestBody, "requestBody===========================")
 
       const response = await fetch(`${this.baseUrl}/businesses/events`, {
         method: 'POST',
@@ -88,23 +88,62 @@ export class ExploriumService {
         },
         body: JSON.stringify(requestBody)
       });
+      
+      console.log(`📡 Explorium API Response Status: ${response.status} ${response.statusText}`);
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('❌ Explorium API Error Response:', errorText);
+        
+        if (response.status === 422) {
+          try {
+            const errorDetails = JSON.parse(errorText);
+            console.error('Explorium Validation Error:', JSON.stringify(errorDetails, null, 2));
+          } catch (e) {
+            console.error('Could not parse 422 error body:', errorText);
+          }
+        }
+        return [];
+      }
 
-if (!response.ok) {
-  if (response.status === 422) {
-    try {
-      const errorDetails = await response.json(); // <--- Read the body here
-      console.error('Explorium Validation Error:', errorDetails);
-      // The errorDetails object will contain the 'loc', 'msg', and 'type' 
-      // which tells you exactly what part of your request is wrong.
-    } catch (e) {
-      console.error('Could not parse 422 error body.');
-    }
-    // ... then continue with error handling
-  }
-}
-
+      // Parse the response body
       const data = await response.json();
-      return data.output_events || [];
+      console.log('📦 Explorium API Response Data:', JSON.stringify(data, null, 2));
+      console.log('📦 Response keys:', Object.keys(data));
+      
+      // Try multiple possible response structures
+      let events: ExploriumEvent[] = [];
+      
+      if (data.output_events) {
+        events = data.output_events;
+        console.log(`✅ Found events in 'output_events': ${events.length} events`);
+      } else if (data.events) {
+        events = data.events;
+        console.log(`✅ Found events in 'events': ${events.length} events`);
+      } else if (data.data && Array.isArray(data.data)) {
+        events = data.data;
+        console.log(`✅ Found events in 'data': ${events.length} events`);
+      } else if (Array.isArray(data)) {
+        events = data;
+        console.log(`✅ Found events as direct array: ${events.length} events`);
+      } else {
+        console.warn('⚠️ Unknown response structure. Full response:', JSON.stringify(data, null, 2));
+      }
+      
+      // Validate and map events to ExploriumEvent format
+      const mappedEvents: ExploriumEvent[] = events
+        .filter((event: any) => event && (event.event_id || event.id))
+        .map((event: any) => ({
+          event_id: event.event_id || event.id || '',
+          event_name: event.event_name || event.name || event.event_type || '',
+          event_time: event.event_time || event.timestamp || event.time || '',
+          data: event.data || event || {},
+          business_id: event.business_id || businessId
+        }));
+      
+      console.log(`📊 Mapped ${mappedEvents.length} valid events from ${events.length} total events`);
+      
+      return mappedEvents;
     } catch (error) {
       console.error('Explorium events error:', error);
       return [];
